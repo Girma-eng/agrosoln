@@ -1,1281 +1,475 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Farm Hub - Agricultural Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-
-
-
-
-  /* Global Styles */
-        body {
-            font-family: "Barlow Semi Condensed";
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        /* Address Section */
-        .address-section {
-            background-color: rgba(0, 100, 0, 0.8);
-            color: white;
-            padding: 8px;
-            font-size: 0.8rem;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1001;
-	    height: 30px;
-        }
-
-        /* Header Navigation */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background-color: rgba(128, 128, 128, 0.8);
-            position: fixed;
-            top: 50px;
-            width: 100%;
-            z-index: 1000;
-            height: 60px;
-        }
-
-        .logo img {
-            height: 40px;
-        }
-
-        /* Desktop Navigation */
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #FFA500 !important;
-            font-weight: bold;
-            font-size: 18px;
-            white-space: nowrap;
-        }
-
-        /* Mobile Navigation */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            z-index: 1002;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: #FFA500;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        #mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: rgba(0, 100, 0, 0.95);
-            width: 200px;
-            padding: 15px;
-            z-index: 1001;
-        }
-
-        #mobile-menu a {
-            color: white !important;
-            display: block;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-        }
-
-
-
-
-
-  <!--===// CSS:Slider
-	=========================================================-->
-
-
-   .slider {
-    position: relative;
-    height: 70vh; /* Reduced height by 40% (from 100vh to 60vh) */
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-item {
-    height: 70vh; /* Reduced height by 40% (from 100vh to 60vh) */
-    position: relative; /* Essential for absolute positioning children */
-}
-
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
- 		position: relative;
-            z-index: 0;
-        }
-
-    .carousel-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-
-
- 
-       .styled-text {
-            background-color: black; /* Black background */
-            color: white; /* White text color */
-            padding: 10px; /* Padding around the text */
-            text-align: center; /* Center the text */
-            border-top: 3px solid red; /* Red line on top */
-            border-bottom: 3px solid red; /* Red line on bottom */
-            margin: 20px 0; /* Margin to separate from other content */
-	    display: inline-block; /* Adjusts width to match text */
-
-        }
-	/* Black Overlay - Fully Covers Slideshow */
-        .slider::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 30%;
-            background: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay */
-            z-index: 1; /* Ensure the overlay is above the image */
- 	    pointer-events: none; /* Add this */
-        }
-
-
-
-/* Added carousel control styling */
-	.carousel-control-prev,
-	.carousel-control-next {
- 	   width: 15%;
- 	   opacity: 1;
- 	   transition: opacity 0.3s;
-	}
-
-	.carousel-control-prev-icon,
-	.carousel-control-next-icon {
- 	   width: 3rem;
-  	  height: 3rem;
-   	  background-color: rgba(0,0,0,0.5);
- 	   border-radius: 50%;
- 	   padding: 15px;
-	}
-
-
-
-
-
-  /* Mobile Styles */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none !important;
-            }
-
-            #mobile-menu.active {
-                display: block;
-            }
-
-            header {
-                top: 30px;
-                height: 50px;
-            }
-
-            .logo img {
-                height: 30px;
-            }
-
-            .slider {
-                margin-top: 80px;
-                height: calc(100vh - 80px);
-            }
-        }
-
-
-
-
-        .hero {
-            position: absolute;
-            top: 50%;
-            left: 5%;
-	    transform: translateY(-50%);
-            color: white;
-            z-index: 3;
-            width: 80%;
-    	    font-family: "Barlow Semi Condensed";
-	    pointer-events: auto; /* Add this */
-
-        }
-	 
-	.hero h1 {
-            font-size: 75px;
-            margin-bottom: 20px;
-            font-family: "Barlow Semi Condensed";
-            max-width: 95%;
-            line-height: 1.1;
-
-        }
-
-
-        .secondary-title {
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            color: white;
-            text-align: left;
-            width: 75%;
-            font-size: 2rem;
-            z-index: 2;
-        }
-
-        .slide-content {
-            position: absolute;
-            bottom: 20%;
-            right: 10%;
-            color: white;
-            z-index: 2;
-            max-width: 700px;
-        }
-
-        .highlight {
-            color: #FFD700;
-	
-        }
-
-        .cta-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-	  position: relative; /* Ensure clickable area */
-	 z-index: 4;
-        }
-	
-
-<!--===// CSS: Service
-	=========================================================-->
-  .service-message {
-	        background-color: #f8f9fa;
-	        padding: 60px 0;
-	        text-align: center;
-	        position: relative;
-	        z-index: 2;
-	    }
- .service-message h2 {
-        color: #2d6a4f;
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-	text-align: center;
-	
-    }
-
-
- .service-main-title {
-    color: #2c5728; /* Green color */
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.service-subtitle {
-    color: white;
-    font-weight: 600;
-    border-bottom: 3px solid #ffc107 ;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.service-subtitle::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: red; /* Accent color */
-}
-
-.custom-bg {
-    background-color: #f8f9fa;
-    transition: transform 0.3s ease;
-}
-
-.custom-bg:hover {
-    transform: translateY(-5px);
-}
-  	.machinery-grid {
-	    display: grid;
-	    grid-template-columns: repeat(2, 1fr); /* two equal columns */
-	    gap: 20px; /* spacing between items */
-	}
-
-	.machinery-column {
-	    display: flex;
-	    flex-direction: column;
-	}
-
-     .machinery-item {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .machinery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .machinery-item img:hover {
-            transform: scale(1.1);
-        }
-
-        .machinery-item h3 {
-            font-size: 24px;
-            margin: 20px 0 10px;
-        }
-
-        .machinery-item p {
-            font-size: 16px;
-            color: #666;
-            display: none; /* Hidden by default */
-        }
-
-        .machinery-item.active p {
-            display: block; /* Show description on click */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Tabs with Slideshow</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
 
 
  .decorative-line {
         width: 80px;
         height: 3px;
         background-color: #d90429;
-        margin: 0 auto 30px;
+        margin: 0 10px 0;
+
     }
- /* Background container for specific sections */
-        .background-section {
-            position: relative;
-            padding: 20px;
-            margin-bottom: 30px;
-            overflow: auto;
-        }
-
-        /* Transparent background for specific sections */
-        .background-section::before {
-            content: "";
- 	    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), 
-                url('image_file/maize_field12.jpg') no-repeat center center/cover;
-           
-            background-repeat: repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 1;
-            z-index: -1;
-        }
-
-
-
-
-<!--===// CSS: Footer
-	==============================================================================-->
-
-
-/* ===== BASE FOOTER STYLES ===== */
-
-.main-footer {
-    position: relative;
-    padding: 20px;
-    z-index: 1;
-}
-
-.footer-bg-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.footer-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.footer-content-container {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Optional: Adds a slight overlay */
-}
-
-
-
-.main-footer {
-    position: relative; /* Ensures child elements respect positioning */
-    padding: 50px 0;
-    background: rgba(0, 100, 0, 0.6); /* Semi-transparent background for footer */
-    color: blue;
-}
-
-.main-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("your-image.jpg") no-repeat center center;
-    background-size: cover;
-    opacity: 0.3; /* Adjust transparency (0 = fully transparent, 1 = fully visible) */
-    z-index: -1; /* Push behind footer content */
-}
-/* Container for centering content */
-.footer-content-container {
-    position: relative; /* Ensures text stays above the background */
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
-
-
-
-
-/* ===== COLUMN LAYOUT ===== */
-.footer-columns {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Individual column styling */
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-color: red;
-}
-
-/* ===== LOGO COLUMN ===== */
-.footer-logo {
-    width: 180px;
-    margin-bottom: 25px;
-}
-
-.footer-contact p {
-    margin: 12px 0;
-    opacity: 0.9;
-    line-height: 1.6;
-color: blue;
-}
-
-/* ===== LINK COLUMNS ===== */
-.footer-heading {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-color: blue;
-}
-
-.footer-menu {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-menu li {
-    margin-bottom: 15px;
-}
-
-.footer-menu a {
-    color: blue;
-    text-decoration: none;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.footer-menu a:hover {
-    opacity: 1;
-    padding-left: 5px;
-}
-
-/* ===== BOTTOM SECTION ===== */
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
-}
-
-.copyright {
-    opacity: 0.8;
-    font-size: 0.9rem;
-}
-
-.legal-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 25px;
-    opacity: 0.8;
-color: blue;
-}
-
-.legal-links a:hover {
-    opacity: 1;
-}
-
-/* ===== MOBILE RESPONSIVENESS ===== */
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column; /* Stack columns vertically */
-        gap: 40px;
+    /* Layout for the tabs and slideshow */
+    .background-service {
+      position: relative;
+      padding: 80px 5px;
+      margin-bottom: 30px;
+      overflow: auto;
+     height:700px;
     }
 
-    .footer-col {
-        text-align: center; /* Center align mobile content */
+    .background-service::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+        url('image_file/maize_field.jpg') no-repeat center center/cover;
+      background-repeat: repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      z-index: -1;
+      height:700px;
     }
 
-    .footer-menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    .container-service {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      border-radius: 5px;
+      overflow: hidden;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+    /* Vertical tab menu */
+    .tab-menu {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      overflow: hidden;
+      gap: 1rem;
     }
 
-    .legal-links a {
-        margin: 0 10px; /* Adjust spacing for mobile */
+    .tab {
+      padding: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      text-align: left;
+      transition: background 0.3s;
+      border-radius: 50px 0 0 50px;
+      color: white;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.solution-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.solution-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.solution-card:hover {
-    transform: translateY(-5px);
-}
-
-.solution-image {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-}
-
-.solution-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.solution-image:hover img {
-    transform: scale(1.05);
-}
-
-.solution-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: white;
-}
-
-.solution-content {
-    padding: 25px;
-}
-
-.solution-content h4 {
-    color: #4CAF50;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-.solution-content ul {
-    list-style: none;
-    padding-left: 20px;
-    margin: 15px 0;
-}
-
-.solution-content li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 25px;
-}
-
-.solution-content li:before {
-    content: "✓";
-    color: #4CAF50;
-    position: absolute;
-    left: 0;
-}
-
-.solution-cta {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.solution-cta:hover {
-    background: #45a049;
-    transform: translateX(5px);
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .solution-grid {
-        grid-template-columns: 1fr;
+    .tab:hover {
+      background-color: white;
+      color: black;
     }
-    
-    .solution-image {
-        height: 250px;
+
+    .tab.active {
+      background-color: white;
+      color: black;
     }
-    
-    .solution-content {
-        padding: 20px;
+
+    /* Icon styling */
+    .tab i {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: green; /* Green background for inactive tabs */
+      color: white;
+      transition: background 0.3s;
     }
-    
-    .solution-content h4 {
-        font-size: 1.3em;
+
+    .tab.active i {
+      background-color: blue; /* Blue background for active tabs */
     }
-}
+
+    /* Slideshow container */
+    .slideshow-container {
+      width: 70%;
+      position: relative;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 1);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Table of contents */
+    .table-of-contents {
+      width: 25%;
+      padding: 100px 0;
+      background-color: rgba(144, 238, 144, 0.5); 
+      border-radius: 5px;
+top:30px;
+    }
+
+    .table-of-contents ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .table-of-contents li {
+     padding: 10px;
+     cursor: pointer;
+     transition: background 0.3s;
+     
+     
+    }
+
+    .table-of-contents li:hover {
+      background-color: #e9ecef;
+    }
+
+    .table-of-contents li.active {
+      background-color: #007bff;
+      color: white;
+    }
+    .content-style {
+  		font-size: 18px;       /* Controls the font size */
+  		font-family: Arial, sans-serif; /* Controls the font type */
+  		color: green;        /* Controls the font color (dark gray) */
+	}
+    /* Slideshow */
+    .slideshow {
+      width: 75%;
+      display: none;
+    }
+
+    .slideshow.active {
+      display: block;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 600px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .slide-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+     color: green;        
+    }
+
+    .slide-description {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      height: 60px;
+      color: white;
+      font-size: 18px;
+      background-color: rgba(200, 0, 0, 0.5);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+     .prev {
+      top: 140px; /* Position above the table of contents */
+      left: 90%;
+      transform: translateX(-50%);
+    }
+
+    .next {
+      top: 240px; /* Position below the table of contents */
+      left: 90%;
+      transform: translateX(-50%);
+    }
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 3px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #717171;
+    }
 
 
-
-    </style>
-</head>
-<!--===// 
-	==========================================================================================================-->
-
-<!--===// Body
-	==========================================================================================================-->
-
-
-
-  
-<body>
-
-
-   <section class="address-section">
-        <p> 📞 +251 911112602 | ✉️ girma.moges@farmlab-ethiopia.com | </p>
-    </section>
-
-    
-
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="image_file/logo_2.jpg" alt="Logo">
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about_us.html">About Us</a>
-            <a href="service.html">Services</a>
-	    <a href="contact.html">Contact us</a>
-        </nav>
-
-        <!-- Mobile Navigation -->
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div id="mobile-menu">
-            <a href="index.html">Home</a>
-            <a href="about_us.html">About Us</a>
-            <a href="service.html">Services</a>
-	    <a href="contact.html">Contact us</a>
-        </div>
-    </header>
-
-
- 
-
-
-
-
-
-<!--===// Slider
+<!--===// CSS: Mobile Responsiveness
 	=========================================================-->
 
 
+@media (max-width: 700px) {
+  .container-service {
+    flex-direction: column; /* Stack tabs and slideshow vertically */
+    width: 100%;
+  }
+
+  .tab-menu {
+    width: 100%; /* Full width for tabs */
+    flex-direction: row; /* Horizontal tabs for mobile */
+    overflow-x: auto; /* Allow horizontal scrolling for tabs */
+    gap: 0.5rem; /* Reduce gap between tabs */
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+
+  .tab {
+    padding: 10px; /* Reduce padding for smaller screens */
+    border-radius: 50px; /* Fully rounded tabs for mobile */
+    white-space: nowrap; /* Prevent text wrapping */
+    flex: 1 1 auto; /* Allow tabs to shrink/grow as needed */
+  }
+
+  .slideshow-container {
+    width: 100%; /* Full width for slideshow */
+    flex-direction: column; /* Stack table of contents and slideshow vertically */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .table-of-contents {
+    width: 100%; /* Full width for table of contents */
+    padding: 10px 0; /* Reduce padding for smaller screens */
+    background-color: rgba(144, 238, 144, 0.8); /* Slightly darker background for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Add space between table of contents and slideshow */
+  }
+
+  .table-of-contents ul {
+    display: flex; /* Horizontal layout for table of contents */
+    flex-wrap: wrap; /* Allow wrapping for multiple items */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Add gap between items */
+  }
+
+  .table-of-contents li {
+    padding: 8px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Smaller font size for mobile */
+    border-radius: 5px; /* Rounded corners for list items */
+  }
+
+  .slideshow {
+    width: 100%; /* Full width for slideshow */
+  }
+
+  .mySlides img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .slide-title {
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+
+  .slide-description {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .prev,
+  .next {
+    width: 40px; /* Smaller arrows for mobile */
+    height: 40px;
+    font-size: 16px; /* Smaller font size for arrows */
+    top: 50%; /* Center vertically */
+    left: 10px; /* Position arrows on the left */
+    transform: translateY(-50%); /* Center vertically */
+  }
+
+  .next {
+    left: auto; /* Reset left position */
+    right: 10px; /* Position next arrow on the right */
+  }
+
+  .decorative-line {
+    width: 50px; /* Smaller decorative line for mobile */
+    height: 2px;
+    margin: 5px auto; /* Center decorative line */
+  }
+}
 
 
 
 
-   
-    <div class="slider">
-          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
-
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Next</span>
-		</button>
-
-                <div class="carousel-item active">
-                    <img src="image_file/wheat_field_2.jpg" class="d-block w-100" alt="Slider Image 1">
-                    <div class="hero">
-			
-                         <h1>Empowering Ethiopian Farmers With <span class="highlight"> Sustainable Solutions</span></h1>
-                        <a href="about_us.html" class="cta-button" style="z-index: 3;">Learn More</a>
-                    </div>
-                </div>
-
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <img src="image_file/super_seeder_1.jpg" class="d-block w-100" alt="Slider Image 2">
-                    <div class="secondary-title">
-                        <h2></h2>
-                    </div>
-                    <div class="slide-content">
- 			<p class="styled-text">Mechanization Services</p>
-                        <h2>Revolutionizing farming with advanced mechanization services that save time, <span class="highlight">increase efficiency, and boost crop yields</span></h2>
-                       
-                        <a href="service.html#mechanization" class="cta-button">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <img src="image_file/digital_soln.jpg" class="d-block w-100" alt="Slider Image 3">
-                    <div class="secondary-title">
-                        <h2></h2>
-                    </div>
-                    <div class="slide-content">
-			<p class="styled-text">Digital Solutions</p>
-                        <h2>Transforming agriculture with our digital platform, connecting farmers to vital resources <span class="highlight">and services for smarter farming</span></h2>
-                        
-                        <a href="service.html#inputs" class="cta-button">Learn More</a>
-                    </div>
-                </div>
-		<!-- Slide 4 -->
-                <div class="carousel-item">
-                    <img src="image_file/advisory_1.jpg" class="d-block w-100" alt="Slider Image 2">
-                    <div class="secondary-title">
-                        <h2></h2>
-                    </div>
-                    <div class="slide-content">
-			<p class="styled-text">Advisory</p>
-                         <h2>Guiding farmers towards sustainable agricultural practices, ensuring long-term <span class="highlight">success and environmental preservation.</span></h2>
-                        
-                        <a href="service.html#mechanization" class="cta-button">Learn More</a>
-                    </div>
-                </div>
-		<!-- Slide 5 -->
-                <div class="carousel-item">
-                    <img src="image_file/seed_fert.jpg" class="d-block w-100" alt="Slider Image 2">
-                    <div class="secondary-title">
-                        <h2></h2>
-                    </div>
-                    <div class="slide-content">
-		<p class="styled-text">Quality Inputs</p>
-                         <h2>Supplying high-quality seeds, fertilizers, and farming  <span class="highlight">inputs to drive growth and enhance crop production</span></h2>
-                        
-                        <a href="service.html#mechanization" class="cta-button">Learn More</a>
-                    </div>
-                </div>
-            </div>
+  </style>
+</head>
+<body>
+  <div class="background-service">
+    <div class="container-service">
+      <!-- Vertical Tabs -->
+      <div class="tab-menu">
+        <div class="tab active" data-tab="slideshow1">
+          <i class="fas fa-tractor"></i>
+          <span>Land Preparation</span>
         </div>
+        <div class="tab" data-tab="slideshow2">
+          <i class="fas fa-seedling"></i>
+          <span>Planting Machinery</span>
+        </div>
+        <div class="tab" data-tab="slideshow3">
+          <i class="fas fa-tools"></i>
+          <span>Spraying and Fertilization</span>
+        </div>
+      </div>
+
+      <!-- Slideshow Sections -->
+      <div class="slideshow-container">
+        <!-- Table of Contents -->
+        <div class="table-of-contents" id="toc1">
+          <ul>
+            <li onclick="currentSlide(1, 'slideshow1')" class="content-style">Disk Harrow</li>
+
+  		<div class="decorative-line"></div>
+            <li onclick="currentSlide(2, 'slideshow1')" class="content-style">Rotary Tiller</li>
+		<div class="decorative-line"></div>
+            <li onclick="currentSlide(3, 'slideshow1')" class="content-style">Cultivator</li>
+		<div class="decorative-line"></div>
+	    <li onclick="currentSlide(4, 'slideshow1')" class="content-style">Sub Soiler</li>
+		<div class="decorative-line"></div>
+ 	    <li onclick="currentSlide(5, 'slideshow1')" class="content-style">Laser Land leveller</li>
+		<div class="decorative-line"></div>
+            <li onclick="currentSlide(6, 'slideshow1')" class="content-style">Ridger</li>
+		<div class="decorative-line"></div>
+            
+          </ul>
+        </div>
+
+        <!-- Slideshow for Tab 1 -->
+        <div class="slideshow active" id="slideshow1">
+          <div class="mySlides">
+            <h2 class="slide-title">Disk Harrow</h2>
+            <img src="image_file/disk_harrow.jpg">
+            <p class="slide-description">The Disk Harrow is a robust secondary tillage implement designed to refine soil structure after primary plowing. 
+              It breaks clods, incorporates crop residues, and eliminates weeds, creating a fine, uniform seedbed ideal for sowing. 
+              It is compatible with 50HP tractors, it combines power and efficiency to meet the needs of Ethiopian smallholder farmers.</p>
+          </div>
+          <div class="mySlides">
+            <h2 class="slide-title">Rotary Tiller/Rotavator</h2>
+            <img src="image_file/Rotary_tiller.jpg">
+            <p class="slide-description">The Rotary Tiller is a versatile tillage implement designed to prepare soil for planting by thoroughly mixing, aerating, 
+              and refining soil structure. It breaks hardpan, pulverizes clods, incorporates crop residues, and eliminates weeds, creating 
+              a uniform, fine-textured seedbed ideal for sowing. It is designed to be pulled by 50HP tractors, it combines power, precision, 
+              and efficiency to meet the needs of Ethiopian smallholder farmers. The unique design is ideal for seed bed preparation to 
+              improve the soil health and supplements in retaining soil moisture and increases porosity.</p>
+          </div>
+          <div class="mySlides">
+            <h2 class="slide-title">Cultivator</h2>
+            <img src="image_file/Cultivator.jpg">
+            <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
+					It is ideal for breaking up hard soil and preparing the land for planting.</p>
+          </div>
+	<div class="mySlides">
+            <h2 class="slide-title">Sub Soiler</h2>
+            <img src="image_file/sub_soiler.jpg">
+            <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
+					It is ideal for breaking up hard soil and preparing the land for planting.</p>
+          </div>
+ 	<div class="mySlides">
+            <h2 class="slide-title">Laser Land Leveller</h2>
+            <img src="image_file/laser_leveler_1.jpg">
+            <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
+					It is ideal for breaking up hard soil and preparing the land for planting.</p>
+          </div>
+	<div class="mySlides">
+            <h2 class="slide-title">Ridger</h2>
+            <img src="image_file/ridger.jpg">
+            <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
+					It is ideal for breaking up hard soil and preparing the land for planting.</p>
+          </div>
+          <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+          <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+        </div>
+      </div>
     </div>
-
-
-<!--===// Service
-	======================================================================================================-->
-
-
-<section class="service-message">
-    <div class="content">
-        <h2>Our Services</h2>
-	
-   <div class="decorative-line"></div>
-    </div>
-</section>
-
-
-       
-
- <div class="background-section">
-
-<section class="container py-5">
-       
-
-        <!-- Tillage Equipment -->
-        <h2 class="service-subtitle">Tillage Equipment</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/disk_harrow.jpg" alt="Disk Harrow">
-                    <h3>Disk Harrow</h3>
-                    <div class="description">
-                        <p>The Disk Harrow is a robust secondary tillage implement designed to refine soil structure after primary plowing. It breaks clods, incorporates crop residues, and eliminates weeds, creating a fine, uniform seedbed ideal for sowing. It is compatible with 50HP tractors, it combines power and efficiency to meet the needs of Ethiopian smallholder farmers.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/Rotary_tiller.jpg" alt="Rotary Tiller">
-                    <h3>Rotary Tiller/Rotavator</h3>
-                    <div class="description">
-                        <p>The Rotary Tiller is a versatile tillage implement designed to prepare soil for planting by thoroughly mixing, aerating, and refining soil structure. It breaks hardpan, pulverizes clods, incorporates crop residues, and eliminates weeds, creating a uniform, fine-textured seedbed ideal for sowing. It is designed to be pulled by 50HP tractors, it combines power, precision, and efficiency to meet the needs of Ethiopian smallholder farmers. The unique design is ideal for seed bed preparation to improve the soil health and supplements in retaining soil moisture and increases porosity.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/Cultivator.jpg" alt="Cultivator">
-                    <h3>Cultivator</h3>
-                    <div class="description">
-                        <p>The Cultivator is designed for deep tillage and soil inversion. It is ideal for breaking up hard soil and preparing the land for planting.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/sub_soiler.jpg" alt="Sub Soiler">
-                    <h3>Sub Soiler</h3>
-                    <div class="description">
-                        <p>Our Sub-Soiler Service tackles soil compaction by breaking up hardpan layers deep beneath the surface, improving root growth, water infiltration, and soil health. Designed for Ethiopian smallholder farms, this single-bottom sub-soiler is compatible with 50HP tractors, delivering targeted deep tillage without disturbing the topsoil. Ideal for fields suffering from waterlogging or poor drainage, this service revitalizes compacted soils for healthier, more productive crops.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/laser_leveler_1.jpg" alt="Laser Land Leveler">
-                    <h3>Laser Land Leveler</h3>
-                    <div class="description">
-                        <p>Our Laser Land Leveler revolutionizes field preparation by delivering unparalleled precision in land leveling, ensuring optimal water distribution and uniform crop growth. It levels the field within a certain degree of the desired slope using a guided laser beam throughout the field. An unevenness of the soil surface has a significant impact on the germination, stand, and yield of crops.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/ridger.jpg" alt="Disk Ridger">
-                    <h3>Disk Ridger</h3>
-                    <div class="description">
-                        <p>Disc Ridger is specially designed implement for forming ridges or for making irrigation banks for flood irrigation by cutting and turning the soil in two opposite direction.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
-    </section>
-
-
-
-
-
-
-	 <div class="background-section">
-	<section class="container py-5">
-         <!-- Planting Equipment -->
-        <h2 class="service-subtitle">Planting Equipment</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/super_seeder.jpg" alt="Super Seeder">
-                    <h3>Super Seeder</h3>
-                    <div class="description">
-                        <p>Our Super Seeder revolutionizes planting by enabling direct seeding of crops like wheat and rice without prior tillage. This multi-purpose machine uses double notched disc furrow openers to create precise rows for uniform seed and fertilizer placement. It combines residue management, seeding, and fertilization in a single pass, saving time and protecting soil health.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/Happy_seeder.jpg" alt="Happy Seeder">
-                    <h3>Happy Seeder</h3>
-                    <div class="description">
-                        <p>Planting Service with Happy Seeder offers a soil conservation solution for sowing different crops without prior tillage, preserving soil health. This innovative technology cuts and incorporates crop residues into the soil while simultaneously planting seeds, ensuring optimal germination and reducing labor. It combines sustainability with efficiency, promoting conservation agriculture.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/multi_crop_planter.jpg" alt="Multi Crop Planter">
-                    <h3>Multi Crop Planter</h3>
-                    <div class="description">
-                        <p>?????</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/raised_bed_planter.jpg" alt="Raised Bed Planter">
-                    <h3>Raised Bed Planter</h3>
-                    <div class="description">
-                        <p>Our Raised Bed Multi-Crop Planter is designed for precise seeding of various crops on raised beds. The process of bed formation and seeding is completed in a single pass, improving drainage, reducing waterlogging, and optimizing soil warmth for quicker germination. This method allows for greater water conservation compared to flat and ridge planting methods, as it focuses irrigation on the furrows only, providing moisture to both adjacent beds. By integrating bed shaping, seed placement, and fertilizer application in one pass, this service ensures higher yields and efficient use of resources. Sowing can be done at varying row spacing of 20 cm to 40 cm, with sowing depths ranging from 5 cm to 10 cm.</p>
-                    </div>
-                </div>
-
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/potato_planter.jpg" alt="Potato Planter">
-                    <h3>Potato Planter</h3>
-                    <div class="description">
-                        <p>The Potato Planter revolutionizes potato production by delivering precise, efficient planting of potatoes in uniform rows. It creates optimal seed beds with integrated furrow systems, this versatile machine adapts to diverse soils, climates, and farm sizes. By automating planting and bed formation in a single pass in two rows, it eliminates manual labor, boosts yields, and reduces operational costs. It can also be used for other tuber crops by adjusting it.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
-    </section>
-
-
-
-
-
-
-
- <div class="background-section">
-	<section class="container py-5">
-        
-        <!-- Sprayer & Fertilizer -->
-        <h2 class="service-subtitle">Sprayer & Fertilizer Application</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/sprayer.jpg" alt="Sprayer">
-                    <h3>Sprayer</h3>
-                    <div class="description">
-                        <p>Our high-capacity sprayer ensures even distribution of pesticides and herbicides, protecting your crops effectively.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Digital Solutions -->
-        <h2 class="service-subtitle">Digital Solutions</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/xfarm_1.jpg" alt="XFarm">
-                    <h3>XFarm Smart Farming</h3>
-                    <div class="description">
-                        <h4>Precision Farm Management</h4>
-                        <p>Our XFarm platform offers real-time field monitoring, crop health analysis, and automated irrigation control. Accessible via mobile and web, it features:</p>
-                        <ul>
-                            <li>AI-powered pest detection</li>
-                            <li>Weather-based irrigation scheduling</li>
-                            <li>Yield prediction models</li>
-                            <li>Input usage tracking</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="machinery-item" onclick="toggleDescription(this)">
-                    <img src="image_file/lastmile.jpg" alt="Local Links">
-                    <h3>Local Links Hub</h3>
-                    <div class="description">
-                        <h4>Farmer Marketplace Network</h4>
-                        <p>Connect directly with agricultural stakeholders through our Local Links platform:</p>
-                        <ul>
-                            <li>Real-time market prices</li>
-                            <li>Equipment sharing network</li>
-                            <li>Input supplier directory</li>
-                            <li>Expert consultation portal</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!--===// Footer
-	===================================================================================-->
-
-
-<footer class="main-footer"> 
-    <!-- Background Image -->
-    <div class="footer-bg-container">
-        <img src="image_file/wheat_field_2.jpg" alt="Footer Background" class="footer-bg">
-    </div>
-
-    <div class="footer-content-container">
-        <div class="footer-columns">
-            <div class="footer-col logo-col">
-                <a href="/" class="footer-logo-link">
-                    <img src="image_file/logo_2.jpg" alt="Farm Hub Logo" class="footer-logo">
-                </a>
-                <div class="footer-contact">
-                    <<p>📍 Addis Ababa, Ethiopia</p>
-            	    <p>📞 +251 911112602</p>
-          	    <p>✉️ girma.moges@farmlab-ethiopia.com</p>
-                </div>
-            </div>
-
-            <div class="footer-col quick-links">
-                <h4 class="footer-heading">Quick Access</h4>
-                <ul class="footer-menu">
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col main-nav">
-                <h4 class="footer-heading">Explore</h4>
-                <ul class="footer-menu">
-                    <li><a href="/solutions">Solutions</a></li>
-                    <li><a href="/resources">Resources</a></li>
-                    <li><a href="/farmers">For Farmers</a></li>
-                    <li><a href="/partners">Partners</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p class="copyright">&copy; 2024 Farm Hub. All rights reserved.</p>
-            <div class="legal-links">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const descriptions = {
-            'disk-harrow': {
-                title: 'Disk Harrow',
-                image: 'disk_harrow.jpg',
-                description: 'The Disk Harrow is a robust secondary tillage implement designed to refine soil structure after primary plowing...'
-            },
-            'rotary-tiller': {
-                title: 'Rotary Tiller',
-                image: 'rotary_tiller.jpg',
-                description: 'The Rotary Tiller is a versatile tillage implement designed to prepare soil for planting...'
-            },
-            'super-seeder': {
-                title: 'Super Seeder',
-                image: 'super_seeder.jpg',
-                description: 'Our Super Seeder revolutionizes planting by enabling direct seeding of crops...'
-            },
-            // Add descriptions for other items similarly
-        };
-
-        function showDescription(id) {
-            const item = descriptions[id];
-            document.getElementById('modalTitle').textContent = item.title;
-            document.getElementById('modalImage').src = item.image;
-            document.getElementById('modalDescription').textContent = item.description;
-            new bootstrap.Modal(document.getElementById('descriptionModal')).show();
-        }
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- JavaScript for Toggle Description -->
-    <script>
-        function toggleDescription(item) {
-            item.classList.toggle('active');
-        }
-    </script>
-<script>
-// Update mobile menu toggle
-document.querySelector('.hamburger').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('nav').classList.toggle('active');
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const header = document.querySelector('header');
-    if (!header.contains(event.target)) {
-        document.querySelector('.hamburger').classList.remove('active');
-        document.querySelector('nav').classList.remove('active');
-    }
-});
-
-// Close menu on any link click
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.hamburger').classList.remove('active');
-        document.querySelector('nav').classList.remove('active');
+  </div>
+
+  <script>
+    // Tab switching functionality
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.slideshow').forEach(s => s.classList.remove('active'));
+
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
+
+        showSlides(0, this.dataset.tab); // Reset to first slide
+      });
     });
-});
 
+    // Slideshow functionality
+    let slideIndices = {}; // Store indices for each slideshow
 
+    function showSlides(index, slideshowId) {
+      let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+      if (!slides.length) return;
 
+      slideIndices[slideshowId] = (index + slides.length) % slides.length;
 
+      slides.forEach(slide => slide.style.display = "none");
+      slides[slideIndices[slideshowId]].style.display = "block";
 
+      // Highlight the active item in the table of contents
+      const toc = document.querySelector(`#${slideshowId} .table-of-contents ul`);
+      if (toc) {
+        toc.querySelectorAll('li').forEach((li, i) => {
+          li.classList.toggle('active', i === slideIndices[slideshowId]);
+        });
+      }
+    }
 
+    function plusSlides(n, slideshowId) {
+      showSlides(slideIndices[slideshowId] + n, slideshowId);
+    }
 
+    function currentSlide(n, slideshowId) {
+      showSlides(n - 1, slideshowId);
+    }
 
-
-
-
-
-
-
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    // Initialize all slideshows
+    document.querySelectorAll('.slideshow').forEach(slideshow => {
+      slideIndices[slideshow.id] = 0;
+      showSlides(0, slideshow.id);
+    });
+  </script>
 </body>
 </html>
