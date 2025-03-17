@@ -16,6 +16,162 @@
         margin: 0 10px 0;
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+===========================================================================================================================-->
+ <!--===// 						CSS: Navigation
+	===========================================================================================================================-->
+
+    <style>
+        body {
+            font-family: "Barlow Semi Condensed", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 3px;
+            background-color: #d90429;
+            margin: 0 auto 10px;
+        }
+
+        .navbar {
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 30px;  /* Reduced height for logo */
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 800;
+            color: orange;
+	   font-size: 22px;
+  
+
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28a745;
+        }
+
+        .logo-wrapper {
+            margin-right: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            padding: 5px;  /* Adjusted padding */
+            border: 2px solid #28a745;  /* Reduced border width */
+        }
+
+        .rotate-logo {
+            transform: rotate(360deg);
+            transition: transform 0.5s ease;
+            max-width: 100px;
+        }
+
+        .rotate-logo:hover {
+            transform: rotate(0deg);
+        }
+
+
+        .header {
+            display: flex;
+            align-items: center; /* Align logo and title vertically */
+            justify-content: flex-start; /* Align to the left */
+        }
+
+        .header .title h1 {
+            font-size: 1.2rem;  /* Adjusted size for better alignment */
+            font-weight: 600;
+            margin: 0;  /* Remove any default margin */
+            padding-left: 10px;  /* Space between logo and title */
+            background: linear-gradient(to bottom, green 55%, blue 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent; /* Ensure text is transparent for gradient effect */
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                display: flex;
+                align-items: center; /* Ensures items in the navbar are centered vertically */
+            }
+
+            .navbar-nav {
+                background: white;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                width: 100%; /* Full width for mobile menu */
+            }
+
+            .navbar-toggler {
+                margin-left: auto; /* This will push the toggler to the far right */
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+service-message {
+	        background-color: #f8f9fa;
+	        padding: 60px 0;
+	        text-align: center;
+	        position: relative;
+	        z-index: 2;
+	    }
+ .service-message h2 {
+        color: #2d6a4f;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+	text-align: center;
+	
+    }
+
+
+
+
+
+
+
+
+
+
+
     /* Layout for the tabs and slideshow */
     .background-service {
       position: relative;
@@ -28,7 +184,7 @@
     .background-service::before {
       content: "";
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-        url('image_file/maize_field.jpg') no-repeat center center/cover;
+        url('image_file/maize_field11.jpg') no-repeat center center/cover;
       background-repeat: repeat;
       position: absolute;
       top: 0;
@@ -37,7 +193,7 @@
       bottom: 0;
       opacity: 1;
       z-index: -1;
-      height:700px;
+      height:750px;
     }
 
     .container-service {
@@ -86,19 +242,19 @@
 
     /* Icon styling */
     .tab i {
-      width: 40px;
-      height: 40px;
+      width: 70px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: green; /* Green background for inactive tabs */
+      background-color: blue; /* blue background for inactive tabs */
       color: white;
       transition: background 0.3s;
     }
 
     .tab.active i {
-      background-color: blue; /* Blue background for active tabs */
+      background-color: green; /* green background for active tabs */
     }
 
     /* Slideshow container */
@@ -333,6 +489,73 @@ top:30px;
   </style>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="header">
+                <a class="navbar-brand logo-wrapper" href="#">
+                     <img src="image_file/logo_2.jpg" alt="Logo" class="rotate-logo">
+                </a>
+                <div class="title">
+                    <h1>
+                        Regenerators<br>
+                        Agro-Engineering<br>
+                        Solutions
+                    </h1>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="service-message">
+    <div class="content">
+        <h2>Mechanization Solutions</h2>
+	
+   <div class="decorative-line"></div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
   <div class="background-service">
     <div class="container-service">
       <!-- Vertical Tabs -->
@@ -357,8 +580,7 @@ top:30px;
         <div class="table-of-contents" id="toc1">
           <ul>
             <li onclick="currentSlide(1, 'slideshow1')" class="content-style">Disk Harrow</li>
-
-  		<div class="decorative-line"></div>
+		<div class="decorative-line"></div>
             <li onclick="currentSlide(2, 'slideshow1')" class="content-style">Rotary Tiller</li>
 		<div class="decorative-line"></div>
             <li onclick="currentSlide(3, 'slideshow1')" class="content-style">Cultivator</li>
@@ -376,7 +598,7 @@ top:30px;
         <!-- Slideshow for Tab 1 -->
         <div class="slideshow active" id="slideshow1">
           <div class="mySlides">
-            <h2 class="slide-title">Disk Harrow</h2>
+ 	    <h2 class="slide-title">Disk Harrow</h2>
             <img src="image_file/disk_harrow.jpg">
             <p class="slide-description">The Disk Harrow is a robust secondary tillage implement designed to refine soil structure after primary plowing. 
               It breaks clods, incorporates crop residues, and eliminates weeds, creating a fine, uniform seedbed ideal for sowing. 
@@ -397,19 +619,19 @@ top:30px;
             <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
 					It is ideal for breaking up hard soil and preparing the land for planting.</p>
           </div>
-	<div class="mySlides">
+	  <div class="mySlides">
             <h2 class="slide-title">Sub Soiler</h2>
             <img src="image_file/sub_soiler.jpg">
             <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
 					It is ideal for breaking up hard soil and preparing the land for planting.</p>
           </div>
- 	<div class="mySlides">
+ 	  <div class="mySlides">
             <h2 class="slide-title">Laser Land Leveller</h2>
             <img src="image_file/laser_leveler_1.jpg">
             <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
 					It is ideal for breaking up hard soil and preparing the land for planting.</p>
           </div>
-	<div class="mySlides">
+	  <div class="mySlides">
             <h2 class="slide-title">Ridger</h2>
             <img src="image_file/ridger.jpg">
             <p class="slide-description">The Cultivator is designed for deep tillage and soil inversion. 
@@ -418,58 +640,163 @@ top:30px;
           <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
           <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
         </div>
+
+
+
+<div class="table-of-contents" id="toc2" style="display: none;">
+        <ul>
+          <li onclick="currentSlide(1, 'slideshow2')" class="content-style">Planter</li>
+          <div class="decorative-line"></div>
+          <li onclick="currentSlide(2, 'slideshow2')" class="content-style">Seed Drill</li>
+          <div class="decorative-line"></div>
+          <li onclick="currentSlide(3, 'slideshow2')" class="content-style">Transplanter</li>
+          <div class="decorative-line"></div>
+        </ul>
+      </div>
+
+      <!-- Slideshow for Tab 2 -->
+      <div class="slideshow" id="slideshow2">
+        <div class="mySlides">
+          <h2 class="slide-title">Planter</h2>
+          <img src="image_file/planter.jpg">
+          <p class="slide-description">The Planter is used for sowing seeds at precise intervals and depths.</p>
+        </div>
+        <div class="mySlides">
+          <h2 class="slide-title">Seed Drill</h2>
+          <img src="image_file/seed_drill.jpg">
+          <p class="slide-description">The Seed Drill ensures uniform seed placement and optimal germination.</p>
+        </div>
+        <div class="mySlides">
+          <h2 class="slide-title">Transplanter</h2>
+          <img src="image_file/transplanter.jpg">
+          <p class="slide-description">The Transplanter is used for transplanting seedlings into the field.</p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+      </div>
+
+      <!-- Table of Contents for Tab 3 -->
+      <div class="table-of-contents" id="toc3" style="display: none;">
+        <ul>
+          <li onclick="currentSlide(1, 'slideshow3')" class="content-style">Sprayer</li>
+          <div class="decorative-line"></div>
+          <li onclick="currentSlide(2, 'slideshow3')" class="content-style">Fertilizer Spreader</li>
+          <div class="decorative-line"></div>
+          <li onclick="currentSlide(3, 'slideshow3')" class="content-style">Boom Sprayer</li>
+          <div class="decorative-line"></div>
+        </ul>
+      </div>
+
+      <!-- Slideshow for Tab 3 -->
+      <div class="slideshow" id="slideshow3">
+        <div class="mySlides">
+          <h2 class="slide-title">Sprayer</h2>
+          <img src="image_file/sprayer.jpg">
+          <p class="slide-description">The Sprayer is used for applying pesticides and herbicides.</p>
+        </div>
+        <div class="mySlides">
+          <h2 class="slide-title">Fertilizer Spreader</h2>
+          <img src="image_file/fertilizer_spreader.jpg">
+          <p class="slide-description">The Fertilizer Spreader ensures even distribution of fertilizers.</p>
+        </div>
+        <div class="mySlides">
+          <h2 class="slide-title">Boom Sprayer</h2>
+          <img src="image_file/boom_sprayer.jpg">
+          <p class="slide-description">The Boom Sprayer is ideal for large-scale spraying operations.</p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
       </div>
     </div>
   </div>
+</div>
+   
 
-  <script>
-    // Tab switching functionality
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', function () {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.slideshow').forEach(s => s.classList.remove('active'));
 
-        this.classList.add('active');
-        document.getElementById(this.dataset.tab).classList.add('active');
 
-        showSlides(0, this.dataset.tab); // Reset to first slide
+
+
+
+
+
+
+
+
+
+
+
+<section class="service-message">
+    <div class="content">
+        <h2>Digital Solutions</h2>
+	
+   <div class="decorative-line"></div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Tab switching functionality
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.slideshow').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.table-of-contents').forEach(toc => toc.style.display = 'none');
+
+      this.classList.add('active');
+      const targetTabId = this.dataset.tab;
+      document.getElementById(targetTabId).classList.add('active');
+      document.getElementById(`toc${targetTabId.slice(-1)}`).style.display = 'block';
+
+      showSlides(0, targetTabId); // Reset to first slide
+    });
+  });
+
+  // Slideshow functionality
+  let slideIndices = {}; // Store indices for each slideshow
+
+  function showSlides(index, slideshowId) {
+    let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+    if (!slides.length) return;
+
+    slideIndices[slideshowId] = (index + slides.length) % slides.length;
+
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndices[slideshowId]].style.display = "block";
+
+    // Highlight the active item in the table of contents
+    const toc = document.querySelector(`#toc${slideshowId.slice(-1)} ul`);
+    if (toc) {
+      toc.querySelectorAll('li').forEach((li, i) => {
+        li.classList.toggle('active', i === slideIndices[slideshowId]);
       });
-    });
-
-    // Slideshow functionality
-    let slideIndices = {}; // Store indices for each slideshow
-
-    function showSlides(index, slideshowId) {
-      let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
-      if (!slides.length) return;
-
-      slideIndices[slideshowId] = (index + slides.length) % slides.length;
-
-      slides.forEach(slide => slide.style.display = "none");
-      slides[slideIndices[slideshowId]].style.display = "block";
-
-      // Highlight the active item in the table of contents
-      const toc = document.querySelector(`#${slideshowId} .table-of-contents ul`);
-      if (toc) {
-        toc.querySelectorAll('li').forEach((li, i) => {
-          li.classList.toggle('active', i === slideIndices[slideshowId]);
-        });
-      }
     }
+  }
 
-    function plusSlides(n, slideshowId) {
-      showSlides(slideIndices[slideshowId] + n, slideshowId);
-    }
+  function plusSlides(n, slideshowId) {
+    showSlides(slideIndices[slideshowId] + n, slideshowId);
+  }
 
-    function currentSlide(n, slideshowId) {
-      showSlides(n - 1, slideshowId);
-    }
+  function currentSlide(n, slideshowId) {
+    showSlides(n - 1, slideshowId);
+  }
 
-    // Initialize all slideshows
-    document.querySelectorAll('.slideshow').forEach(slideshow => {
-      slideIndices[slideshow.id] = 0;
-      showSlides(0, slideshow.id);
-    });
-  </script>
+  // Initialize all slideshows
+  document.querySelectorAll('.slideshow').forEach(slideshow => {
+    slideIndices[slideshow.id] = 0;
+    showSlides(0, slideshow.id);
+  });
+</script>
 </body>
 </html>
