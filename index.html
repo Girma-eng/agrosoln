@@ -866,202 +866,188 @@
 
         
         /*============================  The gaps slide =============================*/
-  
+        #productivity-gap-slide {
+    padding: 40px;
+    background: white;
+}
 
-                #productivity-gap-slide {
-                    padding: 40px;
-                    background: white;
-                }
+/* Two Column Layout */
+.two-columns-productivity {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
 
-                /* Two Column Layout */
-                .two-columns-productivity {
-                    display: flex;
-                    gap: 40px;
-                    margin-bottom: 50px;
-                }
+/* Ensure columns wrap on smaller screens */
+.text-content-productivity {
+    flex: 0 0 60%;
+}
 
-                .text-content-productivity {
-                    flex: 0 0 60%;
-                }
+.gap-image-column {
+    flex: 0 1 40%;
+    display: flex;
+    align-items: center;
+}
 
-                .gap-image-column {
-                    flex: 0 1 40%;
-                    display: flex;
-                    align-items: center;
-                }
+/* Intro Text */
+.intro-text-productivity {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
 
-                /* Intro Text */
-                .intro-text-productivity {
-                    font-size: 1.3rem;
-                    color: #555;
-                    line-height: 1.6;
-                    margin-bottom: 30px;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #eee;
-                }
+/* Dimensions Grid */
+.dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-                /* Dimensions Grid */
-                .dimensions-grid {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 20px;
-                }
+.dimension-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid;
+    transition: transform 0.3s ease;
+}
 
-                .dimension-card {
-                    background: white;
-                    border-radius: 8px;
-                    padding: 20px;
-                    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-                    border-left: 4px solid;
-                    transition: transform 0.3s ease;
-                }
+.dimension-card:hover {
+    transform: translateY(-5px);
+}
 
-                .dimension-card:hover {
-                    transform: translateY(-5px);
-                }
+.dimension-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
 
-                .dimension-card h3 {
-                    margin-top: 0;
-                    font-size: 1.2rem;
-                }
+.dimension-card ul {
+    padding-left: 20px;
+    margin: 15px 0 0;
+}
 
-                .dimension-card ul {
-                    padding-left: 20px;
-                    margin: 15px 0 0;
-                }
+.dimension-card li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
 
-                .dimension-card li {
-                    margin-bottom: 8px;
-                    font-size: 0.95rem;
-                    color: #555;
-                }
+/* Color Coding */
+.agronomic { border-color: #27ae60; }
+.technical { border-color: #2980b9; }
+.allocative { border-color: #8e44ad; }
+.economic { border-color: #d35400; }
 
-                /* Color Coding */
-                .agronomic { border-color: #27ae60; }
-                .technical { border-color: #2980b9; }
-                .allocative { border-color: #8e44ad; }
-                .economic { border-color: #d35400; }
+/* Bar Graph */
+.bar-graph {
+    display: flex;
+    height: 300px;
+    align-items: flex-end;
+    gap: 15px;
+    justify-content: center;
+}
 
-                /* Bar Graph */
-                .bar-graph {
-                    display: flex;
-                    height: 300px;
-                    align-items: flex-end;
-                    gap: 15px;
-                    justify-content: center;
-                }
+.bar {
+    width: 40px;
+    background: linear-gradient(to top, #2ecc71, #27ae60);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    animation: barRise 1s forwards;
+    animation-delay: calc(var(--index) * 0.15s);
+}
 
-                .bar {
-                    width: 40px;
-                    background: linear-gradient(to top, #2ecc71, #27ae60);
-                    border-radius: 5px 5px 0 0;
-                    position: relative;
-                    transform: translateY(100px);
-                    opacity: 0;
-                    animation: barRise 1s forwards;
-                    animation-delay: calc(var(--index) * 0.15s);
-                }
+@keyframes barRise {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        height: var(--bar-height);
+    }
+}
 
-                @keyframes barRise {
-                    to {
-                        transform: translateY(0);
-                        opacity: 1;
-                        height: var(--bar-height);
-                    }
-                }
+.bar-value {
+    position: absolute;
+    top: -25px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: var(--dark);
+}
 
-                .bar-value {
-                    position: absolute;
-                    top: -25px;
-                    width: 100%;
-                    text-align: center;
-                    font-weight: bold;
-                    color: var(--dark);
-                }
+.bar-label {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
 
-                .bar-label {
-                    position: absolute;
-                    bottom: -25px;
-                    width: 100%;
-                    text-align: center;
-                    font-size: 0.8rem;
-                    color: #666;
-                }
+/* Impact Section */
+.full-width-impact {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
 
-                /* Impact Section */
-                .full-width-impact {
-                    margin-top: 50px;
-                    padding-top: 30px;
-                    border-top: 1px solid #eee;
-                }
+.impact-title {
+    text-align: center;
+    margin-bottom: 30px !important;
+}
 
-                .impact-title {
-                    text-align: center;
-                    margin-bottom: 30px !important;
-                }
+.impact-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-                .impact-row {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 20px;
-                }
+.impact-item {
+    padding: 15px;
+    border-radius: 8px;
+    border-top: 3px solid;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 
-                .impact-item {
-                    padding: 15px;
-                    border-radius: 8px;
-                    border-top: 3px solid;
-                    background: rgba(255,255,255,0.8);
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-                }
+.impact-item h4 {
+    margin-top: 0;
+    font-size: 1rem;
+}
 
-                .impact-item h4 {
-                    margin-top: 0;
-                    font-size: 1rem;
-                }
+.impact-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+/* Mobile Fix (add this to the very end of your CSS) */
+@media (max-width: 768px) {
+    /* 1. Fix card overlap */
+    .dimensions-grid {
+        grid-template-columns: 1fr;
+    }
 
-                .impact-item p {
-                    font-size: 0.9rem;
-                    color: #555;
-                }
+    /* 2. Fix animation overlap */
+    .two-columns-productivity {
+        display: block;
+    }
+    .gap-image-column {
+        margin-top: 40px;
+    }
+
+    /* 3. Make everything visible */
+    #productivity-gap-slide {
+        overflow: visible;
+        height: auto;
+        padding-bottom: 40px;
+    }
+}
 
             
 
-                @media (max-width: 768px) {
-                    .two-columns-productivity {
-                        flex-direction: column;
-                    }
-                    #productivity-gap-slide{
-                            margin-top: 400px !important;  /* Push everything down */
-                            padding-top: 10px !important; /* Add internal spacing */
-                            overflow: visible !important; /* Ensure nothing gets clipped */
-                        }
-                                
-                    .text-content-productivity,
-                    .gap-image-column {
-                        flex: 1 1 100%;
-                    }
-                    
-                    .dimensions-grid {
-                        grid-template-columns: 1fr;
-                    }
-                    
-                    .bar-graph {
-                        height: 250px;
-                        margin-top: 30px;
-                    }
-                    
-                    .impact-row {
-                        grid-template-columns: 1fr;
-                    }
-                }
-
-
-
-
-
-
-
-
+            
 
     
         /*============================ Misionlab component: two column slide-2 =============================*/
