@@ -39,14 +39,59 @@
         .slide {
             min-width: 100%;
             height: 100vh;
-            padding: 10px;
+            padding: 0 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
             overflow-y: auto;
         }
+        .slide-maintitle {
+                color: #0d4625;
+                font-size: clamp(2rem, 5vw, 3.5rem);
+                margin: 0 0 0 0;
+                text-transform: uppercase;
+                flex-shrink: 0;
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+                position: relative;
+                padding-bottom: 0.5rem;
+                text-align: center;
+            }
+ 
+            .slide-2-title {
+                color: white;
+                font-size: clamp(2rem, 5vw, 4.5rem);
+                margin: 0 0 0.5rem 0;
+                text-transform: uppercase;
+                text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
 
+            .slide-2-subtitle {
+               
+                font-size: clamp(2rem, 5vw, 4.5rem);
+                margin: 0.5rem 0 2rem 5rem;
+                text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+                font-weight: 700;
+                letter-spacing: 1px;
+               line-height: 1.2;
+               color:green;
+            }
+            .slide-3-subtitle {
+                color: rgba(255,255,255,0.9);
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                margin: 0.5rem 0 2rem 0;
+                font-weight: 400;
+                max-width: 800px;
+                line-height: 1.4;
+            }
+            .decorative-line {
+        	        width: 300px;
+                    height: 3px;
+                    background-color: #1e9d53;
+                    margin: 0 auto 30px;
+                }
         /* Slide Templates */
         /* Template 1: Title Slide */
         .title-slide {
@@ -68,54 +113,196 @@
         }
 
         /* Template 2: Table of Contents */
-        .toc-slide {
-            background-color: #fff;
-        }
+      /* Table of Contents Container */
+#tocList {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 60%;
+    margin-left: 100px;
+}
 
-        .toc-slide h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #444;
-        }
+/* H1 Groups */
+.toc-h1-group {
+    margin-bottom: 16px;
+}
 
-        .toc-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        .toc-item {
-            flex-basis: calc(33.333% - 10px);
-            padding: 15px;
-            background-color: #f0f0f0;
+/* H1 Container */
+.toc-h1-container {
+    display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgb(216, 221, 220);
             border-radius: 8px;
-            cursor: pointer;
+            text-decoration: none;
+            color: #15cf1f;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-size: 2rem;
+            
+}
+.toc-h1-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #3498db;
+            transition: width 0.3s ease;
         }
+    
+    .toc-h1-container:active {
+                color: #0056b3; /* Darker blue for active link */
+            }
 
-        .toc-item:hover {
-            background-color: #e0e0e0;
-            transform: translateY(-3px);
+            .toc-h1-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            color: #2980b9;
         }
-
-        /* Template 3: Single Column Text */
-        .single-column {
-            background-color: #fff;
-            padding: 60px;
+        
+        .toc-h1-container:hover:before {
+            width: 8px;
         }
+/* H1 Items */
+.toc-h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0bab10;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-grow: 1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    position: relative;
+   
+}
 
-        .single-column h1 {
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-        }
+.toc-h1:hover {
+    background: rgba(66, 153, 225, 0.1);
+    color: #2b6cb0;
+}
 
-        .single-column p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
+/* Dropdown Button */
+.dropdown-btn {
+    background: rgba(66, 153, 225, 0.1);
+    border: none;
+    cursor: pointer;
+    color: #2b6cb0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
 
+.dropdown-btn:hover {
+    background: rgba(66, 153, 225, 0.2);
+    transform: scale(1.05);
+}
+
+.dropdown-btn i {
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+}
+
+/* H2 Container */
+.toc-h2-container {
+    margin-left: 32px;
+    padding-left: 16px;
+    border-left: 2px solid rgba(66, 153, 225, 0.2);
+    display: none;
+}
+
+/* H2 Items */
+.toc-h2 {
+    font-size: 0.95rem;
+    color: #4a5568;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 4px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    position: relative;
+    background: rgba(237, 242, 247, 0.5);
+}
+
+.toc-h2:hover {
+    background: rgba(66, 153, 225, 0.1);
+    color: #2b6cb0;
+    transform: translateX(4px);
+}
+
+.toc-h2::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #4299e1;
+    border-radius: 50%;
+}
+
+/* Current slide highlighting */
+.toc-h1.current {
+    background: rgba(66, 153, 225, 0.15);
+    color: #2b6cb0;
+    font-weight: 600;
+}
+
+.toc-h2.current {
+    background: rgba(66, 153, 225, 0.15);
+    color: #2b6cb0;
+    font-weight: 500;
+}
+
+.toc-h2.current::before {
+    background-color: #2b6cb0;
+}
+
+/* Scrollbar styling */
+#tocList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#tocList::-webkit-scrollbar-track {
+    background: rgba(237, 242, 247, 0.5);
+    border-radius: 3px;
+}
+
+#tocList::-webkit-scrollbar-thumb {
+    background: rgba(66, 153, 225, 0.4);
+    border-radius: 3px;
+}
+
+#tocList::-webkit-scrollbar-thumb:hover {
+    background: rgba(66, 153, 225, 0.6);
+}
+
+/* Animation for dropdown */
+.toc-h2-container.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+ 
         /*================================= Template 4: Two Columns (Text + Image) ===========================*/
         .two-columns-text-image {
                     background-color: #f9f9f9;
@@ -221,7 +408,7 @@
 
         /* Template 6: Quote Slide */
         .quote-slide {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            background: linear-gradient(135deg, #12c81b, #67627d);
             color: white;
             text-align: center;
         }
@@ -1027,7 +1214,7 @@
         
         .gap-description {
             text-align: center;
-            color: #666;
+            color: #18a543;
             line-height: 1.6;
             font-size: 1.5rem;
         }
@@ -1057,10 +1244,10 @@
         .challenge-card {
             background: white;
             border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1rem;
+            padding: 0.5rem;
+            margin: 0.5rem;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            width: 450px;
+            width: 750px;
             transition: transform 0.3s ease;
             border-top: 5px solid #1e8449;
         }
@@ -1087,8 +1274,8 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            max-width: 1500px;
-            margin-top: 1rem;
+            max-width: 1700px;
+            margin-top: 0.5rem;
         }
 
         .emphasis-card {
@@ -1120,6 +1307,30 @@
         }
 
 
+        @media (max-width: 768px) {
+    #challanges-farmhub-slide {
+        padding-top: 10rem !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        overflow: visible;
+    }
+
+    .challenge-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .challenges-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emphasis-card {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+}
 
 
         
@@ -1308,6 +1519,112 @@
 
             
 
+
+          /*-------------------- Balance Container */
+          .balance-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            left: 170px;
+            top: 110px;
+            z-index: 2; 
+        }
+
+        .balance-beam {
+            width: 400px;
+            height: 8px;
+            background-color: black;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform-origin: center;
+            transform: translateX(-50%) rotate(0deg);
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .support {
+            width: 20px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .supply {
+            background-color: #ff5733;
+            left: -50%;
+            top: 30%;
+        }
+
+        .demand {
+            background-color: #33aaff;
+            left: 80%;
+            top: 10%;
+        }
+
+        .animate .balance-beam {
+            transform: translateX(-50%) rotate(30deg);
+        }
+
+        .animate .supply {
+            transform: translateY(-85px);
+        }
+
+        .animate .demand {
+            transform: translateY(55px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+
+
     
         /*============================ Misionlab component: two column slide-2 =============================*/
     
@@ -1325,18 +1642,13 @@
     }
 
     .missionlab-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
-        gap: 20px;
-        align-items: stretch; /* Better column alignment */
-    }
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    position: relative;
+}
     .missionlab-text {
         flex: 0 1 70%;
         background: rgba(255, 255, 255, 0.9);
@@ -1406,13 +1718,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 300px; /* Prevent image from collapsing */
+        min-height: 400px; /* Prevent image from collapsing */
     }
 
     .missionlab-image img {
         width: 100%;
         height: auto;
-        max-width: 750px;
+        max-width: 850px;
         border-radius: 8px;
         box-shadow: 20px 20px 10px rgba(175, 100, 50, 0.6);
     }
@@ -1429,7 +1741,7 @@
 
 
 
-    * Two-column layout */
+   /* ------------------------------Two-column layout */
         .slide-content {
             display: flex;
             width: 100%;
@@ -1516,7 +1828,7 @@
         }
 
         /* Decorative elements */
-        .circle {
+        .circle-0 {
             position: absolute;
             border-radius: 50%;
             opacity: 0.1;
@@ -1660,6 +1972,7 @@
                     flex-shrink: 0;
                   }
                   
+                  
                   .slide-title {
                     font-size: 2.8rem;
                     color: #047857;
@@ -1782,7 +2095,7 @@
                   }
                   
                   .productivity { background: #a7f3d0; color: #065f46; }
-                  .supply { background: #bae6fd; color: #0369a1; }
+                  .supply-2 { background: #bae6fd; color: #0369a1; }
                   .capacity { background: #ddd6fe; color: #5b21b6; }
                   
                   .card-connector {
@@ -1946,7 +2259,85 @@
 
 
 
-/* PROCESS SLIDE STYLES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+
+                .principles-container {
+                   
+                    display: flex;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                    padding: 0 5%;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    overflow: auto;
+                }
+
+            .principle-card {
+                background: white;
+                border-radius: 12px;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-top: 6px solid var(--accent-color);
+                transition: transform 0.3s ease;
+            }
+
+            .principle-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .principle-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .principle-title {
+                color: #0d4625;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            .principle-text {
+                color: #555;
+                line-height: 1.6;
+                font-size: 1.1rem;
+            }
+
+            @media (max-width: 768px) {
+                .principles-container {
+                flex: 1;
+                display: grid;
+                grid-template-columns: 1fr; /* Single column by default (mobile) */
+                gap: 2rem;
+                padding: 0 5%;
+                max-width: 1400px;
+                margin: 0 auto;
+                overflow: auto;
+            }
+         
+            }
+
+
+
+
+
+/*---------------------------------------- PROCESS SLIDE STYLES ---------------------*/
 .process-slide {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   padding: 2rem;
@@ -1962,14 +2353,7 @@
   flex-shrink: 0;
 }
 
-.slide-title {
-  font-size: 2.8rem;
-  color: #0369a1;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(to right, #0369a1, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .slide-subtitle {
   font-size: 1.3rem;
@@ -2030,7 +2414,7 @@
 .phase-content {
   flex: 1;
   background: white;
-  padding: 1.5rem;
+  padding: 0.8rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
@@ -2044,13 +2428,13 @@
 .phase-content h3 {
   color: #0369a1;
   margin-bottom: 0.75rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .phase-details p {
   color: #4b5563;
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 .phase-details ul {
@@ -2599,25 +2983,32 @@
             <i class="fas fa-list"></i>
         </button>
 
-        <!---------------------- Slides Container ---------------------->
-        <div class="slides-container" id="slidesContainer">
-            <!-- Slide 1: Title Slide (Template 1) -->
-            <div class="slide title-slide" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449'); background-size: cover; background-position: center;">
-                <h1>Hawassa Agri-Food Systems Transformation</h1>
-                <p>Farm Hub Ethiopia</p>
-            </div>
+<!--=+=+=+==+=+=+==+=+=+==+=+=+=+=+=+==+=+=+==+=+=+==+=+=+===+=+=+==+=+=+==+=+=+==+=+=+=+==+=+=++=++=++=++=++=+==+=+=+==+=+=+=-->
+<!--=+=+=+==+=+=+==+=+=+==+=+=+=+=+=+==+=+=+==+=+=+==+=+=+==- Slides Container ---=+=+=+==+=+=+==+=+=+==+=+==+=+==+=+=+==+=+=+=-->
+<!--=+=+=+==+=+=+==+=+=+==+=+=+=+=+=+==+=+=+==+=+=+==+=+=+==+=+=+=+=+==+=+=+==+=+=+==+=+=+=+==+=++=++=++=++=+=+==+=+=+==+=+=+=-->
+<div class="slides-container" id="slidesContainer">
+                <!-- Slide 1: Title Slide (Template 1) -->
+                <div class="slide title-slide" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449'); background-size: cover; background-position: center;">
+                    <h1>Hawassa Agri-Food Systems Transformation</h1>
+                    <p>Farm Hub Ethiopia</p>
+                </div>
 
             <!-- Slide 2: Table of Contents (Template 2) -->
-            <div class="slide toc-slide">
-                <h1>Table of Contents</h1>
+            <div class="slide toc-slide" style="background-image: url('image_file/maize_2.jpg'); background-size: cover; background-position: right;">
+                <h1 class="slide-maintitle">Table of Contents</h1>
                 <div class="toc-list" id="tocList">
+                    
                     <!-- Table of contents items will be generated by JavaScript -->
                 </div>
             </div>
+
+            
             <!--------------------------------------- The Challange ------------------------------------>
                                             
             <div id="challange-slide" class="slide" style="background: white;">
-                <h1 class="slide-title" style="color:green">The Challenges</h1>
+                <h1 class="slide-maintitle">The Challenges</h1>
+                <div class="decorative-line"></div>
+                
                 <div class="content-container">
                     <div class="text-column">
                     
@@ -2642,7 +3033,7 @@
                             <div class="gap-card productivity">
                                 <div class="gap-icon">⏱️</div>
                                 <h3 class="gap-title">Productivity Gap</h3>
-                                <p class="gap-description">
+                                <p class="gap-description" style="color: green;">
                                     Current output falls 30-50% below potential due to limited mechanization and suboptimal farming practices.
                                 </p>
                             </div>
@@ -2651,7 +3042,7 @@
                             <div class="gap-card supply-chain">
                                 <div class="gap-icon">🚚</div>
                                 <h3 class="gap-title">Supply Gap</h3>
-                                <p class="gap-description">
+                                <p class="gap-description" style="color: green;">
                                     Challenges accessing inputs and reliable markets, with 25-40% post-harvest losses.
                                 </p>
                             </div>
@@ -2660,7 +3051,7 @@
                             <div class="gap-card skills">
                                 <div class="gap-icon">🎓</div>
                                 <h3 class="gap-title">Skills Gap</h3>
-                                <p class="gap-description">
+                                <p class="gap-description" style="color: green;">
                                     Only 18% of farmers receive training, limiting adoption of modern techniques.
                                 </p>
                             </div>
@@ -2672,7 +3063,7 @@
             <!----------------------------------------------------- Productvity gaps ---------------------------------------------------------->
             
             <div id="productivity-gap-slide" class="slide">
-                <h1 class="slide-title" style="color:green">Productivity Gap</h1>
+                <h2 class="slide-2-subtitle">Productivity Gap</h2>
                 
                 <div class="two-columns-productivity">
                     <!-- Left Column (60%) -->
@@ -2774,19 +3165,15 @@
             <!----------------------------------------------------- supplay gap ---------------------------------------------------------->
 
             <div id="supply-gap-slide" class="slide">
-                <h1 style="font-style: italic; margin-right: 1000px; color:green;">Supply Gap</h1>
+                <h2 class="slide-2-subtitle">Supply Gap</h2>
                 <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-
                 <div class="missionlab-content">
                     <!-- Left Side: Text Section -->
-                    
                     <div class="missionlab-text">
                         <h2></h2>
                         <p class="systems-text" style="background: rgba(89, 161, 91, 0.1); color: #2c3e50; padding: 20px; border-radius: 8px; border-left: 4px solid rgb(89, 161, 91); font-size: 1.5rem; line-height: 1.6; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
                             The Supply Gap relates to the inadequate supply of essential technologies, inputs, and services to farmers. 
                         </p>
-                    
-                    
                         <ul>
                             <li class="systems-text">
                                 <span style="color: #27ae60; font-weight: 600;">Limited access to mechanisation, quality seeds, fertilizers, irrigation systems, 
@@ -2800,7 +3187,7 @@
                     </div>
 
                     <!-- Right Side: Image Section -->
-                    <div class="column" style="flex: 0 1 50%; height:650px">
+                    <div class="column style="flex: 0 1 50%; height:650px">
                         <div class="balance-container" id="balance">
                             <div class="circle supply">Supply</div>
                             <div class="circle demand">Demand</div>
@@ -2810,15 +3197,12 @@
                     </div>
                 </div>
 
-                <!-- Navigation Buttons -->
-                <button class="nav-button prev" onclick="prevSlide()">&#8249;</button>
-                <button class="nav-button next" onclick="nextSlide()">&#8250;</button>
             </div>
 
             <!----------------------------------------------------- capacity gap ---------------------------------------------------------->
             <div class="slide two-columns-text-image">
                 <div class="gaps-text-column">
-                    <h1>Capacity Gap</h1>
+                    <h2 class="slide-2-subtitle">Capacity Gap</h2>
                     <p class="systems-text"> The Capacity Gap represents a critical barrier for Ethiopia’s smallholder 
                         farmers, who often lack the skills, knowledge, and resources needed to 
                         adopt modern farming practices and improve productivity.</p>
@@ -2850,18 +3234,154 @@
                     <img src="image_file/gaps_cap.jpg" alt="Placeholder Image">
                 </div>
             </div>
-    <!-------------------------------------- Vision Framework ---------------------->
-    <div class="slide two-columns-overlap" id="two-columns-2-slide" style="background: white;">
-        <div class="text-2-content" style="margin-top: 20px;">
-            <h1>Vision Framework</h1>
-            <p>There are</span> <span style="color: #3e16b9; font-weight: 600;">three key components </span> to the 
-                integrated model needed to<span style="color: #0aa244; font-weight: 600;"> transform 
-                    the Ethiopian agriculture ecosystem.</span> </p>
-        </div>
-        <div class="image-2-content">
-            <img src="image_file/vision_frm.jpg" alt="Agricultural Vision">
-        </div>
-    </div>
+               <!-------------------------------------------------- Vision and Mission ------------------------------------------------------->
+               <div class="slide quote-slide">
+                <h1>Vision and Mission</h1>
+                <div class="author">- Vision</div>
+                <blockquote>
+                   In 2035 Ethiopia is Africa's model for food sovereignty & economic prosperity based on 
+                   regenerative and ecological agri-food systems.
+                   
+                </blockquote>
+                <div class="author">- Mission</div>
+                <blockquote>
+                    To pioneer an integrated, repeatable model for agri-food ecosystem transformation that has 
+                   been scaled to 1,500,000 hectares by 2035
+                </blockquote>
+                
+            </div>
+
+            <!-------------------------------------- Vision Framework --------------------------------------------------------------------->
+            <div class="slide two-columns-overlap" id="two-columns-2-slide" style="background: white;">
+                <div class="text-2-content" style="margin-top: 20px;">
+                    <h2>Vision Framework</h2>
+                    <p>There are</span> <span style="color: #3e16b9; font-weight: 600;">three key components </span> to the 
+                        integrated model needed to<span style="color: #0aa244; font-weight: 600;"> transform 
+                            the Ethiopian agriculture ecosystem.</span> </p>
+                </div>
+                <div class="image-2-content">
+                    <img src="image_file/vision_frm.jpg" alt="Agricultural Vision">
+                </div>
+            </div>
+
+            <!--------------------------------------- Vision Component  ------------------------------------>
+           <div id="visioncomp-slide" class="slide solution-slide">
+            <div class="solution-header">
+                <h1 class="slide-title">Vision Components</h1>
+                <div class="solution-subtitle">The Transformation Ecosystem</div>
+            </div>
+            
+            <div class="solution-container">
+                <!-- Mission Labs Card -->
+                <div class="solution-card" data-component="mission">
+                <div class="card-icon">🧠</div>
+                <div class="card-content">
+                    <h3 class="card-title">Mission Labs</h3>
+                    <div class="card-subtitle">The Innovation Brain</div>
+                    <div class="card-details">
+                    <div class="responsibilities">
+                        <h3>Core Functions:</h3>
+                        <ul>
+                        <li><span class="highlight">Research</span> advanced techniques</li>
+                        <li><span class="highlight">Develop</span> localized solutions</li>
+                        <li><span class="highlight">Create</span> training frameworks</li>
+                        </ul>
+                    </div>
+                    <div class="impact">
+                        <h3>Impact Areas:</h3>
+                        <div class="impact-tags">
+                        <span class="tag productivity">Productivity</span>
+                        <span class="tag capacity">Capacity</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-connector right"></div>
+                </div>
+            
+                <!-- Farm Hubs Card -->
+                <div class="solution-card" data-component="farm">
+                <div class="card-icon">🏭</div>
+                <div class="card-content">
+                    <h3 class="card-title">Farm Hubs</h3>
+                    <div class="card-subtitle">The Implementation Hands</div>
+                    <div class="card-details">
+                    <div class="responsibilities">
+                        <h3>Core Functions:</h3>
+                        <ul>
+                        <li><span class="highlight">Deliver</span> technologies & inputs</li>
+                        <li><span class="highlight">Train</span> farmers in-field</li>
+                        <li><span class="highlight">Optimize</span> supply chains</li>
+                        </ul>
+                    </div>
+                    <div class="impact">
+                        <h3>Impact Areas:</h3>
+                        <div class="impact-tags">
+                        <span class="tag supply">Supply</span>
+                        <span class="tag productivity">Productivity</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-connector left"></div>
+                <div class="card-connector right"></div>
+                </div>
+            
+                <!-- Regen Farms Card -->
+                <div class="solution-card" data-component="regen">
+                <div class="card-icon">🌱</div>
+                <div class="card-content">
+                    <h3 class="card-title">Regen Farms</h3>
+                    <div class="card-subtitle">The Sustainable Heart</div>
+                    <div class="card-details">
+                    <div class="responsibilities">
+                        <h3>Core Functions:</h3>
+                        <ul>
+                        <li><span class="highlight">Implement</span> proven methods</li>
+                        <li><span class="highlight">Regenerate</span> soil health</li>
+                        <li><span class="highlight">Provide</span> real-world feedback</li>
+                        </ul>
+                    </div>
+                    <div class="impact">
+                        <h3>Impact Areas:</h3>
+                        <div class="impact-tags">
+                        <span class="tag productivity">Productivity</span>
+                        <span class="tag supply">Supply</span>
+                        <span class="tag capacity">Capacity</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-connector left"></div>
+                </div>
+            </div>
+            
+            <!-- Gap Visualization Section -->
+            <div class="gap-visualization">
+                <div class="horizontal-line"></div>
+                <div class="downward-arrow">↓</div>
+                <div class="gap-cards">
+                <div class="gap-card productivity-gap">
+                    <h3>Productivity Gap</h3>
+                    <p>Bridging yield and efficiency challenges</p>
+                </div>
+                <div class="gap-card supply-gap">
+                    <h3>Supply Gap</h3>
+                    <p>Solving distribution and access issues</p>
+                </div>
+                <div class="gap-card capacity-gap">
+                    <h3>Capacity Gap</h3>
+                    <p>Building skills and infrastructure</p>
+                </div>
+                </div>
+            </div>
+            
+            <div class="slide-controls">
+                <button class="nav-button prev" onclick="prevSlide()">‹ Previous</button>
+                <button class="nav-button next" onclick="nextSlide()">Next ›</button>
+            </div>
+            </div>
+                  
             <!--------------------------------------- Component #1 - Mission Lab ------------------------------------>
                 
             <div id="missionlab-comp1-slide" class="slide">
@@ -2871,7 +3391,7 @@
             <div class="missionlab-content">
                 <!-- Left Side: Text Section -->
                 <div class="missionlab-text">
-                    <h1>The Innovation Brain</h1>
+                    <h3>The Innovation Brain</h3>
                     <h2>Component #1 - Mission Lab</h2>
                     <p class="systems-text">
                         The Mission Lab model <span style="color: #27ae60; font-weight: 600;">integrates global expertise with local 
@@ -2906,8 +3426,6 @@
             </div>
 
             <!--------------------------------------- Component #2 - Mission Lab ------------------------------------>
-
-
             <div id="missionlab-comp2-slide" class="slide">
 
             <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
@@ -2915,7 +3433,7 @@
             <div class="missionlab-content">
                 <!-- Left Side: Text Section -->
                 <div class="missionlab-text">
-                    <h1>The Implmentation Hands</h1>
+                    <h3>The Implmentation Hands</h3>
                     <h2> Component #2 - Farm Hubs</h2>
                     <p class="systems-text">
                         <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
@@ -2952,7 +3470,6 @@
             </div>
 
             <!--------------------------------------- Component #3 - Mission Lab ------------------------------------>
-
             <div id="missionlab-comp3-slide" class="slide">
 
             <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
@@ -2960,7 +3477,7 @@
             <div class="missionlab-content">
                 <!-- Left Side: Text Section -->
                 <div class="missionlab-text">
-                    <h1>The Sustainable Heart</h1>
+                    <h3>The Sustainable Heart</h3>
                     <h2> Component #3 - Regen Farms</h2>
                     <p class="systems-text">
                             <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
@@ -3007,49 +3524,771 @@
             </div>
 
             </div>
-            <!---------------------- Slide 3: Single Column (Template 3) ---------------------->
-            <div class="slide single-column">
-                <h1>Single Column Layout</h1>
-                <p>This is a simple single column layout perfect for text-heavy slides. You can add as much content as you need here.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
-                <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
-            </div>
      
-            <!-- Slide 4: Two Columns Text + Image (Template 4) ---------------------->
-            <div class="slide two-columns-overlap" id="two-columns-2-slide" style="background: white;">
-                <div class="text-2-content" style="margin-top: 20px;">
-                    <h1>Vision Framework</h1>
-                    <p>There are</span> <span style="color: #3e16b9; font-weight: 600;">three key components </span> to the 
-                        integrated model needed to<span style="color: #0aa244; font-weight: 600;"> transform 
-                            the Ethiopian agriculture ecosystem.</span> </p>
+
+           
+           
+                   <!---------------------------------------Farm Hub title ------------------------------------>
+                <div class="slide" id="farmhub-title-slide">
+                    <div class="bg-pattern"></div>
+                    <div class="floating-icons" id="floatingIcons1"></div>
+                    <div class="title-container">
+                        <div class="logo-container">
+                            <div class="logo-placeholder">
+                                <i class="fas fa-tractor"></i>
+                            </div>
+                        </div>
+                        <h1 class="slide-2-title">Farm Hub Ethiopia</h1>
+                        <p class="slide-2-subtitle">Scaling Access to Tools, Inputs, and Knowledge for Smallholders</p>
+                        <p class="slide-2-subtitle" style="font-size: 1.2rem; margin-top: 2rem;">Transforming Smallholder Agriculture Across Ethiopia</p>
+                    </div>
+                </div>     
+                
+                
+                
+                   <!--------------------------------------- Farm Hub - challenge ------------------------------------>
+                     
+
+                    <div id="process-slide" class="slide process-slide">
+                        <div class="slide-header">
+                        <h1 class="slide-title">Challenges Farm Hub Addresses</h1>
+                        <div class="slide-subtitle"></div>
+                        </div>
+                    
+                        <div class="process-container">
+                        <!-- Animated Process Timeline -->
+                        <div class="process-timeline">
+                            <div class="process-phase" data-phase="1">
+                            <div class="phase-visual">
+                                <div class="phase-icon">🔍</div>
+                                <div class="phase-connector"></div>
+                            </div>
+                                <div class="challenges-container">
+                                        <div class="challenge-card">
+                                            <h3 class="challenge-title">Low Mechanization</h3>
+                                            <p class="challenge-desc">Less than 1% of Ethiopian farms use tractors, with 85% of land tilled by hand, severely limiting productivity.</p>
+                                        </div>
+                                        <div class="challenge-card">
+                                            <h3 class="challenge-title">Fragmented Supply Chains</h3>
+                                            <p class="challenge-desc">Critical inputs and equipment often don't reach smallholder farmers due to weak distribution networks and high logistics costs.</p>
+                                        </div>
+                                        <div class="challenge-card">
+                                            <h3 class="challenge-title">Knowledge Gaps</h3>
+                                            <p class="challenge-desc">Lack of access to training onmachinary use and maintenance, reducing adoption rates.
+                                                Lack of knowldge on agronomic practices. Lack of knowldge on Sustainability (regenerative ag awareness, climate-smartagriculture etc)</p>
+                                        </div>
+                                </div>
+                            </div>
+                    
+                            <div class="process-phase" data-phase="2">
+                            <div class="phase-visual">
+                                <div class="phase-icon">📊</div>
+                                <div class="phase-connector"></div>
+                            </div>
+                            <div class="phase-content">
+                                
+                                
+                                    <div class="emphasis-card">
+                                        <h3 class="emphasis-title"><i class="fas fa-cogs"></i> The Mechanization Imperative</h3>
+                                        <p class="emphasis-desc">
+                                            Ethiopia's farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). 
+                                            Farm Hub's short-term focus on scalable mechanization solutions (pay-per-use models) 
+                                            can immediately boost productivity by 3-5x while solving affordability barriers.
+                                        </p>
+                                    </div>
+                                
+                                
+                            </div>
+                            </div>
+                    
+                        
+                        </div>
+                    
+                        <!-- Process Summary Visualization -->
+                       
+                        </div>
+                    </div>
+
+
+
+
+
+
+                <!------------------------------------- why mechaniation ------------------------------------>
+
+            <div id="why-mech-slide" class="slide process-slide">
+                <div class="slide-header">
+            
+                <h1 class="slide-title">Why Mechanization <span style="color: #27ae60; font-size:1.5rem;">- The Engine of Agricultural Transformation </span>  </h1>
+                <div class="slide-subtitle"></div>
                 </div>
-                <div class="image-2-content">
-                    <img src="image_file/vision_frm.jpg" alt="Agricultural Vision">
+            
+                <div class="process-container">
+                <!-- Animated Process Timeline -->
+                <div class="process-timeline">
+                    <div class="process-phase" data-phase="1">
+                    <div class="phase-visual">
+                        <div class="phase-icon"></div>
+                        <div class="phase-connector"></div>
+                    </div>
+                    <div class="phase-content">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="background: #0d4625; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        <h3 style="color: #0d4625; margin: 0; font-size: 1.6rem;">What is Agricultural Mechanization?</h3>
+                    </div>
+                        
+                        <div class="phase-details">
+                            <p style="font-size: 1.4rem; line-height: 1.6; color: #333;">
+                                Agricultural mechanization is broadly <strong>defined as the application of tools, implements and powered machinery and 
+                                equipment to achieve agricultural production. It encompasses all levels of farming technology </strong> from simple hand 
+                                tools to advanced automated systems and smart farming technologies. 
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+            
+                    <div class="process-phase" data-phase="2">
+                    <div class="phase-visual">
+                        <div class="phase-icon"></div>
+                        <div class="phase-connector"></div>
+                    </div>
+                    <div class="phase-content">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="background: #0d4625; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        <h3 style="color: #0d4625; margin: 0; font-size: 1.6rem;">What is sustainability Agricultural Mechanization?</h3>
+                    </div>
+                    
+                        <div class="phase-details">
+                            <p style="font-size: 1.4rem; line-height: 1.6; color: #333;">
+                                SAM focuses on using machinery in a way that is economically viable, 
+                                environmentally responsible, and socially beneficial, contributing to the long-term health of the agricultural sector 
+                                and food systems. 
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+            
+                    <div class="process-phase" data-phase="3">
+                    <div class="phase-visual">
+                        <div class="phase-icon"></div>
+                        <div class="phase-connector"></div>
+                    </div>
+                    <div class="phase-content" style="padding: 1.0rem;">
+                        
+                        <div class="phase-details">
+                            <div class="challenges-container">
+                                <div class="challenge-card">
+                                    <h3 class="challenge-title"></h3>
+                                    <h3 style="color: #0d4625; margin: 0;">Mechanization represents a fundamental transformation in how we produce food</h3>
+                                </div>
+                                
+                                <div class="challenge-card">
+                                    <h3 class="challenge-title"></h3>
+                                    <h3 style="color: #0d4625; margin: 0;">  It's not merely about replacing manual labor, but about reimagining agricultural processes to meet the challenges of our time</h3>
+                                </div>
+                                
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            
+                    <div class="process-phase" data-phase="4">
+                    <div class="phase-visual">
+                        <div class="phase-icon"></div>
+                    </div>
+                    <div class="phase-content">
+                        <h3></h3>
+                        <div class="phase-details">
+                            <div style="background: #0d4625; border-radius: 10px; padding: 1.5rem; box-shadow: 0 10px 20px rgba(13, 70, 37, 0.2);">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <div style="background: white; color: #0d4625; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h3 style="color: white; margin: 0;">The transition to mechanized farming enables us to address critical issues of </h3>
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                                    <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 1rem; flex: 1; min-width: 200px;">
+                                        <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1rem;"><i class="fas fa-clock" style="margin-right: 8px;"></i> food security</h4>
+                                        <p style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.9);"></p>
+                                    </div>
+                                    <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 1rem; flex: 1; min-width: 200px;">
+                                        <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1rem;"><i class="fas fa-tools" style="margin-right: 8px;"></i>labor shortages</h4>
+                                        <p style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.9);"></p>
+                                    </div>
+                                    <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 1rem; flex: 1; min-width: 200px;">
+                                        <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1rem;"><i class="fas fa-mobile-alt" style="margin-right: 8px;"></i>Environmental sustainability</h4>
+                                        <p style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.9);"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
-            <!---------------------- Slide 5: Three Columns (Template 5) ---------------------->
-            <div class="slide three-columns">
-                <div class="column">
-                    <h2>Column 1</h2>
-                    <p>Three column layout is great for comparing three options, features, or ideas.</p>
+            
+                <!-- Process Summary Visualization -->
+                <div class="process-visual">
+                    <div class="visual-bar">
+                    <div class="visual-segment discovery" data-tooltip="Discovery Phase"></div>
+                    <div class="visual-segment planning" data-tooltip="Planning Phase"></div>
+                    <div class="visual-segment execution" data-tooltip="Execution Phase"></div>
+                    <div class="visual-segment delivery" data-tooltip="Delivery Phase"></div>
+                    </div>
+                    <div class="visual-labels">
+                    <span>Understand</span>
+                    <span>Design</span>
+                    <span>Build</span>
+                    <span>Deliver</span>
+                    </div>
                 </div>
-                <div class="column">
-                    <h2>Column 2</h2>
-                    <p>Each column can contain different content types - text, icons, small images.</p>
                 </div>
-                <div class="column">
-                    <h2>Column 3</h2>
-                    <p>Keep content balanced across columns for the best visual presentation.</p>
-                </div>
+            
             </div>
 
-            <!---------------------- Slide 6: Quote Slide (Template 6) ---------------------->
-            <div class="slide quote-slide">
-                <blockquote>
-                    "This is an inspiring quote that captures the essence of your presentation. Make it memorable and impactful."
-                </blockquote>
-                <div class="author">- Author Name</div>
+
+                <!------------------------------------------------------------ Impact Statement -->
+               <div class="slide" class="slide process-slide">
+                    <h1 class="slide-maintitle">21st Century Mechanization Principles</h1>
+                   <div class="decorative-line"></div>
+                    <div class="slide-subtitle" style="text-align: center; padding: 0 0 40px 0;"> The provision of mechanization services in the 21st century must follow some core 
+                        principles:</div>
+                    <div class="principles-container">
+                        <!-- Value Chain Principle -->
+                        <div class="principle-card" style="--accent-color: #1e9d53">
+                            <div class="principle-icon">🔗</div>
+                            <h3 class="principle-title">Value Chain Integration</h3>
+                            <p class="principle-text">Built along the entire agricultural value chain for systemic competitiveness</p>
+                        </div>
+                        
+                        <!-- Private Sector Principle -->
+                        <div class="principle-card" style="--accent-color: #2a7f62">
+                            <div class="principle-icon">💼</div>
+                            <h3 class="principle-title">Private Sector Driven</h3>
+                            <p class="principle-text">Must make solid business sense to ensure sustainability</p>
+                        </div>
+                        
+                        <!-- Affordability Principle -->
+                        <div class="principle-card" style="--accent-color: #3d9970">
+                            <div class="principle-icon">💰</div>
+                            <h3 class="principle-title">Smallholder Affordable</h3>
+                            <p class="principle-text">affordable especially to small-scale farmers who constitute the bulk of African farmers,</p>
+                        </div>
+                        
+                        <!-- Gender Focus Principle -->
+                        <div class="principle-card" style="--accent-color: #4db37f">
+                            <div class="principle-icon">👩‍🌾</div>
+                            <h3 class="principle-title">Women-Centric Design</h3>
+                            <p class="principle-text">Specifically targets women who bear the brunt of agricultural work</p>
+                        </div>
+                    </div>
+                    <div class="slide-subtitle" style="text-align: right; padding: 50px 200px 0 0; font-style: italic; color: green;"> 
+                        – H.E. Josefa Leonel Correia Sacko, commissioner for Rural Economy and Agriculture of the African Union Commission</div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!------------------------- ABOUT FARM HUB ETHIOPIA ------------------------------>
+
+                <div id="abouts-farm-slide" class="slide">
+                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                    <h1 class="slide-title" style="color:#2d1e91">About US</h1>
+                    <div class="missionlab-content">
+                        <!-- Left Side: Text Section -->
+                        <div class="missionlab-image">
+                            <img src="image_file/farmhub_model.jpg" alt="MissionLab Innovation">
+                        </div>
+                        
+                        <div class="missionlab-text">
+                            <p class="systems-text" style="background: rgba(89, 161, 91, 0.1); color: #2c3e50; padding: 20px; border-radius: 8px; border-left: 4px solid rgb(89, 161, 91); font-size: 1.5rem; line-height: 1.6; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                                <span style="color: #27ae60; font-weight: 600; font-size: 2rem;">Farm Lab Ethiopia </span><span style="color: #261588; font-weight: 600;">(https://www.farmlab-ethiopia.com/)</span> is an agricultural company established in 2023 with a core 
+                                    focus on  <span style="color: #0f9b57;">improving crop production practices and empowering smallholder farmers in Ethiopia</span>. <span style="color: #3498db;">With a commitment to sustainability, 
+                                        innovation, and social impact,</span> we have been actively engaged in providing agricultural solutions and services tailored to the 
+                                        needs of <span style="color: #f39c12;">smallholder farmers</span> As the hands-on implementation partner in the agricultural ecosystem, we translate innovations from research labs (like Mission Labs) into practical, farmer-ready solutions.
+
+                            </p>
+                            <h2>Our Role in the System:</h2>
+                            <ul>
+                            <li class="systems-text">
+                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;"> We are the implementation engine—
+                                        <span style="color: #27ae60; font-weight: 600; font-size: 2rem;">delivering tools, </span>training, and technologies directly to farmers’ fields.
+
+                                    </li>
+                            
+                            </ul>            
+                        </div>
+                    
+                    </div>
+                </div>
+                <!----------------------- ORGANIZATIONAL STRUCTURE -------------------->
+                <div class="slide" id="slide5">
+                    <div class="bg-pattern" style="background-image: radial-gradient(rgba(13, 70, 37, 0.05) 2px, transparent 2px);"></div>
+                    
+                    <!-- Title -->
+                    <div class="title-container" style="text-align: center;">
+                        <h2 class="slide-title" style="color: #0d4625;">ORGANIZATIONAL STRUCTURE</h2>
+                        <p class="slide-subtitle" style="color: #1e8449; font-weight: 600;">A Tiered Network for Nationwide Impact</p>
+                    </div>
+
+                    <!-- Org Chart -->
+                    <div style="width: 90%; max-width: 1200px; margin: 1.5rem auto; position: relative;">
+                        <!-- Central HQ -->
+                        <div style="background: #0d4625; color: white; padding: 1rem; border-radius: 8px; width: 400px; margin: 0 auto; text-align: center; z-index: 2; position: relative;">
+                            <h4 style="margin: 0 0 0.5rem 0;"><i class="fas fa-building"></i> Central HQ</h4>
+                            <p style="margin: 0; font-size: 0.8rem;">Strategy • Procurement • Tech Platform</p>
+                        </div>
+                        
+                        <!-- Connecting lines to Regional -->
+                        <div style="position: absolute; top: 80px; left: 50%; width: 2px; height: 60px; background: #1e8449; transform: translateX(-50%);"></div>
+                        
+                        <!-- Regional Hubs -->
+                        <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 70px; position: relative; z-index: 2;">
+                            <div style="background: #1e8449; color: white; padding: 1rem; border-radius: 8px; width: 240px; text-align: center;">
+                                <h4 style="margin: 0 0 0.5rem 0;"><i class="fas fa-map-marker-alt"></i> Regional Hub</h4>
+                                <p style="margin: 0; font-size: 1.0rem;">Training • Logistics • Equipment Pools</p>
+                            </div>
+                            <div style="background: #1e8449; color: white; padding: 1rem; border-radius: 8px; width: 240px; text-align: center;">
+                                <h4 style="margin: 0 0 0.5rem 0;"><i class="fas fa-map-marker-alt"></i> Regional Hub</h4>
+                                <p style="margin: 0; font-size: 0.8rem;">Training • Logistics • Equipment Pools</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Connecting lines to Local -->
+                        <div style="position: absolute; top: 210px; left: 50%; width: 2px; height: 60px; background: #1e8449; transform: translateX(-50%); display: none;"></div>
+                        
+                        <!-- Local Sub-Hubs -->
+                        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 40px; flex-wrap: wrap;">
+                            <div style="background: #27ae60; color: white; padding: 0.8rem; border-radius: 8px; width: 180px; text-align: center;">
+                                <h5 style="margin: 0 0 0.3rem 0; font-size: 1.2rem;"><i class="fas fa-store"></i> Local Sub-Hub</h5>
+                                <p style="margin: 0; font-size: 0.7rem;">Last-Mile Delivery</p>
+                            </div>
+                            <div style="background: #27ae60; color: white; padding: 0.8rem; border-radius: 8px; width: 180px; text-align: center;">
+                                <h5 style="margin: 0 0 0.3rem 0; font-size: 1.2rem;"><i class="fas fa-store"></i> Local Sub-Hub</h5>
+                                <p style="margin: 0; font-size: 0.7rem;">Farmer Relationships</p>
+                            </div>
+                            <div style="background: #27ae60; color: white; padding: 0.8rem; border-radius: 8px; width: 180px; text-align: center;">
+                                <h5 style="margin: 0 0 0.3rem 0; font-size: 1.2rem;"><i class="fas fa-store"></i> Local Sub-Hub</h5>
+                                <p style="margin: 0; font-size: 0.7rem;">Advisory Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Photos Placeholder -->
+                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <img src="image_file/girma.jpg" alt="Team" style="border-radius: 50%; border: 3px solid #0d4625; width: 120px; height: 120px;">
+                            <p style="margin: 0.3rem 0 0 0; font-size: 0.8rem;">Management</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="image_file/Nitsuh.jpg" alt="Team" style="border-radius: 50%; border: 3px solid #0d4625; width: 120px; height: 120px;">
+                            <p style="margin: 0.3rem 0 0 0; font-size: 0.8rem;">Agronomists</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="image_file/alemayhu.jpg" alt="Team" style="border-radius: 50%; border: 3px solid #0d4625; width: 120px; height: 120px;">
+                            <p style="margin: 0.3rem 0 0 0; font-size: 0.8rem;">Field Agents</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!----------------------- WHY FARM HUB WORKS ---------------------->
+                <div class="slide" id="slide6">
+                    <div class="bg-pattern" style="background-image: radial-gradient(rgba(255,255,255,0.2) 1px, transparent 1px);"></div>
+                    
+                    <!-- Title -->
+                    <div class="title-container" style="text-align: center;">
+                        <h2 class="slide-title" style="color: #0d4625;">WHY FARM HUB WORKS</h2>
+                        <p class="slide-subtitle" style="color: #1e8449; font-weight: 600;">Key Differentiators for Sustainable Impact</p>
+                    </div>
+
+                    <!-- Differentiators -->
+                    <div style="width: 90%; max-width: 800px; margin: 1.5rem auto;">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+                            <!-- Card 1 -->
+                            <div style="background: white; border-radius: 8px; padding: 1.5rem; width: 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                <div style="background: #0d4625; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h4 style="color: #0d4625; text-align: center; margin: 0 0 0.8rem 0;">Localized Hubs</h4>
+                                <p style="font-size: 0.9rem; color: #333; text-align: center; margin: 0;">
+                                    Proximity to farmers builds trust and enables rapid service response.
+                                </p>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div style="background: white; border-radius: 8px; padding: 1.5rem; width: 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                <div style="background: #1e8449; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 style="color: #0d4625; text-align: center; margin: 0 0 0.8rem 0;">Sustainable Model</h4>
+                                <p style="font-size: 0.9rem; color: #333; text-align: center; margin: 0;">
+                                    Revenue from rentals/input sales ensures long-term viability (no donor dependency).
+                                </p>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div style="background: white; border-radius: 8px; padding: 1.5rem; width: 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                <div style="background: #e67e22; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h4 style="color: #0d4625; text-align: center; margin: 0 0 0.8rem 0;">Systems Approach</h4>
+                                <p style="font-size: 0.9rem; color: #333; text-align: center; margin: 0;">
+                                    Integrates with Mission Labs (R&D) and Regen Farms (adoption) for holistic impact.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div style="background: white; border-radius: 10px; padding: 1.5rem; max-width: 600px; margin: 2rem auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <img src="https://via.placeholder.com/80" alt="Farmer" style="border-radius: 50%; width: 60px; height: 60px; border: 3px solid #1e8449;">
+                            <div>
+                                <p style="font-style: italic; margin: 0 0 0.5rem 0; color: #333;">
+                                    "Before Farm Hub, I waited weeks for tractor services. Now I book via SMS and get same-week service. My maize yields doubled!"
+                                </p>
+                                <p style="font-weight: bold; margin: 0; color: #0d4625;">- Ato Tesfaye, Amhara Region</p>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: -15px; left: 30px; background: white; padding: 0 10px; color: #1e8449; font-weight: bold;">
+                            <i class="fas fa-quote-left"></i> REAL IMPACT
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                     <!------------------------------------- Team ------------------------------------>
+
+
+
+
+       <div id="team-slide" class="slide team-slide">
+  <div class="slide-header">
+    <h1 class="slide-title">Our Dream Team</h1>
+    <div class="slide-subtitle">The Experts Behind Your Success</div>
+  </div>
+
+  <div class="team-container">
+    <!-- Team Grid with Interactive Cards -->
+    <div class="team-grid">
+      <div class="team-card" data-member="1">
+        <div class="card-front">
+          <div class="member-photo">
+            <img src="https://via.placeholder.com/200" alt="John Doe">
+          </div>
+          <div class="member-info">
+            <h3>John Doe</h3>
+            <p class="role">CEO & Founder</p>
+            <div class="expertise-tags">
+              <span>Strategy</span>
+              <span>Leadership</span>
             </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <h4>About John</h4>
+          <p>15+ years transforming industries with innovative solutions. Passionate about sustainable growth.</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">42+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Commitment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card" data-member="2">
+        <div class="card-front">
+          <div class="member-photo">
+            <img src="https://via.placeholder.com/200" alt="Jane Smith">
+          </div>
+          <div class="member-info">
+            <h3>Jane Smith</h3>
+            <p class="role">CTO</p>
+            <div class="expertise-tags">
+              <span>Technology</span>
+              <span>Innovation</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <h4>About Jane</h4>
+          <p>Tech visionary specializing in scalable architectures and cutting-edge solutions.</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">10x</span>
+              <span class="stat-label">Efficiency</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Creativity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card" data-member="3">
+        <div class="card-front">
+          <div class="member-photo">
+            <img src="https://via.placeholder.com/200" alt="Mike Johnson">
+          </div>
+          <div class="member-info">
+            <h3>Mike Johnson</h3>
+            <p class="role">Design Lead</p>
+            <div class="expertise-tags">
+              <span>UX/UI</span>
+              <span>Branding</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <h4>About Mike</h4>
+          <p>Human-centered design expert focused on creating intuitive user experiences.</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">98%</span>
+              <span class="stat-label">Satisfaction</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">500+</span>
+              <span class="stat-label">Interfaces</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card" data-member="4">
+        <div class="card-front">
+          <div class="member-photo">
+            <img src="https://via.placeholder.com/200" alt="Sarah Williams">
+          </div>
+          <div class="member-info">
+            <h3>Sarah Williams</h3>
+            <p class="role">Marketing Director</p>
+            <div class="expertise-tags">
+              <span>Growth</span>
+              <span>Strategy</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <h4>About Sarah</h4>
+          <p>Data-driven marketer with a proven track record of successful campaigns.</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">3.2M</span>
+              <span class="stat-label">Impressions</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">240%</span>
+              <span class="stat-label">ROI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Stats Summary -->
+    <div class="team-stats">
+      <div class="stat-item">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Years Combined Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">∞</span>
+        <span class="stat-label">Creativity</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-controls">
+    <button class="nav-button prev" onclick="prevSlide()">‹ Previous</button>
+    <button class="nav-button next" onclick="nextSlide()">Next ›</button>
+  </div>
+        </div>
+
+        
+
+        <div id="process-slide" class="slide process-slide">
+            <div class="slide-header">
+            <h1 class="slide-title">Challenges Farm Hub Addresses</h1>
+            <div class="slide-subtitle"></div>
+            </div>
+        
+            <div class="process-container">
+            <!-- Animated Process Timeline -->
+            <div class="process-timeline">
+                <div class="process-phase" data-phase="1">
+                <div class="phase-visual">
+                    <div class="phase-icon">🔍</div>
+                    <div class="phase-connector"></div>
+                </div>
+                <div class="challenges-container">
+                    <div class="challenge-card">
+                        <h3 class="challenge-title">Low Mechanization</h3>
+                        <p class="challenge-desc">Less than 1% of Ethiopian farms use tractors, with 85% of land tilled by hand, severely limiting productivity.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-title">Fragmented Supply Chains</h3>
+                        <p class="challenge-desc">Critical inputs and equipment often don't reach smallholder farmers due to weak distribution networks and high logistics costs.</p>
+                    </div>
+                    
+                
+                    <div class="challenge-card">
+                        <h3 class="challenge-title">Knowledge Gaps</h3>
+                        <p class="challenge-desc">Lack of access to training onmachinary use and maintenance, reducing adoption rates.
+                            Lack of knowldge on agronomic practices. Lack of knowldge on Sustainability (regenerative ag awareness, climate-smartagriculture etc)</p>
+                    </div>
+                </div>
+                </div>
+        
+                <div class="process-phase" data-phase="2">
+                <div class="phase-visual">
+                    <div class="phase-icon">📊</div>
+                    <div class="phase-connector"></div>
+                </div>
+                <div class="phase-content">
+                    
+                    
+                        <div class="emphasis-card">
+                            <h3 class="emphasis-title"><i class="fas fa-cogs"></i> The Mechanization Imperative</h3>
+                            <p class="emphasis-desc">
+                                Ethiopia's farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). 
+                                Farm Hub's short-term focus on scalable mechanization solutions (pay-per-use models) 
+                                can immediately boost productivity by 3-5x while solving affordability barriers.
+                            </p>
+                        </div>
+                    
+                    
+                </div>
+                </div>
+        
+            
+            </div>
+        
+            <!-- Process Summary Visualization -->
+            <div class="process-visual">
+                <div class="visual-bar">
+                <div class="visual-segment discovery" data-tooltip="Discovery Phase"></div>
+                <div class="visual-segment planning" data-tooltip="Planning Phase"></div>
+                <div class="visual-segment execution" data-tooltip="Execution Phase"></div>
+                <div class="visual-segment delivery" data-tooltip="Delivery Phase"></div>
+                </div>
+                <div class="visual-labels">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            </div>
+            </div>
+        </div>
+                        
+                    
+        <div class="slide">
+            <!-- Decorative circles -->
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            
+            <!-- Background icons -->
+            <i class="fas fa-chart-line bg-icon icon-1"></i>
+            <i class="fas fa-industry bg-icon icon-2"></i>
+            
+            <div class="slide-content">
+                <div class="text-column">
+                    <h1>Current Market Challenges</h1>
+                    <p>The industry is facing significant gaps that are impacting overall performance and growth potential. These challenges require immediate attention and strategic solutions to maintain competitiveness.</p>
+                    <p>first step tonderstanding and drive sustainable growth in today's dynamic market environment.</p>
+                </div>
+                <div class="cards-column">
+                    <div class="card">
+                        <h2><i class="fas fa-tachometer-alt"></i> Productivity Gap</h2>
+                        <p>Current output levels are 15-20% below industry benchmarks, with inefficiencies in processes and resource allocation contributing to significant value leakage.</p>
+                    </div>
+                    <div class="card">
+                        <h2><i class="fas fa-boxes"></i> Supply Gap</h2>
+                        <p>Inventory turnover ratios indicate a 30% mismatch between supply and demand, leading to both stockouts and excess inventory across product categories.</p>
+                    </div>
+                    <div class="card">
+                        <h2><i class="fas fa-cogs"></i> Capacity Gap</h2>
+                        <p>Utitep tonderstanding these gaps is the first step tonderstanding these gaps is the first step ure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+       <!---------------------- Slide 3: Single Column (Template 3) ---------------------->
+       <div class="slide single-column">
+        <h1>Single Column Layout</h1>
+        <p>This is a simple single column layout perfect for text-heavy slides. You can add as much content as you need here.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+        <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+    </div>
+
+    <!-- Slide 4: Two Columns Text + Image (Template 4) ---------------------->
+    <div class="slide two-columns-overlap" id="two-columns-2-slide" style="background: white;">
+        <div class="text-2-content" style="margin-top: 20px;">
+            <h1>Vision Framework</h1>
+            <p>There are</span> <span style="color: #3e16b9; font-weight: 600;">three key components </span> to the 
+                integrated model needed to<span style="color: #0aa244; font-weight: 600;"> transform 
+                    the Ethiopian agriculture ecosystem.</span> </p>
+        </div>
+        <div class="image-2-content">
+            <img src="image_file/vision_frm.jpg" alt="Agricultural Vision">
+        </div>
+    </div>
+    <!---------------------- Slide 5: Three Columns (Template 5) ---------------------->
+    <div class="slide three-columns">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>Three column layout is great for comparing three options, features, or ideas.</p>
+        </div>
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>Each column can contain different content types - text, icons, small images.</p>
+        </div>
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>Keep content balanced across columns for the best visual presentation.</p>
+        </div>
+    </div>
+
+    <!---------------------- Slide 6: Quote Slide (Template 6) ---------------------->
+    <div class="slide quote-slide">
+        <blockquote>
+            "This is an inspiring quote that captures the essence of your presentation. Make it memorable and impactful."
+        </blockquote>
+        <div class="author">- Author Name</div>
+    </div>
+
+
 
             <!---------------------- Slide 7: Stats Slide (Template 7) ---------------------->
             <div class="slide stats-slide">
@@ -3140,6 +4379,11 @@
                     </div>
                 </div>
             </div>
+           
+
+
+
+
             <!---------------------- Slide 10: Process Steps (Template 10) ---------------------->
             <div class="slide process-slide">
                 <h1 style="text-align: center; margin-bottom: 60px;">Our Process</h1>
@@ -3474,7 +4718,7 @@
                     <button style="padding: 12px 25px; background-color: transparent; color: white; border: 2px solid white; border-radius: 30px; font-weight: bold; cursor: pointer;">Download Slides</button>
                 </div>
             </div>
-    <!--------------------- Slide: Text + Mermaid Chart () ------------------------>
+            <!--------------------- Slide: Text + Mermaid Chart () ------------------------>
             <div class="slide mermaid-slide">
                 <div class="mermaid-content">
                     <div class="mermaid-text">
@@ -3498,714 +4742,217 @@
                 </div>
             </div>
 
-       
-
-
-
 
             <!--------------------------------------- The Challange ------------------------------------>
 
                                 
-                    <div id="challange-slide" class="slide" style="background: white;">
-                        <h1 class="slide-title" style="color:green">The Challenges</h1>
-                        <div class="content-container">
-                            <div class="text-column">
-                            
-                                <p class="systems-text">
-                                    Ethiopia's smallholder farmers mainly</span> face <span style="color: #e74c3c; font-weight: 600;"> three intertwined challenges</span> that must be addressed to unlock their potential.
-                                </p>
-                                
-                                <p class="systems-text">
-                                    These <span style="color: #e74c3c; font-weight: 600;">three challenges</span> are <span style="color: #27ae60; font-weight: 600;">deeply interconnected</span>
-                                </p>
-                                
-                                <p class="systems-text">
-                                    Addressing them requires a <span style="color: #27ae60; font-weight: 600;">holistic, systems-based approach</span> that improves <span style="color: #e74c3c;">productivity</span>, strengthens <span style="color: #3498db;">market systems</span>, 
-                                    and builds <span style="color: #f39c12;">capacity</span> to ensure a <span style="font-weight: 600;">resilient, inclusive, and sustainable</span> agri-food sector.
-                                </p>
-                                
-                            </div>
-                            
-                            <div class="gaps-column">
-                                <div class="gaps-container">
-                                    <!-- Productivity Gap Card -->
-                                    <div class="gap-card productivity">
-                                        <div class="gap-icon">⏱️</div>
-                                        <h3 class="gap-title">Productivity Gap</h3>
-                                        <p class="gap-description">
-                                            Current output falls 30-50% below potential due to limited mechanization and suboptimal farming practices.
-                                        </p>
-                                    </div>
-                                    
-                                    <!-- Supply Chain Gap Card -->
-                                    <div class="gap-card supply-chain">
-                                        <div class="gap-icon">🚚</div>
-                                        <h3 class="gap-title">Supply Gap</h3>
-                                        <p class="gap-description">
-                                            Challenges accessing inputs and reliable markets, with 25-40% post-harvest losses.
-                                        </p>
-                                    </div>
-                                    
-                                    <!-- Skills Gap Card -->
-                                    <div class="gap-card skills">
-                                        <div class="gap-icon">🎓</div>
-                                        <h3 class="gap-title">Skills Gap</h3>
-                                        <p class="gap-description">
-                                            Only 18% of farmers receive training, limiting adoption of modern techniques.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            <!--------------------------------------- Component #1 - Mission Lab ------------------------------------>
-                        
-                <div id="missionlab-comp1-slide" class="slide">
+            <div id="challange-slide" class="slide" style="background: white;">
+                <h1 class="slide-title" style="color:green">The Challenges</h1>
+                <div class="content-container">
+                    <div class="text-column">
                     
-                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-                    
-                    <div class="missionlab-content">
-                        <!-- Left Side: Text Section -->
-                        <div class="missionlab-text">
-                            <h1>The Innovation Brain</h1>
-                            <h2>Component #1 - Mission Lab</h2>
-                            <p class="systems-text">
-                                The Mission Lab model <span style="color: #27ae60; font-weight: 600;">integrates global expertise with local 
-                                knowledge, focusing on addressing systemic challenges</span>  
-                                grounding solutions in the realities of specific places. <span style="color: #e74c3c;">By 
-                                    fostering collaborative partnerships between cross-sectoral 
-                                    stakeholders,</span>, Mission Lab <span style="color: #3498db;">becomes</span> driving force for 
-                                    <span style="color: #f39c12;">localised systems innovation</span>
-                            </p>
-                            
-                            <ul>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;">Research</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;">Innovation</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;">Education</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;">Technology Transfer</span>
-                                </li>
-                            </ul>
-                        </div>
-                    
-                        <!-- Right Side: Image Section -->
-                        <div class="missionlab-image">
-                            <img src="image_file/comp_1_missionlab.jpg" alt="MissionLab Innovation">
-                        </div>
-                    </div>
-                </div>
-
-      <!--------------------------------------- Component #2 - Mission Lab ------------------------------------>
-        
-
-                <div id="missionlab-comp2-slide" class="slide">
-                   
-                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-
-                    <div class="missionlab-content">
-                        <!-- Left Side: Text Section -->
-                        <div class="missionlab-text">
-                            <h1>The Implmentation Hands</h1>
-                            <h2> Component #2 - Farm Hubs</h2>
-                            <p class="systems-text">
-                                <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
-                                smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span>, inputs <span style="color: #3498db;">digital tools</span>  resources
-                                        <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
-                                            empowers farmers to adopt regenerative and climate-smart 
-                                            techniques, ensuring long-term resilience and success in a 
-                                            rapidly changing agricultural landscape</span>
-                            </p>
-                        
-                            <ul>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>>Training and advisory services</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Right Side: Image Section -->
-                        <div class="missionlab-image">
-                            <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
-                        </div>
-                    </div>
-
-                   
-                </div>
-
-                   <!--------------------------------------- Component #3 - Mission Lab ------------------------------------>
-        
-                <div id="missionlab-comp3-slide" class="slide">
-                   
-                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-
-                    <div class="missionlab-content">
-                        <!-- Left Side: Text Section -->
-                        <div class="missionlab-text">
-                            <h1>The Sustainable Heart</h1>
-                            <h2> Component #3 - Regen Farms</h2>
-                            <p class="systems-text">
-                                     <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
-                                smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
-                                        <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
-                            </p>
-                            <ul>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
-                                        Mechanisation Programme</span> 
-                                </span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
-                                        Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
-                                        Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
-                                    climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
-                                    additional income streams. </span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
-                                        Strengthening Platfor</span>  </span>
-                                </li>
-                                <li class="systems-text">
-                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
-                                        Service Infrastructur</span> </span>
-                                </li>
-                                
-                            </ul>
-                            <p class="systems-text">
-                                       <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
-                                    Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
-                                    sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
-                            </p>
-                                </div>
-
-                        <!-- Right Side: Image Section -->
-                        <div class="missionlab-image">
-                            <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
-                        </div>
-                    </div>
-
-                </div>
-
-           
-           
-           
-                   <!--------------------------------------- Vision Component  ------------------------------------>
-           
-           
-                <div id="visioncomp-slide" class="slide solution-slide">
-                    <div class="solution-header">
-                      <h1 class="slide-title">Vision Components</h1>
-                      <div class="solution-subtitle">The Transformation Ecosystem</div>
-                    </div>
-                  
-                    <div class="solution-container">
-                      <!-- Mission Labs Card -->
-                      <div class="solution-card" data-component="mission">
-                        <div class="card-icon">🧠</div>
-                        <div class="card-content">
-                          <h2 class="card-title">Mission Labs</h2>
-                          <div class="card-subtitle">The Innovation Brain</div>
-                          <div class="card-details">
-                            <div class="responsibilities">
-                              <h3>Core Functions:</h3>
-                              <ul>
-                                <li><span class="highlight">Research</span> advanced techniques</li>
-                                <li><span class="highlight">Develop</span> localized solutions</li>
-                                <li><span class="highlight">Create</span> training frameworks</li>
-                              </ul>
-                            </div>
-                            <div class="impact">
-                              <h3>Impact Areas:</h3>
-                              <div class="impact-tags">
-                                <span class="tag productivity">Productivity</span>
-                                <span class="tag capacity">Capacity</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-connector right"></div>
-                      </div>
-                  
-                      <!-- Farm Hubs Card -->
-                      <div class="solution-card" data-component="farm">
-                        <div class="card-icon">🏭</div>
-                        <div class="card-content">
-                          <h2 class="card-title">Farm Hubs</h2>
-                          <div class="card-subtitle">The Implementation Hands</div>
-                          <div class="card-details">
-                            <div class="responsibilities">
-                              <h3>Core Functions:</h3>
-                              <ul>
-                                <li><span class="highlight">Deliver</span> technologies & inputs</li>
-                                <li><span class="highlight">Train</span> farmers in-field</li>
-                                <li><span class="highlight">Optimize</span> supply chains</li>
-                              </ul>
-                            </div>
-                            <div class="impact">
-                              <h3>Impact Areas:</h3>
-                              <div class="impact-tags">
-                                <span class="tag supply">Supply</span>
-                                <span class="tag productivity">Productivity</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-connector left"></div>
-                        <div class="card-connector right"></div>
-                      </div>
-                  
-                      <!-- Regen Farms Card -->
-                      <div class="solution-card" data-component="regen">
-                        <div class="card-icon">🌱</div>
-                        <div class="card-content">
-                          <h2 class="card-title">Regen Farms</h2>
-                          <div class="card-subtitle">The Sustainable Heart</div>
-                          <div class="card-details">
-                            <div class="responsibilities">
-                              <h3>Core Functions:</h3>
-                              <ul>
-                                <li><span class="highlight">Implement</span> proven methods</li>
-                                <li><span class="highlight">Regenerate</span> soil health</li>
-                                <li><span class="highlight">Provide</span> real-world feedback</li>
-                              </ul>
-                            </div>
-                            <div class="impact">
-                              <h3>Impact Areas:</h3>
-                              <div class="impact-tags">
-                                <span class="tag productivity">Productivity</span>
-                                <span class="tag supply">Supply</span>
-                                <span class="tag capacity">Capacity</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-connector left"></div>
-                      </div>
-                    </div>
-                  
-                    <!-- Gap Visualization Section -->
-                    <div class="gap-visualization">
-                      <div class="horizontal-line"></div>
-                      <div class="downward-arrow">↓</div>
-                      <div class="gap-cards">
-                        <div class="gap-card productivity-gap">
-                          <h3>Productivity Gap</h3>
-                          <p>Bridging yield and efficiency challenges</p>
-                        </div>
-                        <div class="gap-card supply-gap">
-                          <h3>Supply Gap</h3>
-                          <p>Solving distribution and access issues</p>
-                        </div>
-                        <div class="gap-card capacity-gap">
-                          <h3>Capacity Gap</h3>
-                          <p>Building skills and infrastructure</p>
-                        </div>
-                      </div>
-                    </div>
-                  
-                    <div class="slide-controls">
-                      <button class="nav-button prev" onclick="prevSlide()">‹ Previous</button>
-                      <button class="nav-button next" onclick="nextSlide()">Next ›</button>
-                    </div>
-                  </div>
-                  
-           
-                   <!---------------------------------------Farm Hub title ------------------------------------>
-                <div class="slide" id="farmhub-title-slide">
-                    <div class="bg-pattern"></div>
-                    <div class="floating-icons" id="floatingIcons1"></div>
-                    <div class="title-container">
-                        <div class="logo-container">
-                            <div class="logo-placeholder">
-                                <i class="fas fa-tractor"></i>
-                            </div>
-                        </div>
-                        <h1 class="slide-2-title">Farm Hub Ethiopia</h1>
-                        <p class="slide-2-subtitle">Scaling Access to Tools, Inputs, and Knowledge for Smallholders</p>
-                        <p class="slide-2-subtitle" style="font-size: 1.2rem; margin-top: 2rem;">Transforming Smallholder Agriculture Across Ethiopia</p>
-                    </div>
-                </div>     
-                
-                
-                
-                   <!--------------------------------------- Farm Hub - challange ------------------------------------>
-                
-                
-
-                <div class="slide" id="challanges-farmhub-slide">
-                    <div class="bg-pattern" style="background-image: radial-gradient(rgba(13, 70, 37, 0.05) 2px, transparent 2px);"></div>
-                    <div class="floating-icons" id="floatingIcons2"></div>
-                    <h2 class="context-header">Challenges Farm Hub Addresses</h2>
-                    
-                    <div class="challenges-container">
-                        <div class="challenge-card">
-                            <h3 class="challenge-title">Low Mechanization</h3>
-                            <p class="challenge-desc">Less than 1% of Ethiopian farms use tractors, with 85% of land tilled by hand, severely limiting productivity.</p>
-                        </div>
-                        
-                        <div class="challenge-card">
-                            <h3 class="challenge-title">Fragmented Supply Chains</h3>
-                            <p class="challenge-desc">Critical inputs and equipment often don't reach smallholder farmers due to weak distribution networks and high logistics costs.</p>
-                        </div>
-                        
-                       
-                        <div class="challenge-card">
-                            <h3 class="challenge-title">Knowledge Gaps</h3>
-                            <p class="challenge-desc">Farmers lack access to training on modern equipment use and maintenance, reducing adoption rates.
-                                 Lack of knowldge on agronomic improved practices (optimal planting techniques, soil management, Inefficient input use). Lack of knowldge on Sustainability (regenerative ag awareness, climate-smartagriculture etc)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="emphasis-card">
-                        <h3 class="emphasis-title"><i class="fas fa-cogs"></i> The Mechanization Imperative</h3>
-                        <p class="emphasis-desc">
-                            Ethiopia's farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). 
-                            Farm Hub's short-term focus on scalable mechanization solutions (pay-per-use models) 
-                            can immediately boost productivity by 3-5x while solving affordability barriers.
+                        <p class="systems-text">
+                            Ethiopia's smallholder farmers mainly</span> face <span style="color: #e74c3c; font-weight: 600;"> three intertwined challenges</span> that must be addressed to unlock their potential.
                         </p>
+                        
+                        <p class="systems-text">
+                            These <span style="color: #e74c3c; font-weight: 600;">three challenges</span> are <span style="color: #27ae60; font-weight: 600;">deeply interconnected</span>
+                        </p>
+                        
+                        <p class="systems-text">
+                            Addressing them requires a <span style="color: #27ae60; font-weight: 600;">holistic, systems-based approach</span> that improves <span style="color: #e74c3c;">productivity</span>, strengthens <span style="color: #3498db;">market systems</span>, 
+                            and builds <span style="color: #f39c12;">capacity</span> to ensure a <span style="font-weight: 600;">resilient, inclusive, and sustainable</span> agri-food sector.
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="gaps-column">
+                        <div class="gaps-container">
+                            <!-- Productivity Gap Card -->
+                            <div class="gap-card productivity">
+                                <div class="gap-icon">⏱️</div>
+                                <h3 class="gap-title">Productivity Gap</h3>
+                                <p class="gap-description">
+                                    Current output falls 30-50% below potential due to limited mechanization and suboptimal farming practices.
+                                </p>
+                            </div>
+                            
+                            <!-- Supply Chain Gap Card -->
+                            <div class="gap-card supply-chain">
+                                <div class="gap-icon">🚚</div>
+                                <h3 class="gap-title">Supply Gap</h3>
+                                <p class="gap-description">
+                                    Challenges accessing inputs and reliable markets, with 25-40% post-harvest losses.
+                                </p>
+                            </div>
+                            
+                            <!-- Skills Gap Card -->
+                            <div class="gap-card skills">
+                                <div class="gap-icon">🎓</div>
+                                <h3 class="gap-title">Skills Gap</h3>
+                                <p class="gap-description">
+                                    Only 18% of farmers receive training, limiting adoption of modern techniques.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+    <!--------------------------------------- Component #1 - Mission Lab ------------------------------------>
                 
+        <div id="missionlab-comp1-slide" class="slide">
+            
+            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+            
+            <div class="missionlab-content">
+                <!-- Left Side: Text Section -->
+                <div class="missionlab-text">
+                    <h1>The Innovation Brain</h1>
+                    <h2>Component #1 - Mission Lab</h2>
+                    <p class="systems-text">
+                        The Mission Lab model <span style="color: #27ae60; font-weight: 600;">integrates global expertise with local 
+                        knowledge, focusing on addressing systemic challenges</span>  
+                        grounding solutions in the realities of specific places. <span style="color: #e74c3c;">By 
+                            fostering collaborative partnerships between cross-sectoral 
+                            stakeholders,</span>, Mission Lab <span style="color: #3498db;">becomes</span> driving force for 
+                            <span style="color: #f39c12;">localised systems innovation</span>
+                    </p>
+                    
+                    <ul>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;">Research</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;">Innovation</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;">Education</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;">Technology Transfer</span>
+                        </li>
+                    </ul>
+                </div>
+            
+                <!-- Right Side: Image Section -->
+                <div class="missionlab-image">
+                    <img src="image_file/comp_1_missionlab.jpg" alt="MissionLab Innovation">
+                </div>
+            </div>
+        </div>
+
+<!--------------------------------------- Component #2 - Mission Lab ------------------------------------>
 
 
+        <div id="missionlab-comp2-slide" class="slide">
+           
+            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
 
-
-              
-
-
-
-
-
+            <div class="missionlab-content">
+                <!-- Left Side: Text Section -->
+                <div class="missionlab-text">
+                    <h3>The Implmentation Hands</h3>
+                    <h2> Component #2 - Farm Hubs</h2>
+                    <p class="systems-text">
+                        <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
+                        smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span>, inputs <span style="color: #3498db;">digital tools</span>  resources
+                                <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
+                                    empowers farmers to adopt regenerative and climate-smart 
+                                    techniques, ensuring long-term resilience and success in a 
+                                    rapidly changing agricultural landscape</span>
+                    </p>
                 
-                
-
-        <div id="process-slide" class="slide process-slide">
-            <div class="slide-header">
-              <h1 class="slide-title">Our Process</h1>
-              <div class="slide-subtitle">A Proven Methodology for Success</div>
-            </div>
-          
-            <div class="process-container">
-              <!-- Animated Process Timeline -->
-              <div class="process-timeline">
-                <div class="process-phase" data-phase="1">
-                  <div class="phase-visual">
-                    <div class="phase-icon">🔍</div>
-                    <div class="phase-connector"></div>
-                  </div>
-                  <div class="phase-content">
-                    <h3>Discovery</h3>
-                    <div class="phase-details">
-                      <p>Deep dive analysis to understand challenges</p>
-                      <ul>
-                        <li>Market research</li>
-                        <li>Stakeholder interviews</li>
-                        <li>Data audit</li>
-                      </ul>
-                    </div>
-                  </div>
+                    <ul>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>>Training and advisory services</span>
+                        </li>
+                    </ul>
                 </div>
-          
-                <div class="process-phase" data-phase="2">
-                  <div class="phase-visual">
-                    <div class="phase-icon">📊</div>
-                    <div class="phase-connector"></div>
-                  </div>
-                  <div class="phase-content">
-                    <h3>Planning</h3>
-                    <div class="phase-details">
-                      <p>Strategic roadmap development</p>
-                      <ul>
-                        <li>Solution architecture</li>
-                        <li>Resource allocation</li>
-                        <li>Milestone planning</li>
-                      </ul>
-                    </div>
-                  </div>
+
+                <!-- Right Side: Image Section -->
+                <div class="missionlab-image">
+                    <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
                 </div>
-          
-                <div class="process-phase" data-phase="3">
-                  <div class="phase-visual">
-                    <div class="phase-icon">🛠️</div>
-                    <div class="phase-connector"></div>
-                  </div>
-                  <div class="phase-content">
-                    <h3>Execution</h3>
-                    <div class="phase-details">
-                      <p>Agile implementation with continuous feedback</p>
-                      <ul>
-                        <li>Iterative development</li>
-                        <li>Quality assurance</li>
-                        <li>Progress reviews</li>
-                      </ul>
-                    </div>
-                  </div>
+            </div>
+
+           
+        </div>
+
+           <!--------------------------------------- Component #3 - Mission Lab ------------------------------------>
+
+        <div id="missionlab-comp3-slide" class="slide">
+           
+            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+
+            <div class="missionlab-content">
+                <!-- Left Side: Text Section -->
+                <div class="missionlab-text">
+                    <h1>The Sustainable Heart</h1>
+                    <h2> Component #3 - Regen Farms</h2>
+                    <p class="systems-text">
+                             <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
+                        smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
+                                <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
+                    </p>
+                    <ul>
+                        <li class="systems-text">
+                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
+                                Mechanisation Programme</span> 
+                        </span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
+                                Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
+                                Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
+                            climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
+                            additional income streams. </span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
+                                Strengthening Platfor</span>  </span>
+                        </li>
+                        <li class="systems-text">
+                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
+                                Service Infrastructur</span> </span>
+                        </li>
+                        
+                    </ul>
+                    <p class="systems-text">
+                               <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
+                            Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
+                            sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
+                    </p>
+                        </div>
+
+                <!-- Right Side: Image Section -->
+                <div class="missionlab-image">
+                    <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
                 </div>
-          
-                <div class="process-phase" data-phase="4">
-                  <div class="phase-visual">
-                    <div class="phase-icon">🚀</div>
-                  </div>
-                  <div class="phase-content">
-                    <h3>Delivery</h3>
-                    <div class="phase-details">
-                      <p>Seamless transition and support</p>
-                      <ul>
-                        <li>Deployment</li>
-                        <li>Training</li>
-                        <li>Ongoing optimization</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          
-              <!-- Process Summary Visualization -->
-              <div class="process-visual">
-                <div class="visual-bar">
-                  <div class="visual-segment discovery" data-tooltip="Discovery Phase"></div>
-                  <div class="visual-segment planning" data-tooltip="Planning Phase"></div>
-                  <div class="visual-segment execution" data-tooltip="Execution Phase"></div>
-                  <div class="visual-segment delivery" data-tooltip="Delivery Phase"></div>
-                </div>
-                <div class="visual-labels">
-                  <span>Understand</span>
-                  <span>Design</span>
-                  <span>Build</span>
-                  <span>Deliver</span>
-                </div>
-              </div>
             </div>
-          
-            <div class="slide-controls">
-              <button class="nav-button prev" onclick="prevSlide()">‹ Previous</button>
-              <button class="nav-button next" onclick="nextSlide()">Next ›</button>
-            </div>
-          </div>
 
-       <div id="team-slide" class="slide team-slide">
-  <div class="slide-header">
-    <h1 class="slide-title">Our Dream Team</h1>
-    <div class="slide-subtitle">The Experts Behind Your Success</div>
-  </div>
-
-  <div class="team-container">
-    <!-- Team Grid with Interactive Cards -->
-    <div class="team-grid">
-      <div class="team-card" data-member="1">
-        <div class="card-front">
-          <div class="member-photo">
-            <img src="https://via.placeholder.com/200" alt="John Doe">
-          </div>
-          <div class="member-info">
-            <h3>John Doe</h3>
-            <p class="role">CEO & Founder</p>
-            <div class="expertise-tags">
-              <span>Strategy</span>
-              <span>Leadership</span>
-            </div>
-          </div>
         </div>
-        <div class="card-back">
-          <h4>About John</h4>
-          <p>15+ years transforming industries with innovative solutions. Passionate about sustainable growth.</p>
-          <div class="member-stats">
-            <div class="stat">
-              <span class="stat-value">42+</span>
-              <span class="stat-label">Projects</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">100%</span>
-              <span class="stat-label">Commitment</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="team-card" data-member="2">
-        <div class="card-front">
-          <div class="member-photo">
-            <img src="https://via.placeholder.com/200" alt="Jane Smith">
-          </div>
-          <div class="member-info">
-            <h3>Jane Smith</h3>
-            <p class="role">CTO</p>
-            <div class="expertise-tags">
-              <span>Technology</span>
-              <span>Innovation</span>
-            </div>
-          </div>
-        </div>
-        <div class="card-back">
-          <h4>About Jane</h4>
-          <p>Tech visionary specializing in scalable architectures and cutting-edge solutions.</p>
-          <div class="member-stats">
-            <div class="stat">
-              <span class="stat-value">10x</span>
-              <span class="stat-label">Efficiency</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">∞</span>
-              <span class="stat-label">Creativity</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-card" data-member="3">
-        <div class="card-front">
-          <div class="member-photo">
-            <img src="https://via.placeholder.com/200" alt="Mike Johnson">
-          </div>
-          <div class="member-info">
-            <h3>Mike Johnson</h3>
-            <p class="role">Design Lead</p>
-            <div class="expertise-tags">
-              <span>UX/UI</span>
-              <span>Branding</span>
-            </div>
-          </div>
-        </div>
-        <div class="card-back">
-          <h4>About Mike</h4>
-          <p>Human-centered design expert focused on creating intuitive user experiences.</p>
-          <div class="member-stats">
-            <div class="stat">
-              <span class="stat-value">98%</span>
-              <span class="stat-label">Satisfaction</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">500+</span>
-              <span class="stat-label">Interfaces</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-card" data-member="4">
-        <div class="card-front">
-          <div class="member-photo">
-            <img src="https://via.placeholder.com/200" alt="Sarah Williams">
-          </div>
-          <div class="member-info">
-            <h3>Sarah Williams</h3>
-            <p class="role">Marketing Director</p>
-            <div class="expertise-tags">
-              <span>Growth</span>
-              <span>Strategy</span>
-            </div>
-          </div>
-        </div>
-        <div class="card-back">
-          <h4>About Sarah</h4>
-          <p>Data-driven marketer with a proven track record of successful campaigns.</p>
-          <div class="member-stats">
-            <div class="stat">
-              <span class="stat-value">3.2M</span>
-              <span class="stat-label">Impressions</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">240%</span>
-              <span class="stat-label">ROI</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Team Stats Summary -->
-    <div class="team-stats">
-      <div class="stat-item">
-        <span class="stat-number">50+</span>
-        <span class="stat-label">Years Combined Experience</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Client Satisfaction</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">∞</span>
-        <span class="stat-label">Creativity</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-controls">
-    <button class="nav-button prev" onclick="prevSlide()">‹ Previous</button>
-    <button class="nav-button next" onclick="nextSlide()">Next ›</button>
-  </div>
-</div>
-
- 
-
-          
-                
-               
-<div class="slide">
-    <!-- Decorative circles -->
-    <div class="circle circle-1"></div>
-    <div class="circle circle-2"></div>
-    <div class="circle circle-3"></div>
-    
-    <!-- Background icons -->
-    <i class="fas fa-chart-line bg-icon icon-1"></i>
-    <i class="fas fa-industry bg-icon icon-2"></i>
-    
-    <div class="slide-content">
-        <div class="text-column">
-            <h1>Current Market Challenges</h1>
-            <p>The industry is facing significant gaps that are impacting overall performance and growth potential. These challenges require immediate attention and strategic solutions to maintain competitiveness.</p>
-            <p>first step tonderstanding and drive sustainable growth in today's dynamic market environment.</p>
-        </div>
-        <div class="cards-column">
-            <div class="card">
-                <h2><i class="fas fa-tachometer-alt"></i> Productivity Gap</h2>
-                <p>Current output levels are 15-20% below industry benchmarks, with inefficiencies in processes and resource allocation contributing to significant value leakage.</p>
-            </div>
-            <div class="card">
-                <h2><i class="fas fa-boxes"></i> Supply Gap</h2>
-                <p>Inventory turnover ratios indicate a 30% mismatch between supply and demand, leading to both stockouts and excess inventory across product categories.</p>
-            </div>
-            <div class="card">
-                <h2><i class="fas fa-cogs"></i> Capacity Gap</h2>
-                <p>Utitep tonderstanding these gaps is the first step tonderstanding these gaps is the first step ure.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
+   
 
 
 
           
                 
                 <!-- Additional slides can be added here following any of the 20 templates -->
-        </div>
+            </div>
 
         <!---------------------- Navigation Controls ---------------------->
         <div class="nav-controls">
@@ -4218,6 +4965,9 @@
         </div>
     </div>
 
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // DOM Elements
@@ -4228,48 +4978,123 @@
             const progressBar = document.getElementById('progressBar');
             const tocBtn = document.getElementById('tocBtn');
             const tocList = document.getElementById('tocList');
-
+    
             // Current slide index
             let currentSlide = 0;
             const totalSlides = slides.length;
-
-            // Generate Table of Contents
+    
+            // Generate hierarchical Table of Contents with improved styling
             function generateTOC() {
+                tocList.innerHTML = ''; // Clear existing TOC
+                let currentH1Group = null;
+    
+                // Add background pattern to TOC
+                tocList.style.backgroundImage = 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\' fill=\'%239C92AC\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")';
+                tocList.style.backgroundAttachment = 'fixed';
+                tocList.style.padding = '20px';
+                tocList.style.borderRadius = '10px';
+                
+    
                 slides.forEach((slide, index) => {
                     // Skip the TOC slide itself
-                    if (slide.classList.contains('toc-slide')) return;
+                    if (slide.classList.contains('toc-slide') || slide.classList.contains('title-slide')) return;
                     
-                    // Get the slide title (try h1 first, then h2, then use generic)
-                    let title = 'Slide ' + (index + 1);
                     const h1 = slide.querySelector('h1');
                     const h2 = slide.querySelector('h2');
                     
+                    // Skip slides without headings
+                    if (!h1 && !h2) return;
+                    
+                    // Create H1 group if exists
                     if (h1) {
-                        title = h1.textContent;
-                    } else if (h2) {
-                        title = h2.textContent;
+                        currentH1Group = document.createElement('div');
+                        currentH1Group.className = 'toc-h1-group';
+                        
+                        const h1Container = document.createElement('div');
+                        h1Container.className = 'toc-h1-container';
+                        
+                        const h1Item = document.createElement('div');
+                        h1Item.className = 'toc-h1';
+                        h1Item.textContent = h1.textContent;
+                        h1Item.dataset.slideIndex = index;
+                        
+                        h1Item.addEventListener('click', function() {
+                            goToSlide(parseInt(this.dataset.slideIndex));
+                            window.scrollTo(0, 0);
+                        });
+                        
+                        // Add dropdown button if there are H2s after this H1
+                        const hasSubItems = checkForSubItems(slides, index);
+                        if (hasSubItems) {
+                            const dropdownBtn = document.createElement('button');
+                            dropdownBtn.className = 'dropdown-btn';
+                            dropdownBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                            
+                            // Create container for H2 items
+                            const h2Container = document.createElement('div');
+                            h2Container.className = 'toc-h2-container';
+                            
+                            dropdownBtn.addEventListener('click', function(e) {
+                                e.stopPropagation();
+                                const container = this.parentElement.nextElementSibling;
+                                container.style.display = container.style.display === 'none' ? 'block' : 'none';
+                                this.innerHTML = container.style.display === 'none' ? 
+                                    '<i class="fas fa-chevron-right"></i>' : 
+                                    '<i class="fas fa-chevron-down"></i>';
+                            });
+                            
+                            h1Container.appendChild(h1Item);
+                            h1Container.appendChild(dropdownBtn);
+                            currentH1Group.appendChild(h1Container);
+                            currentH1Group.appendChild(h2Container);
+                        } else {
+                            h1Container.appendChild(h1Item);
+                            currentH1Group.appendChild(h1Container);
+                        }
+                        
+                        tocList.appendChild(currentH1Group);
                     }
                     
-                    // Create TOC item
-                    const tocItem = document.createElement('div');
-                    tocItem.className = 'toc-item';
-                    tocItem.textContent = title;
-                    tocItem.addEventListener('click', () => {
-                        goToSlide(index);
-                        // Scroll to top in case the slide has overflow content
-                        window.scrollTo(0, 0);
-                    });
-                    
-                    tocList.appendChild(tocItem);
+                    // Create H2 item if exists and we have an H1 group
+                    if (h2 && currentH1Group) {
+                        const h2Container = currentH1Group.querySelector('.toc-h2-container');
+                        if (!h2Container) return;
+                        
+                        const h2Item = document.createElement('div');
+                        h2Item.className = 'toc-h2';
+                        h2Item.textContent = h2.textContent;
+                        h2Item.dataset.slideIndex = index;
+                        
+                        h2Item.addEventListener('click', function() {
+                            goToSlide(parseInt(this.dataset.slideIndex));
+                            window.scrollTo(0, 0);
+                        });
+                        
+                        h2Container.appendChild(h2Item);
+                    }
+                });
+                
+                // Initialize all H2 containers as collapsed
+                document.querySelectorAll('.toc-h2-container').forEach(container => {
+                    container.style.display = 'none';
                 });
             }
-
+    
+            // Helper function to check if an H1 has sub-items
+            function checkForSubItems(slides, startIndex) {
+                for (let i = startIndex + 1; i < slides.length; i++) {
+                    if (slides[i].querySelector('h1')) return false;
+                    if (slides[i].querySelector('h2')) return true;
+                }
+                return false;
+            }
+    
             // Update progress bar
             function updateProgress() {
                 const progress = ((currentSlide + 1) / totalSlides) * 100;
                 progressBar.style.width = progress + '%';
             }
-
+    
             // Go to specific slide
             function goToSlide(slideIndex) {
                 // Ensure the index is within bounds
@@ -4283,21 +5108,21 @@
                 slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
                 updateProgress();
             }
-
+    
             // Next slide
             function nextSlide() {
                 if (currentSlide < totalSlides - 1) {
                     goToSlide(currentSlide + 1);
                 }
             }
-
+    
             // Previous slide
             function prevSlide() {
                 if (currentSlide > 0) {
                     goToSlide(currentSlide - 1);
                 }
             }
-
+    
             // Keyboard navigation
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'ArrowRight') {
@@ -4306,20 +5131,20 @@
                     prevSlide();
                 }
             });
-
+    
             // Swipe navigation for touch devices
             let touchStartX = 0;
             let touchEndX = 0;
-
+    
             slidesContainer.addEventListener('touchstart', function(e) {
                 touchStartX = e.changedTouches[0].screenX;
             }, false);
-
+    
             slidesContainer.addEventListener('touchend', function(e) {
                 touchEndX = e.changedTouches[0].screenX;
                 handleSwipe();
             }, false);
-
+    
             function handleSwipe() {
                 const difference = touchStartX - touchEndX;
                 if (difference > 50) { // Swipe left
@@ -4328,21 +5153,23 @@
                     prevSlide();
                 }
             }
-
+    
             // Button event listeners
             nextBtn.addEventListener('click', nextSlide);
             prevBtn.addEventListener('click', prevSlide);
             tocBtn.addEventListener('click', () => goToSlide(1)); // TOC is slide 1 (index 1)
-
+    
             // Initialize
             generateTOC();
             updateProgress();
-
+    
             // Make sure first slide is visible
             goToSlide(0);
         });
     </script>
+    
 
+     
 
  <!---------------------- Mermaid script ---------------------->
 
@@ -4465,5 +5292,89 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
     </script>
+
+
+
+
+ <!---------------------- Supplay and Gap ---------------------->
+
+    <script>
+    // Function to dynamically control sizes and positions
+    function updateBalance(supplySize, demandSize, supplyPosX, demandPosX) {
+        const supplyCircle = document.querySelector('.supply');
+        const demandCircle = document.querySelector('.demand');
+
+        // Set the size and position of the supply and demand circles
+        supplyCircle.style.width = `${supplySize}px`;
+        supplyCircle.style.height = `${supplySize}px`;
+        supplyCircle.style.left = `${supplyPosX}%`;
+
+        demandCircle.style.width = `${demandSize}px`;
+        demandCircle.style.height = `${demandSize}px`;
+        demandCircle.style.right = `${demandPosX}%`;
+    }
+
+    // Function to trigger the animation
+    function animateBalance() {
+        const balanceContainer = document.getElementById('balance');
+
+        // Remove the animate class to reset the animation
+        balanceContainer.classList.remove('animate');
+
+        // Force a reflow to restart the animation
+        void balanceContainer.offsetWidth;
+
+        // Add the animate class to start the animation
+        balanceContainer.classList.add('animate');
+    }
+
+    // Set initial values for sizes and positions of the circles
+    let supplySize = 80; // Size of supply circle
+    let demandSize = 150; // Size of demand circle
+    let supplyPosX = -10; // Position of supply circle (percentage of container width)
+    let demandPosX = 10; // Position of demand circle (percentage of container width)
+
+    // Update the circle attributes
+    updateBalance(supplySize, demandSize, supplyPosX, demandPosX);
+
+    // Intersection Observer to trigger animation when the section comes into view
+    const balanceSection = document.getElementById('balance');
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Start the animation
+                    animateBalance();
+                } else {
+                    // Reset the animation when the section is out of view
+                    const balanceContainer = document.getElementById('balance');
+                    balanceContainer.classList.remove('animate');
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Trigger when 50% of the element is visible
+        }
+    );
+
+    // Start observing the balance section
+    observer.observe(balanceSection);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
