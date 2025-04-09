@@ -342,6 +342,7 @@
                     margin: 0; /* Outer margin from screen edges */
                     max-width: 80%;
                     position: relative;
+                    
                 }
     
                 /* Ensure image fits properly */
@@ -504,15 +505,44 @@
             z-index: 0;
         }
 
-        .full-image-slide .content {
+        .full-image-slide {
             position: relative;
             z-index: 1;
             max-width: 80%;
             margin: 0 auto;
-            
+           font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 80%;
+           margin-left: 40px;
             font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
 
         }
+            @media (max-width: 768px) {
+                .content {
+                    position: relative;
+                    z-index: 1;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+                    font-size: 2rem;
+
+                }
+                
+                .content-block {
+                    width: 650px;       /* Adjust to your layout */
+                    margin: 0 auto;         /* Centers content */
+                    padding: 10px 0;        /* Vertical spacing */
+                    line-height: 1.2;       /* Readable line spacing */
+                    text-align: left; 
+                    font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+                    }
+
+                }
+
 
         /* Template 9: Comparison Slide */
         .comparison-slide {
@@ -1837,6 +1867,7 @@
                     width: 90%;
                     height: auto;
                     position: relative;
+                    margin-left: 30px;
                 }
                 .missionlab-text {
                     flex: 0 1 50%;
@@ -3590,7 +3621,7 @@
         /* Content wrapper (replaces .sqs-html-content) */
 .content-block {
   max-width: 800px;       /* Adjust to your layout */
-  margin: 0 auto;         /* Centers content */
+ 
   padding: 20px 0;        /* Vertical spacing */
   line-height: 1.6;       /* Readable line spacing */
   text-align: left; 
@@ -4128,8 +4159,8 @@
                 </div>
                 
                 <div class="content">
-                    <h1 style="font-size: 4rem;">The Bigger Picture</h1>
-                    <p style="font-size: 3rem;">The Context</p>
+                    <h1 style="font-size: 4rem;">The Context  <span style="color: #ccd51d; font-weight: 600;">- Regenerators Collective</span></h1>
+                    <p style="font-size: 3rem;">The Bigger Picture</p>
                 </div>
             </div>
 
@@ -4137,13 +4168,14 @@
                <!---------------------- Slide 4: The Challange -1  ---------------------->
             <div class="slide full-image-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1724777382946-LAA3J2Y0F0N3T8LTAWVD/GettyImages-1179600347.jpg?format=1500w');">
             
-                <div class="content" style="text-align: left; margin-left: 150px;">
-                    <h2 style="font-size: 2rem;">The Challange</h2>
-                    <div class="content-block" style="width: 600px; font-size: 1.5rem;">
+                <div class="content" style="text-align: left;">
+                    <h2 style="font-size: 2rem;">The Challenge</h2>
+                    <div class="content-block" style="font-size: 1.5rem;">
                         <h2 style="font-size: 1.6rem;">Our current food system is broken</h2>
+                        <p style="padding: 20px;">... the way we produce, distribute and consume food isn't working effectively.</p>
                         
                                 <p style="padding: 20px;">
-                                    Today’s food systems are facing numerous challenges deeply rooted in historical, cultural, and global issues. 
+                                    stem from deep, interconnected issues: historical, cultural, and global issues. 
                                     They contribute to <span style="color: #e74c3c; font-weight: 600;">environmental 
                                     degradation, inequality, and food insecurity</span>, failing both people and the planet.&nbsp;
                                 </p>
@@ -4151,8 +4183,7 @@
                                     By focusing on short-term gains rather than long-term sustainability, this approach results in <span style="color: #e74c3c; font-weight: 600;">soil depletion, biodiversity loss, and increased climate vulnerability.</span>
                                 </p>
                                 <p style="padding: 20px;">
-                                    We need to expand our perspective: only a <span style="color: #27c43f; font-weight: 600;">comprehensive transformation</span> can ensure the future well-being and resilience of both our 
-                                    communities and global eco-systems.
+                                    We need to expand our perspective: <span style="color: #27c43f; font-weight: 600;">Requires a complete systemic transformation - not small fixes - to achieve </span> 
                                 </p>
                       </div>
                             
@@ -4193,7 +4224,7 @@
                                 <div class="gap-icon">⏱️</div>
                                 <h3 class="gap-title">Productivity Gap</h3>
                                 <p class="gap-description" >
-                                    Current output falls 30-50% below potential due to limited mechanization and suboptimal farming practices.
+                                    Current output falls 30-50% below potential due to input limitations, limited mechanization and suboptimal farming practices.
                                 </p>
                             </div>
                             
@@ -4202,7 +4233,7 @@
                                 <div class="gap-icon">🚚</div>
                                 <h3 class="gap-title">Supply Gap</h3>
                                 <p class="gap-description">
-                                    Challenges accessing inputs and reliable markets, with 25-40% post-harvest losses.
+                                    Challenges accessing inputs and reliable markets.
                                 </p>
                             </div>
                             
@@ -4330,19 +4361,51 @@
                     <!-- Left Side: Text Section -->
                     <div class="missionlab-text">
                        
-                        <p class="systems-text" style="background: rgba(89, 161, 91, 0.1); color: #2c3e50; padding: 20px; border-radius: 8px; border-left: 4px solid rgb(89, 161, 91); font-size: 1.5rem; line-height: 1.6; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                            The Supply Gap relates to the inadequate supply of essential technologies, inputs, and services to farmers. 
+                        <!-- Definition -->
+                        <p style="color: #2c3e50; font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;">
+                            The Supply Gap in Ethiopian agriculture refers to the mismatch between the growing demand for critical agricultural 
+                            inputs—such as improved seeds, fertilizers, crop protection products, 
+                            and mechanization technologies—and the limited supply and distribution of these inputs.
                         </p>
-                        <ul>
-                            <li class="systems-text">
-                                <span style="color: #27ae60; font-weight: 600;">Limited access to mechanisation, quality seeds, fertilizers, irrigation systems, 
-                                            and innovative tools prevents smallholders from improving productivity and competitiveness.</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60; font-weight: 600;">dditionally, fragmented supply chains and poor last-mile delivery systems exacerbate the challenge, 
-                                    keeping critical technologies and inputs out of farmers' reach.</span>
-                            </li>
-                        </ul>
+                        
+                        <!-- Key Issues -->
+                        <div style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong>Seed shortages:</strong> Inadequate local production/import of certified seeds
+                                </p>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong>Fertilizer challenges:</strong> Inefficient distribution + foreign currency constraints
+                                </p>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong>Mechanization gap:</strong> Limited appropriate tech for smallholders
+                                </p>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong>Supply chain issues:</strong> Fragmented private sector participation
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Visual Divider -->
+                        <div style="border-top: 1px solid #ecf0f1; margin-bottom: 20px;"></div>
+                        
+                        <!-- Impact Statement -->
+                        <p style="color: #2c3e50; font-size: 1rem; font-style: italic; margin: 0;">
+                            This gap prevents farmers from accessing essential tools for improved productivity.
+                        </p>
                     </div>
 
                     <!-- Right Side: Image Section -->
@@ -4360,34 +4423,45 @@
 
             <!----------------------------------------------------- capacity gap ---------------------------------------------------------->
             <div class="slide two-columns-text-image">
-                <div class="gaps-text-column">
+                <div class="missionlab-text">
                     <h3 class="slide-2-subtitle">Capacity Gap</h3>
-                    <p class="systems-text"> The Capacity Gap represents a critical barrier for Ethiopia’s smallholder 
-                        farmers, who often lack the skills, knowledge, and resources needed to 
-                        adopt modern farming practices and improve productivity.</p>
-                    <ul>
-                       
-                        <li class="systems-text">
-                            <a class="innovative-toc-link">
-                                <span class="link-icon"><i class="fas fa-chart-bar"></i></span>
-                                <span class="link-text">Limited access to training, extension services, and financial support prevents farmers from utilising technologies, quality inputs, and sustainable practices. </span>
-                            </a>
-                        </li>
-                        <li class="systems-text">
-                            <a class="innovative-toc-link">
-                                <span class="link-icon"><i class="fas fa-chart-bar"></i></span>
-                                <span class="link-text">Low digital literacy and market awareness further restrict their ability to engage with emerging tools and off-taker markets. </span>
-                            </a>
-                        </li>
-                        <li class="systems-text">
-                            <a class="innovative-toc-link">
-                                <span class="link-icon"><i class="fas fa-chart-bar"></i></span>
-                                <span class="link-text">Addressing the gap requires comprehensive capacity development programs—covering areas such as mechanisation, regenerative agricultural practices, financial management, and market access—are essential to empower farmers.</p>
-                                </span>
-                            </a>
-                        </li>
-                        
-                    </ul>
+                    <p class="systems-text"> The Capacity Gap refers to limitations in the institutional, technical, and human 
+                                            capacity across the entire agricultural value chain—including farmers, cooperatives, service providers, 
+                                            and government institutions—that hinder the effective adoption and scaling of agricultural technologies and services.</p>
+                   
+                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                                    <strong>Farmers' knowledge and skills:</strong> Many smallholder farmers lack sufficient training in modern agronomic practices, mechanization use, 
+                                                    financial literacy, and input application. This makes it difficult for them to make informed decisions or adopt improved technologies effectively.
+                                                </p>
+                                            </div>
+                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                                    <strong>FCooperatives and service providers:</strong>Weak managerial, technical, and operational capacity among cooperatives and local agri-businesses affects service delivery and input distribution.
+                                                </p>
+                                            </div>
+                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                                    <strong>Public institutions:</strong>          
+                                                    Shortages of qualified extension workers, lack of continuous training, and weak coordination across ministries and agencies result in limited support reaching farmers.
+                                           </p>
+                                            </div>
+                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                                    <strong>Technology and data use:</strong>       Limited access to digital tools and weak data systems hamper evidence-based planning and real-time decision-making.
+                                                </p>
+                                            </div>
+                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                                    <strong>Digital literacy:</strong>   Low digital literacy and market awareness further restrict their ability to engage with emerging tools and off-taker markets.
+                                                </p>
+                                            </div>
+                   
                </div>
                 <div class="image-content">
                     <img src="image_file/gaps_cap.jpg" alt="Placeholder Image">
