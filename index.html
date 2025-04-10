@@ -1644,6 +1644,8 @@
             height: 70%;
             margin: 0 auto;
             perspective: 1000px;
+            overflow: hidden; /* no scroll by default */
+           
         }
 
         /* Cell styling with animation potential */
@@ -1657,9 +1659,12 @@
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
+            overflow: visible;
             position: relative;
             color:black;
+            font-weight: normal;
+            line-height: 2.0rem;
+            font-size: 1.4rem;
         }
 
         .cell:hover {
@@ -1669,13 +1674,13 @@
 
         /* Text cell specific */
         .text-cell {
-            justify-content: flex-start;
-            text-align: left;
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #2e8b57 transparent;
-           
-        }
+    justify-content: flex-start;
+    text-align: left;
+    /* Remove scrolling behavior here */
+    overflow-y: visible;
+    scrollbar-width: none;
+}
+
 
         .text-cell::-webkit-scrollbar {
             width: 6px;
@@ -1705,7 +1710,7 @@
 
         .image-cell img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
@@ -1715,6 +1720,20 @@
         }
         
 
+        @media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        max-height: 100vh;
+        overflow-y: auto; /* scroll entire grid if needed */
+        padding-bottom: 2rem;
+    }
+
+    .cell {
+        height: auto;
+    }
+}
 
 
 
@@ -2197,6 +2216,7 @@
                     font-size: 2.8rem;
                     color: #047857;
                     margin-bottom: 0.5rem;
+                   text-align: center;
                     background: linear-gradient(to right, #047857, #10b981);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -2251,12 +2271,7 @@
                     flex-direction: column;
                   }
                   
-                  .card-title {
-                    font-size: 1.8rem;
-                    color: #047857;
-                    margin-bottom: 0.25rem;
-                    text-align: center;
-                  }
+               
                   
                   .card-subtitle {
                     font-size: 1.1rem;
@@ -2999,8 +3014,8 @@
             
             grid-template-rows: repeat(4, 1fr);
             gap: 10px;
-            width: 85%;
-            height: 75%;
+            width: 80%;
+            height: 70%;
             margin-top: 20px;
             position: relative;
             z-index: 5;
@@ -3044,9 +3059,9 @@
             content: "";
             display: block;
             width: 40px;
-            height: 3px;
+            height: 2px;
             background: var(--accent-orange);
-            margin: 10px 0;
+            margin: 1px 0;
         }
         
         .app-card-content {
@@ -3190,9 +3205,14 @@
             color: white;
         }
 
+        @media (max-width: 768px) {
+            .approach-container {
+           display: none;
+        }
 
+        }
 
-
+        
 
 
         /*------------------------------------------ epeatability Through Standardisation-------------------------------------------------------------------*/
@@ -4047,6 +4067,7 @@
                 
                 .gaps-column {
                     width: 100% !important;
+                    
                 }
                 
                 .gaps-container {
@@ -4478,24 +4499,9 @@
                 <p style="font-size: 1.5rem; margin-left: 200px;"> a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles and systems - 
                     ensuring their resilience and empowering them to prosper for generations to come.</p>
             </div>
-               <!-------------------------------------------------- Vision and Mission ------------------------------------------------------->
-            <div class="slide quote-slide">
-                <h3>Vision and Mission</h3>
-                <div class="author">- Vision</div>
-                <blockquote>
-                   In 2035 Ethiopia is Africa's model for food sovereignty & economic prosperity based on 
-                   regenerative and ecological agri-food systems.
-                   
-                </blockquote>
-                <div class="author">- Mission</div>
-                <blockquote>
-                    To pioneer an integrated, repeatable model for agri-food ecosystem transformation that has 
-                   been scaled to 1,500,000 hectares by 2035
-                </blockquote>
-                
-            </div>
+          
 
-               <!-------------------------------------------------- Aproach ------------------------------------------------------->
+               <!-------------------------------------------------- Approach ------------------------------------------------------->
                <div class="slide full-image-slide" style="position: relative; background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1725291727057-8VZ1KVPWBX2C2X5JQNZG/GettyImages-1555695841.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
 
                 <!-- Left-side text block -->
@@ -5275,7 +5281,7 @@
                                     <div class="card-number">1</div>
                                     <h2 class="card-title">Holistic Systems Solution</h2>
                                     <p class="app-card-content">
-                                        We provide <span style="color: #27ae60; font-weight: 600;"> a one-stop-shop model </span>connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs 
+                                       <span style="color: #27ae60; font-weight: 600;"> a one-stop-shop model </span>connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs 
                                         - the <span style="color: #27ae60; font-weight: 600;">visible nodes of our transformative system -ensuring local scalability by embedding solutions within existing farmer networks and landscapes.</span>.
                                     </p>
                                     <div class="icon-container" style="text-align: center; margin-top: 20px;">
@@ -5871,29 +5877,19 @@
             
 
             <!----------------------------------------------------- Our Remarkable Achievements ---------------------------------------------------------->
+            <div class="slide full-image-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1725561087042-KM723PJPQ7Q5A6HJP516/unsplash-image-XV4XUU7gWlk.jpg'); background-size: cover; background-position: center;">
+        
            
-
-            <div id="achiv-slide" class="slide" style="background: white;">
-                      
-                <div class="two-column">
-                    <img src="image_file/potato_field_2.jpg" alt="Traditional Farming Methods" style="width: 2000px; height: auto;position: absolute; top: 1px; left: 1px;">
-                </div>
                 
-                <div class="two-column">
-                    <div class="column" style="flex: 0 0 100%;">
-                        <h1 style="font-size: 3rem;color: green;text-align: left; margin-left: 100px; margin-top: 200px;">Our Achievements</h1>
-                                               
-                        <div style="font-size: 28px; color: #458e51; text-align: center; font-weight: bold; width: 1400px; position: absolute; top: 550px; left: 40px;">
-                            Farm Lab Ethiopia is committed to bridging the gap between traditional smallholder farming and modern agricultural solutions 
-                            by promoting regenerative practices and cutting-edge technology. With a strong focus on innovation and sustainability,
-                             we have made notable progress.
-                        </div>
-                        
-                        
-                    </div>
+                <div class="content">
+                    <h1 style="font-size: 4rem;">Our <span style="color: #ccd51d; font-weight: 600;"> Achievements</span></h1>
+                    <p style="font-size: 3rem;"> Farm Lab Ethiopia is committed to bridging the gap between traditional smallholder farming and modern agricultural solutions 
+                        by promoting regenerative practices and cutting-edge technology. <span style="color: green; font-weight: 600;"> With a strong focus on innovation and sustainability,
+                         we have made notable progress.</span></p>
                 </div>
             </div>
-           
+
+
 
             <!----------------------------------------------------- learning visit ---------------------------------------------------------->
 
@@ -5904,112 +5900,123 @@
                 <div class="grid-container">
                     <!-- Column 1 -->
                     <div class="cell text-cell slide-in-left">
-                        <h2> During our learning journey, we had the privilege of visiting UWEPO farm in Uganda to immerse ourselves in the 
+                        <p> During our learning journey, we had the privilege of visiting UWEPO farm in Uganda to immerse ourselves in the 
                             world of regenerative agriculture. Owned by Nick Dekoning, the farm exemplifies excellence in sustainable farming practices. 
                             Our experience at UWEPO farm was enriching and insightful, providing us with valuable lessons and 
-                            inspiration to further our commitment to promoting regenerative agriculture in Ethiopia.</h2>
+                            inspiration to further our commitment to promoting regenerative agriculture in Ethiopia.</p>
                         <p></p>
                     
                         
                     </div>
                     
                     <div class="cell image-cell slide-in-right">
-                        <div class="visimage-container">
+                        <div class="compimage-container">
                             <img src="image_file/nick_farm.jpg" alt="Image 1">
                         </div>
                     </div>
                     
                     <!-- Column 2 -->
                     <div class="cell image-cell slide-in-left">
-                        <div class="visimage-container">
+                        <div class="compimage-container">
                             <img src="image_file/wondo.jpg" alt="Image 2">
                         </div>
                     </div>
                     
                     <div class="cell text-cell slide-in-left">
-                        <h2>Visit to Wondo Genet College and Wondo Genet Research Center, accompanied by our partner from Studio Soal, Ireland, we had 
+                        <p>Visit to Wondo Genet College and Wondo Genet Research Center, accompanied by our partner from Studio Soal, Ireland, we had 
                             the opportunity to explore agroforestry and herbal plant production. This experience provided us with valuable insights 
-                            and knowledge in sustainable agricultural practices and the cultivation of herbal plants. </h2>
+                            and knowledge in sustainable agricultural practices and the cultivation of herbal plants. </p>
                         <p></p>
                     
                         
                     </div>
                 </div>
             </div>
+    <!----------------------------------------------------- understnading the exisiting situations ---------------------------------------------------------->
+    <div id="learning-slide" class="slide">
+        <h2 class="slide-title fade-in" style="color: green;">Understanding the Exisitng system </h2>
+
+        
+        <div class="grid-container">
+            <!-- Column 1 -->
+            <div class="cell text-cell slide-in-left">
+                <p>   The survey aimed to understand the problem—the existing mechanization system and gap analysis by assessing existing equipment, 
+                    infrastructure, personnel, business models, and training facilities of mechanization service providers in differnt parts of the 
+                    country. The scope included completing a comprehensive gap analysis and developing customized plans to address shortfalls in 
+                    equipment, infrastructure, personnel, and training.
+                </p>
+            
+                
+            </div>
+            
+            <div class="cell image-cell slide-in-right">
+                <div class="compimage-container">
+                    <img src="image_file/survey_1.jpg" alt="Image 1">
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="cell image-cell slide-in-left">
+                <div class="compimage-container">
+                    <img src="image_file/survey_2.jpg" alt="Image 2">
+                </div>
+            </div>
+            
+            <div class="cell text-cell slide-in-left">
+                <p> The survey results highlighted common challenges faced by mechanization service providers in Ethiopia, including the unavailability of 
+                    spare parts, financial constraints, limited maintenance services, and high fuel costs. By addressing these challenges and implementing the 
+                    customized plans developed, the aim was to improve the effectiveness and efficiency of mechanization services provided to 
+                    farmers in the surveyed areas. Ultimately, the outcome seeks to enhance agricultural practices, 
+                    increase productivity, and contribute to the overall development of the region's agriculture sector.
+                </p>
+              
+            
+                
+            </div>
+        </div>
+    </div>
 
             <!----------------------------------------------------- Business Model Devlopment---------------------------------------------------------->
+            <div id="learning-slide" class="slide">
+                <h2 class="slide-title fade-in" style="color: green;">Business Model Development </h2>
 
-            <div id="business-model-slide" class="slide" style="background: #311a1a;">
-               
                 
-                <div class="two-column">
-                    <div class="column" style="flex: 0 0 50%;">
-                        <h2 style="font-size: 3rem;color: #065a14;text-align: left;">Business Model Devlopment</h2>
-                                                
-                        <div style="font-size: 38px; color: #458e51; text-align: left; font-weight: normal; width: 900px; position: absolute; top: 150px; left: 20px;">
-                            As part of our transformative journey, we organized a workshop aimed at co-creating a business model for agricultural mechanization. 
+                <div class="grid-container">
+                    <!-- Column 1 -->
+                    <div class="cell text-cell slide-in-left">
+                        <p>  As part of our transformative journey, we organized a workshop aimed at co-creating a business model for agricultural mechanization. 
                             The workshop brought together a diverse group of participants, including service providers, farmers, engineers, agricultural experts,
                             and bank representatives, to collaborate on designing a sustainable and effective business model.
-                            During the workshop, we provided comprehensive training on the business model canvas, empowering participants with the tools and 
+                           
+                        </p>
+                    </div>
+                    
+                    <div class="cell image-cell slide-in-right">
+                        <div class="compimage-container">
+                            <img src="image_file/business_model_1.jpg" alt="Image 1">
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="cell image-cell slide-in-left">
+                        <div class="compimage-container">
+                            <img src="image_file/business_model_2.jpg" alt="Image 2">
+                        </div>
+                    </div>
+                    
+                    <div class="cell text-cell slide-in-left">
+                      
+                        <p>During the workshop, we provided comprehensive training on the business model canvas, empowering participants with the tools and 
                             knowledge needed to develop innovative and viable strategies for agricultural mechanization. This effort ensured that the business 
                             model created reflects the insights and expertise of various stakeholders, leading to a more inclusive and impactful approach to 
-                            agricultural development.
-                            
-                        </div>
-                    </div>
-                    <div class="image-column" style="flex: 0 1 50%;">
-                        <img src="image_file/business_model_1.jpg" alt="Traditional Farming Methods" style="width: 40%; height: auto;position: absolute; top: 50px; left: 1100px;">
-                    </div>
-                    <div class="image-column" style="flex: 0 1 50%;">
-                        <img src="image_file/business_model_2.jpg" alt="Traditional Farming Methods" style="width: 40%; height: auto;position: absolute; top: 500px; left: 1100px;">
+                            agricultural development.</p>
+                    
+                        
                     </div>
                 </div>
             </div>
-           
-            <!----------------------------------------------------- understnading the exisiting situations ---------------------------------------------------------->
-
-            <div id="farmhub-scale-slide" class="slide" style="background: #311a1a;">
-                <h2>Understanding the problem</h2>
-                <div class="two-column">
-                    <div class="image-column" style="flex: 0 1 50%;">
-                        <img src="image_file/survey_1.jpg" alt="Traditional Farming Methods" style="width: 900px; height: auto;position: absolute; top: 100px; left: 30px;">
-                    </div>
-                    <div class="image-column" style="flex: 0 1 50%;">
-                        <img src="image_file/survey_2.jpg" alt="Traditional Farming Methods" style="width: 900px; height: auto;position: absolute; top: 550px; left: 30px;">
-                    </div>
-
-
-                    <div class="column" style="flex: 0 0 50%;">
-                        <h2 style="font-size: 3rem;color: #2ecc71;"></h2>
-                    
-                        
-                        <div style="font-size: 38px; text-align: left; font-weight: normal; width: 800px; position: absolute; top: 110px; left: 100px;">
-                            The survey aimed to understand the problem—the existing mechanization system and gap analysis by assessing existing equipment, 
-                            infrastructure, personnel, business models, and training facilities of mechanization service providers in differnt parts of the 
-                            country. The scope included completing a comprehensive gap analysis and developing customized plans to address shortfalls in 
-                            equipment, infrastructure, personnel, and training.
-
-
-                            The survey results highlighted common challenges faced by mechanization service providers in Ethiopia, including the unavailability of 
-                            spare parts, financial constraints, limited maintenance services, and high fuel costs. By addressing these challenges and implementing the 
-                            customized plans developed, the aim was to improve the effectiveness and efficiency of mechanization services provided to 
-                            farmers in the surveyed areas. Ultimately, the outcome seeks to enhance agricultural practices, 
-                            increase productivity, and contribute to the overall development of the region's agriculture sector.
-                            
-                        </div>
-                        <div style="font-size: 38px; text-align: left; font-weight: normal; width: 800px; position: absolute; top: 250px; left: 100px;">
-                            <ul style="margin: 0; padding-left: 40px;">
-                                <li>  </li>
-                                <li></li>
-                                    
-
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </div>
+          
+        
           
             <!-----------------------------------------------------piloting farm hub ---------------------------------------------------------->
 
@@ -6036,27 +6043,27 @@
                 <div class="grid-container">
                     <!-- Column 1 -->
                     <div class="cell text-cell slide-in-left">
-                        <h2>We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor</h2>
+                        <p>We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor</p>
                         <p></p>
                     
                         
                     </div>
                     
                     <div class="cell image-cell slide-in-right">
-                        <div class="visimage-container">
+                        <div class="compimage-container">
                             <img src="image_file/super_seeder_1.jpg" alt="Image 1">
                         </div>
                     </div>
                     
                     <!-- Column 2 -->
                     <div class="cell image-cell slide-in-left">
-                        <div class="visimage-container">
+                        <div class="compimage-container">
                             <img src="image_file/potato_planter.jpg" alt="Image 2">
                         </div>
                     </div>
                     
                     <div class="cell image-cell slide-in-right">
-                        <div class="visimage-container">
+                        <div class="compimage-container">
                             <img src="image_file/farm_hub_equip_1.jpg" alt="Image 3">
                         </div>
                     </div>
