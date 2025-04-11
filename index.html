@@ -125,7 +125,7 @@
         }
 
         /* Template 2: Table of Contents */
-      /* Table of Contents Container */
+     
             #tocList {
                 background: rgba(255, 255, 255, 0.96);
                 backdrop-filter: blur(8px);
@@ -316,7 +316,87 @@
             }
 
 
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+    #tocList {
+        width: 70%;
+        margin-left: 60px;
+        padding: 20px;
+    }
+}
 
+@media (max-width: 768px) {
+    #tocList {
+        width: 80%;
+        margin-left: 40px;
+        padding: 18px;
+    }
+    
+    .toc-h1-container {
+        padding: 4px 16px;
+        font-size: 1.4rem;
+    }
+    
+    .toc-h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #tocList {
+        width: 90%;
+        margin: 0 auto;
+        max-height: 70vh;
+        padding: 16px;
+    }
+    
+    .toc-h1-container {
+        padding: 4px 12px;
+        font-size: 1.2rem;
+    }
+    
+    .toc-h1 {
+        font-size: 1.1rem;
+        padding: 6px 8px;
+    }
+    
+    .toc-h2 {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    .dropdown-btn {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .toc-h2-container {
+        margin-left: 24px;
+        padding-left: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    #tocList {
+        width: 95%;
+        padding: 12px;
+    }
+    
+    .toc-h1-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+    
+    .toc-h1 {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    
+    .dropdown-btn {
+        align-self: flex-end;
+    }
+}
 
 
 
@@ -519,7 +599,7 @@
         .content {
             position: relative;
             z-index: 1;
-            max-width: 80%;
+            max-width: 40%;
            margin-left: 40px;
             font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
 
@@ -4802,35 +4882,37 @@
                     <h1 style="font-size: 4rem;">The Context  <span style="color: #ccd51d; font-weight: 600;">- Regenerators Collective</span></h1>
                     <p style="font-size: 3rem;">The Bigger Picture</p>
                 </div>
-            </div>
+              </div>
 
 
                <!---------------------- Slide 4: The Challange -1  ---------------------->
-            <div class="slide full-image-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1724777382946-LAA3J2Y0F0N3T8LTAWVD/GettyImages-1179600347.jpg?format=1500w');">
-            
-                <div class="content" style="text-align: left;">
-                    <h2 style="font-size: 2rem;">The Challenge</h2>
-                    <div class="content-block" style="font-size: 1.5rem;">
-                        <h2 style="font-size: 1.6rem;">Our current food system is broken</h2>
-                        <p style="padding: 20px;">... the way we produce, distribute and consume food isn't working effectively.</p>
-                        
-                                <p style="padding: 20px;">
-                                    stem from deep, interconnected issues: historical, cultural, and global issues. 
-                                    They contribute to <span style="color: #e74c3c; font-weight: 600;">environmental 
-                                    degradation, inequality, and food insecurity</span>, failing both people and the planet.&nbsp;
-                                </p>
-                                <p style="padding: 20px;">
-                                    By focusing on short-term gains rather than long-term sustainability, this approach results in <span style="color: #e74c3c; font-weight: 600;">soil depletion, biodiversity loss, and increased climate vulnerability.</span>
-                                </p>
-                                <p style="padding: 20px;">
-                                    We need to expand our perspective: <span style="color: #27c43f; font-weight: 600;">Requires a complete systemic transformation - not small fixes - to achieve </span> 
-                                </p>
-                      </div>
-                            
-                                       
+               <div class="slide full-image-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1724777382946-LAA3J2Y0F0N3T8LTAWVD/GettyImages-1179600347.jpg?format=1500w');">
+                <!-- NEW LOGO HTML ONLY -->
+                <div class="logo-container">
+                    <img src="image_file/logo_trans.png" alt="Company Logo">
+                    
                 </div>
-            </div>
-            
+                
+                <div class="content">
+                    <h1 style="font-size: 4rem;">The Challenge  <span style="color: #ccd51d; font-weight: 600;"></span></h1>
+                    <p style="font-size: 3rem;">Our current food system is broken</p>
+                    <p style="padding: 20px; font-size: 1.7rem">... the way we produce, distribute and consume food isn't working effectively.</p>
+                    <p style="padding: 20px;font-size: 1.7rem">
+                        stem from deep, interconnected issues: historical, cultural, and global issues. 
+                        They contribute to <span style="color: #e74c3c; font-weight: 600;">environmental 
+                        degradation, inequality, and food insecurity</span>, failing both people and the planet.&nbsp;
+                    </p>
+                    <p style="padding: 20px; font-size: 1.7rem">
+                        By focusing on short-term gains rather than long-term sustainability, this approach results in <span style="color: #e74c3c; font-weight: 600;">soil depletion, biodiversity loss, and increased climate vulnerability.</span>
+                    </p>
+                    <p style="padding: 20px; font-size: 1.7rem">
+                        We need to expand our perspective: <span style="color: #27c43f; font-weight: 600;">Requires a complete systemic transformation - not small fixes - to achieve </span> 
+                    </p>
+                </div>
+              </div>
+
+
+         
 
   
             <!--------------------------------------- The gaps ------------------------------------>
