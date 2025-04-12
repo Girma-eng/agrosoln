@@ -1531,18 +1531,34 @@
     .challenge-card {
         width: 100%;
         max-width: 100%;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     .challenges-container {
         flex-direction: column;
         align-items: center;
+        gap: 0.5rem;
     }
 
     .emphasis-card {
         margin: 1rem 0;
         padding: 1rem;
     }
+    .challenge-desc {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.1;
+        }
+        .challenge-title {
+            font-size: 1.2rem;
+            color: #0d4625;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        .emphasis-desc {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
 }
 
 
@@ -3574,7 +3590,7 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .slide-title {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
   
   .process-timeline {
@@ -3604,7 +3620,7 @@
 
 @media (max-width: 480px) {
   .slide-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   
   .slide-subtitle {
@@ -3938,7 +3954,9 @@
             align-items: center;
             width:95%;
         }
-.approach-container {
+   
+                
+        .approach-container {
             position: relative;
             width: 1000px;
             height: 800px;
@@ -4017,9 +4035,19 @@
         }
 
         @media (max-width: 768px) {
-            .approach-container {
-           display: none;
+      
+        .app-content-container {
+                    flex-direction: column !important;
+                    width: 100% !important;
+                    gap: 30px !important;
+                    overflow-y: auto;
+                }
+                
+        .app-title {
+            font-size: 1.7rem;
+           
         }
+        
 
         }
 
@@ -5615,8 +5643,8 @@
                             <img src="image_file/logo_1.jpg" alt="Company Logo">
                         </div>
                         <div class="content-farmhub-title">
-                            <h1 style="font-size: 4rem;">Farm Hub   <span style="color: #ccd51d; font-weight: 600;">Ethiopia </span></h1>
-                            <p style="font-size: 3rem;">Scaling access to Mechanization, Inputs, and Knowledge for Smallholders</p>
+                            <h1 style="color:white;">Farm Hub <span style="color: #ccd51d; font-weight: 600;">Ethiopia </span></h1>
+                            <p>Scaling access to Mechanization, Inputs, and Knowledge for Smallholders</p>
                         </div>
                         
                     </div>
@@ -5625,7 +5653,7 @@
             <div id="process-slide" class="slide process-slide">
                 <div class="slide-header">
                 <h1 class="slide-title">Challenges Farm Hub Addresses</h1>
-                <div class="slide-subtitle"></div>
+                
                 </div>
             
                 <div class="process-container">
@@ -5687,7 +5715,6 @@
                 <div class="slide-header">
             
                 <h1 class="slide-title">Why Mechanization <span style="color: #27ae60; font-size:1.5rem;">- The Engine of Agricultural Transformation </span>  </h1>
-                <div class="slide-subtitle"></div>
                 </div>
             
                 <div class="process-container">
@@ -6061,11 +6088,9 @@
 
                 
               <!----------------------- WHY FARM HUB WORKS ---------------------->
-                <div class="slide" id="slide6">
-                    <div class="farmhub-bg-pattern"></div>
-                    
-                    <!-- Title -->
-                    <div class="farmhub-title-container">
+              <div class="slide" id="slide6" style="background-image: url('image_file/regen_12.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+          
+              <div class="farmhub-title-container">
                         <h2 class="farmhub-slide-title">WHY FARM HUB WORKS</h2>
                         <p class="farmhub-slide-subtitle">Key Differentiators for Sustainable Impact</p>
                     </div>
@@ -6114,9 +6139,9 @@
                             <img src="https://via.placeholder.com/80" alt="Farmer" class="farmhub-testimonial-img">
                             <div>
                                 <p class="farmhub-testimonial-quote">
-                                    "Before Farm Hub, I waited weeks for tractor services. Now I book via SMS and get same-week service. My maize yields doubled!"
+                                    "Before Farm Hub, ????????????!"
                                 </p>
-                                <p class="farmhub-testimonial-author">- Ato Tesfaye, Amhara Region</p>
+                                <p class="farmhub-testimonial-author">- ?????????</p>
                             </div>
                         </div>
                         <div class="farmhub-testimonial-label">
@@ -6126,9 +6151,6 @@
                 </div>
 
 
-
-    
-    
                 <!----------------------------------------------------- farmhub-vision-mission ---------------------------------------------------------->
     
                 <div id="farmhub-vision-mission-slide" class="slide" style="position: relative; width: 100%; height: 100vh; overflow: hidden; background: #000; background-image: url('image_file/market_et.jpg'); background-size: cover; background-position: center;">
@@ -6168,9 +6190,6 @@
                 <!-- Farm Hub Title Slide -->
                 <div id="farmhubhow-slide" class="slide" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449'); background-size: cover; background-position: center;">
                    
-
-
-
                     <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
     
                     <div class="missionlab-content" style="margin-top: 600px;">
@@ -6260,7 +6279,7 @@
                             </svg>
                         </div>
                     
-                        <div class="gaps-column">
+                 
                             <div class="approach-container">
                                 <!-- Center Image -->
                                 <img src="image_file/farm_hub_approach.jpg" 
@@ -6336,7 +6355,7 @@
                             </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
     
     
