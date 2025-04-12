@@ -621,6 +621,14 @@
                     1px  1px 0 black; /* Black border around the text */
 
         }
+        .content-farmhub-title h3{
+                   font-size: 4.5rem;
+
+                }
+                .content-farmhub-title p{
+                   font-size: 2.5rem;
+
+                }
             @media (max-width: 768px) {
                 .content {
                     position: relative;
@@ -637,7 +645,20 @@
                     max-width: 100%;
                     margin: 0 auto;
                     font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
-                    font-size: 1.2rem;
+                    font-size: 1.8rem;
+
+                }
+                .content-farmhub-title h3{
+                    position: relative;
+                    z-index: 1;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+                    font-size: 3.0rem;
+
+                }
+                .content-farmhub-title p{
+                   font-size: 1.5rem;
 
                 }
                 .content-block {
@@ -2330,7 +2351,12 @@
 
 
 
-
+      
+        @media (max-width: 992px) {
+            .balance-container {
+           display: none;
+        }
+        }
     
         /*============================ Misionlab component: two column slide-2 =============================*/
               
@@ -2900,318 +2926,358 @@
     
         /*====================+++++++++======== Misionlab components =============================*/
     
+        .solution-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-                  /* VISION COMPONENTS SLIDE STYLES */
-                  .solution-slide {
-                    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-                    padding: 2rem;
-                    height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    overflow: hidden;
-                  }
-                  
-                  .solution-header {
-                    text-align: center;
-                    margin-bottom: 1.5rem;
-                    flex-shrink: 0;
-                  }
-                  
-                  
-                  .slide-title {
-                    font-size: 2.8rem;
-                    color: #047857;
-                    margin-bottom: 0.5rem;
-                   text-align: center;
-                    background: linear-gradient(to right, #047857, #10b981);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                  }
-                  
-                  .solution-subtitle {
-                    font-size: 1.3rem;
-                    color: #4b5563;
-                    font-weight: 400;
-                  }
-                  
-                  .solution-container {
-                    display: flex;
-                    justify-content: center;
-                    gap: 1.5rem;
-                    padding: 0 2rem;
-                    margin-bottom: 1rem;
-                    flex: 1;
-                    min-height: 0;
-                    overflow: auto;
-                    align-items: center;
-                  }
-                  
-                  .solution-card {
-                    flex: 1;
-                    max-width: 380px;
-                    min-height: 480px;
-                    background: white;
-                    border-radius: 16px;
-                    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-                    padding: 2rem;
-                    position: relative;
-                    transition: all 0.3s ease;
-                    display: flex;
-                    flex-direction: column;
-                  }
-                  
-                  .solution-card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-                  }
-                  
-                  .card-icon {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
-                    text-align: center;
-                  }
-                  
-                  .card-content {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                  }
-                  
-               
-                  
-                  .card-subtitle {
-                    font-size: 1.1rem;
-                    color: #6b7280;
-                    margin-bottom: 1.5rem;
-                    text-align: center;
-                    font-style: italic;
-                  }
-                  
-                  .card-details {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                  }
-                  
-                  .responsibilities h3 {
-                    color: #374151;
-                    margin-bottom: 0.75rem;
-                    font-size: 1.1rem;
-                  }
-                  
-                  .responsibilities ul {
-                    padding-left: 1.25rem;
-                    margin-bottom: 1.5rem;
-                  }
-                  
-                  .responsibilities li {
-                    margin-bottom: 0.5rem;
-                    line-height: 1.4;
-                  }
-                  
-                  .highlight {
-                    font-weight: 600;
-                    color: #047857;
-                  }
-                  
-                  .impact h3 {
-                    color: #374151;
-                    margin-bottom: 0.75rem;
-                    font-size: 1.1rem;
-                  }
-                  
-                  .impact-tags {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 0.5rem;
-                    justify-content: center;
-                  }
-                  
-                  .tag {
-                    padding: 0.4rem 0.8rem;
-                    border-radius: 20px;
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                  }
-                  
-                  .productivity { background: #a7f3d0; color: #065f46; }
-                  .supply-2 { background: #bae6fd; color: #0369a1; }
-                  .capacity { background: #ddd6fe; color: #5b21b6; }
-                  
-                  .card-connector {
-                    position: absolute;
-                    width: 40px;
-                    height: 3px;
-                    background: #d1fae5;
-                    top: 50%;
-                    z-index: -1;
-                  }
-                  
-                  .card-connector.right {
-                    right: -40px;
-                  }
-                  
-                  .card-connector.left {
-                    left: -40px;
-                  }
-                  
-                  /* Gap Visualization Styles */
-                  .gap-visualization {
-                    margin: 1rem auto 2rem;
-                    width: 90%;
-                    text-align: center;
-                    flex-shrink: 0;
-                  }
-                  
-                  .horizontal-line {
-                    height: 2px;
-                    background: #a7f3d0;
-                    margin: 0 auto;
-                    position: relative;
-                    width: 100%;
-                  }
-                  
-                  .downward-arrow {
-                    font-size: 2rem;
-                    color: #047857;
-                    margin: 0.5rem 0;
-                    animation: bounce 2s infinite;
-                  }
-                  
-                  @keyframes bounce {
-                    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-                    40% {transform: translateY(-10px);}
-                    60% {transform: translateY(-5px);}
-                  }
-                  
-                  .gap-cards {
-                    display: flex;
-                    justify-content: center;
-                    gap: 1.5rem;
-                    margin-top: 1rem;
-                  }
-                  
-                  .gap-card {
-                    flex: 1;
-                    max-width: 450px;
-                    background: rgb(116, 41, 41);
-                    border-radius: 12px;
-                    padding: 1.5rem;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-                    transition: all 0.3s ease;
-                  }
-                  
-                  .gap-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-                  }
-                  
-                  .gap-card h3 {
-                    color: white;
-                    margin-bottom: 0.5rem;
-                    font-size: 1.6rem;
-                  }
-                  
-                  .gap-card p {
-                    color:white;
-                    font-size: 1.7rem;
-                  }
-                  
-                  .productivity-gap {
-                    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-                  }
-                  .supply-gap {
-                    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-                  }
-                  .capacity-gap {
-                    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-                  }
-                  
-            
-              
-                  
-                  /* Responsive Styles */
-                  @media (max-width: 1024px) {
-                    .solution-container {
-                      flex-direction: column;
-                      align-items: center;
-                      gap: 2rem;
-                      padding: 0 1rem;
-                    }
-                    
-                    .solution-card {
-                      max-width: 100%;
-                      width: 100%;
-                      min-height: auto;
-                    }
-                    
-                    .card-connector {
-                      display: none;
-                    }
-                    
-                    .gap-cards {
-                      flex-wrap: wrap;
-                    }
-                    
-                    .gap-card {
-                      min-width: 250px;
-                    }
-                  }
-                  
-                  @media (max-width: 768px) {
-                    .slide-title {
-                      font-size: 2.2rem;
-                    }
-                    
-                    .solution-subtitle {
-                      font-size: 1.1rem;
-                    }
-                    
-                    .card-icon {
-                      font-size: 2.5rem;
-                    }
-                    
-                    .card-title {
-                      font-size: 1.6rem;
-                    }
-                  }
-                  
-                  @media (max-width: 480px) {
-                    .slide-title {
-                      font-size: 1.8rem;
-                    }
-                    
-                    .solution-card {
-                      padding: 1.5rem;
-                    }
-                    
-                    .gap-card {
-                      min-width: 100%;
-                    }
-                    
-                    .nav-button {
-                      padding: 0.5rem 1rem;
-                    }
-                  }
-            
+        .slide-title {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
 
+        .solution-subtitle {
+            font-size: 20px;
+            color: #7f8c8d;
+            font-weight: 300;
+        }
 
+        /* Desktop Card Layout */
+        .solution-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            position: relative;
+        }
 
+        .solution-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            width: 420px;
+            padding: 20px;
+            position: relative;
+        }
 
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
 
+        .card-title {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
 
+        .card-subtitle {
+            font-size: 24px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
 
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
+        .responsibilities h3, .impact h3 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
 
+        .responsibilities ul {
+            padding-left: 20px;
+        }
 
+        .responsibilities li {
+            margin-bottom: 3px;
+            font-size: 20px;
+        }
 
+        .highlight {
+            font-weight: 600;
+            color: #3498db;
+        }
 
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
+        .tag {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
 
+        .tag.productivity {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
 
+        .tag.capacity {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
 
+        .tag.supply {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
 
+        /* Card connectors for desktop */
+        .card-connector {
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: #bdc3c7;
+            top: 50%;
+        }
+        
+        .card-connector.right {
+            right: -40px;
+        }
+        
+        .card-connector.left {
+            left: -40px;
+        }
+
+        /* Gap Visualization */
+        .gap-visualization {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .horizontal-line {
+            height: 2px;
+            width: 80%;
+            background-color: #bdc3c7;
+            margin: 3px auto;
+        }
+
+        .downward-arrow {
+            font-size: 28px;
+            color: #23e01d;
+            margin-bottom: 10px;
+        }
+
+        .gap-cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .gap-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            width: 220px;
+            text-align: center;
+        }
+
+        .gap-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .gap-card p {
+            font-size: 15px;
+            color: #7f8c8d;
+        }
+
+        .productivity-gap {
+            border-top: 4px solid #1976d2;
+        }
+
+        .supply-gap {
+            border-top: 4px solid #f57c00;
+        }
+
+        .capacity-gap {
+            border-top: 4px solid #388e3c;
+        }
+
+        /* Slide Controls */
+        .slide-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .nav-button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #2980b9;
+        }
+
+        .nav-button.prev {
+            background-color: #95a5a6;
+        }
+
+        .nav-button.prev:hover {
+            background-color: #7f8c8d;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+
+            .slide-title {
+                font-size: 28px;
+            }
+
+            .solution-subtitle {
+                font-size: 18px;
+            }
+
+            /* Mobile Accordion Layout */
+            .solution-container {
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .solution-card {
+                width: 100%;
+                padding: 0;
+            }
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                cursor: pointer;
+                background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            }
+
+            .card-icon {
+                margin-right: 15px;
+                margin-bottom: 0;
+                font-size: 28px;
+            }
+
+            .card-title-container {
+                flex-grow: 1;
+            }
+
+            .card-title {
+                font-size: 18px;
+                margin-bottom: 3px;
+            }
+
+            .card-subtitle {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+
+            .toggle-icon {
+                font-size: 20px;
+                transition: transform 0.3s ease;
+            }
+
+            .solution-card.active .toggle-icon {
+                transform: rotate(180deg);
+            }
+
+            .card-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0 15px;
+            }
+
+            .solution-card.active .card-content {
+                max-height: 1000px;
+                padding: 15px;
+            }
+
+            .card-connector {
+                display: none;
+            }
+
+            .responsibilities h3, .impact h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .responsibilities li {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            .tag {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+
+            /* Gap Visualization - Vertical Stack */
+            .gap-visualization {
+                margin-top: 30px;
+            }
+
+            .horizontal-line {
+                display: none;
+            }
+
+            .vertical-line {
+                display: block;
+                width: 2px;
+                height: 30px;
+                background-color: #bdc3c7;
+                margin-bottom: 5px;
+            }
+
+            .gap-cards {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .gap-card {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .gap-card h3 {
+                font-size: 16px;
+            }
+
+            .gap-card p {
+                font-size: 14px;
+            }
+
+            /* Slide Controls */
+            .slide-controls {
+                margin-top: 30px;
+            }
+
+            .nav-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
 
 
 
@@ -3875,7 +3941,7 @@
         }
         
         .card-title {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             color: var(--primary-green);
             margin-bottom: 15px;
             position: relative;
@@ -5003,8 +5069,8 @@
                 </div>
                 
                 <div class="content">
-                    <h1 style="font-size: 4rem;">The Context  <span style="color: #ccd51d; font-weight: 600;">- Regenerators Collective</span></h1>
-                    <p style="font-size: 3rem;">The Bigger Picture</p>
+                    <h1>The Context  <span style="color: #ccd51d; font-weight: 600;">- Regenerators Collective</span></h1>
+                    <p>The Bigger Picture</p>
                 </div>
               </div>
 
@@ -5112,7 +5178,7 @@
                                 <h3 style="color: #2980b9;">Technical</h3>
                                 <p>Shortfalls caused by inefficient production methods</p>
                                 <ul>
-                                    <li>Low mechanization, post-harvest losses</li>
+                                    <li>Limited mechanization</li>
                                 </ul>
                             </div>
                             
@@ -5197,7 +5263,7 @@
                     <div class="missionlab-text">
                        
                         <!-- Definition -->
-                        <p style="color: #2c3e50; font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;">
+                        <p style="color: #2c3e50; font-size: 1.3rem; line-height: 1.6; margin-bottom: 25px;">
                             The Supply Gap in Ethiopian agriculture refers to the mismatch between the growing demand for critical agricultural 
                             inputs—such as improved seeds, fertilizers, crop protection products, 
                             and mechanization technologies—and the limited supply and distribution of these inputs.
@@ -5207,28 +5273,28 @@
                         <div style="margin-bottom: 30px;">
                             <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
                                 <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                <p style="color: #2c3e50; margin: 0; font-size: 1.3rem;">
                                     <strong>Seed shortages:</strong> Inadequate local production/import of certified seeds
                                 </p>
                             </div>
                             
                             <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
                                 <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                <p style="color: #2c3e50; margin: 0; font-size: 1.3rem;">
                                     <strong>Fertilizer challenges:</strong> Inefficient distribution + foreign currency constraints
                                 </p>
                             </div>
                             
                             <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
                                 <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                <p style="color: #2c3e50; margin: 0; font-size: 1.3rem;">
                                     <strong>Mechanization gap:</strong> Limited appropriate tech for smallholders
                                 </p>
                             </div>
                             
                             <div style="display: flex; align-items: flex-start;">
                                 <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                <p style="color: #2c3e50; margin: 0; font-size: 1.3rem;">
                                     <strong>Supply chain issues:</strong> Fragmented private sector participation
                                 </p>
                             </div>
@@ -5238,7 +5304,7 @@
                         <div style="border-top: 1px solid #ecf0f1; margin-bottom: 20px;"></div>
                         
                         <!-- Impact Statement -->
-                        <p style="color: #2c3e50; font-size: 1rem; font-style: italic; margin: 0;">
+                        <p style="color: #2c3e50; font-size: 1.3rem; font-style: italic; margin: 0;">
                             This gap prevents farmers from accessing essential tools for improved productivity.
                         </p>
                     </div>
@@ -5325,8 +5391,8 @@
                                     <img src="image_file/logo_trans.png" alt="Company Logo">
                                 </div>
                             <div class="content-farmhub-title">
-                                    <h3 style="font-size: 4rem;">What we strive for?   <span style="color: #ccd51d; font-weight: 600;"> </span></h3>
-                                    <p style="font-size: 3rem;"><span style="color: #ccd51d; font-weight: 600;">we envision </span>a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles and systems - 
+                                    <h3>What we strive for?   <span style="color: #ccd51d; font-weight: 600;"> </span></h3>
+                                    <p><span style="color: #ccd51d; font-weight: 600;">we envision </span>a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles and systems - 
                                         ensuring their resilience and empowering them to prosper for generations to come.</p>
                             </div>
                     
@@ -5337,7 +5403,7 @@
             <div class="slide full-image-slide" style="position: relative; background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1725291727057-8VZ1KVPWBX2C2X5JQNZG/GettyImages-1555695841.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
                 <div class="content">
                     <h2 class="slide-maintitle"> <span style= "color: rgb(12, 197, 55); font-weight: 600;">Our Approach </span></h2>
-                    <p style="font-size: 1.2rem; line-height: 1.6;">
+                    <p style="font-size: 1.4rem; line-height: 1.4;">
                         We aim to be part of the eco-system.<br><br>
                         We believe that regenerative practices are the foundation of a prosperous future – where all life on earth can live together in harmony.<br><br>
                         As a collective we take a systems-led approach to transforming global food systems, initially focusing on empowering rural communities in the Global South.<br><br>
@@ -5351,7 +5417,7 @@
             <div class="slide two-columns-overlap" id="two-columns-2-slide" style="background: white;">
                 <div class="text-2-content" style="margin-top: 20px;">
                     <h2>Vision Framework</h2>
-                    <p>There are</span> <span style="color: #3e16b9; font-weight: 600;">three key components </span> to the 
+                    <p style="font-size: 2rem;">There are</span> <span style="color: #3e16b9; font-weight: 600; font-size: 2rem;">three key components </span> to the 
                         integrated model needed to<span style="color: #0aa244; font-weight: 600;"> transform 
                             the Ethiopian agriculture ecosystem.</span> </p>
                 </div>
@@ -5361,121 +5427,134 @@
             </div>
 
             <!--------------------------------------- Vision Component  ------------------------------------>
-           <div id="visioncomp-slide" class="slide solution-slide">
-            <div class="solution-header">
-                <h2 class="slide-title">Vision Components</h2>
-                <div class="solution-subtitle">The Transformation Ecosystem</div>
-            </div>
-            
-            <div class="solution-container">
-                <!-- Mission Labs Card -->
-                <div class="solution-card" data-component="mission">
-                <div class="card-icon">🧠</div>
-                <div class="card-content">
-                    <h3 class="card-title">Mission Labs</h3>
-                    <div class="card-subtitle">The Innovation Brain</div>
-                    <div class="card-details">
-                    <div class="responsibilities">
-                        <h3>Core Functions:</h3>
-                        <ul>
-                        <li><span class="highlight">Research</span> advanced techniques</li>
-                        <li><span class="highlight">Develop</span> localized solutions</li>
-                        <li><span class="highlight">Create</span> training frameworks</li>
-                        </ul>
+            <div id="visioncomp-slide" class="slide solution-slide">
+                <div class="solution-header">
+                    <h2 class="slide-title">Vision Components</h2>
+                    <div class="solution-subtitle">The Transformation Ecosystem</div>
+                </div>
+                
+                <div class="solution-container">
+                    <!-- Mission Labs Card -->
+                    <div class="solution-card" data-component="mission">
+                        <div class="card-header" onclick="toggleCard(this.parentElement)">
+                            <div class="card-icon">🧠</div>
+                            <div class="card-title-container">
+                                <h3 class="card-title">Mission Labs</h3>
+                                <div class="card-subtitle">The Innovation Brain</div>
+                            </div>
+                            <div class="toggle-icon">▼</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-details">
+                                <div class="responsibilities">
+                                    <h3>Core Functions:</h3>
+                                    <ul>
+                                        <li><span class="highlight">Research</span> advanced techniques</li>
+                                        <li><span class="highlight">Develop</span> localized solutions</li>
+                                        <li><span class="highlight">Create</span> training frameworks</li>
+                                    </ul>
+                                </div>
+                                <div class="impact">
+                                    <h3>Impact Areas:</h3>
+                                    <div class="impact-tags">
+                                        <span class="tag productivity">Productivity</span>
+                                        <span class="tag capacity">Capacity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-only card-connector right"></div>
                     </div>
-                    <div class="impact">
-                        <h3>Impact Areas:</h3>
-                        <div class="impact-tags">
-                        <span class="tag productivity">Productivity</span>
-                        <span class="tag capacity">Capacity</span>
+                
+                    <!-- Farm Hubs Card -->
+                    <div class="solution-card" data-component="farm">
+                        <div class="card-header" onclick="toggleCard(this.parentElement)">
+                            <div class="card-icon">🏭</div>
+                            <div class="card-title-container">
+                                <h3 class="card-title">Farm Hubs</h3>
+                                <div class="card-subtitle">The Implementation Hands</div>
+                            </div>
+                            <div class="toggle-icon">▼</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-details">
+                                <div class="responsibilities">
+                                    <h3>Core Functions:</h3>
+                                    <ul>
+                                        <li><span class="highlight">Deliver</span> technologies & inputs</li>
+                                        <li><span class="highlight">Train</span> farmers in-field</li>
+                                        <li><span class="highlight">Optimize</span> supply chains</li>
+                                    </ul>
+                                </div>
+                                <div class="impact">
+                                    <h3>Impact Areas:</h3>
+                                    <div class="impact-tags">
+                                        <span class="tag supply">Supply</span>
+                                        <span class="tag productivity">Productivity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-only card-connector left"></div>
+                        <div class="desktop-only card-connector right"></div>
+                    </div>
+                
+                    <!-- Regen Farms Card -->
+                    <div class="solution-card" data-component="regen">
+                        <div class="card-header" onclick="toggleCard(this.parentElement)">
+                            <div class="card-icon">🌱</div>
+                            <div class="card-title-container">
+                                <h3 class="card-title">Regen Farms</h3>
+                                <div class="card-subtitle">The Sustainable Heart</div>
+                            </div>
+                            <div class="toggle-icon">▼</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-details">
+                                <div class="responsibilities">
+                                    <h3>Core Functions:</h3>
+                                    <ul>
+                                        <li><span class="highlight">Implement</span> proven methods</li>
+                                        <li><span class="highlight">Regenerate</span> soil health</li>
+                                        <li><span class="highlight">Provide</span> real-world feedback</li>
+                                    </ul>
+                                </div>
+                                <div class="impact">
+                                    <h3>Impact Areas:</h3>
+                                    <div class="impact-tags">
+                                        <span class="tag productivity">Productivity</span>
+                                        <span class="tag supply">Supply</span>
+                                        <span class="tag capacity">Capacity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-only card-connector left"></div>
+                    </div>
+                </div>
+                
+                <!-- Gap Visualization Section -->
+                <div class="gap-visualization">
+                    <div class="mobile-only vertical-line"></div>
+                    <div class="desktop-only horizontal-line"></div>
+                    <div class="downward-arrow">↓</div>
+                    <div class="gap-cards">
+                        <div class="gap-card productivity-gap">
+                            <h3>Productivity Gap</h3>
+                            <p>Bridging yield and efficiency challenges</p>
+                        </div>
+                        <div class="gap-card supply-gap">
+                            <h3>Supply Gap</h3>
+                            <p>Solving distribution and access issues</p>
+                        </div>
+                        <div class="gap-card capacity-gap">
+                            <h3>Capacity Gap</h3>
+                            <p>Building skills and infrastructure</p>
                         </div>
                     </div>
-                    </div>
                 </div>
-                <div class="card-connector right"></div>
-                </div>
-            
-                <!-- Farm Hubs Card -->
-                <div class="solution-card" data-component="farm">
-                <div class="card-icon">🏭</div>
-                <div class="card-content">
-                    <h3 class="card-title">Farm Hubs</h3>
-                    <div class="card-subtitle">The Implementation Hands</div>
-                    <div class="card-details">
-                    <div class="responsibilities">
-                        <h3>Core Functions:</h3>
-                        <ul>
-                        <li><span class="highlight">Deliver</span> technologies & inputs</li>
-                        <li><span class="highlight">Train</span> farmers in-field</li>
-                        <li><span class="highlight">Optimize</span> supply chains</li>
-                        </ul>
-                    </div>
-                    <div class="impact">
-                        <h3>Impact Areas:</h3>
-                        <div class="impact-tags">
-                        <span class="tag supply">Supply</span>
-                        <span class="tag productivity">Productivity</span>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="card-connector left"></div>
-                <div class="card-connector right"></div>
-                </div>
-            
-                <!-- Regen Farms Card -->
-                <div class="solution-card" data-component="regen">
-                <div class="card-icon">🌱</div>
-                <div class="card-content">
-                    <h3 class="card-title">Regen Farms</h3>
-                    <div class="card-subtitle">The Sustainable Heart</div>
-                    <div class="card-details">
-                    <div class="responsibilities">
-                        <h3>Core Functions:</h3>
-                        <ul>
-                        <li><span class="highlight">Implement</span> proven methods</li>
-                        <li><span class="highlight">Regenerate</span> soil health</li>
-                        <li><span class="highlight">Provide</span> real-world feedback</li>
-                        </ul>
-                    </div>
-                    <div class="impact">
-                        <h3>Impact Areas:</h3>
-                        <div class="impact-tags">
-                        <span class="tag productivity">Productivity</span>
-                        <span class="tag supply">Supply</span>
-                        <span class="tag capacity">Capacity</span>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="card-connector left"></div>
-                </div>
-            </div>
-            
-            <!-- Gap Visualization Section -->
-            <div class="gap-visualization">
-                <div class="horizontal-line"></div>
-                <div class="downward-arrow">↓</div>
-                <div class="gap-cards">
-                <div class="gap-card productivity-gap">
-                    <h3>Productivity Gap</h3>
-                    <p>Bridging yield and efficiency challenges</p>
-                </div>
-                <div class="gap-card supply-gap">
-                    <h3>Supply Gap</h3>
-                    <p>Solving distribution and access issues</p>
-                </div>
-                <div class="gap-card capacity-gap">
-                    <h3>Capacity Gap</h3>
-                    <p>Building skills and infrastructure</p>
-                </div>
-                </div>
-            </div>
-            
-            <div class="slide-controls">
-                <button class="nav-button prev" onclick="prevSlide()">‹ Previous</button>
-                <button class="nav-button next" onclick="nextSlide()">Next ›</button>
-            </div>
+                
+               
             </div>
                   
             <!--------------------------------------- Component #1 - Mission Lab ------------------------------------>
@@ -7918,6 +7997,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             });
             </script>
+
+
+
+
+
+
+            <script>
+                // Toggle card accordion
+                function toggleCard(card) {
+                    card.classList.toggle('active');
+                }
+
+                            // Auto-open first card on mobile
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (window.innerWidth < 768) {
+                        document.querySelector('.solution-card').classList.add('active');
+                    }
+                });
+            </script>
+
+
+
 
 
 
