@@ -606,6 +606,21 @@
             font-size: 1.8rem;
 
         }
+        .content-farmhub-title {
+            position: relative;
+            z-index: 1;
+            max-width: 60%;
+           margin-left: 40px;
+            font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+            font-size: 1.8rem;
+            text-align: left;
+            text-shadow: 
+                    -1px -1px 0 black,  
+                    1px -1px 0 black,
+                    -1px  1px 0 black,
+                    1px  1px 0 black; /* Black border around the text */
+
+        }
             @media (max-width: 768px) {
                 .content {
                     position: relative;
@@ -616,7 +631,15 @@
                     font-size: 1.2rem;
 
                 }
-                
+                .content-farmhub-title {
+                    position: relative;
+                    z-index: 1;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+                    font-size: 1.2rem;
+
+                }
                 .content-block {
                     width: 650px;       /* Adjust to your layout */
                     margin: 0 auto;         /* Centers content */
@@ -2315,6 +2338,21 @@
             max-width: 50%;
             overflow-y: auto;
         }
+        .mission-text-column ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    margin-top: 2rem;
+                }
+                
+                .mission-text-column li {
+                    background-color: rgba(39, 174, 96, 0.1);
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                }
 
         .mission-text-content {
             max-width: 800px;
@@ -2358,7 +2396,14 @@
             font-size: 1.6rem;
             line-height: 1.6;
             margin-bottom: 1.2rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fadeInRight 0.8s ease-out 0.5s forwards;
+            color: #555;
         }
+             
+   
+        
 
         .mission-features {
             list-style: none;
@@ -2614,6 +2659,22 @@
                     color: var(--primary-orange) !important;
                 }
                 
+                .mission-systems-text span[style*="#27ae60"] {
+                    color: var(--primary-green) !important;
+                    font-weight: 600;
+                }
+                
+                .mission-systems-text span[style*="#e74c3c"] {
+                    color: var(--primary-red) !important;
+                }
+                
+                .mission-systems-text span[style*="#3498db"] {
+                    color: var(--primary-blue) !important;
+                }
+                
+                .mission-systems-text span[style*="#f39c12"] {
+                    color: var(--primary-orange) !important;
+                }
                 /* Responsive Adjustments */
                 @media (max-width: 768px) {
                     .missionlab-content {
@@ -4268,7 +4329,7 @@
             bottom: 0;
             left: 50px;
             right: 0;
-            height: 30px;
+            height: 20px;
             background-color: rgba(0, 0, 0, 0.1);
             z-index: 100;
         }
@@ -4349,10 +4410,6 @@
                 padding: 20px;
             }
             
-            .systems-text {
-                font-size: 1.5rem;
-            }
-            
             .nav-button {
                 width: 50px;
                 height: 50px;
@@ -4362,6 +4419,11 @@
             .progress-container {
                 width: 200px;
             }
+            .progress-container {
+           
+            height: 10px;
+          
+        }
         }
 
 
@@ -4842,10 +4904,11 @@
                 /* Typography Adjustments */
                 .intro-text,
                 .systems-text {
-                    font-size: 1.1rem !important;
+                    font-size: 1.0rem !important;
                     transform: none !important;
                     animation: none !important;
                     opacity: 1 !important;
+                    line-height: 1.2rem;
                 }
                 
                 .gap-title {
@@ -4921,29 +4984,26 @@
                <!---------------------- Slide 4: The Challange -1  ---------------------->
                <div class="slide full-image-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1724777382946-LAA3J2Y0F0N3T8LTAWVD/GettyImages-1179600347.jpg?format=1500w');">
                 <!-- NEW LOGO HTML ONLY -->
-                                
+              
+                  
+                  
                 <div class="content">
-                    <h1 style="font-size: 4rem;">The Challenge  <span style="color: #ccd51d; font-weight: 600;"></span></h1>
-                    <p style="font-size: 3rem;">Our current food system is broken</p>
-                    <p style="padding: 20px;">... the way we produce, distribute and consume food isn't working effectively.</p>
-                    <p style="padding: 20px;">
+                    <h2 class="slide-maintitle"> <span style= "color: rgb(217, 52, 20); font-weight: 600;  text-shadow: -1px -1px white, 1px -1px 0 white, -2px  2px 0 white, 1px  1px 0 rgb(232, 227, 227);"> The Challenge </span></h2>
+                    <p style="font-size: 2rem; color: #e74c3c;">Our current food system is broken</p>
+                    <p style="padding: 5px 10px;">... the way we produce, distribute and consume food isn't working effectively.</p>
+                    <p style="padding: 5px 10px;">
                         stem from deep, interconnected issues: historical, cultural, and global issues. 
                         They contribute to <span style="color: #e74c3c; font-weight: 600;">environmental 
                         degradation, inequality, and food insecurity</span>, failing both people and the planet.&nbsp;
                     </p>
-                    <p style="padding: 20px;">
+                    <p style="padding: 5px 10px;">
                         By focusing on short-term gains rather than long-term sustainability, this approach results in <span style="color: #e74c3c; font-weight: 600;">soil depletion, biodiversity loss, and increased climate vulnerability.</span>
                     </p>
-                    <p style="padding: 20px;">
+                    <p style="padding: 5px 10px;">
                         We need to expand our perspective: <span style="color: #27c43f; font-weight: 600;">Requires a complete systemic transformation - not small fixes - to achieve </span> 
                     </p>
                 </div>
               </div>
-
-
-         
-
-  
             <!--------------------------------------- The gaps ------------------------------------>
                                             
             <div id="challange-slide" class="slide" style="background: white;">
@@ -5000,9 +5060,7 @@
                     </div>
                 </div>
             </div>
-   
             <!----------------------------------------------------- Productvity gaps ---------------------------------------------------------->
-            
             <div id="productivity-gap-slide" class="slide">
                 <h3 class="slide-2-subtitle">Productivity Gap</h3>
                 
@@ -5102,9 +5160,7 @@
                     </div>
                 </div>
             </div>
-
             <!----------------------------------------------------- supplay gap ---------------------------------------------------------->
-
             <div id="supply-gap-slide" class="slide">
                 <h3 class="slide-2-subtitle">Supply Gap</h3>
                 <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
@@ -5171,72 +5227,88 @@
                 </div>
 
             </div>
-
             <!----------------------------------------------------- capacity gap ---------------------------------------------------------->
-            <div class="slide two-columns-text-image">
-                <div class="missionlab-text">
-                    <h3 class="slide-2-subtitle">Capacity Gap</h3>
-                    <p class="systems-text"> The Capacity Gap refers to limitations in the institutional, technical, and human 
-                                            capacity across the entire agricultural value chain—including farmers, cooperatives, service providers, 
-                                            and government institutions—that hinder the effective adoption and scaling of agricultural technologies and services.</p>
-                   
-                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
-                                                    <strong>Farmers' knowledge and skills:</strong> Many smallholder farmers lack sufficient training in modern agronomic practices, mechanization use, 
-                                                    financial literacy, and input application. This makes it difficult for them to make informed decisions or adopt improved technologies effectively.
-                                                </p>
-                                            </div>
-                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
-                                                    <strong>FCooperatives and service providers:</strong>Weak managerial, technical, and operational capacity among cooperatives and local agri-businesses affects service delivery and input distribution.
-                                                </p>
-                                            </div>
-                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
-                                                    <strong>Public institutions:</strong>          
-                                                    Shortages of qualified extension workers, lack of continuous training, and weak coordination across ministries and agencies result in limited support reaching farmers.
-                                           </p>
-                                            </div>
-                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
-                                                    <strong>Technology and data use:</strong>       Limited access to digital tools and weak data systems hamper evidence-based planning and real-time decision-making.
-                                                </p>
-                                            </div>
-                                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                                                <div style="color: #27ae60; margin-right: 10px;">•</div>
-                                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
-                                                    <strong>Digital literacy:</strong>   Low digital literacy and market awareness further restrict their ability to engage with emerging tools and off-taker markets.
-                                                </p>
-                                            </div>
-                   
-               </div>
-                <div class="image-content">
-                    <img src="image_file/gaps_cap.jpg" alt="Placeholder Image">
+            <div class="slide mission-slide">
+                <div class="mission-two-column-slide">
+                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                    <!-- Text Column -->
+                    <div class="mission-text-column">
+                        <div class="mission-text-content">
+                            <div class="mission-slide-header">
+                                <h3 class="mission-slide-maintitle">Capacity Gap</h3>
+                                <div class="mission-decorative-line"></div>
+                                <div class="mission-slide-subtitle"></div>
+                            </div>
+                            <p class="mission-systems-text">
+                                
+                                    The Capacity Gap refers to <span style="color: #27ae60; font-weight: 600;">limitations in the institutional, technical, and human capacity across the entire 
+                                    agricultural value chain</span>—including farmers, cooperatives, service providers, and government 
+                                    institutions—that hinder the effective adoption and scaling of agricultural technologies and services.
+                            </p>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong> <span style="color: #27ae60;background-color: rgba(39, 174, 96, 0.1);padding: 0.45rem 1.0rem;">Farmers' knowledge and skills:</span></strong> Many smallholder farmers lack sufficient training in modern agronomic practices, mechanization use, 
+                                    financial literacy, and input application. This makes it difficult for them to make informed decisions or adopt improved technologies effectively.
+                                </p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong><span style="color: #27ae60; background-color: rgba(39, 174, 96, 0.1);padding: 0.45rem 1.0rem;">Cooperatives and service providers:</span></strong>Weak managerial, technical, and operational capacity among cooperatives and local agri-businesses affects service delivery and input distribution.
+                                </p>
+                              
+                            </div>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong><span style="color: #27ae60; background-color: rgba(39, 174, 96, 0.1);padding: 0.45rem 1.0rem;">Public institutions:</span></strong>          
+                                    Shortages of qualified extension workers, lack of continuous training, and weak coordination across ministries and agencies result in limited support reaching farmers.
+                           </p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong><span style="color: #27ae60; background-color: rgba(39, 174, 96, 0.1);padding: 0.45rem 1.0rem;">Technology and data use:</span></strong>       Limited access to digital tools and weak data systems hamper evidence-based planning and real-time decision-making.
+                                </p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="color: #27ae60; margin-right: 10px;">•</div>
+                                <p style="color: #2c3e50; margin: 0; font-size: 1rem;">
+                                    <strong><span style="color: #27ae60; background-color: rgba(39, 174, 96, 0.1);padding: 0.45rem 1.0rem;" >Digital literacy:</span></strong>   Low digital literacy and market awareness further restrict their ability to engage with emerging tools and off-taker markets.
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="mission-image-column">
+                        <img src="image_file/gaps_cap.jpg" alt="Farmers using technology in field">
+                    </div>
                 </div>
             </div>
+            <!---------------------- Envision ---------------------->
+            <div class="slide" id="farmhub-title-slide" style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+                <div class="bg-pattern"></div>
+                    <div class="floating-icons" id="floatingIcons1"></div>
+                        <div class="title-container">
+                                <div class="logo-container">
+                                    <img src="image_file/logo_trans.png" alt="Company Logo">
+                                </div>
+                            <div class="content-farmhub-title">
+                                    <h1 style="font-size: 4rem;">What we strive for?   <span style="color: #ccd51d; font-weight: 600;"> </span></h1>
+                                    <p style="font-size: 3rem;"><span style="color: #ccd51d; font-weight: 600;">we envision </span>a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles and systems - 
+                                        ensuring their resilience and empowering them to prosper for generations to come.</p>
+                            </div>
+                    
+                        </div>
+            </div>     
 
-
-              <!---------------------- Envision ---------------------->
-              <div class="slide single-column">
-               
-                <p style="font-size: 1.5rem; margin-left: 200px;">What we strive for?</p>
-                   <h3 style="font-size: 1.5rem; margin-left: 200px;">we envision</h3>
-              
-                <p style="font-size: 1.5rem; margin-left: 200px;"> a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles and systems - 
-                    ensuring their resilience and empowering them to prosper for generations to come.</p>
-            </div>
-          
-
-               <!-------------------------------------------------- Approach ------------------------------------------------------->
-               <div class="slide full-image-slide" style="position: relative; background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1725291727057-8VZ1KVPWBX2C2X5JQNZG/GettyImages-1555695841.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
-
-                <!-- Left-side text block -->
-                <div style="width: 40%; background-color: rgba(255, 255, 255, 0.05); padding: 2rem; position: relative; z-index: 2; margin-left: -40rem; border-radius: 1rem;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Approach</h2>
+            <!-------------------------------------------------- Approach ------------------------------------------------------->
+            <div class="slide full-image-slide" style="position: relative; background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1725291727057-8VZ1KVPWBX2C2X5JQNZG/GettyImages-1555695841.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+                <div class="content">
+                    <h2 class="slide-maintitle"> <span style= "color: rgb(12, 197, 55); font-weight: 600;">Our Approach </span></h2>
                     <p style="font-size: 1.2rem; line-height: 1.6;">
                         We aim to be part of the eco-system.<br><br>
                         We believe that regenerative practices are the foundation of a prosperous future – where all life on earth can live together in harmony.<br><br>
@@ -5245,11 +5317,9 @@
                         Our goal is to create a ripple effect of positive change, enabling rural communities to not only adapt but to lead in shaping a sustainable and resilient future.
                     </p>
                 </div>
-            
-                
-            </div>
-            
-            <!-------------------------------------- Vision Framework --------------------------------------------------------------------->
+              </div>
+
+           <!-------------------------------------- Vision Framework --------------------------------------------------------------------->
             <div class="slide two-columns-overlap" id="two-columns-2-slide" style="background: white;">
                 <div class="text-2-content" style="margin-top: 20px;">
                     <h2>Vision Framework</h2>
@@ -5383,7 +5453,6 @@
             <!--------------------------------------- Component #1 - Mission Lab ------------------------------------>
               
             <div class="slide mission-slide">
-                
                 <div class="mission-two-column-slide">
                     <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
                     <!-- Text Column -->
@@ -5427,325 +5496,131 @@
                 </div>
             </div>
    
-           
-           
-           
-           
-            <div class="slide">
-            <div class="missionlab-comp1-slide">
-                <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-                
-                <div class="missionlab-content">
-                    <!-- Left Side: Text Section -->
-                    <div class="missionlab-text">
-                        <h3>The Innovation Brain</h3>
-                        <h2>Component #1 - Mission Lab</h2>
-                        <p class="systems-text">
-                            The Mission Lab model <span style="color: #27ae60; font-weight: 600;">integrates global expertise with local 
-                            knowledge, focusing on addressing systemic challenges</span>  
-                            grounding solutions in the realities of specific places. <span style="color: #e74c3c;">By 
-                                fostering collaborative partnerships between cross-sectoral 
-                                stakeholders,</span>, Mission Lab <span style="color: #3498db;">becomes</span> driving force for 
-                                <span style="color: #f39c12;">localised systems innovation</span>
-                        </p>
-                        
-                        <ul>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;">Research</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;">Innovation</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;">Education</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;">Technology Transfer</span>
-                            </li>
-                        </ul>
-                    </div>
-        
-                    <!-- Right Side: Image Section -->
-                    <div class="missionlab-image">
-                        <!-- Replace with your actual image path -->
-                        <img src="image_file/comp_1_missionlab.jpg" alt="MissionLab Innovation">
-                    </div>
-                </div>
-            </div>    
-        </div>  
-
-            <!--------------------------------------- Component #2 - Mission Lab ------------------------------------>
+               <!--------------------------------------- Component #2 - Mission Lab ------------------------------------>
                      
                   
-                    <div class="slide mission-slide">
-                        <div class="mission-two-column-slide">
-                            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-                            <!-- Text Column -->
-                            <div class="mission-text-column">
-                                <div class="mission-text-content">
-                                    <div class="mission-slide-header">
-                                        <h3 class="mission-slide-maintitle">Component #2 - Farm Hubs</h3>
-                                        <div class="mission-decorative-line"></div>
-                                        <div class="mission-slide-subtitle">The Implementation Hands</div>
-                                    </div>
-                                    
-                                    <p class="mission-systems-text">
-                                        <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
-                                        smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span> inputs <span style="color: #3498db;">digital tools</span> resources
-                                        <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
-                                        empowers farmers to adopt regenerative and climate-smart 
-                                        techniques, ensuring long-term resilience and success in a 
-                                        rapidly changing agricultural landscape</span>
-                                    </p>
-                                    
-                                    <ul class="mission-features">
-                                        <li class="mission-systems-text">
-                                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
-                                        </li>
-                                        <li class="mission-systems-text">
-                                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
-                                        </li>
-                                        <li class="mission-systems-text">
-                                            <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
-                                        </li>
-                                        <li class="mission-systems-text">
-                                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>Training and advisory services</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-        
-                            <!-- Image Column -->
-                            <div class="mission-image-column">
-                                <img src="image_file/comp_1_missionlab.jpg" alt="Farmers using technology in field">
-                            </div>
-                        </div>
-                    </div>
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="slide mission-slide"  style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
-                
-                
-                <div class="slide-header">
-                  <h3 class="slide-maintitle">Component #2 - Farm Hubs</h3>
-                  <div class="decorative-line"></div>
-                  <div class="slide-subtitle">The Implementation Hands</div>
-                </div>
-              
-                <div class="mission-container">
-                  <div class="mission-card" style="--accent-color: #1e9d53;">
-                    <p class="systems-text">
-                      <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
-                      smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span> inputs <span style="color: #3498db;">digital tools</span> resources
-                      <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
-                      empowers farmers to adopt regenerative and climate-smart 
-                      techniques, ensuring long-term resilience and success in a 
-                      rapidly changing agricultural landscape</span>
-                    </p>
-                    <ul class="mission-features">
-                      <li class="systems-text">
-                        <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
-                      </li>
-                      <li class="systems-text">
-                        <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
-                      </li>
-                      <li class="systems-text">
-                        <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
-                      </li>
-                      <li class="systems-text">
-                        <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>Training and advisory services</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            
-            <div class="slide">
-                <div class="missionlab-comp1-slide">
-
-            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-
-            <div class="missionlab-content">
-                <!-- Left Side: Text Section -->
-                <div class="missionlab-text">
-                    <h3>The Implmentation Hands</h3>
-                    <h2> Component #2 - Farm Hubs</h2>
-                    <p class="systems-text">
-                        <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
-                        smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span>, inputs <span style="color: #3498db;">digital tools</span>  resources
-                                <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
-                                    empowers farmers to adopt regenerative and climate-smart 
-                                    techniques, ensuring long-term resilience and success in a 
-                                    rapidly changing agricultural landscape</span>
-                    </p>
-                
-                    <ul>
-                        <li class="systems-text">
-                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>>Training and advisory services</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Right Side: Image Section -->
-                <div class="missionlab-image">
-                    <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
-                </div>
-            </div>
-
-            </div>
-            </div>
-
-            <!--------------------------------------- Component #3 - Mission Lab ------------------------------------>
-            <div class="slide mission-slide">
+               <div class="slide mission-slide">
                 <div class="mission-two-column-slide">
                     <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
                     <!-- Text Column -->
                     <div class="mission-text-column">
                         <div class="mission-text-content">
                             <div class="mission-slide-header">
-                                <h3 class="mission-slide-maintitle"> Component #3 - Regen Farms</h3>
+                                <h3 class="mission-slide-maintitle">Component #2 - Farm Hubs</h3>
                                 <div class="mission-decorative-line"></div>
-                                <div class="mission-slide-subtitle">The Sustainable Heart</div>
+                                <div class="mission-slide-subtitle">The Implementation Hands</div>
                             </div>
-                       
-                            <p class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
-                            smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
-                                    <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
-                        </p>
-                        <ul>
-                            <li class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
-                                    Mechanisation Programme</span> 
-                            </span>
-                            </li>
-                            <li class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
-                                    Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
-                            </li>
-                            <li class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
-                                    Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
-                                climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
-                                additional income streams. </span>
-                            </li>
-                            <li class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
-                                    Strengthening Platfor</span>  </span>
-                            </li>
-                            <li class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
-                                    Service Infrastructur</span> </span>
-                            </li>
                             
-                        </ul>
-                        <p class="mission-systems-text">
-                                <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
-                                Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
-                                sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
-                        </p>
+                            <p class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
+                                smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span> inputs <span style="color: #3498db;">digital tools</span> resources
+                                <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
+                                empowers farmers to adopt regenerative and climate-smart 
+                                techniques, ensuring long-term resilience and success in a 
+                                rapidly changing agricultural landscape</span>
+                            </p>
+                            
+                            <ul class="mission-features">
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>Training and advisory services</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
                     <!-- Image Column -->
                     <div class="mission-image-column">
-                        <img src="image_file/comp_2_missionlab.jpg" alt="Farmers using technology in field">
+                        <img src="image_file/comp_1_missionlab.jpg" alt="Farmers using technology in field">
                     </div>
                 </div>
             </div>
-            
-            <div id="missionlab-comp3-slide" class="slide">
-
-            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-
-            <div class="missionlab-content">
-                <!-- Left Side: Text Section -->
-                <div class="missionlab-text">
-                    <h3>The Sustainable Heart</h3>
-                    <h2> Component #3 - Regen Farms</h2>
-                    <p class="systems-text">
-                            <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
-                        smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
-                                <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
-                    </p>
-                    <ul>
-                        <li class="systems-text">
-                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
-                                Mechanisation Programme</span> 
-                        </span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
-                                Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
-                                Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
-                            climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
-                            additional income streams. </span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
-                                Strengthening Platfor</span>  </span>
-                        </li>
-                        <li class="systems-text">
-                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
-                                Service Infrastructur</span> </span>
-                        </li>
-                        
-                    </ul>
-                    <p class="systems-text">
-                            <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
-                            Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
-                            sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
-                    </p>
+   
+                  <!--------------------------------------- Component #3 - regen farm ------------------------------------>
+              
+                  <div class="slide mission-slide">
+                    <div class="mission-two-column-slide">
+                        <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                        <!-- Text Column -->
+                        <div class="mission-text-column">
+                            <div class="mission-text-content">
+                                <div class="mission-slide-header">
+                                    <h3 class="mission-slide-maintitle">Component #3 - Regen Farms</h3>
+                                    <div class="mission-decorative-line"></div>
+                                    <div class="mission-slide-subtitle">The Sustainable Heart</div>
+                                </div>
+                                <p class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
+                                farmers gain access to <span style="color: #e74c3c;">mechanization</span>, inputs, <span style="color: #3498db;">digital tools,</span>   agronomic support,
+                                        <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
+                            </p>
+                            <ul>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
+                                        Mechanisation Programme</span> 
+                                </span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
+                                        Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
+                                        Stewardship Initiative</span> promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
+                                    climate change.</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
+                                        Strengthening Platform</span>  </span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
+                                        Service Infrastructure</span> </span>
+                                </li>
+                                
+                            </ul>
+                            <p class="mission-systems-text">
+                                    <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
+                                    Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
+                                    sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
+                            </p>
+                            </div>
                         </div>
-
-                <!-- Right Side: Image Section -->
-                <div class="missionlab-image">
-                    <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
+    
+                        <!-- Image Column -->
+                        <div class="mission-image-column">
+                            <img src="image_file/comp_2_farmhub.jpg" alt="Farmers using technology in field">
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            </div>
+           
+           
+          
             <!---------------------------------------Farm Hub title ------------------------------------>
-                <div class="slide" id="farmhub-title-slide">
+            <div class="slide" id="farmhub-title-slide" style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+                                
+               
                     <div class="bg-pattern"></div>
                     <div class="floating-icons" id="floatingIcons1"></div>
                     <div class="title-container">
                         <div class="logo-container">
                             <img src="image_file/logo_1.jpg" alt="Company Logo">
                         </div>
-                        <h1 class="slide-2-title">Farm Hub Ethiopia</h1>
-                        <p class="slide-2-subtitle">Scaling Access to Tools, Inputs, and Knowledge for Smallholders</p>
-                        <p class="slide-2-subtitle" style="font-size: 1.2rem; margin-top: 2rem;">Transforming Smallholder Agriculture Across Ethiopia</p>
+                        <div class="content-farmhub-title">
+                            <h1 style="font-size: 4rem;">Farm Hub   <span style="color: #ccd51d; font-weight: 600;">Ethiopia </span></h1>
+                            <p style="font-size: 3rem;">Scaling access to Mechanization, Inputs, and Knowledge for Smallholders</p>
+                        </div>
+                        
                     </div>
-                </div>     
+            </div>     
             <!--------------------------------------- Farm Hub - challenge ------------------------------------>
             <div id="process-slide" class="slide process-slide">
                 <div class="slide-header">
@@ -5922,21 +5797,8 @@
                     </div>
                 </div>
             
-                <!-- Process Summary Visualization -->
-                <div class="process-visual">
-                    <div class="visual-bar">
-                    <div class="visual-segment discovery" data-tooltip="Discovery Phase"></div>
-                    <div class="visual-segment planning" data-tooltip="Planning Phase"></div>
-                    <div class="visual-segment execution" data-tooltip="Execution Phase"></div>
-                    <div class="visual-segment delivery" data-tooltip="Delivery Phase"></div>
-                    </div>
-                    <div class="visual-labels">
-                    <span>Understand</span>
-                    <span>Design</span>
-                    <span>Build</span>
-                    <span>Deliver</span>
-                    </div>
-                </div>
+            
+                
                 </div>
             
             </div>
@@ -5977,7 +5839,7 @@
                             <p class="principle-text">Specifically targets women who bear the brunt of agricultural work</p>
                         </div>
                     </div>
-                    <div class="slide-subtitle" style="text-align: right; padding: 50px 200px 0 0; font-style: italic; color: green;"> 
+                    <div class="slide-subtitle" style="text-align: right; padding: 50px 100px 0 0; font-style: italic; color: green;"> 
                         – H.E. Josefa Leonel Correia Sacko, commissioner for Rural Economy and Agriculture of the African Union Commission</div>
                 </div>
     <!------------------------------------------------------------ regenerative agriculture -->
@@ -7319,7 +7181,249 @@
 
         
 
-     
+                        <div class="slide">
+                            <div class="missionlab-comp1-slide">
+                                <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                                
+                                <div class="missionlab-content">
+                                    <!-- Left Side: Text Section -->
+                                    <div class="missionlab-text">
+                                        <h3>The Innovation Brain</h3>
+                                        <h2>Component #1 - Mission Lab</h2>
+                                        <p class="systems-text">
+                                            The Mission Lab model <span style="color: #27ae60; font-weight: 600;">integrates global expertise with local 
+                                            knowledge, focusing on addressing systemic challenges</span>  
+                                            grounding solutions in the realities of specific places. <span style="color: #e74c3c;">By 
+                                                fostering collaborative partnerships between cross-sectoral 
+                                                stakeholders,</span>, Mission Lab <span style="color: #3498db;">becomes</span> driving force for 
+                                                <span style="color: #f39c12;">localised systems innovation</span>
+                                        </p>
+                                        
+                                        <ul>
+                                            <li class="systems-text">
+                                                <span style="color: #27ae60;">Research</span>
+                                            </li>
+                                            <li class="systems-text">
+                                                <span style="color: #27ae60;">Innovation</span>
+                                            </li>
+                                            <li class="systems-text">
+                                                <span style="color: #27ae60;">Education</span>
+                                            </li>
+                                            <li class="systems-text">
+                                                <span style="color: #27ae60;">Technology Transfer</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        
+                                    <!-- Right Side: Image Section -->
+                                    <div class="missionlab-image">
+                                        <!-- Replace with your actual image path -->
+                                        <img src="image_file/comp_1_missionlab.jpg" alt="MissionLab Innovation">
+                                    </div>
+                                </div>
+                            </div>    
+                           </div>  
+                
+                        
+                
+                
+                            <div class="slide mission-slide"  style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+                                
+                                
+                                <div class="slide-header">
+                                  <h3 class="slide-maintitle">Component #2 - Farm Hubs</h3>
+                                  <div class="decorative-line"></div>
+                                  <div class="slide-subtitle">The Implementation Hands</div>
+                                </div>
+                              
+                                <div class="mission-container">
+                                  <div class="mission-card" style="--accent-color: #1e9d53;">
+                                    <p class="systems-text">
+                                      <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
+                                      smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span> inputs <span style="color: #3498db;">digital tools</span> resources
+                                      <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
+                                      empowers farmers to adopt regenerative and climate-smart 
+                                      techniques, ensuring long-term resilience and success in a 
+                                      rapidly changing agricultural landscape</span>
+                                    </p>
+                                    <ul class="mission-features">
+                                      <li class="systems-text">
+                                        <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
+                                      </li>
+                                      <li class="systems-text">
+                                        <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
+                                      </li>
+                                      <li class="systems-text">
+                                        <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
+                                      </li>
+                                      <li class="systems-text">
+                                        <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>Training and advisory services</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                            <div class="slide">
+                                <div class="missionlab-comp1-slide">
+                
+                            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                
+                            <div class="missionlab-content">
+                                <!-- Left Side: Text Section -->
+                                <div class="missionlab-text">
+                                    <h3>The Implmentation Hands</h3>
+                                    <h2> Component #2 - Farm Hubs</h2>
+                                    <p class="systems-text">
+                                        <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
+                                        smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span>, inputs <span style="color: #3498db;">digital tools</span>  resources
+                                                <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
+                                                    empowers farmers to adopt regenerative and climate-smart 
+                                                    techniques, ensuring long-term resilience and success in a 
+                                                    rapidly changing agricultural landscape</span>
+                                    </p>
+                                
+                                    <ul>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>>Training and advisory services</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                
+                                <!-- Right Side: Image Section -->
+                                <div class="missionlab-image">
+                                    <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
+                                </div>
+                            </div>
+                
+                            </div>
+                            </div>
+                
+                            <!--------------------------------------- Component #3 - Mission Lab ------------------------------------>
+                            <div class="slide mission-slide">
+                                <div class="mission-two-column-slide">
+                                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                                    <!-- Text Column -->
+                                    <div class="mission-text-column">
+                                        <div class="mission-text-content">
+                                            <div class="mission-slide-header">
+                                                <h3 class="mission-slide-maintitle"> Component #3 - Regen Farms</h3>
+                                                <div class="mission-decorative-line"></div>
+                                                <div class="mission-slide-subtitle">The Sustainable Heart</div>
+                                            </div>
+                                       
+                                            <p class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
+                                            smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
+                                                    <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
+                                        </p>
+                                        <ul>
+                                            <li class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
+                                                    Mechanisation Programme</span> 
+                                            </span>
+                                            </li>
+                                            <li class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
+                                                    Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
+                                            </li>
+                                            <li class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
+                                                    Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
+                                                climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
+                                                additional income streams. </span>
+                                            </li>
+                                            <li class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
+                                                    Strengthening Platfor</span>  </span>
+                                            </li>
+                                            <li class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
+                                                    Service Infrastructur</span> </span>
+                                            </li>
+                                            
+                                        </ul>
+                                        <p class="mission-systems-text">
+                                                <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
+                                                Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
+                                                sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
+                                        </p>
+                                        </div>
+                                    </div>
+                
+                                    <!-- Image Column -->
+                                    <div class="mission-image-column">
+                                        <img src="image_file/comp_2_missionlab.jpg" alt="Farmers using technology in field">
+                                    </div>
+                                </div>
+                            </div>
+                
+                
+                
+                            
+                            <div id="missionlab-comp3-slide" class="slide">
+                
+                            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                
+                            <div class="missionlab-content">
+                                <!-- Left Side: Text Section -->
+                                <div class="missionlab-text">
+                                    <h3>The Sustainable Heart</h3>
+                                    <h2> Component #3 - Regen Farms</h2>
+                                    <p class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
+                                        smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
+                                                <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
+                                    </p>
+                                    <ul>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
+                                                Mechanisation Programme</span> 
+                                        </span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
+                                                Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
+                                                Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
+                                            climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
+                                            additional income streams. </span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
+                                                Strengthening Platfor</span>  </span>
+                                        </li>
+                                        <li class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
+                                                Service Infrastructur</span> </span>
+                                        </li>
+                                        
+                                    </ul>
+                                    <p class="systems-text">
+                                            <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
+                                            Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
+                                            sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
+                                    </p>
+                                        </div>
+                
+                                <!-- Right Side: Image Section -->
+                                <div class="missionlab-image">
+                                    <img src="image_file/comp_2_farmhub.jpg" alt="MissionLab Innovation">
+                                </div>
+                            </div>
+                
+                            </div>
 
    
 
