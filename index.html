@@ -141,7 +141,7 @@
 
             /* H1 Groups */
             .toc-h1-group {
-                margin-bottom: 10px;
+                margin-bottom: 6px;
             }
 
             /* H1 Container */
@@ -334,7 +334,8 @@
     
     .toc-h1-container {
         padding: 4px 16px;
-        font-size: 1.4rem;
+        font-size: 1.0rem;
+        font-weight: normal;
     }
     
     .toc-h1 {
@@ -602,6 +603,7 @@
             max-width: 40%;
            margin-left: 40px;
             font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
+            font-size: 1.8rem;
 
         }
             @media (max-width: 768px) {
@@ -611,7 +613,7 @@
                     max-width: 100%;
                     margin: 0 auto;
                     font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
-                    font-size: 2rem;
+                    font-size: 1.2rem;
 
                 }
                 
@@ -1270,7 +1272,10 @@
             width:80%;
         }
         
-    
+        .text-column {
+            width: 30%;
+            margin-left: 100px;
+        }
         
         .gaps-column {
             width: 60%;
@@ -1581,7 +1586,7 @@
 
                 .dimension-card ul {
                     padding-left: 20px;
-                    margin: 15px 0 0;
+                    margin: 10px 0 0;
                 }
 
                 .dimension-card li {
@@ -1644,7 +1649,7 @@
 
                 /* Impact Section */
                 .full-width-impact {
-                    margin-top: 50px;
+                    margin-top: 20px;
                     padding-top: 30px;
                     border-top: 1px solid #eee;
                 }
@@ -1679,6 +1684,34 @@
                 }
                 /* Mobile Fix (add this to the very end of your CSS) */
                 @media (max-width: 768px) {
+                    .dimension-card {
+                   padding:3px;
+                    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+                    border-left: 4px solid;
+                    transition: transform 0.3s ease;
+                }
+                
+                .dimension-card ul {
+                    padding-left: 20px;
+                    margin: 1px 0 0;
+                }
+        /* Impact Section */
+        .full-width-impact {
+                    margin-top: 10px;
+                    padding-top: 5px;
+                    border-top: 1px solid #eee;
+                }
+
+                .impact-title {
+                    text-align: center;
+                    margin-bottom: 10px !important;
+                }
+
+                .impact-row {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 10px;
+                }
                     /* 1. Fix card overlap */
                     .dimensions-grid {
                         grid-template-columns: 1fr;
@@ -2284,7 +2317,7 @@
         }
 
         .mission-text-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 1rem 0;
         }
@@ -2322,7 +2355,7 @@
         }
 
         .mission-systems-text {
-            font-size: 1.1rem;
+            font-size: 1.6rem;
             line-height: 1.6;
             margin-bottom: 1.2rem;
         }
@@ -4888,24 +4921,20 @@
                <!---------------------- Slide 4: The Challange -1  ---------------------->
                <div class="slide full-image-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66222b52b6153d6c412edae5/1724777382946-LAA3J2Y0F0N3T8LTAWVD/GettyImages-1179600347.jpg?format=1500w');">
                 <!-- NEW LOGO HTML ONLY -->
-                <div class="logo-container">
-                    <img src="image_file/logo_trans.png" alt="Company Logo">
-                    
-                </div>
-                
+                                
                 <div class="content">
                     <h1 style="font-size: 4rem;">The Challenge  <span style="color: #ccd51d; font-weight: 600;"></span></h1>
                     <p style="font-size: 3rem;">Our current food system is broken</p>
-                    <p style="padding: 20px; font-size: 1.7rem">... the way we produce, distribute and consume food isn't working effectively.</p>
-                    <p style="padding: 20px;font-size: 1.7rem">
+                    <p style="padding: 20px;">... the way we produce, distribute and consume food isn't working effectively.</p>
+                    <p style="padding: 20px;">
                         stem from deep, interconnected issues: historical, cultural, and global issues. 
                         They contribute to <span style="color: #e74c3c; font-weight: 600;">environmental 
                         degradation, inequality, and food insecurity</span>, failing both people and the planet.&nbsp;
                     </p>
-                    <p style="padding: 20px; font-size: 1.7rem">
+                    <p style="padding: 20px;">
                         By focusing on short-term gains rather than long-term sustainability, this approach results in <span style="color: #e74c3c; font-weight: 600;">soil depletion, biodiversity loss, and increased climate vulnerability.</span>
                     </p>
-                    <p style="padding: 20px; font-size: 1.7rem">
+                    <p style="padding: 20px;">
                         We need to expand our perspective: <span style="color: #27c43f; font-weight: 600;">Requires a complete systemic transformation - not small fixes - to achieve </span> 
                     </p>
                 </div>
@@ -5352,6 +5381,56 @@
             </div>
                   
             <!--------------------------------------- Component #1 - Mission Lab ------------------------------------>
+              
+            <div class="slide mission-slide">
+                
+                <div class="mission-two-column-slide">
+                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                    <!-- Text Column -->
+                    <div class="mission-text-column">
+                        <div class="mission-text-content">
+                            <div class="mission-slide-header">
+                                <h3 class="mission-slide-maintitle">Component #1 - Mission Lab</h3>
+                                <div class="mission-decorative-line"></div>
+                                <div class="mission-slide-subtitle">The Innovation Brain</div>
+                            </div>
+                            <p class="mission-systems-text">
+                                The Mission Lab model <span style="color: #27ae60; font-weight: 600;">integrates global expertise with local 
+                                knowledge, focusing on addressing systemic challenges</span>  
+                                grounding solutions in the realities of specific places. <span style="color: #e74c3c;">By 
+                                    fostering collaborative partnerships between cross-sectoral 
+                                    stakeholders,</span>, Mission Lab <span style="color: #3498db;">becomes</span> driving force for 
+                                    <span style="color: #f39c12;">localised systems innovation</span>
+                            </p>
+                            
+                            <ul>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;">Research</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;">Innovation</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;">Education</span>
+                                </li>
+                                <li class="mission-systems-text">
+                                    <span style="color: #27ae60;">Technology Transfer</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="mission-image-column">
+                        <img src="image_file/comp_1_missionlab.jpg" alt="Farmers using technology in field">
+                    </div>
+                </div>
+            </div>
+   
+           
+           
+           
+           
             <div class="slide">
             <div class="missionlab-comp1-slide">
                 <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
@@ -5396,12 +5475,11 @@
         </div>  
 
             <!--------------------------------------- Component #2 - Mission Lab ------------------------------------>
-            
-
-          
-                    <!-- Farm Hubs Slide -->
+                     
+                  
                     <div class="slide mission-slide">
                         <div class="mission-two-column-slide">
+                            <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
                             <!-- Text Column -->
                             <div class="mission-text-column">
                                 <div class="mission-text-content">
@@ -5461,7 +5539,7 @@
 
 
 
-            <div class="slide mission-slide"  style="background-image: url('image_file/regen_1.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+            <div class="slide mission-slide"  style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
                 
                 
                 <div class="slide-header">
@@ -5543,6 +5621,64 @@
             </div>
 
             <!--------------------------------------- Component #3 - Mission Lab ------------------------------------>
+            <div class="slide mission-slide">
+                <div class="mission-two-column-slide">
+                    <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
+                    <!-- Text Column -->
+                    <div class="mission-text-column">
+                        <div class="mission-text-content">
+                            <div class="mission-slide-header">
+                                <h3 class="mission-slide-maintitle"> Component #3 - Regen Farms</h3>
+                                <div class="mission-decorative-line"></div>
+                                <div class="mission-slide-subtitle">The Sustainable Heart</div>
+                            </div>
+                       
+                            <p class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 600;">Through the Farm Hubs,</span>  
+                            smallholder farmers gain access to <span style="color: #e74c3c;">modern mechanisation,</span>, inputs <span style="color: #3498db;">digital tools</span>   tailored agronomic support,
+                                    <span style="color: #f39c12;">that enhance productivity and efficiency. </span>
+                        </p>
+                        <ul>
+                            <li class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Appropriate 
+                                    Mechanisation Programme</span> 
+                            </span>
+                            </li>
+                            <li class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green; font-weight: 600;">Regenerative 
+                                    Practices Adoption Program </span> rebuild soil fertility, enabling crops to achieve their full yield potential sustainably.</span>
+                            </li>
+                            <li class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecological 
+                                    Stewardship Initiative</span> Agroecology promotes biodiversity and ecological balance, reducing dependency on external inputs while increasing resilience to 
+                                climate change. Agroforestry integrates trees and crops to optimize land use, enhance water retention, and provide 
+                                additional income streams. </span>
+                            </li>
+                            <li class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Cooperative 
+                                    Strengthening Platfor</span>  </span>
+                            </li>
+                            <li class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 400;"><span style="color: green;font-weight: 600;"> Ecosystem 
+                                    Service Infrastructur</span> </span>
+                            </li>
+                            
+                        </ul>
+                        <p class="mission-systems-text">
+                                <span style="color: #27ae60; font-weight: 600;">By combining these elements, </span>  
+                                Regen Farms unlock the land’s full potential, <span style="color: #e74c3c;">ensuring long-term productivity,</span>environmental 
+                                sustainability, <span style="color: #3498db;">and improved livelihoods.</span> </span>
+                        </p>
+                        </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="mission-image-column">
+                        <img src="image_file/comp_2_missionlab.jpg" alt="Farmers using technology in field">
+                    </div>
+                </div>
+            </div>
+            
             <div id="missionlab-comp3-slide" class="slide">
 
             <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
