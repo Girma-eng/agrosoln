@@ -2094,6 +2094,163 @@
 
 
 
+/* Services Slide Styles */
+.services-title {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.services-title span {
+    color: #f1c40f;
+    font-weight: 700;
+}
+.services-subtitle {
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.service-card::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+}
+.service-card.active::after {
+    transform: rotate(180deg);
+    color: #e74c3c;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.service-highlight {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.service-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.service-card.active .service-details {
+    max-height: 500px;
+}
+
+.service-details ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+.service-details li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+
+.service-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #bdc3c7;
+}
+.stat {
+    text-align: center;
+}
+.stat-value {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #27ae60;
+}
+.stat-label {
+    font-size: 0.7rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+}
+
+.service-cta {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+.service-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+.cta-button {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.cta-button:hover {
+    background-color: #f39c12;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 .slide-container-service {
             width: 100vw;
             height: 100vh;
@@ -2869,10 +3026,10 @@
             </div>
             
             <div class="category-tabs">
-                <button class="category-tab active" data-category="all">All Equipment</button>
-                <button class="category-tab" data-category="tillage">Tillage</button>
-                <button class="category-tab" data-category="planting">Planting</button>
-                <button class="category-tab" data-category="digital">Digital</button>
+                <button class="category-tab active" data-category="all">Land preparation</button>
+                <button class="category-tab" data-category="tillage">Planting</button>
+                <button class="category-tab" data-category="planting">Spraying</button>
+                <button class="category-tab" data-category="digital">Others</button>
             </div>
             
             <div class="machinery-grid">
@@ -2960,100 +3117,6 @@
        </div>
 
 
-
-      
-        <div class="slide" id="mechanization-slide">
-            <div class="slide-content">
-                <h2 style="color: var(--primary-color);">Mechanization Services</h2>
-                <p style="margin: 15px 0;">
-                    At <strong>Farm Hub</strong>, we offer comprehensive mechanization services tailored for Ethiopian agriculture. 
-                    Our goal is to enhance efficiency, reduce drudgery, and improve productivity for smallholder farmers through accessible technologies.
-                </p>
-                <div class="service-list">
-                    <div class="service-item">
-                        <h3 style="color: var(--dark-green);">Land Preparation</h3>
-                        <ul>
-                            <li>Disc Harrow</li>
-                            <li>Rotovator</li>
-                            <li>Cultivator</li>
-                            <li>Laser Land Leveler</li>
-                        </ul>
-                    </div>
-                    <div class="service-item">
-                        <h3 style="color: var(--dark-green);">Planting Equipment</h3>
-                        <ul>
-                            <li>Super Seeder (no-till wheat planter)</li>
-                            <li>Happy Seeder (multi-crop, no-till)</li>
-                            <li>Multi-crop Planter (conventional)</li>
-                            <li>Raised Bed Planter (for irrigated land)</li>
-                        </ul>
-                    </div>
-                    <div class="service-item">
-                        <h3 style="color: var(--dark-green);">Additional Services</h3>
-                        <ul>
-                            <li>Spraying services using precision sprayers</li>
-                            <li>Machinery operation training</li>
-                            <li>On-field demonstration and advisory</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-     
-
-
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Mechanization Services</h1>
-                <p>Affordable, appropriate technology for Ethiopian farms</p>
-                <div class="car-container">
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Tractor Services</div>
-                            <p>From 800 ETB/hour including operator</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1591291621160-3b8e3be1d3c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Harvester" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Combine Harvesters</div>
-                            <p>Reduce losses from 30% to under 5%</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1627855437693-dcc7b0c4ba7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Irrigation" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Drip Irrigation</div>
-                            <p>60% water savings, 2-3x yield increase</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Tractor Services</div>
-                            <p>From 800 ETB/hour including operator</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1591291621160-3b8e3be1d3c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Harvester" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Combine Harvesters</div>
-                            <p>Reduce losses from 30% to under 5%</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1627855437693-dcc7b0c4ba7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Irrigation" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Drip Irrigation</div>
-                            <p>60% water savings, 2-3x yield increase</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Slide 9: Digital Solutions -->
         <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
@@ -4226,6 +4289,8 @@
             
             slides.forEach((slide, index) => {
                 if (slide.id === 'toc-slide') return;
+                if (slide.id === 'title-slide') return;
+                
                 
                 const h1 = slide.querySelector('h1');
                 const h2 = slide.querySelector('h2');
