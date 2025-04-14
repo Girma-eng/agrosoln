@@ -414,7 +414,7 @@
         .content-farmhub-title {
             position: relative;
             z-index: 1;
-            max-width: 60%;
+            max-width: 95%;
            margin-left: 40px;
             font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
             font-size: 3.8rem;
@@ -2086,6 +2086,277 @@
         }
                 }
 
+
+
+
+
+
+
+
+
+                .slide-container-service {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        }
+
+
+                .decorative-line {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin: 0.5rem auto 2rem;
+            border-radius: 2px;
+        }
+        
+        .machinery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .machinery-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            height: 380px;
+        }
+        
+        .machinery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .card-image {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .machinery-card:hover .card-image {
+            transform: scale(1.05);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .card-description {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .card-footer {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-price {
+            background: orange;
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .card-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0 2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .category-tab {
+            padding: 0.6rem 1.5rem;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            margin: 0.3rem;
+        }
+        
+        .category-tab.active {
+            background: greenyellow;
+            color: white;
+        }
+        
+        .category-tab:hover:not(.active) {
+            background: #e0e0e0;
+        }
+        
+        .floating-stats {
+            position: absolute;
+            top: 50%;
+            right: -100px;
+            transform: translateY(-50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 280px;
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 10;
+        }
+        
+        .floating-stats.show {
+            right: 30px;
+            opacity: 1;
+        }
+        
+        .stats-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            margin-bottom: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-value {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .stat-bar {
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .stat-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 3px;
+        }
+        
+        .toggle-stats {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.3);
+            z-index: 100;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .toggle-stats:hover {
+            transform: scale(1.1);
+            background: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .machinery-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem;
+            }
+            
+            .slide-header h1 {
+                font-size: 2rem;
+            }
+            
+            .floating-stats {
+                width: 90%;
+                right: -100%;
+                left: auto;
+            }
+            
+            .floating-stats.show {
+                right: 5%;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -2362,8 +2633,6 @@
                 </div>
             </div>
         </div>
-        
-
         <!----------------------------------- Slide 7: Challenges Farm Hub Addresses -->
 
         <div class="slide">
@@ -2414,9 +2683,7 @@
                 </div>
             </div>
         </div>
-     
-
-        <!---------------------------------- Slide 9: Vision & Mission -->
+     <!---------------------------------- Slide 9: Vision & Mission -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content vision-mission-slide">
@@ -2473,40 +2740,296 @@
                 </div>
             </div>
         </div>
-       
-       
-
-        <!-- Slide 8: Our Services -->
-        <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+       <!-- Slide 8: Our Services -->
+        <div class="slide bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+            <button class="back-to-toc">Back to TOC</button>
             <div class="slide-content">
-                <h1>Our Comprehensive Services</h1>
-                <div class="two-columns">
-                    <div class="column">
+                <h1 class="services-title">Our <span>Comprehensive</span> Services</h1>
+                <p class="services-subtitle">End-to-end solutions transforming Ethiopian agriculture</p>
+                
+                <div class="services-grid">
+                    <!-- Mechanization Services -->
+                    <div class="service-card" onclick="toggleServiceDetails(this)">
+                        <div class="service-icon">🚜</div>
                         <h2>Mechanization Services</h2>
-                        <p>Tractor rentals (hourly/daily)</p>
-                        <p>Harvesting equipment</p>
-                        <p>Planting services</p>
-                        <p>Irrigation systems</p>
+                        <div class="service-highlight">Pay-per-use access to modern farm equipment</div>
+                        <div class="service-details">
+                            <ul>
+                                <li><strong>Tractor rentals</strong> (800-1200 ETB/hr)</li>
+                                <li><strong>Combine harvesters</strong> (reduce losses to <5%)</li>
+                                <li><strong>Planting equipment</strong> (precision seeders)</li>
+                                <li><strong>Irrigation systems</strong> (60% water savings)</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">3-5x</div>
+                                    <div class="stat-label">Productivity Increase</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">85%</div>
+                                    <div class="stat-label">Cost Reduction</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="column">
-                        <h2>Inputs & Advisory</h2>
-                        <p>Climate-smart seeds</p>
-                        <p>Organic fertilizers</p>
-                        <p>Soil health testing</p>
-                        <p>Crop protection</p>
+                    
+                    <!-- Agricultural Inputs -->
+                    <div class="service-card" onclick="toggleServiceDetails(this)">
+                        <div class="service-icon">🌱</div>
+                        <h2>Quality Inputs</h2>
+                        <div class="service-highlight">Certified seeds, fertilizers & crop protection</div>
+                        <div class="service-details">
+                            <ul>
+                                <li><strong>Climate-smart seeds</strong> (drought-resistant varieties)</li>
+                                <li><strong>Organic fertilizers</strong> (improve soil health)</li>
+                                <li><strong>Biocontrol agents</strong> (reduce chemical use)</li>
+                                <li><strong>Soil testing kits</strong> (precision nutrition)</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">30-50%</div>
+                                    <div class="stat-label">Yield Increase</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">40%</div>
+                                    <div class="stat-label">Input Cost Savings</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Digital Solutions -->
+                    <div class="service-card" onclick="toggleServiceDetails(this)">
+                        <div class="service-icon">📱</div>
+                        <h2>Digital Solutions</h2>
+                        <div class="service-highlight">Agrosoln - Your farming companion app</div>
+                        <div class="service-details">
+                            <ul>
+                                <li><strong>Equipment booking</strong> (real-time availability)</li>
+                                <li><strong>Market prices</strong> (updated daily)</li>
+                                <li><strong>Weather alerts</strong> (hyper-local forecasts)</li>
+                                <li><strong>Pest diagnosis</strong> (AI-powered detection)</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">24/7</div>
+                                    <div class="stat-label">Access</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">10,000+</div>
+                                    <div class="stat-label">Active Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advisory Services -->
+                    <div class="service-card" onclick="toggleServiceDetails(this)">
+                        <div class="service-icon">👩‍🌾</div>
+                        <h2>Advisory Services</h2>
+                        <div class="service-highlight">Expert guidance for every farming challenge</div>
+                        <div class="service-details">
+                            <ul>
+                                <li><strong>Regenerative practices</strong> (soil conservation)</li>
+                                <li><strong>Crop planning</strong> (optimized rotations)</li>
+                                <li><strong>Equipment training</strong> (hands-on sessions)</li>
+                                <li><strong>Financial literacy</strong> (profitability focus)</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">500+</div>
+                                    <div class="stat-label">Trained Farmers</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">92%</div>
+                                    <div class="stat-label">Satisfaction Rate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <p>All services available through our <strong>Farm Hub Centers</strong> or <strong>Mobile Units</strong></p>
+                    <button class="cta-button">Contact Our Team Today</button>
                 </div>
             </div>
         </div>
 
+
         <!-- Slide 8: Mechanization Solutions -->
+
+
+        <div class="slide" id="mechanization-slide">
+        <div class="slide-container-service">
+            <div class="slide-header">
+                <h1>Mechanization Solutions</h1>
+                <p>Affordable, appropriate technology for Ethiopian farms</p>
+                <div class="decorative-line"></div>
+            </div>
+            
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Equipment</button>
+                <button class="category-tab" data-category="tillage">Tillage</button>
+                <button class="category-tab" data-category="planting">Planting</button>
+                <button class="category-tab" data-category="digital">Digital</button>
+            </div>
+            
+            <div class="machinery-grid">
+                <!-- Tractor Services -->
+                <div class="machinery-card" data-category="tillage">
+                    <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Tractor Services</h3>
+                        <p class="card-description">Our tractor services provide powerful and efficient land preparation with various implements including plows, harrows, and cultivators. Suitable for all farm sizes with trained operators.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From 800 ETB/hour</span>
+                            <i class="fas fa-tractor card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Disk Harrow -->
+                <div class="machinery-card" data-category="tillage">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Disk Harrow" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Disk Harrow</h3>
+                        <p class="card-description">Robust secondary tillage implement designed to refine soil structure after primary plowing. Breaks clods, incorporates residues, and eliminates weeds for optimal seedbed preparation.</p>
+                        <div class="card-footer">
+                            <span class="card-price">Compatible with 50HP</span>
+                            <i class="fas fa-tools card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Super Seeder -->
+                <div class="machinery-card" data-category="planting">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Super Seeder" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Super Seeder</h3>
+                        <p class="card-description">Revolutionizes planting by enabling direct seeding without prior tillage. Combines residue management, seeding, and fertilization in a single pass, saving time and protecting soil health.</p>
+                        <div class="card-footer">
+                            <span class="card-price">30% Time Saving</span>
+                            <i class="fas fa-seedling card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- XFarm -->
+                <div class="machinery-card" data-category="digital">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="XFarm" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">XFarm Smart Farming</h3>
+                        <p class="card-description">Precision farm management platform offering real-time monitoring, crop health analysis, and automated irrigation control. Features AI-powered pest detection and yield prediction models.</p>
+                        <div class="card-footer">
+                            <span class="card-price">Digital Solution</span>
+                            <i class="fas fa-tablet-alt card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="floating-stats">
+                <h4 class="stats-title">Impact Metrics</h4>
+                <div class="stat-item">
+                    <div class="stat-label">Yield Increase</div>
+                    <div class="stat-value">40-60%</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 70%"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Water Savings</div>
+                    <div class="stat-value">60%</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 60%"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Labor Reduction</div>
+                    <div class="stat-value">80%</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Adoption Rate</div>
+                    <div class="stat-value">300+ Farms</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 100%"></div></div>
+                </div>
+            </div>
+            
+            <button class="toggle-stats" id="toggleStats">
+                <i class="fas fa-chart-line"></i>
+            </button>
+        </div>
+       </div>
+
+
+
+      
+        <div class="slide" id="mechanization-slide">
+            <div class="slide-content">
+                <h2 style="color: var(--primary-color);">Mechanization Services</h2>
+                <p style="margin: 15px 0;">
+                    At <strong>Farm Hub</strong>, we offer comprehensive mechanization services tailored for Ethiopian agriculture. 
+                    Our goal is to enhance efficiency, reduce drudgery, and improve productivity for smallholder farmers through accessible technologies.
+                </p>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3 style="color: var(--dark-green);">Land Preparation</h3>
+                        <ul>
+                            <li>Disc Harrow</li>
+                            <li>Rotovator</li>
+                            <li>Cultivator</li>
+                            <li>Laser Land Leveler</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3 style="color: var(--dark-green);">Planting Equipment</h3>
+                        <ul>
+                            <li>Super Seeder (no-till wheat planter)</li>
+                            <li>Happy Seeder (multi-crop, no-till)</li>
+                            <li>Multi-crop Planter (conventional)</li>
+                            <li>Raised Bed Planter (for irrigated land)</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3 style="color: var(--dark-green);">Additional Services</h3>
+                        <ul>
+                            <li>Spraying services using precision sprayers</li>
+                            <li>Machinery operation training</li>
+                            <li>On-field demonstration and advisory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     
+
+
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content">
                 <h1>Mechanization Services</h1>
                 <p>Affordable, appropriate technology for Ethiopian farms</p>
                 <div class="car-container">
+                    <div class="car-card">
+                        <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="car-image">
+                        <div class="car-details">
+                            <div class="car-title">Tractor Services</div>
+                            <p>From 800 ETB/hour including operator</p>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <img src="https://images.unsplash.com/photo-1591291621160-3b8e3be1d3c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Harvester" class="car-image">
+                        <div class="car-details">
+                            <div class="car-title">Combine Harvesters</div>
+                            <p>Reduce losses from 30% to under 5%</p>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <img src="https://images.unsplash.com/photo-1627855437693-dcc7b0c4ba7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Irrigation" class="car-image">
+                        <div class="car-details">
+                            <div class="car-title">Drip Irrigation</div>
+                            <p>60% water savings, 2-3x yield increase</p>
+                        </div>
+                    </div>
                     <div class="car-card">
                         <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="car-image">
                         <div class="car-details">
@@ -3600,12 +4123,6 @@
 
 
 
-
-
-
-
-
-
     
 
 
@@ -3649,213 +4166,225 @@
 </script>
 
 
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            const slideCounter = document.querySelector('.slide-counter');
-            const tocItems = document.querySelectorAll('.toc-item');
-            const backToTocBtns = document.querySelectorAll('.back-to-toc');
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const slideCounter = document.querySelector('.slide-counter');
+        const tocItems = document.querySelectorAll('.toc-item');
+        const backToTocBtns = document.querySelectorAll('.back-to-toc');
+        const tocContainer = document.getElementById('toc-container');
+        
+        let currentSlide = 0;
+        
+        // Initialize slides
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            updateSlideCounter(index);
+            currentSlide = index;
             
-            let currentSlide = 0;
+            // Scroll to top of slide content
+            if (slides[index].querySelector('.slide-content')) {
+                slides[index].querySelector('.slide-content').scrollTop = 0;
+            }
+        }
+        
+        // Update slide counter
+        function updateSlideCounter(index) {
+            slideCounter.textContent = `${index + 1} / ${slides.length}`;
+        }
+        
+        // Next slide
+        function nextSlide() {
+            let newIndex = currentSlide + 1;
+            if (newIndex >= slides.length) newIndex = 0;
+            showSlide(newIndex);
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            let newIndex = currentSlide - 1;
+            if (newIndex < 0) newIndex = slides.length - 1;
+            showSlide(newIndex);
+        }
+        
+        // Go to TOC (slide index 1)
+        function goToToc() {
+            showSlide(1);
+        }
+        
+        // Create the TOC dynamically
+        function createTOC() {
+            if (!tocContainer) return;
             
-            // Initialize slides
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                slides[index].classList.add('active');
-                slideCounter.textContent = `${index + 1} / ${slides.length}`;
-                currentSlide = index;
+            const tocList = document.createElement('ul');
+            tocList.className = 'toc-list';
+            
+            let currentH1Item = null;
+            
+            slides.forEach((slide, index) => {
+                if (slide.id === 'toc-slide') return;
                 
-                // Scroll to top of slide content
-                if (slides[index].querySelector('.slide-content')) {
-                    slides[index].querySelector('.slide-content').scrollTop = 0;
-                }
-            }
-            
-            // Next slide
-            function nextSlide() {
-                let newIndex = currentSlide + 1;
-                if (newIndex >= slides.length) newIndex = 0;
-                showSlide(newIndex);
-            }
-            
-            // Previous slide
-            function prevSlide() {
-                let newIndex = currentSlide - 1;
-                if (newIndex < 0) newIndex = slides.length - 1;
-                showSlide(newIndex);
-            }
-            
-            // Go to TOC (slide index 1)
-            function goToToc() {
-                showSlide(1);
-            }
-            
-            // Event listeners
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-            
-            // Back to TOC buttons
-            backToTocBtns.forEach(btn => {
-                btn.addEventListener('click', goToToc);
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowRight') nextSlide();
-                if (e.key === 'ArrowLeft') prevSlide();
-            });
-            
-            // Table of contents navigation
-            tocItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const slideIndex = parseInt(this.getAttribute('data-slide'));
-                    showSlide(slideIndex);
+                const h1 = slide.querySelector('h1');
+                const h2 = slide.querySelector('h2');
+                if (!h1 && !h2) return;
+                
+                const listItem = document.createElement('li');
+                listItem.className = 'toc-item';
+                
+                const linkContainer = document.createElement('div');
+                linkContainer.className = 'toc-header';
+                
+                const link = document.createElement('a');
+                link.className = 'toc-link';
+                link.href = '#';
+                link.textContent = h1 ? h1.textContent : h2.textContent;
+                link.dataset.slideIndex = index;
+                
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetIndex = parseInt(this.dataset.slideIndex);
+                    showSlide(targetIndex);
                 });
+                
+                if (h1) {
+                    listItem.classList.add('h1');
+                    const toggle = document.createElement('button');
+                    toggle.className = 'toc-toggle';
+                    toggle.innerHTML = '▸';
+                    toggle.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        listItem.classList.toggle('toc-active');
+                    });
+                    
+                    const nestedList = document.createElement('ul');
+                    nestedList.className = 'toc-nested';
+                    
+                    linkContainer.appendChild(link);
+                    linkContainer.appendChild(toggle);
+                    listItem.appendChild(linkContainer);
+                    listItem.appendChild(nestedList);
+                    tocList.appendChild(listItem);
+                    
+                    currentH1Item = listItem;
+                } 
+                else if (h2 && currentH1Item) {
+                    listItem.classList.add('h2');
+                    listItem.appendChild(link);
+                    
+                    const nestedList = currentH1Item.querySelector('.toc-nested');
+                    if (nestedList) nestedList.appendChild(listItem);
+                }
             });
             
-            // Initialize
-            showSlide(0);
-            
-            // Responsive adjustments
-            function handleResize() {
-                // Additional responsive adjustments if needed
-            }
-            
-            window.addEventListener('resize', handleResize);
-            handleResize();
+            tocContainer.appendChild(tocList);
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Back to TOC buttons
+        backToTocBtns.forEach(btn => {
+            btn.addEventListener('click', goToToc);
         });
-    </script>
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+        
+        // Initialize
+        createTOC();
+        showSlide(0);
+        
+        // Responsive adjustments
+        function handleResize() {
+            // Additional responsive adjustments if needed
+        }
+        
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <script>
-    // JavaScript to generate the Table of Contents
-    document.addEventListener('DOMContentLoaded', function() {
-        const slidesContainer = document.getElementById('slidesContainer');
-        const slides = slidesContainer.querySelectorAll('.slide');
-        const tocContainer = document.getElementById('toc-container');
-        
-        // Create the main ToC list
-        const tocList = document.createElement('ul');
-        tocList.className = 'toc-list';
-        
-        let currentH1Item = null;
-        
-        // Process each slide
-        slides.forEach((slide, index) => {
-            // Skip the ToC slide itself
-            if (slide.id === 'toc-slide') return;
-            if (slide.id === 'title-slide') return;
+    // Category filtering
+    const tabs = document.querySelectorAll('.category-tab');
+    const cards = document.querySelectorAll('.machinery-card');
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Update active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
             
-            const h1 = slide.querySelector('h1');
-            const h2 = slide.querySelector('h2');
-            
-            // Only include slides with h1 or h2
-            if (!h1 && !h2) return;
-            
-            // Create list item
-            const listItem = document.createElement('li');
-            listItem.className = 'toc-item';
-            
-            // Create link container
-            const linkContainer = document.createElement('div');
-            linkContainer.className = 'toc-header';
-            
-            // Create link
-            const link = document.createElement('a');
-            link.className = 'toc-link';
-            link.href = '#'; // Will be set to slide index
-            link.textContent = h1 ? h1.textContent : h2.textContent;
-            
-            // Set click handler to navigate to slide
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                showSlide(index);
-            });
-            
-            // Handle h1 items (main sections)
-            if (h1) {
-                listItem.classList.add('h1');
-                
-                // Create toggle for nested items
-                const toggle = document.createElement('button');
-                toggle.className = 'toc-toggle';
-                toggle.innerHTML = '▸';
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    listItem.classList.toggle('toc-active');
-                });
-                
-                // Create nested list for h2 items
-                const nestedList = document.createElement('ul');
-                nestedList.className = 'toc-nested';
-                
-                // Build the structure
-                linkContainer.appendChild(link);
-                linkContainer.appendChild(toggle);
-                listItem.appendChild(linkContainer);
-                listItem.appendChild(nestedList);
-                tocList.appendChild(listItem);
-                
-                currentH1Item = listItem;
-            } 
-            // Handle h2 items (sub-sections)
-            else if (h2 && currentH1Item) {
-                listItem.classList.add('h2');
-                listItem.appendChild(link);
-                
-                // Add to current h1's nested list
-                const nestedList = currentH1Item.querySelector('.toc-nested');
-                if (nestedList) {
-                    nestedList.appendChild(listItem);
-                }
-            }
-        });
-        
-        // Add the ToC list to the container
-        if (tocContainer) {
-            tocContainer.appendChild(tocList);
-        }
-        
-        // Add back to ToC button functionality
-        const backButtons = document.querySelectorAll('.back-to-toc');
-        backButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const tocSlide = document.getElementById('toc-slide');
-                if (tocSlide) {
-                    // Find the index of the ToC slide
-                    const slides = document.querySelectorAll('.slide');
-                    let tocIndex = -1;
-                    slides.forEach((slide, index) => {
-                        if (slide.id === 'toc-slide') {
-                            tocIndex = index;
-                        }
-                    });
-                    
-                    if (tocIndex >= 0) {
-                        showSlide(tocIndex);
-                    }
+            // Filter cards
+            const category = tab.dataset.category;
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
                 }
             });
         });
-        
-        // Function to show a specific slide (assuming you have this in your presentation)
-        function showSlide(index) {
-            // Implement your slide navigation logic here
-            // This depends on how your presentation handles slide changes
-            // For example:
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-            
-            // Scroll to the slide
-            slides[index].scrollIntoView({ behavior: 'smooth' });
-        }
     });
+    
+    // Toggle stats panel
+    const toggleBtn = document.getElementById('toggleStats');
+    const statsPanel = document.querySelector('.floating-stats');
+    
+    toggleBtn.addEventListener('click', () => {
+        statsPanel.classList.toggle('show');
+    });
+    
+    // Card click animation
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        });
+    });
+</script>
+
+
+<script>
+    function toggleServiceDetails(card) {
+        card.classList.toggle('active');
+        
+        // Close other open cards if needed
+        if (card.classList.contains('active')) {
+            document.querySelectorAll('.service-card').forEach(otherCard => {
+                if (otherCard !== card && otherCard.classList.contains('active')) {
+                    otherCard.classList.remove('active');
+                }
+            });
+        }
+    }
     </script>
 
+    
 </body>
 </html>
