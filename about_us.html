@@ -1274,126 +1274,178 @@
 }
 
 /* Slide 4: Scaling Farm Hub */
-
-    
-    .scaling-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        height: 100%;
-    }
-    
-    .scaling-content {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
-.scaling-list {
-    font-size: 1.2rem;
-    margin: 30px 0;
-    padding-left: 30px;
-    text-align: left;
-}
-
-.scaling-list li {
-    margin-bottom: 15px;
-}
-
-.timeline-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    position: relative;
-    width: 100%;
-}
-
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--primary-color);
-    z-index: 1;
-}
-
-.timeline-item {
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.timeline-year {
-    width: 60px;
-    height: 60px;
-    background: white;
-    border: 4px solid var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.timeline-content {
-    background: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: relative;
-    max-width: 150px;
-    margin: 0 auto;
-}
-
-/* Slide 5: Scaling Pathway #1 */
-.phase-container {
-    display: flex;
-    margin-top: 40px;
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.phase-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-right: 30px;
-    min-width: 60px;
-}
-
-.phase-content h3 {
-    margin-top: 0;
-    color: var(--primary-color);
-}
-
-.phase-duration {
-    font-style: italic;
-    color: #666;
-    margin: 10px 0;
-}
-
-.key-outcomes {
-    background: rgba(39, 174, 96, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.key-outcomes h4 {
-    margin-top: 0;
-    color: var(--primary-color);
-}
-
-.key-outcomes ul {
-    margin-bottom: 0;
-}
-
+p.intro {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .scaling-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .scaling-list li {
+            background-color: green;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: var(--dark);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Horizontal Timeline (Desktop) */
+        .timeline-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+        
+        .timeline-track {
+            position: relative;
+            height: 6px;
+            background: linear-gradient(to right, orange, green);
+            border-radius: 3px;
+            margin: 0 50px;
+        }
+        
+        .timeline-items {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: -25px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-badge {
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 200px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .timeline-year {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .plus-icon {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+        
+        /* Vertical Timeline (Mobile) */
+        @media screen and (max-width: 768px) {
+            .timeline-container {
+                padding: 40px 0;
+            }
+            
+            .timeline-track {
+                display: none;
+            }
+            
+            .timeline-items {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 40px;
+                position: relative;
+                padding-left: 40px;
+            }
+            
+            .timeline-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: 15px;
+                top: 30px;
+                bottom: -40px;
+                width: 2px;
+                background: linear-gradient(to bottom, green,green);
+            }
+            
+            .timeline-item:last-child::before {
+                display: none;
+            }
+            
+            .timeline-badge {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin-bottom: 0;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                max-width: none;
+                text-align: left;
+                margin-left: 30px;
+            }
+            
+            .scaling-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
 /* Slide 6: Scaling Pathway #2 */
 .process-flow {
     display: grid;
@@ -3143,43 +3195,67 @@
             </div>
         </div>
                 <!---------------------------------- Slide 4: Scaling Farm Hub -->
-       
-        
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content-5">
-                <h1>SCALING FARM HUB</h1>
-                <p>Our overarching goal is to expand our reach far beyond one region. We envision a strategic approach to scaling the business:</p>
-                <ul class="scaling-list">
-                    <li>Piloting Farm Hub</li>
-                    <li>Development of playbook</li>
-                    <li>Establishment of Additional Farm Hubs</li>
-                    <li>Franchise Model</li>
-                </ul>
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-year">2024</div>
-                        <div class="timeline-content">Piloting Farm Hub</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">Development of playbook</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2026</div>
-                        <div class="timeline-content"> <span style="font-size:2rem; font-weight: 600;">+</span> One Farm Hubs</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2027</div>
-                        <div class="timeline-content"><span style="font-size:2rem; font-weight: 600;">+</span>Two Farm Hubs</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2028</div>
-                        <div class="timeline-content">Franchise Model</div>
+                <div class="slide">
+                    <div class="slide-content-5">
+                        <h1>SCALING FARM HUB</h1>
+                        <p class="intro">Our overarching goal is to expand our reach far beyond one region. We envision a strategic approach to scaling the business:</p>
+                        
+                        <ul class="scaling-list">
+                            <li>Piloting Farm Hub</li>
+                            <li>Development of playbook</li>
+                            <li>Establishment of Additional Farm Hubs</li>
+                            <li>Franchise Model</li>
+                        </ul>
+                        
+                        <div class="timeline-container">
+                            <div class="timeline-track"></div>
+                            <div class="timeline-items">
+                                <div class="timeline-item">
+                                    <div class="timeline-badge">1</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2024</div>
+                                        <p>Piloting Farm Hub</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-badge">2</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2025</div>
+                                        <p>Development of playbook</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-badge">3</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2026</div>
+                                        <p><span class="plus-icon">+</span> One Farm Hub</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-badge">4</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2027</div>
+                                        <p><span class="plus-icon">+</span> Two Farm Hubs</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-badge">5</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2028</div>
+                                        <p>Franchise Model</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            
+     
+    
         <!--------------------------------- Slide 8: WHY FARM HUB WORKS -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
@@ -3219,22 +3295,7 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial -->
-                <div class="why-testimonial">
-                    <div class="why-testimonial-content">
-                        <img src="https://via.placeholder.com/80" alt="Farmer" class="why-testimonial-img">
-                        <div>
-                            <p class="why-testimonial-quote">
-                            
-                            </p>
-                            <p class="why-testimonial-author">- ?????????</p>
-                        </div>
-                    </div>
-                    <div class="why-testimonial-label">
-                        <i class="fas fa-quote-left"></i> REAL IMPACT
-                    </div>
-                </div>
-            </div>
+             </div>
         </div>
         <!---------------------------------- Slide 5: Scaling Pathway #1 -->
         <div class="slide">
@@ -4451,5 +4512,39 @@
     </script>
 
     
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    // Animation for timeline items
+    document.addEventListener('DOMContentLoaded', function() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        function checkVisibility() {
+            timelineItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (itemTop < windowHeight * 0.75) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initial check
+        checkVisibility();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkVisibility);
+    });
+</script>
 </body>
 </html>
