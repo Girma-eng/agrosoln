@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,6 +163,10 @@
             overflow-y: auto;
             position: relative;
         }
+        .slide-title-page h1 {
+                font-size: 4rem;
+                color:green;
+            }
         .slide-content-2 h1{
             font-size: 5.6rem;
             text-align: left;
@@ -187,7 +192,7 @@
             max-width: 60%;
            margin-left: 40px;
             font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
-            font-size: 3.8rem;
+            font-size: 2.8rem;
             text-align: left;
             text-shadow: 
                     -1px -1px 0 black,  
@@ -196,6 +201,11 @@
                     1px  1px 0 black; /* Black border around the text */
 
         }
+        .content-farmhub-title h1{
+                   font-size: 4.5rem;
+                   color: white;
+
+                }
         .content-farmhub-title h3{
                    font-size: 4.5rem;
                    color: white;
@@ -304,13 +314,7 @@
             transform: translateX(10px);
         }
         
-        .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            max-width: 100px;
-            z-index: 100;
-        }
+  
         
         .car-container {
             display: flex;
@@ -415,6 +419,10 @@
                 width: 95%;
                 height: 55%;
                 padding-left: 10px;
+            }
+            .slide-title-page h1{
+                
+                font-size: 2rem;
             }
             .slide-content-2 {
             font-family: "Barlow Semi Condensed";
@@ -740,6 +748,14 @@
                 top: 30px !important; /* Match the margin-top */
                 height: calc(100% - 30px) !important;
             }
+            
+            .logo {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            max-width: 30px;
+            z-index: 100;
+        }
         }
 
 
@@ -1081,16 +1097,18 @@
     
     .challenges-card-header h3 {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .challenges-card-content {
-        padding: 20px;
+        padding: 5px;
+      
     }
     
     .challenges-card-content p {
         margin: 0;
         line-height: 1.6;
+           font-size: 0.9rem;
     }
     
     .challenges-emphasis {
@@ -1353,9 +1371,10 @@
 .approach-card {
     background: white;
     border-radius: 10px;
-    padding: 25px;
+    padding: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     position: relative;
+    
 }
 
 .card-number {
@@ -2115,7 +2134,7 @@ p.intro {
             display: inline-block;
             padding: 0.9rem 2rem;
             border-radius:20px;
-            font-size: 4rem;
+            font-size: 2rem;
             margin: 0.25rem;
             line-height: 1.4;
             text-align: center;
@@ -2906,7 +2925,9 @@ p.intro {
         <!-- Slide 1: Title Slide -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
+                <div class="slide-title-page">
                 <h1>Farm Hub Ethiopia</h1>
+            </div>
                 <h2>Bridging the Gap Between Modern and Subsistence Farming</h2>
                
                 <div class="highlight-box-2">
@@ -3181,8 +3202,9 @@ p.intro {
         <!----------------------------------- Slide 8: Challenges Farm Hub Addresses -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+              <h1>Challenges Farm Hub Addresses</h1>
             <div class="slide-content">
-                <h1>Challenges Farm Hub Addresses</h1>
+              
                 
                 <div class="challenges-container">
                     <!-- Challenge Cards -->
@@ -3257,8 +3279,9 @@ p.intro {
         <div class="slide bg-image" style="background-image: url('image_file/regen_14.jpg');">
        
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+                       <h1>Our Approach</h1>
             <div class="slide-content-3">
-                <h1>Our Approach</h1>
+     
                 <div class="approach-grid">
                     <div class="approach-card">
                         <div class="card-number">1</div>
@@ -3287,8 +3310,8 @@ p.intro {
         <div class="slide bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <button class="back-to-toc">Back to TOC</button>
             <div class="slide-content">
-                <h1 class="services-title">Our <span>Comprehensive</span> Services</h1>
-                <p class="services-subtitle">End-to-end solutions transforming Ethiopian agriculture</p>
+                <h1 class="services-title" style="font-size:1.4rem">Our Comprehensive Services</h1>
+                <p class="services-subtitle" style="font-size:0.9rem">End-to-end solutions transforming Ethiopian agriculture</p>
                 
                 <div class="services-grid">
                     <!-- Mechanization Services -->
@@ -3393,7 +3416,7 @@ p.intro {
                 </div>
                 
                 <div class="service-cta">
-                    <p>All services available through our <strong>Farm Hub Centers</strong> or <strong>Mobile Units</strong></p>
+                    <p>All services available through our <strong>Farm Hub Centers</strong> <strong></strong></p>
                     <button class="cta-button">Contact Our Team Today</button>
                 </div>
             </div>
@@ -3472,7 +3495,7 @@ p.intro {
                         <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
                             <div class="vision-card-icon">🧠</div>
                             <div class="vision-card-title-container">
-                                <h3>Scaling Pathway- #1- Farm Hub Pilot</h3>
+                                <h3 style="font-size:1.0rem">#1- Farm Hub Pilot</h3>
                                 <p></p>
                             </div>
                             <div class="vision-toggle-icon">▼</div>
@@ -3503,7 +3526,7 @@ p.intro {
                         <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
                             <div class="vision-card-icon">🏭</div>
                             <div class="vision-card-title-container">
-                                <h3>Scaling Pathway- #2- Playbook-Repeatability Through Standardisation</h3>
+                                <h3 style="font-size:1.0rem">#2- Playbook-Repeatability by Standardisation</h3>
                                 <p>Formalising the Farm Lab Ethiopia playbook</p>
                                 
                             </div>
@@ -3566,7 +3589,7 @@ p.intro {
                         <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
                             <div class="vision-card-icon">🌱</div>
                             <div class="vision-card-title-container">
-                                <h3> Scaling Pathway- #3-Real-World Stress Testing</h3>
+                                <h3 style="font-size:1.0rem"> #3-Real-World Stress Testing</h3>
                                 
                             </div>
                             <div class="vision-toggle-icon">▼</div>
@@ -3589,7 +3612,7 @@ p.intro {
                         <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
                             <div class="vision-card-icon">🌱</div>
                             <div class="vision-card-title-container">
-                                <h3> Scaling Pathway- #4 - Repeatability Through Franchising</h3>
+                                <h3 style="font-size:1.0rem"> #4 - Repeatability Through Franchising</h3>
                                 
                             </div>
                             <div class="vision-toggle-icon">▼</div>
