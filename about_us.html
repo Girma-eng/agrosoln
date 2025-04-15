@@ -15,7 +15,7 @@
             --secondary-color: #7cb342;
             --accent-color: #ffc107;
             --text-color: #333;
-            --light-text: #f5f5f5;
+            --light-text: #881c1c;
             --dark-green: #1b5e20;
         }
         :root {
@@ -80,6 +80,7 @@
         }
         .slide-content h2{
             font-size: 1.4rem;
+            padding: 10px 4px;
         }
         .slide-content-2 {
             font-family: "Barlow Semi Condensed";
@@ -131,6 +132,28 @@
             width: 60%;
             height: 85%;
             background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+        }
+        .slide-content-6 {
+            max-width: 2000px;
+            width: 98%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+        }
+        .slide-content-7 {
+            max-width: 1800px;
+            width: 95%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -412,11 +435,18 @@
             height: 95%;
          
         }
-        .slide-content h2 {
-                padding: 10px 4px;
-                width: 95%;
-                height: 85%;
-            }
+        .slide-content-7 {
+           
+            width: 98%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+        }
+      
         .slide-content-2 h1{
             font-size: 2.2rem;
             line-height: 1.3rem;
@@ -2390,32 +2420,77 @@ p.intro {
 
 
 
-                .slide-container-service {
-            width: 100vw;
-            height: 100vh;
+.slide-container-service {
+            max-width: 2000px;
+            margin: 0 auto;
             position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
         }
 
-     
-                .decorative-line {
+        .slide-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .slide-header h1 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-header p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .decorative-line {
             height: 4px;
             width: 80px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
-            margin: 0.5rem auto 2rem;
+            margin: 0 auto;
             border-radius: 2px;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0 1rem;
+        }
+        
+        .category-tab {
+            padding: 0.7rem 1.5rem;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            font-size: 0.95rem;
+            color: #444;
+        }
+        
+    
+        .category-tab.active {
+                background: var(--primary-color);
+                color: white;
+            }
+
+        .category-tab:hover:not(.active) {
+            background: #e0e0e0;
         }
         
         .machinery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 0 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 0 2rem;
         }
-        
+     
         .machinery-card {
             background: white;
             border-radius: 12px;
@@ -2423,12 +2498,11 @@ p.intro {
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
             position: relative;
-            cursor: pointer;
             height: 380px;
         }
         
         .machinery-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.12);
         }
         
@@ -2440,17 +2514,20 @@ p.intro {
         }
         
         .machinery-card:hover .card-image {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
         
         .card-content {
             padding: 1.5rem;
             position: relative;
+            height: calc(380px - 180px);
+            display: flex;
+            flex-direction: column;
         }
         
         .card-title {
             font-size: 1.3rem;
-            color: var(--primary);
+            color: var(--dark);
             margin-bottom: 0.8rem;
             font-weight: 600;
         }
@@ -2460,24 +2537,17 @@ p.intro {
             font-size: 0.95rem;
             line-height: 1.5;
             margin-bottom: 1rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            flex-grow: 1;
         }
         
         .card-footer {
-            position: absolute;
-            bottom: 1.5rem;
-            left: 1.5rem;
-            right: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .card-price {
-            background: orange;
+            background: rgba(255, 165, 0, 0.2);
             color: var(--dark);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -2490,64 +2560,36 @@ p.intro {
             font-size: 1.2rem;
         }
         
-        .category-tabs {
-            display: flex;
-            justify-content: center;
-            margin: 1.5rem 0 2rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .category-tab {
-            padding: 0.6rem 1.5rem;
-            background: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            margin: 0.3rem;
-        }
-        
-        .category-tab.active {
-            background: greenyellow;
-            color: white;
-        }
-        
-        .category-tab:hover:not(.active) {
-            background: #e0e0e0;
-        }
-        
         .floating-stats {
-            position: absolute;
+            position: fixed;
             top: 50%;
-            right: -100px;
+            right: -100%;
             transform: translateY(-50%);
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            width: 300px;
             opacity: 0;
-            transition: all 0.5s ease;
-            z-index: 10;
+            transition: all 0.4s ease;
+            z-index: 100;
         }
         
         .floating-stats.show {
-            right: 30px;
+            right: 20px;
             opacity: 1;
         }
         
         .stats-title {
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-size: 1.2rem;
             text-align: center;
+            font-weight: 600;
         }
         
         .stat-item {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
         
         .stat-label {
@@ -2557,7 +2599,7 @@ p.intro {
         }
         
         .stat-value {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--dark);
         }
@@ -2572,7 +2614,7 @@ p.intro {
         
         .stat-progress {
             height: 100%;
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 3px;
         }
         
@@ -2580,17 +2622,17 @@ p.intro {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.3);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
             z-index: 100;
             border: none;
             transition: all 0.3s ease;
@@ -2600,28 +2642,74 @@ p.intro {
             transform: scale(1.1);
             background: var(--secondary);
         }
-        
+
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
-            .machinery-grid {
-                grid-template-columns: 1fr;
-                padding: 0 1.5rem;
+            .slide-header h1 {
+                font-size: 1.8rem;
             }
             
-            .slide-header h1 {
-                font-size: 2rem;
+            .slide-header p {
+                font-size: 1rem;
+            }
+            
+            .category-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                margin: 1.5rem 0;
+            }
+            
+            .category-tabs::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .category-tab {
+                flex: 0 0 auto;
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .machinery-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+                gap: 1.5rem;
+            }
+            
+            .machinery-card {
+                height: auto;
+                min-height: 380px;
+                display: none;
+            }
+            
+            .machinery-card[data-category="land"] {
+                display: block;
+            }
+            
+            .machinery-card.active {
+                display: block;
             }
             
             .floating-stats {
                 width: 90%;
                 right: -100%;
-                left: auto;
+                padding: 1.2rem;
             }
             
             .floating-stats.show {
                 right: 5%;
             }
+            
+            .toggle-stats {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+                bottom: 20px;
+                right: 20px;
+            }
         }
-
 
 
 
@@ -2675,11 +2763,11 @@ p.intro {
         }
         
         .achievement-content {
-            padding: 25px;
+            padding: 10px 10px;
         }
         
         .achievement-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             color: #2c3e50;
             position: relative;
@@ -2691,7 +2779,7 @@ p.intro {
             position: absolute;
             bottom: 0;
             left: 100px;
-            width: 50px;
+            width: 150px;
             height: 3px;
             background-color: #2ecc71;
 
@@ -2700,10 +2788,12 @@ p.intro {
         .achievement-description {
             color: #7f8c8d;
             margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6rem;
         }
         
         .achievement-icon {
-            font-size: 2.5rem;
+            font-size: 2.0rem;
             color: #3498db;
             margin-bottom: 15px;
         }
@@ -2721,6 +2811,33 @@ p.intro {
                 font-size: 2rem;
                 margin-bottom: 30px;
             }
+            .achievement-icon {
+            font-size: 1.6rem;
+            color: #3498db;
+            margin-bottom: 4px;
+            
+        }
+        .achievement-content {
+            padding: 2px 7px;
+        }
+        .achievement-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+           
+            padding-bottom: 5px;
+        }
+        
+        .achievement-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 70px;
+            width: 150px;
+            height: 3px;
+            background-color: #2ecc71;
+
+        }
         }
 
 
@@ -2988,12 +3105,12 @@ p.intro {
                     <span>The Implementation Hand</span>
                 </li>
             </div>
-    </div>  
-        <!----------------------------------- Slide 6:About Us -->
+        </div>  
+        <!----------------------------------- Slide 7:About Us -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content">
-                <h1>About Us</h1>
+                <h2>About Us</h2>
                 
                 <div class="about-container">
                     <!-- Image Section -->
@@ -3025,8 +3142,7 @@ p.intro {
                 </div>
             </div>
         </div>
-        <!----------------------------------- Slide 7: Challenges Farm Hub Addresses -->
-
+        <!----------------------------------- Slide 8: Challenges Farm Hub Addresses -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content">
@@ -3075,7 +3191,7 @@ p.intro {
                 </div>
             </div>
         </div>
-     <!---------------------------------- Slide 9: Vision & Mission -->
+        <!---------------------------------- Slide 9: Vision & Mission -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content vision-mission-slide">
@@ -3091,7 +3207,6 @@ p.intro {
                 </div>
             </div>
         </div>
-
         <!---------------------------------- Slide 10: How We Do It -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_12.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
@@ -3132,7 +3247,7 @@ p.intro {
                 </div>
             </div>
         </div>
-       <!-------------------------------------- Slide 8: Our Services -->
+       <!-------------------------------------- Slide 12: Our Comprehensive Services -->
         <div class="slide bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <button class="back-to-toc">Back to TOC</button>
             <div class="slide-content">
@@ -3247,9 +3362,9 @@ p.intro {
                 </div>
             </div>
         </div>
-        <!----------------------------------- Slide 8: Mechanization Solutions -->
+        <!----------------------------------- Slide 13: Mechanization Solutions -->
         <div class="slide" id="mechanization-slide">
-            <div class="slide-content">
+            <div class="slide-content-6">
             <div class="slide-container-service">
                 <div class="slide-header">
                     <h1>Mechanization Solutions</h1>
@@ -3348,31 +3463,7 @@ p.intro {
             </div>
         </div>
         </div>
-        <!------------------------------------ Slide 9: Digital Solutions -->
-        <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Digital Farming Solutions</h1>
-                <p>Our Agrosoln platform connects farmers to services and markets</p>
-                <div class="two-columns">
-                    <div class="column">
-                        <h2>Features</h2>
-                        <p>Equipment booking system</p>
-                        <p>Input marketplace</p>
-                        <p>Weather alerts</p>
-                        <p>Pest/disease diagnosis</p>
-                    </div>
-                    <div class="column">
-                        <h2>Benefits</h2>
-                        <p>Real-time service access</p>
-                        <p>Transparent pricing</p>
-                        <p>Mobile payments</p>
-                        <p>Market price information</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!---------------------------------- Slide 4: Scaling Farm Hub -->
+       <!---------------------------------- Slide 14: Scaling Farm Hub -->
         <div class="slide">
             <div class="slide-content-5">
                 <h1>SCALING FARM HUB</h1>
@@ -3431,11 +3522,10 @@ p.intro {
                 </div>
             </div>
         </div>
-    
-        <!--------------------------- Slide 5: Scaling pathway -->
+        <!---------------------------------- Slide 15: Scaling pathway -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content-4">
+            <div class="slide-content-6">
                 <h1>Scaling Pathway</h1>
                 <p class="solution-subtitle">The Transformation Ecosystem</p>
                 
@@ -3584,9 +3674,7 @@ p.intro {
                
             </div>
         </div>
-     
-    
-        <!--------------------------------- Slide 8: WHY FARM HUB WORKS -->
+        <!--------------------------------- Slide 16: WHY FARM HUB WORKS -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content">
@@ -3627,10 +3715,10 @@ p.intro {
                 
              </div>
         </div>
-        <!-- Slide 1: Achievements, Learning Visits, Understanding Existing System -->
+        <!--------------------------------- Slide 17: Our Achievements -->
         <div class="slide">
             <h1 class="achievements-slide-title">Our Achievements</h1>
-            <div class="slide-content">
+            <div class="slide-content-7">
                 <div class="achievements-container">
                     <!-- Achievement 1 -->
                     <div class="achievement-card">
@@ -3685,522 +3773,203 @@ p.intro {
             </div>
         </div>
 
-          <!-- Slide 1: Achievements, Learning Visits, Understanding Existing System -->
-          <div class="slide">
-            <h1 class="achievements-slide-title">Our Achievements</h1>
-            <div class="slide-content">
-                <div class="achievements-container">
-                    <!-- Achievement 1 -->
-                    <div class="achievement-card">
-                        <img src="image_file/nick_farm.jpg" 
-                            alt="Learning Visit" class="achievement-image">
-                        <div class="achievement-content">
-                            <div class="achievement-icon">📚</div>
-                            <h2 class="achievement-title">Learning Visit</h2>
-                            <p class="achievement-description">
-                                As part of our learning journey, we had the privilege of visiting UWEPO Farm in Uganda, owned by Nick Dekoning. 
-                                The farm is a shining example of regenerative agriculture, showcasing excellence in sustainable and climate-resilient farming practices.
-
-                                We also visited Wondo Genet College and the Wondo Genet Research Center in Ethiopia, alongside our partners from Studio Soal (Ireland). 
-                                This experience allowed us to explore innovations in agroforestry and herbal plant production, expanding our understanding of integrated, nature-based farming systems.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Achievement 2 -->
-                    <div class="achievement-card">
-                        <img src="image_file/survey_1.jpg" 
-                            alt="System Understanding" class="achievement-image">
-                        <div class="achievement-content">
-                            <div class="achievement-icon">🔍</div>
-                            <h2 class="achievement-title">Understanding the Existing System</h2>
-                            <p class="achievement-description">
-                                The survey was conducted to analyze the current mechanization landscape in Ethiopia and identify existing gaps. 
-                                Our team thoroughly analyzed and documented the existing systems architecture, identifying 
-                                key areas for improvement. It assessed key components such as available equipment, infrastructure, personnel, business models, and training 
-                                facilities of mechanization service providers across various regions. This deep understanding allowed us to optimize processes and 
-                                implement more effective solutions tailored to our specific needs.
-                                </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Achievement 3 -->
-                    <div class="achievement-card">
-                        <img src="image_file/business_model_1.jpg" 
-                            alt="Mechanization Development" class="achievement-image">
-                        <div class="achievement-content">
-                            <div class="achievement-icon">⚙️</div>
-                            <h2 class="achievement-title">Mechanization Business Development</h2>
-                            <p class="achievement-description">
-                                As part of our transformative efforts, we organized a dedicated workshop focused on co-developing sustainable business 
-                                models for agricultural mechanization. The session included hands-on training on the Business Model Canvas, equipping 
-                                participants with practical tools and insights to design innovative, viable, and context-specific strategies for mechanization 
-                                service delivery.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+       <!----------------------------------- Slide 18: Piloting Farm hub -->
+       <div class="slide" id="mechanization-slide">
+        <div class="slide-content-6">
+        <div class="slide-container-service">
+            <div class="slide-header">
+                <h1>Farm Hub Piloting</h1>
+                <p>Innovative agricultural mechanization solutions for Ethiopia</p>
+                <div class="decorative-line"></div>
             </div>
-        </div>
-
-        <!-- Slide 1: Achievements, Learning Visits, Understanding Existing System -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <!-- Achievements Section -->
-                <div class="achievements-section">
-                    <h1>Our <span class="highlight">Achievements</span></h1>
-                    <p>Farm Lab Ethiopia is committed to bridging the gap between traditional smallholder farming and modern agricultural solutions by promoting regenerative practices and cutting-edge technology. <span class="highlight-green">With a strong focus on innovation and sustainability, we have made notable progress.</span></p>
-                </div>
-
-                <!-- Learning Visits Section -->
-                <div class="learning-visits-section">
-                    <h2 class="section-title">Learning Visits</h2>
-                    <div class="grid-container">
-                        <div class="text-cell">
-                            <p>During our learning journey, we had the privilege of visiting UWEPO farm in Uganda to immerse ourselves in the world of regenerative 
-                                agriculture. Owned by Nick Dekoning, the farm exemplifies excellence in sustainable farming practices.</p>
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/nick_farm.jpg" alt="UWEPO Farm">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/wondo.jpg" alt="Wondo Genet">
-                        </div>
-                        <div class="text-cell">
-                            <p>Visit to Wondo Genet College and Wondo Genet Research Center, accompanied by our partner from Studio Soal, 
-                                Ireland, we had the opportunity to explore agroforestry and herbal plant production.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Understanding Existing System Section -->
-                <div class="existing-system-section">
-                    <h2 class="section-title">Understanding the Existing System</h2>
-                    <div class="grid-container">
-                        <div class="text-cell">
-                            <p>The survey aimed to understand the problem—the existing mechanization system and gap analysis by assessing existing equipment, infrastructure, personnel, business models, and training facilities of mechanization service providers in different parts of the country.</p>
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/survey_1.jpg" alt="Survey 1">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/survey_2.jpg" alt="Survey 2">
-                        </div>
-                        <div class="text-cell">
-                            <p>The survey results highlighted common challenges faced by mechanization service providers in Ethiopia, including the unavailability of spare parts, financial constraints, limited maintenance services, and high fuel costs.</p>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="tech_sourcing">Technology Sourcing</button>
+                <button class="category-tab" data-category="partnership">Partnership and Team Formation</button>
+                <button class="category-tab" data-category="field_trials">Field Trials & Evaluations</button>
+                <button class="category-tab" data-category="others">Demonstration Activities</button>
             </div>
-        </div>
-
-        <!-- Slide 2: Business Model Development, Piloting Farm Hub, Technology Sourcing -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <!-- Business Model Development Section -->
-                <div class="business-model-section">
-                    <h2 class="section-title">Business Model Development</h2>
-                    <div class="grid-container">
-                        <div class="text-cell">
-                            <p>As part of our transformative journey, we organized a workshop aimed at co-creating a business model for agricultural mechanization.</p>
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/business_model_1.jpg" alt="Business Model Workshop">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/business_model_2.jpg" alt="Business Model Training">
-                        </div>
-                        <div class="text-cell">
-                            <p>During the workshop, we provided comprehensive training on the business model canvas, empowering participants with the tools and knowledge needed to develop innovative and viable strategies.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Piloting Farm Hub Section -->
-                <div class="pilot-section">
-                    <h1>Piloting Farm Hub</h1>
-                    <div class="pilot-image">
-                        <img src="image_file/super_seeder_1.jpg" alt="Farm Hub Pilot">
-                    </div>
-                </div>
-
-                <!-- Technology Sourcing Section -->
-                <div class="tech-sourcing-section">
-                    <h2 class="section-title">Technology Sourcing</h2>
-                    <div class="tech-grid">
-                        <div class="text-cell">
-                            <p>We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor</p>
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/super_seeder_1.jpg" alt="Super Seeder">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/potato_planter.jpg" alt="Potato Planter">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/farm_hub_equip_1.jpg" alt="Farm Hub Equipment">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3: Partnership and Team Formation, Our Team -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <!-- Partnership Section -->
-                <div class="partnership-section">
-                    <h2 class="section-title">Partnership and Team Formation</h2>
-                    <div class="grid-container">
-                        <div class="text-cell">
-                            <p>Diving Into Innovation: Farm Lab's Year-Long Pilot at Hawassa University</p>
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/partnership_4.jpg" alt="Partnership 1">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/partnership_6.jpg" alt="Partnership 2">
-                        </div>
-                        <div class="image-cell">
-                            <img src="image_file/team_1.jpg" alt="Team Photo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Section -->
-                <div class="team-section">
-                    <h1>Our Team</h1>
-                    <p class="team-subtitle">The Experts Behind Our Success</p>
+            
+            <div class="machinery-grid">
+                
+                <!-- Tractor Services -->
+                <div class="machinery-card active" data-category="tech_sourcing">
                     
-                    <div class="team-grid">
-                        <!-- Team Member 1 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="image_file/girma.jpg" alt="Girma">
-                            </div>
-                            <h3>Girma</h3>
-                            <p class="role">CEO & Founder</p>
-                            <div class="expertise">
-                                <span>Strategy</span>
-                                <span>Leadership</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Team Member 2 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="image_file/alemayhu.jpg" alt="Alemayhu">
-                            </div>
-                            <h3>Alemayhu</h3>
-                            <p class="role">CTO</p>
-                            <div class="expertise">
-                                <span>Technology</span>
-                                <span>Innovation</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Team Member 3 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="image_file/Nitsuh.jpg" alt="Nitsuh">
-                            </div>
-                            <h3>Nitsuh</h3>
-                            <p class="role">Design Lead</p>
-                            <div class="expertise">
-                                <span>UX/UI</span>
-                                <span>Branding</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Team Member 4 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="https://via.placeholder.com/200" alt="Team Member">
-                            </div>
-                            <h3>Sarah</h3>
-                            <p class="role">Marketing Director</p>
-                            <div class="expertise">
-                                <span>Growth</span>
-                                <span>Strategy</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="team-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Years Combined Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">∞</span>
-                            <span class="stat-label">Creativity</span>
+                    <img src="image_file/farm_hub_equip_1.jpg" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Technology Souring</h3>
+                        <p class="card-description">We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor</p>
+                        <div class="card-footer">
+                            <span class="card-price"></span>
+                            <i class="fas fa-tractor card-icon"></i>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-
-
-
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <!-- Learning Visits Section -->
-                <div class="section-container">
-                    <h2 class="section-title">Learning & Research Journey</h2>
-                    
-                    <div class="two-column-layout">
-                        <div class="text-content">
-                            <h3>UWEPO Farm, Uganda</h3>
-                            <p>During our learning journey, we had the privilege of visiting UWEPO farm in Uganda to immerse ourselves in regenerative agriculture practices. Owned by Nick Dekoning, the farm exemplifies excellence in sustainable farming.</p>
-                            
-                            <h3>Wondo Genet Research</h3>
-                            <p>Visit to Wondo Genet College and Research Center, accompanied by our partner from Studio Soal, Ireland, provided valuable insights into agroforestry and herbal plant production techniques.</p>
+                <div class="machinery-card active" data-category="tech_sourcing">
+                    <img src="image_file/potato_planter.jpg" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="card-description"></p>
+                        <div class="card-footer">
+                            <span class="card-price"></span>
+                            <i class="fas fa-tractor card-icon"></i>
                         </div>
-                        
-                        <div class="image-gallery">
-                            <div class="image-container">
-                                <img src="image_file/nick_farm.jpg" alt="UWEPO Farm Visit">
-                                <p class="image-caption">UWEPO Farm - Model of Regenerative Agriculture</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="image_file/wondo.jpg" alt="Wondo Genet Visit">
-                                <p class="image-caption">Research Collaboration at Wondo Genet</p>
-                            </div>
+                    </div>
+                </div>
+                <div class="machinery-card active" data-category="tech_sourcing">
+                    <img src="image_file/super_seeder_1.jpg" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="card-description"></p>
+                        <div class="card-footer">
+                            <span class="card-price"></span>
+                            <i class="fas fa-tractor card-icon"></i>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Understanding Existing Systems Section -->
-                <div class="section-container highlighted-section">
-                    <h2 class="section-title">Understanding Current Mechanization Systems</h2>
-                    
-                    <div class="content-grid">
-                        <div class="key-findings">
-                            <h3>Survey Insights</h3>
-                            <ul>
-                                <li>Comprehensive assessment of equipment, infrastructure, and training facilities</li>
-                                <li>Identified gaps in service provider capabilities across regions</li>
-                                <li>Developed customized improvement plans for each location</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="image-stack">
-                            <div class="image-wrapper">
-                                <img src="image_file/survey_1.jpg" alt="Field Survey">
-                                <p class="image-label">Field Data Collection</p>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="image_file/survey_2.jpg" alt="Stakeholder Engagement">
-                                <p class="image-label">Stakeholder Interviews</p>
-                            </div>
-                        </div>
-                        
-                        <div class="challenges-box">
-                            <h3>Key Challenges Identified</h3>
-                            <div class="challenge-tags">
-                                <span>Spare parts availability</span>
-                                <span>Financial constraints</span>
-                                <span>Maintenance services</span>
-                                <span>Fuel costs</span>
-                                <span>Training limitations</span>
-                            </div>
+                <div class="machinery-card active" data-category="planting">
+                    <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Tractor Services</h3>
+                        <p class="card-description">Our tractor services provide powerful and efficient land preparation with various implements including plows, harrows, and cultivators. Suitable for all farm sizes with trained operators.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From 800 ETB/hour</span>
+                            <i class="fas fa-tractor card-icon"></i>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Business Model Development Section -->
-                <div class="section-container">
-                    <h2 class="section-title">Co-Creating Sustainable Business Models</h2>
-                    
-                    <div class="workshop-highlights">
-                        <div class="workshop-details">
-                            <h3>Participatory Workshop</h3>
-                            <p>Brought together service providers, farmers, engineers, agricultural experts, and bank representatives to collaboratively design sustainable mechanization business models.</p>
-                            
-                            <h3>Capacity Building</h3>
-                            <p>Comprehensive training on the business model canvas empowered participants with tools to develop viable strategies tailored to local contexts.</p>
-                        </div>
-                        
-                        <div class="workshop-visuals">
-                            <div class="visual-card">
-                                <img src="image_file/business_model_1.jpg" alt="Workshop Session">
-                                <p>Stakeholder Collaboration</p>
-                            </div>
-                            <div class="visual-card">
-                                <img src="image_file/business_model_2.jpg" alt="Training Session">
-                                <p>Model Development Training</p>
-                            </div>
+                <!-- Disk Harrow -->
+                <div class="machinery-card" data-category="planting">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Disk Harrow" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Disk Harrow</h3>
+                        <p class="card-description">Robust secondary tillage implement designed to refine soil structure after primary plowing. Breaks clods, incorporates residues, and eliminates weeds for optimal seedbed preparation.</p>
+                        <div class="card-footer">
+                            <span class="card-price">Compatible with 50HP</span>
+                            <i class="fas fa-tools card-icon"></i>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Super Seeder -->
+                <div class="machinery-card" data-category="field_trials">
+                    <img src="image_file/super_seeder_1.jpg" alt="Super Seeder" class="card-image">
+                    <div class="card-content">
+                     
+                        <h3 class="card-title">Super Seeder</h3>
+                        <p class="card-description">Revolutionizes planting by enabling direct seeding without prior tillage. Combines residue management, seeding, and fertilization in a single pass, saving time and protecting soil health.</p>
+                        <div class="card-footer">
+                            <span class="card-price">30% Time Saving</span>
+                            <i class="fas fa-seedling card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="machinery-card active" data-category="partnership">
                     
-                    <div class="outcome-box">
-                        <h3>Workshop Outcomes</h3>
-                        <div class="outcome-items">
-                            <div class="outcome-item">
-                                <div class="outcome-icon">✓</div>
-                                <p>Inclusive model reflecting diverse stakeholder perspectives</p>
-                            </div>
-                            <div class="outcome-item">
-                                <div class="outcome-icon">✓</div>
-                                <p>Practical frameworks for sustainable operations</p>
-                            </div>
-                            <div class="outcome-item">
-                                <div class="outcome-icon">✓</div>
-                                <p>Roadmap for implementation and scaling</p>
-                            </div>
+                    <img src="image_file/partnership_4.jpg" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Partnership and Team Formation</h3>
+                        <p class="card-description">We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor</p>
+                        <div class="card-footer">
+                            <span class="card-price"></span>
+                            <i class="fas fa-tractor card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="machinery-card active" data-category="partnership">
+                    
+                    <img src="image_file/partnership_6.jpg" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Partnership and Team Formation</h3>
+                        <p class="card-description"></p>
+                        <div class="card-footer">
+                            <span class="card-price"></span>
+                            <i class="fas fa-tractor card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="machinery-card active" data-category="partnership">
+                    
+                    <img src="image_file/team_1.jpg" alt="Tractor" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Partnership and Team Formation</h3>
+                        <p class="card-description"></p>
+                        <div class="card-footer">
+                            <span class="card-price"></span>
+                            <i class="fas fa-tractor card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- XFarm -->
+                <div class="machinery-card" data-category="others">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="XFarm" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">XFarm Smart Farming</h3>
+                        <p class="card-description">Precision farm management platform offering real-time monitoring, crop health analysis, and automated irrigation control. Features AI-powered pest detection and yield prediction models.</p>
+                        <div class="card-footer">
+                            <span class="card-price">Digital Solution</span>
+                            <i class="fas fa-tablet-alt card-icon"></i>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="floating-stats">
+                <h4 class="stats-title">Impact Metrics</h4>
+                <div class="stat-item">
+                    <div class="stat-label">Yield Increase</div>
+                    <div class="stat-value">40-60%</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 70%"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Water Savings</div>
+                    <div class="stat-value">60%</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 60%"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Labor Reduction</div>
+                    <div class="stat-value">80%</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Adoption Rate</div>
+                    <div class="stat-value">300+ Farms</div>
+                    <div class="stat-bar"><div class="stat-progress" style="width: 100%"></div></div>
+                </div>
+            </div>
+            
+            <button class="toggle-stats" id="toggleStats">
+                <i class="fas fa-chart-line"></i>
+            </button>
         </div>
-        
-      
+    </div>
+        </div>
 
 
-        
-        <!-- Slide 7: Our Connection -->
-        <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Our Strategic Partnership</h1>
-                <p>Farm Hub Ethiopia is the exclusive implementation partner of Regenerative Collective in Ethiopia</p>
-                <div class="two-columns">
-                    <div class="column">
-                        <h2>Knowledge Transfer</h2>
-                        <p>Global best practices</p>
-                        <p>Training of trainers</p>
-                        <p>Technology adaptation</p>
-                        <p>Monitoring frameworks</p>
-                    </div>
-                    <div class="column">
-                        <h2>Local Implementation</h2>
-                        <p>Context-specific solutions</p>
-                        <p>Local workforce development</p>
-                        <p>Community engagement</p>
-                        <p>Government collaboration</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-       
-        <!-- Slide 8: Our Services -->
-        <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Our Comprehensive Services</h1>
-                <div class="two-columns">
-                    <div class="column">
-                        <h2>Mechanization Services</h2>
-                        <p>Tractor rentals (hourly/daily)</p>
-                        <p>Harvesting equipment</p>
-                        <p>Planting services</p>
-                        <p>Irrigation systems</p>
-                    </div>
-                    <div class="column">
-                        <h2>Inputs & Advisory</h2>
-                        <p>Climate-smart seeds</p>
-                        <p>Organic fertilizers</p>
-                        <p>Soil health testing</p>
-                        <p>Crop protection</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 8: Mechanization Solutions -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Mechanization Services</h1>
-                <p>Affordable, appropriate technology for Ethiopian farms</p>
-                <div class="car-container">
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tractor" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Tractor Services</div>
-                            <p>From 800 ETB/hour including operator</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1591291621160-3b8e3be1d3c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Harvester" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Combine Harvesters</div>
-                            <p>Reduce losses from 30% to under 5%</p>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <img src="https://images.unsplash.com/photo-1627855437693-dcc7b0c4ba7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Irrigation" class="car-image">
-                        <div class="car-details">
-                            <div class="car-title">Drip Irrigation</div>
-                            <p>60% water savings, 2-3x yield increase</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 9: Digital Solutions -->
-        <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Digital Farming Solutions</h1>
-                <p>Our Agrosoln platform connects farmers to services and markets</p>
-                <div class="two-columns">
-                    <div class="column">
-                        <h2>Features</h2>
-                        <p>Equipment booking system</p>
-                        <p>Input marketplace</p>
-                        <p>Weather alerts</p>
-                        <p>Pest/disease diagnosis</p>
-                    </div>
-                    <div class="column">
-                        <h2>Benefits</h2>
-                        <p>Real-time service access</p>
-                        <p>Transparent pricing</p>
-                        <p>Mobile payments</p>
-                        <p>Market price information</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 10: Impact & Vision -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Our Impact & Future Vision</h1>
-                <div class="highlight-box">
-                    <p>"Already serving 8,000 farmers across 4 regions"</p>
-                </div>
-                <div class="two-columns">
-                    <div class="column">
-                        <h2>Current Impact</h2>
-                        <p>40-80% yield increases</p>
-                        <p>50% labor reduction</p>
-                        <p>30% input cost savings</p>
-                        <p>5,000+ trained farmers</p>
-                    </div>
-                    <div class="column">
-                        <h2>2030 Goals</h2>
-                        <p>1 million farmers reached</p>
-                        <p>National service coverage</p>
-                        <p>Carbon credit programs</p>
-                        <p>Youth employment initiative</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
         
         <!-- Slide 16: Financial Model -->
@@ -4586,7 +4355,7 @@ p.intro {
         const toggleStats = document.getElementById('toggleStats');
         
         // Initialize - show all land preparation cards by default
-        filterCards('land');
+        filterCards('tech_sourcing');
         
         // Tab click functionality
         tabs.forEach(tab => {
