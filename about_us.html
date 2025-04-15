@@ -80,7 +80,7 @@
         }
         .slide-content h2{
            
-            font-size: 4rem;
+            font-size: 2rem;
             padding: 10px 4px;
             font-weight: 600;
                 }
@@ -231,14 +231,18 @@
         
         .two-columns {
             display: flex;
-            flex-wrap: wrap;
+           flex-wrap: wrap;
             justify-content: space-between;
             margin-top: 20px;
         }
-        
+       
+        .two-columns {
+            display: flex;
+            gap: 2rem;
+        }
+
         .column {
-            flex: 0 0 48%;
-            margin-bottom: 20px;
+            flex: 1;
         }
       
         
@@ -459,13 +463,18 @@
             line-height: 1.3rem;
         }
         .slide-content h2 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             line-height: 1.3rem;
             margin-bottom: 2px; 
             padding:2px 20px;
             font-weight: 600;
          
 }
+.column {
+            flex: 0 0 100%;
+            margin-bottom: 20px;
+        }
+      
         }
         .highlight-box-2 {
             background-color: var(--accent-color);
@@ -528,13 +537,7 @@
                 font-size: 1.4rem;
             }
             
-            .two-columns {
-                flex-direction: column;
-            }
-            
-            .column {
-                flex: 0 0 100%;
-            }
+        
             
             .nav-bar {
                 padding: 4px 5px;
@@ -542,13 +545,7 @@
                 background-color: rgba(2554, 255, 255, 0.4);
             }
             
-            .nav-btn {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
-                margin: 0 5px;
-                background-color: white;
-            }
+
         
             .slide-counter {
                 min-width: 60px;
@@ -577,7 +574,7 @@
             max-width: 50px;
             z-index: 100;
         }
-        }
+        
 
 
 
@@ -2939,7 +2936,7 @@ p.intro {
             <div class="slide-content">
                
                 <div class="two-columns">
-                    <div class="column" style="flex: 0 1 40%;">
+                    <div class="column" >
                         <h2>The Challenge</h2>
                         <p style="color: white;">Our current food system is <span style="color: #ab5a5a; font-weight: 600;">broken </span> - the way we produce, distribute and consume food <span style="color: #e74c3c; font-weight: 600;">isn't working effectively. </span></p>
                             
@@ -3148,8 +3145,9 @@ p.intro {
         <!----------------------------------- Slide 7:About Us -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+            <h2>About Us</h2>
             <div class="slide-content">
-                <h2>About Us</h2>
+                
                 
                 <div class="about-container">
                     <!-- Image Section -->
