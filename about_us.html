@@ -173,6 +173,12 @@
             overflow-y: auto;
             position: relative;
         }
+        .slide-content-8 {
+                padding: 20px;
+                width: 95%;
+                height: 55%;
+                padding-left: 10px;
+            }
         .slide-content-2 h1{
             font-size: 5.6rem;
             text-align: left;
@@ -207,6 +213,11 @@
                     1px  1px 0 black; /* Black border around the text */
 
         }
+        .content-farmhub-title h1{
+                   font-size: 4.5rem;
+                   color: white;
+
+                }
         .content-farmhub-title h3{
                    font-size: 4.5rem;
                    color: white;
@@ -215,8 +226,6 @@
                 .content-farmhub-title p{
                    font-size: 2.5rem;
                    color: white;
-
-
                 }
         h1 {
             color: var(--primary-color);
@@ -467,6 +476,12 @@
             overflow-y: auto;
             position: relative;
         }
+        .slide-content-8 {
+                padding: 20px;
+                width: 95%;
+                height: 75%;
+                padding-left: 10px;
+            }
         .slide-content-1 h2{
                font-size: 1.4rem;
                color: green;
@@ -490,6 +505,21 @@
             .highlight-box-2 p {
             font-size: 1.0rem;
         }
+        .content-farmhub-title h1{
+                   font-size: 2.5rem;
+                   color: white;
+
+                }
+        .content-farmhub-title h3{
+                   font-size: 2.5rem;
+                   color: white;
+
+                }
+                .content-farmhub-title p{
+                   font-size: 1.3rem;
+                   color: white;
+                   line-height: 1.5rem;
+                }
         .column {
             flex: 0 0 100%;
             margin-bottom: 20px;
@@ -506,30 +536,9 @@
         .highlight-box-2 p {
             font-size: 1.3rem;
         }
-        .content-farmhub-title {
-            position: relative;
-            z-index: 1;
-            max-width: 95%;
-           margin-left: 40px;
-            font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
-            font-size: 3.8rem;
-            text-align: left;
-            text-shadow:
-                    -1px -1px 0 black,  
-                    1px -1px 0 black,
-                    -1px  1px 0 black,
-                    1px  1px 0 black; /* Black border around the text */
 
-        }
-        .content-farmhub-title h3{
-                   font-size: 2.5rem;
-
-                }
-                .content-farmhub-title p{
-                   font-size: 1.3rem;
-                   color:white;
-
-                }
+    
+            
 
                 .footer {
                    
@@ -971,6 +980,13 @@
         align-items: center;
         margin-top: 20px;
     }
+    .about-us-title {
+    color: rgb(14, 192, 32);
+    text-align: center;
+    font-size: 3rem;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
     
     .about-image {
         flex: 1;
@@ -1069,6 +1085,12 @@
         margin-bottom: 8px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
+    .about-us-title {
+    color: rgb(14, 192, 32);
+    text-align: center;
+    font-size: 2.5rem;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
     .about-role-text {
         font-size: 1.2rem;
         line-height: 1.6;
@@ -1325,7 +1347,7 @@
 
     /* Slide 1: Vision & Mission */
 .vision-mission-slide {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image_file/regen_10.jpg');
+    background-color: rgba(0, 0, 0, 0.7);
     background-size: cover;
     background-position: center;
     color: white;
@@ -1333,9 +1355,10 @@
 }
 
 .vision-mission-container {
+   
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .vision-section, .mission-section {
@@ -2201,6 +2224,7 @@ p.intro {
     margin-bottom: 0.5rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
+
 .services-title span {
     color: #f1c40f;
     font-weight: 700;
@@ -3432,8 +3456,9 @@ p.intro {
         <!--------------------------- Slide 5: Vision Components -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+            <h1>Vision Components</h1>
             <div class="slide-content">
-                <h1>Vision Components</h1>
+              
                 <p class="solution-subtitle">The Transformation Ecosystem</p>
                 
                 <div class="vision-container">
@@ -3571,7 +3596,10 @@ p.intro {
         <!----------------------------------- Slide 7:About Us -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h2>About Us</h2>
+            <h2 class="about-us-title">
+                About Us
+            </h2>
+            
             <div class="slide-content">
                 
                 
@@ -3655,9 +3683,9 @@ p.intro {
             </div>
         </div>
         <!---------------------------------- Slide 9: Vision & Mission -->
-        <div class="slide">
+        <div class="slide" style="background: url('image_file/regen_10.jpg'); background-size: cover;">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content vision-mission-slide">
+            <div class="slide-content-8 vision-mission-slide">
                 <div class="vision-mission-container">
                     <div class="vision-section">
                         <h2>Our Vision</h2>
