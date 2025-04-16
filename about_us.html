@@ -79,11 +79,25 @@
             overflow-y: auto;
             position: relative;
         }
-        .slide-content h2{
+        .slide-content-1 {
+                padding: 20px;
+                width: 95%;
+                height: 55%;
+                padding-left: 10px;
+            }
+            .slide-content-1 h1{
+               font-size: 5rem;
+               text-shadow:
+                    -1px -1px 0 black,  
+                    1px -1px 0 black,
+                    -1px  1px 0 black,
+                    1px  1px 0 black; /* Black border around the text */
+            }
+        .slide-content-1 h2{
            
             font-size: 2rem;
-            padding: 10px 4px;
-            font-weight: 600;
+           
+            color: green;
                 }
         .slide-content-2 {
             font-family: "Barlow Semi Condensed";
@@ -101,11 +115,7 @@
             align-items: left;
             text-align: left;
             margin-left: -300px;
-            text-shadow: 
-                    -1px -1px 0 black,  
-                    1px -1px 0 black,
-                    -1px  1px 0 black,
-                    1px  1px 0 black; /* Black border around the text */
+          
 
         }
         .slide-content-3{
@@ -411,6 +421,15 @@
                 height: 55%;
                 padding-left: 10px;
             }
+            .slide-content-1 h1 {
+               font-size: 3rem;
+               text-shadow:
+                    -1px -1px 0 black,  
+                    1px -1px 0 black,
+                    -1px  1px 0 black,
+                    1px  1px 0 black; /* Black border around the text */
+
+            }
             .slide-content-2 {
             font-family: "Barlow Semi Condensed";
             justify-content: first baseline;
@@ -448,7 +467,10 @@
             overflow-y: auto;
             position: relative;
         }
-      
+        .slide-content-1 h2{
+               font-size: 1.4rem;
+               color: green;
+            }
         .slide-content-2 h1{
             font-size: 2.2rem;
             line-height: 1.3rem;
@@ -464,8 +486,11 @@
             padding:2px 20px;
             font-weight: 600;
          
-}
-.column {
+            }
+            .highlight-box-2 p {
+            font-size: 1.0rem;
+        }
+        .column {
             flex: 0 0 100%;
             margin-bottom: 20px;
         }
@@ -479,7 +504,7 @@
             margin-top: 100px;
         }
         .highlight-box-2 p {
-            font-size: 0.9rem;
+            font-size: 1.3rem;
         }
         .content-farmhub-title {
             position: relative;
@@ -2900,231 +2925,402 @@ p.intro {
 
    /*------------------------------------ Team Grid */
    
-        .team-slide {
-            max-width: 1200px;
+       /* Team Slide Specific Styles */
+       .team-slide {
             width: 100%;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        /* Team Member Card */
-        .team-member {
-            position: relative;
-            height: 380px;
-            perspective: 1000px;
-            cursor: pointer;
-        }
-
-        .member-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transform-style: preserve-3d;
-        }
-
-        .team-member.active .member-inner {
-            transform: rotateY(180deg);
-        }
-
-        .member-front, .member-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
-        }
-
-        /* Front of Card */
-        .member-front {
-            background: white;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        }
+
+        .team-intro {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: center;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .team-intro h2 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8BC34A;
+            display: inline-block;
+        }
+
+        .university-title {
+            color: #1a5276;
+            border-bottom-color: #3498db;
+        }
+
+        .collective-title {
+            color: #6c3483;
+            border-bottom-color: #9b59b6;
+        }
+
+        .slide-title {
+            font-size: 2.8rem;
+            color: #2E7D32;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: #8BC34A;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            width: 100%;
+            padding: 15px 5px;
+            margin-bottom: 20px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 12px;
             padding: 25px;
-            transform: rotateY(0deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .university-member {
+            border-left: 5px solid #3498db;
+            background: #f8f9fa;
+        }
+
+        .collective-member {
+            border-left: 5px solid #9b59b6;
+            background: #f5eef8;
+            position: relative;
+        }
+
+        .collective-member::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 60px;
+            height: 30px;
+            background-image: url('https://www.regenerators-collective.com/logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.2;
+        }
+
+        .member-photo-container {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .university-badge {
+            position: absolute;
+            bottom: -10px;
+            right: 20%;
+            background: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .collective-badge {
+            position: absolute;
+            bottom: -10px;
+            right: 20%;
+            background: #8e44ad;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: bold;
         }
 
         .member-photo {
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #f1f8e9;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
+            border: 4px solid #E8F5E9;
+            transition: transform 0.3s;
         }
 
-        .team-member:hover .member-photo {
-            transform: scale(1.08);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-            border-color: #C8E6C9;
+        .university-photo {
+            border-color: #aed6f1;
+        }
+
+        .collective-photo {
+            border-color: #d2b4de;
+        }
+
+        .member-photo:hover {
+            transform: scale(1.05);
         }
 
         .member-name {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #2E7D32;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: 600;
+            text-align: center;
+        }
+
+        .university-name {
+            color: #1a5276;
+        }
+
+        .collective-name {
+            color: #6c3483;
+        }
+
+        .member-title-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
         }
 
         .member-title {
             color: #689F38;
             font-size: 1rem;
-            margin-bottom: 20px;
             font-weight: 500;
+            text-align: center;
+        }
+
+        .university-title-text {
+            color: #2874a6;
+        }
+
+        .collective-title-text {
+            color: #8e44ad;
+        }
+
+        .more-btn {
+            background: #E8F5E9;
+            color: #2E7D32;
+            border: none;
+            border-radius: 15px;
+            padding: 3px 12px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .university-more-btn {
+            background: #d4e6f1;
+            color: #1a5276;
+        }
+
+        .collective-more-btn {
+            background: #e8daef;
+            color: #6c3483;
+        }
+
+        .more-btn:hover {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .university-more-btn:hover {
+            background: #2980b9;
+        }
+
+        .collective-more-btn:hover {
+            background: #8e44ad;
+        }
+
+        .member-qualifications {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .member-bio {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+            flex: 1;
+        }
+
+        .team-member.active .member-bio {
+            max-height: 500px;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid #E8F5E9;
+        }
+
+        .university-member.active .member-bio {
+            border-top-color: #aed6f1;
+        }
+
+        .collective-member.active .member-bio {
+            border-top-color: #d2b4de;
         }
 
         .member-social {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .social-icon {
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            background: #f1f8e9;
+            background: #E8F5E9;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #689F38;
             transition: all 0.3s;
             text-decoration: none;
-            font-size: 1rem;
+        }
+
+        .university-social {
+            background: #d4e6f1;
+            color: #2874a6;
+        }
+
+        .collective-social {
+            background: #e8daef;
+            color: #8e44ad;
         }
 
         .social-icon:hover {
             background: #4CAF50;
             color: white;
-            transform: translateY(-5px) scale(1.1);
         }
 
-        /* Back of Card */
-        .member-back {
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+        .university-social:hover {
+            background: #2980b9;
+        }
+
+        .collective-social:hover {
+            background: #8e44ad;
             color: white;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            transform: rotateY(180deg);
         }
 
-        .member-bio {
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .member-skills {
+        .other-members {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
             justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.25);
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            backdrop-filter: blur(5px);
+        .other-member {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 160px;
         }
 
-        .close-bio {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 32px;
-            height: 32px;
-            background: rgba(255, 255, 255, 0.25);
+        .other-member-photo {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
+            object-fit: cover;
+            border: 3px solid #E8F5E9;
+            margin-bottom: 10px;
         }
 
-        .close-bio:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: rotate(90deg);
+        .other-member-name {
+            font-size: 0.9rem;
+            color: #2E7D32;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
-        /* Animation */
-        @keyframes fadeInUp {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px);
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0);
-            }
+        .other-member-title {
+            font-size: 0.8rem;
+            color: #689F38;
         }
 
-        .team-member {
-            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-            opacity: 0;
-        }
-
-        .team-member:nth-child(1) { animation-delay: 0.1s; }
-        .team-member:nth-child(2) { animation-delay: 0.2s; }
-        .team-member:nth-child(3) { animation-delay: 0.3s; }
-        .team-member:nth-child(4) { animation-delay: 0.4s; }
-        .team-member:nth-child(5) { animation-delay: 0.5s; }
-        .team-member:nth-child(6) { animation-delay: 0.6s; }
-
-        /* Responsive */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .slide-title {
                 font-size: 2.2rem;
-                margin-bottom: 30px;
+            }
+            
+            .team-intro {
+                padding: 0 15px;
             }
             
             .team-grid {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 20px;
-            }
-            
-            .team-member {
-                height: 360px;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
             
             .member-photo {
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
             }
         }
 
         @media (max-width: 480px) {
-            .slide-title {
-                font-size: 1.8rem;
+            .slide-content {
+                padding: 20px;
             }
             
-            .team-grid {
-                grid-template-columns: 1fr;
-                max-width: 350px;
-                margin: 0 auto;
+            .slide-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            
+            .team-intro h2 {
+                font-size: 1.4rem;
+            }
+            
+            .other-members {
+                gap: 10px;
+            }
+            
+            .other-member {
+                width: 140px;
+                padding: 10px;
+            }
+            
+            .other-member-photo {
+                width: 70px;
+                height: 70px;
             }
         }
-
     </style>
        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -3136,7 +3332,7 @@ p.intro {
         <!-- Slide 1: Title Slide -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
-                <h1 style="font-size:2.0rem;">Farm Hub Ethiopia</h1>
+                <h1>Farm Hub Ethiopia</h1>
                 <h2>Bridging the Gap Between Modern and Subsistence Farming</h2>
                
                 <div class="highlight-box-2">
@@ -4162,59 +4358,78 @@ p.intro {
       </div>
 
    
-        <!-- Slide 20: Call to Action -->
-        <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content">
-                <h1>Join Our Movement</h1>
-                <div class="two-columns">
-                    <div class="column">
-                        <h2>For Farmers</h2>
-                        <p>Visit our service centers</p>
-                        <p>Call 9090</p>
-                        <p>Use our Agrosoln platform</p>
-                        <p>Join a cooperative</p>
+     
+
+            <!-- Slide 20: Team -->
+            <div class="slide">
+                <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+                    <h1 class="slide-title">Farm Hub Team and Partners</h1>
+                    <div class="slide-content">
+                        <div class="team-slide">
+                        
+                            
+                            <div class="team-intro">
+                                <h2>Our Expertise</h2>
+                                <p>Our team brings extensive experience in the agricultural sector, particularly in the area of mechanization services and farm support. Despite our recent establishment, we have successfully implemented projects in partnership with our local and international partners that integrate modern farming practices, digital solutions, and regenerative agriculture techniques to enhance productivity and sustainability in agriculture. Our expertise in developing scalable business models and franchise systems positions us well to contribute to the Agricultural Mechanization Service Hubs pilot project.</p>
+                                
+                                <h3 class="section-title">Key Personnel</h3>
+                            </div>
+                            
+                            <div class="team-grid" id="teamGrid">
+                                <!-- Key personnel will be added here -->
+                            </div>
+
+                            <h3 class="section-title collective-title">Strategic Guidance from Regenerative Collective</h3>
+                            <div class="team-intro">
+                                <p>As the implementation body of Regenerative Collective, we benefit from their strategic oversight and systems-level expertise in regenerative agriculture.</p>
+                            </div>
+                            <div class="team-grid" id="collectiveTeam">
+                                <!-- Regenerative Collective team will be added here -->
+                            </div>
+
+                            <h3 class="section-title university-title">University Partner Representative</h3>
+                            <div class="team-grid" id="universityRepresentative">
+                                <!-- University representative will be added here -->
+                            </div>
+                            
+                            <h3 class="section-title">Other Team Members</h3>
+                            <div class="other-members" id="otherMembers">
+                                <!-- Other team members will be added here -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="column">
-                        <h2>For Partners</h2>
-                        <p>Invest in our work</p>
-                        <p>Provide equipment</p>
-                        <p>Share knowledge</p>
-                        <p>Collaborate on projects</p>
+                
+            </div>
+
+            <!-- Slide 21: Call to Action -->
+            <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+                <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+                <div class="slide-content">
+                    <h1>Join Our Movement</h1>
+                    <div class="two-columns">
+                        <div class="column">
+                            <h2>For Farmers</h2>
+                            <p>Visit our service centers</p>
+                            
+                        </div>
+                        <div class="column">
+                            <h2>For Partners</h2>
+                            <p>Invest in our work</p>
+                           
+                            <p>Share knowledge</p>
+                            <p>Collaborate on projects</p>
+                        </div>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 30px; background-color: var(--primary-color); color: white;">
-                    <h2>Contact Us</h2>
-                    <p>Email: info@farmhubethiopia.org</p>
-                    <p>Phone: +251 900 000 000</p>
-                    <p>Website: www.farmhubethiopia.org</p>
-                    <p>Agrosoln Platform: agrosoln.com</p>
+                    <div class="highlight-box" style="margin-top: 30px; background-color: var(--primary-color); color: white;">
+                        <h2>Contact Us</h2>
+                        <p>Email: girma.moges@farmlab-ethiopia.com</p>
+                        <p>Phone: +251 911112602</p>
+                        <p>Website: https://www.regenerators-collective.com/</p>
+                       
+                    </div>
                 </div>
             </div>
-        </div>
-
-   <!-- Slide 21: Team -->
-   <div class="slide-container">
-    <div class="slide active">
-        <div class="slide-content">
-            <div class="team-slide">
-                <h1 class="slide-title">Our Farm Hub Team</h1>
-                
-                <div class="team-intro">
-                    <h2>Our Expertise</h2>
-                    <p>Our team brings extensive experience in the agricultural sector, particularly in the area of mechanization services and farm support. Despite our recent establishment, we have successfully implemented projects in partnership with our local and international partners that integrate modern farming practices, digital solutions, and regenerative agriculture techniques to enhance productivity and sustainability in agriculture. Our expertise in developing scalable business models and franchise systems positions us well to contribute to the Agricultural Mechanization Service Hubs pilot project.</p>
-                    
-                    <h3 class="key-personnel-title">Key Personnel</h3>
-                </div>
-                
-                <div class="team-grid" id="teamGrid">
-                    <!-- Team members will be added dynamically by JavaScript -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+       
 
 
 
@@ -4796,28 +5011,14 @@ p.intro {
     </script>
     
          <!----------------------------------------------------- Script: Team ---------------------------------------------------------->
-    
-      
-        <script>
+         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Team data - replace with your actual team information
-                const teamMembers = [
-                    {
-                        name: "Nitsuh Girma",
-                        title: "Finance Manager",
-                        photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                        qualifications: "BA in Accounting from Adama University<br>Diploma in Accounting from Royal College in Adama, Ethiopia",
-                        bio: "Nitsuh oversees all financial operations and strategic planning for our agricultural projects. With extensive experience in financial management for agricultural enterprises, he ensures the economic sustainability of our initiatives while maintaining transparent accounting practices.",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    },
+                // Key Personnel data
+                const keyPersonnel = [
                     {
                         name: "Girma Moges (PhD)",
-                        title: "Agricultural Mechanization Manager",
-                        photo: "https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                        title: "Manager",
+                        photo: "image_file/photo_girma.jpg",
                         qualifications: "PhD in Agricultural Mechanization Engineering from Bahirdar University<br>M.Sc. from Wageningen University",
                         bio: "Dr. Moges brings decades of experience in agricultural engineering and mechanization. His research and practical implementations have revolutionized farming techniques in the region, focusing on sustainable mechanization solutions that increase productivity while reducing environmental impact.",
                         social: {
@@ -4829,9 +5030,21 @@ p.intro {
                     {
                         name: "Alemayhu Girma",
                         title: "Field Manager",
-                        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                        photo: "image_file/alemayhu.jpg",
                         qualifications: "Master's in Agricultural Mechanization Engineering<br>6+ years at Ethiopian Institute of Agricultural Research (EIAR)",
                         bio: "Alemayhu specializes in developing and testing agricultural machinery suitable for local conditions. His hands-on approach to field operations ensures that our mechanization solutions are practical, efficient, and tailored to the needs of smallholder farmers.",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    },
+                    {
+                        name: "Nitsuh Girma",
+                        title: "Finance Manager",
+                        photo: "image_file/nitsuh.jpg",
+                        qualifications: "BA in Accounting from Adama University<br>Diploma in Accounting from Royal College in Adama, Ethiopia",
+                        bio: "Nitsuh oversees all financial operations and strategic planning for our agricultural projects. With extensive experience in financial management for agricultural enterprises, he ensures the economic sustainability of our initiatives while maintaining transparent accounting practices.",
                         social: {
                             linkedin: "#",
                             twitter: "#",
@@ -4840,16 +5053,94 @@ p.intro {
                     }
                 ];
     
-                // Generate team cards
+                // Regenerative Collective Team
+                const collectiveTeam = [
+                    {
+                        name: " David Moore",
+                        title: "Strategic Advisor | Regenerative Collective",
+                        photo: "image_file/david.jpg",
+                        qualifications: "Expertise in regenerative systems design<br>10+ years in agricultural innovation",
+                        bio: "David is an experienced businessman who has worked across a wide number of sectors in both multinationals and startups. A Manufacturing Engineer by trade, David began his career at Bayer in 1996 before moving to Henkel Loctite in 1997 as an Industrial Engineer. While in Henkel he was promoted to the role of Operations Manager where he was responsible for 160 staff and an annual budget of €16mi. From 2002 - 2004, David completed an Executive MBA where he developed the entrepreneurial bug and in 2007 he left Henkel to provide business consultancy services across a range of areas including Strategy, Operations and Manufacturing. In 2013, David co-founded MagGrow (a technology that improves pesticide spraying applications) and he helped grow the business to over 30 employees working in 5 different countries. In his role as MagGrow’s Chief Technology Officer, David spent over 5 years working in East Africa where he developed backpack spraying systems for smallholder farmers and greenhouse applications. David left MagGrow in December 2021 to launch Regenerators Limited. David has been identified as a thought leader in the agri-food space in the context of sub-Saharan Africa and was recently invited by the American Society of Agricultural and Biological Engineers (ASABE) to join the Advisory Committee of their new initiative - Alliance for Modernizing African Agrifood Systems (AMAA)",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    },
+                    {
+                        name: "Patricia Lay",
+                        title: "Systems Advisor | Regenerative Collective",
+                        photo: "image_file/patricia.jpg",
+                        qualifications: "Specialization in circular agriculture models<br>8+ years in impact measurement",
+                        bio: "Patricia is a passionate social innovator with a deep cultural understanding, gained from living and working in various countries and being fluent in five languages. Trained in Systems Thinking and Human-Centered Design, she excels in uncovering core challenges through active listening and contextual analysis. After her Master’s in Economics, Patricia worked with multinationals in aerospace before shifting to social impact. She holds a Master’s in Applied Positive Psychology, studied Social Innovation Management, and is certified in Ontological Coaching. Her work with NGOs and impact-driven organizations focuses on developing, structuring, and implementing social innovation programs, empowering individuals through education and leadership development. Patricia’s mission is to enable people to be the architects of their own success stories.",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    }
+                ];
+    
+                // University Representative
+                const universityRepresentative = [
+                    {
+                        name: "Dr. Mihret Dananto Ulsido",
+                        title: "Project Representative (Hawassa University)",
+                        photo: "image_file/mihret.jpg",
+                        qualifications: "PhD in Municipal Engineering (Wuhan University)<br>Multiple European Master's Degrees<br>Associate Professor at Hawassa University",
+                        bio: "As our academic partner from Hawassa University, Dr. Ulsido oversees the research components of our Farm Hub pilot. With 20+ years of expertise in agricultural mechanization and resource engineering, he has led 33+ projects including Agricultural Mechanization System Analysis in Ethiopia's Rift Valley and multiple dam/irrigation development projects. He currently serves as Editor-in-Chief of the Ethiopian Journal of Engineering and Technology and has supervised 6 PhD and 92 MSc students.",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    }
+                ];
+    
+                // Other Farm Hub Team Members data
+                const otherMembers = [
+                    {
+                        name: "Natneal Bayu",
+                        title: "Agriculturalist",
+                        photo: "image_file/natneal.jpg"
+                    },
+                    {
+                        name: "Agegnehu Teshale",
+                        title: "Field Technician",
+                        photo: "image_file/"
+                    },
+                    {
+                        name: "??",
+                        title: "Field Technician",
+                        photo: "image_file/"
+                    },
+                    {
+                        name: "Zeneb Assefa",
+                        title: "",
+                        photo: "image_file/"
+                    },
+                    {
+                        name: "Yonas Yosef",
+                        title: "",
+                        photo: "image_file/"
+                    }
+                ];
+    
+                // Generate key personnel cards
                 const teamGrid = document.getElementById('teamGrid');
                 
-                teamMembers.forEach((member, index) => {
+                keyPersonnel.forEach((member) => {
                     const teamMember = document.createElement('div');
                     teamMember.className = 'team-member';
                     teamMember.innerHTML = `
-                        <img src="${member.photo}" alt="${member.name}" class="member-photo">
+                        <div class="member-photo-container">
+                            <img src="${member.photo}" alt="${member.name}" class="member-photo">
+                        </div>
                         <h3 class="member-name">${member.name}</h3>
-                        <p class="member-title">${member.title}</p>
+                        <div class="member-title-container">
+                            <p class="member-title">${member.title}</p>
+                            <button class="more-btn">More</button>
+                        </div>
                         <div class="member-qualifications">${member.qualifications}</div>
                         <div class="member-bio">
                             <p>${member.bio}</p>
@@ -4863,19 +5154,146 @@ p.intro {
                     
                     teamGrid.appendChild(teamMember);
                     
-                    // Add click event to toggle bio
-                    teamMember.addEventListener('click', function(e) {
-                        // Don't toggle if clicking on social icons
-                        if (!e.target.closest('.member-social')) {
-                            // Close any open bios first
-                            if (!this.classList.contains('active')) {
-                                document.querySelectorAll('.team-member.active').forEach(activeMember => {
-                                    activeMember.classList.remove('active');
-                                });
+                    // Add click events to photo and more button
+                    const photo = teamMember.querySelector('.member-photo-container');
+                    const moreBtn = teamMember.querySelector('.more-btn');
+                    
+                    const toggleBio = () => {
+                        // Close any open bios first
+                        document.querySelectorAll('.team-member').forEach(member => {
+                            if (member !== teamMember && member.classList.contains('active')) {
+                                member.classList.remove('active');
                             }
-                            this.classList.toggle('active');
+                        });
+                        teamMember.classList.toggle('active');
+                        
+                        // Scroll to show the full bio if needed
+                        if (teamMember.classList.contains('active')) {
+                            teamMember.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                         }
-                    });
+                    };
+                    
+                    photo.addEventListener('click', toggleBio);
+                    moreBtn.addEventListener('click', toggleBio);
+                });
+    
+                // Generate Regenerative Collective cards
+                const collectiveGrid = document.getElementById('collectiveTeam');
+                
+                collectiveTeam.forEach((member) => {
+                    const teamMember = document.createElement('div');
+                    teamMember.className = 'team-member collective-member';
+                    teamMember.innerHTML = `
+                        <div class="member-photo-container">
+                            <img src="${member.photo}" alt="${member.name}" class="member-photo collective-photo">
+                            <div class="collective-badge">Regenerative Collective</div>
+                        </div>
+                        <h3 class="member-name collective-name">${member.name}</h3>
+                        <div class="member-title-container">
+                            <p class="member-title collective-title-text">${member.title}</p>
+                            <button class="more-btn collective-more-btn">More</button>
+                        </div>
+                        <div class="member-qualifications">${member.qualifications}</div>
+                        <div class="member-bio">
+                            <p>${member.bio}</p>
+                            <div class="member-social">
+                                <a href="${member.social.linkedin}" class="social-icon collective-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="${member.social.twitter}" class="social-icon collective-social" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="${member.social.email}" class="social-icon collective-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    collectiveGrid.appendChild(teamMember);
+                    
+                    // Add click events to photo and more button
+                    const photo = teamMember.querySelector('.member-photo-container');
+                    const moreBtn = teamMember.querySelector('.more-btn');
+                    
+                    const toggleBio = () => {
+                        // Close any open bios first
+                        document.querySelectorAll('.team-member').forEach(member => {
+                            if (member !== teamMember && member.classList.contains('active')) {
+                                member.classList.remove('active');
+                            }
+                        });
+                        teamMember.classList.toggle('active');
+                        
+                        // Scroll to show the full bio if needed
+                        if (teamMember.classList.contains('active')) {
+                            teamMember.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    };
+                    
+                    photo.addEventListener('click', toggleBio);
+                    moreBtn.addEventListener('click', toggleBio);
+                });
+    
+                // Generate university representative card
+                const universityGrid = document.getElementById('universityRepresentative');
+                
+                universityRepresentative.forEach((member) => {
+                    const teamMember = document.createElement('div');
+                    teamMember.className = 'team-member university-member';
+                    teamMember.innerHTML = `
+                        <div class="member-photo-container">
+                            <img src="${member.photo}" alt="${member.name}" class="member-photo university-photo">
+                            <div class="university-badge">Academic Partner</div>
+                        </div>
+                        <h3 class="member-name university-name">${member.name}</h3>
+                        <div class="member-title-container">
+                            <p class="member-title university-title-text">${member.title}</p>
+                            <button class="more-btn university-more-btn">More</button>
+                        </div>
+                        <div class="member-qualifications">${member.qualifications}</div>
+                        <div class="member-bio">
+                            <p>${member.bio}</p>
+                            <div class="member-social">
+                                <a href="${member.social.linkedin}" class="social-icon university-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="${member.social.twitter}" class="social-icon university-social" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="${member.social.email}" class="social-icon university-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    universityGrid.appendChild(teamMember);
+                    
+                    // Add click events to photo and more button
+                    const photo = teamMember.querySelector('.member-photo-container');
+                    const moreBtn = teamMember.querySelector('.more-btn');
+                    
+                    const toggleBio = () => {
+                        // Close any open bios first
+                        document.querySelectorAll('.team-member').forEach(member => {
+                            if (member !== teamMember && member.classList.contains('active')) {
+                                member.classList.remove('active');
+                            }
+                        });
+                        teamMember.classList.toggle('active');
+                        
+                        // Scroll to show the full bio if needed
+                        if (teamMember.classList.contains('active')) {
+                            teamMember.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    };
+                    
+                    photo.addEventListener('click', toggleBio);
+                    moreBtn.addEventListener('click', toggleBio);
+                });
+    
+                // Generate other team members
+                const otherMembersContainer = document.getElementById('otherMembers');
+                
+                otherMembers.forEach((member) => {
+                    const otherMember = document.createElement('div');
+                    otherMember.className = 'other-member';
+                    otherMember.innerHTML = `
+                        <img src="${member.photo}" alt="${member.name}" class="other-member-photo">
+                        <h4 class="other-member-name">${member.name}</h4>
+                        <p class="other-member-title">${member.title}</p>
+                    `;
+                    
+                    otherMembersContainer.appendChild(otherMember);
                 });
             });
         </script>
