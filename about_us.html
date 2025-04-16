@@ -163,10 +163,6 @@
             overflow-y: auto;
             position: relative;
         }
-        .slide-title-page h1 {
-                font-size: 4rem;
-                color:green;
-            }
         .slide-content-2 h1{
             font-size: 5.6rem;
             text-align: left;
@@ -192,7 +188,7 @@
             max-width: 60%;
            margin-left: 40px;
             font-family: 'Gazpacho', sans-serif; /* Fallback to sans-serif */
-            font-size: 2.8rem;
+            font-size: 3.8rem;
             text-align: left;
             text-shadow: 
                     -1px -1px 0 black,  
@@ -201,11 +197,6 @@
                     1px  1px 0 black; /* Black border around the text */
 
         }
-        .content-farmhub-title h1{
-                   font-size: 4.5rem;
-                   color: white;
-
-                }
         .content-farmhub-title h3{
                    font-size: 4.5rem;
                    color: white;
@@ -419,10 +410,6 @@
                 width: 95%;
                 height: 55%;
                 padding-left: 10px;
-            }
-            .slide-title-page h1{
-                
-                font-size: 2rem;
             }
             .slide-content-2 {
             font-family: "Barlow Semi Condensed";
@@ -1930,140 +1917,6 @@ p.intro {
     margin-top: 20px;
 }
 
-/* Slide 3 Styles */
-.partnership-section {
-    margin-bottom: 40px;
-}
-
-.team-section {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.team-section h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.team-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.team-card {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-}
-
-.team-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 15px;
-}
-
-.team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.team-card h3 {
-    margin: 10px 0 5px;
-    color: var(--primary-color);
-}
-
-.role {
-    color: #666;
-    margin-bottom: 15px;
-    font-style: italic;
-}
-
-.expertise {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.expertise span {
-    background: rgba(39, 174, 96, 0.1);
-    color: var(--primary-color);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
-.team-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    display: block;
-}
-
-.stat-label {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .tech-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .team-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .team-stats {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 
 
@@ -2134,7 +1987,7 @@ p.intro {
             display: inline-block;
             padding: 0.9rem 2rem;
             border-radius:20px;
-            font-size: 2rem;
+            font-size: 4rem;
             margin: 0.25rem;
             line-height: 1.4;
             text-align: center;
@@ -2914,9 +2767,367 @@ p.intro {
 
 
 
+        
+        /* 3D Carousel */
+        .carousel {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        
+        .carousel-item {
+            position: absolute;
+            width: 500px;
+            height: 550px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        
+        .carousel-item:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .carousel-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .carousel-item:hover .carousel-caption {
+            transform: translateY(0);
+        }
+        
+        .carousel-caption h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .carousel-caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        .carousel-nav {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .carousel-nav button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .carousel-nav button:hover {
+            background: #3e8e41;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Particle Background */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(76, 175, 80, 0.3);
+            border-radius: 50%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel {
+                height: 400px;
+            }
+            
+            .carousel-item {
+                width: 300px;
+                height: 350px;
+            }
+            
+            .slide-title {
+                font-size: 2rem;
+            }
+        }
 
+
+
+
+
+
+
+
+   /*------------------------------------ Team Grid */
+   
+        .team-slide {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Team Member Card */
+        .team-member {
+            position: relative;
+            height: 380px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .member-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .team-member.active .member-inner {
+            transform: rotateY(180deg);
+        }
+
+        .member-front, .member-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+        }
+
+        /* Front of Card */
+        .member-front {
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            transform: rotateY(0deg);
+        }
+
+        .member-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f1f8e9;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .team-member:hover .member-photo {
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-color: #C8E6C9;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .member-title {
+            color: #689F38;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #f1f8e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #689F38;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-icon:hover {
+            background: #4CAF50;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* Back of Card */
+        .member-back {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotateY(180deg);
+        }
+
+        .member-bio {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .member-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+
+        .close-bio {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+
+        .close-bio:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        .team-member {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        .team-member:nth-child(1) { animation-delay: 0.1s; }
+        .team-member:nth-child(2) { animation-delay: 0.2s; }
+        .team-member:nth-child(3) { animation-delay: 0.3s; }
+        .team-member:nth-child(4) { animation-delay: 0.4s; }
+        .team-member:nth-child(5) { animation-delay: 0.5s; }
+        .team-member:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide-title {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+            }
+            
+            .team-member {
+                height: 360px;
+            }
+            
+            .member-photo {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide-title {
+                font-size: 1.8rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
 
     </style>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <img src="image_file/logo_1.jpg" alt="Farm Hub Ethiopia Logo" class="logo">
@@ -2925,9 +3136,7 @@ p.intro {
         <!-- Slide 1: Title Slide -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
-                <div class="slide-title-page">
-                <h1>Farm Hub Ethiopia</h1>
-            </div>
+                <h1 style="font-size:2.0rem;">Farm Hub Ethiopia</h1>
                 <h2>Bridging the Gap Between Modern and Subsistence Farming</h2>
                
                 <div class="highlight-box-2">
@@ -3781,8 +3990,8 @@ p.intro {
                     <div class="machinery-card active" data-category="tech_sourcing">
                         <img src="image_file/farm_hub_equip_1.jpg" alt="Farm Hub Equipment" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Technologies at IoT</h3>
-                            <p class="card-description"></p>
+                            <h3 class="card-title">Technology Sourcing</h3>
+                            <p class="card-description">We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor.</p>
                             <div class="card-footer">
                                 <span class="card-price">Complete Package</span>
                                 <i class="fas fa-tractor card-icon"></i>
@@ -3793,7 +4002,7 @@ p.intro {
                     <div class="machinery-card active" data-category="tech_sourcing">
                         <img src="image_file/potato_planter.jpg" alt="Potato Planter" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Potato planter</h3>
+                            <h3 class="card-title">Specialized Equipment</h3>
                             <p class="card-description">Imported potato planter and other specialized implements to address key crops in Ethiopian agriculture.</p>
                             <div class="card-footer">
                                 <span class="card-price">Crop-Specific Solutions</span>
@@ -3819,7 +4028,7 @@ p.intro {
                         <img src="image_file/partnership_4.jpg" alt="Team Meeting" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Stakeholder Collaboration</h3>
-                            <p class="card-description">Established partnerships with HU</p>
+                            <p class="card-description">Established partnerships with GFA/GIZ, service providers, and agricultural experts to implement the Farm Hub model.</p>
                             <div class="card-footer">
                                 <span class="card-price">Strategic Alliances</span>
                                 <i class="fas fa-handshake card-icon"></i>
@@ -3830,10 +4039,10 @@ p.intro {
                     <div class="machinery-card" data-category="partnership">
                         <img src="image_file/partnership_6.jpg" alt="Team Photo" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">MoA signed with HU</h3>
-                            <p class="card-description"></p>
+                            <h3 class="card-title">Expert Team</h3>
+                            <p class="card-description">Assembled a multidisciplinary team including agricultural engineers, field technicians, and research specialists.</p>
                             <div class="card-footer">
-                                <span class="card-price">Strategic Alliances</span>
+                                <span class="card-price">Skilled Professionals</span>
                                 <i class="fas fa-users card-icon"></i>
                             </div>
                         </div>
@@ -3842,7 +4051,7 @@ p.intro {
                     <div class="machinery-card" data-category="partnership">
                         <img src="image_file/team_1.jpg" alt="Team Working" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Team Formation</h3>
+                            <h3 class="card-title">Field Implementation</h3>
                             <p class="card-description">Our team working together to implement and test the Farm Hub model in real-world agricultural conditions.</p>
                             <div class="card-footer">
                                 <span class="card-price">Practical Solutions</span>
@@ -3878,9 +4087,9 @@ p.intro {
                     
                     <!-- Demonstration Cards -->
                     <div class="machinery-card" data-category="others">
-                        <img src="image_file/demo_1.jpg" alt="Demonstration" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Demonstration" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Demonstration</h3>
+                            <h3 class="card-title">Farmer Training</h3>
                             <p class="card-description">Hands-on training sessions for farmers and service providers on proper use and maintenance of mechanized equipment.</p>
                             <div class="card-footer">
                                 <span class="card-price">Capacity Building</span>
@@ -3890,9 +4099,9 @@ p.intro {
                     </div>
                     
                     <div class="machinery-card" data-category="others">
-                        <img src="image_file/demo_2.jpg" alt="Field Day" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Field Day" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Demonstration</h3>
+                            <h3 class="card-title">Field Days</h3>
                             <p class="card-description">Organized field demonstration days to showcase the benefits of mechanized farming to stakeholders and potential adopters.</p>
                             <div class="card-footer">
                                 <span class="card-price">Awareness Creation</span>
@@ -3933,11 +4142,27 @@ p.intro {
         </div>
     </div>
 
-
+       <!-- Slide 19: Photo gallery-->
+        <div class="slide">
   
+           <div class="slide-container">
+        <h1 class="slide-title">Photo Gallery</h1>
         
+        <div class="carousel" id="carousel">
+            <!-- Items will be added dynamically by JavaScript -->
+        </div>
+        
+        <div class="carousel-nav">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+        
+        <div class="particles" id="particles"></div>
+    </div>
+      </div>
+
    
-        <!-- Slide 17: Call to Action -->
+        <!-- Slide 20: Call to Action -->
         <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content">
@@ -3946,27 +4171,59 @@ p.intro {
                     <div class="column">
                         <h2>For Farmers</h2>
                         <p>Visit our service centers</p>
-                        <p>Call+251911112602</p>
+                        <p>Call 9090</p>
                         <p>Use our Agrosoln platform</p>
                         <p>Join a cooperative</p>
                     </div>
                     <div class="column">
                         <h2>For Partners</h2>
                         <p>Invest in our work</p>
+                        <p>Provide equipment</p>
                         <p>Share knowledge</p>
                         <p>Collaborate on projects</p>
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 30px; background-color: var(--primary-color); color: white;">
                     <h2>Contact Us</h2>
-                    <p>Email: girma.moges@farmlab-ethiopia.com</p>
-                    <p>Phone: +251 911112602</p>
-                    <p>Website: https://www.farmlab-africa.com/</p>
+                    <p>Email: info@farmhubethiopia.org</p>
+                    <p>Phone: +251 900 000 000</p>
+                    <p>Website: www.farmhubethiopia.org</p>
+                    <p>Agrosoln Platform: agrosoln.com</p>
+                </div>
+            </div>
+        </div>
+
+   <!-- Slide 21: Team -->
+   <div class="slide-container">
+    <div class="slide active">
+        <div class="slide-content">
+            <div class="team-slide">
+                <h1 class="slide-title">Our Farm Hub Team</h1>
+                
+                <div class="team-intro">
+                    <h2>Our Expertise</h2>
+                    <p>Our team brings extensive experience in the agricultural sector, particularly in the area of mechanization services and farm support. Despite our recent establishment, we have successfully implemented projects in partnership with our local and international partners that integrate modern farming practices, digital solutions, and regenerative agriculture techniques to enhance productivity and sustainability in agriculture. Our expertise in developing scalable business models and franchise systems positions us well to contribute to the Agricultural Mechanization Service Hubs pilot project.</p>
                     
+                    <h3 class="key-personnel-title">Key Personnel</h3>
+                </div>
+                
+                <div class="team-grid" id="teamGrid">
+                    <!-- Team members will be added dynamically by JavaScript -->
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+
+          <!-- Additional slides  -->
+</div>
+    
+    
+   
     
     <div class="nav-bar">
         <button class="nav-btn prev-btn">&larr;</button>
@@ -4333,5 +4590,294 @@ p.intro {
         document.querySelector('.category-tab[data-category="tech_sourcing"]').click();
     });
 </script>
+
+
+
+
+
+
+
+
+
+   <!----------------------------------------------------- Script: Photo gallery ---------------------------------------------------------->
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample data for the gallery
+            const galleryItems = [
+                {
+                    image: 'image_file/super_seeder_1.jpg',
+                    title: 'Super Seeder',
+                    description: 'No-till seeder'
+                },
+                {
+                    image: 'image_file/demo_2.jpg',
+                    title: 'Technology Demo',
+                    description: 'Demonstration'
+                },
+                {
+                    image: 'image_file/demo_3.jpg',
+                    title: 'Partner Meeting',
+                    description: 'Technology Demo'
+                },
+                {
+                    image: 'image_file/partnership_6.jpg',
+                    title: 'Technology Demo',
+                    description: 'Partnership'
+                },
+                {
+                    image: 'image_file/partnership_4.jpg',
+                    title: 'Partnership',
+                    description: 'Partnership'
+                },
+                {
+                    image: 'image_file/wheat_field_2.jpg',
+                    title: 'Wheat field',
+                    description: 'Wheat field'
+                },
+                
+                       {
+                    image: 'image_file/potato_field.jpg',
+                    title: 'Potato field',
+                    description: 'Potato field'
+                },
+                       {
+                    image: 'image_file/maize_field.jpg',
+                    title: 'Maize field',
+                    description: 'Maize field'
+                }
+     
+            ];
+            
+            // Carousel setup
+            const carousel = document.getElementById('carousel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            let currentIndex = 0;
+            let itemCount = galleryItems.length;
+            let items = [];
+            
+            // Create carousel items
+            galleryItems.forEach((item, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = 'carousel-item';
+                
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = item.title;
+                
+                const caption = document.createElement('div');
+                caption.className = 'carousel-caption';
+                caption.innerHTML = `<h3>${item.title}</h3><p>${item.description}</p>`;
+                
+                carouselItem.appendChild(img);
+                carouselItem.appendChild(caption);
+                carousel.appendChild(carouselItem);
+                
+                items.push(carouselItem);
+            });
+            
+            // Position carousel items in 3D space
+            function positionItems() {
+                const radius = Math.min(500, window.innerWidth * 0.8);
+                const angle = (2 * Math.PI) / itemCount;
+                
+                items.forEach((item, i) => {
+                    const activeAngle = angle * i + currentIndex * angle;
+                    const x = radius * Math.sin(activeAngle);
+                    const z = radius * Math.cos(activeAngle) - radius;
+                    
+                    item.style.transform = `translate(-50%, -50%) translateX(${x}px) translateZ(${z}px) rotateY(${-activeAngle}rad)`;
+                    item.style.opacity = z > -radius/2 ? '1' : '0.6';
+                    item.style.zIndex = Math.floor(z + radius);
+                });
+            }
+            
+            // Navigation
+            function goToNext() {
+                currentIndex = (currentIndex + 1) % itemCount;
+                positionItems();
+            }
+            
+            function goToPrev() {
+                currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+                positionItems();
+            }
+            
+            nextBtn.addEventListener('click', goToNext);
+            prevBtn.addEventListener('click', goToPrev);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') goToNext();
+                if (e.key === 'ArrowLeft') goToPrev();
+            });
+            
+            // Swipe support for touch devices
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) goToNext();
+                if (touchEndX > touchStartX + 50) goToPrev();
+            }
+            
+            // Create particle background
+            function createParticles() {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 20;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    
+                    const size = Math.random() * 10 + 5;
+                    const posX = Math.random() * 100;
+                    const posY = Math.random() * 100;
+                    const delay = Math.random() * 5;
+                    const duration = Math.random() * 10 + 10;
+                    
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${posX}%`;
+                    particle.style.top = `${posY}%`;
+                    particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                    
+                    particlesContainer.appendChild(particle);
+                }
+            }
+            
+            // Add floating animation to CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0) translateX(0);
+                    }
+                    25% {
+                        transform: translateY(-20px) translateX(10px);
+                    }
+                    50% {
+                        transform: translateY(0) translateX(20px);
+                    }
+                    75% {
+                        transform: translateY(-10px) translateX(-10px);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Initialize
+            positionItems();
+            createParticles();
+            
+            // Auto-rotate (optional)
+            let autoRotate = setInterval(goToNext, 4000);
+            
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(autoRotate);
+            });
+            
+            carousel.addEventListener('mouseleave', () => {
+                autoRotate = setInterval(goToNext, 4000);
+            });
+        });
+    </script>
+    
+         <!----------------------------------------------------- Script: Team ---------------------------------------------------------->
+    
+      
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Team data - replace with your actual team information
+                const teamMembers = [
+                    {
+                        name: "Nitsuh Girma",
+                        title: "Finance Manager",
+                        photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                        qualifications: "BA in Accounting from Adama University<br>Diploma in Accounting from Royal College in Adama, Ethiopia",
+                        bio: "Nitsuh oversees all financial operations and strategic planning for our agricultural projects. With extensive experience in financial management for agricultural enterprises, he ensures the economic sustainability of our initiatives while maintaining transparent accounting practices.",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    },
+                    {
+                        name: "Girma Moges (PhD)",
+                        title: "Agricultural Mechanization Manager",
+                        photo: "https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                        qualifications: "PhD in Agricultural Mechanization Engineering from Bahirdar University<br>M.Sc. from Wageningen University",
+                        bio: "Dr. Moges brings decades of experience in agricultural engineering and mechanization. His research and practical implementations have revolutionized farming techniques in the region, focusing on sustainable mechanization solutions that increase productivity while reducing environmental impact.",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    },
+                    {
+                        name: "Alemayhu Girma",
+                        title: "Field Manager",
+                        photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                        qualifications: "Master's in Agricultural Mechanization Engineering<br>6+ years at Ethiopian Institute of Agricultural Research (EIAR)",
+                        bio: "Alemayhu specializes in developing and testing agricultural machinery suitable for local conditions. His hands-on approach to field operations ensures that our mechanization solutions are practical, efficient, and tailored to the needs of smallholder farmers.",
+                        social: {
+                            linkedin: "#",
+                            twitter: "#",
+                            email: "#"
+                        }
+                    }
+                ];
+    
+                // Generate team cards
+                const teamGrid = document.getElementById('teamGrid');
+                
+                teamMembers.forEach((member, index) => {
+                    const teamMember = document.createElement('div');
+                    teamMember.className = 'team-member';
+                    teamMember.innerHTML = `
+                        <img src="${member.photo}" alt="${member.name}" class="member-photo">
+                        <h3 class="member-name">${member.name}</h3>
+                        <p class="member-title">${member.title}</p>
+                        <div class="member-qualifications">${member.qualifications}</div>
+                        <div class="member-bio">
+                            <p>${member.bio}</p>
+                            <div class="member-social">
+                                <a href="${member.social.linkedin}" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="${member.social.twitter}" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="${member.social.email}" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    teamGrid.appendChild(teamMember);
+                    
+                    // Add click event to toggle bio
+                    teamMember.addEventListener('click', function(e) {
+                        // Don't toggle if clicking on social icons
+                        if (!e.target.closest('.member-social')) {
+                            // Close any open bios first
+                            if (!this.classList.contains('active')) {
+                                document.querySelectorAll('.team-member.active').forEach(activeMember => {
+                                    activeMember.classList.remove('active');
+                                });
+                            }
+                            this.classList.toggle('active');
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
 </html>
