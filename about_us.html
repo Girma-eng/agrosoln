@@ -72,7 +72,20 @@
             max-width: 1200px;
             width: 90%;
             height: 90%;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--light-text);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+        }
+       
+        .slide-content-toc {
+            max-width: 1200px;
+            width: 90%;
+            height: 90%;
+            background-color: rgba(55, 53, 53, 0.3);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -194,7 +207,7 @@
             color: var(--light-text);
         }
         
-        .bg-image .slide-content {
+        .bg-image {
             background-color: rgba(0, 0, 0, 0.7);
             color: var(--light-text);
         }
@@ -254,12 +267,10 @@
            flex-wrap: wrap;
             justify-content: space-between;
             margin-top: 20px;
-        }
-       
-        .two-columns {
-            display: flex;
             gap: 2rem;
         }
+       
+   
 
         .column {
             flex: 1;
@@ -281,7 +292,7 @@
         }
         
         .nav-btn {
-            background-color: var(--primary-color);
+            background-color: rgba(20, 189, 74, 0.9);
             color: white;
             border: none;
             width: 30px;
@@ -419,11 +430,31 @@
             
             margin-bottom: 5px;
         }
+        .two-columns {
+            display: flex;
+           flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 0.2rem;
+        }
             .slide-content {
                 padding: 10px 4px;
                 width: 95%;
                 height: 85%;
             }
+            .slide-content-toc {
+            max-width: 1200px;
+            width: 85%;
+            height: 90%;
+            background-color: rgba(55, 53, 53, 0.1);
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+        }
+   
+        
             .slide-content-1 {
                 padding: 10px;
                 width: 100%;
@@ -465,6 +496,7 @@
             height: 95%;
          
         }
+        
         .slide-content-7 {
            
             width: 98%;
@@ -571,7 +603,7 @@
             .nav-bar {
                 padding: 4px 5px;
                 bottom: 2px;
-                background-color: rgba(2554, 255, 255, 0.4);
+                background-color: rgba(254, 255, 255, 0.4);
             }
             
 
@@ -601,6 +633,13 @@
             top: 5px;
             left: 5px;
             max-width: 50px;
+            z-index: 100;
+        }
+        .logo-title-slide {
+            position: absolute;
+            top: 50px;
+            left: 550px;
+            max-width: 150px;
             z-index: 100;
         }
         
@@ -775,6 +814,13 @@
             top: 5px;
             left: 5px;
             max-width: 30px;
+            z-index: 100;
+        }
+        .logo-title-slide {
+            position: absolute;
+            top: 50px;
+            left: 90px;
+            max-width: 150px;
             z-index: 100;
         }
         }
@@ -1089,7 +1135,7 @@
     color: rgb(14, 192, 32);
     text-align: center;
     font-size: 2.5rem;
-   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  
 }
     .about-role-text {
         font-size: 1.2rem;
@@ -2059,7 +2105,7 @@ p.intro {
 
 /* CSS for the Table of Contents */
 #toc-container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
@@ -2168,6 +2214,14 @@ p.intro {
                 }
 
                 @media (max-width: 768px) {
+                    #toc-container {
+                        max-width: 500px;
+                        margin: 0 auto;
+                        background-color: rgba(255, 255, 255, 0.85);
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    }
                 
         .toc-item.h1 {
             font-weight: bold;
@@ -3318,10 +3372,6 @@ p.intro {
             }
         }
 
-        @media (max-width: 480px) {
-            .slide-content {
-                padding: 20px;
-            }
             
             .slide-title {
                 font-size: 1.8rem;
@@ -3351,17 +3401,18 @@ p.intro {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <img src="image_file/logo_1.jpg" alt="Farm Hub Ethiopia Logo" class="logo">
+   
     
-    <div class="slide-container" id="slidesContainer">
+<div class="slide-container" id="slidesContainer">
         <!-- Slide 1: Title Slide -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
+                <img src="image_file/logo_farmlab.png" alt="Farm Hub Ethiopia Logo" class="logo-title-slide">
                 <h1>Farm Hub Ethiopia</h1>
                 <h2>Bridging the Gap Between Modern and Subsistence Farming</h2>
                
                 <div class="highlight-box-2">
-                    <p>Mechanization Services | Agricultural Inputs | Digital Solutions | Advisory Services</p>
+                    <p>Mechanization Services | Inputs | Digital Solutions | Advisory Services</p>
                 </div>
             </div>
             <div class="footer">
@@ -3372,7 +3423,7 @@ p.intro {
         <!--------------------------------------------------------- Slide 2: Table of Contents -->
         <div class="slide bg-image" id="toc-slide" style="background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <h1>Table of Contents</h1>
-            <div class="slide-content">
+            <div class="slide-content-toc">
                
                 <div id="toc-container"></div>
             </div>
@@ -3442,11 +3493,13 @@ p.intro {
          <!-------------------------- Slide 4: What we for -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_2.jpg');">
              
-             <button class="back-to-toc" id="tocBtn">
-                <i class="fas fa-list"></i>
-            </button>
+             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+             <h2 class="top-us-title">
+                What We Strive For?
+            </h2>
+          
             <div class="slide-content-2">
-                <h1>What We Strive For?</h1>
+               
                 <h2>We envision a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles 
                     and systems - ensuring their resilience and empowering them to prosper for generations to come.</h2>
                 
@@ -3457,7 +3510,10 @@ p.intro {
         <!--------------------------- Slide 5: Vision Components -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h1>Vision Components</h1>
+            <h2 class="top-us-title">
+                Vision Components
+            </h2>
+           
             <div class="slide-content">
               
                 <p class="solution-subtitle">The Transformation Ecosystem</p>
@@ -3597,13 +3653,8 @@ p.intro {
         <!----------------------------------- Slide 7:About Us -->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h2 class="top-us-title">
-                ABOUT US
-            </h2>
-            
+            <h2 class="top-us-title">ABOUT US</h2>
             <div class="slide-content">
-                
-                
                 <div class="about-container">
                     <!-- Image Section -->
                     <div class="about-image">
@@ -3616,8 +3667,8 @@ p.intro {
                             <span class="about-highlight-title">Farm Hub Ethiopia</span>
                             <span class="about-highlight-url"></span>
                             is an agricultural company established in 2023 with a core focus on
-                            <span class="about-highlight-green">improving crop production practices and empowering smallholder farmers in Ethiopia</span>.
-                            <span class="about-highlight-blue">With a commitment to sustainability, innovation, and social impact,</span>
+                            <span class="about-highlight-green">improving crop production and empowering smallholder farmers</span>.
+                            <span class="about-highlight-blue">With a commitment to innovation and sustainability,</span>
                             we have been actively engaged in providing agricultural solutions and services tailored to the needs of
                             <span class="about-highlight-orange">smallholder farmers</span>.
                             As the hands-on implementation partner in the agricultural ecosystem, we translate innovations from research labs (like Mission Labs) into practical, farmer-ready solutions.
@@ -3626,7 +3677,7 @@ p.intro {
                         <h3>Our Role in the System:</h3>
                         <div class="about-role">
                            <div class="about-role-text">
-                                We are the implementation engine—<span class="about-role-emphasis">delivering tools,</span> training, and technologies directly to farmers' fields.
+                                We are the <span style="color: green;">implementation engine—<span class="about-role-emphasis">delivering technologies, inputs and training</span> directly to farmers' fields.
                             </div>
                         </div>
                     </div>
@@ -3638,9 +3689,7 @@ p.intro {
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
               <h1>Challenges Farm Hub Addresses</h1>
             <div class="slide-content">
-              
-                
-                <div class="challenges-container">
+              <div class="challenges-container">
                     <!-- Challenge Cards -->
                     <div class="challenges-card">
                         <div class="challenges-card-header">
@@ -3925,7 +3974,10 @@ p.intro {
         <!---------------------------------- Slide 15: Scaling pathway -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h1>Scaling Pathway</h1>
+         
+            <h2 class="top-us-title">
+                Scaling Pathway
+            </h2>
             <div class="slide-content-6">
               
                 <p class="solution-subtitle">The Transformation Ecosystem</p>
