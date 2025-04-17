@@ -72,15 +72,16 @@
             max-width: 1200px;
             width: 90%;
             height: 90%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(34, 32, 32, 0.05);
             color: var(--light-text);
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             overflow-y: auto;
             position: relative;
         }
-       
+        
+        
         .slide-content-toc {
             max-width: 1200px;
             width: 90%;
@@ -92,7 +93,42 @@
             overflow-y: auto;
             position: relative;
         }
+        .slide-content-aboutus {
+            font-family: "Barlow Semi Condensed";
+            justify-content: first baseline;
+            max-width: 1200px;
+            width: 90%;
+            height: 90%;
+            background-color: rgba(0, 0, 0, 1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            position: relative;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+           
+        }
+        .slide-content-challenge {
+            font-family: "Barlow Semi Condensed";
+            justify-content: first baseline;
+            max-width: 1200px;
+            width: 90%;
+            height: 70%;
+            background-color: rgba(34, 32, 32, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+           
+        }
         .slide-content-1 {
+                background-color: rgba(34, 32, 32, 0.5);
                 padding: 20px;
                 width: 95%;
                 height: 55%;
@@ -168,7 +204,7 @@
             max-width: 2000px;
             width: 98%;
             height: 90%;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 25, 25, 0.3);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -201,14 +237,11 @@
             text-align: left;
             
         }
+     
+        
         .bg-image {
             background-size: cover;
             background-position: center;
-            color: var(--light-text);
-        }
-        
-        .bg-image {
-            background-color: rgba(0, 0, 0, 0.7);
             color: var(--light-text);
         }
         .content-farmhub-title {
@@ -850,7 +883,7 @@
     }
     
     .vision-card {
-        background-color: white;
+        background-color: rgb(94 89 55);
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         width: 100%;
@@ -894,16 +927,17 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        text-align: left;
     }
     
     .vision-card-details {
         padding: 20px;
-    }
+            }
     .vision-responsibilities h1,
     .vision-responsibilities h2,
     .vision-responsibilities h4,
     .vision-impact h4 {
-        color: var(--primary-color);
+        color: green;
         margin-bottom: 10px;
         text-align: left;
     }
@@ -1160,6 +1194,7 @@
         width: 100%;
         max-width: 350px;
         overflow: hidden;
+        color:black;
     }
     
     .challenges-card-header {
@@ -1488,12 +1523,12 @@
 
 p.intro {
             font-size: 1.1rem;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             text-align: center;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            color:green;
+            color:white;
         }
         
         .scaling-list {
@@ -1518,7 +1553,7 @@ p.intro {
         .timeline-container {
             position: relative;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 60px 0;
         }
@@ -1569,8 +1604,8 @@ p.intro {
         }
         
         .timeline-content {
-            background-color: white;
-            padding: 20px;
+            background-color: #120202;
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             width: 90%;
@@ -1643,16 +1678,17 @@ p.intro {
                 margin-bottom: 0;
             }
             
+      
             .timeline-content {
-                width: 100%;
-                max-width: none;
-                text-align: left;
-                margin-left: 30px;
-            }
-            
-            .scaling-list {
-                flex-direction: column;
-                align-items: center;
+                background-color: #120202;
+                padding: 1px 2px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                position: relative;
+                max-width: 150px;
+                font-size: 0.8rem;
+                }
+          
             }
             
             h1 {
@@ -1892,15 +1928,7 @@ p.intro {
     .franchise-details {
         flex-direction: column;
     }
-    .timeline-content {
-    background: white;
-    padding: 1px 2px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: relative;
-    max-width: 150px;
-    font-size: 0.8rem;
-    }
+
    
 }
 
@@ -2422,311 +2450,461 @@ p.intro {
 
 
 
-
-
 .slide-container-service {
-            padding: 0 1rem;
-        }
+        padding: 0 1rem;
+    }
 
-        .slide-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    .slide-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
+    .slide-header h1 {
+        font-size: 2.2rem;
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .slide-header p {
+        color: #555;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .decorative-line {
+        height: 4px;
+        width: 80px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        margin: 0 auto;
+        border-radius: 2px;
+    }
+    
+    .category-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 3rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    position: relative;
+}
+
+.category-tab {
+    padding: 0.9rem 2rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    color: #495057;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.category-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    pointer-events: none;
+}
+
+.category-tab:hover {
+    background: #e9ecef;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    border-color: #ced4da;
+}
+
+.category-tab:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.category-tab.active {
+    background: #2e8b57;
+    color: white;
+    border-color: #2a7f4f;
+    box-shadow: 0 3px 0 #1e5c3a, 
+                0 4px 6px rgba(0,0,0,0.15);
+}
+
+.category-tab.active:hover {
+    background: #268151;
+    box-shadow: 0 3px 0 #1e5c3a, 
+                0 5px 10px rgba(0,0,0,0.2);
+}
+
+.category-tab.active:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #1e5c3a, 
+                0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .category-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin: 1.5rem 0;
+    }
+    
+    .category-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .category-tab {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        flex: 0 0 auto;
+    }
+}
+    
+    .category-tab:hover:not(.active) {
+        background: #6a5ba0;
+    }
+    
+    .category-intro {
+        background: rgba(46, 139, 87, 0.1);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--primary);
+        display: none;
+    }
+    
+    .category-intro.active {
+        display: block;
+    }
+    
+    .category-intro h2 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .category-intro p {
+        color: #555;
+        line-height: 1.6;
+    }
+    
+    .machinery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .machinery-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        height: 380px;
+        display: none;
+    }
+    
+    .machinery-card.active {
+        display: block;
+    }
+    
+    .machinery-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    
+    .card-image {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+    
+    .machinery-card:hover .card-image {
+        transform: scale(1.03);
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+        position: relative;
+        height: calc(380px - 180px);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+        color: var(--dark);
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .card-description {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+    }
+    
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .card-price {
+        background: rgba(255, 165, 0, 0.2);
+        color: var(--dark);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .card-icon {
+        color: var(--primary);
+        font-size: 1.2rem;
+    }
+    
+    .floating-stats {
+        position: fixed;
+        top: 50%;
+        right: -100%;
+        transform: translateY(-50%);
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        width: 300px;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 100;
+    }
+    
+    .floating-stats.show {
+        right: 20px;
+        opacity: 1;
+    }
+    
+    .stats-title {
+        color: var(--primary);
+        margin-bottom: 1.2rem;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .stat-item {
+        margin-bottom: 1.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.3rem;
+    }
+    
+    .stat-value {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--dark);
+    }
+    
+    .stat-bar {
+        height: 6px;
+        background: #eee;
+        border-radius: 3px;
+        margin-top: 0.5rem;
+        overflow: hidden;
+    }
+    
+    .stat-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        border-radius: 3px;
+    }
+    
+    .toggle-stats {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+        z-index: 100;
+        border: none;
+        transition: all 0.3s ease;
+    }
+    
+    .toggle-stats:hover {
+        transform: scale(1.1);
+        background: var(--secondary);
+    }
+
+    /* Tab reminder styles */
+    .tab-reminder {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        background: rgba(242, 239, 243, 0.2);
+    }
+    
+    .reminder-text {
+        background: rgba(253, 252, 253, 0.2);
+        color: #2d0eb6;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-right: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        animation: fadeInOut 45s forwards;
+        opacity: 0;
+    }
+    
+    .pulsing-arrow {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        animation: pulse 2s infinite;
+    }
+    
+    .pulsing-arrow::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border-top: 3px solid #ff5722;
+        border-right: 3px solid #ff5722;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        20% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        80% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+    }
+
+    @media (max-width: 768px) {
         .slide-header h1 {
-            font-size: 2.2rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
         }
-
+        
         .slide-header p {
-            color: #555;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .decorative-line {
-            height: 4px;
-            width: 80px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            margin: 0 auto;
-            border-radius: 2px;
+            font-size: 1rem;
         }
         
         .category-tabs {
-            display: flex;
-            justify-content: center;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            justify-content: flex-start;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .category-tabs::-webkit-scrollbar {
+            display: none;
         }
         
         .category-tab {
-            padding: 0.7rem 1.5rem;
-            background: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            font-size: 0.95rem;
-            color: #444;
-        }
-        
-        .category-tab.active {
-            background: green;
-            color: rgb(200, 202, 200);
-        }
-        
-        .category-tab:hover:not(.active) {
-            background: #6a5ba0;
-        }
-        
-        .category-intro {
-            background: rgba(46, 139, 87, 0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--primary);
-            display: none;
-        }
-        
-        .category-intro.active {
-            display: block;
-        }
-        
-        .category-intro h2 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-        }
-        
-        .category-intro p {
-            color: #555;
-            line-height: 1.6;
+            flex: 0 0 auto;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
         }
         
         .machinery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
         
         .machinery-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
-            height: 380px;
-            display: none;
-        }
-        
-        .machinery-card.active {
-            display: block;
-        }
-        
-        .machinery-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-        }
-        
-        .card-image {
-            height: 180px;
-            width: 100%;
-            object-fit: cover;
-            transition: all 0.5s ease;
-        }
-        
-        .machinery-card:hover .card-image {
-            transform: scale(1.03);
-        }
-        
-        .card-content {
-            padding: 1.5rem;
-            position: relative;
-            height: calc(380px - 180px);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-title {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .card-description {
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-            flex-grow: 1;
-        }
-        
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .card-price {
-            background: rgba(255, 165, 0, 0.2);
-            color: var(--dark);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-        .card-icon {
-            color: var(--primary);
-            font-size: 1.2rem;
+            height: auto;
+            min-height: 380px;
         }
         
         .floating-stats {
-            position: fixed;
-            top: 50%;
+            width: 90%;
             right: -100%;
-            transform: translateY(-50%);
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            width: 300px;
-            opacity: 0;
-            transition: all 0.4s ease;
-            z-index: 100;
+            padding: 1.2rem;
         }
         
         .floating-stats.show {
-            right: 20px;
-            opacity: 1;
-        }
-        
-        .stats-title {
-            color: var(--primary);
-            margin-bottom: 1.2rem;
-            font-size: 1.2rem;
-            text-align: center;
-            font-weight: 600;
-        }
-        
-        .stat-item {
-            margin-bottom: 1.2rem;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0.3rem;
-        }
-        
-        .stat-value {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .stat-bar {
-            height: 6px;
-            background: #eee;
-            border-radius: 3px;
-            margin-top: 0.5rem;
-            overflow: hidden;
-        }
-        
-        .stat-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 3px;
+            right: 5%;
         }
         
         .toggle-stats {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
-            z-index: 100;
-            border: none;
-            transition: all 0.3s ease;
+            width: 45px;
+            height: 45px;
+            font-size: 1.1rem;
+            bottom: 20px;
+            right: 20px;
         }
         
-        .toggle-stats:hover {
-            transform: scale(1.1);
-            background: var(--secondary);
+        .tab-reminder {
+            top: 10px;
+            right: 10px;
         }
-
-        @media (max-width: 768px) {
-            .slide-header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .slide-header p {
-                font-size: 1rem;
-            }
-            
-            .category-tabs {
-                justify-content: flex-start;
-                overflow-x: auto;
-                padding-bottom: 1rem;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-            }
-            
-            .category-tabs::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .category-tab {
-                flex: 0 0 auto;
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
-            
-            .machinery-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .machinery-card {
-                height: auto;
-                min-height: 380px;
-            }
-            
-            .floating-stats {
-                width: 90%;
-                right: -100%;
-                padding: 1.2rem;
-            }
-            
-            .floating-stats.show {
-                right: 5%;
-            }
-            
-            .toggle-stats {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-                bottom: 20px;
-                right: 20px;
-            }
+        
+        .reminder-text {
+            font-size: 0.8rem;
+            padding: 6px 10px;
         }
-
-
+        
+        .pulsing-arrow {
+            width: 25px;
+            height: 25px;
+        }
+    }
 
 
 /* --------------------------------acheivments Slide Styles */
@@ -3372,7 +3550,7 @@ p.intro {
                 width: 120px;
                 height: 120px;
             }
-        }
+        
 
             
             .slide-title {
@@ -3492,7 +3670,7 @@ p.intro {
                 </div>
             </div>
         </div>
-         <!-------------------------- Slide 4: What we for -->
+         <!-------------------------- Slide 4: What we are for -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_2.jpg');">
              
              <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
@@ -3656,7 +3834,7 @@ p.intro {
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <h2 class="top-us-title">ABOUT US</h2>
-            <div class="slide-content">
+            <div class="slide-content-aboutus">
                 <div class="about-container">
                     <!-- Image Section -->
                     <div class="about-image">
@@ -3687,10 +3865,11 @@ p.intro {
             </div>
         </div>
         <!----------------------------------- Slide 8: Challenges Farm Hub Addresses -->
-        <div class="slide">
+        <div class="slide bg-image" style="background-image: url('image_file/woman_farmer.jpg'); background-size:cover; background-position: center; height: 100vh; display: flex; align-items: center; background-repeat: no-repeat;">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-              <h1>Challenges Farm Hub Addresses</h1>
-            <div class="slide-content">
+            <h2 class="top-us-title">Challenges Farm Hub Addresses</h2>
+              
+            <div class="slide-content-challenge">
               <div class="challenges-container">
                     <!-- Challenge Cards -->
                     <div class="challenges-card">
@@ -3912,389 +4091,172 @@ p.intro {
             </div>
         </div>
      
-       <!---------------------------------- Slide 14: Scaling Farm Hub -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h1>SCALING FARM HUB</h1>
-            <div class="slide-content-5">
-                
-                <p class="intro">Our overarching goal is to expand our reach far beyond one region. We envision a strategic approach to scaling the business:</p>
-                
-                <ul class="scaling-list">
-                    <li>Piloting Farm Hub</li>
-                    <li>Development of playbook</li>
-                    <li>Establishment of Additional Farm Hubs</li>
-                    <li>Franchise Model</li>
-                </ul>
-                
-                <div class="timeline-container">
-                    <div class="timeline-track"></div>
-                    <div class="timeline-items">
-                        <div class="timeline-item">
-                            <div class="timeline-badge">1</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2024</div>
-                                <p>Piloting Farm Hub</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">2</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2025</div>
-                                <p>Development of playbook</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">3</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2026</div>
-                                <p><span class="plus-icon">+</span> One Farm Hub</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">4</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2027</div>
-                                <p><span class="plus-icon">+</span> Two Farm Hubs</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">5</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2028</div>
-                                <p>Franchise Model</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
         <!---------------------------------- Slide 15: Scaling pathway -->
-        <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
+      
+        <div class="slide bg-image scaling-slide" style="background-image: url('image_file/regen_4.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-         
-            <h2 class="top-us-title">
-                Scaling Farm Hub -Pathways
-            </h2>
+            <h1>SCALING FARM HUB - PATHWAYS</h1>
             <div class="slide-content-6">
-              
-                <p class="solution-subtitle">Our overarching goal is to expand our reach far beyond one region. We envision a strategic approach to scaling the business</p>
-                <div class="vision-container">
-                    <!-- Mission Labs Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🧠</div>
-                            <div class="vision-card-title-container">
-                                <h3 style="font-size:1.0rem">Piloting Farm Hub</h3>
-                                <p></p>
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    
-                                    <h4>#1- Farm Hub Pilot @ Hawassa University</h4>
-                        <p style="color: blue;">1 Year (Completed)</p>
-                        <p style="color: blue;">Validated the Farm Hub model through rigorous testing at HU's research farms, developing the foundational playbook for scaling.</p>
-                        
-                            <h4>Key Outcomes:</h4>
-                            <ul>
-                                <li>Tested 12 different mechanization technologies</li>
-                                <li>Developed 3 core revenue streams</li>
-                                <li>Trained 45 "Hub Champion" farmers</li>
-                            </ul>
-                       
-                                </div>
-                           
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Farm Hubs Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🏭</div>
-                            <div class="vision-card-title-container">
-                                <h3 style="font-size:1.0rem">#2-Development of playbook </h3>
-                                <p>It ensures Repeatability by Standardisation</p>
-                                <p>Formalising the Farm Lab Ethiopia playbook</p>
-                                
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <div class="process-flow">
-                                        <div class="process-step">
-                                            <div class="step-number">1</div>
-                                            <div class="step-content">Contextual Assessment</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">2</div>
-                                            <div class="step-content">Farm Hub Design & Setup</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">3</div>
-                                            <div class="step-content">Farm Hub Technology Stack</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">4</div>
-                                            <div class="step-content">Partnerships & Collaborations</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">5</div>
-                                            <div class="step-content">Education & Training Programmes</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">6</div>
-                                            <div class="step-content">Business Model & Financial Sustainability</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">7</div>
-                                            <div class="step-content">Scaling & Franchising</div>
-                                        </div>
-                                        <div class="process-step">
-                                            <div class="step-number">8</div>
-                                            <div class="step-content">Monitoring, Evaluation & Continuous Improvement</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="vision-impact">
-                                    <div class="playbook-features">
-                                        <h3>Validated Playbook Includes:</h3>
-                                        <div class="feature-tags">
-                                            <span>Financial models</span>
-                                            <span>Digital integration protocols</span>
-                                            <span>Training module</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Regen Farms Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🌱</div>
-                            <div class="vision-card-title-container">
-                                <h3 style="font-size:1.0rem"> #3-Establishment of Additional Farm Hubs</h3>
-                                
-                   
-                   
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                            <p>Real-World Stress Testing</p>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <h3 style="color: green;">Direct Expansion Phase</h3>
-                                    <p style="color: green;">2025-2027</p>
-                                    <p style="color: green;">Launching 3 Farm Hubs near Hawassa to test the model in real farming conditions across diverse contexts.</p>
-                                </div>
-                                <div class="vision-impact">
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🌱</div>
-                            <div class="vision-card-title-container">
-                                <h3 style="font-size:1.0rem"> #4 - Franchise Model</h3>
-                                
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                           <p> Repeatability Through Franchising</p>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <p style="color: green;">Franchising will play a pivotal role in scaling Farm Hub Ethiopia's impact across diverse agricultural landscapes. By adopting this model, we leverage local entrepreneurship while maintaining consistent quality standards.</p>
-                                </div>
-                                <div class="vision-impact">
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Gap Visualization -->
-               
-            </div>
-        </div>
-
-
-
-    <div class="slide bg-image scaling-slide" style="background-image: url('image_file/regen_4.jpg');">
-        <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-        <h1>SCALING FARM HUB - PATHWAYS</h1>
-        <div class="slide-content-6">
-           
-        <div class="combined-scaling-content">
-            <!-- Left Column: Timeline Visualization -->
-            <div class="timeline-column">
-                <p></p>
-                <p class="intro">Our overarching goal is to expand our reach far beyond one region. We envision a strategic approach to scaling the business with clear milestones: </p>
-                
-                <div class="timeline-container">
-                    <div class="timeline-track"></div>
-                    <div class="timeline-items">
-                        <div class="timeline-item">
-                            <div class="timeline-badge">1</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2024</div>
-                                <p>Piloting Farm Hub</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">2</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2025</div>
-                                <p>Development of playbook</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">3</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2026-2027</div>
-                                <p>Direct Expansion (+3 Hubs)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-badge">4</div>
-                            <div class="timeline-content">
-                                <div class="timeline-year">2028</div>
-                                <p>Franchise Model</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
-            <!-- Right Column: Expandable Cards -->
-            <div class="cards-column">
-                <div class="vision-container">
-                    <!-- Piloting Farm Hub Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🧠</div>
-                            <div class="vision-card-title-container">
-                                <h3>1. Piloting Farm Hub</h3>
-                                <p class="card-subtitle">Hawassa University (Completed)</p>
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <p>Validated the Farm Hub model through rigorous testing at HU's research farms.</p>
-                                <h4>Key Outcomes:</h4>
-                                <ul>
-                                    <li>Tested 12 mechanization technologies</li>
-                                    <li>Developed 3 core revenue streams</li>
-                                    <li>Trained 45 "Hub Champion" farmers</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="combined-scaling-content">
+                <!-- Left Column: Timeline Visualization -->
+                <div class="timeline-column">
+                    <p></p>
+                    <p class="intro">Our overarching goal is to expand our reach far beyond one region. We envision a strategic approach to scaling the business with clear milestones: </p>
                     
-                    <!-- Playbook Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">📘</div>
-                            <div class="vision-card-title-container">
-                                <h3>2. Playbook Development</h3>
-                                <p class="card-subtitle">Standardization for Repeatability</p>
+                    <div class="timeline-container">
+                        <div class="timeline-track"></div>
+                        <div class="timeline-items">
+                            <div class="timeline-item">
+                                <div class="timeline-badge">1</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-year">2024</div>
+                                    <p>Piloting Farm Hub</p>
+                                </div>
                             </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="playbook-highlights">
-                                <h4>Core Components:</h4>
-                                <div class="feature-tags">
-                                    <span>Financial models</span>
-                                    <span>Digital protocols</span>
-                                    <span>Training modules</span>
-                                    <span>Technology stack</span>
-                                    <span>Partnership framework</span>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-badge">2</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-year">2025</div>
+                                    <p>Development of playbook</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-badge">3</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-year">2026-2027</div>
+                                    <p>Direct Expansion (+3 Hubs)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-badge">4</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-year">2028</div>
+                                    <p>Franchise Model</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Right Column: Expandable Cards -->
+                <div class="cards-column">
+                    <div class="vision-container">
+                        <!-- Piloting Farm Hub Card -->
+                        <div class="vision-card">
+                            <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
+                                <div class="vision-card-icon">🧠</div>
+                                <div class="vision-card-title-container">
+                                    <h3>1. Piloting Farm Hub</h3>
+                                    <p class="card-subtitle">Hawassa University (Completed)</p>
+                                </div>
+                                <div class="vision-toggle-icon">▼</div>
+                            </div>
+                            <div class="vision-card-content">
+                                <div class="vision-card-details">
+                                    <p>Validated the Farm Hub model through rigorous testing at HU's research farms.</p>
+                                    <h4>Key Outcomes:</h4>
+                                    <ul>
+                                        <li>Tested 12 mechanization technologies</li>
+                                        <li>Developed 3 core revenue streams</li>
+                                        <li>Trained 45 "Hub Champion" farmers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Playbook Card -->
+                        <div class="vision-card">
+                            <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
+                                <div class="vision-card-icon">📘</div>
+                                <div class="vision-card-title-container">
+                                    <h3>2. Playbook Development</h3>
+                                    <p class="card-subtitle">Standardization for Repeatability</p>
+                                </div>
+                                <div class="vision-toggle-icon">▼</div>
+                            </div>
+                            <div class="vision-card-content">
+                                <div class="vision-card-details">
+                                    <h4>Core Components:</h4>
+                                    <ul>
+                                        <li>Business Model & Financial Sustainability</li>
+                                        <li>Digital protocols</li>
+                                        <li>Training modules</li>
+                                        <li>Farm hub Technology stack</li>
+                                        <li>TPartnership framework</li>
+                                        <li>Monitoring, Evaluation & Continuous Improvement</li>
+                                    </ul>
+                                   
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Direct Expansion Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🏭</div>
-                            <div class="vision-card-title-container">
-                                <h3>3. Direct Expansion</h3>
-                                <p class="card-subtitle">2026-2027 Real-World Testing</p>
+                        <!-- Direct Expansion Card -->
+                        <div class="vision-card">
+                            <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
+                                <div class="vision-card-icon">🏭</div>
+                                <div class="vision-card-title-container">
+                                    <h3>3. Direct Expansion</h3>
+                                    <p class="card-subtitle">Real-World Testing</p>
+                                </div>
+                                <div class="vision-toggle-icon">▼</div>
                             </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <p>Launching 3 Farm Hubs near Hawassa to test the model in real farming conditions across diverse contexts.</p>
-                                <h4>Objectives:</h4>
-                                <ul>
-                                    <li>Validate regional adaptability</li>
-                                    <li>Stress-test operational systems</li>
-                                    <li>Refine economic sustainability</li>
-                                </ul>
+                            <div class="vision-card-content">
+                                <div class="vision-card-details">
+                                    <p>Launching 3 Farm Hubs near Hawassa to test the model in real farming conditions across diverse contexts.</p>
+                                    <h4>Objectives:</h4>
+                                    <ul>
+                                        <li>Validate regional adaptability</li>
+                                        <li>Stress-test operational systems</li>
+                                        <li>Refine economic sustainability</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Franchise Model Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🌍</div>
-                            <div class="vision-card-title-container">
-                                <h3>4. Franchise Model</h3>
-                                <p class="card-subtitle">2028 Scaling Phase</p>
+                        <!-- Franchise Model Card -->
+                        <div class="vision-card">
+                            <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
+                                <div class="vision-card-icon">🌍</div>
+                                <div class="vision-card-title-container">
+                                    <h3>4. Franchise Model</h3>
+                                    <p class="card-subtitle">Scaling Phase</p>
+                                </div>
+                                <div class="vision-toggle-icon">▼</div>
                             </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <p>Leverage local entrepreneurship while maintaining quality standards for nationwide expansion.</p>
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Standardized operational package</li>
-                                    <li>Quality control system</li>
-                                    <li>Central support hub</li>
-                                    <li>Performance monitoring</li>
-                                </ul>
+                            <div class="vision-card-content">
+                                <div class="vision-card-details">
+                                    <p>Franchising will play a pivotal role in scaling Farm Hub Ethiopia's impact across diverse agricultural landscapes. By adopting this model, we leverage local 
+                                        entrepreneurship while maintaining consistent quality standards.</p>
+                                        <p> Leverage local entrepreneurship while maintaining quality standards for nationwide expansion.</p>
+                                    <h4>Key Features:</h4>
+                                    <ul>
+                                        <li>Standardized operational package</li>
+                                        <li>Quality control system</li>
+                                        <li>Central support hub</li>
+                                        <li>Performance monitoring</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-        </div>
-    </div>
         <!--------------------------------- Slide 16: WHY FARM HUB WORKS -->
-        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image_file/regen_13.jpg'); background-size:cover;">
+        <div class="slide" style="background-image: url('image_file/regen_13.jpg'); background-size:cover;">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <h1 class="top-us-title" style="color: white;">
                 WHY FARM HUB WORKS
             </h1>
           
            
-            <div class="slide-content-1" style="background-color: #121312;">
+            <div class="slide-content-1">
                 <div class="why-title-container">
                    
                     <p class="why-subtitle">Key Differentiators for Sustainable Impact</p>
@@ -4397,6 +4359,11 @@ p.intro {
         <h1 class="achievements-slide-title">Our Achievements</h1>
         <div class="slide-content-6">
             <div class="slide-container-service">
+                <div class="tab-reminder">
+                    <span class="reminder-text">Interactive tabs!</span>
+                    <div class="pulsing-arrow"></div>
+                </div>
+                
                 <div class="slide-header">
                     <h1>Farm Hub Piloting</h1>
                     <p>Innovative agricultural mechanization solutions for Ethiopia</p>
@@ -4439,8 +4406,8 @@ p.intro {
                     <div class="machinery-card active" data-category="tech_sourcing">
                         <img src="image_file/farm_hub_equip_1.jpg" alt="Farm Hub Equipment" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Technology Sourcing</h3>
-                            <p class="card-description">We sourced and imported 12 different agricultural implements from India to pilot Farm Lab together with 50 hp tractor.</p>
+                            <h3 class="card-title">Farm Hub pilot site</h3>
+                            <p class="card-description">Sourced technologies at IoT campus</p>
                             <div class="card-footer">
                                 <span class="card-price">Complete Package</span>
                                 <i class="fas fa-tractor card-icon"></i>
@@ -4451,7 +4418,7 @@ p.intro {
                     <div class="machinery-card active" data-category="tech_sourcing">
                         <img src="image_file/potato_planter.jpg" alt="Potato Planter" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Specialized Equipment</h3>
+                            <h3 class="card-title">Specialized Equipment- potato planter</h3>
                             <p class="card-description">Imported potato planter and other specialized implements to address key crops in Ethiopian agriculture.</p>
                             <div class="card-footer">
                                 <span class="card-price">Crop-Specific Solutions</span>
@@ -4464,6 +4431,17 @@ p.intro {
                         <img src="image_file/super_seeder_1.jpg" alt="Super Seeder" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Super Seeder</h3>
+                            <p class="card-description">Key imported technology enabling direct seeding without prior tillage, combining multiple operations in one pass.</p>
+                            <div class="card-footer">
+                                <span class="card-price">Multifunctional</span>
+                                <i class="fas fa-seedling card-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinery-card active" data-category="tech_sourcing">
+                        <img src="image_file/laser_leveler_1.jpg" alt="Super Seeder" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Laser Land Leveller</h3>
                             <p class="card-description">Key imported technology enabling direct seeding without prior tillage, combining multiple operations in one pass.</p>
                             <div class="card-footer">
                                 <span class="card-price">Multifunctional</span>
@@ -4589,8 +4567,9 @@ p.intro {
                 </button>
             </div>
         </div>
-    </div>
-
+       </div>
+    
+   
        <!-- Slide 19: Photo gallery-->
         <div class="slide">
   
@@ -4910,7 +4889,6 @@ p.intro {
 
 
 
-
 <script>
     // Category filtering
     const tabs = document.querySelectorAll('.category-tab');
@@ -4951,6 +4929,27 @@ p.intro {
             }, 200);
         });
     });
+    
+    // === NEW CODE: Show reminder only when slide is focused ===
+    function showTabReminder() {
+        const reminder = document.querySelector('.tab-reminder');
+        reminder.style.display = 'flex';
+        reminder.style.opacity = '1'; // Reset opacity
+        setTimeout(() => {
+            reminder.style.opacity = '0'; // Fade out after 5 sec
+        }, 5000);
+    }
+
+    // If using Reveal.js:
+    if (typeof Reveal !== 'undefined') {
+        Reveal.addEventListener('slidechanged', function(event) {
+            if (event.currentSlide.id === 'mechanization-slide') {
+                showTabReminder();
+            }
+        });
+    }
+    // If manually controlling slides:
+    // Call showTabReminder() when navigating to this slide
 </script>
 
 
