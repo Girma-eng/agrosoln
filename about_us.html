@@ -164,7 +164,7 @@
             justify-content: left;
             align-items: left;
             text-align: left;
-            margin-left: -300px;
+           
           
 
         }
@@ -310,50 +310,71 @@
         .column {
             flex: 1;
         }
-      
-        
+        .column p{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
         .nav-bar {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px 10px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-        }
-        
-        .nav-btn {
-            background-color: rgba(20, 189, 74, 0.9);
-            color: white;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin: 0 10px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-btn:hover {
-            background-color: var(--dark-green);
-            transform: scale(1.1);
-        }
-        
-        .slide-counter {
-            margin: 0 15px;
-            font-weight: bold;
-            color: var(--text-color);
-            min-width: 80px;
-            text-align: center;
-        }
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 10px 20px;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                z-index: 100;
+                gap: 15px;
+            }
+
+            .nav-btn {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                background-color: #4a6bff;
+                color: white;
+                font-size: 40px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-btn:hover {
+                background-color: #3a5bef;
+                transform: scale(1.1);
+            }
+
+            .slide-counter {
+                font-weight: bold;
+                color: #333;
+                min-width: 60px;
+                text-align: center;
+            }
+
+            .nav-reminder {
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #4a6bff;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+                white-space: nowrap;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .nav-bar:hover .nav-reminder {
+                opacity: 1;
+            }
         
         .toc-item {
             margin: 15px 0;
@@ -558,7 +579,7 @@
             line-height: 1.3rem;
         }
         .column p{
-            font-size: 0.9rem;
+            font-size: 1.0rem;
             line-height: 1.3rem;
         }
         .slide-content h2 {
@@ -590,6 +611,16 @@
         .column {
             flex: 0 0 100%;
             margin-bottom: 20px;
+        }
+        .slide-content-challenge {
+           
+            max-width: 1400px;
+            width: 95%;
+            height: 70%;
+          
+            padding: 15px;
+           
+           
         }
       
         }
@@ -858,6 +889,20 @@
             max-width: 150px;
             z-index: 100;
         }
+        .nav-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+        
         }
 
 
@@ -885,7 +930,7 @@
     }
     
     .vision-card {
-        background-color: rgb(94 89 55);
+        background-color: rgb(255, 254, 254);
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         width: 100%;
@@ -951,6 +996,13 @@
         color: green;
         
     }
+    .vision-responsibilities p {
+        padding-left: 10px;
+        margin-bottom: 15px;
+        text-align: left;
+        color: green;
+        
+    }
     
     .vision-highlight {
         font-weight: bold;
@@ -992,7 +1044,7 @@
     
     .vision-gap-arrow {
         font-size: 2rem;
-        color: var(--primary-color);
+        color: white;
         margin: 10px 0;
     }
     
@@ -1090,7 +1142,7 @@
     
     .about-highlight {
         background: rgba(89, 161, 91, 0.1);
-        color: #2c3e50;
+        color: #fcfeff;
         padding: 20px;
         border-radius: 8px;
         border-left: 4px solid rgb(89, 161, 91);
@@ -1170,7 +1222,7 @@
     .top-us-title {
     color: rgb(14, 192, 32);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
   
 }
     .about-role-text {
@@ -1214,18 +1266,18 @@
     
     .challenges-card-header h3 {
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
     
     .challenges-card-content {
-        padding: 5px;
+        padding: 10px;
       
     }
     
     .challenges-card-content p {
         margin: 0;
         line-height: 1.6;
-           font-size: 0.9rem;
+        font-size: 1.3rem;
     }
     
     .challenges-emphasis {
@@ -1245,14 +1297,18 @@
     }
     
     .challenges-emphasis-content h3 {
-        color: var(--primary-color);
+        color: white;
         margin-top: 0;
         margin-bottom: 10px;
+        font-size: 1.6rem;
+
     }
+
     
     .challenges-emphasis-content p {
         margin: 0;
         line-height: 1.6;
+        font-size: 1.4rem;
     }
     
     @media (max-width: 768px) {
@@ -1268,6 +1324,26 @@
             margin-right: 0;
             margin-bottom: 15px;
         }
+        .challenges-card-content p {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 0.9rem;
+    }
+    .challenges-card-header h3 {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    .challenges-emphasis-content h3 {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 1.5rem;
+    }
+    .challenges-emphasis-content p {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 1.4rem;
+    }
+ 
     }
 
 
@@ -1465,7 +1541,7 @@
 /*------------------- How We Do It */
 .how-title-container {
     text-align: center;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .how-title-container h1 {
@@ -1498,7 +1574,7 @@
 .card-number {
     position: absolute;
     top: -15px;
-    left: -15px;
+    left: -5px;
     background: var(--primary-color);
     color: white;
     width: 40px;
@@ -1611,7 +1687,7 @@ p.intro {
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             width: 90%;
-            max-width: 200px;
+            max-width: 300px;
             text-align: center;
             position: relative;
         }
@@ -1621,6 +1697,11 @@ p.intro {
             font-weight: bold;
             color: var(--primary);
             margin-bottom: 8px;
+        }
+        .timeline-year {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1.1rem;
         }
         
         .plus-icon {
@@ -1687,9 +1768,17 @@ p.intro {
                 border-radius: 8px;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                 position: relative;
-                max-width: 150px;
+                max-width: 250px;
                 font-size: 0.8rem;
                 }
+                .timeline-year {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    color: var(--primary);
+                    margin-bottom: 4px;
+                }
+            
+      
           
             }
             
@@ -2381,6 +2470,7 @@ p.intro {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
+    text-align: left;
 }
 .service-card.active .service-details {
     max-height: 500px;
@@ -3578,6 +3668,56 @@ p.intro {
                 height: 70px;
             }
         }
+
+
+
+
+         /* Header with Decorative Dividers */
+         .slide-header-overlay {
+            top:-25px;
+            position: relative;
+            z-index: 2;
+            padding: 15px 20000px;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(2px);
+            border-bottom: 1px solid rgba(29, 162, 82, 0.3);
+        }
+        
+        .decorative-divider-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .divider-pair {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-grow: 1;
+            justify-content: center;
+            margin: 0 20px;
+            color: green;
+        }
+        
+        .divider-icon {
+            color: #01a15c;
+            font-size: 1.4rem;
+            margin: 0 10px;
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .slide-header-overlay {
+            top:-10px;
+            position: relative;
+            z-index: 2;
+            padding: 15px 20000px;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(2px);
+            border-bottom: 1px solid rgba(233, 166, 33, 0.3);
+        }
+        }
     </style>
        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -3589,12 +3729,21 @@ p.intro {
         <!-- Slide 1: Title Slide -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
-                <img src="image_file/logo_1.jpg" alt="Farm Hub Ethiopia Logo" class="logo-title-slide">
+               
                 <h1>Farm Hub Ethiopia</h1>
-                <h2>Bridging the Gap Between Modern and Subsistence Farming</h2>
+                <h2 style="color: white;">Bridging the Gap Between Modern and Subsistence Farming</h2>
                
                 <div class="highlight-box-2">
                     <p>Mechanization Services | Inputs | Digital Solutions | Advisory Services</p>
+                </div>
+            </div>
+            <div class="slide-header-overlay">
+                <div class="decorative-divider-container">
+                    <div class="divider-pair">
+                        <svg width="40" height="16"><path d="M0,8 C10,-5 30,21 40,8" stroke="green" stroke-width="1.2" fill="none"/></svg>
+                        <span class="divider-icon">❖</span>
+                        <svg width="40" height="16"><path d="M0,8 C10,21 30,-5 40,8" stroke="green" stroke-width="1.2" fill="none"/></svg>
+                    </div>
                 </div>
             </div>
             <div class="footer">
@@ -3614,17 +3763,13 @@ p.intro {
                <!---------------------------- Slide 3: The Problem -->
         <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            
-            <h1>The Context</h1>
-            
-            <div class="slide-content">
+            <h1 class="top-us-title">The Context</h1>
+                       <div class="slide-content">
                
                 <div class="two-columns">
                     <div class="column" >
                         <h2>The Challenge</h2>
-                        <p style="color: white;">Our current food system is <span style="color: #ab5a5a; font-weight: 600;">broken </span> - the way we produce, distribute and consume food <span style="color: #e74c3c; font-weight: 600;">isn't working effectively. </span></p>
-                            
-                        <p> Stem from deep, interconnected issues: historical, cultural, and global, contributing to <span style="color: #e74c3c; font-weight: 600;">environmental degradation, inequality, and food insecurity<span>, failing both people and the planet. </p>
+                        <p style="color: white;">Our current food system is <span style="color: red; font-weight: 600;">broken </span> - the way we produce, distribute and consume food isn't working effectively, contributing to <span style="color: #e74c3c; font-weight: 600;">environmental degradation, inequality, and food insecurity<span>, failing both people and the planet. </p>
                             
                         <p>   By focusing on short-term gains rather than long-term sustainability, this approach results in soil depletion, biodiversity loss, and increased climate vulnerability.</p>
                         
@@ -3676,13 +3821,13 @@ p.intro {
         <div class="slide bg-image" style="background-image: url('image_file/regen_2.jpg');">
              
              <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-             <h2 class="top-us-title">
+             <h2 class="top-us-title" style="color: white;">
                 What We Strive For?
             </h2>
           
             <div class="slide-content-2">
                
-                <h2>We envision a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles 
+                <h2 style="color: white;">We envision a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles 
                     and systems - ensuring their resilience and empowering them to prosper for generations to come.</h2>
                 
                
@@ -3692,7 +3837,7 @@ p.intro {
         <!--------------------------- Slide 5: Vision Components -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h2 class="top-us-title">
+            <h2 class="top-us-title" style="color: white;">
                 Vision Components
             </h2>
            
@@ -3847,19 +3992,17 @@ p.intro {
                     <div class="about-text">
                         <div class="about-highlight">
                             <span class="about-highlight-title">Farm Hub Ethiopia</span>
-                            <span class="about-highlight-url"></span>
-                            is an agricultural company established in 2023 with a core focus on
-                            <span class="about-highlight-green">improving crop production and empowering smallholder farmers</span>.
+                            is an agricultural company established in 2023 with a core focus on improving crop production and empowering smallholder farmers</span>.
                             <span class="about-highlight-blue">With a commitment to innovation and sustainability,</span>
                             we have been actively engaged in providing agricultural solutions and services tailored to the needs of
                             <span class="about-highlight-orange">smallholder farmers</span>.
                             As the hands-on implementation partner in the agricultural ecosystem, we translate innovations from research labs (like Mission Labs) into practical, farmer-ready solutions.
                         </div>
                         
-                        <h3>Our Role in the System:</h3>
+                        <h3 style="color: white;">Our Role in the System:</h3>
                         <div class="about-role">
                            <div class="about-role-text">
-                                We are the <span style="color: green;">implementation engine—<span class="about-role-emphasis">delivering technologies, inputs and training</span> directly to farmers' fields.
+                                 <span style="color: green;"> We are the implementation engine—<span class="about-role-emphasis">delivering technologies, inputs and training</span> directly to farmers' fields.
                             </div>
                         </div>
                     </div>
@@ -3869,7 +4012,7 @@ p.intro {
         <!----------------------------------- Slide 8: Challenges Farm Hub Addresses -->
         <div class="slide bg-image" style="background-image: url('image_file/woman_farmer.jpg'); background-size:cover; background-position: center; height: 100vh; display: flex; align-items: center; background-repeat: no-repeat;">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h2 class="top-us-title">Challenges Farm Hub Addresses</h2>
+            <h2 class="top-us-title" style=" background-color: rgba(255, 255, 255, 0.5);;">Challenges Farm Hub Addresses</h2>
               
             <div class="slide-content-challenge">
               <div class="challenges-container">
@@ -3934,7 +4077,7 @@ p.intro {
         <!---------------------------------- Slide 10: How We Do It -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_12.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content" style="height: 50%;">
+            <div class="slide-content" style="height: 30%;">
                 <div class="how-title-container">
                     <h2>How We Do It?</h2>
                 </div>
@@ -3982,14 +4125,14 @@ p.intro {
            
             <div class="slide-content-3">
                 
-                <p class="services-subtitle" style="font-size:0.9rem">End-to-end solutions transforming Ethiopian agriculture</p>
+                <p class="services-subtitle">End-to-end solutions transforming Ethiopian agriculture</p>
                 
                 <div class="services-grid">
                     <!-- Mechanization Services -->
                     <div class="service-card" onclick="toggleServiceDetails(this)">
                         <div class="service-icon">🚜</div>
                         <h2>Mechanization Services</h2>
-                        <div class="service-highlight">Pay-per-use access to modern farm equipment</div>
+                        <div class="service-highlight">Pay-per-use access to farm equipment</div>
                         <div class="service-details">
                             <ul>
                                 <li><strong>Land Preparartion Service</strong> (5000-8000 ETB/ha)</li>
@@ -4017,7 +4160,7 @@ p.intro {
                         <div class="service-highlight">Certified seeds, fertilizers & crop protection</div>
                         <div class="service-details">
                             <ul>
-                                <li><strong>Climate-smart seeds</strong> (drought-resistant varieties)</li>
+                                <li><strong>Improved seeds</strong> (drought-resistant varieties)</li>
                                 <li><strong>Organic fertilizers</strong> (improve soil health)</li>
                                 <li><strong>Biocontrol agents</strong> (reduce chemical use)</li>
                                 
@@ -4044,7 +4187,7 @@ p.intro {
                             <ul>
                                 <li><strong>Equipment booking</strong> (real-time availability)</li>
                                 <li><strong>Market prices</strong> (updated daily)</li>
-                                <li><strong>Weather alerts</strong> (hyper-local forecasts)</li>
+                                <li><strong>Weather alerts</strong> (local forecasts)</li>
                                 <li><strong>Pest diagnosis</strong> (AI-powered detection)</li>
                             </ul>
                             <div class="service-stats">
@@ -4053,7 +4196,7 @@ p.intro {
                                     <div class="stat-label">Access</div>
                                 </div>
                                 <div class="stat">
-                                    <div class="stat-value">10,000+</div>
+                                    <div class="stat-value">???+</div>
                                     <div class="stat-label">Active Users</div>
                                 </div>
                             </div>
@@ -4074,11 +4217,11 @@ p.intro {
                             </ul>
                             <div class="service-stats">
                                 <div class="stat">
-                                    <div class="stat-value">500+</div>
+                                    <div class="stat-value">??+</div>
                                     <div class="stat-label">Trained Farmers</div>
                                 </div>
                                 <div class="stat">
-                                    <div class="stat-value">92%</div>
+                                    <div class="stat-value">??</div>
                                     <div class="stat-label">Satisfaction Rate</div>
                                 </div>
                             </div>
@@ -4114,7 +4257,7 @@ p.intro {
                                 <div class="timeline-badge">1</div>
                                 <div class="timeline-content">
                                     <div class="timeline-year">2024</div>
-                                    <p>Piloting Farm Hub</p>
+                                    <p class="timeline-year">Piloting Farm Hub</p>
                                 </div>
                             </div>
                             
@@ -4122,7 +4265,7 @@ p.intro {
                                 <div class="timeline-badge">2</div>
                                 <div class="timeline-content">
                                     <div class="timeline-year">2025</div>
-                                    <p>Development of playbook</p>
+                                    <p class="timeline-year">Development of playbook</p>
                                 </div>
                             </div>
                             
@@ -4130,7 +4273,7 @@ p.intro {
                                 <div class="timeline-badge">3</div>
                                 <div class="timeline-content">
                                     <div class="timeline-year">2026-2027</div>
-                                    <p>Direct Expansion (+3 Hubs)</p>
+                                    <p class="timeline-year">Direct Expansion (+3 Hubs)</p>
                                 </div>
                             </div>
                             
@@ -4138,7 +4281,7 @@ p.intro {
                                 <div class="timeline-badge">4</div>
                                 <div class="timeline-content">
                                     <div class="timeline-year">2028</div>
-                                    <p>Franchise Model</p>
+                                    <p class="timeline-year">Franchise Model</p>
                                 </div>
                             </div>
                         </div>
@@ -4160,6 +4303,7 @@ p.intro {
                             </div>
                             <div class="vision-card-content">
                                 <div class="vision-card-details">
+                                <div class="vision-responsibilities">
                                     <p>Validated the Farm Hub model through rigorous testing at HU's research farms.</p>
                                     <h4>Key Outcomes:</h4>
                                     <ul>
@@ -4168,6 +4312,7 @@ p.intro {
                                         <li>Trained 45 "Hub Champion" farmers</li>
                                     </ul>
                                 </div>
+                            </div>
                             </div>
                         </div>
                         
@@ -4183,6 +4328,7 @@ p.intro {
                             </div>
                             <div class="vision-card-content">
                                 <div class="vision-card-details">
+                                    <div class="vision-responsibilities">
                                     <h4>Core Components:</h4>
                                     <ul>
                                         <li>Business Model & Financial Sustainability</li>
@@ -4194,6 +4340,7 @@ p.intro {
                                     </ul>
                                    
                                 </div>
+                            </div>
                             </div>
                         </div>
 
@@ -4209,6 +4356,7 @@ p.intro {
                             </div>
                             <div class="vision-card-content">
                                 <div class="vision-card-details">
+                                    <div class="vision-responsibilities">
                                     <p>Launching 3 Farm Hubs near Hawassa to test the model in real farming conditions across diverse contexts.</p>
                                     <h4>Objectives:</h4>
                                     <ul>
@@ -4217,6 +4365,7 @@ p.intro {
                                         <li>Refine economic sustainability</li>
                                     </ul>
                                 </div>
+                            </div>
                             </div>
                         </div>
 
@@ -4675,11 +4824,17 @@ p.intro {
     
    
     
-    <div class="nav-bar">
-        <button class="nav-btn prev-btn">&larr;</button>
-        <div class="slide-counter">1 / 17</div>
-        <button class="nav-btn next-btn">&rarr;</button>
-    </div>
+<div class="nav-bar">
+    <button class="nav-btn prev-btn">
+        <svg width="60" height="60" viewBox="0 0 24 24"><path fill="white" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+    </button>
+    <div class="slide-counter">1 / 17</div>
+   
+    <button class="nav-btn next-btn">
+        <svg width="60" height="60" viewBox="0 0 24 24"><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+    </button>
+    <div class="nav-reminder">Use these buttons to navigate</div>
+</div>
 
 
 
