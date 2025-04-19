@@ -2647,7 +2647,7 @@ p.intro {
     .category-tabs {
     display: flex;
     justify-content: center;
-    margin: 2rem 0 3rem;
+    margin: 1rem 0 1rem;
     flex-wrap: wrap;
     gap: 0.8rem;
     position: relative;
@@ -2715,14 +2715,7 @@ p.intro {
 
 /* For mobile responsiveness */
 @media (max-width: 768px) {
-    .category-tabs {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 1rem;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        margin: 1.5rem 0;
-    }
+ 
     
     .category-tabs::-webkit-scrollbar {
         display: none;
@@ -2761,6 +2754,7 @@ p.intro {
     .category-intro p {
         color: white;
         line-height: 1.6;
+        font-size: 1.2rem;
     }
     
     .machinery-grid {
@@ -2929,7 +2923,7 @@ p.intro {
     /* Tab reminder styles */
     .tab-reminder {
         position: absolute;
-        top: 130px;
+        top: 100px;
         left: 20px;
         display: flex;
         align-items: center;
@@ -3026,7 +3020,16 @@ p.intro {
             padding: 0.6rem 1.2rem;
             font-size: 0.9rem;
         }
-        
+        .category-intro {
+        background: rgba(46, 139, 87, 0.1);
+        padding: 0.2rem;
+       
+            }
+    .category-intro p {
+        color: white;
+        line-height: 1.6;
+        font-size: 1.0rem;
+        }
         .machinery-grid {
             grid-template-columns: 1fr;
             gap: 1.5rem;
@@ -3069,6 +3072,9 @@ p.intro {
             width: 25px;
             height: 25px;
         }
+        .tab-reminder {
+       display: none;
+    }
     }
 
 
@@ -4611,26 +4617,26 @@ p.intro {
                 <div class="category-tabs">
                     <button class="category-tab active" data-category="tech_sourcing">Technology Sourcing</button>
                     <button class="category-tab" data-category="partnership">Partnership and Team Formation</button>
-                    <button class="category-tab" data-category="field_trials">Field Trials & Evaluations</button>
+                    <button class="category-tab" data-category="field_trials">Field Trials</button>
                     <button class="category-tab" data-category="others">Demonstration Activities</button>
                 </div>
                 
                 <!-- Technology Sourcing Intro -->
                 <div class="category-intro active" id="tech_sourcing_intro">
                     <h2>Technology Sourcing</h2>
-                    <p>Farm Lab Ethiopia conducted comprehensive technology sourcing to identify and import appropriate agricultural machinery from India. This included 12 different implements designed for Ethiopian farming conditions, paired with a 50hp tractor to serve as a complete mechanization solution.</p>
+                    <p>We conducted comprehensive technology sourcing to identify and import appropriate agricultural machinery from India. This included 12 different implements suitable for Ethiopian farming conditions, paired with a 50hp tractor to serve as a complete mechanization solution.</p>
                 </div>
                 
                 <!-- Partnership Intro -->
                 <div class="category-intro" id="partnership_intro">
                     <h2>Partnership and Team Formation</h2>
-                    <p>We established strategic partnerships with key stakeholders including Hawassa University, GFA/GIZ, and local service providers. Our team of experts worked collaboratively to implement and evaluate the Farm Hub model as a one-stop-shop for mechanization services.</p>
+                    <p>We established strategic partnerships with key stakeholders including Hawassa University, and local service providers. Our team worked collaboratively to implement and evaluate the Farm Hub model as a one-stop-shop for mechanization services.</p>
                 </div>
                 
                 <!-- Field Trials Intro -->
                 <div class="category-intro" id="field_trials_intro">
-                    <h2>Field Trials & Evaluations</h2>
-                    <p>Farm Lab conducted four rigorous field trials at IoT campus and external locations to evaluate equipment performance, seed rates, field capacity, and adaptability for new crops like soybean. These trials provided critical data on the effectiveness of different planting technologies under Ethiopian conditions.</p>
+                    <h2>Field Trials</h2>
+                    <p>Farm Hub conducted four rigorous field trials at IoT campus and on farmer field to evaluate equipment performance, seed rates, field capacity, and adaptability for new crops like soybean. These trials provided critical data on the effectiveness of different planting technologies under Ethiopian conditions.</p>
                 </div>
                 
                 <!-- Demonstration Intro -->
@@ -4693,7 +4699,7 @@ p.intro {
                         <img src="image_file/partnership_4.jpg" alt="Team Meeting" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Stakeholder Collaboration</h3>
-                            <p class="card-description">Established partnerships with GFA/GIZ, service providers, and agricultural experts to implement the Farm Hub model.</p>
+                            <p class="card-description">Established partnerships with Hawassa University, service providers, and agricultural experts to implement the Farm Hub model.</p>
                             <div class="card-footer">
                                 <span class="card-price">Strategic Alliances</span>
                                 <i class="fas fa-handshake card-icon"></i>
@@ -4704,10 +4710,10 @@ p.intro {
                     <div class="machinery-card" data-category="partnership">
                         <img src="image_file/partnership_6.jpg" alt="Team Photo" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Expert Team</h3>
-                            <p class="card-description">Assembled a multidisciplinary team including agricultural engineers, field technicians, and research specialists.</p>
+                            <h3 class="card-title">Stakeholder Collaboration</h3>
+                            <p class="card-description">We signed an MoA with Hawassa University</p>
                             <div class="card-footer">
-                                <span class="card-price">Skilled Professionals</span>
+                                <span class="card-price">Strategic Alliances</span>
                                 <i class="fas fa-users card-icon"></i>
                             </div>
                         </div>
@@ -4716,7 +4722,7 @@ p.intro {
                     <div class="machinery-card" data-category="partnership">
                         <img src="image_file/team_1.jpg" alt="Team Working" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Field Implementation</h3>
+                            <h3 class="card-title">Team Formation</h3>
                             <p class="card-description">Our team working together to implement and test the Farm Hub model in real-world agricultural conditions.</p>
                             <div class="card-footer">
                                 <span class="card-price">Practical Solutions</span>
@@ -4729,8 +4735,8 @@ p.intro {
                     <div class="machinery-card" data-category="field_trials">
                         <img src="image_file/super_seeder_1.jpg" alt="Super Seeder Trial" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Super Seeder Evaluation</h3>
-                            <p class="card-description">Comprehensive testing of the Super Seeder's performance for wheat and soybean planting, demonstrating its versatility.</p>
+                            <h3 class="card-title">Equipment Evaluation</h3>
+                            <p class="card-description">Comprehensive testing of the differnt planters'  performance for wheat, maize and soybean planting, demonstrating its versatility.</p>
                             <div class="card-footer">
                                 <span class="card-price">30% Time Saving</span>
                                 <i class="fas fa-seedling card-icon"></i>
@@ -4741,10 +4747,10 @@ p.intro {
                     <div class="machinery-card" data-category="field_trials">
                         <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Field Trial" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Equipment Testing</h3>
-                            <p class="card-description">Rigorous field testing of various implements under Ethiopian conditions to evaluate performance and suitability.</p>
+                            <h3 class="card-title">Potato Planter</h3>
+                            <p class="card-description">The potato planter was evaluated at farmers' field</p>
                             <div class="card-footer">
-                                <span class="card-price">Performance Data</span>
+                                <span class="card-price"></span>
                                 <i class="fas fa-clipboard-check card-icon"></i>
                             </div>
                         </div>
