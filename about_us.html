@@ -140,6 +140,17 @@
             overflow-y: auto;
             position: relative;
         }
+        .slide-content-piloting {
+            max-width: 2000px;
+            width: 98%;
+            height: 90%;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            padding: 3px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            position: relative;
+        }
         
         .slide-content-1 {
                 background-color: rgba(34, 32, 32, 0.5);
@@ -214,9 +225,9 @@
             max-width: 2000px;
             width: 98%;
             height: 90%;
-            background-color: rgba(0, 25, 25, 0.3);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 15px;
-            padding: 30px;
+            padding: 3px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow-y: auto;
             position: relative;
@@ -259,6 +270,8 @@
             background-size: cover;
             background-position: center;
             color: var(--light-text);
+            background-repeat: no-repeat;
+
         }
         .content-farmhub-title {
             position: relative;
@@ -1130,6 +1143,11 @@
         color: green;
         font-size: 1.1rem;
            }
+           .solution-subtitle {
+        color: var(--secondary-color);
+        margin-bottom: 30px;
+        font-size: 1.4rem;
+    }
     }
 
 
@@ -1382,7 +1400,7 @@
     .challenges-emphasis-content p {
         margin: 0;
         line-height: 1.5;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
  
     }
@@ -1647,7 +1665,7 @@
 /* Slide 4: Scaling Farm Hub */
 
 p.intro {
-            font-size: 1.1rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             text-align: center;
             max-width: 800px;
@@ -1825,7 +1843,15 @@ p.intro {
                     margin-bottom: 4px;
                 }
             
-      
+                p.intro {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color:white;
+        
           
             }
             
@@ -2600,12 +2626,12 @@ p.intro {
 
     .slide-header h1 {
         font-size: 2.2rem;
-        color: var(--dark);
+        color: white;
         margin-bottom: 0.5rem;
     }
 
     .slide-header p {
-        color: #555;
+        color: white;
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
@@ -2727,13 +2753,13 @@ p.intro {
     }
     
     .category-intro h2 {
-        color: var(--primary);
+        color: white;
         margin-bottom: 0.5rem;
         font-size: 1.5rem;
     }
     
     .category-intro p {
-        color: #555;
+        color: white;
         line-height: 1.6;
     }
     
@@ -2903,7 +2929,7 @@ p.intro {
     /* Tab reminder styles */
     .tab-reminder {
         position: absolute;
-        top: 150px;
+        top: 130px;
         left: 20px;
         display: flex;
         align-items: center;
@@ -2913,7 +2939,7 @@ p.intro {
     
     .reminder-text {
         background: rgba(253, 252, 253, 0.2);
-        color: #2d0eb6;
+        color:white;
         padding: 8px 12px;
         border-radius: 20px;
         font-size: 0.9rem;
@@ -4107,7 +4133,7 @@ p.intro {
                               <div class="challenges-emphasis-icon">📊</div>
                               <div class="challenges-emphasis-content">
                                   <h3>The Mechanization Imperative</h3>
-                                  <p style="color: white;">Ethiopia's farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). Farm Hub's short-term focus on scalable mechanization solutions (pay-per-use models) can immediately boost productivity by 3-5x while solving affordability barriers.</p>
+                                  <p style="color: white;">Farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). Farm Hub's short-term focus on scalable mechanization solutions can immediately boost productivity by 30%-50%x while solving affordability barriers.</p>
                               </div>
                           </div>
                       </div>
@@ -4116,7 +4142,8 @@ p.intro {
             </div>
         </div>
         <!---------------------------------- Slide 9: Vision & Mission -->
-        <div class="slide" style="background: url('image_file/regen_10.jpg'); background-size: cover;">
+        <div class="slide bg-image" style="background: url('image_file/regen_13_1.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+  
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
             <div class="slide-content-8 vision-mission-slide">
                 <div class="vision-mission-container">
@@ -4569,7 +4596,7 @@ p.intro {
        <div class="slide" id="mechanization-slide">
         <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
         <h1 class="achievements-slide-title">Our Achievements</h1>
-        <div class="slide-content-6">
+        <div class="slide-content-piloting">
             <div class="slide-container-service">
                 <div class="tab-reminder">
                     <span class="reminder-text">Interactive tabs!</span>
@@ -4578,7 +4605,6 @@ p.intro {
                 
                 <div class="slide-header">
                     <h1>Farm Hub Piloting</h1>
-                    <p>Innovative agricultural mechanization solutions for Ethiopia</p>
                     <div class="decorative-line"></div>
                 </div>
                 
