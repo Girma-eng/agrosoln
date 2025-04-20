@@ -508,6 +508,10 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+        .container-innovative {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
 
         .section-title {
             text-align: center;
@@ -578,6 +582,148 @@
 
  <!--===// CSS: Innovative Solutions Section
 	======================================================================================================-->
+    
+        
+        .section-title-innov {
+            position: relative;
+            text-align: center;
+            margin-bottom: 80px;
+            color: white;
+            z-index: 1;
+        }
+        
+        .section-title-innov h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .section-title-innov p {
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .section-title-innov .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        /* Innovative Solutions Section - Enhanced */
+        .innovative-solutions {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border-radius: 12px;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .solution-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 10px;
+            padding: 35px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid green;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .solution-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .solution-icon {
+            font-size: 2.8rem;
+            color: greenyellow;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .solution-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .solution-card p {
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        .solution-stats {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .stat-badge {
+            background: var(--light);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: green;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .stat-badge i {
+            font-size: 0.7rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .innovative-solutions {
+                padding: 50px 20px;
+                background-attachment: scroll;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
 
    
         .innovative-section {
@@ -1312,17 +1458,13 @@ color: blue;
         <h2> Welcome to Farm Hub Ethiopia!</h2>
         <div class="decorative-line"></div>
         <p class="highlight-text">
-             At Farm Hub Ethiopia, we drive agricultural innovation through approperiate mechanization and digital transformation. 
-            As pioneers in modern farming solutions, we equip Ethiopian farmers with advanced technologies that boost 
-            efficiency, sustainability, and profitability across every cultivation phase.</p>
-        <p class="highlight-text">
-           From land preparation and precision planting to seamless input distribution networks, 
-            our comprehensive services are redefining agricultural productivity. We specialize in customized solutions 
-            that address Ethiopia's unique farming challenges while promoting sustainable growth and food security.  </p>
-<p class="highlight-text">
-           Join us in shaping the future of Ethiopian agriculture. Discover how our integrated approach - combining 
-            agricultural machinery, digital platforms, and agronomic expertise - is cultivating success in fields 
-            across the nation.  </p>
+            At Farm Hub Ethiopia, we pioneer agricultural innovation through smart mechanization and digital transformation. 
+            We equip farmers with advanced technologies to boost efficiency, sustainability, and profitability at every stage—from land preparation to precision planting. 
+           </p>
+            <p class="highlight-text">
+                Join us in reshaping Ethiopian agriculture for a more productive and food-secure future.</p>
+  
+          
     </div>
 </section>
 
@@ -1333,7 +1475,7 @@ color: blue;
 
 
 
-<section class="why-farmhub">
+    <section class="why-farmhub">
         <div class="container">
             <h2 class="section-title">Why Farm Hub?</h2>
             <div class="benefits-container">
@@ -1368,8 +1510,91 @@ color: blue;
 
 
 
-
-
+    <section class="container-innovative">
+        <!-- Enhanced Innovative Solutions Section -->
+        <section class="innovative-solutions">
+            <div class="section-title-innov">
+                <h2>Our Innovative Solutions</h2>
+                <div class="divider"></div>
+                <p>Discover how we're transforming Ethiopian agriculture through integrated technology and farmer-centric systems</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <!-- Card 1 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Interconnected Technology Transfer System</h3>
+                    <p>Seamlessly bridges research, implementation, and real-world application. By creating a continuous feedback loop between our Mission Labs (innovation centers), Farm Hubs (service delivery points), and Regen Farms (regenerative demonstration sites), we ensure cutting-edge solutions are constantly refined to meet farmers' evolving needs.</p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-arrow-up"></i> 73% faster adoption
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-users"></i> 15K+ farmers
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <h3>Everything in One Place</h3>
+                    <p>We've redefined service delivery through our everything-in-one-place hubs, where farmers access a complete suite of integrated solutions - from mechanization equipment and inputs to digital advisory platforms and hands-on training. 
+                        This holistic approach eliminates the inefficiencies of fragmented agricultural support systems.</p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-clock"></i> 60% time saved
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-money-bill-wave"></i> 30% cost reduction
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <h3>Farmer-Led Scaling</h3>
+                    <p>Our farmer-led scaling approach turns traditional extension models on their head. Through hub franchising, we empower local agri-entrepreneurs to 
+                        become innovation champions, while our rent-to-own financing and pay-per-use services dramatically lower adoption barriers. Farmer-to-farmer knowledge sharing creates organic, community-driven expansion.</p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-chart-line"></i> 5x faster scaling
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-user-tie"></i> 120+ hub operators
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>From Seed to System</h3>
+                    <p>The true power of our model lies in its seed-to-system transformation capability. We begin with foundational elements like improved seeds and regenerative practices, then systematically build these into comprehensive production systems. These systems then integrate with larger ecosystems - connecting soil health to water management, 
+                        farm productivity to market access - creating resilient agricultural communities where each component reinforces the others.</p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-percentage"></i> 40% yield increase
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-leaf"></i> Regenerative impact
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </section>
+  
 
 
 
@@ -1379,59 +1604,6 @@ color: blue;
 	=========================================================-->
 
 
-
-    	<section class="innovative-section" id="solutions">
-        	<div class="section-title">
-            		<h2>Our Innovative Solutions</h2>
-				<div class="decorative-line">
-				</div>
-        	</div>
-        		<div class="solutions-slider">
-            		</div>
-   	</section>
-
-       
-
-	<section class="innovative-section" id="solutions">
-        	<div class="solutions-slider">
-            		<div class="solution-slide active">
-                		<h3>Intergrated Solutions</h3>
-             			<p>At Farm Hub, we offer integrated solutions that empower farmers to thrive by providing everything they need under one roof. 
-				Our mechanization services give farmers affordable access to modern tractors, harvesters, and irrigation tools, enhancing productivity and efficiency. 
-				We also offer input sales, ensuring farmers have access to high-quality seeds, fertilizers, and agrochemicals at fair prices, supporting sustainable growth. 
-				Our digital solutions provide real-time weather alerts, market prices, and advisory apps, delivered via SMS or mobile platforms, enabling farmers to make informed decisions. 
-				Additionally, our training programs offer hands-on workshops focused on climate-smart practices, financial literacy, 
-				and the adoption of technology, helping farmers stay ahead in an ever-evolving agricultural landscape.</p>
-            		</div>
-    		</div>
-			</div>
-	</section>
-                		
-				
-				
-            		
-            		<div class="solution-slide">
-                		<h3>Integrated technology transfer system</h3>
-             			      <p>At Farm Hub, we provide an integrated technology transfer system through local Farm Hubs, giving farmers access to modern equipment, digital tools, and essential resources. 
-					These hubs empower farmers by improving productivity, profitability, and resilience. By connecting farmers through a network of interlinked Farm Hubs, we enable knowledge-sharing, 
-					market access, and collective bargaining power—driving systemic change in Ethiopia’s agriculture. This approach fosters innovation, strengthens collaboration, and enhances 
-					smallholder farmers' livelihoods, ultimately contributing to national food sovereignty.</p>
-            		</div>
-            		<div class="solution-slide">
-                		<h3>From seeds to systems</h3>
-               			<p>True transformation begins with a seed—and grows into a forest. Farm Hub develops repeatable, scalable models rooted in local 
-				knowledge. We start with community-driven solutions—like drought-resistant practices or digital cooperatives—and nurture them into adaptable systems that thrive across diverse regions. 
-				By ensuring these innovations spread organically, we build a resilient agricultural ecosystem where 
-				smallholders flourish, markets stabilize, and Ethiopia’s food security grows stronger with each harvest.</p>
-            		</div>
-        	</div>
-    </section>
-
-    <section class="impact-section">
-        <div class="impact-content">
-            
-        </div>
-    </section>
 
 
 
@@ -1850,6 +2022,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+<script>
+    // Animation for cards
+    const solutionCards = document.querySelectorAll('.solution-card');
+    
+    const animateCards = () => {
+        solutionCards.forEach((card, index) => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (cardPosition < screenPosition) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // Set initial state for animation
+    solutionCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+    });
+    
+    window.addEventListener('load', animateCards);
+    window.addEventListener('scroll', animateCards);
+</script>
 
 
 
