@@ -152,6 +152,35 @@
         }
 
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+
+            #mobile-menu.active {
+                display: block;
+            }
+
+            header {
+                top: 30px;
+                height: 50px;
+            }
+
+            .logo img {
+                height: 30px;
+            }
+
+            .slider {
+                margin-top: 80px;
+                height: calc(100vh - 80px);
+            }
+        }
+
 
 
 
@@ -307,7 +336,7 @@
         /* Mobile Responsive Styles */
         @media (max-width: 1200px) {
             .hero {
-            top: 50%;
+            top: 60%;
             left: 10%;
             z-index: 3;
             width: 80%;
@@ -377,7 +406,7 @@
             }
             
             .hero h1 {
-                font-size: 2.0rem;
+                font-size: 2.50rem;
                 margin-bottom: 15px;
             }
             .hero h2 {
@@ -638,7 +667,7 @@
             position: relative;
             overflow: hidden;
         }
-        a
+        
         .solutions-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -649,12 +678,12 @@
         .solution-card {
             background: rgba(255,255,255,0.95);
             border-radius: 10px;
-            padding: 20px;
+            padding: 15px;
             transition: all 0.4s ease;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             position: relative;
             overflow: hidden;
-            border-top: 15px solid green;
+            border-top: 25px solid green;
         }
         
         .solution-card:hover {
@@ -1851,7 +1880,7 @@ Looking forward, Farm Hub Ethiopia and Hawassa University plan to expand their j
   <!--===// Java: Menu toggle
 	===================================================================================-->
 
-<script>
+    <script>
         // Mobile Menu Toggle
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
