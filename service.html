@@ -1011,12 +1011,12 @@
 
     .column {
       display: flex;
-      align-items: center;
+     
       justify-content: center;
       background-size: cover;
       background-position: center;
       color: white;
-      text-align: center;
+      
       padding: 20px;
       position: relative;
       border-radius: 50px;
@@ -1027,11 +1027,14 @@
 
     }
     .column.active {
-            width: 40% !important;
+            width: 50% !important;
         }
     .column-content {
+        display: flex;
+  flex-direction: column;
       position: relative;
       z-index: 2;
+      justify-content: flex-end;
      
     }
 
