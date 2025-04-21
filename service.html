@@ -997,25 +997,32 @@
       cursor: pointer;
       transition: width 0.3s ease;
       background-color: #28a745;
-    }
+      min-height: 500px;
 
+    }
+    .column.active {
+            width: 40% !important;
+        }
     .column-content {
       position: relative;
       z-index: 2;
+     
     }
 
     .column-1 {
-      width: 14%;
+      width: 10%;
       background-image: url('image_file/maize_field.jpg');
+     
     }
 
     .column-2 {
-      width: 14%;
+      width: 10%;
       background-image: url('image_file/digital_soln.jpg');
+      
     }
 
     .column-3 {
-      width: 14%;
+      width: 10%;
       background-image: url('image_file/tractor_3.jpg');
     }
 
@@ -1038,7 +1045,7 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
       z-index: 1;
-      border-radius: 60px;
+      border-radius: 50px;
     }
 
     /* Vertical title for columns 1-3 */
@@ -1047,7 +1054,16 @@
     .column-3 h2 {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      margin: 0;
+      
+      font-size: 1.4rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+    .column-1 p,
+    .column-2 p,
+    .column-3 p {
+     
       font-size: 1.2rem;
       transition: all 0.3s ease;
     }
@@ -1079,12 +1095,27 @@
     @media (max-width: 768px) {
       .four-column-section {
         flex-direction: column;
-      }
+        gap: 20px;
+      padding: 20px 20px 5px 5px;
+      
+    }
 
       .column {
         width: 100% !important;
-        height: 250px;
+        min-height: 80px;
+        padding: 10px 5px;
       }
+
+      .column.active {
+            width: 100% !important;
+        }
+        .column-1 {
+         background-image: url('image_file/cartoon_3.jpg');
+       }
+       .column-2 {
+         background-image: url('image_file/farmhub_model.jpg');
+       }
+
 
       .column-1 h2,
       .column-2 h2,
@@ -1093,6 +1124,11 @@
         transform: none !important;
       }
     }
+
+    .column {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
 
 /*<!--===// CSS:Our News Section
 	=============================================================================================-->*/
@@ -1710,9 +1746,7 @@ color: blue;
           <h2>Interconnected Technology Transfer System</h2>
           <div class="detail-text">
             <p>
-              Seamlessly bridges research, implementation, and real-world application. By creating a continuous feedback loop between our Mission Labs, Farm Hubs, and Regen Farms, we ensure innovative solutions are constantly refined to meet farmers' evolving needs. 
-              Through hub franchising, we empower local agri-entrepreneurs to become innovation champions, while our rent-to-own financing and pay-per-use services dramatically lower adoption barriers. Farmer-to-farmer knowledge sharing creates organic, community-driven expansion.
-            </p>
+                Our interconnected technology transfer system revolutionizes smallholder farming through a network of Farm Hubs. These hubs empower farmers with direct access to  mechanizaed solutions, inputs, and practical training while creating a powerful platform for peer-to-peer learning and collective market leverage. By connecting these hubs into a network, we create a dynamic ecosystem where innovations rapidly spread, best practices multiply, and farmers gain unprecedented bargaining power. 
           </div>
         </div>
       </div>
@@ -1733,8 +1767,7 @@ color: blue;
         <div class="column-content">
           <h2>From Seed to System</h2>
           <div class="detail-text">
-            <p>The true power of our model lies in its seed-to-system transformation capability. We begin with foundational elements like improved seeds and regenerative practices, then systematically build these into comprehensive production systems. These systems then integrate with larger ecosystems - connecting soil health to water management, 
-              farm productivity to market access - creating resilient agricultural communities where each component reinforces the others.</p>
+            <p>The true power of our model lies in its seed-to-system transformation capability. We begin with foundational elements, then systematically build these into comprehensive production systems. These systems then integrate with larger ecosystems - c- creating resilient agricultural communities where each component reinforces the others.</p>
           </div>
         </div>
       </div>
@@ -2351,44 +2384,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
  <!-- Green innovative section -->
  <script>
-    function changeLayout(columnNumber) {
-      const columns = [
-        document.querySelector('.column-1'),
-        document.querySelector('.column-2'),
-        document.querySelector('.column-3')
-      ];
-      const column4 = document.querySelector('.column-4');
-      const defaultContent = document.getElementById('default-content');
+ function changeLayout(columnNumber) {
+  const columns = [
+    document.querySelector('.column-1'),
+    document.querySelector('.column-2'),
+    document.querySelector('.column-3')
+  ];
+  const column4 = document.querySelector('.column-4');
+  const defaultContent = document.getElementById('default-content');
 
-      // Reset all columns
-      columns.forEach((col, index) => {
-        col.classList.remove('active');
-        col.style.width = '14%'; // original width
-      });
+  const isMobile = window.innerWidth <= 768;
 
-      // Reset column 4 content
-      if (defaultContent) defaultContent.style.display = 'none';
-      column4.innerHTML = ''; // Clear previous image
-      column4.style.width = '50%';
-
-      // Activate clicked column
-      const clicked = columns[columnNumber - 1];
-      clicked.classList.add('active');
-      clicked.style.width = '30%';
-
-      // Set image based on selected column
-      const images = {
-        1: 'image_file/cartoon_3.jpg',
-        2: 'image_file/farmhub_model.jpg',
-        3: 'image_file/cartoon_3.jpg'
-      };
-
-      const img = document.createElement('img');
-      img.src = images[columnNumber];
-      img.alt = "Preview";
-      column4.appendChild(img);
+  columns.forEach(col => {
+    col.classList.remove('active');
+    if (isMobile) {
+      col.style.height = '100px'; // reset height on mobile
+    } else {
+      col.style.width = '10%'; // reset width on desktop
     }
-  </script>
+  });
+
+  if (defaultContent) defaultContent.style.display = 'none';
+  column4.innerHTML = '';
+  column4.style.width = isMobile ? '100%' : '50%';
+
+  const clicked = columns[columnNumber - 1];
+  clicked.classList.add('active');
+
+  if (isMobile) {
+    clicked.style.height = '500px'; // expanded height
+  } else {
+    clicked.style.width = '40%'; // expanded width
+  }
+
+  const images = {
+    1: 'image_file/cartoon_3.jpg',
+    2: 'image_file/farmhub_model.jpg',
+    3: 'image_file/cartoon_3.jpg'
+  };
+
+  const img = document.createElement('img');
+  img.src = images[columnNumber];
+  img.alt = "Preview";
+  column4.appendChild(img);
+}
+   // Initialize with first column active by default
+   window.onload = function() {
+            changeLayout(2);
+        };
+ </script>
 
 
     <!-- Bootstrap JS -->
