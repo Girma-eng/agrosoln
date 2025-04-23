@@ -1,10 +1,7 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Farm Hub - Agricultural Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,36 +9,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <style>
-
-
-
-
-  /* Global Styles */
-  :root {
+        :root {
             --primary: #2e7d32;
-            --secondary: #7cb342;
-            --accent: #ffab00;
+            --primary-dark: #1b5e20;
+            --secondary: #ffab00;
             --light: #f5f5f5;
-            --dark: #263238;
-            --text: #424242;
+            --dark: #333;
+            --gray: #757575;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
-            font-family: "Barlow Semi Condensed";
-            margin: 0;
-            padding: 0;
-            color: #333;
-            overflow-x: hidden; /* Prevents horizontal scrolling */
-            width: 100%;
-            max-width: 100%;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
+        
 
-        /* Address Section */
-        .address-section {
-            background-color: rgba(76, 200, 99, 0.5);
+
+
+
+
+
+
+
+          /* Address Section */
+          .address-section {
+            background-color: rgba(0, 100, 0, 0.8);
             color: white;
             padding: 8px;
             font-size: 0.8rem;
@@ -59,12 +60,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 5%;
-            background-color: rgba(76, 201, 99, 0.5);
+            background-color: rgba(128, 128, 128, 0.8);
             position: fixed;
-            top: 20px;
+            top: 50px;
             width: 100%;
             z-index: 1000;
-            height: 70px;
+            height: 60px;
         }
 
         
@@ -464,227 +465,265 @@
             }
         }
 	
- /*<!--===// CSS:welcome:start
-	=========================================================-->*/
-
-
-	.welcome-message {
-    		background-color: #f8f9fa;
-  		padding: 60px 0;
-    		text-align: center;
-    		position: relative;
-   		    z-index: 2;
-    		width: 100vw; /* Full viewport width */
-    		margin-left: calc(-50vw + 50%); /* Counteract container padding */
-	}
-
-	.welcome-container {
-	    max-width: 80% !important; /* Override any max-width constraints */
-	    margin: 0 auto;
-	    padding: 10px 5% 10px; /* Use percentage-based padding */
-	}
-
-	.welcome-message h2 {
-    color: #2d6a4f;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width: 100%;
-	}
-
-
-  
-
-    .welcome-message p {
-        color: #333;
-        font-size: 1.1rem;
-        line-height: 1.8;
-        margin-bottom: 25px;
-       max-width: 100% !important; /* Full width text */
-        
-
-    }
-  .decorative-line {
-        width: 80px;
-        height: 3px;
-        background-color: #d90429;
-        margin: 0 auto 30px;
-    }
-    .highlight-text {
-        color: #2d6a4f !important;
-        font-weight: 600;
-        font-size: 1.2rem !important;
-	
-    }
-
-    @media (max-width: 768px) {
-        .welcome-container {
-	    max-width: 100% !important; /* Override any max-width constraints */
-	    margin: 0 auto;
-	    padding: 20px 5px 6px; /* Use percentage-based padding */
-	}
-        .welcome-message {
-            padding: 10px 0;
-        }
-
-        .welcome-message h2 {
-            font-size: 1.3rem;
-        }
-
-        .welcome-message p {
-            font-size: 0.9rem;
-            padding: 0 15px;
-            line-height:1.4rem;
-        }
-        
-        .highlight-text {
-            font-size: 0.9rem !important;
-            line-height: 1.5rem;
-        }
-    }
-
-
-
-/*<!--===// CSS:Why Choose Us CSS
-	======================================================================================================================================-->*/
-
-
-	* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .why-farmhub {
+        /* About Sections */
+        .section {
             padding: 80px 20px;
-            background: linear-gradient(135deg, #f8fff8 0%, #e6f5e6 100%);
-        }
-
-        .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        .container-innovative {
+        .section-whyworks {
+            background: url('https://agricurve.org/wp-content/uploads/2023/06/cofee-tree-section.jpg') no-repeat center center;
+            background: url('https://agricurve.org/wp-content/uploads/2023/06/cofee-tree-section.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+  
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+        
+        .section-content {
+            font-family: "Barlow Semi Condensed";
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .section-partner {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffab00;
+        }
+        .section-whatwedo {
+            padding: 80px 20px;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+        .section-howwedo {
+            padding: 80px 20px;
             max-width: 1600px;
             margin: 0 auto;
         }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #2c5f2d;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+           
         }
 
-        .benefits-container {
+
+
+        .text-content p {
+           font-size: 1.2rem;
+            color: green;
+        }
+        .aboutus-content {
+            flex: 1;
+            min-width: 300px;
+           
+        }
+        .aboutus-content p {
+           font-size: 1.4rem;
+            color: green;
+        }
+        
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .image-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-content img:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Problem Section with Stats */
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card h3 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-card p {
+            color: var(--gray);
+        }
+        
+        /* Vision/Mission Cards */
+        .vm-cards {
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
             justify-content: center;
         }
-
-        .benefit-card {
+        
+        .vm-card {
             flex: 1;
-            min-width: 250px;
-            max-width: 300px;
+            min-width: 300px;
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
             transition: transform 0.3s ease;
+        }
+        
+        .vm-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+        
+        .vm-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .vm-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        /* Image Slideshow */
+        .problem-slideshow {
+            flex: 2;
+            max-width: 500px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .benefit-card:hover {
-            transform: translateY(-10px);
+        .problem-slide {
+            display: none;
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
         }
 
-        .benefit-icon {
-            font-size: 2.5rem;
-            color: #2c5f2d;
-            margin-bottom: 20px;
+        .problem-slide.active {
+            display: block;
+            animation: fadeIn 0.8s ease;
         }
 
-        .benefit-title {
-            font-size: 1.4rem;
-            color: #2c5f2d;
-            margin-bottom: 15px;
-            font-weight: 600;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .benefit-text {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
+        .slideshow-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .slideshow-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .slideshow-dot.active {
+            background: white;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 1024px) {
+          .problem-slideshow {
+                max-width: 100%;
+                height: 400px;
+            }
         }
 
         @media (max-width: 768px) {
-            .why-farmhub {
-            padding: 20px 10px;
-            background: linear-gradient(135deg, #f8fff8 0%, #e6f5e6 100%);
-        }
-
-            .benefits-container {
-                flex-direction: column;
-                align-items: center;
+            .problem-slideshow {
+                height: 350px;
             }
-            
-            .benefit-card {
-                max-width: 100%;
+        }
+
+        @media (max-width: 480px) {
+         
+            .problem-slideshow {
+                height: 300px;
             }
-            .section-title {
-            
-                font-size: 1.5rem;
-                color: #2c5f2d;
-                letter-spacing: 1px;
-                }
-
         }
 
- /*<!--===// CSS: Innovative Solutions Section
-	======================================================================================================-->*/
-    
-        
-        .section-title-innov {
-            position: relative;
-            text-align: center;
-            margin-bottom: 80px;
-            color: white;
-            z-index: 1;
-        }
-        
-        .section-title-innov h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-align: center;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-        
-        .section-title-innov p {
-            color: rgba(255,255,255,0.9);
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-        
-        .section-title-innov .divider {
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-        
-        /* Innovative Solutions Section - Enhanced */
-        .innovative-solutions {
+
+
+
+         /* Innovative Solutions Section  */
+         .innovative-solutions {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
@@ -805,27 +844,43 @@
             transform: translateY(0);
         }
 
-        .section-title {
-            position: relative;
+        .innovative-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .innovative-title {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .innovative-title h2 {
+            font-size: 2.5rem;
             color: white;
-            z-index: 1;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .innovative-title p {
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .innovative-title .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+            border-radius: 2px;
         }
 
-        .section-title::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200%;
-            height: 300%;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('image_file/wheat_field_4.jpg') no-repeat center center/cover;
-            filter: brightness(0.5);
-            z-index: -1;
-        }
+  
 
         .solutions-slider {
             max-width: 1200px;
@@ -891,725 +946,534 @@
         .solution-slide.active {
             display: block;
         }
-
-        /* Impact Sections */
-        .impact-section {
-            position: relative;
-            min-height: 10vh;
+        /* What We Do Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
             overflow: hidden;
         }
-
-         .impact-section::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
+        
+        .service-img img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('image_file/maize_field.jpg') no-repeat center center/cover;
-            z-index: -1;
-            clip-path: inset(100% 0 0 0);
-            transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Our Model Section */
+
+
+        :root {
+            --primary-green: #0d4625;
+            --secondary-green: #1e8449;
+            --accent-orange: #e67e22;
+            --light-bg: #f8f9fa;
         }
 
-        .impact-section.active::before {
-            clip-path: inset(0 0 0 0);
-        }
 
-        .impact-content {
-            position: relative;
-            height: 50vh;
+        .app-content-container {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            width: 100%;
+            position: relative;
+            padding: 40px;
+        }
+
+        /* Approach Grid */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            width: 50%;
+            padding-right: 40px;
+        }
+
+        .approach-card {
+            background: white;
+            border-radius: 12px;
+            padding: 5px 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            border-top: 5px solid var(--secondary-green);
+        }
+
+        .card-number {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: rgba(13,70,37,0.05);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+            position: relative;
+            padding-right: 50px;
+        }
+
+        .card-title::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: var(--accent-orange);
+            margin: 2px 0;
+        }
+
+        .app-card-content {
+            font-size: 1.0rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .app-card-content span {
+            color: var(--secondary-green);
+            font-weight: 600;
+        }
+
+        /* Approach Visualization */
+        .approach-container {
+            position: relative;
+            width: 60%;
+            height: 0;
+            padding-bottom: 50%; /* Adjust based on your image aspect ratio */
+            margin: 0 auto;
+        }
+
+        .center-image {
+            position: absolute;
+            width: 45%;
+            height: 48%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+            border: 8px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .approach-text-box {
+            position: absolute;
+            width: 120px;
+            height: 32px;
+            padding: 8px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease-out;
+            z-index: 2;
+            border: 4px solid rgb(70, 178, 202);
+        }
+
+        .approach-text-box h3 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 10px;
+        }
+
+        .approach-text-box.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .approach-text-box:hover {
+            background: var(--secondary-green);
+            transform: scale(1.1) !important;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+        }
+
+        .approach-text-box:hover h3 {
             color: white;
         }
 
-        .impact-text {
-            max-width: 80%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 80px;
-            backdrop-filter: blur(5px);
-            transform: translateY(0);
-            transition: transform 0.1s;
-        }
-
-       
-    
-.service-message {
-	        background-color: #f8f9fa;
-	        padding: 60px 0;
-	        text-align: center;
-	        position: relative;
-	        z-index: 2;
-	    }
-
-
-   
-	.soln {
-	    padding: 10px 10%;
-	    text-align: center;
-	    background-color: rgba(255, 255, 255, 0.9);
-	    margin-bottom: 50px; /* Adds space after the section */
-	    border-radius: 10px; /* Optional: Rounds the corners */
- 		height: 15vh;
-	}
-
- 	.soln h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-
-        .soln .features {
+        /* Circle Boxes */
+        .approach-text-box[style*="border-radius: 50%"] {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
-      
- 	.soln .featureinn {
-            width: 22%;
-            margin-bottom: 10px;
-	   color: green;
+        .approach-text-box[style*="border-radius: 50%"] h3 {
+            margin-top: 0;
         }
 
-
-   /* ====================  Benefits: Container with Green Background=========== */
-   .green-container {
-       
-        padding: 50px 5px;
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                            url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        border-radius: 12px;
+        /* Animation Classes */
+        .slide-in {
+            animation: slideIn 0.8s ease-out forwards;
         }
 
-    .section-title-innov {
-      text-align: center;
-      color: white;
-      margin-bottom: 40px;
-    }
-
-    .divider {
-      width: 80px;
-      height: 4px;
-      background: white;
-      margin: 10px auto;
-    }
-
-    .four-column-section {
-      display: flex;
-      min-height: 500px;
-      width: 100%;
-      gap: 20px;
-      padding: 20px 20px 60px 60px;
-      
-    }
-
-    .column {
-      display: flex;
-     
-      justify-content: center;
-      background-size: cover;
-      background-position: center;
-      color: white;
-      
-      padding: 20px;
-      position: relative;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: width 0.3s ease;
-      background-color: #28a745;
-      min-height: 500px;
-
-    }
-    .column.active {
-            width: 50% !important;
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-    .column-content {
-        display: flex;
-  flex-direction: column;
-      position: relative;
-      z-index: 2;
-      justify-content: flex-end;
-     
-    }
 
-    .column-1 {
-      width: 10%;
-      background-image: url('image_file/maize_field.jpg');
-     
-    }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
 
-    .column-2 {
-      width: 10%;
-      background-image: url('image_file/digital_soln.jpg');
-      
-    }
-
-    .column-3 {
-      width: 10%;
-      background-image: url('image_file/tractor_3.jpg');
-    }
-
-    .column-4 {
-      width: 52%;
-      background-color: #fff;
-      color: #333;
-    }
-
-    .column-4::before {
-      display: none;
-    }
-
-    .column::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-      border-radius: 50px;
-    }
-
-    /* Vertical title for columns 1-3 */
-    .column-1 h2,
-    .column-2 h2,
-    .column-3 h2 {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      
-      font-size: 1.4rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin-bottom: 20px;
-    }
-    .column-1 p,
-    .column-2 p,
-    .column-3 p {
-     
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-    }
-
-    /* When active, rotate title to horizontal */
-    .column-1.active h2,
-    .column-2.active h2,
-    .column-3.active h2 {
-      writing-mode: horizontal-tb;
-      transform: rotate(0deg);
-    }
-
-    .detail-text {
-      display: none;
-      margin-top: 10px;
-    }
-
-    .column.active .detail-text {
-      display: block;
-    }
-
-    .column-4 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .four-column-section {
-        flex-direction: column;
-        gap: 20px;
-      padding: 20px 20px 15px 15px;
-      
-    }
-
-      .column {
-        width: 100% !important;
-        min-height: 80px;
-        padding: 10px 4px 10px 15px;
-      }
-
-      .column.active {
-            width: 100% !important;
-        }
-        .column-1 {
-         background-image: url('image_file/cartoon_3.jpg');
-       }
-       .column-2 {
-         background-image: url('image_file/farmhub_model.jpg');
-       }
-       .column-4 {
-     display: none;
-    }
-     
-      .column-1 h2,
-      .column-2 h2,
-      .column-3 h2 {
-        writing-mode: horizontal-tb !important;
-        transform: none !important;
-        font-size: 1.2rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin-bottom: 20px;
-      }
-            .column-1 p,
-            .column-2 p,
-            .column-3 p {
+        /* MOBILE STYLES (max-width: 768px) */
+        @media (max-width: 768px) {
+            .section-howwedo {
+                padding: 50px 20px;
+            }
             
-            font-size: 1.0rem;
-            line-height: 1.4rem;
+            .section-title {
+                margin-bottom: 40px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+            }
+            
+            .slide {
+                margin-top: 30px;
+                border-radius: 15px;
+            }
+            
+            .app-content-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .approach-grid {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 40px;
+                gap: 20px;
+            }
+            
+            .approach-card {
+                padding: 25px;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+            
+            .app-card-content {
+                font-size: 1rem;
+            }
+            
+            .approach-container {
+                width: 100%;
+                padding-bottom: 80%;
+            }
+            
+            .center-image {
+                width: 60%;
+                height: 60%;
+                border-width: 5px;
+            }
+            
+            .approach-text-box {
+                width: 110px;
+                padding: 8px;
+                border-width: 3px;
+            }
+            
+            .approach-text-box h3 {
+                font-size: 14px;
+            }
+            
+            /* Adjust specific text box positions for mobile */
+            .approach-text-box[style*="left: 15%"] { left: 10% !important; }
+            .approach-text-box[style*="left: 35%"] { left: 30% !important; }
+            .approach-text-box[style*="left: 55%"] { left: 50% !important; }
+            .approach-text-box[style*="left: 65%"] { left: 60% !important; }
+            .approach-text-box[style*="left: 8%"] { left: 5% !important; }
+            .approach-text-box[style*="left: 25%"] { left: 20% !important; }
+            .approach-text-box[style*="left: 40%"] { left: 35% !important; }
+            .approach-text-box[style*="left: 5%"] { left: 2% !important; }
+            .approach-text-box[style*="left: 50%"] { left: 45% !important; }
+            .approach-text-box[style*="left: 80%"] { left: 75% !important; }
+            .approach-text-box[style*="left: 55%"] { left: 50% !important; }
+            .approach-text-box[style*="left: 10%"] { left: 5% !important; }
+            
+            /* Adjust circle sizes for mobile */
+            .approach-text-box[style*="border-radius: 50%"] {
+                width: 90px !important;
+                height: 90px !important;
+            }
+            
+            .approach-text-box[style*="border-radius: 50%"] h3 {
+                font-size: 12px !important;
+            }
+            
+            /* Animation adjustments for mobile */
+            .slide-in {
+                animation: slideIn 0.6s ease-out forwards;
+            }
+            
+            .delay-1 { animation-delay: 0.1s; }
+            .delay-2 { animation-delay: 0.2s; }
+            .delay-3 { animation-delay: 0.3s; }
+            .delay-4 { animation-delay: 0.4s; }
+        }
+
+        /* SMALL MOBILE ADJUSTMENTS (max-width: 480px) */
+        @media (max-width: 480px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .approach-card {
+                padding: 20px;
+            }
+            
+            .card-title {
+                font-size: 1.2rem;
+            }
+            
+            .approach-text-box {
+                width: 90px;
+                padding: 6px;
+            }
+            
+            .approach-text-box h3 {
+                font-size: 12px;
+            }
+            
+            .approach-text-box[style*="border-radius: 50%"] {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+
+
+
+
+
+
+        .model-diagram {
+            max-width: 800px;
+            margin: 50px auto;
+            position: relative;
+        }
+        
+        .model-diagram img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            }
-    }
-
-    .column {
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-
-/*<!--===// CSS:Our News Section
-	=============================================================================================-->*/
-
-
-
-
-
-.news-section {
-    padding: 80px 20px; /* Add padding like .why-farmhub */
-    background: #f9f9f9;
-}
-.news-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.news-item {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-.news-section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #2c5f2d;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
-
-.news-item:hover {
-    transform: translateY(-5px);
-}
-
-.news-thumbnail {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.news-content {
-    padding: 25px;
-}
-
-.news-excerpt {
-    color: #666;
-    line-height: 1.6;
-    margin: 15px 0;
-}
-
-.read-more {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.read-more:hover {
-    color: #45a049;
-}
-
-/* Modal Styles */
-.news-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    z-index: 1000;
-    overflow-y: auto;
-}
-
-.modal-content {
-    background: white;
-    width: 80%;
-    max-width: 800px;
-    margin: 5% auto;
-    border-radius: 10px;
-    position: relative;
-}
-
-.modal-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.modal-text {
-    padding: 30px;
-}
-
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    color: #aaa;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-modal:hover {
-    color: #ff0000;
-}
-
-@media (max-width: 768px) {
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .modal-content {
-        width: 90%;
-        margin: 10% auto;
-    }
-    
-    .modal-image {
-        height: 250px;
-    }
-    
-    .modal-text {
-        padding: 20px;
-    }
-    
-    .close-modal {
-        top: 10px;
-        right: 15px;
-        font-size: 30px;
-    }
-}
-
-
-/*<!--===// CSS: Seeing is Believing Section:Start
-	==============================================================================-->*/
-
-
-
-   .gallery-section {
-        padding: 20px;
-        margin: 0 auto;
-        max-width: 90%;
-    }
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 4 columns for desktop */
-        gap: 20px; /* Space between items */
-    }
-
-    .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .gallery-image {
-        width: 100%;
-        height: auto;
-        display: none; /* Hide all images by default */
-    }
-
-    .gallery-image.active {
-        display: block; /* Show only the active image */
-    }
-
-    .gallery-caption {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-        .gallery-grid {
-            grid-template-columns: 1fr; /* Single column for mobile */
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-
-        .gallery-item {
-            margin-bottom: 20px; /* Add space between items */
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid var(--light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-    }
-
-
-
-/*<!--===// CSS: Footer
-	==============================================================================-->*/
-/* CTA Section */
-:root {
-            --primary: #2e7d32;
-            --primary-dark: #1b5e20;
-            --secondary: #ffab00;
-            --light: #f5f5f5;
-            --dark: #333;
-            --gray: #757575;
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
-        .cta-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image_file/landscape_2.jpg');
-            color: #fff;
-            padding: 60px 0 0;
-            font-family: 'Open Sans', sans-serif;
-            position: relative;
+        
+        .member-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
         }
-
-        .cta-section a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        
+        .member-info p {
+            color: var(--gray);
+            font-style: italic;
         }
-
-        .cta-section a:hover {
-            color: #8bc34a;
-        }
-
-        .cta-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .footer-row {
+        
+        /* Partners Section */
+        .partners {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 40px;
-            position: relative;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            margin-top: 50px;
+            background-color: #FFA500;
         }
-
-        .footer-column {
-            padding: 0 30px;
-            box-sizing: border-box;
-            position: relative;
+        
+        .partner-logo {
+            max-width: 180px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
         }
-
-        /* New column widths */
-        .footer-column:nth-child(1) {
-            width: 30%;
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
         }
-        .footer-column:nth-child(2) {
-            width: 50%;
-            border-left: 1px solid rgba(255,255,255,0.2);
-            border-right: 1px solid rgba(255,255,255,0.2);
-        }
-        .footer-column:nth-child(3) {
-            width: 20%;
-        }
-
-        /* Logo Section */
-        .footer-logo {
-            margin-bottom: 20px;
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            display: inline-block;
-        }
-
-        .footer-logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .footer-heading {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .footer-description {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        /* Contact Info Section */
-        .footer-contact-item {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .footer-contact-icon {
-            margin-right: 15px;
-        }
-
-        .footer-contact-icon span {
-            font-size: 24px;
-            color: #8bc34a;
-        }
-
-        .footer-contact-title {
-            font-size: 18px;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-
-        .footer-contact-details {
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        /* Links Section */
-        .cta-links {
-            margin-bottom: 30px;
-        }
-
-        .cta-links h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .cta-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .cta-links li {
-            margin-bottom: 10px;
-        }
-
-        /* Social Media Icons */
-        .footer-social-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.footer-social-icon i {
-    font-size: 20px;
-    color: white;
-    background-color: #3b5998; /* adjust per platform */
-    border-radius: 50%;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.footer-social-icon:hover i {
-    background-color: #1d3a7b;
-}
-
-        .footer-social-icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
             text-align: center;
-            line-height: 40px;
-            transition: background-color 0.3s ease;
+            padding: 80px 20px;
+            margin-top: 50px;
         }
-
-        .footer-social-icon:hover {
-            background-color: #8bc34a;
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-
-        /* Copyright Section */
-        .footer-copyright-row {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
         }
-
-        .footer-copyright {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
-        .footer-copyright a {
-            color: #8bc34a;
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-
-        /* Responsive Styles */
-        @media (max-width: 980px) {
-            .footer-column {
-                width: 100% !important;
-                padding: 0 15px;
-                margin-bottom: 30px;
+        
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
-            .footer-column:nth-child(2) {
-                border-left: none;
-                border-right: none;
-                border-top: 1px solid rgba(255,255,255,0.2);
-                border-bottom: 1px solid rgba(255,255,255,0.2);
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .footer-row {
-                margin-bottom: 20px;
+            .hero p {
+                font-size: 1rem;
             }
             
-            .footer-logo {
-                max-width: 200px;
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .vm-card {
+                min-width: 100%;
             }
         }
-
     </style>
 </head>
-
-
-
-
-<!--===// 
-	==========================================================================================================-->
-
-<!--===// Body
-	==========================================================================================================-->
-
-
-
-  
 <body>
 
 
+    <section class="address-section">
+        <p> 📞 +251 911112602 | ✉️ girma.moges@farmlab-ethiopia.com | </p>
+    </section>
 
     
 
@@ -1624,7 +1488,7 @@
             <a href="index.html">Home</a>
             <a href="about_us.html">About Us</a>
             <a href="service.html">Services</a>
-	        <a href="contact.html">Contact us</a>
+	    <a href="contact.html">Contact us</a>
         </nav>
 
         <!-- Mobile Navigation -->
@@ -1672,9 +1536,9 @@
                     <img src="image_file/wheat_field_2.jpg" class="d-block w-100" alt="Slider Image 1">
 
                     <div class="hero">
-			            <h1>Farm Hub Ethiopia</h1>
+			            <h1>About Farm Hub Ethiopia</h1>
                          <h2>Empowering Ethiopian Farmers With <span class="highlight"> Sustainable Solutions</span></h2>
-                        
+                        <a href="about_us.html" class="cta-button" style="z-index: 3;">Learn More</a>
                     </div>
                 </div>
 
@@ -1689,7 +1553,7 @@
  			<p class="styled-text">Mechanization Services</p>
                         <h2>Revolutionizing farming with advanced mechanization services that save time, <span class="highlight">increase efficiency, and boost crop yields</span></h2>
                        
-                        <a href="service.html#mechanization-service-category" class="cta-button">Learn More</a>
+                        <a href="service.html#mechanization" class="cta-button">Learn More</a>
                     </div>
                 </div>
 
@@ -1703,7 +1567,7 @@
 			<p class="styled-text">Digital Solutions</p>
                         <h2>Transforming agriculture with our digital platform, connecting farmers to vital resources <span class="highlight">and services for smarter farming</span></h2>
                         
-                        <a href="service.html#digital-solutions" class="cta-button">Learn More</a>
+                        <a href="service.html#inputs" class="cta-button">Learn More</a>
                     </div>
                 </div>
 		<!-- Slide 4 -->
@@ -1736,399 +1600,459 @@
         </div>
     </div>
 
-<!--===// Welcome
-	=========================================================-->
 
-
-<section class="welcome-message">
-    <div class="welcome-container">
-        <h2> Welcome to Farm Hub Ethiopia!</h2>
-        <div class="decorative-line"></div>
-        <p class="highlight-text">
-            At Farm Hub Ethiopia, we pioneer agricultural innovation through appropriate mechanization and digital slutions. 
-            We equip farmers with advanced technologies to boost efficiency, sustainability, and profitability. 
-           </p>
-            <p class="highlight-text">
-                Join us in reshaping Ethiopian agriculture for a more productive and food-secure future.</p>
-  
-          
-    </div>
-</section>
-
-
-<!--===// Why Choose Us Section
-	=======================================================================-->
-   
-
-
-
-    <section class="why-farmhub">
-        <div class="container">
-            <h2 class="section-title">Why Farm Hub?</h2>
-            <div class="benefits-container">
-                <div class="benefit-card">
-                    <i class="fas fa-seedling benefit-icon"></i>
-                    <h3 class="benefit-title">Holistic Solutions</h3>
-                    <p class="benefit-text">Integrated approach combining traditional wisdom with modern technology for complete farm management and growth.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <i class="fas fa-leaf benefit-icon"></i>
-                    <h3 class="benefit-title">Sustainability First</h3>
-                    <p class="benefit-text">Eco-friendly practices that ensure long-term productivity while preserving natural resources for future generations.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <i class="fas fa-users benefit-icon"></i>
-                    <h3 class="benefit-title">Community Empowerment</h3>
-                    <p class="benefit-text">Building strong agricultural networks through knowledge sharing and collaborative farming initiatives.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <i class="fas fa-lightbulb benefit-icon"></i>
-                    <h3 class="benefit-title">Innovation Driven</h3>
-                    <p class="benefit-text">Pioneering smart farming techniques and data-driven insights to maximize yield and efficiency.</p>
-                </div>
+    <!------------------------------------- Who We Are Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Who We Are</h2>
+        </div>
+        <div class="section-content">
+            <div class="aboutus-content animate-on-scroll">
+                <p>Farm Hub Ethiopia is a forward-looking agricultural company founded in 2023 to bridge the wide gap between mechanized and subsistence farming. 
+                    Through our Farm Hubs, we provide scalable mechanization services, high-quality inputs, tailored digital solutions, and practical advisory 
+                    services—all aimed at empowering smallholder farmers across Ethiopia.</p>
+                <p>We are more than a service provider; we are a system integrator, connecting innovation to implementation.
+                     As the implementation arm of a larger transformation ecosystem, we bring lab-tested solutions directly to farmers' fields.  
+                     By fostering collaboration, knowledge sharing, and market access, we aim to create a future where Ethiopian agriculture thrives, and farming communities prosper.</p>
+            </div>
+            <div class="image-content animate-on-scroll">
+                <img src="image_file/farm_hub_equip.jpg" alt="Farmers using modern equipment">
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-  
-<!-- =============== Innovative Solution ========= -->
-
-
-<div class="green-container"> 
-    <div class="section-title-innov">
-      <h2>Our Innovative Solutions</h2>
-      <div class="divider"></div>
-      <p>Discover how we're transforming Ethiopian agriculture through integrated technology and farmer-centric systems - <span class="highlight" style="font-size:0.9rem; font-style: italic;">Click the columns for detail</span></p>
-          
-    </div>
-
-    <section class="four-column-section">
-      <!-- Column 1 -->
-      <div class="column column-1" onclick="changeLayout(1)">
-        <div class="column-content">
-          <h2>Interconnected Technology Transfer System</h2>
-          <div class="detail-text">
-            <p>
-                A network of Farm Hubs empower farmers with access to  mechanizaed solutions, inputs, and s while creating a powerful platform for peer-to-peer learning and collective market leverage. By connecting these hubs into a network, we create a dynamic ecosystem where innovations rapidly spread, best practices multiply, and farmers gain unprecedented bargaining power. 
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="column column-2" onclick="changeLayout(2)">
-        <div class="column-content">
-          <h2>Everything in One Place</h2>
-          <div class="detail-text">
-            <p>We've redefined service delivery through our everything-in-one-place hubs, where farmers access a complete suite of integrated solutions - from mechanization equipment and inputs to digital advisory platforms and hands-on training. 
-              This holistic approach eliminates the inefficiencies of fragmented agricultural support systems.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="column column-3" onclick="changeLayout(3)">
-        <div class="column-content">
-          <h2>From Seed to System</h2>
-          <div class="detail-text">
-            <p>The true power of our model lies in its seed-to-system transformation capability. We begin with foundational elements, then systematically build these into comprehensive production systems. These systems then integrate with larger ecosystems - c- creating resilient agricultural communities where each component reinforces the others.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 4 -->
-      <div class="column column-4" id="image-column">
-        <div class="column-content" id="default-content">
-          <h2>Discover how we're transforming Ethiopian agriculture through integrated technology and farmer-centric systems</h2>
-          <p>Click the columns for detail</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-      
-      <!-- === Space Gap After Section === -->
-      <div class="space-gap"></div>
-      
-      
-
-
-
-
-
-
-
-
-
-<!--===// News
-	=======================================================================-->
  
-
- 
-
-<section class="service-message">
-    <div class="welcome-container">
-    <h2 class="news-section-title">Our News</h2>
-    <div class="news-grid">
-        <!-- News Item 1 -->
-        <div class="news-item">
-            <img src="image_file/farm_hub_equip.jpg" alt="Farm Hub Ethiopia Completes First Year of Pilot Project " class="news-thumbnail">
-            <div class="news-content">
-                <h3>Farm Hub Ethiopia Completes First Year of Pilot Project</h3>
-                <p class="news-excerpt">A successful first year has demonstrated improved labor efficiency and crop yields, paving the way for sustainable agricultural growth.
-
-...</p>
-                <a href="#" class="read-more" 
-                   data-title="Farm Hub Ethiopia Completes First Year of Pilot Project " 
-                   data-content="Farm Hub Ethiopia has successfully concluded its transformative agricultural pilot program in partnership with Hawassa University, demonstrating significant advancements in sustainable farming practices. The year-long initiative combined cutting-edge technology transfer with regenerative agriculture methods, achieving a 35% increase in crop yields and 55% reduction in labor requirements across demonstration plots.
-
-The program's first phase established critical infrastructure, including the customization of five specialized machinery types imported from India and the creation of an IoT-enabled smart farming demonstration site. This technological foundation enabled Phase Two's intensive capacity-building efforts, which trained 150 smallholder farmers in precision agriculture techniques through 12 hands-on workshops focused on ecological practices.
-
-"These results validate our farmer-first approach," said Farm Hub's Project Director. "By integrating multi-crop planters that reduced planting labor by 60% and implementing our digital farm management system for 200+ users, we're seeing 80% adoption rates of demonstrated technologies within participant communities."
-
-Notable achievements include the establishment of 50 regenerative farming demonstration plots serving as local learning hubs, and the development of a replicable service delivery model now being prepared for national scaling. Early adopters reported enhanced productivity alongside reduced environmental impact through optimized input usage.
-
-Looking ahead, Farm Hub Ethiopia outlines an ambitious expansion plan targeting three new regions by 2025. Future initiatives will introduce solar-powered irrigation systems, launch a mobile-based crop advisory platform, and develop sustainable business models to ensure long-term smallholder profitability. "This pilot proves our model can simultaneously boost yields, protect ecosystems, and strengthen rural economies," the Director added."
-                   data-image="image_file/farm_hub_equip.jpg">
-                    Read Full Story
-                </a>
-            </div>
+    <!-- The Problem We Are Solving -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="section-title">
+            <h2>The Problem We Are Solving</h2>
         </div>
-
-        <!-- News Item 2 -->
-        <div class="news-item">
-            <img src="image_file/partnership_1.jpg" alt="Partnership" class="news-thumbnail">
-            <div class="news-content">
-                <h3>Farm Hub Ethiopia Partners with Hawassa University</h3>
-                <p class="news-excerpt">A strategic collaboration to bring advanced machinery and digital tools to Ethiopian farmers, enhancing productivity and innovation....</p>
-                <a href="#" class="read-more"
-                   data-title="Farm Hub Ethiopia Partners with Hawassa University"
-                   data-content="Farm Hub Ethiopia Partners with Hawassa University to Advance Agricultural Innovation
-
-Farm Hub Ethiopia is proud to announce a strategic partnership with Hawassa University, a collaboration aimed at driving agricultural innovation and improving farming practices in Ethiopia. This partnership marks a significant step toward integrating cutting-edge technology with sustainable agricultural methods to enhance productivity and efficiency for smallholder farmers.
-
-As part of this collaboration, Farm Hub Ethiopia has worked closely with Hawassa University to pilot advanced agricultural machinery, conduct field trials, and provide training to farmers and stakeholders. The partnership has facilitated the introduction of multi-crop planters and digital farm management tools, which have already demonstrated positive results in improving labor efficiency and increasing crop yields.
-
-By leveraging the research capabilities of Hawassa University and the practical expertise of Farm Hub Ethiopia, the initiative seeks to bridge the gap between academic knowledge and real-world farming solutions. The collaboration also focuses on technology transfer, ensuring that smallholder farmers gain access to modern, sustainable agricultural practices.
-
-Looking forward, Farm Hub Ethiopia and Hawassa University plan to expand their joint efforts by conducting further field demonstrations, refining business models, and exploring the integration of renewable energy solutions into agricultural mechanization. This partnership reinforces a shared commitment to equipping Ethiopian farmers with the tools and knowledge needed to build a resilient and productive agricultural sector.
-
-"
-                   data-image="image_file/partnership_1.jpg">
-                    Read Full Story
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- News Modal -->
-<div id="newsModal" class="news-modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <img class="modal-image" id="modalImage" alt="News Image">
-        <div class="modal-text">
-            <h2 id="modalTitle"></h2>
-            <p id="modalContent"></p>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-  <!--===// Gallery
-	===================================================================================-->
-
-
-
-
-
-<div class="gallery-section">
-<div class="text-center mb-5">
-                
-		<h2 class="display-4 text-center mb-5">Seeing is Believing</h2>
-            </div>
-  
-    <div class="gallery-grid">
-        <!-- Position 1 -->
-        <div class="gallery-item">
-            <img src="image_file/wheat_field_2.jpg" class="gallery-image active" data-caption="Field Trial">
-            <img src="image_file/maize_field.jpg" class="gallery-image" data-caption="Field Trial">
-            <img src="image_file/wheat_field_2.jpg" class="gallery-image" data-caption="Field Trial">
-            <img src="image_file/potato_field.jpg" class="gallery-image" data-caption="Field Trial">
-            <img src="image_file/wheat_field_4.jpg" class="gallery-image" data-caption="Field Trial">
-            <div class="gallery-caption">Field Trial</div>
-        </div>
-
-        <!-- Position 2 -->
-        <div class="gallery-item">
-            <img src="image_file/demo_1.jpg" class="gallery-image active" data-caption="Demonstration">
-            <img src="image_file/demo_6.jpg" class="gallery-image" data-caption="Demonstration">
-            <img src="image_file/demo_3.jpg" class="gallery-image" data-caption="Demonstration">
-            <img src="image_file/demo_4.jpg" class="gallery-image" data-caption="Demonstration">
-            <img src="image_file/demo_5.jpg" class="gallery-image" data-caption="Demonstration">
-            <div class="gallery-caption">Demonstration</div>
-        </div>
-
-        <!-- Position 3 -->
-        <div class="gallery-item">
-            <img src="image_file/partnership_1.jpg" class="gallery-image active" data-caption="Partnership">
-            <img src="image_file/partnership_2.jpg" class="gallery-image" data-caption="Partnership">
-            <img src="image_file/partnership_3.jpg" class="gallery-image" data-caption="Partnership">
-            <img src="image_file/visit_1.jpg" class="gallery-image" data-caption="Partnership">
-            <img src="image_file/partnership_4.jpg" class="gallery-image" data-caption="Partnership">
-            <div class="gallery-caption">Partnership</div>
-        </div>
-
-        <!-- Position 4 -->
-        <div class="gallery-item">
-            <img src="image_file/visit_1.jpg" class="gallery-image active" data-caption="Visit">
-            <img src="image_file/visit_2.jpg" class="gallery-image" data-caption="Visit">
-            <img src="image_file/visit_3.jpg" class="gallery-image" data-caption="Visit">
-            <img src="image_file/visit_4.jpg" class="gallery-image" data-caption="Visit">
-            <img src="image_file/visit_5.jpg" class="gallery-image" data-caption="Visit">
-            <div class="gallery-caption">Visit</div>
-        </div>
-    </div>
-</div>
-
-
-
-
-  <!--===// Partners
-	===================================================================================-->
-
-
-
-
-
-    <!-- Partners -->
-    <section class="py-5 bg-light">
-        <div class="container text-center">
-	<div class="col-12 text-center mb-5">
-            <h2 class="display-4">Partners</h2>
-		<div class="decorative-line"></div>
-		
-            <div class="row">
-<div class="col-md-12">
-                    <img src="image_file/partners.jpg" class="section-img w-100" alt="Farming Challenge">
-                </div>
-                
-
-	</div>
-            </div>
-        </div>
-    </section>
-
-  <!--===// Footer
-	===================================================================================-->
-<!-- CTA Section -->
-<footer class="cta-section">
-    <div class="cta-container">
-        <div class="footer-row">
-            <!-- First Column: Logo and Contact Info (25%) -->
-            <div class="footer-column">
-                <div class="footer-logo">
-                    <img src="image_file/logo_with_text.png" alt="Farm Hub Logo" />
-                </div>
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <span>📍</span>
-                    </div>
-                    <div>
-                        <h4 class="footer-contact-title">Address</h4>
-                        <div class="footer-contact-details">
-                            Addis Ababa, Ethiopia<br />
-                            Hawassa: HU IoT Campus
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <span>✉️</span>
-                    </div>
-                    <div>
-                        <h4 class="footer-contact-title">Email</h4>
-                        <div class="footer-contact-details">
-                            <a href="mailto:info@farmhub.et">girma.moges@farmlab-ethiopia.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-contact-item">
-                    <div class="footer-contact-icon">
-                        <span>📞</span>
-                    </div>
-                    <div>
-                        <h4 class="footer-contact-title">Phone</h4>
-                        <div class="footer-contact-details">+251 911112602</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Second Column: Contact Info (50%) -->
-            <div class="footer-column">
-                <h2 class="footer-heading">Stay In Contact</h2>
-                <div class="footer-description">
-                    Get in touch with us to get any of our services or to learn more about how we can help your farm.
-                </div>
-            </div>
-            
-            <!-- Third Column: Links and Social (25%) -->
-            <div class="footer-column">
-                <div class="cta-links">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="products.html">Product Catalog</a></li>
-                        <li><a href="app.html">Download Our App</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                    </ul>
-                </div>
-                
-                <ul class="footer-social-links">
-                    <li class="footer-social-item">
-                        <a href="https://www.facebook.com/" class="footer-social-icon" title="Facebook" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="footer-social-item">
-                        <a href="https://t.me/" class="footer-social-icon" title="Telegram" target="_blank">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                    </li>
-                    <li class="footer-social-item">
-                        <a href="https://linkedin.com/" class="footer-social-icon" title="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
+        <div class="section-content">
+            <div class="text-content animate-on-scroll">
+                <p>The global food system is in crisis. In Ethiopia, this challenge is felt acutely through:</p>
+                <ul>
+                    <li><strong>Low Productivity:</strong> Yields are 30–50% below potential due to poor inputs, limited machinery, and outdated practices.</li>
+                    <li><strong>Weak Supply Chains:</strong> Farmers lack timely access to essential inputs and reliable markets.</li>
+                    <li><strong>Skills Gap:</strong> Only 18% of farmers receive formal training, blocking the adoption of better technologies.</li>
                 </ul>
+                <p>Additionally, farm power availability in Ethiopia stands at just 0.05 kW/ha—ten times lower than in emerging economies. This perfect storm of challenges keeps smallholder farmers trapped in cycles of poverty while threatening national food security.</p>
+            </div>
+            
+            <div class="problem-slideshow animate-on-scroll">
+                <img src="image_file/gaps_cap.jpg" alt="Ethiopian farmer in field" class="problem-slide active">
+                <img src="image_file/farmer_2.jpg" alt="Agricultural challenges" class="problem-slide">
+                <img src="image_file/woman_farmer_3.jpg" alt="Farm equipment shortage" class="problem-slide">
+                
+                <div class="slideshow-controls">
+                    <div class="slideshow-dot active" data-index="0"></div>
+                    <div class="slideshow-dot" data-index="1"></div>
+                    <div class="slideshow-dot" data-index="2"></div>
+                </div>
             </div>
         </div>
         
-        <!-- Copyright Row -->
-        <div class="footer-row footer-copyright-row">
-            <div class="footer-column">
-                <div class="footer-copyright">
-                    Copyright © 2025 . Farm Hub Ethiopia . All rights reserved.
+        <div class="problem-stats">
+            <div class="stat-card animate-on-scroll">
+                <h3>30-50%</h3>
+                <p>Below potential yields</p>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <h3>18%</h3>
+                <p>Farmers with formal training</p>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <h3>0.05 kW/ha</h3>
+                <p>Farm power availability</p>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <h3>10x</h3>
+                <p>Less than emerging economies</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Vision & Mission -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Our Vision & Mission</h2>
+        </div>
+        <div class="vm-cards">
+            <div class="vm-card animate-on-scroll">
+                <h3>Our Vision</h3>
+                <p>To revolutionize agriculture by equipping farmers with innovative technologies, regenerative practices, and practical knowledge that ensures long-term sustainability, profitability, and resilience.</p>
+            </div>
+            <div class="vm-card animate-on-scroll">
+                <h3>Our Mission</h3>
+                <p>To enable rural communities to lead in shaping a sustainable and resilient food system through education, technology transfer, and leadership development.</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+<!--===// Innovative Solutions Section
+	=========================================================-->
+
+
+
+
+    <section class="innovative-container">
+      
+        <section class="innovative-solutions">
+            <div class="innovative-title">
+                <h2>Our Innovative Solutions</h2>
+                <div class="divider"></div>
+                <p>Discover how we're transforming Ethiopian agriculture through integrated technology and farmer-centric systems</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <!-- Card 1 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Interconnected Technology Transfer System</h3>
+                    <p>Seamlessly bridges research, implementation, and real-world application. By creating a continuous feedback loop between our Mission Labs, Farm Hubs, and Regen Farms, we ensure innovative solutions are constantly refined to meet farmers' evolving needs. 
+                        Through hub franchising, we empower local agri-entrepreneurs to become innovation champions, while our rent-to-own financing and pay-per-use services dramatically lower adoption barriers. Farmer-to-farmer knowledge sharing creates organic, community-driven expansion.
+                    </p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-arrow-up"></i> 73% faster adoption
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-users"></i> 15K+ farmers
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <h3>Everything in One Place</h3>
+                    <p>We've redefined service delivery through our everything-in-one-place hubs, where farmers access a complete suite of integrated solutions - from mechanization equipment and inputs to digital advisory platforms and hands-on training. 
+                        This holistic approach eliminates the inefficiencies of fragmented agricultural support systems.</p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-clock"></i> 60% time saved
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-money-bill-wave"></i> 30% cost reduction
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+            
+               
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>From Seed to System</h3>
+                    <p>The true power of our model lies in its seed-to-system transformation capability. We begin with foundational elements like improved seeds and regenerative practices, then systematically build these into comprehensive production systems. These systems then integrate with larger ecosystems - connecting soil health to water management, 
+                        farm productivity to market access - creating resilient agricultural communities where each component reinforces the others.</p>
+                    <div class="solution-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-percentage"></i> 40% yield increase
+                        </span>
+                        <span class="stat-badge">
+                            <i class="fas fa-leaf"></i> Regenerative impact
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </section>
+ 
+
+
+    <!---------------------------------- What We Do -->
+    <section class="section-whatwedo" style="background-color: #f9f9f9;">
+        <div class="section-title">
+            <h2>Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+                <div class="service-img">
+                    <img src="image_file/farm_hub_equip.jpg" alt="Mechanization Services">
+                </div>
+                <div class="service-content">
+                    <h3>Mechanization Services</h3>
+                    <p>Pay-per-use access to modern equipment for plowing, planting, and land leveling.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-img">
+                    <img src="image_file/seed_fert.jpg" alt="Quality Inputs">
+                </div>
+                <div class="service-content">
+                    <h3>Quality Inputs</h3>
+                    <p>Certified seeds, biofertilizers, and pest management products.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-img">
+                    <img src="image_file/digital_soln.jpg" alt="Digital Solutions">
+                </div>
+                <div class="service-content">
+                    <h3>Digital Solutions</h3>
+                    <p>Tools like LastMile and XFarm for booking equipment, accessing market prices, and getting weather updates.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-img">
+                    <img src="image_file/advisory.jpg" alt="Advisory Services">
+                </div>
+                <div class="service-content">
+                    <h3>Advisory Services</h3>
+                    <p>On-field support for regenerative farming, crop planning, and equipment usage.</p>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
+
+    <!-- How We Work -->
+    <section class="section-howwedo">
+        <div class="section-title">
+            <h2>Our Approach - The Transformation Ecosystem</h2>
+            <p>Our model is rooted in systems thinking and sustainable scaling:</p>
+        </div>
+        
+        <div id="approach-slide" class="slide">
+            <div class="app-content-container">
+                <div class="approach-grid">
+                    <!-- Card 1 -->
+                    <div class="approach-card slide-in delay-1">
+                        <div class="card-number">1</div>
+                        <h2 class="card-title">Holistic Systems Solution</h2>
+                        <p class="app-card-content">
+                            <span>A one-stop-shop model</span> connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs 
+                            - the <span>visible nodes of the system - ensuring local scalability by embedding solutions within existing farmer landscapes</span>.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="approach-card slide-in delay-2">
+                        <div class="card-number">2</div>
+                        <h2 class="card-title">Closed-Loop Innovation</h2>
+                        <p class="app-card-content">
+                            Our ecosystem links Mission Labs (R&D), Farm Hubs (Delivery) and Regen Farms (Adoption) in continuous feedback cycles that <span>refine solutions to local contexts</span>.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="approach-card slide-in delay-3">
+                        <div class="card-number">3</div>
+                        <h2 class="card-title">Sustainable/Market led Diffusion</h2>
+                        <p class="app-card-content">
+                            Hubs operate as <span>next-gen extension centers</span>. Services are market-led and revenue-generating, ensuring long-term viability.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="approach-card slide-in delay-4">
+                        <div class="card-number">4</div>
+                        <h2 class="card-title">Systemic Impact</h2>
+                        <p class="app-card-content">
+                            By combining technology transfer, collective bargaining and market access, we create a virtuous cycle that boosts yields,
+                            livelihoods and food sovereignty across Africa.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Visualization Container -->
+                <div class="approach-container">
+                    <!-- Center Image -->
+                    <img src="image_file/farmhub_model.jpg" alt="Farm Hub" class="center-image">
+                    
+                    <!-- Text Boxes -->
+                    <div class="approach-text-box" style="left: 27%; top: 30%; width: 100px; padding: 4px 6px;">
+                        <h3 style="font-size: 10px;">Mechanization</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 43%; top: 22%; width: 90px; padding: 4px 6px;">
+                        <h3 style="font-size: 12px;">Inputs</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 60%; top: 30%; width: 90px; padding: 4px 6px;">
+                        <h3 style="font-size: 12px;">Training</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 65%; top: 45%; width: 90px; padding: 4px 6px;">
+                        <h3 style="font-size: 12px;">Partnership</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 43%; top: 73%; width: 90px; padding: 4px 6px;">
+                        <h3 style="font-size: 12px;">Research</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 25%; top: 60%; width: 115px; padding: 4px 6px;">
+                        <h3 style="font-size: 10px;">Experience Sharing</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 20%; top: 45%; width: 100px; padding: 4px 6px;">
+                        <h3 style="font-size: 10px;">Digital Solution</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 58%; top: 60%; width: 120px; padding: 4px 6px;">
+                        <h3 style="font-size: 9px;">Peer-to-peer learning</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 40%; top: 45%; background: var(--secondary-green); color: white; border-color: var(--secondary-green);">
+                        <h3 style="font-size: 12px;">Farm Hub</h3>
+                    </div>
+                    
+                    <!-- Circle Boxes -->
+                    <div class="approach-text-box" style="left: 18%; top: 20%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 20px; font-size: 12px;">Availability</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 50%; top: 8%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 20px; font-size: 12px;">Accessibility</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 78%; top: 37%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 20px; font-size: 12px;">Affordability</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 60%; top:73%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 13px; font-size: 12px;">Adaptability</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 20%; top: 68%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 16px; font-size: 12px;">Awareness</h3>
+                    </div>
+                    <div class="approach-text-box" style="z-index: 0;background: green; left:142px; top: 100px;  width: 520px; height: 520px; border-radius: 50%; border: 5px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 50px; font-size: 11px;"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Unique Model -->
+
+
+
+
+
+
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="section-title">
+            <h2>Our Unique Model</h2>
+            <p>The Transformation Ecosystem</p>
+        </div>
+        <div class="section-content">
+            <div class="text-content animate-on-scroll">
+                <p>We operate as part of an integrated system:</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li style="margin-bottom: 10px;"><strong>Mission Labs</strong> – Innovate and design farmer-ready solutions.</li>
+                    <li style="margin-bottom: 10px;"><strong>Farm Hubs</strong> – Deploy technologies, train farmers, and ensure access.</li>
+                    <li><strong>Regen Farms</strong> – Showcase regenerative practices and collect on-field data.</li>
+                </ul>
+                <p>This ecosystem bridges the Productivity, Supply, and Capacity gaps systematically.</p>
+            </div>
+            <div class="model-diagram animate-on-scroll">
+                <img src="image_file/comp_1_missionlab.jpg" alt="Transformation Ecosystem Diagram">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Farm Hub Works -->
+    <section class="section-whyworks">
+        <div class="section-title">
+            <h2 style="color: white;">Why Farm Hub Works</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+                <div class="service-content">
+                    <h3>Localized Hubs</h3>
+                    <p>Close to the community, responsive to needs.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-content">
+                    <h3>Revenue Model</h3>
+                    <p>Self-sustaining through service fees and input sales.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="service-content">
+                    <h3>System Integration</h3>
+                    <p>Our work complements the innovation pipeline and adoption network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey So Far -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="section-title">
+            <h2>Our Journey So Far</h2>
+        </div>
+        <div class="section-content">
+            <div class="text-content animate-on-scroll">
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li style="margin-bottom: 10px;">Piloted our model at Hawassa University in 2024.</li>
+                    <li style="margin-bottom: 10px;">Surveyed Ethiopia's mechanization landscape and developed practical business models.</li>
+                    <li style="margin-bottom: 10px;">Visited leading agricultural projects like UWEPO Farm (Uganda) and Wondo Genet (Ethiopia).</li>
+                    <li>Built partnerships with research institutions and global advisors.</li>
+                </ul>
+            </div>
+            <div class="image-content animate-on-scroll">
+                <img src="image_file/demo_6.jpg" alt="Farm Hub journey">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Our Team</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="image_file/girma.jpg" alt="Dr. Girma Moges">
+                </div>
+                <div class="member-info">
+                    <h3>Dr. Girma Moges</h3>
+                    <p>Manager</p>
+                    <p>PhD in Agricultural Mechanization</p>
+                </div>
+            </div>
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="image_file/alemayhu.jpg" alt="Alemayhu Girma">
+                </div>
+                <div class="member-info">
+                    <h3>Alemayhu Girma</h3>
+                    <p>Field Manager</p>
+                    <p>MSc in Agricultural Mechanization</p>
+                </div>
+            </div>
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="image_file/Nitsuh.jpg" alt="Nitsuh Girma">
+                </div>
+                <div class="member-info">
+                    <h3>Nitsuh Girma</h3>
+                    <p>Finance Manager</p>
+                    <p>BA in Accounting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Partners -->
+    <section class="section-partner">
+        <div class="section-title">
+            <h2>Strategic Partners</h2>
+        </div>
+        <div class="partners">
+            <img src="image_file/logo_trans.png" alt="Regenerative Collective" class="partner-logo animate-on-scroll">
+            <img src="image_file/HU_logo.jpg" alt="Hawassa University" class="partner-logo animate-on-scroll">
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="cta-section">
+        <h2 class="animate-on-scroll">Join Us in Transforming Ethiopian Agriculture</h2>
+        <p class="animate-on-scroll">Farm Hub Ethiopia is scaling rapidly. From a successful pilot to a full expansion and franchise model by 2028, we're creating opportunities for entrepreneurs, investors, researchers, and farmers to participate in building a regenerative, equitable food system.</p>
+        <a href="contact.html" class="cta-button animate-on-scroll">Get in Touch</a>
+    </section>
 
 
 
@@ -2137,36 +2061,7 @@ Looking forward, Farm Hub Ethiopia and Hawassa University plan to expand their j
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--===// 
-	==========================================================================================================-->
-
-<!--===// Script
+    <!--===// Script
 	==========================================================================================================-->
 
 
@@ -2201,143 +2096,128 @@ Looking forward, Farm Hub Ethiopia and Hawassa University plan to expand their j
     </script>
 
 
-  <!--===// Java: Gallary
-	===================================================================================-->
-
- <script>
-
-document.addEventListener("DOMContentLoaded", function () {
-    const galleryItems = document.querySelectorAll(".gallery-item");
-
-    galleryItems.forEach((item) => {
-        let images = item.querySelectorAll(".gallery-image");
-        let caption = item.querySelector(".gallery-caption");
-        let index = 0;
-
-        function showNextImage() {
-            images[index].classList.remove("active");
-            index = (index + 1) % images.length;
-            images[index].classList.add("active");
-            caption.textContent = images[index].dataset.caption;
-        }
-
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
-    });
-});
-
- </script>
-
- <!--===// Java: News Section
-	===================================================================================-->
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("newsModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalContent = document.getElementById("modalContent");
-    const closeModal = document.querySelector(".close-modal");
+    // Scroll Animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    // Observe sections
+    document.querySelectorAll('.innovative-section, .impact-section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.solution-slide');
     
-    document.querySelectorAll(".read-more").forEach(button => {
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-            
-            const title = this.getAttribute("data-title");
-            const content = this.getAttribute("data-content");
-            const imageSrc = this.getAttribute("data-image");
-            
-            modalTitle.textContent = title;
-            modalContent.textContent = content;
-            modalImage.src = imageSrc;
-            
-            modal.style.display = "block";
+    function showSlide() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    setInterval(showSlide, 5000);
+
+    // Parallax Text Effect
+    let lastScroll = 0;
+    const impactTexts = document.querySelectorAll('.impact-text');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        impactTexts.forEach(text => {
+            const section = text.closest('.impact-section');
+            if (section.classList.contains('active')) {
+                const scrollDelta = currentScroll - lastScroll;
+                text.style.transform = `translateY(${scrollDelta * 0.5}px)`;
+            }
+        });
+        
+        lastScroll = currentScroll;
+    });
+
+    // Reset text position when leaving section
+    window.addEventListener('scroll', () => {
+        impactTexts.forEach(text => {
+            const section = text.closest('.impact-section');
+            const bounds = section.getBoundingClientRect();
+            if (bounds.bottom < 0 || bounds.top > window.innerHeight) {
+                text.style.transform = 'translateY(0)';
+            }
         });
     });
-    
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-    
-    window.addEventListener("click", function (e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        // Scroll Animations
+<script>
+    // Slideshow functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.problem-slide');
+        const dots = document.querySelectorAll('.slideshow-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        // Dot navigation
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                showSlide(parseInt(this.getAttribute('data-index')));
+            });
+        });
+        
+        // Auto-rotate slides
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+        
+        // Scroll animation
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                } else {
-                    entry.target.classList.remove('active');
+                    entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.3 });
-
-        // Observe sections
-        document.querySelectorAll('.innovative-section, .impact-section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Slideshow
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.solution-slide');
+        }, { threshold: 0.1 });
         
-        function showSlide() {
-            slides.forEach(slide => slide.classList.remove('active'));
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-        setInterval(showSlide, 5000);
+        animateElements.forEach(el => observer.observe(el));
+    });
+</script>
 
-        // Parallax Text Effect
-        let lastScroll = 0;
-        const impactTexts = document.querySelectorAll('.impact-text');
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
+    <script>
+        // Animation on scroll functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
             
-            impactTexts.forEach(text => {
-                const section = text.closest('.impact-section');
-                if (section.classList.contains('active')) {
-                    const scrollDelta = currentScroll - lastScroll;
-                    text.style.transform = `translateY(${scrollDelta * 0.5}px)`;
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
             });
             
-            lastScroll = currentScroll;
-        });
-
-        // Reset text position when leaving section
-        window.addEventListener('scroll', () => {
-            impactTexts.forEach(text => {
-                const section = text.closest('.impact-section');
-                const bounds = section.getBoundingClientRect();
-                if (bounds.bottom < 0 || bounds.top > window.innerHeight) {
-                    text.style.transform = 'translateY(0)';
-                }
+            animateElements.forEach(element => {
+                observer.observe(element);
             });
         });
     </script>
@@ -2345,32 +2225,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<script>
-    // Animation for cards
-    const solutionCards = document.querySelectorAll('.solution-card');
-    
-    const animateCards = () => {
-        solutionCards.forEach((card, index) => {
-            const cardPosition = card.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (cardPosition < screenPosition) {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }
-        });
-    };
-    
-    // Set initial state for animation
-    solutionCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `all 0.5s ease ${index * 0.1}s`;
-    });
-    
-    window.addEventListener('load', animateCards);
-    window.addEventListener('scroll', animateCards);
-</script>
+
+
+
+
+
+
 
 
 
@@ -2380,204 +2240,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <script>
-    // Mobile Carousel Functionality
     document.addEventListener('DOMContentLoaded', function() {
-        const carousel = document.querySelector('.solutions-grid');
-        const cards = document.querySelectorAll('.solution-card');
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        let currentIndex = 0;
+        const slideContainer = document.querySelector('.approach-container');
+        const textBoxes = document.querySelectorAll('.approach-text-box');
+        const centerImage = document.querySelector('.center-image');
         
-        // Only enable carousel on mobile
-        if (window.innerWidth <= 768) {
-            function updateCarousel() {
-                // Hide all cards
-                cards.forEach(card => {
-                    card.classList.remove('active');
-                    card.style.transform = 'scale(0.95)';
-                });
-                
-                // Show current card
-                cards[currentIndex].classList.add('active');
-                cards[currentIndex].style.transform = 'scale(1)';
-                
-                // Scroll to current card
-                carousel.scrollTo({
-                    left: cards[currentIndex].offsetLeft - 40, // account for padding
-                    behavior: 'smooth'
-                });
-            }
-            
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : cards.length - 1;
-                updateCarousel();
-            });
-            
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex < cards.length - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
-            
-            // Touch/swipe support
-            let startX;
-            carousel.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-            });
-            
-            carousel.addEventListener('touchend', (e) => {
-                const endX = e.changedTouches[0].clientX;
-                const diff = startX - endX;
-                
-                if (diff > 50) {
-                    // Swipe left - next
-                    currentIndex = (currentIndex < cards.length - 1) ? currentIndex + 1 : 0;
-                    updateCarousel();
-                } else if (diff < -50) {
-                    // Swipe right - previous
-                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : cards.length - 1;
-                    updateCarousel();
+        // Create observer to detect when slide comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Slide is in focus - start animations
+                    textBoxes.forEach((box, index) => {
+                        setTimeout(() => {
+                            box.classList.add('active');
+                        }, index * 100); // Staggered animation
+                    });
+                    
+                    // Pulse center image
+                    centerImage.style.transform = 'translate(-50%, -50%) scale(1.05)';
+                    setTimeout(() => {
+                        centerImage.style.transform = 'translate(-50%, -50%) scale(1)';
+                    }, 300);
+                } else {
+                    // Reset for replay
+                    textBoxes.forEach(box => box.classList.remove('active'));
                 }
             });
-            
-            // Initialize
-            updateCarousel();
-        } else {
-            // Hide buttons on desktop
-            prevBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
-        }
-        
-        // Animation for cards
-        const animateCards = () => {
-            cards.forEach((card, index) => {
-                const cardPosition = card.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (cardPosition < screenPosition) {
-                    card.style.opacity = '1';
-                    if (window.innerWidth <= 768) {
-                        card.style.transform = card.classList.contains('active') ? 'scale(1)' : 'scale(0.95)';
-                    } else {
-                        card.style.transform = 'translateY(0)';
-                    }
-                }
-            });
-        };
-        
-        // Set initial state for animation
-        cards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = window.innerWidth <= 768 ? 'scale(0.95)' : 'translateY(20px)';
-            card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        }, { threshold: 0.3 });
+
+        // Start observing the slide container
+        observer.observe(slideContainer);
+
+        // Optional: Click to replay animation
+        centerImage.addEventListener('click', function() {
+            textBoxes.forEach(box => box.classList.remove('active'));
+            setTimeout(() => {
+                textBoxes.forEach((box, index) => {
+                    setTimeout(() => box.classList.add('active'), index * 100);
+                });
+            }, 50);
         });
-        
-        window.addEventListener('load', animateCards);
-        window.addEventListener('scroll', animateCards);
-        
+
         // Handle window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                prevBtn.style.display = 'none';
-                nextBtn.style.display = 'none';
-                cards.forEach(card => {
-                    card.style.minWidth = '';
-                    card.style.transform = '';
-                    card.classList.remove('active');
-                });
-            } else {
-                prevBtn.style.display = 'flex';
-                nextBtn.style.display = 'flex';
-                updateCarousel();
-            }
-        });
+        function handleResize() {
+            // Adjust any dynamic positioning if needed
+            const isMobile = window.innerWidth <= 768;
+            
+            // Example: You could adjust animation speeds based on screen size
+            const animationElements = document.querySelectorAll('.slide-in');
+            animationElements.forEach(el => {
+                if (isMobile) {
+                    el.style.animationDuration = '0.6s';
+                } else {
+                    el.style.animationDuration = '0.8s';
+                }
+            });
+        }
+
+        // Initial call
+        handleResize();
+        
+        // Listen for resize events
+        window.addEventListener('resize', handleResize);
     });
 </script>
-<script>
-    const grid = document.querySelector('.solutions-grid');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-
-    const scrollAmount = grid.offsetWidth; // scroll one full card width
-
-    nextBtn.addEventListener('click', () => {
-        grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-
-    prevBtn.addEventListener('click', () => {
-        grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- Green innovative section -->
- <script>
- function changeLayout(columnNumber) {
-  const columns = [
-    document.querySelector('.column-1'),
-    document.querySelector('.column-2'),
-    document.querySelector('.column-3')
-  ];
-  const column4 = document.querySelector('.column-4');
-  const defaultContent = document.getElementById('default-content');
-
-  const isMobile = window.innerWidth <= 768;
-
-  columns.forEach(col => {
-    col.classList.remove('active');
-    if (isMobile) {
-      col.style.height = '100px'; // reset height on mobile
-    } else {
-      col.style.width = '10%'; // reset width on desktop
-    }
-  });
-
-  if (defaultContent) defaultContent.style.display = 'none';
-  column4.innerHTML = '';
-  column4.style.width = isMobile ? '100%' : '50%';
-
-  const clicked = columns[columnNumber - 1];
-  clicked.classList.add('active');
-
-  if (isMobile) {
-    clicked.style.height = '500px'; // expanded height
-  } else {
-    clicked.style.width = '40%'; // expanded width
-  }
-
-  const images = {
-    1: 'image_file/cartoon_3.jpg',
-    2: 'image_file/farmhub_model.jpg',
-    3: 'image_file/cartoon_3.jpg'
-  };
-
-  const img = document.createElement('img');
-  img.src = images[columnNumber];
-  img.alt = "Preview";
-  column4.appendChild(img);
-}
-   // Initialize with first column active by default
-   window.onload = function() {
-            changeLayout(2);
-        };
- </script>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
