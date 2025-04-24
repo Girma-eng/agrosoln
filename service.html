@@ -526,6 +526,13 @@
             max-width: 1600px;
             margin: 0 auto;
         }
+        .section-howwedo-mobile {
+           display: none;
+            padding: 80px 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
         
         .text-content {
             flex: 1;
@@ -1178,8 +1185,20 @@
 
         /* MOBILE STYLES (max-width: 768px) */
         @media (max-width: 768px) {
+
+
             .section-howwedo {
-                padding: 50px 20px;
+            display: none;
+        }
+        .section-howwedo-mobile {
+          display: block;
+            padding: 10px 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+            .section-howwedo {
+                padding: 10px 20px;
             }
             
             .section-title {
@@ -1254,20 +1273,14 @@
             .approach-text-box[style*="left: 25%"] { left: 20% !important; }
             .approach-text-box[style*="left: 40%"] { left: 35% !important; }
             .approach-text-box[style*="left: 5%"] { left: 2% !important; }
-            .approach-text-box[style*="left: 50%"] { left: 45% !important; }
+            
             .approach-text-box[style*="left: 80%"] { left: 75% !important; }
             .approach-text-box[style*="left: 55%"] { left: 50% !important; }
             .approach-text-box[style*="left: 10%"] { left: 5% !important; }
             
             /* Adjust circle sizes for mobile */
-            .approach-text-box[style*="border-radius: 50%"] {
-                width: 90px !important;
-                height: 90px !important;
-            }
-            
-            .approach-text-box[style*="border-radius: 50%"] h3 {
-                font-size: 12px !important;
-            }
+           
+          
             
             /* Animation adjustments for mobile */
             .slide-in {
@@ -1295,17 +1308,18 @@
             }
             
             .approach-text-box {
-                width: 90px;
+                width: 50px;
+                height: 22px;
                 padding: 6px;
             }
             
             .approach-text-box h3 {
-                font-size: 12px;
+                font-size: 8px;
             }
             
             .approach-text-box[style*="border-radius: 50%"] {
-                width: 80px !important;
-                height: 80px !important;
+                width: 50px !important;
+                height: 50px !important;
             }
         }
 
@@ -1313,18 +1327,6 @@
 
 
 
-
-        .model-diagram {
-            max-width: 800px;
-            margin: 50px auto;
-            position: relative;
-        }
-        
-        .model-diagram img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        
         /* Team Section */
         .team-grid {
             display: grid;
@@ -1814,7 +1816,7 @@
         </div>
     </section>
 
-    <!-- How We Work -->
+    <!------------------------------------ How We Work -->
     <section class="section-howwedo">
         <div class="section-title">
             <h2>Our Approach - The Transformation Ecosystem</h2>
@@ -1920,35 +1922,110 @@
             </div>
         </div>
     </section>
-
-
-    <!-- Our Unique Model -->
-
-
-
-
-
-
-    <section class="section" style="background-color: #f9f9f9;">
+    <section class="section-howwedo-mobile">
         <div class="section-title">
-            <h2>Our Unique Model</h2>
-            <p>The Transformation Ecosystem</p>
+            <h2>Our Approach - The Transformation Ecosystem</h2>
+            <p>Our model is rooted in systems thinking and sustainable scaling:</p>
         </div>
-        <div class="section-content">
-            <div class="text-content animate-on-scroll">
-                <p>We operate as part of an integrated system:</p>
-                <ul style="margin: 20px 0; padding-left: 20px;">
-                    <li style="margin-bottom: 10px;"><strong>Mission Labs</strong> – Innovate and design farmer-ready solutions.</li>
-                    <li style="margin-bottom: 10px;"><strong>Farm Hubs</strong> – Deploy technologies, train farmers, and ensure access.</li>
-                    <li><strong>Regen Farms</strong> – Showcase regenerative practices and collect on-field data.</li>
-                </ul>
-                <p>This ecosystem bridges the Productivity, Supply, and Capacity gaps systematically.</p>
-            </div>
-            <div class="model-diagram animate-on-scroll">
-                <img src="image_file/comp_1_missionlab.jpg" alt="Transformation Ecosystem Diagram">
+        
+        <div id="approach-slide" class="slide">
+            <div class="app-content-container">
+                <div class="approach-grid">
+                    <!-- Card 1 -->
+                    <div class="approach-card slide-in delay-1">
+                        <div class="card-number">1</div>
+                        <h2 class="card-title">Holistic Systems Solution</h2>
+                        <p class="app-card-content">
+                            <span>A one-stop-shop model</span> connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs 
+                            - the <span>visible nodes of the system - ensuring local scalability by embedding solutions within existing farmer landscapes</span>.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="approach-card slide-in delay-2">
+                        <div class="card-number">2</div>
+                        <h2 class="card-title">Closed-Loop Innovation</h2>
+                        <p class="app-card-content">
+                            Our ecosystem links Mission Labs (R&D), Farm Hubs (Delivery) and Regen Farms (Adoption) in continuous feedback cycles that <span>refine solutions to local contexts</span>.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="approach-card slide-in delay-3">
+                        <div class="card-number">3</div>
+                        <h2 class="card-title">Sustainable/Market led Diffusion</h2>
+                        <p class="app-card-content">
+                            Hubs operate as <span>next-gen extension centers</span>. Services are market-led and revenue-generating, ensuring long-term viability.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="approach-card slide-in delay-4">
+                        <div class="card-number">4</div>
+                        <h2 class="card-title">Systemic Impact</h2>
+                        <p class="app-card-content">
+                            By combining technology transfer, collective bargaining and market access, we create a virtuous cycle that boosts yields,
+                            livelihoods and food sovereignty across Africa.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Visualization Container -->
+                <div class="approach-container">
+                    <!-- Center Image -->
+                    <img src="image_file/farmhub_model.jpg" alt="Farm Hub" class="center-image" style="width: 72%; height: 85%;">
+                    
+                    <!-- Text Boxes -->
+                    <div class="approach-text-box" style="left: 16%; top: 16%; padding: 4px 6px;">
+                        <h3>Mechanization</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 40%; top: 2%; padding: 4px 6px;">
+                        <h3>Inputs</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 70%; top: 20%; padding: 4px 6px;">
+                        <h3>Training</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 70%; top: 55%; padding: 4px 6px;">
+                        <h3>Partnership</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 50%; top: 87%; padding: 4px 6px;">
+                        <h3>Research</h3>
+                    </div>
+                   
+                    <div class="approach-text-box" style="left: 20%; top: 85%; width:60px; padding: 4px 6px;">
+                        <h3>Digital Solution</h3>
+                    </div>
+                  
+                    <div class="approach-text-box" style="left: 40%; top: 45%; background: var(--secondary-green); color: white; border-color: var(--secondary-green);">
+                        <h3>Farm Hub</h3>
+                    </div>
+                    
+                    <!-- Circle Boxes -->
+                    <div class="approach-text-box" style="left: -8%; top: 20%; width: 70px; height: 70px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 20px;">Availability</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 50%; top: -20%; width: 70px; height: 70px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 20px;">Accessibility</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 88%; top: 37%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 20px;">Affordability</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 60%; top:90%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 13px;">Adaptability</h3>
+                    </div>
+                    <div class="approach-text-box" style="left: 6%; top: 88%; width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 16px;">Awareness</h3>
+                    </div>
+                    <div class="approach-text-box" style="z-index: 0;background: green; left:3px; top: -15px;  width: 250px; height: 250px; border-radius: 70%; border: 5px solid rgb(140, 202, 70);">
+                        <h3 style="margin-top: 50px; font-size: 11px;"></h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+
+
 
     <!-- Why Farm Hub Works -->
     <section class="section-whyworks">
@@ -2240,69 +2317,73 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const slideContainer = document.querySelector('.approach-container');
-        const textBoxes = document.querySelectorAll('.approach-text-box');
-        const centerImage = document.querySelector('.center-image');
-        
-        // Create observer to detect when slide comes into view
+   document.addEventListener('DOMContentLoaded', function() {
+    // Handle both desktop and mobile sections
+    const slideContainers = document.querySelectorAll('.approach-container');
+    
+    slideContainers.forEach(container => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Slide is in focus - start animations
+                    const textBoxes = entry.target.querySelectorAll('.approach-text-box');
+                    const centerImage = entry.target.querySelector('.center-image');
+                    
+                    // Start animations
                     textBoxes.forEach((box, index) => {
                         setTimeout(() => {
                             box.classList.add('active');
-                        }, index * 100); // Staggered animation
+                        }, index * 100);
                     });
                     
                     // Pulse center image
-                    centerImage.style.transform = 'translate(-50%, -50%) scale(1.05)';
-                    setTimeout(() => {
-                        centerImage.style.transform = 'translate(-50%, -50%) scale(1)';
-                    }, 300);
+                    if (centerImage) {
+                        centerImage.style.transform = 'translate(-50%, -50%) scale(1.05)';
+                        setTimeout(() => {
+                            centerImage.style.transform = 'translate(-50%, -50%) scale(1)';
+                        }, 300);
+                    }
                 } else {
-                    // Reset for replay
+                    const textBoxes = entry.target.querySelectorAll('.approach-text-box');
                     textBoxes.forEach(box => box.classList.remove('active'));
                 }
             });
-        }, { threshold: 0.3 });
-
-        // Start observing the slide container
-        observer.observe(slideContainer);
-
-        // Optional: Click to replay animation
-        centerImage.addEventListener('click', function() {
-            textBoxes.forEach(box => box.classList.remove('active'));
-            setTimeout(() => {
-                textBoxes.forEach((box, index) => {
-                    setTimeout(() => box.classList.add('active'), index * 100);
-                });
-            }, 50);
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
 
-        // Handle window resize
-        function handleResize() {
-            // Adjust any dynamic positioning if needed
-            const isMobile = window.innerWidth <= 768;
-            
-            // Example: You could adjust animation speeds based on screen size
-            const animationElements = document.querySelectorAll('.slide-in');
-            animationElements.forEach(el => {
-                if (isMobile) {
-                    el.style.animationDuration = '0.6s';
-                } else {
-                    el.style.animationDuration = '0.8s';
-                }
+        observer.observe(container);
+        
+        // Click to replay animation
+        const centerImage = container.querySelector('.center-image');
+        if (centerImage) {
+            centerImage.addEventListener('click', function() {
+                const textBoxes = container.querySelectorAll('.approach-text-box');
+                textBoxes.forEach(box => box.classList.remove('active'));
+                setTimeout(() => {
+                    textBoxes.forEach((box, index) => {
+                        setTimeout(() => box.classList.add('active'), index * 100);
+                    });
+                }, 50);
             });
         }
-
-        // Initial call
-        handleResize();
-        
-        // Listen for resize events
-        window.addEventListener('resize', handleResize);
     });
+
+    // Handle window resize
+    function handleResize() {
+        const animationElements = document.querySelectorAll('.slide-in');
+        animationElements.forEach(el => {
+            if (window.innerWidth <= 768) {
+                el.style.animationDuration = '0.6s';
+            } else {
+                el.style.animationDuration = '0.8s';
+            }
+        });
+    }
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+});
 </script>
 
 </body>
