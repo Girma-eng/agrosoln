@@ -41,7 +41,7 @@
             color: var(--text-color);
         }
         
-        .slide-container {
+        .slide-container-1 {
             width: 100vw;
             height: 100vh;
             overflow: hidden;
@@ -2872,9 +2872,9 @@ p.intro {
         }
         
         .section-content-context {
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             line-height: 1.9;
-            color: var(--text);
+            color: white;
             margin-bottom: 30px;
             position: relative;
             padding-left: 20px;
@@ -3147,6 +3147,307 @@ p.intro {
                 columns: 1;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        .two-columns-overlap {
+                        display: grid;
+                        grid-template-columns: 20% 80%; /* 30/70 ratio */
+                        position: relative;
+                        padding: 40px;
+                        min-height: 500px; /* Match image height */
+                    }
+
+
+
+
+
+
+
+
+
+
+                    /* Image Column (overlaps behind) */
+                    .image-2-content {
+                            position: absolute;
+                            right: 0;
+                            width: 85%; /* Custom overlap width */
+                            height: 100%;
+                            z-index: -1;
+                            display: flex;
+                            align-items: center;
+                            overflow: hidden;
+                        }
+
+                        .image-2-content img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain; /* Fill container while maintaining aspect ratio */
+                            object-position: center;
+                        }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+                .two-columns-overlap {
+                    grid-template-columns: 1fr;
+                    min-height: auto;
+                }
+                
+                .image-2-content {
+                    position: relative;
+                    width: 100%;
+                    height: 300px; /* Fixed mobile height */
+                    margin-top: 20px;
+                }
+                    }
+                .text-2-content {
+                    padding: 20px;
+                    
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    .chart {
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        gap: 20px;
+                        height: 400px;
+                        margin-bottom: 10px;
+                        position: relative;
+                        width: 1500px;
+                        }
+
+    .bar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 185px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .money-value {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .bar {
+      width: 130px;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      margin-bottom: 10px;
+      height: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: height 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .bar:hover::after {
+      opacity: 1;
+    }
+
+    .bar[data-value="800"] { background: linear-gradient(180deg, #81C784, #4CAF50); --target-height: 40px; }
+    .bar[data-value="2800"] { background: linear-gradient(180deg, #64B5F6, #1976D2); --target-height: 120px; }
+    .bar[data-value="3640"] { background: linear-gradient(180deg, #BA68C8, #7B1FA2); --target-height: 155px; }
+    .bar[data-value="4550"] { background: linear-gradient(180deg, #FFD54F, #FFA000); --target-height: 190px; }
+    .bar[data-value="6825"] { background: linear-gradient(180deg, #FF8A65, #E64A19); --target-height: 270px; }
+    .bar[data-value="8530"] { background: linear-gradient(180deg, #4DB6AC, #00796B); --target-height: 320px; }
+   
+    .bar-label-1 {
+      position: absolute;
+      bottom: -25px;
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+    }
+    .row-names {
+      position: absolute;
+      left: 200px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: right;
+      transform: translateX(-140px);
+    }
+    
+    .labels-cont-pad {
+       margin-bottom: 8px;
+    }
+    .labels-cont {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 3px;
+    }
+
+    .label-cont-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 185px;
+      font-size: 15px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .label-cont-group div {
+      margin-bottom: 8px;
+    }
+
+    .label-cont-group div:first-child {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .label-cont-group div:nth-child(2) {
+      font-weight: bold;
+      color: #222;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .container-cont {
+      position: relative;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transform: scale(0.98);
+      transition: all 0.6s ease;
+    }
+
+    .container-cont.active {
+      transform: scale(1);
+    }
+
+    .income-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: #E53935;
+      width: 0;
+      transition: width 3s ease-in-out;
+      z-index: 10;
+    }
+
+    .income-growth {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2E7D32;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease 2s;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #f00;
+      opacity: 0;
+      z-index: 20;
+    }
+
+    .total-highlight {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+
+    .bar-container.total:hover .total-highlight {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .progress-arrow {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      opacity: 0;
+      transition: opacity 1s ease 2.5s;
+    }
+
+    .progress-arrow svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
     </style>
        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -3412,7 +3713,7 @@ p.intro {
                                     </div>
                     </div>
 
-                    <!---------------------------- Slide 3: The Context-2 -->
+                    <!---------------------------- Slide 4: The Context-2 -->
                     <div class="slide">
                         <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
                        
@@ -3431,25 +3732,24 @@ p.intro {
                                 
                                     <div class="text-column" style="flex: 0 0 50%;">
                                         <h2 class="section-title-context">Smallholder Farmers are the Front Line…</h2>
-                                        <p class="section-content-context" style="color: white;">
+                                        <p class="section-content-context">
                                             Smallholder farmers are the <strong>foundation of Africa's food system</strong> —yet they're the 
                                             <span style="background-color: #c09515; padding: 2px 5px;">least supported</span>. They're expected to 
-                                            grow food for the continent with <span style="border-bottom: 2px dashed var(--secondary);">no infrastructure</span>, 
-                                            <span style="border-bottom: 2px dashed var(--secondary);">no finance</span>, 
-                                            <span style="border-bottom: 2px dashed var(--secondary);">no market visibility</span>, 
-                                            and <span style="border-bottom: 2px dashed var(--secondary);">no reliable services</span>.
+                                            grow food for the continent with <span style="border-bottom: 5px dashed var(--secondary);">no infrastructure</span>, 
+                                            <span style="border-bottom: 5px dashed var(--secondary);">no finance</span>, 
+                                            <span style="border-bottom: 5px dashed var(--secondary);">no market visibility</span>, 
+                                            and <span style="border-bottom: 5px dashed var(--secondary);">no reliable services</span>.
                                         </p>
                                         
                                         <div class="highlight-box">
-                                            This situation results from structural problems that create a <strong>vicious cycle</strong> of 
-                                            challenges for smallholder farmers across Africa.
+                                            This as a result of <strong>various structural problems and their effects </strong> 
                                         </div>
                                         
                                         <ul class="problem-list-context">
-                                            <li><strong>Manual farming</strong> <span class="arrow">→</span> Chronic low productivity</li>
-                                            <li><strong>Informal markets</strong> <span class="arrow">→</span> Volatile, unstable prices</li>
-                                            <li><strong>No access to finance</strong> <span class="arrow">→</span> No capacity to upgrade or grow</li>
-                                            <li><strong>Highly climate-exposed</strong> <span class="arrow">→</span> No safety buffers</li>
+                                            <li><strong>Manual farming</strong> <span class="arrow">→</span> Low productivity</li>
+                                            <li><strong>Informal markets</strong> <span class="arrow">→</span> Unstable prices</li>
+                                            <li><strong>No access to finance</strong> <span class="arrow">→</span> No way to upgrade/grow</li>
+                                            <li><strong>Highly climate-exposed</strong> <span class="arrow">→</span> No buffers</li>
                                         </ul>
                                         
                                         <div class="conclusion">
@@ -3460,7 +3760,7 @@ p.intro {
                             </div>
                         </div>
                     </div>
-                    <!---------------------------- Slide 4: The Context-3 -->
+                    <!---------------------------- Slide 5: The Context-3 -->
                     
                     <div class="slide">
                         <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
@@ -3479,7 +3779,8 @@ p.intro {
                                         <p class="section-content-context" style="color: white;">
                                                 The supply chain of actors meant to support these farmers — mechanisation service providers, 
                                                 input distributors, aggregators, buyers — are <strong>fragmented, undercapitalised</strong>, 
-                                                and operating without standardisation or scale.
+                                                and operating without standardisation or scale. They also face structural problems that limit their 
+                                                ability to create impact and support the system:
                                             </p>
                                             
                                             <ul class="problem-list-context">
@@ -3488,13 +3789,13 @@ p.intro {
                                                     Primarily informal and often donor-dependent with no sustainable business models</li>
                                             
                                                     <li><strong>No interoperable platform</strong><span class="arrow">→</span>
-                                                    Lack of standard business models prevents scaling across regions</li>
+                                                    Lack of standard business model to scale</li>
                                             
                                                     <li><strong>No risk pooling</strong><span class="arrow">→</span>
-                                                    No systemic way to share risk or create collective infrastructure</li>
+                                                    No systemic way to pool risk or create shared infrastructure</li>
                                             
                                                     <li><strong>Ad hoc markets</strong><span class="arrow">→</span>
-                                                    Spotty market access and inconsistent aggregation systems</li>
+                                                        Markets are spotty, and aggregation is ad hoc</li>
                                             </ul>
                                             
                                             <div class="conclusion">
@@ -3515,7 +3816,7 @@ p.intro {
                             </div>
                     </div>
                     
-                    <!---------------------------- Slide 5: The Context-4 -->
+                    <!---------------------------- Slide 6: The Context-4 -->
                     <div class="slide">
                         <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
                     <div class="slide-content-challenge">
@@ -3568,7 +3869,7 @@ p.intro {
                             </div>
                     </div>
                 
-                    <!-- Slide 1: Farmhub Model Overview -->
+                    <!-- Slide 7: Farmhub Model Overview -->
                     <div class="slide">
                         <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
                         <div class="slide-content-challenge">
@@ -3613,7 +3914,7 @@ p.intro {
                     </div>
                     </div>
                     
-                    <!-- Slide 2: Level 1 - Field Station -->
+                    <!-- Slide 8: Level 1 - Field Station -->
                     <div class="slide">
                         <div class="slide-content-challenge">
                             <h2 class="top-us-title-1" style="color: white;">
@@ -3622,7 +3923,7 @@ p.intro {
                         <div class="two-column-wrapper">
                             <div class="text-column-new">
                                 <div class="slide-content-new">
-                                    <h1 class="ection-title-context">Level 1: Farmhub Field Station</h1>
+                                    <h1 class="section-title-context">Level 1: Farmhub Field Station</h1>
                                     <h2 class="slide-subtitle">Structuring & Servicing the Last Mile</h2>
                                     
                                     <p>A Farmhub Field Station is a local service hub that provides smallholder farmers with access to the core infrastructure they need to close the yield, income, and market gap.</p>
@@ -3655,9 +3956,9 @@ p.intro {
                             </div>
                         </div>
                     </div>
-                  </div>
+                   </div>
                     
-                    <!-- Slide 3: Level 2 - Ops Centre -->
+                    <!-- Slide 9: Level 2 - Ops Centre -->
                     <div class="slide">
                         <div class="slide-content-challenge">
                             <h2 class="top-us-title-1" style="color: white;">
@@ -3666,7 +3967,7 @@ p.intro {
                         <div class="two-column-wrapper">
                             <div class="text-column-new">
                                 <div class="slide-content-new">
-                                    <h1 class="ection-title-context">Level 2: Farmhub Ops Centre</h1>
+                                    <h1 class="section-title-context">Level 2: Farmhub Ops Centre</h1>
                                     <h2 class="slide-subtitle">Coordinating Regional Operations</h2>
                                     
                                     <p>Farmhub Mission Control is the master franchise entity that oversees, enables, and standardises a network of Farmhub Field Stations across a region or country.</p>
@@ -3698,9 +3999,9 @@ p.intro {
                             </div>
                         </div>
                     </div>
-                </div>
+                   </div>
                     
-                    <!-- Slide 4: Level 3 - Mission Control -->
+                    <!-- Slide 10: Level 3 - Mission Control -->
                     <div class="slide">
                         <div class="slide-content-challenge">
                             <h2 class="top-us-title-1" style="color: white;">
@@ -3709,7 +4010,7 @@ p.intro {
                         <div class="two-column-wrapper">
                             <div class="text-column-new">
                                 <div class="slide-content-new">
-                                    <h1 class="ection-title-context">Level 3: Farmhub Mission Control</h1>
+                                    <h1 class="section-title-context">Level 3: Farmhub Mission Control</h1>
                                     <h2 class="slide-subtitle">Enabling System-wide Standardisation</h2>
                                     
                                     <p>Farmhub Infrastructure is the platform and backbone of the Farmhub system that manages shared, high-cost assets and protocols required for ecosystem scaling.</p>
@@ -3740,493 +4041,159 @@ p.intro {
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>
              
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div id="missionlab-comp2-slide" class="slide">
-
-                <div class="missionlab-overlay"></div> <!-- Transparent geometric overlay -->
-    
-                <div class="missionlab-content">
-                    <!-- Left Side: Text Section -->
-                    <div class="missionlab-text">
-                        <h3>The Implmentation Hands</h3>
-                        <h2> Component #2 - Farm Hubs</h2>
-                        <p class="systems-text">
-                            <span style="color: #27ae60; font-weight: 600;">Farm Hub's one-stop-shop model connects</span>  
-                            smallholder farmers with <span style="color: #e74c3c;">essential technologies,</span>, inputs <span style="color: #3498db;">digital tools</span>  resources
-                                    <span style="color: #f39c12;">By improving yields and livelihoods, our holistic approach 
-                                        empowers farmers to adopt regenerative and climate-smart 
-                                        techniques, ensuring long-term resilience and success in a 
-                                        rapidly changing agricultural landscape</span>
-                        </p>
+                   <!---------------------------- Slide 11: The Context-01 -->
+                   <div class="slide">
+                    <h1 style="text-align: left; color: white;">A 10X Transformation is Possible</h1>
+                    <h2 style="text-align: left; color: white;">Cumulative Uplift for the Smallholder Farmer</h2>
                     
-                        <ul>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Mechanization: </span>Full suite of affordable mechanisation services</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Inputs:</span>improved seeds, organic fertilisers, and bio pesticides</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;"><span style="color: green;font-weight: 600;">Digital Solutions:</span> to monitor farm productivity and equipment tracking</span>
-                            </li>
-                            <li class="systems-text">
-                                <span style="color: #27ae60;"><span style="color: green; font-weight: 600;">Training and advisory:</span>>Training and advisory services</span>
-                            </li>
-                        </ul>
-                    </div>
-    
-                    <!-- Right Side: Image Section -->
-                    <div class="missionlab-image">
-                        <img src="image_file/farmer_frontline_eco.jpg" alt="MissionLab Innovation">
-                    </div>
-                </div>
-    
-    
-                </div>
-         <!-------------------------- Slide 4: What we are for -->
-        <div class="slide bg-image" style="background-image: url('image_file/regen_2.jpg');">
-             
-             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-             <h2 class="top-us-title-1" style="color: white;">
-                What We Strive For?
-            </h2>
-          
-            <div class="slide-content-2">
-               
-                <h2 style="color: white;">We envision a world where rural communities achieve true food sovereignty and independence by fully transitioning to regenerative lifestyles 
-                    and systems - ensuring their resilience and empowering them to prosper for generations to come.</h2>
-            </div>
-        </div>
-
-        <!--------------------------- Slide 5: Vision Components -->
-        <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
-                        <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-                        <h2 class="top-us-title" style="color: white;">
-                            <span class="top-us-title-1">Vision Components</span>
-                        </h2>
-           <div class="slide-content-vision">
-                        <p class="solution-subtitle">The Transformation Ecosystem</p>
-                <div class="vision-container">
-                    <!-- Mission Labs Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🧠</div>
-                                    <div class="vision-card-title-container">
-                                        <h3>Mission Labs</h3>
-                                        <p>The Innovation Brain</p>
-                                    </div>
-                                    <div class="vision-toggle-icon">▼</div>
+                    <div class="container-cont">
+                      <div class="income-line"></div>
+                      <div class="income-growth">Income Growth: 10.6X</div>
+                      
+                      <div class="chart">
+                        <div class="bar-container">
+                          <div class="money-value">$800</div>
+                          <div class="bar" data-value="800"></div>
                         </div>
-                                <div class="vision-card-content">
-                                    <div class="vision-card-details">
-                                        <div class="vision-responsibilities">
-                                            <h4>Core Functions:</h4>
-                                            <ul>
-                                                <li><span class="vision-highlight">Research</span> advanced techniques</li>
-                                                <li><span class="vision-highlight">Develop</span> localized solutions</li>
-                                                <li><span class="vision-highlight">Create</span> training frameworks</li>
-                                            </ul>
-                                        </div>
-                                        <div class="vision-impact">
-                                            <h4>Impact Areas:</h4>
-                                            <div class="vision-impact-tags">
-                                                <span class="vision-tag productivity">Productivity</span>
-                                                <span class="vision-tag capacity">Capacity</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    </div>
-                    
-                    <!-- Farm Hubs Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🏭</div>
-                            <div class="vision-card-title-container">
-                                <h3>Farm Hubs</h3>
-                                <p>The Implementation Hands</p>
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <h4>Core Functions:</h4>
-                                    <ul>
-                                        <li><span class="vision-highlight">Deliver</span> technologies & inputs</li>
-                                        <li><span class="vision-highlight">Train</span> farmers in-field</li>
-                                        <li><span class="vision-highlight">Optimize</span> supply chains</li>
-                                    </ul>
-                                </div>
-                                <div class="vision-impact">
-                                    <h4>Impact Areas:</h4>
-                                    <div class="vision-impact-tags">
-                                        <span class="vision-tag supply">Supply</span>
-                                        <span class="vision-tag productivity">Productivity</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Regen Farms Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🌱</div>
-                            <div class="vision-card-title-container">
-                                <h3>Regen Farms</h3>
-                                <p>The Sustainable Heart</p>
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <h4>Core Functions:</h4>
-                                    <ul>
-                                        <li><span class="vision-highlight">Implement</span> proven methods</li>
-                                        <li><span class="vision-highlight">Regenerate</span> soil health</li>
-                                        <li><span class="vision-highlight">Provide</span> real-world feedback</li>
-                                    </ul>
-                                </div>
-                                <div class="vision-impact">
-                                    <h4>Impact Areas:</h4>
-                                    <div class="vision-impact-tags">
-                                        <span class="vision-tag productivity">Productivity</span>
-                                        <span class="vision-tag supply">Supply</span>
-                                        <span class="vision-tag capacity">Capacity</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Gap Visualization -->
-                <div class="vision-gap-section">
-                    <div class="vision-gap-arrow">↓</div>
-                    <div class="vision-gap-cards">
-                        <div class="vision-gap-card productivity">
-                            <h3>Productivity Gap</h3>
-                            <p style="color: #0f9b57;">Bridging yield and efficiency challenges</p>
-                        </div>
-                        <div class="vision-gap-card supply">
-                            <h3>Supply Gap</h3>
-                            <p style="color: #0f9b57;">Solving distribution and access issues</p>
-                        </div>
-                        <div class="vision-gap-card capacity">
-                            <h3>Capacity Gap</h3>
-                            <p style="color: #0f9b57;">Building skills and infrastructure</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!--------------------------- Slide 6: Farm Hub -->
-        <div class="slide" id="farmhub-title-slide" style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>   
-            <div class="title-container">
-                <div class="content-farmhub-title">
-                    <h1 style="color:white;">Farm Hub <span style="color: #ccd51d; font-weight: 600;">Ethiopia </span></h1>
-                    <p>Scaling access to Mechanization, Inputs, and Knowledge for Smallholders</p>
-                 
-                </div>
-               
-                <li class="mission-systems-text">
-                    <span>The Implementation Hand</span>
-                </li>
-            </div>
-        </div>  
-        
-        <!----------------------------------- Slide 7:About Us -->
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h2 class="top-us-title" style="color: white;">
-                <span class="top-us-title-1">ABOUT US</span>
-            </h2>
-          
-            <div class="slide-content-aboutus">
-                <div class="about-container">
-                    <!-- Image Section -->
-                    <div class="about-image">
-                        <img src="image_file/farmhub_model.jpg" alt="Farm Hub Model">
-                    </div>
-                    
-                    <!-- Text Section -->
-                    <div class="about-text">
-                        <div class="about-highlight">
-                            <span class="about-highlight-title">Farm Hub Ethiopia</span>
-                            is an agricultural company established in 2023 with a core focus on improving crop production and empowering smallholder farmers</span>.
-                            <span class="about-highlight-blue">With a commitment to innovation and sustainability,</span>
-                            we have been actively engaged in providing agricultural solutions and services tailored to the needs of
-                            <span class="about-highlight-orange">smallholder farmers</span>.
-                            As the hands-on implementation partner in the agricultural ecosystem, we translate innovations from research labs (like Mission Labs) into practical, farmer-ready solutions.
-                        </div>
-                        
-                        <h3 style="color: white;">Our Role in the System:</h3>
-                        <div class="about-role">
-                           <div class="about-role-text">
-                                 <span style="color: green;"> We are the implementation engine—<span class="about-role-emphasis">delivering technologies, inputs and training</span> directly to farmers' fields.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-  
-        <!----------------------------------- Slide 8: Challenges Farm Hub Addresses -->
-  
-
-        <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h1 class="top-us-title" style="color: white;">
-                <span class="top-us-title-1">Challenges Farm Hub Addresses</span>
-            </h1>
-           
-            <div class="slide-content-challenge">
-                <div class="about-container">
-                    <!-- Image Section -->
-                    <div class="about-image">
-                        <img src="image_file/woman_farmer.jpg" alt="Farm Hub Model">
-                    </div>
-                    
-                    <!-- Text Section -->
-                    <div class="about-text-1">
-                        <div class="slide-content-challenge">
-                        <div class="challenges-container">
-                              <!-- Challenge Cards -->
-                              <div class="challenges-card">
-                                  <div class="challenges-card-header">
-                                      <div class="challenges-card-icon">🔍</div>
-                                      <h3>Low Mechanization</h3>
-                                  </div>
-                                  <div class="challenges-card-content">
-                                      <p>Less than 1% of Ethiopian farms use tractors, with 85% of land tilled by hand, severely limiting productivity.</p>
-                                  </div>
-                              </div>
-                              
-                              <div class="challenges-card">
-                                  <div class="challenges-card-header">
-                                      <div class="challenges-card-icon">⛓️</div>
-                                      <h3>Fragmented Supply Chains</h3>
-                                  </div>
-                                  <div class="challenges-card-content">
-                                      <p>Critical inputs and equipment often don't reach smallholder farmers due to weak distribution networks and high logistics costs.</p>
-                                  </div>
-                              </div>
-                              
-                              <div class="challenges-card">
-                                  <div class="challenges-card-header">
-                                      <div class="challenges-card-icon">📚</div>
-                                      <h3>Knowledge Gaps</h3>
-                                  </div>
-                                  <div class="challenges-card-content">
-                                      <p>Lack of access to training on machinery use and maintenance, reducing adoption rates. Lack of knowledge on agronomic practices and sustainability.</p>
-                                  </div>
-                              </div>
-                          </div>
+                        <div class="bar-container">
+                          <div class="money-value">$2,800</div>
+                          <div class="bar" data-value="2800"></div>
                           
-                          <!-- Emphasis Section -->
-                          <div class="challenges-emphasis">
-                              <div class="challenges-emphasis-icon">📊</div>
-                              <div class="challenges-emphasis-content">
-                                  <h3>The Mechanization Imperative</h3>
-                                  <p style="color: white;">Farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). Farm Hub's short-term focus on scalable mechanization solutions can immediately boost productivity by 30%-50%x while solving affordability barriers.</p>
-                              </div>
+                        </div>
+                        <div class="bar-container">
+                          <div class="money-value">$3,640</div>
+                          <div class="bar" data-value="3640"></div>
+                         
+                        </div>
+                        <div class="bar-container">
+                          <div class="money-value">$4,550</div>
+                          <div class="bar" data-value="4550"></div>
+                          
+                        </div>
+                        <div class="bar-container">
+                          <div class="money-value">$6,825</div>
+                          <div class="bar" data-value="6825"></div>
+                          
+                        </div>
+                        <div class="bar-container">
+                          <div class="money-value">$8,530</div>
+                          <div class="bar" data-value="8530"></div>
                           </div>
+                   </div>
+                  
+                      <div class="labels-cont">
+                        <div class="label-cont-group">
+                          <div style="font-size:1.6rem;">1.0x</div>
+                          <div> Current Annual Yield / Baseline Income</div>
+                          <div>--</div>
+                          <div> Current smallholder farmer net income/year</div>
+                        </div>
+                        <div class="label-cont-group">
+                          <div style="font-size:1.6rem;">3.5x</div>
+                          <div>Mechanisation + Agronomy</div>
+                          <div>Yield & Labour productivity</div>
+                          <div>Boosts productivity to ~7t/ha; labour efficiency improves</div>
+                        </div>
+                        <div class="label-cont-group">
+                          <div style="font-size:1.6rem;">1.3x</div>
+                          <div>Market linkage & aggregation</div>
+                          <div>Better prices</div>
+                          <div> Aggregated output sold at better prices; fewer middlemen</div>
+                        </div>
+                        <div class="label-cont-group">
+                          <div style="font-size:1.6rem;">1.25x</div>
+                          <div> Reduced input costs + lower post harvest losses</div>
+                          <div> Cost/margin efficiency</div>
+                          <div> Buying inputs in bulk; waste & loss reduction improve net earnings</div>
+                        </div>
+                        <div class="label-cont-group">
+                          <div style="font-size:1.6rem;">1.5x</div>
+                          <div>Access to capital + tools</div>
+                          <div>Expanded capacity</div>
+                          <div> Enables second crop cycle, more land, better inputs, tech leverage</div>
+                        </div>
+                        <div class="label-cont-group">
+                          <div style="font-size:1.6rem;">1.25x</div>
+                          <div> Digital services + climate insurance, etc</div>
+                          <div> Risk reduction /continuity</div>
+                          <div> Income floor rises; volatility dampened; longer-term stability
+                            </div>
+                        </div>
+                       
+                        <div class="row-names">
+                            <div class="labels-cont-pad">Multiplier</div>
+                            <div class="labels-cont-pad">Intervention</div>
+                            <div class="labels-cont-pad">Impact</div>
+                            <div class="labels-cont-pad">Explanation</div>
+                            </div>
                       </div>
+                      
                     </div>
-                </div>
-            </div>
-        </div>
-       
-      
+                  </div>
+                  
+             
 
-        <!---------------------------------- Slide 11: Our Approach -->
-        <div class="slide bg-image" style="background-image: url('image_file/regen_14.jpg');">
-       
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h1 class="top-us-title" style="color: white;">
-                <span class="top-us-title-1">OUR APPROACH</span>
-            </h1>
-        
-            <div class="slide-content-3">
-                <div class="approach-grid">
-                    <div class="approach-card">
-                        <div class="card-number">1</div>
-                        <h2>Holistic Systems Solution</h2>
-                        <p>A one-stop-shop model connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs - the visible nodes of our transformative system - ensuring local scalability by embedding solutions within existing farmer networks and landscapes.</p>
+
+
+
+
+
+
+
+
+
+
+
+                    <!---------------------------- Slide 11: The Context-01 -->
+                <div class="slide" id="two-columns-2-slide" style="background: white;">
+                    <h2 class="top-us-title-1" style="color: rgb(12, 12, 12);">
+                        <span>01-The Context</span>
+                    </h2>
+                    <h1 class="section-title-context" style="color: black;">But we need a new System Vision & Strategy</h1>
+                        <div class="slide-content-new"></div>    
+                        
+                    <div class="two-columns-overlap"></div>
+                  
+                    <div class="image-2-content">
+                        <img src="image_file/new_system_vision.jpg" alt="Agricultural Vision">
                     </div>
-                    <div class="approach-card">
-                        <div class="card-number">2</div>
-                        <h2>Closed-Loop Innovation</h2>
-                        <p>Our ecosystem links Mission Labs (R&D), Farm Hubs (Delivery) and Regen Farms (Adoption) in continuous feedback cycles that refine solutions to local contexts.</p>
+                </div> 
+
+             
+
+
+
+
+
+
+
+
+
+
+
+                <div class="slide" id="title-slide" style="background-color: black;">
+                    <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
+                    <h1>The System Vision</h1>
+                    <h1>What must be true?</h1>
+
+                        <h1>02</h1>
+                       
                     </div>
-                    <div class="approach-card">
-                        <div class="card-number">3</div>
-                        <h2>Sustainable/Market led Diffusion</h2>
-                        <p>Hubs operate as next-gen extension centers, spreading regenerative practices through farmer-to-farmer learning and pay-per-use services that ensure long-term operation.</p>
-                    </div>
-                    <div class="approach-card">
-                        <div class="card-number">4</div>
-                        <h2>Systemic Impact</h2>
-                        <p>By combining technology transfer, collective bargaining and market access, we create a virtuous cycle that boosts yields, livelihoods and food sovereignty across Africa.</p>
+                
+                    <div class="footer" style="text-align: center; bottom: 5px; left: 5px;">
+                        
                     </div>
                 </div>
-            </div>
-        </div>
-       <!-------------------------------------- Slide 12: Our Comprehensive Services -->
-        <div class="slide bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <h1 class="top-us-title" style="color: white;">
-                <span class="top-us-title-1">Our Comprehensive Services</span>
-            </h1>
-         
-           
-            <div class="slide-content-3">
-                
-                <p class="services-subtitle">End-to-end solutions transforming Ethiopian agriculture</p>
-                
-                <div class="services-grid">
-                    <!-- Mechanization Services -->
-                    <div class="service-card" onclick="toggleServiceDetails(this)">
-                        <div class="service-icon">🚜</div>
-                        <h2>Mechanization Services</h2>
-                        <div class="service-highlight">Pay-per-use access to farm equipment</div>
-                        <div class="service-details">
-                            <ul>
-                                <li><strong>Land Preparartion Service</strong> (5000-8000 ETB/ha)</li>
-                                <li><strong>Planting</strong> (6000-8000 ETB/ha)</li>
-                                <li><strong>Potato Planting</strong> 6000-8000 ETB/ha</li>
-                                <li><strong>Laser land leb=velling</strong> (8000-10000 ETB/ha)</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <div class="stat-value">3-5x</div>
-                                    <div class="stat-label">Productivity Increase</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-value">45%- 60%</div>
-                                    <div class="stat-label">Cost Reduction</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Agricultural Inputs -->
-                    <div class="service-card" onclick="toggleServiceDetails(this)">
-                        <div class="service-icon">🌱</div>
-                        <h2>Quality Inputs</h2>
-                        <div class="service-highlight">Certified seeds, fertilizers & crop protection</div>
-                        <div class="service-details">
-                            <ul>
-                                <li><strong>Improved seeds</strong> (drought-resistant varieties)</li>
-                                <li><strong>Organic fertilizers</strong> (improve soil health)</li>
-                                <li><strong>Biocontrol agents</strong> (reduce chemical use)</li>
-                                
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <div class="stat-value">30-50%</div>
-                                    <div class="stat-label">Yield Increase</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-value">40%</div>
-                                    <div class="stat-label">Input Cost Savings</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Digital Solutions -->
-                    <div class="service-card" onclick="toggleServiceDetails(this)">
-                        <div class="service-icon">📱</div>
-                        <h2>Digital Solutions</h2>
-                        <div class="service-highlight">LastMile & XFarm- Your farming companion app</div>
-                        <div class="service-details">
-                            <ul>
-                                <li><strong>Equipment booking</strong> (real-time availability)</li>
-                                <li><strong>Market prices</strong> (updated daily)</li>
-                                <li><strong>Weather alerts</strong> (local forecasts)</li>
-                                <li><strong>Pest diagnosis</strong> (AI-powered detection)</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <div class="stat-value">24/7</div>
-                                    <div class="stat-label">Access</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-value">???+</div>
-                                    <div class="stat-label">Active Users</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Advisory Services -->
-                    <div class="service-card" onclick="toggleServiceDetails(this)">
-                        <div class="service-icon">👩‍🌾</div>
-                        <h2>Advisory Services</h2>
-                        <div class="service-highlight">Expert guidance for every farming challenge</div>
-                        <div class="service-details">
-                            <ul>
-                                <li><strong>Regenerative practices</strong> (soil conservation)</li>
-                                <li><strong>Crop planning</strong> (optimized rotations)</li>
-                                <li><strong>Equipment training</strong> (hands-on sessions)</li>
-                                <li><strong>Financial literacy</strong> (profitability focus)</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <div class="stat-value">??+</div>
-                                    <div class="stat-label">Trained Farmers</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-value">??</div>
-                                    <div class="stat-label">Satisfaction Rate</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="service-cta">
-                    <p>All services available through our <strong>Farm Hub Centers</strong> <strong></strong></p>
-                    <button class="cta-button">Contact Our Team Today</button>
-                </div>
-            </div>
-        </div>
-     
-     
-        <!---------------------------------- Slide 15: Scaling pathway -->
-    
- 
- 
+
 
 
 
 
           <!-- Additional slides  -->
-</div>
+                    </div>
     
     
    
@@ -4284,34 +4251,20 @@ p.intro {
 
 
 
-        <!----------------------------------------------------- Vision Components ---------------------------------------------------------->
-      
-<script>
-    function toggleVisionCard(card) {
-        const content = card.querySelector('.vision-card-content');
-        const icon = card.querySelector('.vision-toggle-icon');
-        
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            icon.style.transform = 'rotate(0deg)';
-        } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            icon.style.transform = 'rotate(180deg)';
-        }
-    }
-    
-    // Open all cards by default on desktop
-    window.addEventListener('load', function() {
-        if (window.innerWidth > 768) {
-            document.querySelectorAll('.vision-card-content').forEach(content => {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            });
-            document.querySelectorAll('.vision-toggle-icon').forEach(icon => {
-                icon.style.transform = 'rotate(180deg)';
-            });
-        }
-    });
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
@@ -4462,186 +4415,91 @@ p.intro {
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
-    // Category filtering
-    const tabs = document.querySelectorAll('.category-tab');
-    const cards = document.querySelectorAll('.machinery-card');
-    
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Update active tab
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      const bars = document.querySelectorAll('.bar');
+      const barContainers = document.querySelectorAll('.bar-container');
+      const labelGroups = document.querySelectorAll('.label-cont-group');
+      const incomeLine = document.querySelector('.income-line');
+      const incomeGrowth = document.querySelector('.income-growth');
+      const progressArrow = document.querySelector('.progress-arrow');
+      const totalHighlight = document.querySelector('.total-highlight');
+      
+      // Set initial state (collapsed bars)
+      bars.forEach(bar => {
+        bar.style.height = '0';
+      });
+  
+      // Start animation immediately
+      startAnimation();
+      
+      function startAnimation() {
+        // Animate bars one by one
+        barContainers.forEach((container, index) => {
+          setTimeout(() => {
+            container.classList.add('visible');
+            const bar = container.querySelector('.bar');
+            const targetHeight = getComputedStyle(bar).getPropertyValue('--target-height');
+            bar.style.height = targetHeight;
             
-            // Filter cards
-            const category = tab.dataset.category;
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            // Special effects for total column
+            if (container.classList.contains('total')) {
+              setTimeout(() => {
+                totalHighlight.style.opacity = '1';
+                totalHighlight.style.transform = 'translate(-50%, -50%) scale(1)';
+                createConfetti();
+                incomeGrowth.classList.add('visible');
+                progressArrow.classList.add('visible');
+              }, 300);
+            }
+          }, index * 300);
         });
-    });
-    
-    // Toggle stats panel
-    const toggleBtn = document.getElementById('toggleStats');
-    const statsPanel = document.querySelector('.floating-stats');
-    
-    toggleBtn.addEventListener('click', () => {
-        statsPanel.classList.toggle('show');
-    });
-    
-    // Card click animation
-    cards.forEach(card => {
-        card.addEventListener('click', function() {
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
+        
+        // Animate labels
+        labelGroups.forEach((group, index) => {
+          setTimeout(() => {
+            group.classList.add('visible');
+          }, index * 300 + 150);
         });
-    });
-    
-    // === NEW CODE: Show reminder only when slide is focused ===
-    function showTabReminder() {
-        const reminder = document.querySelector('.tab-reminder');
-        reminder.style.display = 'flex';
-        reminder.style.opacity = '1'; // Reset opacity
+        
+        // Animate income line
         setTimeout(() => {
-            reminder.style.opacity = '0'; // Fade out after 5 sec
-        }, 5000);
-    }
-
-    // If using Reveal.js:
-    if (typeof Reveal !== 'undefined') {
-        Reveal.addEventListener('slidechanged', function(event) {
-            if (event.currentSlide.id === 'mechanization-slide') {
-                showTabReminder();
-            }
-        });
-    }
-    // If manually controlling slides:
-    // Call showTabReminder() when navigating to this slide
-</script>
-
-
-<script>
-    function toggleServiceDetails(card) {
-        card.classList.toggle('active');
+          incomeLine.style.width = '100%';
+        }, 1800);
+      }
+      
+      // Confetti effect
+      function createConfetti() {
+        const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff', '#FFD700'];
+        const container = document.querySelector('.container-cont');
         
-        // Close other open cards if needed
-        if (card.classList.contains('active')) {
-            document.querySelectorAll('.service-card').forEach(otherCard => {
-                if (otherCard !== card && otherCard.classList.contains('active')) {
-                    otherCard.classList.remove('active');
-                }
-            });
+        for (let i = 0; i < 100; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = `${Math.random() * 100}%`;
+          confetti.style.top = `${-10 + Math.random() * 20}%`;
+          confetti.style.width = `${5 + Math.random() * 5}px`;
+          confetti.style.height = `${5 + Math.random() * 5}px`;
+          confetti.style.position = 'absolute';
+          confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+          confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+          
+          container.appendChild(confetti);
+          
+          // Animate confetti
+          setTimeout(() => {
+            confetti.style.transition = `all ${1 + Math.random() * 2}s ease-out`;
+            confetti.style.opacity = '1';
+            confetti.style.transform = `translateY(${500 + Math.random() * 200}px) rotate(${Math.random() * 360}deg)`;
+            
+            // Remove after animation
+            setTimeout(() => {
+              confetti.remove();
+            }, 3000);
+          }, 0);
         }
-    }
-    </script>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    // Animation for timeline items
-    document.addEventListener('DOMContentLoaded', function() {
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        function checkVisibility() {
-            timelineItems.forEach(item => {
-                const itemTop = item.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (itemTop < windowHeight * 0.75) {
-                    item.classList.add('visible');
-                }
-            });
-        }
-        
-        // Initial check
-        checkVisibility();
-        
-        // Check on scroll
-        window.addEventListener('scroll', checkVisibility);
-    });
-</script>
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get all tab buttons
-        const tabs = document.querySelectorAll('.category-tab');
-        
-        // Get all intro sections
-        const intros = document.querySelectorAll('.category-intro');
-        
-        // Get all machinery cards
-        const cards = document.querySelectorAll('.machinery-card');
-        
-        // Toggle stats panel
-        const statsPanel = document.querySelector('.floating-stats');
-        const toggleStatsBtn = document.getElementById('toggleStats');
-        
-        toggleStatsBtn.addEventListener('click', function() {
-            statsPanel.classList.toggle('show');
-        });
-        
-        // Add click event listeners to each tab
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Get the category from data attribute
-                const category = this.getAttribute('data-category');
-                
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Hide all intros
-                intros.forEach(intro => intro.classList.remove('active'));
-                
-                // Show the intro for the selected category
-                document.getElementById(`${category}_intro`).classList.add('active');
-                
-                // Hide all cards
-                cards.forEach(card => card.classList.remove('active'));
-                
-                // Show cards for the selected category
-                document.querySelectorAll(`.machinery-card[data-category="${category}"]`).forEach(card => {
-                    card.classList.add('active');
-                });
-            });
-        });
-        
-        // Initialize with only tech_sourcing content visible
-        document.querySelector('.category-tab[data-category="tech_sourcing"]').click();
+      }
     });
 </script>
 
@@ -4653,488 +4511,5 @@ p.intro {
 
 
 
-   <!----------------------------------------------------- Script: Photo gallery ---------------------------------------------------------->
-    
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Sample data for the gallery
-            const galleryItems = [
-                {
-                    image: 'image_file/super_seeder_1.jpg',
-                    title: 'Super Seeder',
-                    description: 'No-till seeder'
-                },
-                {
-                    image: 'image_file/demo_2.jpg',
-                    title: 'Technology Demo',
-                    description: 'Demonstration'
-                },
-                {
-                    image: 'image_file/demo_3.jpg',
-                    title: 'Technology Demo',
-                    description: 'Technology Demo'
-                },
-                {
-                    image: 'image_file/partnership_6.jpg',
-                    title: 'Technology Demo',
-                    description: 'Partnership'
-                },
-                {
-                    image: 'image_file/partnership_4.jpg',
-                    title: 'Partnership',
-                    description: 'Partnership'
-                },
-                {
-                    image: 'image_file/wheat_field_2.jpg',
-                    title: 'Wheat field',
-                    description: 'Wheat field'
-                },
-                
-                       {
-                    image: 'image_file/potato_field.jpg',
-                    title: 'Potato field',
-                    description: 'Potato field'
-                },
-                       {
-                    image: 'image_file/maize_field.jpg',
-                    title: 'Maize field',
-                    description: 'Maize field'
-                }
-     
-            ];
-            
-            // Carousel setup
-            const carousel = document.getElementById('carousel');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            
-            let currentIndex = 0;
-            let itemCount = galleryItems.length;
-            let items = [];
-            
-            // Create carousel items
-            galleryItems.forEach((item, index) => {
-                const carouselItem = document.createElement('div');
-                carouselItem.className = 'carousel-item';
-                
-                const img = document.createElement('img');
-                img.src = item.image;
-                img.alt = item.title;
-                
-                const caption = document.createElement('div');
-                caption.className = 'carousel-caption';
-                caption.innerHTML = `<h3>${item.title}</h3><p>${item.description}</p>`;
-                
-                carouselItem.appendChild(img);
-                carouselItem.appendChild(caption);
-                carousel.appendChild(carouselItem);
-                
-                items.push(carouselItem);
-            });
-            
-            // Position carousel items in 3D space
-            function positionItems() {
-                const radius = Math.min(500, window.innerWidth * 0.8);
-                const angle = (2 * Math.PI) / itemCount;
-                
-                items.forEach((item, i) => {
-                    const activeAngle = angle * i + currentIndex * angle;
-                    const x = radius * Math.sin(activeAngle);
-                    const z = radius * Math.cos(activeAngle) - radius;
-                    
-                    item.style.transform = `translate(-50%, -50%) translateX(${x}px) translateZ(${z}px) rotateY(${-activeAngle}rad)`;
-                    item.style.opacity = z > -radius/2 ? '1' : '0.6';
-                    item.style.zIndex = Math.floor(z + radius);
-                });
-            }
-            
-            // Navigation
-            function goToNext() {
-                currentIndex = (currentIndex + 1) % itemCount;
-                positionItems();
-            }
-            
-            function goToPrev() {
-                currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-                positionItems();
-            }
-            
-            nextBtn.addEventListener('click', goToNext);
-            prevBtn.addEventListener('click', goToPrev);
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight') goToNext();
-                if (e.key === 'ArrowLeft') goToPrev();
-            });
-            
-            // Swipe support for touch devices
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            carousel.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, false);
-            
-            carousel.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, false);
-            
-            function handleSwipe() {
-                if (touchEndX < touchStartX - 50) goToNext();
-                if (touchEndX > touchStartX + 50) goToPrev();
-            }
-            
-            // Create particle background
-            function createParticles() {
-                const particlesContainer = document.getElementById('particles');
-                const particleCount = 20;
-                
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    
-                    const size = Math.random() * 10 + 5;
-                    const posX = Math.random() * 100;
-                    const posY = Math.random() * 100;
-                    const delay = Math.random() * 5;
-                    const duration = Math.random() * 10 + 10;
-                    
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${posX}%`;
-                    particle.style.top = `${posY}%`;
-                    particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
-                    
-                    particlesContainer.appendChild(particle);
-                }
-            }
-            
-            // Add floating animation to CSS
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes float {
-                    0%, 100% {
-                        transform: translateY(0) translateX(0);
-                    }
-                    25% {
-                        transform: translateY(-20px) translateX(10px);
-                    }
-                    50% {
-                        transform: translateY(0) translateX(20px);
-                    }
-                    75% {
-                        transform: translateY(-10px) translateX(-10px);
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // Initialize
-            positionItems();
-            createParticles();
-            
-            // Auto-rotate (optional)
-            let autoRotate = setInterval(goToNext, 4000);
-            
-            carousel.addEventListener('mouseenter', () => {
-                clearInterval(autoRotate);
-            });
-            
-            carousel.addEventListener('mouseleave', () => {
-                autoRotate = setInterval(goToNext, 4000);
-            });
-        });
-    </script>
-    
-         <!----------------------------------------------------- Script: Team ---------------------------------------------------------->
-         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Key Personnel data
-                const keyPersonnel = [
-                    {
-                        name: "Girma Moges (PhD)",
-                        title: "Manager",
-                        photo: "image_file/photo_girma.jpg",
-                        qualifications: "PhD in Agricultural Mechanization Engineering from Bahirdar University<br>M.Sc. from Wageningen University",
-                        bio: "Dr. Moges brings decades of experience in agricultural engineering and mechanization. His research and practical implementations have revolutionized farming techniques in the region, focusing on sustainable mechanization solutions that increase productivity while reducing environmental impact.",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    },
-                    {
-                        name: "Alemayhu Girma",
-                        title: "Field Manager",
-                        photo: "image_file/alemayhu.jpg",
-                        qualifications: "Master's in Agricultural Mechanization Engineering<br>6+ years at Ethiopian Institute of Agricultural Research (EIAR)",
-                        bio: "Alemayhu specializes in developing and testing agricultural machinery suitable for local conditions. His hands-on approach to field operations ensures that our mechanization solutions are practical, efficient, and tailored to the needs of smallholder farmers.",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    },
-                    {
-                        name: "Nitsuh Girma",
-                        title: "Finance Manager",
-                        photo: "image_file/nitsuh.jpg",
-                        qualifications: "BA in Accounting from Adama University<br>Diploma in Accounting from Royal College in Adama, Ethiopia",
-                        bio: "Nitsuh oversees all financial operations and strategic planning for our agricultural projects. With extensive experience in financial management for agricultural enterprises, he ensures the economic sustainability of our initiatives while maintaining transparent accounting practices.",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    }
-                ];
-    
-                // Regenerative Collective Team
-                const collectiveTeam = [
-                    {
-                        name: " David Moore",
-                        title: "Strategic Advisor | Regenerative Collective",
-                        photo: "image_file/david.jpg",
-                        qualifications: "Expertise in regenerative systems design<br>10+ years in agricultural innovation",
-                        bio: "David is an experienced businessman who has worked across a wide number of sectors in both multinationals and startups. A Manufacturing Engineer by trade, David began his career at Bayer in 1996 before moving to Henkel Loctite in 1997 as an Industrial Engineer. While in Henkel he was promoted to the role of Operations Manager where he was responsible for 160 staff and an annual budget of €16mi. From 2002 - 2004, David completed an Executive MBA where he developed the entrepreneurial bug and in 2007 he left Henkel to provide business consultancy services across a range of areas including Strategy, Operations and Manufacturing. In 2013, David co-founded MagGrow (a technology that improves pesticide spraying applications) and he helped grow the business to over 30 employees working in 5 different countries. In his role as MagGrow’s Chief Technology Officer, David spent over 5 years working in East Africa where he developed backpack spraying systems for smallholder farmers and greenhouse applications. David left MagGrow in December 2021 to launch Regenerators Limited. David has been identified as a thought leader in the agri-food space in the context of sub-Saharan Africa and was recently invited by the American Society of Agricultural and Biological Engineers (ASABE) to join the Advisory Committee of their new initiative - Alliance for Modernizing African Agrifood Systems (AMAA)",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    },
-                    {
-                        name: "Patricia Lay",
-                        title: "Systems Advisor | Regenerative Collective",
-                        photo: "image_file/patricia.jpg",
-                        qualifications: "Specialization in circular agriculture models<br>8+ years in impact measurement",
-                        bio: "Patricia is a passionate social innovator with a deep cultural understanding, gained from living and working in various countries and being fluent in five languages. Trained in Systems Thinking and Human-Centered Design, she excels in uncovering core challenges through active listening and contextual analysis. After her Master’s in Economics, Patricia worked with multinationals in aerospace before shifting to social impact. She holds a Master’s in Applied Positive Psychology, studied Social Innovation Management, and is certified in Ontological Coaching. Her work with NGOs and impact-driven organizations focuses on developing, structuring, and implementing social innovation programs, empowering individuals through education and leadership development. Patricia’s mission is to enable people to be the architects of their own success stories.",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    }
-                ];
-    
-                // University Representative
-                const universityRepresentative = [
-                    {
-                        name: "Dr. Mihret Dananto Ulsido",
-                        title: "Project Representative (Hawassa University)",
-                        photo: "image_file/mihret.jpg",
-                        qualifications: "PhD in Agricultural Engineering (Wuhan University)<br>Multiple European Master's Degrees<br>Associate Professor at Hawassa University",
-                        bio: "As our academic partner from Hawassa University, Dr. Ulsido oversees the research components of our Farm Hub pilot. With 20+ years of expertise in agricultural mechanization and resource engineering, he has led 33+ projects including Agricultural Mechanization System Analysis in Ethiopia's Rift Valley and multiple dam/irrigation development projects. He currently serves as Editor-in-Chief of the Ethiopian Journal of Engineering and Technology and has supervised 6 PhD and 92 MSc students.",
-                        social: {
-                            linkedin: "#",
-                            twitter: "#",
-                            email: "#"
-                        }
-                    }
-                ];
-    
-                // Other Farm Hub Team Members data
-                const otherMembers = [
-                    {
-                        name: "Natneal Bayu",
-                        title: "Agriculturalist",
-                        photo: "image_file/natneal.jpg"
-                    },
-                    {
-                        name: "Agegnehu Teshale",
-                        title: "Field Technician",
-                        photo: "image_file/"
-                    },
-                    {
-                        name: "??",
-                        title: "Field Technician",
-                        photo: "image_file/"
-                    },
-                    {
-                        name: "Zeneb Assefa",
-                        title: "",
-                        photo: "image_file/"
-                    },
-                    {
-                        name: "Yonas Yosef",
-                        title: "",
-                        photo: "image_file/"
-                    }
-                ];
-    
-                // Generate key personnel cards
-                const teamGrid = document.getElementById('teamGrid');
-                
-                keyPersonnel.forEach((member) => {
-                    const teamMember = document.createElement('div');
-                    teamMember.className = 'team-member';
-                    teamMember.innerHTML = `
-                        <div class="member-photo-container">
-                            <img src="${member.photo}" alt="${member.name}" class="member-photo">
-                        </div>
-                        <h3 class="member-name">${member.name}</h3>
-                        <div class="member-title-container">
-                            <p class="member-title">${member.title}</p>
-                            <button class="more-btn">More</button>
-                        </div>
-                        <div class="member-qualifications">${member.qualifications}</div>
-                        <div class="member-bio">
-                            <p>${member.bio}</p>
-                            <div class="member-social">
-                                <a href="${member.social.linkedin}" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="${member.social.twitter}" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="${member.social.email}" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    `;
-                    
-                    teamGrid.appendChild(teamMember);
-                    
-                    // Add click events to photo and more button
-                    const photo = teamMember.querySelector('.member-photo-container');
-                    const moreBtn = teamMember.querySelector('.more-btn');
-                    
-                    const toggleBio = () => {
-                        // Close any open bios first
-                        document.querySelectorAll('.team-member').forEach(member => {
-                            if (member !== teamMember && member.classList.contains('active')) {
-                                member.classList.remove('active');
-                            }
-                        });
-                        teamMember.classList.toggle('active');
-                        
-                        // Scroll to show the full bio if needed
-                        if (teamMember.classList.contains('active')) {
-                            teamMember.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        }
-                    };
-                    
-                    photo.addEventListener('click', toggleBio);
-                    moreBtn.addEventListener('click', toggleBio);
-                });
-    
-                // Generate Regenerative Collective cards
-                const collectiveGrid = document.getElementById('collectiveTeam');
-                
-                collectiveTeam.forEach((member) => {
-                    const teamMember = document.createElement('div');
-                    teamMember.className = 'team-member collective-member';
-                    teamMember.innerHTML = `
-                        <div class="member-photo-container">
-                            <img src="${member.photo}" alt="${member.name}" class="member-photo collective-photo">
-                            <div class="collective-badge">Regenerative Collective</div>
-                        </div>
-                        <h3 class="member-name collective-name">${member.name}</h3>
-                        <div class="member-title-container">
-                            <p class="member-title collective-title-text">${member.title}</p>
-                            <button class="more-btn collective-more-btn">More</button>
-                        </div>
-                        <div class="member-qualifications">${member.qualifications}</div>
-                        <div class="member-bio">
-                            <p>${member.bio}</p>
-                            <div class="member-social">
-                                <a href="${member.social.linkedin}" class="social-icon collective-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="${member.social.twitter}" class="social-icon collective-social" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="${member.social.email}" class="social-icon collective-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    `;
-                    
-                    collectiveGrid.appendChild(teamMember);
-                    
-                    // Add click events to photo and more button
-                    const photo = teamMember.querySelector('.member-photo-container');
-                    const moreBtn = teamMember.querySelector('.more-btn');
-                    
-                    const toggleBio = () => {
-                        // Close any open bios first
-                        document.querySelectorAll('.team-member').forEach(member => {
-                            if (member !== teamMember && member.classList.contains('active')) {
-                                member.classList.remove('active');
-                            }
-                        });
-                        teamMember.classList.toggle('active');
-                        
-                        // Scroll to show the full bio if needed
-                        if (teamMember.classList.contains('active')) {
-                            teamMember.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        }
-                    };
-                    
-                    photo.addEventListener('click', toggleBio);
-                    moreBtn.addEventListener('click', toggleBio);
-                });
-    
-                // Generate university representative card
-                const universityGrid = document.getElementById('universityRepresentative');
-                
-                universityRepresentative.forEach((member) => {
-                    const teamMember = document.createElement('div');
-                    teamMember.className = 'team-member university-member';
-                    teamMember.innerHTML = `
-                        <div class="member-photo-container">
-                            <img src="${member.photo}" alt="${member.name}" class="member-photo university-photo">
-                            <div class="university-badge">Academic Partner</div>
-                        </div>
-                        <h3 class="member-name university-name">${member.name}</h3>
-                        <div class="member-title-container">
-                            <p class="member-title university-title-text">${member.title}</p>
-                            <button class="more-btn university-more-btn">More</button>
-                        </div>
-                        <div class="member-qualifications">${member.qualifications}</div>
-                        <div class="member-bio">
-                            <p>${member.bio}</p>
-                            <div class="member-social">
-                                <a href="${member.social.linkedin}" class="social-icon university-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="${member.social.twitter}" class="social-icon university-social" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="${member.social.email}" class="social-icon university-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    `;
-                    
-                    universityGrid.appendChild(teamMember);
-                    
-                    // Add click events to photo and more button
-                    const photo = teamMember.querySelector('.member-photo-container');
-                    const moreBtn = teamMember.querySelector('.more-btn');
-                    
-                    const toggleBio = () => {
-                        // Close any open bios first
-                        document.querySelectorAll('.team-member').forEach(member => {
-                            if (member !== teamMember && member.classList.contains('active')) {
-                                member.classList.remove('active');
-                            }
-                        });
-                        teamMember.classList.toggle('active');
-                        
-                        // Scroll to show the full bio if needed
-                        if (teamMember.classList.contains('active')) {
-                            teamMember.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        }
-                    };
-                    
-                    photo.addEventListener('click', toggleBio);
-                    moreBtn.addEventListener('click', toggleBio);
-                });
-    
-                // Generate other team members
-                const otherMembersContainer = document.getElementById('otherMembers');
-                
-                otherMembers.forEach((member) => {
-                    const otherMember = document.createElement('div');
-                    otherMember.className = 'other-member';
-                    otherMember.innerHTML = `
-                        <img src="${member.photo}" alt="${member.name}" class="other-member-photo">
-                        <h4 class="other-member-name">${member.name}</h4>
-                        <p class="other-member-title">${member.title}</p>
-                    `;
-                    
-                    otherMembersContainer.appendChild(otherMember);
-                });
-            });
-        </script>
 </body>
 </html>
