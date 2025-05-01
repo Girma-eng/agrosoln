@@ -114,30 +114,39 @@
         }
         
    
-        
-        .nav-btn {
+                /*====================================== Navigation Controls ==================================*/
+                .nav-controls {
             position: fixed;
             bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 100;
+        }
+        .nav-btn {
             width: 50px;
             height: 50px;
-            background-color: rgba(76, 175, 80, 0.7);
             border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn i {
             font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 101;
-            border: none;
+            color: #333;
         }
-        
-        .prev-btn {
-            left: 580px;
-        }
-        
-        .next-btn {
-            left: 650px;
+        .nav-btn:hover {
+            background-color: white;
+            transform: scale(1.1);
         }
         
         #toc-slide {
@@ -2503,7 +2512,7 @@
     }
     
     .mo-column-circles {
-      flex: 1.2;
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -2512,7 +2521,7 @@
     }
     
     .mo-column-table {
-      flex: 1;
+      flex: 1.3;
     }
     
     /* Circle visualization styles */
@@ -2680,8 +2689,15 @@
     
     <img src="image_file/logo_farmhub.png" alt="Farm Hub Ethiopia Logo" class="logo">
     
-    <button class="nav-btn prev-btn" id="prevBtn">←</button>
-    <button class="nav-btn next-btn" id="nextBtn">→</button>
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="nav-btn" id="nextBtn">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+   
+</div>
             <!---------------------- Progress Bar ---------------------->
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
@@ -4265,20 +4281,7 @@
                         <div class="mo-circle-label">Total Addressable Market</div>
                         </div>
                         
-                        <div class="mo-legend">
-                        <div class="mo-legend-item">
-                            <div class="mo-legend-color" style="background: #4CAF50;"></div>
-                            <span>Total Market</span>
-                        </div>
-                        <div class="mo-legend-item">
-                            <div class="mo-legend-color" style="background: #2196F3;"></div>
-                            <span>Serviceable Market</span>
-                        </div>
-                        <div class="mo-legend-item">
-                            <div class="mo-legend-color" style="background: #9C27B0;"></div>
-                            <span>Serviceable Obtainable Market</span>
-                        </div>
-                        </div>
+                     
                         
                         <!-- Arrows from circles to table -->
                         <svg class="mo-arrow mo-arrow-1" id="arrow1" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
@@ -4304,26 +4307,37 @@
                         <table class="mo-data-table">
                             <thead>
                             <tr>
-                                <th>Market Type</th>
-                                <th>Value</th>
-                                <th>Growth Rate</th>
+                                <th>Market Share</th>
+                                <th>Defination</th>
+                                <th>Estimate</th>
+                                <th>Justification</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr id="row1">
-                                <td>Total Addressable Market (TAM)</td>
-                                <td>$1.2 Billion</td>
-                                <td>8.5% CAGR</td>
+                                <td>100%</td>
+                                <td> All smallholder farmers in SSA (~250 million people, ~33 million 
+                                    farms) x potential uplift per farmer ($1,706)</td>
+                                <td> ~$56 billion/year</td>
+                                <td> Based on full uptake of Farmhub-like services for all 
+                                    smallholders with modelled 8X uplift</td>
                             </tr>
                             <tr id="row2">
-                                <td>Serviceable Available Market (SAM)</td>
-                                <td>$750 Million</td>
-                                <td>12% CAGR</td>
+                                <td>50%</td>
+                                <td> Farms in key geographies where we have pilot traction, supportive 
+                                    policy & scalable access (e.g. Ethiopia, Kenya, Uganda) — 18 million farms ~ 50% of total</td>
+                                <td>~$28 billion/year</td>
+                                <td>Limiting to 50% of SSA with 
+                                    viable infrastructure, interest 
+                                    and partner ecosystem</td>
                             </tr>
                             <tr id="row3">
-                                <td>Serviceable Obtainable Market (SOM)</td>
-                                <td>$300 Million</td>
-                                <td>18% CAGR</td>
+                                <td>5%</td>
+                                <td>Share Farmhub could realistically 
+                                    service within 10-15 years (1.5M farmers)</td>
+                                <td>~$2.6 billion/year</td>
+                                <td>Assumes we reach 1.5M farmers with average revenue 
+                                    of $1,706/year</td>
                             </tr>
                             </tbody>
                         </table>
