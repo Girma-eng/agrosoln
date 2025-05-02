@@ -328,6 +328,15 @@
                   text-align: left;
                   margin-bottom: 0.1rem;
               }
+              
+              .top-us-title-2 {
+                  border-radius: 20px;
+                  padding: 5px 10px 0 2px;
+                  font-size: 3.0rem;
+                  font-style: italic;
+                  text-align: left;
+                  margin-bottom: 0.1rem;
+              }
 
               .slide-content {
                   max-width: 1800px;
@@ -368,22 +377,31 @@
         .slide-content-title h1{
              font-size: 1.5rem;
              color: white;
-             text-align: left;
+             text-align: center;
+             margin-top: 140px;
              
           }
           .slide-content-title h2{
              font-size: 1.2rem;
              color: white;
-             text-align: left;
+             text-align: center;
              
           }
           .slide-content-subtitle h1{
-             font-size: 1.2rem;
+             font-size: 1.4rem;
              color: white;
-             text-align: left;
-             margin-top: 40px;
+             text-align: center;
+             margin-top: 200px;
              
           }
+          .top-us-title-2 {
+                  border-radius: 20px;
+                  padding: 5px 10px 0 2px;
+                  font-size: 1.2rem;
+                 
+                  
+              }
+
       
         }
 
@@ -926,7 +944,7 @@
             .smallholder-section {
                 flex-direction: column;
                 gap: 40px;
-                padding: 60px 20px;
+                padding: 20px 10px;
             }
             .two-column-wrapper  {
                 flex-direction: column;
@@ -949,6 +967,18 @@
                 position: static;
                 margin-top: 15px;
                 display: inline-block;
+            }
+            .slide-subtitle {
+            font-size: 1.0rem; 
+            font-style: normal; 
+            color: rgb(62, 83, 132);
+             margin-bottom: 0.2rem
+        }
+            .highlight-panel {
+                    font-size: 0.9rem;
+            }
+            .model-card h3 {
+                font-size: 0.9rem;
             }
         }
 
@@ -1011,7 +1041,7 @@
         margin-bottom: 5px;
         text-align: left;
         color: green;
-        font-size: 1.0rem;
+        
         
     }
         
@@ -1038,7 +1068,7 @@
             margin: 1rem 0;
             border-radius: 0 8px 8px 0;
             color: white;
-            font-size: 1.3rem;
+           
         }
         
         .model-card {
@@ -1053,7 +1083,7 @@
         .model-card h3 {
             color: var(--accent);
             margin-top: 0;
-            font-size: 1.3rem;
+            
         }
       
                
@@ -1075,14 +1105,19 @@
            
         }
         
-        @media (max-width: 1024px) {
+        @media (max-width: 678px) {
             .bullet-list {
                 columns: 1;
             }
         }
 
-
-
+        @media (max-width: 678px) {
+        .bullet-list ul {
+        padding-left: 10px;
+       font-size: 0.75rem;
+        
+            }
+        }
 
 
 
@@ -1293,7 +1328,7 @@
                 align-items: center;
                 text-align: center;
                 width: 160px;
-                font-size: 10px;
+                font-size: 11px;
                 opacity: 0;
                 
                 transform: translateY(20px);
@@ -1311,21 +1346,21 @@
                 }
 
                 .label-cont-group div:nth-child(2) {
-                font-weight: bold;
+                
                 color: #a39318;
                 min-height: 40px;
                 display: flex;
                 align-items: center;
                 }
                 .label-cont-group div:nth-child(3) {
-                font-weight: bold;
+              
                 color: #222;
                 min-height: 40px;
                 display: flex;
                 align-items: center;
                 }
                 .label-cont-group div:nth-child(4) {
-                font-weight: bold;
+                
                 color: #279e90;
                 min-height: 40px;
                 display: flex;
@@ -1392,6 +1427,32 @@
                 transform: translateY(0) !important;
                 }
 
+
+                 /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+                .chart {
+                
+                gap: 5px;
+                height: 230px;
+                margin-bottom: 10px;
+                overflow: auto;
+                
+                }
+
+                .bar-container {
+                
+                width: 120px;
+               
+                }
+
+             
+
+                .bar {
+                width: 50px;
+                
+                }
+                    }
+              
 
 
       /* Slide background variations */
@@ -3313,7 +3374,8 @@
             <h6 class="top-us-title-1" style="color: white;">
                 <span>01 — The Context</span>
             </h6>
-            <h1 style="font-size: 2.0rem; color: white; margin-bottom: 10px; text-align: left;">Africa's Food System is Broken</h1>
+            <h2 class="section-title-context" style="color: white;">Africa's Food System is Broken</h2>
+            
             <section class="food-system-section">
                 
                 <!-- Full Width cad can be added here -->
@@ -3680,7 +3742,7 @@
             <h2 class="top-us-title-1" style="color: white;">
                 <span>01-The Context</span>
             </h2>
-            <h2 class="top-us-title-1" style="color: white; font-size: 3rem; font-style: normal;">
+            <h2 class="top-us-title-2" style="color: white;">
                 <span>A 10X Transformation is Possible</span>
             </h2>
             
@@ -3817,7 +3879,7 @@
             <h2 class="top-us-title-1" style="color: white;">
                 <span>01-The Context</span>
             </h2>
-            <h2 class="top-us-title-1" style="color: white; font-size: 3rem; font-style: normal;">
+            <h2 class="top-us-title-2" style="color: white;">
                 <span>But we need a new System Vision & Strategy</span>
             </h2>
             <div class="smallholder-section">
@@ -3867,7 +3929,7 @@
                         
                         <h3 class="slide-subtitle">An Integrated Stack for Agri-System Transformation</h3>
                         <div class="highlight-panel">
-                            TTo build this ecosystem, we've defined three foundational components of a new integrated model we call the Farmhub Model:
+                            To build this ecosystem, we've defined three foundational components of a new integrated model we call the Farmhub Model:
                         </div>
                         <div class="model-card">
                             <h3>Level 3: The Farmhub Mission Control</h3>
@@ -3909,7 +3971,8 @@
                         <h2 class="section-title-context">Level 1: Farmhub Field Station</h2>
                         <h3 class="slide-subtitle" style="color: rgb(62, 83, 132);">Structuring & Servicing the Last Mile</h3>
                         
-                        <p>A Farmhub Field Station is a local service hub that provides smallholder farmers with access to the core infrastructure they need to close the yield, income, and market gap.</p>
+                        <p-2>A Farmhub Field Station is a local service hub that provides smallholder farmers with access to the core infrastructure they need to 
+                            close the yield, income, and market gap.</p-2>
                         
                         <div class="highlight-panel">
                             Each hub is a physical location — franchised and locally operated — offering affordable, standardised access to:
