@@ -406,6 +406,14 @@
                  
                   
               }
+              .top-us-title-1 {
+    border-radius: 20px;
+    padding: 5px 10px 0 2px;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 0.1rem;
+}
 
       
         }
@@ -1843,14 +1851,87 @@
             }
             
             .slide-header h1 {
-                font-size: 2rem;
+                font-size: 1.4rem;
             }
+            .slide-header h2 {
+            font-size: 1.0rem;
+            color: white;
+            font-weight: normal;
+        }
             
             .tier-image {
                 height: 100px;
             }
         }
+        @media (max-width: 678px) {
+        .market-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.0rem;
+            font-size: 0.8rem;
+        }
         
+        .market-table tr {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .market-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .market-table td {
+            padding: 0.4rem 0;
+            vertical-align: top;
+        }
+        .market-table td:last-child {
+            font-weight: bold;
+            font-size: 0.7rem;
+            text-align: right;
+            color: var(--dark);     
+        }
+        .tier-title {
+            font-size: 1.0rem;
+            font-weight: bold;
+        }
+        .tier-badge {
+    background: #f0f0f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+        
+        .tier-1 .tier-title {
+            color: #e69500;
+        }
+        
+        .tier-2 .tier-title {
+            color: var(--primary);
+        }
+        
+        .tier-3 .tier-title {
+            color: var(--dark);
+        }
+        
+        .market-table td:first-child {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #555;
+            width: 75%;
+        }
+        
+        .market-table td:last-child {
+            font-weight: bold;
+            font-size: 0.7rem;
+            text-align: right;
+            color: var(--dark);
+        }   
+    }
+
+
+
+
+
         /* Animation */
         @keyframes fadeInUp {
             from {
