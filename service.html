@@ -957,7 +957,7 @@
             .smallholder-section {
                 flex-direction: column;
                 gap: 40px;
-                padding: 20px 10px;
+                padding: 10px 10px 40px 10px;
             }
         
             .two-column-wrapper  {
@@ -3800,6 +3800,8 @@
             justify-content: center;
             padding: 20px;
             text-align: center;
+            height: 95%;
+            overflow-y: auto;
         }
 
         .traction-title {
@@ -3904,6 +3906,8 @@
         }
         .partner-card {
             width: 100%;
+            height:100% ;
+            height: 200px;
             background-color: white;
             border-radius: 8px;
             display: flex;
@@ -3915,6 +3919,7 @@
             transition: transform 0.3s ease;
             text-decoration: none;
             color: var(--text-color);
+
         }
 
         .partner-logo {
@@ -4034,6 +4039,13 @@
             .partner-card {
                 height: 140px;
                 padding: 10px;
+                width: 80%;
+                max-width: 250px;
+                margin: 0 auto 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
             }
             .partner-name {
                 font-size: 0.8rem;
@@ -4045,10 +4057,7 @@
                 font-size: 1.5rem;
             }
 
-            .partner-card {
-                width: 100px;
-                height: 80px;
-            }
+       
 
             .year-btn {
                 padding: 5px 10px;
@@ -4059,6 +4068,192 @@
                 width: 12px;
                 height: 12px;
                 top: -22px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GROWTH HORIZONS SPECIFIC STYLES */
+.growth-container {
+            height: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+
+        .growth-title {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .horizons-scroll-container {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+
+        .horizons-wrapper {
+            display: flex;
+            gap: 20px;
+            min-height: min-content;
+        }
+
+        .horizon {
+            min-width: 300px;
+            flex: 1;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid;
+        }
+
+        .horizon-1 { border-color: var(--primary-color); }
+        .horizon-2 { border-color: var(--secondary-color); }
+        .horizon-3 { border-color: var(--accent-color); }
+
+        .horizon-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+
+        .horizon-number {
+            font-size: 2rem;
+            font-weight: bold;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            color: #000;
+        }
+
+        .horizon-1 .horizon-number { background: var(--primary-color); }
+        .horizon-2 .horizon-number { background: var(--secondary-color); }
+        .horizon-3 .horizon-number { background: var(--accent-color); }
+
+        .horizon-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .horizon-goal {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+
+        .targets-list {
+            flex: 1;
+            min-height: min-content;
+            overflow-y: auto;
+        }
+
+        .target-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+        }
+
+        .target-checkbox {
+            margin-right: 12px;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .target-text {
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .ops-capacity {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        .ops-capacity strong {
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Custom scrollbar */
+        .horizons-scroll-container::-webkit-scrollbar,
+        .targets-list::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .horizons-scroll-container::-webkit-scrollbar-track,
+        .targets-list::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+
+        .horizons-scroll-container::-webkit-scrollbar-thumb,
+        .targets-list::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .horizons-wrapper {
+                flex-direction: column;
+            }
+            
+            .horizon {
+                min-width: auto;
+            }
+            
+            .growth-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .growth-container {
+                padding: 20px 15px;
+            }
+            
+            .horizon {
+                padding: 20px;
             }
         }
     </style>
@@ -5950,19 +6145,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/regenators_collective.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Core team Founding</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/strategic_workshop.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Strategic Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/studio_soal.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Founding Partner</div>
                                     </div>
                                 </div>
                             </div>
@@ -5975,19 +6170,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/local_links.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Uganda country partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/last_mile.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/UL.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">University Partner</div>
                                     </div>
                                 </div>
                             </div>
@@ -6000,19 +6195,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/agrimech_africa.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Kenya country partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/farm_hub_et.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Ethiopia country partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/landforce.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                 </div>
                             </div>
@@ -6023,21 +6218,21 @@
                                 <div class="year-partners">
                                     <div class="partner-card">
                                         <div class="partner-logo">
-                                            <img src="image_file/potato_field.jpg" alt="Partner 1">
+                                            <img src="image_file/HU_logo.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">University Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/solanika.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/xfarm_2.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                 </div>
                             </div>
@@ -6049,19 +6244,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/wheat_field_3.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Piloting Farmhub @ HU campus</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/visit_2.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Farmhub Demos</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/aiml_score.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Micro Finance Partner</div>
                                     </div>
                                 </div>
                             </div>
@@ -6073,19 +6268,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/farmhub_model.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Launch Farmhub in Ethiopia, Kenya and Uganda</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
-                                            <img src="image_file/playbook.jpg alt="Partner 4">
+                                            <img src="image_file/playbook.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Lunch Playbook v10</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/farmhub_os.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Develop Farmhub OS v10</div>
                                     </div>
                                 </div>
                             </div>
@@ -6109,19 +6304,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/regenators_collective.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Core team Founding</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/strategic_workshop.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Strategic Workshop</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/studio_soal.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Founding Partrner</div>
                                     </div>
                                 </div>
             
@@ -6131,19 +6326,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/local_links.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Uganda Country Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/last_mile.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/UL.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Universoty partner</div>
                                     </div>
                                 </div>
             
@@ -6153,19 +6348,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/agrimech_africa.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Kenya country partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/farm_hub_et.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Ethiopian country partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/landforce.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology partner</div>
                                     </div>
                                 </div>
             
@@ -6173,42 +6368,42 @@
                                 <div class="mobile-year-partners" data-year="2024">
                                     <div class="partner-card">
                                         <div class="partner-logo">
-                                            <img src="image_file/potato_field.jpg" alt="Partner 1">
+                                            <img src="image_file/HU_logo.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">University Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/solanika.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/xfarm_2.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Technology Partner</div>
                                     </div>
                                 </div>
                                  <!-- 2025 Partners -->
                                  <div class="mobile-year-partners" data-year="2025">
                                     <div class="partner-card">
                                         <div class="partner-logo">
-                                            <img src="image_file/wheat_field_3.jpg" alt="Partner 1">
+                                            <img src="image_file/wheat_field_3.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Piloting farmhub @ HU campus</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/visit_2.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Farmhub Demos</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/aiml_score.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Micro Finance Partner</div>
                                     </div>
                                 </div>
                                  <!-- 2026 Partners -->
@@ -6217,19 +6412,19 @@
                                         <div class="partner-logo">
                                             <img src="image_file/farmhub_model.jpg" alt="Partner 1">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Launch Farmhub in Ethiopia, Kenya and Uganda</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
-                                            <img src="image_file/playbook.jpg alt="Partner 4">
+                                            <img src="image_file/playbook.jpg" alt="Partner 4">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Lunch Playbook v10</div>
                                     </div>
                                     <div class="partner-card">
                                         <div class="partner-logo">
                                             <img src="image_file/farmhub_os.jpg" alt="Partner 3">
                                         </div>
-                                        <div class="partner-name">Microsoft</div>
+                                        <div class="partner-name">Develop Farmhub OS v10</div>
                                     </div>
                                 </div>
                             </div>
@@ -6415,7 +6610,113 @@
 
 
 
-
+            <div class="slide">
+                <h6 class="top-us-title-1" style="color: white;">
+                    <span>06 — Business Plan</span>
+                </h6>
+                <div class="growth-container">
+                    <h1 class="growth-title" style="text-align: left;">Growth Horizons</h1>
+                    <h2>Compounding, system-wide impact</h2>
+                    <div class="horizons-wrapper">
+                        <!-- Horizon 1 -->
+                        <div class="horizon horizon-1">
+                            <div class="horizon-header">
+                                <div class="horizon-number">1</div>
+                                <div>
+                                    <h2 class="horizon-title"> Horizon 1 (1-2 years)</h2>
+                                    <div class="horizon-goal">Goal: Prove the Model</div>
+                                </div>
+                            </div>
+                           
+                            <div class="targets-list">
+                                <div class="horizon-goal">Target:</div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Launch first 3 Farmhub Field Stations across pilot countries</div>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Build MVP digital platform + initial Mission Control ops</div>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Finalise Playbook, franchise model, launch national hubs x3</div>
+                                </div>
+                            </div>
+                            
+                            <div class="ops-capacity">
+                                <strong>Ops Capacity</strong>
+                                ~4,500 farmers reached, 3 Ops teams, 1 central unit
+                            </div>
+                        </div>
+                        
+                        <!-- Horizon 2 -->
+                        <div class="horizon horizon-2">
+                            <div class="horizon-header">
+                                <div class="horizon-number">2</div>
+                                <div>
+                                    <h2 class="horizon-title"> Horizon 2 (3-5 years)</h2>
+                                    <div class="horizon-goal">Goal:  Scale the system</div>
+                                </div>
+                            </div>
+                            
+                            <div class="targets-list">
+                                <div class="horizon-goal">Target:</div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Scale to 30 hubs across the 3 countries via franchise rollout</div>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Anchor public-private partnerships and subsidy integration</div>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Launch full digital services suite for value capture + MRV</div>
+                                </div>
+                            </div>
+                            
+                            <div class="ops-capacity">
+                                <strong>Ops Capacity</strong>
+                                50,000 farmers, 240 OpCo staff, 3 national units
+                            </div>
+                        </div>
+                        
+                        <!-- Horizon 3 -->
+                        <div class="horizon horizon-3">
+                            <div class="horizon-header">
+                                <div class="horizon-number">3</div>
+                                <div>
+                                    <h2 class="horizon-title"> Horizon 3 (6-15 years)</h2>
+                                    <div class="horizon-goal">Goal: Transform the landscape</div>
+                                </div>
+                            </div>
+                            
+                            <div class="targets-list">
+                                <div class="horizon-goal">Target:</div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Full PropCo monetization and infrastructure network buildout</div>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Establish regional "Agri Sovereignty Zones" with national buy-in</div>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-checkbox">☐</span>
+                                    <div class="target-text">Position Farmhub as system orchestrator for food system resilience</div>
+                                </div>
+                            </div>
+                            
+                            <div class="ops-capacity">
+                                <strong>Ops Capacity</strong>
+                                1.7M farmers, 1,000+ hubs, cross-continental governance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
 
             <!-- Additional slides can be added here following any of the 20 templates -->
 
@@ -6844,8 +7145,6 @@
 
 
 
-
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Mobile year switching functionality
@@ -6932,6 +7231,5 @@
         window.addEventListener('resize', checkView);
     });
 </script>
-
 </body>
 </html>
