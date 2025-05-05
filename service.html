@@ -1055,6 +1055,13 @@
             align-items: center;
             justify-content: center;
         }
+        .visual-column-2 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
         .slide-content-new {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100%;
@@ -1153,6 +1160,16 @@
        font-size: 0.75rem;
         
             }
+            .visual-column {
+           display: none;
+        }
+        .visual-column-2 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: block;
+        }
         }
 
 
@@ -2888,10 +2905,16 @@
 
 
 
-
-
-
-
+.mo-zoom-wrapper {
+  transform: scale(1); /* default scale */
+  transform-origin: top center;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      box-sizing: border-box;
+      padding: 20px;
+}
     .mo-slide-container {
       background: white;
       border-radius: 10px;
@@ -2899,8 +2922,6 @@
       padding: 30px;
       max-width: 1500px;
       width: 100%;
-      height: 90%;
-      overflow-y: auto;
     }
     
     .mo-title {
@@ -2913,18 +2934,28 @@
     .mo-content-columns {
       display: flex;
       gap: 40px;
-      padding: 30px;
       margin: 40px 0;
+    }
+
+ 
+    .mo-content-columns {
+      display: flex;
+      gap: 40px;
+      padding: 30px;
+      margin: 20px 0;
       color: black;
       width: 100%;
-      height: 90%;
+      height: 95%;
       overflow-y: auto;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     
     /* Column proportions */
     .mo-column {
       flex: 1;
-      height: 90%;
+      height: 95%;
     }
     
     .mo-column-circles {
@@ -2934,7 +2965,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      margin-bottom: -190px;
+      top: 120px;
     }
     
     .mo-column-table {
@@ -2949,6 +2980,8 @@
       margin-bottom: 30px;
     }
     
+    
+
     .mo-circle {
       position: absolute;
       bottom: 0;
@@ -3062,7 +3095,7 @@
     
     .mo-arrow-1 {
       width: 250px;
-      top: 176px;
+      top: 76px;
       left: 420px;
       color: #4CAF50;
       z-index:20;
@@ -3070,7 +3103,7 @@
     
     .mo-arrow-2 {
       width: 250px;
-      top: 276px;
+      top: 176px;
       left: 420px;
       color: #2196F3;
       z-index: 10;
@@ -3078,7 +3111,7 @@
     
     .mo-arrow-3 {
       width: 280px;
-      top: 380px;
+      top: 280px;
       left: 400px;
       color: #9C27B0;
       z-index: 10;
@@ -3104,20 +3137,112 @@
       height: 16px;
       border-radius: 50%;
     }
-    .mo-zoom-wrapper {
-  transform: scale(1); /* default scale */
-  transform-origin: top center;
-  transition: transform 0.3s ease-in-out;
-}
+
     
     /* Highlighted rows to match circle colors */
     .mo-row-1 { background-color: rgba(76, 175, 80, 0.1) !important; }
     .mo-row-2 { background-color: rgba(33, 150, 243, 0.1) !important; }
     .mo-row-3 { background-color: rgba(156, 39, 176, 0.1) !important; }
 
+    @media (max-width: 768px) {
+  .mo-slide-container {
+    padding: 20px;
+    height: auto;
+  }
+
+  .mo-content-columns {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+    margin: 20px 0;
+    height: auto;
+  }
+
+  .mo-column,
+  .mo-column-circles,
+  .mo-column-table {
+    width: 100%;
+    flex: unset;
+    height: auto;
+  }
+
+  .mo-column-circles {
+    margin-bottom: 0;
+  }
+
+  .mo-circle-container {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto 20px auto;
+  }
+
+  .mo-circle-1 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .mo-circle-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .mo-circle-3 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .mo-arrow-1,
+  .mo-arrow-2,
+  .mo-arrow-3 {
+    display: none;
+  }
+
+  .mo-data-card {
+    padding: 15px;
+  }
+
+  .mo-card-title {
+    font-size: 18px;
+  }
+
+  .mo-data-table th,
+  .mo-data-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .mo-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mo-legend-item {
+    gap: 6px;
+  }
+
+  .mo-zoom-wrapper {
+    padding: 15px;
+  }
+}
 
 
 
+
+
+
+.mo-zoom-wrapper-2 {
+  transform: scale(1); /* default scale */
+  transform-origin: top center;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      box-sizing: border-box;
+      padding: 20px;
+}
+
+    
     
 
     .mo-slide-container-2 {
@@ -3339,28 +3464,87 @@
 
 
 
-    @media (max-width: 678px) {
-        
-        .mo-slide-container {
-            flex-direction: column;
-      overflow-y: auto;
-    }
-    .mo-content-columns {
-            flex-direction: column;
-                gap: 40px;
-                padding: 20px 10px;
-            }
-            .mo-content-columns-2 {
-            flex-direction: column;
-                gap: 40px;
-                padding: 20px 10px;
-            }
-            .mo-column {
-                flex-direction: column;
-      flex: 1;
-      height: 90%;
-    }
-        }
+    @media (max-width: 768px) {
+  .mo-slide-container-2 {
+    padding: 20px;
+    height: auto;
+  }
+
+  .mo-content-columns-2 {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+    margin: 20px 0;
+    height: auto;
+  }
+
+  .mo-column-2,
+  .mo-column-circles-2,
+  .mo-column-table-2 {
+    width: 100%;
+    flex: unset;
+    height: auto;
+  }
+
+  .mo-column-circles-2 {
+    margin-bottom: 0;
+  }
+
+  .mo-circle-container-2 {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto 20px auto;
+  }
+
+  .mo-circle-1-2 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .mo-circle-2-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .mo-circle-3-2 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .mo-arrow-1-2,
+  .mo-arrow-2-2,
+  .mo-arrow-3-2 {
+    display: none;
+  }
+
+  .mo-data-card-2 {
+    padding: 15px;
+  }
+
+  .mo-card-title-2 {
+    font-size: 18px;
+  }
+
+  .mo-data-table-2 th,
+  .mo-data-table-2 td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .mo-legend-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mo-legend-item-2 {
+    gap: 6px;
+  }
+
+  .mo-zoom-wrapper-2 {
+    padding: 15px;
+  }
+}
 
 
 
@@ -4527,6 +4711,50 @@
                            
                         </div>
                     </div>
+
+                    <!-- for mobile only -->
+                    <div class="visual-column-2">
+                        <div class="approach-container">
+                            <!-- Center Image -->
+                            <img src="image_file/logo_farmhub.png" alt="Farm Hub" class="center-image">
+                             <!-- Arrows pointing to center -->
+                            <div class="approach-arrow" style="left:47%; top: 32%; --rotation: 180deg;">↑</div>
+                            <div class="approach-arrow" style="left: 65%; top: 50%; --rotation: 270deg;">↑</div>
+                            <div class="approach-arrow" style="left: 47%; top: 65%; --rotation: 0deg;">↑</div>
+                            <div class="approach-arrow" style="left: 30%; top: 50%; --rotation: 90deg;">↑</div>
+    
+                            <!-- Text Boxes -->
+                            <div class="approach-text-box" style="left: 18%; top: 27%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 10px;"> fragmented infrastructur</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 43%; top: 15%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 12px;"> once off tech pilots</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 68%; top: 27%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 12px;"> disjointed market access</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 75%; top: 45%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 12px;"> broken supply chains</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 43%; top: 73%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 12px;"> value chain gaps</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 17%; top: 63%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 10px;"> lack of visibility for impact funding</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 10%; top: 45%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 10px;"> donor reliance</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 66%; top: 63%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 9px;">ad hoc service operators</h3>
+                            </div>
+                            <div class="approach-text-box" style="left: 43%; top: 53%; width: 90px; height: 45px;  background: rgba(0, 100, 0, 0);  border: 0 solid rgb(70, 178, 202);">
+                                <h3 style="font-size: 12px;  color: white;"> bundled stac</h3>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -5217,7 +5445,8 @@
 
 
   <!-------------------------------------- Slide ??: SSA market Opportunity -->
-          <div class="slide">
+  
+  <div class="slide">
             <div class="mo-zoom-wrapper">
             <div class="mo-slide-container">
                 <h1 class="mo-title">Market Opportunity for Sub-Saharan Africa</h1>
