@@ -1492,7 +1492,7 @@
                 .chart {
                 
                 gap: 1px;
-                height: 530px;
+                height: 430px;
                 margin-bottom: 10px;
                 overflow: auto;
                 width: 98%;
@@ -4256,6 +4256,134 @@
                 padding: 20px;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+   /* CONTACT SLIDE SPECIFIC STYLES */
+   .contact-container {
+            height: 100%;
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-content {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+        }
+
+        .contact-image {
+            flex: 1;
+            background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            min-height: 300px;
+        }
+
+        .contact-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .contact-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .contact-text a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--accent-color);
+        }
+
+        /* LANDSCAPE MODE FOR MOBILE */
+        @media (max-width: 768px) {
+            .landscape-slide {
+                transform: rotate(90deg);
+                transform-origin: left top;
+                width: 100vh;
+                height: 100vw;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                overflow-x: hidden;
+            }
+            
+            .landscape-slide .contact-content {
+                flex-direction: row;
+            }
+            
+            .landscape-slide .contact-image,
+            .landscape-slide .contact-details {
+                flex: 1;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -6762,6 +6890,63 @@
                 </div>
             </div>
         
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="slide">
+                <div class="contact-container landscape-slide">
+                    <h1 class="contact-title">Get in Touch</h1>
+                    
+                    <div class="contact-content">
+                        <div class="contact-image"></div>
+                        
+                        <div class="contact-details">
+                            <div class="contact-card">
+                                <h3>Contact Information</h3>
+                                <div class="contact-info">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <a href="mailto:contact@farmhub.com">contact@farmhub.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <h3>Connect With Us</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+
 
             <!-- Additional slides can be added here following any of the 20 templates -->
 
