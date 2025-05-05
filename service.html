@@ -3902,30 +3902,44 @@
             gap: 20px;
             width: 100%;
         }
-
         .partner-card {
             width: 100%;
-            height: 120px;
             background-color: white;
             border-radius: 8px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
         }
 
-        .partner-card:hover {
-            transform: scale(1.05);
+        .partner-logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            min-height: 60px; /* Adjust based on your needs */
         }
 
-        .partner-card img {
+        .partner-logo img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
         }
 
+        .partner-name {
+            font-size: 0.9rem;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 8px;
+            color: var(--text-color);
+            line-height: 1.2;
+        }
         /* Mobile layout - show one year at a time */
         .mobile-view {
             display: block;
@@ -4016,6 +4030,13 @@
             .timeline-container {
                 width: 95%;
                 margin-bottom: 2rem;
+            }
+            .partner-card {
+                height: 140px;
+                padding: 10px;
+            }
+            .partner-name {
+                font-size: 0.8rem;
             }
         }
 
@@ -5914,8 +5935,8 @@
                                 <div class="year" data-year="2022"></div>
                                 <div class="year" data-year="2023"></div>
                                 <div class="year" data-year="2024"></div>
-                                <div class="year" data-year="2024"></div>
-                                <div class="year" data-year="2024"></div>
+                                <div class="year" data-year="2025"></div>
+                                <div class="year" data-year="2026"></div>
                             </div>
                         </div>
             
@@ -5926,13 +5947,22 @@
                                 <h3 class="year-group-title">2021</h3>
                                 <div class="year-partners">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+1" alt="Partner 1">
+                                        <div class="partner-logo">
+                                            <img src="image_file/regenators_collective.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+2" alt="Partner 2">
+                                        <div class="partner-logo">
+                                            <img src="image_file/strategic_workshop.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+3" alt="Partner 3">
+                                        <div class="partner-logo">
+                                            <img src="image_file/studio_soal.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
@@ -5942,13 +5972,22 @@
                                 <h3 class="year-group-title">2022</h3>
                                 <div class="year-partners">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+4" alt="Partner 4">
+                                        <div class="partner-logo">
+                                            <img src="image_file/local_links.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+5" alt="Partner 5">
+                                        <div class="partner-logo">
+                                            <img src="image_file/last_mile.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+6" alt="Partner 6">
+                                        <div class="partner-logo">
+                                            <img src="image_file/UL.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
@@ -5958,13 +5997,22 @@
                                 <h3 class="year-group-title">2023</h3>
                                 <div class="year-partners">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+7" alt="Partner 7">
+                                        <div class="partner-logo">
+                                            <img src="image_file/agrimech_africa.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+8" alt="Partner 8">
+                                        <div class="partner-logo">
+                                            <img src="image_file/farm_hub_et.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+9" alt="Partner 9">
+                                        <div class="partner-logo">
+                                            <img src="image_file/landforce.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
@@ -5974,28 +6022,46 @@
                                 <h3 class="year-group-title">2024</h3>
                                 <div class="year-partners">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                        <div class="partner-logo">
+                                            <img src="image_file/potato_field.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                        <div class="partner-logo">
+                                            <img src="image_file/solanika.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                        <div class="partner-logo">
+                                            <img src="image_file/xfarm_2.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- 2025 Partners -->
                             <div class="year-group">
-                                <h3 class="year-group-title">2026</h3>
+                                <h3 class="year-group-title">2025</h3>
                                 <div class="year-partners">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                        <div class="partner-logo">
+                                            <img src="image_file/wheat_field_3.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                        <div class="partner-logo">
+                                            <img src="image_file/visit_2.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                        <div class="partner-logo">
+                                            <img src="image_file/aiml_score.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
@@ -6004,13 +6070,22 @@
                                 <h3 class="year-group-title">2026</h3>
                                 <div class="year-partners">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                        <div class="partner-logo">
+                                            <img src="image_file/farmhub_model.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                        <div class="partner-logo">
+                                            <img src="image_file/playbook.jpg alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                        <div class="partner-logo">
+                                            <img src="image_file/farmhub_os.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
@@ -6023,60 +6098,138 @@
                                 <button class="year-btn" data-year="2022">2022</button>
                                 <button class="year-btn" data-year="2023">2023</button>
                                 <button class="year-btn" data-year="2024">2024</button>
-                                <button class="year-btn" data-year="2024">2025</button>
-                                <button class="year-btn" data-year="2024">2026</button>
+                                <button class="year-btn" data-year="2025">2025</button>
+                                <button class="year-btn" data-year="2026">2026</button>
                             </div>
             
                             <div class="partners-container">
                                 <!-- 2021 Partners -->
                                 <div class="mobile-year-partners active" data-year="2021">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+1" alt="Partner 1">
+                                        <div class="partner-logo">
+                                            <img src="image_file/regenators_collective.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+2" alt="Partner 2">
+                                        <div class="partner-logo">
+                                            <img src="image_file/strategic_workshop.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+3" alt="Partner 3">
+                                        <div class="partner-logo">
+                                            <img src="image_file/studio_soal.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
             
                                 <!-- 2022 Partners -->
                                 <div class="mobile-year-partners" data-year="2022">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+4" alt="Partner 4">
+                                        <div class="partner-logo">
+                                            <img src="image_file/local_links.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+5" alt="Partner 5">
+                                        <div class="partner-logo">
+                                            <img src="image_file/last_mile.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+6" alt="Partner 6">
+                                        <div class="partner-logo">
+                                            <img src="image_file/UL.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
             
                                 <!-- 2023 Partners -->
                                 <div class="mobile-year-partners" data-year="2023">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+7" alt="Partner 7">
+                                        <div class="partner-logo">
+                                            <img src="image_file/agrimech_africa.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+8" alt="Partner 8">
+                                        <div class="partner-logo">
+                                            <img src="image_file/farm_hub_et.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+9" alt="Partner 9">
+                                        <div class="partner-logo">
+                                            <img src="image_file/landforce.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
             
                                 <!-- 2024 Partners -->
                                 <div class="mobile-year-partners" data-year="2024">
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                        <div class="partner-logo">
+                                            <img src="image_file/potato_field.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                        <div class="partner-logo">
+                                            <img src="image_file/solanika.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                     <div class="partner-card">
-                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                        <div class="partner-logo">
+                                            <img src="image_file/xfarm_2.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
+                                    </div>
+                                </div>
+                                 <!-- 2025 Partners -->
+                                 <div class="mobile-year-partners" data-year="2025">
+                                    <div class="partner-card">
+                                        <div class="partner-logo">
+                                            <img src="image_file/wheat_field_3.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
+                                    </div>
+                                    <div class="partner-card">
+                                        <div class="partner-logo">
+                                            <img src="image_file/visit_2.jpg" alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
+                                    </div>
+                                    <div class="partner-card">
+                                        <div class="partner-logo">
+                                            <img src="image_file/aiml_score.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
+                                    </div>
+                                </div>
+                                 <!-- 2026 Partners -->
+                                 <div class="mobile-year-partners" data-year="2026">
+                                    <div class="partner-card">
+                                        <div class="partner-logo">
+                                            <img src="image_file/farmhub_model.jpg" alt="Partner 1">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
+                                    </div>
+                                    <div class="partner-card">
+                                        <div class="partner-logo">
+                                            <img src="image_file/playbook.jpg alt="Partner 4">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
+                                    </div>
+                                    <div class="partner-card">
+                                        <div class="partner-logo">
+                                            <img src="image_file/farmhub_os.jpg" alt="Partner 3">
+                                        </div>
+                                        <div class="partner-name">Microsoft</div>
                                     </div>
                                 </div>
                             </div>
@@ -6693,8 +6846,6 @@
 
 
 
-
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Mobile year switching functionality
@@ -6706,7 +6857,8 @@
             // Initialize timeline progress based on current year
             const currentYear = new Date().getFullYear();
             const startYear = 2021;
-            let progressPercentage = ((currentYear - startYear) / (2024 - startYear)) * 100;
+            const endYear = 2026; // Updated to include 2026
+            let progressPercentage = ((currentYear - startYear) / (endYear - startYear)) * 100;
             progressPercentage = Math.min(100, Math.max(0, progressPercentage)); // Clamp between 0-100
             document.querySelector('.timeline-progress').style.width = `${progressPercentage}%`;
 
@@ -6719,36 +6871,53 @@
 
             // Handle year button clicks
             yearButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const selectedYear = this.dataset.year;
-
-                    // Update active button
-                    yearButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-
-                    // Show corresponding partners
-                    mobileYearPartners.forEach(container => {
-                        container.classList.remove('active');
-                        if (container.dataset.year === selectedYear) {
-                            container.classList.add('active');
-                        }
-                    });
-
-                    // Highlight selected year in timeline
-                    years.forEach(year => {
-                        year.style.color = 'white';
-                        if (year.dataset.year === selectedYear) {
-                            year.style.color = 'var(--accent-color)';
-                        }
-                    });
-                });
+                // Remove any existing listeners to prevent duplicates
+                button.removeEventListener('click', handleYearClick);
+                button.addEventListener('click', handleYearClick);
             });
+
+            function handleYearClick() {
+                const selectedYear = this.dataset.year;
+
+                // Update active button
+                yearButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                // Show corresponding partners
+                mobileYearPartners.forEach(container => {
+                    container.classList.remove('active');
+                    if (container.dataset.year === selectedYear) {
+                        container.classList.add('active');
+                    }
+                });
+
+                // Highlight selected year in timeline
+                years.forEach(year => {
+                    year.style.color = 'white';
+                    if (year.dataset.year === selectedYear) {
+                        year.style.color = 'var(--accent-color)';
+                    }
+                });
+            }
         };
 
-        // Check if mobile view is active and initialize
-        if (window.innerWidth < 992) {
-            initMobileView();
+        // Initialize mobile view if needed
+        function checkView() {
+            const mobileView = document.querySelector('.mobile-view');
+            const desktopView = document.querySelector('.all-partners-grid');
+            
+            if (window.innerWidth >= 992) {
+                mobileView.style.display = 'none';
+                desktopView.style.display = 'grid';
+            } else {
+                mobileView.style.display = 'block';
+                desktopView.style.display = 'none';
+                initMobileView();
+            }
         }
+
+        // Initial check
+        checkView();
 
         // Make all partner cards clickable (optional)
         const partnerCards = document.querySelectorAll('.partner-card');
@@ -6759,24 +6928,8 @@
             });
         });
 
-        // Handle window resize to toggle between mobile/desktop views
-        window.addEventListener('resize', function() {
-            const mobileView = document.querySelector('.mobile-view');
-            const desktopView = document.querySelector('.all-partners-grid');
-            
-            if (window.innerWidth >= 992) {
-                mobileView.style.display = 'none';
-                desktopView.style.display = 'grid';
-            } else {
-                mobileView.style.display = 'block';
-                desktopView.style.display = 'none';
-                // Reinitialize mobile functionality if needed
-                if (!document.querySelector('.year-btn').hasEventListener) {
-                    initMobileView();
-                    document.querySelector('.year-btn').hasEventListener = true;
-                }
-            }
-        });
+        // Handle window resize
+        window.addEventListener('resize', checkView);
     });
 </script>
 
