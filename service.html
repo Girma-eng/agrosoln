@@ -374,8 +374,7 @@
 
         @media (max-width: 768px) {
             .slide {
-           
-            padding: 10px 4px;
+           padding: 3px 4px;
             
         }
         
@@ -2642,7 +2641,7 @@
 /* ========== VERY SMALL DEVICES ========== */
 @media (max-width: 400px) {
     .slide {
-        padding: 15px;
+        padding: 4px;
     }
 
     .slide-container-impact {
@@ -3146,7 +3145,7 @@
 
     @media (max-width: 768px) {
   .mo-slide-container {
-    padding: 20px;
+    padding: 5px;
     height: auto;
   }
 
@@ -3198,7 +3197,7 @@
   }
 
   .mo-data-card {
-    padding: 15px;
+    padding: 7px;
   }
 
   .mo-card-title {
@@ -3207,8 +3206,8 @@
 
   .mo-data-table th,
   .mo-data-table td {
-    padding: 10px;
-    font-size: 14px;
+    padding: 5px;
+    font-size: 11px;
   }
 
   .mo-legend {
@@ -3222,7 +3221,7 @@
   }
 
   .mo-zoom-wrapper {
-    padding: 15px;
+    padding: 3px;
   }
 }
 
@@ -3466,7 +3465,7 @@
 
     @media (max-width: 768px) {
   .mo-slide-container-2 {
-    padding: 20px;
+    padding: 5px;
     height: auto;
   }
 
@@ -5888,24 +5887,34 @@
             // Touch swipe for mobile
             let touchStartX = 0;
             let touchEndX = 0;
-            
+            let touchStartY = 0;
+            let touchEndY = 0;
+
             slidesContainer.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
             }, false);
-            
+
             slidesContainer.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
+                touchEndY = e.changedTouches[0].screenY;
                 handleSwipe();
             }, false);
-            
+
             function handleSwipe() {
-                if (touchEndX < touchStartX - 50) {
-                    goToSlide(currentSlide + 1); // Swipe left
-                }
-                if (touchEndX > touchStartX + 50) {
-                    goToSlide(currentSlide - 1); // Swipe right
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = touchEndY - touchStartY;
+
+                // Only trigger swipe if horizontal movement is significantly greater than vertical
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 100) {
+                    if (deltaX < 0) {
+                        goToSlide(currentSlide + 1); // Swipe left
+                    } else {
+                        goToSlide(currentSlide - 1); // Swipe right
+                    }
                 }
             }
+
         });
     </script>
 
