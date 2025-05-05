@@ -962,7 +962,7 @@
         
             .two-column-wrapper  {
                 flex-direction: column;
-                gap: 40px;
+                gap: 10px;
                 padding: 20px 10px;
             }
                
@@ -1035,7 +1035,7 @@
         
         .two-column-wrapper {
             display: flex;
-            gap: 40px;
+            gap: 20px;
             height: 100%;
             max-width: 1800px;
             width: 96%;
@@ -1400,7 +1400,7 @@
 
                 .label-cont-group div:first-child {
                 font-weight: bold;
-                font-size: 18px;
+                font-size: 20px;
                 color: #0ac746;
                 }
 
@@ -1537,6 +1537,11 @@
                        font-size: 14px;
                         font-weight: bold;
                         }
+                        .label-cont-group div:first-child {
+                font-weight: bold;
+                font-size: 14px;
+                color: #0ac746;
+                }
                     }
               
 
@@ -3782,6 +3787,259 @@
             font-size: 0.8rem;
             color: #666;
         }
+
+
+
+
+        /*--traction to date-----------------*/
+          /* New CSS for the Traction slide */
+          .traction-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .traction-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+        }
+
+        .timeline-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin-bottom: 4rem;
+        }
+
+        .timeline-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: var(--accent-color);
+            width: 100%;
+        }
+
+        .timeline-years {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 20px;
+        }
+
+        .year {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .year::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .partners-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Desktop layout - show all years at once */
+        .all-partners-grid {
+            display: none;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .year-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .year-group-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .year-group-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .year-partners {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .partner-card {
+            width: 100%;
+            height: 120px;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: scale(1.05);
+        }
+
+        .partner-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Mobile layout - show one year at a time */
+        .mobile-view {
+            display: block;
+            width: 100%;
+        }
+
+        .year-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 15px;
+        }
+
+        .year-btn {
+            background-color: var(--dark-green);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .year-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .year-btn.active {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            transform: scale(1.1);
+        }
+
+        .mobile-year-partners {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .mobile-year-partners.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .mobile-view {
+                display: none;
+            }
+            .all-partners-grid {
+                display: grid;
+            }
+            .timeline-container {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .traction-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .traction-title {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .partner-card {
+                width: 120px;
+                height: 90px;
+            }
+
+            .year-btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+
+            .timeline-container {
+                width: 95%;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .traction-title {
+                font-size: 1.5rem;
+            }
+
+            .partner-card {
+                width: 100px;
+                height: 80px;
+            }
+
+            .year-btn {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+
+            .year::before {
+                width: 12px;
+                height: 12px;
+                top: -22px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4307,44 +4565,44 @@
                     <div class="labels-cont-pad" style="font-size:1.2rem;">Explanation</div>
                 </div>
                 <div class="label-cont-group">
-                    <div style="font-size:1.6rem;">1.0x</div>
+                    <div>1.0x</div>
                     <div> Current Annual Yield / Baseline Income</div>
                     <div>--</div>
                     <div> Current smallholder farmer net income/year</div>
                     </div>
                     <div class="label-cont-group">
-                    <div style="font-size:1.6rem;">2.8x</div>
+                    <div>2.8x</div>
                     <div>Mechanisation + Agronomy</div>
                     <div>Yield & Labour productivity</div>
                     <div>Boosts productivity to ~7t/ha; labour efficiency improves</div>
                     </div>
                     <div class="label-cont-group">
-                    <div style="font-size:1.6rem;">1.3x</div>
+                    <div>1.3x</div>
                     <div>Market linkage & aggregation</div>
                     <div>Better prices</div>
                     <div> Aggregated output sold at better prices; fewer middlemen</div>
                     </div>
                     <div class="label-cont-group">
-                    <div style="font-size:1.6rem;">1.25x</div>
+                    <div>1.25x</div>
                     <div> Reduced input costs + lower post harvest losses</div>
                     <div> Cost/margin efficiency</div>
                     <div> Buying inputs in bulk; waste & loss reduction improve net earnings</div>
                     </div>
                     <div class="label-cont-group">
-                    <div style="font-size:1.6rem;">1.5x</div>
+                    <div>1.5x</div>
                     <div>Access to capital + tools</div>
                     <div>Expanded capacity</div>
                     <div> Enables second crop cycle, more land, better inputs, tech leverage</div>
                     </div>
                     <div class="label-cont-group">
-                    <div style="font-size:1.6rem;">1.25x</div>
+                    <div>1.25x</div>
                     <div> Digital services + climate insurance, etc</div>
                     <div> Risk reduction /continuity</div>
                     <div> Income floor rises; volatility dampened; longer-term stability
                         </div>
                     </div>
                     <div class="label-cont-group">
-                        <div style="font-size:1.6rem;">8.5x</div>
+                        <div>8.5x</div>
                         
                     </div>
                 </div>
@@ -5620,176 +5878,383 @@
             </div>
         </div>
 
-        <!--------------------------------- Slide ??: sTeam -->
-<div class="slide">
-    <h6 class="top-us-title-1" style="color: white;">
-        <span>05 -- Traction</span>
-    </h6>
 
-<div class="team-container">
-   
-    <div class="slide-header animate">
-        <h1 style="text-align: left;">The Core Team</h1>
-        <h2> We've been building an amazing team…</h2>
-    </div>
-    <div class="opco-grid">
-        <!-- Ethiopia Card -->
-        <div class="opco-card ethiopia">
-            <div class="card-header">
-                <h2 class="card-title">Ethiopia OpCo</h2>
-               
+
+
+
+
+
+
+
+
+
+  <!--------------------------------- Slide ??: traction to date -->
+
+
+
+
+
+
+
+
+
+            <div class="slide">
+                <h6 class="top-us-title-1" style="color: white;">
+                    <span>05 -- Traction</span>
+                </h6>
+                    <div class="traction-slide">
+                        <h1 class="traction-title">Traction to Date</h1>
+                        
+                        <div class="timeline-container">
+                            <div class="timeline">
+                                <div class="timeline-progress"></div>
+                            </div>
+                            <div class="timeline-years">
+                                <div class="year" data-year="2021">2021</div>
+                                <div class="year" data-year="2022">2022</div>
+                                <div class="year" data-year="2023">2023</div>
+                                <div class="year" data-year="2024">2024</div>
+                                <div class="year" data-year="2024">2025</div>
+                                <div class="year" data-year="2024">2026</div>
+                            </div>
+                        </div>
+            
+                        <!-- Desktop View - Shows all years at once -->
+                        <div class="all-partners-grid">
+                            <!-- 2021 Partners -->
+                            <div class="year-group">
+                                <h3 class="year-group-title">2021</h3>
+                                <div class="year-partners">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+1" alt="Partner 1">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+2" alt="Partner 2">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+3" alt="Partner 3">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- 2022 Partners -->
+                            <div class="year-group">
+                                <h3 class="year-group-title">2022</h3>
+                                <div class="year-partners">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+4" alt="Partner 4">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+5" alt="Partner 5">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+6" alt="Partner 6">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- 2023 Partners -->
+                            <div class="year-group">
+                                <h3 class="year-group-title">2023</h3>
+                                <div class="year-partners">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+7" alt="Partner 7">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+8" alt="Partner 8">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+9" alt="Partner 9">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- 2024 Partners -->
+                            <div class="year-group">
+                                <h3 class="year-group-title">2024</h3>
+                                <div class="year-partners">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2025 Partners -->
+                            <div class="year-group">
+                                <h3 class="year-group-title">2026</h3>
+                                <div class="year-partners">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2026 Partners -->
+                            <div class="year-group">
+                                <h3 class="year-group-title">2026</h3>
+                                <div class="year-partners">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Mobile View - Shows one year at a time -->
+                        <div class="mobile-view">
+                            <div class="year-selector">
+                                <button class="year-btn active" data-year="2021">2021</button>
+                                <button class="year-btn" data-year="2022">2022</button>
+                                <button class="year-btn" data-year="2023">2023</button>
+                                <button class="year-btn" data-year="2024">2024</button>
+                                <button class="year-btn" data-year="2024">2025</button>
+                                <button class="year-btn" data-year="2024">2026</button>
+                            </div>
+            
+                            <div class="partners-container">
+                                <!-- 2021 Partners -->
+                                <div class="mobile-year-partners active" data-year="2021">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+1" alt="Partner 1">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+2" alt="Partner 2">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+3" alt="Partner 3">
+                                    </div>
+                                </div>
+            
+                                <!-- 2022 Partners -->
+                                <div class="mobile-year-partners" data-year="2022">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+4" alt="Partner 4">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+5" alt="Partner 5">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+6" alt="Partner 6">
+                                    </div>
+                                </div>
+            
+                                <!-- 2023 Partners -->
+                                <div class="mobile-year-partners" data-year="2023">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+7" alt="Partner 7">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+8" alt="Partner 8">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+9" alt="Partner 9">
+                                    </div>
+                                </div>
+            
+                                <!-- 2024 Partners -->
+                                <div class="mobile-year-partners" data-year="2024">
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+10" alt="Partner 10">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+11" alt="Partner 11">
+                                    </div>
+                                    <div class="partner-card">
+                                        <img src="https://via.placeholder.com/150x80?text=Partner+12" alt="Partner 12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <div class="teams-grid">
-                <!-- Top Row -->
-                <div class="team-item" onclick="openModal('Operations Team', 'ethiopia', 'Ensures seamless service delivery across Ethiopia', 8, 15, 'https://randomuser.me/api/portraits/women/44.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team 1" class="team-img">
-                    <div class="team-name">Operations</div>
-                </div>
-                <div class="team-item" onclick="openModal('Logistics Team', 'ethiopia', 'Specializing in supply chain optimization', 6, 12, 'https://randomuser.me/api/portraits/men/32.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team 2" class="team-img">
-                    <div class="team-name">Logistics</div>
-                </div>
-                <!-- Bottom Row -->
-                <div class="team-item" onclick="openModal('Customer Team', 'ethiopia', 'Dedicated to exceptional customer experiences', 10, 20, 'https://randomuser.me/api/portraits/women/68.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team 3" class="team-img">
-                    <div class="team-name">Customer</div>
-                </div>
-                <div class="team-item" onclick="openModal('Tech Team', 'ethiopia', 'Developing innovative tech solutions', 7, 18, 'https://randomuser.me/api/portraits/men/75.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team 4" class="team-img">
-                    <div class="team-name">Tech</div>
-                </div>
-            </div>
-        </div>
         
-        <!-- Kenya Card -->
-        <div class="opco-card kenya">
-            <div class="card-header">
-                <h2 class="card-title">Kenya OpCo</h2>
+       
+        <!--------------------------------- Slide ??: sTeam -->
+            <div class="slide">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>05 -- Traction</span>
+                </h2>
+
+            <div class="team-container">
+            
+                <div class="slide-header animate">
+                    <h1 style="text-align: left;">The Core Team</h1>
+                    <h2> We've been building an amazing team…</h2>
+                </div>
+                <div class="opco-grid">
+                    <!-- Ethiopia Card -->
+                    <div class="opco-card ethiopia">
+                        <div class="card-header">
+                            <h2 class="card-title">Ethiopia OpCo</h2>
+                        
+                        </div>
+                        <div class="teams-grid">
+                            <!-- Top Row -->
+                            <div class="team-item" onclick="openModal('Operations Team', 'ethiopia', 'Ensures seamless service delivery across Ethiopia', 8, 15, 'https://randomuser.me/api/portraits/women/44.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team 1" class="team-img">
+                                <div class="team-name">Operations</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Logistics Team', 'ethiopia', 'Specializing in supply chain optimization', 6, 12, 'https://randomuser.me/api/portraits/men/32.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team 2" class="team-img">
+                                <div class="team-name">Logistics</div>
+                            </div>
+                            <!-- Bottom Row -->
+                            <div class="team-item" onclick="openModal('Customer Team', 'ethiopia', 'Dedicated to exceptional customer experiences', 10, 20, 'https://randomuser.me/api/portraits/women/68.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team 3" class="team-img">
+                                <div class="team-name">Customer</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Tech Team', 'ethiopia', 'Developing innovative tech solutions', 7, 18, 'https://randomuser.me/api/portraits/men/75.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team 4" class="team-img">
+                                <div class="team-name">Tech</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kenya Card -->
+                    <div class="opco-card kenya">
+                        <div class="card-header">
+                            <h2 class="card-title">Kenya OpCo</h2>
+                            
+                        </div>
+                        <div class="teams-grid">
+                            <!-- Top Row -->
+                            <div class="team-item" onclick="openModal('Nairobi Team', 'kenya', 'Leading operations in Kenya\'s capital region', 9, 22, 'https://randomuser.me/api/portraits/women/63.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Team 1" class="team-img">
+                                <div class="team-name">Nairobi</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Coastal Team', 'kenya', 'Specializing in coastal region operations', 5, 14, 'https://randomuser.me/api/portraits/men/44.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Team 2" class="team-img">
+                                <div class="team-name">Coastal</div>
+                            </div>
+                            <!-- Bottom Row -->
+                            <div class="team-item" onclick="openModal('Western Team', 'kenya', 'Agricultural sector specialists', 7, 16, 'https://randomuser.me/api/portraits/women/28.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Team 3" class="team-img">
+                                <div class="team-name">Western</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Digital Team', 'kenya', 'Driving digital transformation', 12, 25, 'https://randomuser.me/api/portraits/men/81.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Team 4" class="team-img">
+                                <div class="team-name">Digital</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Uganda Card -->
+                    <div class="opco-card uganda">
+                        <div class="card-header">
+                            <h2 class="card-title">Uganda OpCo</h2>
+                            
+                        </div>
+                        <div class="teams-grid">
+                            <!-- Top Row -->
+                            <div class="team-item" onclick="openModal('Kampala Team', 'uganda', 'Central operations team in Uganda\'s capital', 8, 19, 'https://randomuser.me/api/portraits/women/33.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Team 1" class="team-img">
+                                <div class="team-name">Kampala</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Northern Team', 'uganda', 'Special projects in northern Uganda', 6, 11, 'https://randomuser.me/api/portraits/men/29.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Team 2" class="team-img">
+                                <div class="team-name">Northern</div>
+                            </div>
+                            <!-- Bottom Row -->
+                            <div class="team-item" onclick="openModal('Agriculture Team', 'uganda', 'Agricultural innovation specialists', 9, 17, 'https://randomuser.me/api/portraits/women/55.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Team 3" class="team-img">
+                                <div class="team-name">Agriculture</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Partners Team', 'uganda', 'Building strategic partnerships', 5, 13, 'https://randomuser.me/api/portraits/men/66.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Team 4" class="team-img">
+                                <div class="team-name">Partners</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Design Card -->
+                    <div class="opco-card design">
+                        <div class="card-header">
+                            <h2 class="card-title">Studio Soal Design Team</h2>
+                        
+                        </div>
+                        <div class="teams-grid">
+                            <!-- Top Row -->
+                            <div class="team-item" onclick="openModal('Brand Team', 'design', 'Crafting compelling brand identities', 7, 30, 'https://randomuser.me/api/portraits/women/22.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Team 1" class="team-img">
+                                <div class="team-name">Brand</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('UX/UI Team', 'design', 'Creating intuitive digital experiences', 10, 45, 'https://randomuser.me/api/portraits/men/38.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Team 2" class="team-img">
+                                <div class="team-name">UX/UI</div>
+                            </div>
+                            <!-- Bottom Row -->
+                            <div class="team-item" onclick="openModal('Content Team', 'design', 'Storytellers for all platforms', 8, 38, 'https://randomuser.me/api/portraits/women/77.jpg')">
+                                <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Team 3" class="team-img">
+                                <div class="team-name">Content</div>
+                            </div>
+                            <div class="team-item" onclick="openModal('Digital Team', 'design', 'Marketing strategy experts', 9, 42, 'https://randomuser.me/api/portraits/men/53.jpg')">
+                                <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Team 4" class="team-img">
+                                <div class="team-name">Digital</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-            </div>
-            <div class="teams-grid">
-                <!-- Top Row -->
-                <div class="team-item" onclick="openModal('Nairobi Team', 'kenya', 'Leading operations in Kenya\'s capital region', 9, 22, 'https://randomuser.me/api/portraits/women/63.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Team 1" class="team-img">
-                    <div class="team-name">Nairobi</div>
-                </div>
-                <div class="team-item" onclick="openModal('Coastal Team', 'kenya', 'Specializing in coastal region operations', 5, 14, 'https://randomuser.me/api/portraits/men/44.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Team 2" class="team-img">
-                    <div class="team-name">Coastal</div>
-                </div>
-                <!-- Bottom Row -->
-                <div class="team-item" onclick="openModal('Western Team', 'kenya', 'Agricultural sector specialists', 7, 16, 'https://randomuser.me/api/portraits/women/28.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Team 3" class="team-img">
-                    <div class="team-name">Western</div>
-                </div>
-                <div class="team-item" onclick="openModal('Digital Team', 'kenya', 'Driving digital transformation', 12, 25, 'https://randomuser.me/api/portraits/men/81.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Team 4" class="team-img">
-                    <div class="team-name">Digital</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Uganda Card -->
-        <div class="opco-card uganda">
-            <div class="card-header">
-                <h2 class="card-title">Uganda OpCo</h2>
-                
-            </div>
-            <div class="teams-grid">
-                <!-- Top Row -->
-                <div class="team-item" onclick="openModal('Kampala Team', 'uganda', 'Central operations team in Uganda\'s capital', 8, 19, 'https://randomuser.me/api/portraits/women/33.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Team 1" class="team-img">
-                    <div class="team-name">Kampala</div>
-                </div>
-                <div class="team-item" onclick="openModal('Northern Team', 'uganda', 'Special projects in northern Uganda', 6, 11, 'https://randomuser.me/api/portraits/men/29.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Team 2" class="team-img">
-                    <div class="team-name">Northern</div>
-                </div>
-                <!-- Bottom Row -->
-                <div class="team-item" onclick="openModal('Agriculture Team', 'uganda', 'Agricultural innovation specialists', 9, 17, 'https://randomuser.me/api/portraits/women/55.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Team 3" class="team-img">
-                    <div class="team-name">Agriculture</div>
-                </div>
-                <div class="team-item" onclick="openModal('Partners Team', 'uganda', 'Building strategic partnerships', 5, 13, 'https://randomuser.me/api/portraits/men/66.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Team 4" class="team-img">
-                    <div class="team-name">Partners</div>
+                <!-- PropCo Section -->
+                <div class="propco-section">
+                    <h2 class="section-title">PropCo Teams</h2>
+                    <div class="propco-grid">
+                        <div class="team-item" onclick="openModal('Commercial Team', 'propco', 'Managing commercial properties portfolio', 12, 28, 'https://randomuser.me/api/portraits/women/41.jpg')">
+                            <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Team 1" class="team-img">
+                            <div class="team-name">Commercial</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Residential Team', 'propco', 'Residential property specialists', 15, 35, 'https://randomuser.me/api/portraits/men/47.jpg')">
+                            <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Team 2" class="team-img">
+                            <div class="team-name">Residential</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Construction Team', 'propco', 'Overseeing development projects', 20, 18, 'https://randomuser.me/api/portraits/women/39.jpg')">
+                            <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="Team 3" class="team-img">
+                            <div class="team-name">Construction</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Legal Team', 'propco', 'Ensuring compliance across properties', 6, 52, 'https://randomuser.me/api/portraits/men/61.jpg')">
+                            <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Team 4" class="team-img">
+                            <div class="team-name">Legal</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Finance Team', 'propco', 'Managing investments and strategies', 8, 40, 'https://randomuser.me/api/portraits/women/51.jpg')">
+                            <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Team 5" class="team-img">
+                            <div class="team-name">Finance</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Facilities Team', 'propco', 'Maintaining all properties', 25, 65, 'https://randomuser.me/api/portraits/men/72.jpg')">
+                            <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Team 6" class="team-img">
+                            <div class="team-name">Facilities</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Green Team', 'propco', 'Sustainable building practices', 7, 22, 'https://randomuser.me/api/portraits/women/66.jpg')">
+                            <img src="https://randomuser.me/api/portraits/women/66.jpg" alt="Team 7" class="team-img">
+                            <div class="team-name">Green</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('Tech Team', 'propco', 'Smart building technologies', 9, 30, 'https://randomuser.me/api/portraits/men/84.jpg')">
+                            <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Team 8" class="team-img">
+                            <div class="team-name">Tech</div>
+                        </div>
+                        <div class="team-item" onclick="openModal('CX Team', 'propco', 'Enhancing customer experiences', 10, 48, 'https://randomuser.me/api/portraits/women/88.jpg')">
+                            <img src="https://randomuser.me/api/portraits/women/88.jpg" alt="Team 9" class="team-img">
+                            <div class="team-name">CX</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Design Card -->
-        <div class="opco-card design">
-            <div class="card-header">
-                <h2 class="card-title">Studio Soal Design Team</h2>
-              
             </div>
-            <div class="teams-grid">
-                <!-- Top Row -->
-                <div class="team-item" onclick="openModal('Brand Team', 'design', 'Crafting compelling brand identities', 7, 30, 'https://randomuser.me/api/portraits/women/22.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Team 1" class="team-img">
-                    <div class="team-name">Brand</div>
-                </div>
-                <div class="team-item" onclick="openModal('UX/UI Team', 'design', 'Creating intuitive digital experiences', 10, 45, 'https://randomuser.me/api/portraits/men/38.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Team 2" class="team-img">
-                    <div class="team-name">UX/UI</div>
-                </div>
-                <!-- Bottom Row -->
-                <div class="team-item" onclick="openModal('Content Team', 'design', 'Storytellers for all platforms', 8, 38, 'https://randomuser.me/api/portraits/women/77.jpg')">
-                    <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Team 3" class="team-img">
-                    <div class="team-name">Content</div>
-                </div>
-                <div class="team-item" onclick="openModal('Digital Team', 'design', 'Marketing strategy experts', 9, 42, 'https://randomuser.me/api/portraits/men/53.jpg')">
-                    <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Team 4" class="team-img">
-                    <div class="team-name">Digital</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- PropCo Section -->
-    <div class="propco-section">
-        <h2 class="section-title">PropCo Teams</h2>
-        <div class="propco-grid">
-            <div class="team-item" onclick="openModal('Commercial Team', 'propco', 'Managing commercial properties portfolio', 12, 28, 'https://randomuser.me/api/portraits/women/41.jpg')">
-                <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Team 1" class="team-img">
-                <div class="team-name">Commercial</div>
-            </div>
-            <div class="team-item" onclick="openModal('Residential Team', 'propco', 'Residential property specialists', 15, 35, 'https://randomuser.me/api/portraits/men/47.jpg')">
-                <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Team 2" class="team-img">
-                <div class="team-name">Residential</div>
-            </div>
-            <div class="team-item" onclick="openModal('Construction Team', 'propco', 'Overseeing development projects', 20, 18, 'https://randomuser.me/api/portraits/women/39.jpg')">
-                <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="Team 3" class="team-img">
-                <div class="team-name">Construction</div>
-            </div>
-            <div class="team-item" onclick="openModal('Legal Team', 'propco', 'Ensuring compliance across properties', 6, 52, 'https://randomuser.me/api/portraits/men/61.jpg')">
-                <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Team 4" class="team-img">
-                <div class="team-name">Legal</div>
-            </div>
-            <div class="team-item" onclick="openModal('Finance Team', 'propco', 'Managing investments and strategies', 8, 40, 'https://randomuser.me/api/portraits/women/51.jpg')">
-                <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Team 5" class="team-img">
-                <div class="team-name">Finance</div>
-            </div>
-            <div class="team-item" onclick="openModal('Facilities Team', 'propco', 'Maintaining all properties', 25, 65, 'https://randomuser.me/api/portraits/men/72.jpg')">
-                <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Team 6" class="team-img">
-                <div class="team-name">Facilities</div>
-            </div>
-            <div class="team-item" onclick="openModal('Green Team', 'propco', 'Sustainable building practices', 7, 22, 'https://randomuser.me/api/portraits/women/66.jpg')">
-                <img src="https://randomuser.me/api/portraits/women/66.jpg" alt="Team 7" class="team-img">
-                <div class="team-name">Green</div>
-            </div>
-            <div class="team-item" onclick="openModal('Tech Team', 'propco', 'Smart building technologies', 9, 30, 'https://randomuser.me/api/portraits/men/84.jpg')">
-                <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Team 8" class="team-img">
-                <div class="team-name">Tech</div>
-            </div>
-            <div class="team-item" onclick="openModal('CX Team', 'propco', 'Enhancing customer experiences', 10, 48, 'https://randomuser.me/api/portraits/women/88.jpg')">
-                <img src="https://randomuser.me/api/portraits/women/88.jpg" alt="Team 9" class="team-img">
-                <div class="team-name">CX</div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
 
 
@@ -6216,6 +6681,104 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile year switching functionality
+        const initMobileView = () => {
+            const yearButtons = document.querySelectorAll('.year-btn');
+            const mobileYearPartners = document.querySelectorAll('.mobile-year-partners');
+            const years = document.querySelectorAll('.year');
+
+            // Initialize timeline progress based on current year
+            const currentYear = new Date().getFullYear();
+            const startYear = 2021;
+            let progressPercentage = ((currentYear - startYear) / (2024 - startYear)) * 100;
+            progressPercentage = Math.min(100, Math.max(0, progressPercentage)); // Clamp between 0-100
+            document.querySelector('.timeline-progress').style.width = `${progressPercentage}%`;
+
+            // Highlight current year in timeline
+            years.forEach(year => {
+                if (parseInt(year.dataset.year) === currentYear) {
+                    year.style.color = 'var(--accent-color)';
+                }
+            });
+
+            // Handle year button clicks
+            yearButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedYear = this.dataset.year;
+
+                    // Update active button
+                    yearButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show corresponding partners
+                    mobileYearPartners.forEach(container => {
+                        container.classList.remove('active');
+                        if (container.dataset.year === selectedYear) {
+                            container.classList.add('active');
+                        }
+                    });
+
+                    // Highlight selected year in timeline
+                    years.forEach(year => {
+                        year.style.color = 'white';
+                        if (year.dataset.year === selectedYear) {
+                            year.style.color = 'var(--accent-color)';
+                        }
+                    });
+                });
+            });
+        };
+
+        // Check if mobile view is active and initialize
+        if (window.innerWidth < 992) {
+            initMobileView();
+        }
+
+        // Make all partner cards clickable (optional)
+        const partnerCards = document.querySelectorAll('.partner-card');
+        partnerCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Add your click handler here
+                console.log('Partner clicked:', this.querySelector('img').alt);
+            });
+        });
+
+        // Handle window resize to toggle between mobile/desktop views
+        window.addEventListener('resize', function() {
+            const mobileView = document.querySelector('.mobile-view');
+            const desktopView = document.querySelector('.all-partners-grid');
+            
+            if (window.innerWidth >= 992) {
+                mobileView.style.display = 'none';
+                desktopView.style.display = 'grid';
+            } else {
+                mobileView.style.display = 'block';
+                desktopView.style.display = 'none';
+                // Reinitialize mobile functionality if needed
+                if (!document.querySelector('.year-btn').hasEventListener) {
+                    initMobileView();
+                    document.querySelector('.year-btn').hasEventListener = true;
+                }
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
