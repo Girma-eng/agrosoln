@@ -118,7 +118,7 @@
                 /*====================================== Navigation Controls ==================================*/
                 .nav-controls {
             position: fixed;
-            bottom: 20px;
+            bottom: 10px;
             left: 0;
             right: 0;
             display: flex;
@@ -275,7 +275,37 @@
 
 
 
+        .slide-content-1 {
+               
+                padding:200px 20px;
+                width: 95%;
+                height: 55%;
+                padding-left: 10px;
+                overflow-y: auto;
+              
+            }
+            .slide-content-1 h1{
+               font-size: 6rem;
+               text-shadow:
+                    -1px -1px 0 black,  
+                    1px -1px 0 black,
+                    -1px  1px 0 black,
+                    1px  1px 0 black; /* Black border around the text */
+            }
+        .slide-content-1 h2{
+           font-size: 2rem;
+           color: green;
+                }
+                .bg-image {
+            background-color: rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            background-position: center;
+            color: var(--light-text);
+            background-repeat: no-repeat;
+            text-align: center;
+           
 
+        }
 
 
 
@@ -415,6 +445,27 @@
     margin-bottom: 0.1rem;
 }
 
+.slide-content-1 {
+              
+                padding: 20px;
+                width: 95%;
+                height: 55%;
+                padding-left: 10px;
+                overflow-y: auto;
+            }
+            .slide-content-1 h1{
+               font-size: 2rem;
+               text-shadow:
+                    -1px -1px 0 black,  
+                    1px -1px 0 black,
+                    -1px  1px 0 black,
+                    1px  1px 0 black; /* Black border around the text */
+            }
+        .slide-content-1 h2{
+           font-size: 1.2rem;
+           color: green;
+           text-align: center;
+                }
       
         }
 
@@ -724,13 +775,25 @@
 
 
 
-
         .logo {
             position: absolute;
             bottom: -10px;
            right: 25px;
             max-width: 150px;
             z-index: 100;
+           
+
+        }
+
+
+        .logo-2 {
+            position: absolute;
+           height: 300px;
+            width: 300px;
+            z-index: 100;
+            top: 600px;
+            left: 500px;
+
         }
 
 
@@ -740,7 +803,7 @@
            
             max-width: 1800px;
             width: 100%;
-            height: 95%;
+            height: 92%;
             background-color: rgba(0, 0, 0, 1);
             border-radius: 15px;
             padding: 10px 10px;
@@ -4291,7 +4354,7 @@
 
         .contact-image {
             flex: 1;
-            background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('image_file/cartoon_3.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 10px;
@@ -4419,18 +4482,20 @@
     <div class="slides-container" id="slidesContainer">
      
         
-        <!-- Content Slides -->
-        <div class="slide active" id="title-slide" style="background-color: black;">
-            <div class="slide-content-title" style="background-color: black; text-align: left; color: white;">
-            
+        <!-- title Slides -->
+        <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+            <div class="slide-content-1">
+               
                 <h1>The Farmhub Model</h1>
                 <h2 style="color: white;">Investor Introduction</h2>
+             
             </div>
-        
-            <div class="footer" style="text-align: center; bottom: 100px; left: 5px;">
+            <img src="image_file/logo_farmhub.png" alt="Farm Hub Ethiopia Logo" class="logo-2">
+            <div class="footer">
                 <p>2025</p>
             </div>
         </div>
+    
        
         <!---------------------------------------------------- Slide 3: SubTitle Slide -->
    <!-- Table of Contents Slide -->
@@ -6911,33 +6976,17 @@
                         
                         <div class="contact-details">
                             <div class="contact-card">
-                                <h3>Contact Information</h3>
-                                <div class="contact-info">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="contact-text">
-                                        <a href="mailto:contact@farmhub.com">contact@farmhub.com</a>
-                                    </div>
-                                </div>
-                                <div class="contact-info">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <div class="contact-text">
-                                        <a href="tel:+1234567890">+1 (234) 567-890</a>
-                                    </div>
-                                </div>
+                                <h3> The systemic challenges that we are addressing 
+                                    can only be solved through the creation of a 
+                                    symbiotic network of talented, like-minded, and 
+                                    inspired individuals and organisations. The Farmhub 
+                                    team are seeking partners and investors who share 
+                                    our vision, and who will work tirelessly with us to turn 
+                                    this vision into reality</h3>
+                          
                             </div>
                             
-                            <div class="contact-card">
-                                <h3>Connect With Us</h3>
-                                <div class="social-links">
-                                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                                </div>
-                            </div>
+                        
                         </div>
                     </div>
                 </div>
