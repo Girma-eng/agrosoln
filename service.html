@@ -100,8 +100,8 @@
         
         .toc-btn {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 10px;
+            left: 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -244,7 +244,16 @@
                 height: 30px;
                 font-size: 1.0rem;
             }
-            
+            .toc-btn {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+           
+            padding: 5px 5px;
+           width: 30px;
+            height: 30px;
+        }
+        
          
             
             /* Stack columns on mobile */
@@ -279,13 +288,13 @@
                
                 padding:200px 20px;
                 width: 95%;
-                height: 55%;
+                height: 85%;
                 padding-left: 10px;
                 overflow-y: auto;
               
             }
             .slide-content-1 h1{
-               font-size: 6rem;
+               font-size: 4rem;
                text-shadow:
                     -1px -1px 0 black,  
                     1px -1px 0 black,
@@ -376,7 +385,7 @@
               .slide-content {
                   max-width: 1800px;
                   width: 100%;
-                  height: 100%;
+                  height: 92%;
                   background-color: rgba(0, 0, 0, 0.7);
                   color: var(--light-text);
                   border-radius: 15px;
@@ -788,10 +797,10 @@
 
         .logo-2 {
             position: absolute;
-           height: 300px;
+           height: 150px;
             width: 300px;
             z-index: 100;
-            top: 600px;
+            top: 400px;
             left: 500px;
 
         }
@@ -1077,6 +1086,23 @@
             font-weight: bold;
             font-size: 1.0rem;
         }
+        
+        .logo {
+           
+            bottom: 4px;
+           right: 15px;
+            width: 100px;
+            z-index: 100;
+           }
+           .logo-2 {
+            position: absolute;
+           height:80px;
+            width: 100px;
+            z-index: 100;
+            top: 250px;
+            left: 100px;
+
+        }
 
         }
 
@@ -1238,6 +1264,8 @@
             align-items: center;
             justify-content: center;
             display: block;
+            overflow: auto;
+            height: 100%;
         }
         }
 
@@ -1298,6 +1326,14 @@
                     height: 300px; /* Fixed mobile height */
                     margin-top: 20px;
                 }
+                .image-3-content {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    height: 500px; /* Fixed mobile height */
+                    margin-top: 20px;
+                    overflow-y: auto;
+                }
                     }
                 .text-2-content {
                     padding: 20px;
@@ -1338,6 +1374,7 @@
                 box-shadow: 0 8px 30px rgba(0,0,0,0.08);
                 max-width: 1600px;
                 width: 90%;
+                height: 93%;
                 margin: 0 auto;
                 overflow-y: auto;
                 }
@@ -1552,6 +1589,11 @@
 
                  /* Mobile Responsiveness */
             @media (max-width: 768px) {
+                
+            .container-cont {
+              display: none;
+                }
+
                 .chart {
                 
                 gap: 1px;
@@ -1571,7 +1613,7 @@
              
 
                 .bar {
-                width: 30px;
+                width: 100px;
                 
                 }
                 .container-cont {
@@ -4885,25 +4927,22 @@
             
             </div>
         </div>
-        <!---------------------------- Slide 11: The Context-01 bar graph-->
+        <!---------------------------- Slide7: The Context-01 bar graph-->
         <div class="slide">
-            <h2 class="top-us-title-1" style="color: white;">
-                <span>01-The Context</span>
-            </h2>
-            <h2 class="top-us-title-2" style="color: white;">
-                <span>A 10X Transformation is Possible</span>
-            </h2>
-            
-              
+                        <h2 class="top-us-title-1" style="color: white;">
+                            <span>01-The Context</span>
+                        </h2>
+                        <h2 class="top-us-title-2" style="color: white;">
+                            <span>A 10X Transformation is Possible</span>
+                        </h2>
             <div class="container-cont">
 
-                    <div class="income-line"></div>
-                    <div class="income-line-1"></div>
-                    <div class="income-line-2"></div>
-                    <div class="income-line-3"></div>
+                                <div class="income-line"></div>
+                                <div class="income-line-1"></div>
+                                <div class="income-line-2"></div>
+                                <div class="income-line-3"></div>
                         <div class="income-growth">
                             <h1>Income Growth: 8.5X</h1>
-
                         </div>
 
                 <div class="chart">
@@ -5015,40 +5054,44 @@
                         
                     </div>
                 </div>
-            
-
+                
+            </div>
+            <div class="visual-column-2">
+                   
+                       
+                <img src="image_file/10x_transformation.jpg" alt="Farm Hub"  class="image-3-content">
             </div>
         </div>
 
 
-        <!---------------------------- Slide : The System vision-->
+        <!---------------------------- Slide 8 : The System vision-->
         <div class="slide">
-        <div class="slide-content-challenge">
-            <h2 class="top-us-title-1" style="color: white;">
-                <span>01-The Context</span>
-            </h2>
-            <h2 class="top-us-title-2" style="color: white;">
-                <span>But we need a new System Vision & Strategy</span>
-            </h2>
-            <div class="smallholder-section">
-                    <!-- Text Section -->
-                
-                    <div class="text-column" style="flex: 0 0 10%;">
-                        <h2 class="section-title-context"></h2>
+            <div class="slide-content-challenge">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>01-The Context</span>
+                </h2>
+                <h2 class="top-us-title-2" style="color: white;">
+                    <span>But we need a new System Vision & Strategy</span>
+                </h2>
+                <div class="smallholder-section">
+                        <!-- Text Section -->
                     
-                    </div>
-            
-                <!-- Image Section -->
-                <div class="image-column" style="flex: 0 0 75%;">
-                    <img src="image_file/new_system_vision.jpg" alt="Farm Hub Model">
-                </div>
+                        <div class="text-column" style="flex: 0 0 10%;">
+                            <h2 class="section-title-context"></h2>
+                        
+                        </div>
                 
-            
+                    <!-- Image Section -->
+                    <div class="image-column" style="flex: 0 0 75%;">
+                        <img src="image_file/new_system_vision.jpg" alt="Farm Hub Model">
+                    </div>
+                    
+                
+                </div>
             </div>
-        </div>
         </div>
     
-        <!---------------------------------------------------- Slide 3: SubTitle Slide -->
+        <!---------------------------------------------------- Slide 9: SubTitle Slide -->
     
         <div class="slide" id="title-slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
@@ -5062,7 +5105,7 @@
                 
             </div>
         </div>
-        <!------------------------------------- Slide 7: Farmhub Model Overview -->
+        <!------------------------------------- Slide 10: Farmhub Model Overview -->
         <div class="slide">
            
             <div class="slide-content-challenge">
