@@ -236,7 +236,7 @@
             }
             p-2 {
             font-size: 0.9rem;
-            padding: 0.5rem;
+            padding: 0.1rem;
             margin: 0.3rem 0;
         }
             .nav-btn {
@@ -286,7 +286,7 @@
 
         .slide-content-1 {
                
-                padding:200px 20px;
+                padding:20px 20px;
                 width: 95%;
                 height: 85%;
                 padding-left: 10px;
@@ -653,7 +653,7 @@
         .triple-bar-graph,
         .double-bar-graph {
             display: flex;
-            height: 140px;
+            height: 100px;
             align-items: flex-end;
             margin: 10px 0;
             gap: 20px;
@@ -747,7 +747,7 @@
     .double-bar-graph {
         height: 120px;
         gap: 8px;
-        overflow-x: auto;
+       
         padding-bottom: 15px;
     }
     
@@ -811,12 +811,12 @@
 
 
         .logo-2 {
-            position: absolute;
-           height: 150px;
-            width: 300px;
+            position: relative;
+           height: 120px;
+            width: 250px;
             z-index: 100;
-            top: 400px;
-            left: 500px;
+            top: 10px;
+           
 
         }
 
@@ -830,7 +830,7 @@
             height: 92%;
             background-color: rgba(0, 0, 0, 1);
             border-radius: 15px;
-            padding: 10px 10px;
+            padding: 10px 1px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow-y: auto;
             position: relative;
@@ -1078,6 +1078,12 @@
             .highlight-panel {
                     font-size: 0.9rem;
                     margin:0 0;
+                  
+                    border-left: 2px solid #2e7d32;
+                    padding: 0.1rem;
+                    
+                    border-radius: 0 8px 8px 0;
+                    color: white;
             }
             .model-card h3 {
                 font-size: 0.9rem;
@@ -1117,6 +1123,13 @@
             top: 250px;
             left: 100px;
 
+        }
+        .section-content-context {
+            font-size: 1.0rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+           padding-left: 5px;
+            border-left: 3px solid var(--light);
         }
 
         }
@@ -1166,7 +1179,7 @@
         }
         .visual-column-2 {
             flex: 1;
-            display: flex;
+           
             align-items: center;
             justify-content: center;
             display: none;
@@ -1215,8 +1228,8 @@
         
         .highlight-panel {
             background-color: rgba(46, 125, 50, 0.08);
-            border-left: 4px solid #2e7d32;
-            padding: 0.5rem;
+            border-left: 3px solid #2e7d32;
+            padding: 0.3rem;
             margin: 0.3rem 0;
             border-radius: 0 8px 8px 0;
             color: white;
@@ -1274,13 +1287,18 @@
         }
         
         .visual-column-2 {
+           
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            display: block;
-            overflow: auto;
-            height: 100%;
+        
+
+        }
+        .two-column-wrapper {
+           
+           
+           width: 100%;
         }
         }
 
@@ -1603,6 +1621,12 @@
 
 
                  /* Mobile Responsiveness */
+                 @media (max-width: 1024px) {
+                 .bar {
+                width: 70px;
+              
+                }
+            }
             @media (max-width: 768px) {
                 
             .container-cont {
@@ -2165,155 +2189,250 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px;
+      padding: 10px;
       position: relative;
     }
 
-    .pyramid {
-      position: relative;
-      width: 600px;
-      height: 540px;
-    }
+         /* Pyramid styles */
+         .pyramid {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 600px;
+        }
 
-    .triangle {
-      width: 600px;
-      height: 540px;
-      background: #515157;
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .layer-content {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      color: white;
-      font-weight: normal;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .layer-icon {
+        .triangle {
+            width: 100%;
+            height: 600px;
+            background: #515157;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .card-icon-pyramid {
             width: 60px;
             height: 60px;
-            background-color: var(--light);
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 10px;
-            color: var(--primary);
-            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
-    .layer-icon svg {
-      width: 100%;
-      height: 100%;
-      color: white;
-    }
+        .card-icon-pyramid img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        /* Colored layers */
+        .layer-overlay {
+            position: absolute;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
 
-    .layer-text {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-    .layer-text-2 {
-      font-size: 1.0rem;
-    }
+        .layer1-bg {
+            width: 100%;
+            height: 120px;
+            background-color: #4CAF50; /* Green */
+            top: 480px;
+        }
 
+        .layer2-bg {
+            width: 80%;
+            height: 150px;
+            background-color: #2196F3; /* Blue */
+            top: 330px;
+            left: 10%;
+        }
 
-    .layer1 {
-      top: 480px;
-    }
+        .layer3-bg {
+            width: 55%;
+            height: 150px;
+            background-color: #FF9800; /* Orange */
+            top: 180px;
+            left: 22.5%;
+        }
 
-    .layer2 {
-      top: 350px;
-    }
+        .layer4-bg {
+            width: 35%;
+            height: 150px;
+            background-color: #F44336; /* Red */
+            top: 30px;
+            left: 32.5%;
+        }
 
-    .layer3 {
-      top: 220px;
-    }
-    
-    .layer4 {
-      top: 80px;
-    }
+        .layer-content {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-weight: normal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
 
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
 
-    /* Divider Lines */
-    .divider {
-      position: absolute;
-      height: 3px;
-      background:black;
-      width: 80%;
-      left: 10%;
-    }
+        .card-icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
 
-    .divider1 {
-      top: 460px;
-      width: 80%;
-      left: 10%;
-    }
+        .layer-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .layer-text-2 {
+            font-size: 1.0rem;
+            opacity: 0.9;
+        }
 
-    .divider2 {
-      top: 330px;
-      width: 55%;
-      left: 22%;
-    }
-    .divider3 {
-      top: 200px;
-      width: 35%;
-      left: 32%;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .slide-container {
-        flex-direction: column;
-      }
-      .pyramid-section {
-        padding: 20px;
-      }
-      .pyramid {
-        width: 300px;
-        height: 270px;
-      }
-      .triangle {
-        width: 300px;
-        height: 270px;
-      }
-      .layer-icon {
-        width: 30px;
-        height: 30px;
-      }
-      .layer-text {
-        font-size: 1.2rem;
-      }
-      .layer1 {
-        top: 210px;
-      }
-      .layer2 {
-        top: 135px;
-      }
-      .layer3 {
-        top: 60px;
-      }
-      .divider {
-        width: 80%;
-      }
-      .divider1 {
-        top: 180px;
-      }
-      .divider2 {
-        top: 90px;
-      }
-    }
+        .layer1 {
+            top: 530px;
+        }
 
+        .layer2 {
+            top: 350px;
+        }
 
+        .layer3 {
+            top: 200px;
+        }
+        
+        .layer4 {
+            top: 60px;
+        }
 
+        /* Divider Lines */
+        .divider {
+            position: absolute;
+            height: 3px;
+            background: black;
+            width: 80%;
+            left: 10%;
+            z-index: 1;
+        }
 
+        .divider1 {
+            top: 480px;
+            width: 80%;
+            left: 10%;
+        }
 
+        .divider2 {
+            top: 330px;
+            width: 55%;
+            left: 22.5%;
+        }
+        
+        .divider3 {
+            top: 180px;
+            width: 35%;
+            left: 32.5%;
+        }
 
+ /* Mobile responsiveness */
+ @media (max-width: 768px) {
+                    
+       
+            .pyramid {
+                height: 400px;
+                max-width: 400px;
+            }
+            
+            .triangle, .layer-overlay {
+                height: 400px;
+            }
+            
+            /* Adjust layer positions */
+            .layer1-bg {
+                top: 320px;
+                height: 80px;
+            }
+            
+            .layer2-bg {
+                top: 230px;
+                height: 90px;
+            }
+            
+            .layer3-bg {
+                top: 140px;
+                height: 90px;
+            }
+            
+            .layer4-bg {
+                top: 60px;
+                height: 80px;
+            }
+            
+            .layer1 {
+                top: 360px;
+            }
+            
+            .layer2 {
+                top: 255px;
+            }
+            
+            .layer3 {
+                top: 165px;
+            }
+            
+            .layer4 {
+                top: 80px;
+            }
+            
+            .divider1 {
+                top: 320px;
+            }
+            
+            .divider2 {
+                top: 230px;
+            }
+            
+            .divider3 {
+                top: 140px;
+            }
+            
+      
+            
+            .layer-text {
+                font-size: 0.9rem;
+                margin-bottom: 1px;
+            }
+            
+            .layer-text-2 {
+                font-size: 0.9rem;
+            }
+            .card-icon-pyramid {
+            width: 20px;
+            height: 20px;
+           margin-bottom: 1px;
+        }
+
+        .card-icon-pyramid img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        }
+
+   
 
 
 
@@ -2333,8 +2452,8 @@
 
         .center-image {
             position: absolute;
-            width: 20%;
-            height: 20%;
+            width: 23%;
+            height: 25%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -2351,9 +2470,9 @@
 
         .approach-text-box {
             position: absolute;
-            width: 90px;
-            height: 90px;
-            padding: 8px;
+            width: 120px;
+            height: 120px;
+            padding: 4px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -2433,7 +2552,23 @@
         .delay-3 { animation-delay: 0.6s; }
         .delay-4 { animation-delay: 0.8s; }
 
-
+        @media (max-width: 767px) {
+            .approach-text-box {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            padding: 4px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease-out;
+            z-index: 2;
+            border: 4px solid rgb(70, 178, 202);
+        }
+        }
 
         /* ========== impact by level ========== */
 :root {
@@ -2706,26 +2841,41 @@
         justify-content: center;
       }
 
+ 
       .level-card {
         writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        height: 150px;
-        width: 30%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 0.2rem;
-        padding: 1rem 0.5rem;
-      }
+        transform: rotate(0deg);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    text-align: left;
+  }
 
       .level-icon {
         transform: rotate(180deg);
       }
 
       .level-title {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
         font-size: 0.85rem;
       }
+      .approach-arrow {
+          
+            font-size: 24px;
+            color: white;
+           
+            transform: scale(0.8);
+            transition: all 0.4s ease-out;
+           
+            width: 30px;
+            height: 30px;
+            line-height: 60px;
+        }
 }
 
 @media (max-width: 768px) {
@@ -2740,16 +2890,7 @@
     gap: 1rem;
   }
 
-  .level-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    width: auto;
-    height: auto;
-  }
+
 
   .level-icon {
     writing-mode: vertical-rl;
@@ -2759,7 +2900,7 @@
 
   .level-title {
     writing-mode: vertical-rl;
-    transform: rotate(180deg);
+   
     font-size: 0.9rem;
     margin: 0;
   }
@@ -2767,6 +2908,13 @@
     padding: 0.5rem;
     min-height: 100px;
 }
+  
+.approach-container {
+           
+            padding-bottom: 50%; /* Adjust based on your image aspect ratio */
+           
+            left: -15px;
+        }
 }
 
 
@@ -4542,12 +4690,12 @@
         <!-- title Slides -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
-               
+                <img src="image_file/logo_farmhub.png" alt="Farm Hub Ethiopia Logo" class="logo-2">
                 <h1>The Farmhub Model</h1>
                 <h2 style="color: white;">Investor Introduction</h2>
-             
+               
             </div>
-            <img src="image_file/logo_farmhub.png" alt="Farm Hub Ethiopia Logo" class="logo-2">
+          
             <div class="footer">
                 <p>2025</p>
             </div>
@@ -4943,7 +5091,12 @@
             
             </div>
         </div>
-        <!---------------------------- Slide7: The Context-01 bar graph-->
+         <!---------------------------- Slide 7: The Context-4 -->
+        <div class="slide title-slide" style="background-image: url('image_file/regenerative_trans.jpg'); background-size: cover; background-position: center;">
+            <h1></h1>
+            <p></p>
+        </div>
+        <!---------------------------- Slide 8: The Context-01 bar graph-->
         <div class="slide">
                         <h2 class="top-us-title-1" style="color: white;">
                             <span>01-The Context</span>
@@ -4953,7 +5106,7 @@
                         </h2>
             <div class="container-cont">
 
-                                <div class="income-line"></div>
+                                <div class="income-line-1"></div>
                                 <div class="income-line-1"></div>
                                 <div class="income-line-2"></div>
                                 <div class="income-line-3"></div>
@@ -5080,7 +5233,7 @@
         </div>
 
 
-        <!---------------------------- Slide 8 : The System vision-->
+        <!---------------------------- Slide 9 : The System vision-->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5107,7 +5260,7 @@
             </div>
         </div>
     
-        <!---------------------------------------------------- Slide 9: SubTitle Slide -->
+        <!---------------------------- Slide 10: SubTitle Slide -->
         <div class="slide" id="title-slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 <h1>02 -- The System Vision</h1>
@@ -5117,7 +5270,7 @@
             </div>
         </div>
       
-        <!------------------------------------- Slide 10: Farmhub Model Overview -->
+        <!---------------------------- Slide 11: Farmhub Model Overview -->
         <div class="slide">
            
             <div class="slide-content-challenge">
@@ -5162,7 +5315,7 @@
         </div>
         </div>
         
-        <!-- Slide 8: Level 1 - Field Station -->
+        <!----------------------------- Slide 12: Level 1 - Field Station -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5207,7 +5360,7 @@
         </div>
        </div>
         
-        <!-- Slide 9: Level 2 - Ops Centre -->
+        <!----------------------------- Slide 13: Level 2 - Ops Centre -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5250,7 +5403,7 @@
         </div>
        </div>
         
-        <!-- Slide 10: Level 3 - Mission Control -->
+        <!------------------------------- Slide 14: Level 3 - Mission Control -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5291,7 +5444,7 @@
             </div>
         </div>
         </div>
-        <!---------------------------- Slide : The Context-01 -Bridging waht is broken-->
+        <!---------------------------- Slide 15: The Context-01 -Bridging waht is broken-->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5341,7 +5494,7 @@
             </div>
         </div>
         </div>
-        <!--------------------------------- Slide ??: subtitle 03 Title Slide -->
+        <!--=========================-- Slide 16: subtitle 03 Title Slide -->
         <div class="slide" id="title-slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                
@@ -5352,7 +5505,7 @@
                 
             </div>
         </div>
-        <!-- Slide 2: System Orchestration -->
+        <!---------------------------- Slide 17: System Orchestration -->
         <div class="slide">
            
             <div class="slide-content-challenge">
@@ -5365,8 +5518,11 @@
                         <div class="slide-content-new">
                             <h2 class="section-title-context">System Orchestration</h2>
                             <h3 class="slide-subtitle">Bundling a fragmented system so it's investable</h3>
-                            
-                            <p-2>As mentioned previously, our core strategy is to take what is a highly fragmented system and to bundle its various components into a cohesive 3 layer architecture that separates ownership, operations and delivery.</p-2>
+                            <p-2 class="section-content-context">
+                                Our core strategy is to take <strong>what is a highly fragmented system and to bundle its various components into</strong>
+                                <strong><span style="color: green; padding: 2px 5px;">a cohesive 3 layer architecture</span></strong>.
+                                <span style="border-bottom: 2px dashed var(--secondary);">that separates ownership, operations and delivery.</span>.
+                            </p-2> 
                             
                             <div class="highlight-panel" style="margin: 0.2rem 0;">
                                 Multi-layer system orchestration
@@ -5402,38 +5558,38 @@
                             <!-- Center Image -->
                             <img src="image_file/logo_farmhub.png" alt="Farm Hub" class="center-image">
                              <!-- Arrows pointing to center -->
-                            <div class="approach-arrow" style="left:47%; top: 32%; --rotation: 180deg;">↑</div>
-                            <div class="approach-arrow" style="left: 65%; top: 50%; --rotation: 270deg;">↑</div>
+                            <div class="approach-arrow" style="left:50%; top: 32%; --rotation: 180deg;">↑</div>
+                            <div class="approach-arrow" style="left: 65%; top: 53%; --rotation: 270deg;">↑</div>
                             <div class="approach-arrow" style="left: 47%; top: 65%; --rotation: 0deg;">↑</div>
                             <div class="approach-arrow" style="left: 30%; top: 50%; --rotation: 90deg;">↑</div>
     
                             <!-- Text Boxes -->
-                            <div class="approach-text-box" style="left: 18%; top: 27%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 10px;"> fragmented infrastructur</h3>
+                            <div class="approach-text-box" style="left: 15%; top: 20%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> fragmented infrastructur</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 43%; top: 15%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 12px;"> once off tech pilots</h3>
+                            <div class="approach-text-box" style="left: 43%; top: 5%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> once off tech pilots</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 68%; top: 27%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 12px;"> disjointed market access</h3>
+                            <div class="approach-text-box" style="left: 71%; top: 20%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> disjointed market access</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 75%; top: 45%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 12px;"> broken supply chains</h3>
+                            <div class="approach-text-box" style="left: 85%; top: 45%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> broken supply chains</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 43%; top: 73%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 12px;"> value chain gaps</h3>
+                            <div class="approach-text-box" style="left: 43%; top: 78%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> value chain gaps</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 17%; top: 63%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 10px;"> lack of visibility for impact funding</h3>
+                            <div class="approach-text-box" style="left: 15%; top: 67%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> lack of visibility for impact funding</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 10%; top: 45%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 10px;"> donor reliance</h3>
+                            <div class="approach-text-box" style="left: 2%; top: 45%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;"> donor reliance</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 66%; top: 63%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 9px;">ad hoc service operators</h3>
+                            <div class="approach-text-box" style="left: 71%; top: 67%; padding: 4px 6px; border-radius: 50%;">
+                                <h3 style="font-size: 14px;">ad hoc service operators</h3>
                             </div>
                             <div class="approach-text-box" style="left: 43%; top: 53%; width: 90px; height: 45px;  background: rgba(0, 100, 0, 0);  border: 0 solid rgb(70, 178, 202);">
-                                <h3 style="font-size: 12px;  color: white;"> bundled stac</h3>
+                                <h3 style="font-size: 14px;  color: white;"> bundled stac</h3>
                             </div>
                             
                            
@@ -5444,12 +5600,12 @@
                     <div class="visual-column-2">
                         <div class="approach-container">
                             <!-- Center Image -->
-                            <img src="image_file/logo_farmhub.png" alt="Farm Hub" class="center-image" style="width: 80px; height: 80px; left:55%; top:85%;">
+                            <img src="image_file/logo_farmhub.png" alt="Farm Hub" class="center-image" style="width: 100px; height: 100px; left:55%; top:85%;">
                              <!-- Arrows pointing to center -->
                             <div class="approach-arrow" style="left:50%; top: 50%; --rotation: 180deg;">↑</div>
                             <div class="approach-arrow" style="left: 65%; top: 73%; --rotation: 270deg;">↑</div>
                             <div class="approach-arrow" style="left: 50%; top: 105%; --rotation: 0deg;">↑</div>
-                            <div class="approach-arrow" style="left: 30%; top: 73%; --rotation: 90deg;">↑</div>
+                            <div class="approach-arrow" style="left: 35%; top: 73%; --rotation: 90deg;">↑</div>
     
                             <!-- Text Boxes -->
                             <div class="approach-text-box" style="left: 10%; top: 14%; padding: 4px 6px; border-radius: 50%;">
@@ -5459,10 +5615,10 @@
                                 <h3 style="font-size: 12px;"> once off tech pilots</h3>
                             </div>
                             <div class="approach-text-box" style="left: 75%; top: 14%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 12px;"> disjointed market access</h3>
+                                <h3 style="font-size: 11px;"> disjointed market access</h3>
                             </div>
                             <div class="approach-text-box" style="left: 83%; top: 65%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 12px;"> broken supply chains</h3>
+                                <h3 style="font-size: 11px;"> broken supply chains</h3>
                             </div>
                             <div class="approach-text-box" style="left: 43%; top: 140%; padding: 4px 6px; border-radius: 50%;">
                                 <h3 style="font-size: 12px;"> value chain gaps</h3>
@@ -5471,12 +5627,12 @@
                                 <h3 style="font-size: 10px;"> lack of visibility for impact funding</h3>
                             </div>
                             <div class="approach-text-box" style="left: 2%; top: 65%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 10px;"> donor reliance</h3>
+                                <h3 style="font-size: 11px;"> donor reliance</h3>
                             </div>
                             <div class="approach-text-box" style="left: 72%; top: 118%; padding: 4px 6px; border-radius: 50%;">
-                                <h3 style="font-size: 9px;">ad hoc service operators</h3>
+                                <h3 style="font-size: 10px;">ad hoc service operators</h3>
                             </div>
-                            <div class="approach-text-box" style="left: 43%; top: 53%; width: 90px; height: 45px;  background: rgba(0, 100, 0, 0);  border: 0 solid rgb(70, 178, 202);">
+                            <div class="approach-text-box" style="left: 43%; top: 85%; width: 90px; height: 45px;  background: rgba(0, 100, 0, 0);  border: 0 solid rgb(70, 178, 202);">
                                 <h3 style="font-size: 12px;  color: white;"> bundled stac</h3>
                             </div>
                             
@@ -5488,7 +5644,7 @@
         </div>
     
       
-        <!-- Slide 3: PropCo, OpCo & Franchise OpCo -->
+        <!-- --------------------------Slide 18: PropCo, OpCo & Franchise OpCo -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5530,57 +5686,57 @@
                     <div class="visual-column">
                         <div class="pyramid-section">
                             <div class="pyramid">
-                              <div class="triangle"></div>
-                        
-                              <div class="divider divider1"></div>
-                              <div class="divider divider2"></div>
-                              <div class="divider divider3"></div>
-                        
-                              <!-- Layer 1 -->
-                              <div class="layer-content layer1">
-                              
-                                <div class="layer-text">Smallholder Farmer</div>
-                              </div>
-                        
-                              <!-- Layer 2 -->
-                              <div class="layer-content layer2">
-                                <div class="card-icon">
-                                    <img src="image_file/tractor_emoji.png" alt="School Building">
-                                  </div>
-                                <div class="layer-text">Field Station</div>
-                                <div class="layer-text-2">Level 1: Franchise OpC</div>
-                              </div>
-                        
-                              <!-- Layer 3 -->
-                              <div class="layer-content layer3">
-                                <div class="card-icon">
-                                    <img src="image_file/building_emoji_1.png" alt="School Building">
-                                  </div>
-                                <div class="layer-text">Ops Centre</div>
-                                <div class="layer-text-2">Level 2: OpCo</div>
-                              </div>
-                              <!-- Layer 4 -->
-                              <div class="layer-content layer4">
-                                <div class="card-icon">
-                                    <img src="https://www.clipartmax.com/png/small/54-543062_school-building-emoji.png" alt="School Building">
-                                  </div>
-                                <div class="layer-text">Mission Control</div>
-                                <div class="layer-text-2">Level 3: PropCo</div>
-                              </div>
-                              
+                                <div class="triangle"></div>
+                                
+                                <!-- Colored layer overlays -->
+                                <div class="layer-overlay layer1-bg"></div>
+                                <div class="layer-overlay layer2-bg"></div>
+                                <div class="layer-overlay layer3-bg"></div>
+                                <div class="layer-overlay layer4-bg"></div>
+                                
+                                <div class="divider divider1"></div>
+                                <div class="divider divider2"></div>
+                                <div class="divider divider3"></div>
+                                
+                                <!-- Layer 1 -->
+                                <div class="layer-content layer1">
+                                    <div class="layer-text">Smallholder Farmer</div>
+                                </div>
+                                
+                                <!-- Layer 2 -->
+                                <div class="layer-content layer2">
+                                    <div class="card-icon-pyramid">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" alt="Tractor">
+                                    </div>
+                                    <div class="layer-text">Field Station</div>
+                                    <div class="layer-text-2">Level 1: Franchise OpCo</div>
+                                </div>
+                                
+                                <!-- Layer 3 -->
+                                <div class="layer-content layer3">
+                                    <div class="card-icon-pyramid">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2583/2583439.png" alt="Building">
+                                    </div>
+                                    <div class="layer-text">Ops Centre</div>
+                                    <div class="layer-text-2">Level 2: OpCo</div>
+                                </div>
+                                
+                                <!-- Layer 4 -->
+                                <div class="layer-content layer4">
+                                    <div class="card-icon-pyramid">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2583/2583463.png" alt="Control Center">
+                                    </div>
+                                    <div class="layer-text">Mission Control</div>
+                                    <div class="layer-text-2">Level 3: PropCo</div>
+                                </div>
                             </div>
-                           
-                          </div>
-                       
+                        </div>
                     </div>
-                    
                 </div>
-                
             </div>
         </div>
-       
     
-        <!-- Slide 4: Level 1 Details -->
+        <!----------------------------- Slide 19: Level 1 Details -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5629,7 +5785,7 @@
             </div>
         </div>
     
-        <!-- Slide 5: Level 2 Details -->
+        <!------------------------------ Slide 19: Level 2 Details -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5677,7 +5833,7 @@
             </div>
         </div>
     
-        <!-- Slide 6: Level 3 Details -->
+        <!-- Slide 20: Level 3 Details -->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5725,7 +5881,7 @@
             </div>
         </div>
     
-           <!-- Slide : farmhub playbook -->
+           <!-- Slide 21: farmhub playbook -->
            <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5772,7 +5928,7 @@
                 </div>
             </div>
         </div>
-        <!---------------------------- Slide : The Farmhub Ecosystem-->
+        <!---------------------------- Slide 22: The Farmhub Ecosystem-->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -5799,7 +5955,7 @@
                 </div>
             </div>
         </div>
-        <!--------------------------------- Slide ??: subtitle 04 Title Slide -->
+        <!--------------------------------- Slide 23 subtitle 04 Title Slide -->
         <div class="slide" id="title-slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 <h1>04</h1>
@@ -5810,7 +5966,7 @@
                 
             </div>
         </div>
-        <!---------------------------- Slide : Impacts by Level-->
+        <!---------------------------- Slide 24: Impacts by Level-->
         <div class="slide">
             <h6 style="color: white;">
               <span>04 — Market Opportunity</span>
@@ -5833,39 +5989,35 @@
                 <!-- Levels -->
                 <div class="column-2 levels-column">
                   <div class="level-card">
-                   
+                    <div class="level-icon">🛰️</div>
                     <h2 class="level-title">Level-3</h2>
                     
                     <h2 class="level-title">Farmhub Mission Control</h2>
                         <h2 class="level-title">Infrastructure, platform, assets</h2>
-                    <div class="level-icon">🛰️</div>
+                   
                   </div>
                   <div class="level-card">
-                    
+                    <div class="level-icon">🏢</div>
                     <h2 class="level-title">Level 2</h2>
                     <h2 class="level-title">Farmhub Ops Centre</h2>
                         <h2 class="level-title">Coordination, standard, training</h2>
-                    <div class="level-icon">🏢</div>
+                   
                   </div>
 
-
-                  
-                 
-                            
-                                        
+             
                   <div class="level-card">
-                 
+                    <div class="level-icon">🌍</div>
                     <h2 class="level-title">Level 1</h2>
                                 <h2 class="level-title">Farmhub Field Station</h2>
                                     <h2 class="level-title">Services, Access, Inputs</h2>
-                    <div class="level-icon">🌍</div>
+                   
                   </div>
                   <div class="level-card">
-                 
+                    
                     <h2 class="level-title">Level 0</h2>
                     <h2 class="level-title">Smallholder Farmer</h2>
                         <h2 class="level-title">Productivity, land stewardship</h2>
-                    <div class="level-icon">🌍</div>
+                    
                   </div>
                   <div class="column-arrow">➔</div>
                   <div class="column-arrow-1">➔</div>
@@ -5919,7 +6071,7 @@
               </div>
             </div>
           </div>
-        <!-------------------------------------- Slide ??: Market Strategy -->
+        <!-------------------------------------- Slide 25: Market Strategy -->
 
         <div class="slide" style="background: rgb(0, 0, 0);">
         <h2 class="top-us-title-1" style="color: white;">
@@ -6059,7 +6211,7 @@
             </div>
         </div>
         </div>
-        <!-------------------------------------- Slide ??: Value Distribution Across Farmhub Model -->
+        <!-------------------------------------- Slide 26: Value Distribution Across Farmhub Model -->
         <div class="slide">
             <h2 class="top-us-title-1" style="color: white;">
                 <span>04 — Market Opportunity</span>
@@ -6168,169 +6320,149 @@
           </div>
           </div>
 
-
-
-
-
-  <!-------------------------------------- Slide ??: SSA market Opportunity -->
+        <!-------------------------------------- Slide 27: SSA market Opportunity -->
   
-  <div class="slide">
-            <div class="mo-zoom-wrapper">
-            <div class="mo-slide-container">
-                <h1 class="mo-title">Market Opportunity for Sub-Saharan Africa</h1>
+        <div class="slide">
+                    <div class="mo-zoom-wrapper">
+                    <div class="mo-slide-container">
+                        <h1 class="mo-title">Market Opportunity for Sub-Saharan Africa</h1>
+                        
+                        <div class="mo-content-columns">
+                        <!-- Column 1: Nested Circles -->
+                        <div class="mo-column mo-column-circles">
+                            <div class="mo-circle-container">
+                            <div class="mo-circle mo-circle-1">TAM<br> Total Addressable Market</div>
+                            <div class="mo-circle mo-circle-2">SAM<br>Serviceable Addressable Market</div>
+                            <div class="mo-circle mo-circle-3">SOM<br>Service Obtainable Market</div>
+                            
+                            </div>
+                            
+                        
+                            
+                            <!-- ALWAYS VISIBLE ARROWS -->
+                            <div class="mo-arrow mo-arrow-1"></div>
+                            <div class="mo-arrow mo-arrow-2"></div>
+                            <div class="mo-arrow mo-arrow-3"></div>
+                        </div>
+                        
+                        <!-- Column 2: Table -->
+                        <div class="mo-column mo-column-table">
+                            <div class="mo-data-card">
+                            <h2 class="mo-card-title">Market Segmentation</h2>
+                            <table class="mo-data-table">
+                                <thead>
+                                <tr>
+                                    <th>Market Share</th>
+                                    <th>Defination</th>
+                                    <th>Estimate</th>
+                                    <th>Justification</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr id="row1">
+                                    <td>100%</td>
+                                    <td> All smallholder farmers in SSA (~250 million people, ~33 million 
+                                        farms) x potential uplift per farmer ($1,706)</td>
+                                    <td> ~$56 billion/year</td>
+                                    <td> Based on full uptake of Farmhub-like services for all 
+                                        smallholders with modelled 8X uplift</td>
+                                </tr>
+                                <tr id="row2">
+                                    <td>50%</td>
+                                    <td> Farms in key geographies where we have pilot traction, supportive 
+                                        policy & scalable access (e.g. Ethiopia, Kenya, Uganda) — 18 million farms ~ 50% of total</td>
+                                    <td>~$28 billion/year</td>
+                                    <td>Limiting to 50% of SSA with 
+                                        viable infrastructure, interest 
+                                        and partner ecosystem</td>
+                                </tr>
+                                <tr id="row3">
+                                    <td>5%</td>
+                                    <td>Share Farmhub could realistically 
+                                        service within 10-15 years (1.5M farmers)</td>
+                                    <td>~$2.6 billion/year</td>
+                                    <td>Assumes we reach 1.5M farmers with average revenue 
+                                        of $1,706/year</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+        </div>
+
+         <!-------------------------------------- Slide 28: Ethiopia, Kenya, Uganda -->
+        <div class="slide">
+            <div class="mo-zoom-wrapper-2">
+            <div class="mo-slide-container-2">
+                <h1 class="mo-title-2">Market Opportunity for Sub-Saharan Africa</h1>
                 
-                <div class="mo-content-columns">
-                  <!-- Column 1: Nested Circles -->
-                  <div class="mo-column mo-column-circles">
-                    <div class="mo-circle-container">
-                      <div class="mo-circle mo-circle-1">TAM<br> Total Addressable Market</div>
-                      <div class="mo-circle mo-circle-2">SAM<br>Serviceable Addressable Market</div>
-                      <div class="mo-circle mo-circle-3">SOM<br>Service Obtainable Market</div>
+                <div class="mo-content-columns-2">
+                <!-- Column 1: Nested Circles -->
+                <div class="mo-column mo-column-circles-2">
+                    <div class="mo-circle-container-2">
+                    <div class="mo-circle mo-circle-1-2">TAM<br> Total Addressable Market</div>
+                    <div class="mo-circle mo-circle-2-2">SAM<br>Serviceable Addressable Market</div>
+                    <div class="mo-circle mo-circle-3-2">SOM<br>Service Obtainable Market</div>
                     
                     </div>
                     
-                 
+                
                     
                     <!-- ALWAYS VISIBLE ARROWS -->
-                    <div class="mo-arrow mo-arrow-1"></div>
-                    <div class="mo-arrow mo-arrow-2"></div>
-                    <div class="mo-arrow mo-arrow-3"></div>
-                  </div>
-                  
-                  <!-- Column 2: Table -->
-                  <div class="mo-column mo-column-table">
-                    <div class="mo-data-card">
-                    <h2 class="mo-card-title">Market Segmentation</h2>
-                    <table class="mo-data-table">
+                    <div class="mo-arrow mo-arrow-1-2"></div>
+                    <div class="mo-arrow mo-arrow-2-2"></div>
+                    <div class="mo-arrow mo-arrow-3-2"></div>
+                </div>
+                
+                <!-- Column 2: Table -->
+                <div class="mo-column mo-column-table-2">
+                    <div class="mo-data-card-2">
+                    <h2 class="mo-card-title-2">Market Segmentation</h2>
+                    <table class="mo-data-table-2">
                         <thead>
                         <tr>
-                            <th>Market Share</th>
-                            <th>Defination</th>
-                            <th>Estimate</th>
-                            <th>Justification</th>
+                            <th>Ethiopia</th>
+                            <th>Kenya</th>
+                            <th>Uganda</th>
+                        
                         </tr>
                         </thead>
                         <tbody>
                         <tr id="row1">
-                            <td>100%</td>
-                            <td> All smallholder farmers in SSA (~250 million people, ~33 million 
-                                farms) x potential uplift per farmer ($1,706)</td>
-                            <td> ~$56 billion/year</td>
-                            <td> Based on full uptake of Farmhub-like services for all 
-                                smallholders with modelled 8X uplift</td>
+                            <td>12M farmers = ~$20B TAM</td>
+                            <td>  6M reachable = ~$12B SAM</td>
+                            <td> 0.9M achievable = ~$1.5B SOM</td>
                         </tr>
                         <tr id="row2">
-                            <td>50%</td>
-                            <td> Farms in key geographies where we have pilot traction, supportive 
-                                policy & scalable access (e.g. Ethiopia, Kenya, Uganda) — 18 million farms ~ 50% of total</td>
-                            <td>~$28 billion/year</td>
-                            <td>Limiting to 50% of SSA with 
-                                viable infrastructure, interest 
-                                and partner ecosystem</td>
+                            <td>4M farmers = ~$7B TAM</td>
+                            <td> 2M reachable = ~$4B SAM</td>
+                            <td> 0.3M achievable = ~$0.5B SOM</td>
+                            
                         </tr>
                         <tr id="row3">
-                            <td>5%</td>
-                            <td>Share Farmhub could realistically 
-                                service within 10-15 years (1.5M farmers)</td>
-                            <td>~$2.6 billion/year</td>
-                            <td>Assumes we reach 1.5M farmers with average revenue 
-                                of $1,706/year</td>
+                            <td>4M farmers = ~$7B TAM</td>
+                            <td> 2M reachable = ~$4B SAM</td>
+                            <td> 0.3M achievable = ~$0.5B SOM</td>
                         </tr>
                         </tbody>
                     </table>
                     </div>
                 </div>
                 </div>
-              </div>
-
-
-
-          </div>
-        </div>
-
-  <!-------------------------------------- Slide ??: Ethiopia, Kenya, Uganda -->
-  <div class="slide">
-    <div class="mo-zoom-wrapper-2">
-    <div class="mo-slide-container-2">
-        <h1 class="mo-title-2">Market Opportunity for Sub-Saharan Africa</h1>
-        
-        <div class="mo-content-columns-2">
-          <!-- Column 1: Nested Circles -->
-          <div class="mo-column mo-column-circles-2">
-            <div class="mo-circle-container-2">
-              <div class="mo-circle mo-circle-1-2">TAM<br> Total Addressable Market</div>
-              <div class="mo-circle mo-circle-2-2">SAM<br>Serviceable Addressable Market</div>
-              <div class="mo-circle mo-circle-3-2">SOM<br>Service Obtainable Market</div>
-            
             </div>
-            
-         
-            
-            <!-- ALWAYS VISIBLE ARROWS -->
-            <div class="mo-arrow mo-arrow-1-2"></div>
-            <div class="mo-arrow mo-arrow-2-2"></div>
-            <div class="mo-arrow mo-arrow-3-2"></div>
-          </div>
-          
-          <!-- Column 2: Table -->
-          <div class="mo-column mo-column-table-2">
-            <div class="mo-data-card-2">
-            <h2 class="mo-card-title-2">Market Segmentation</h2>
-            <table class="mo-data-table-2">
-                <thead>
-                <tr>
-                    <th>Ethiopia</th>
-                    <th>Kenya</th>
-                    <th>Uganda</th>
-                   
-                </tr>
-                </thead>
-                <tbody>
-                <tr id="row1">
-                    <td>12M farmers = ~$20B TAM</td>
-                    <td>  6M reachable = ~$12B SAM</td>
-                    <td> 0.9M achievable = ~$1.5B SOM</td>
-                </tr>
-                <tr id="row2">
-                    <td>4M farmers = ~$7B TAM</td>
-                    <td> 2M reachable = ~$4B SAM</td>
-                    <td> 0.3M achievable = ~$0.5B SOM</td>
-                    
-                </tr>
-                <tr id="row3">
-                    <td>4M farmers = ~$7B TAM</td>
-                    <td> 2M reachable = ~$4B SAM</td>
-                    <td> 0.3M achievable = ~$0.5B SOM</td>
-                </tr>
-                </tbody>
-            </table>
-            </div>
+
+
+
         </div>
         </div>
-      </div>
 
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!--------------------------------- Slide ??: subtitle 05 Title Slide -->
+      <!--------------------------------- Slide 29: subtitle 05 Title Slide -->
         <div class="slide" id="title-slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                
@@ -6343,26 +6475,9 @@
         </div>
 
 
+        <!--------------------------------- Slide 30: traction to date -->
 
-
-
-
-
-
-
-
-
-  <!--------------------------------- Slide ??: traction to date -->
-
-
-
-
-
-
-
-
-
-            <div class="slide">
+           <div class="slide">
                 <h6 class="top-us-title-1" style="color: white;">
                     <span>05 -- Traction</span>
                 </h6>
@@ -6679,9 +6794,7 @@
                         </div>
                     </div>
             </div>
-        
-       
-        <!--------------------------------- Slide ??: sTeam -->
+        <!--------------------------------- Slide 31: sTeam -->
             <div class="slide">
                 <h2 class="top-us-title-1" style="color: white;">
                     <span>05 -- Traction</span>
@@ -6703,11 +6816,12 @@
                         <div class="teams-grid">
                             <!-- Top Row -->
                             <div class="team-item" onclick="openModal('Operations Team', 'ethiopia', 'Ensures seamless service delivery across Ethiopia', 8, 15, 'https://randomuser.me/api/portraits/women/44.jpg')">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team 1" class="team-img">
+                                <img src="image_file/girma.jpg" alt="Team 1" class="team-img">
                                 <div class="team-name">Operations</div>
                             </div>
                             <div class="team-item" onclick="openModal('Logistics Team', 'ethiopia', 'Specializing in supply chain optimization', 6, 12, 'https://randomuser.me/api/portraits/men/32.jpg')">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team 2" class="team-img">
+                                <img src="                                <img src="image_file/girma.jpg" alt="Team 1" class="team-img">
+                                " alt="Team 2" class="team-img">
                                 <div class="team-name">Logistics</div>
                             </div>
                             <!-- Bottom Row -->
@@ -6853,11 +6967,7 @@
             </div>
 
 
-
-
-
-
-              <!---------------------------- Slide 6: Utilising Appropriate Scale Technology -->
+              <!---------------------------- Slide 32: Utilising Appropriate Scale Technology -->
         <div class="slide">
 
             <div class="slide-content-challenge">
@@ -7403,11 +7513,7 @@
         });
         
         // Auto-rotate through levels (optional)
-        let currentLevel = 0;
-        function rotateLevels() {
-            levelCards[currentLevel].click();
-            currentLevel = (currentLevel + 1) % levelCards.length;
-        }
+   
         
         // Uncomment to enable auto-rotation (every 5 seconds)
         // setInterval(rotateLevels, 5000);
