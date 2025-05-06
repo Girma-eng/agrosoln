@@ -421,7 +421,7 @@
 
         @media (max-width: 768px) {
             .slide {
-           padding: 3px 4px;
+         padding: 10px 10px 15px 4px;
             
         }
         
@@ -2920,9 +2920,7 @@
 
 /* ========== VERY SMALL DEVICES ========== */
 @media (max-width: 400px) {
-    .slide {
-        padding: 4px;
-    }
+  
 
     .slide-container-impact {
         padding: 1rem;
@@ -4857,8 +4855,15 @@
 
 
 
+        /* IMPROVED CONTENT STYLES */
+        .slide-content-rev {
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
 
-
+   
 
         .content-wrapper {
             display: flex;
@@ -4937,7 +4942,8 @@
         }
 
         .year-header {
-            text-align: center;
+            text-align: center !important;
+            font-weight: bold;
         }
 
         @media (max-width: 1024px) {
@@ -4952,7 +4958,7 @@
         }
 
         @media (max-width: 768px) {
-            .slide {
+            .slide-content {
                 padding: 10px;
             }
             
@@ -7560,125 +7566,128 @@
 
 
 
-          
+            
                 <div class="slide">
-                    <h1 class="slide-title">PropCo - Profit & Loss Forecast</h1>
-                    <p class="slide-subtitle">Financial Projections 2026-2030 (€)</p>
-                    
-                    <div class="content-wrapper">
-                        <div class="chart-container">
-                            <div class="chart-row">
-                                <div class="chart-box">
-                                    <h3 class="chart-title">Revenue Growth</h3>
-                                    <div class="chart-wrapper">
-                                        <canvas id="revenueChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="chart-box">
-                                    <h3 class="chart-title">Profit Margins</h3>
-                                    <div class="chart-wrapper">
-                                        <canvas id="marginChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chart-row">
-                                <div class="chart-box">
-                                    <h3 class="chart-title">Cost Structure (2030)</h3>
-                                    <div class="chart-wrapper">
-                                        <canvas id="costChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="chart-box">
-                                    <h3 class="chart-title">Net Profit Trend</h3>
-                                    <div class="chart-wrapper">
-                                        <canvas id="profitChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="slide-content-rev">
+                        <h1 class="slide-title">PropCo - Profit & Loss Forecast</h1>
+                        <p class="slide-subtitle">Financial Projections 2026-2030 (€)</p>
                         
-                        <div class="data-table-container">
-                            <table class="financial-table">
-                                <thead>
-                                    <tr>
-                                        <th style="text-align: left;">Profit & Loss</th>
-                                        <th class="year-header">2026</th>
-                                        <th class="year-header">2027</th>
-                                        <th class="year-header">2028</th>
-                                        <th class="year-header">2029</th>
-                                        <th class="year-header">2030</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="text-align: left;">Revenue</td>
-                                        <td>€1,193,772</td>
-                                        <td>€1,653,025</td>
-                                        <td>€5,783,833</td>
-                                        <td>€12,467,667</td>
-                                        <td>€20,276,500</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;">Direct Costs</td>
-                                        <td>€135,000</td>
-                                        <td>€157,500</td>
-                                        <td>€525,000</td>
-                                        <td>€1,050,000</td>
-                                        <td>€1,575,000</td>
-                                    </tr>
-                                    <tr class="highlight-row">
-                                        <td style="text-align: left;">Gross Profit</td>
-                                        <td class="positive">€1,058,772</td>
-                                        <td class="positive">€1,495,525</td>
-                                        <td class="positive">€5,258,833</td>
-                                        <td class="positive">€11,417,667</td>
-                                        <td class="positive">€18,701,500</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;">Overhead Costs</td>
-                                        <td>€2,433,751</td>
-                                        <td>€2,575,121</td>
-                                        <td>€3,478,677</td>
-                                        <td>€4,055,115</td>
-                                        <td>€4,334,849</td>
-                                    </tr>
-                                    <tr class="highlight-row">
-                                        <td style="text-align: left;">Operating Profit</td>
-                                        <td class="negative">-€1,374,979</td>
-                                        <td class="negative">-€1,079,596</td>
-                                        <td class="positive">€1,780,156</td>
-                                        <td class="positive">€7,362,552</td>
-                                        <td class="positive">€14,366,652</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;">Interest, Tax & Depreciation</td>
-                                        <td>€489,423</td>
-                                        <td>€480,164</td>
-                                        <td>€1,168,359</td>
-                                        <td>€2,657,669</td>
-                                        <td>€4,862,999</td>
-                                    </tr>
-                                    <tr class="highlight-row">
-                                        <td style="text-align: left;">Net Profit</td>
-                                        <td class="negative">-€1,864,402</td>
-                                        <td class="negative">-€1,559,760</td>
-                                        <td class="positive">€611,797</td>
-                                        <td class="positive">€4,704,883</td>
-                                        <td class="positive">€9,503,653</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;">% Net Profit</td>
-                                        <td class="negative">-156%</td>
-                                        <td class="negative">-94%</td>
-                                        <td class="positive">11%</td>
-                                        <td class="positive">38%</td>
-                                        <td class="positive">47%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="content-wrapper">
+                            <div class="chart-container">
+                                <div class="chart-row">
+                                    <div class="chart-box">
+                                        <h3 class="chart-title">Revenue Growth</h3>
+                                        <div class="chart-wrapper">
+                                            <canvas id="revenueChart"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="chart-box">
+                                        <h3 class="chart-title">Profit Margins</h3>
+                                        <div class="chart-wrapper">
+                                            <canvas id="marginChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-row">
+                                    <div class="chart-box">
+                                        <h3 class="chart-title">Cost Structure (2030)</h3>
+                                        <div class="chart-wrapper">
+                                            <canvas id="costChart"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="chart-box">
+                                        <h3 class="chart-title">Net Profit Trend</h3>
+                                        <div class="chart-wrapper">
+                                            <canvas id="profitChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="data-table-container">
+                                <table class="financial-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: left;">Profit & Loss</th>
+                                            <th class="year-header">2026</th>
+                                            <th class="year-header">2027</th>
+                                            <th class="year-header">2028</th>
+                                            <th class="year-header">2029</th>
+                                            <th class="year-header">2030</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: left;">Revenue</td>
+                                            <td>€1,193,772</td>
+                                            <td>€1,653,025</td>
+                                            <td>€5,783,833</td>
+                                            <td>€12,467,667</td>
+                                            <td>€20,276,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">Direct Costs</td>
+                                            <td>€135,000</td>
+                                            <td>€157,500</td>
+                                            <td>€525,000</td>
+                                            <td>€1,050,000</td>
+                                            <td>€1,575,000</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td style="text-align: left;">Gross Profit</td>
+                                            <td class="positive">€1,058,772</td>
+                                            <td class="positive">€1,495,525</td>
+                                            <td class="positive">€5,258,833</td>
+                                            <td class="positive">€11,417,667</td>
+                                            <td class="positive">€18,701,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">Overhead Costs</td>
+                                            <td>€2,433,751</td>
+                                            <td>€2,575,121</td>
+                                            <td>€3,478,677</td>
+                                            <td>€4,055,115</td>
+                                            <td>€4,334,849</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td style="text-align: left;">Operating Profit</td>
+                                            <td class="negative">-€1,374,979</td>
+                                            <td class="negative">-€1,079,596</td>
+                                            <td class="positive">€1,780,156</td>
+                                            <td class="positive">€7,362,552</td>
+                                            <td class="positive">€14,366,652</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">Interest, Tax & Depreciation</td>
+                                            <td>€489,423</td>
+                                            <td>€480,164</td>
+                                            <td>€1,168,359</td>
+                                            <td>€2,657,669</td>
+                                            <td>€4,862,999</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td style="text-align: left;">Net Profit</td>
+                                            <td class="negative">-€1,864,402</td>
+                                            <td class="negative">-€1,559,760</td>
+                                            <td class="positive">€611,797</td>
+                                            <td class="positive">€4,704,883</td>
+                                            <td class="positive">€9,503,653</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">% Net Profit</td>
+                                            <td class="negative">-156%</td>
+                                            <td class="negative">-94%</td>
+                                            <td class="positive">11%</td>
+                                            <td class="positive">38%</td>
+                                            <td class="positive">47%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
+          
           
             <!-- Additional slides can be added here following any of the 20 templates -->
 
@@ -8209,7 +8218,6 @@
 
 
 
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Data preparation
@@ -8218,7 +8226,6 @@
         const directCosts = [135000, 157500, 525000, 1050000, 1575000];
         const grossProfit = [1058772, 1495525, 5258833, 11417667, 18701500];
         const overheadCosts = [2433751, 2575121, 3478677, 4055115, 4334849];
-        const operatingProfit = [-1374979, -1079596, 1780156, 7362552, 14366652];
         const netProfit = [-1864402, -1559760, 611797, 4704883, 9503653];
         const netProfitPct = [-156, -94, 11, 38, 47];
         
