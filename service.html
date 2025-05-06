@@ -2256,11 +2256,11 @@
         }
 
         .layer4-bg {
-            width: 35%;
+            width: 30%;
             height: 150px;
             background-color: #F44336; /* Red */
             top: 30px;
-            left: 32.5%;
+            left: 35%;
         }
 
         .layer-content {
@@ -3225,7 +3225,7 @@
       color: black;
       width: 100%;
       height: 95%;
-      overflow-y: auto;
+      overflow-y: hidden;
       flex-direction: row;
       gap: 20px;
       flex-wrap: wrap;
@@ -3373,25 +3373,25 @@
     }
     
     .mo-arrow-1 {
-      width: 250px;
-      top: 76px;
-      left: 420px;
+      width: 150px;
+      top: 65px;
+      left: 380px;
       color: #4CAF50;
       z-index:20;
     }
     
     .mo-arrow-2 {
-      width: 250px;
-      top: 176px;
-      left: 420px;
+      width: 150px;
+      top: 165px;
+      left: 380px;
       color: #2196F3;
       z-index: 10;
     }
     
     .mo-arrow-3 {
-      width: 280px;
-      top: 280px;
-      left: 400px;
+      width: 150px;
+      top: 265px;
+      left: 380px;
       color: #9C27B0;
       z-index: 10;
     }
@@ -3431,7 +3431,7 @@
 
   .mo-content-columns {
     flex-direction: column;
-    padding: 15px;
+    padding: 4px;
     gap: 20px;
     margin: 20px 0;
     height: auto;
@@ -3446,8 +3446,10 @@
   }
 
   .mo-column-circles {
-    margin-bottom: 0;
+   
+    top: 20px;
   }
+
 
   .mo-circle-container {
     height: 250px;
@@ -3477,7 +3479,7 @@
   }
 
   .mo-data-card {
-    padding: 7px;
+    padding: 3px;
   }
 
   .mo-card-title {
@@ -3486,7 +3488,7 @@
 
   .mo-data-table th,
   .mo-data-table td {
-    padding: 5px;
+    padding: 1px;
     font-size: 11px;
   }
 
@@ -3651,7 +3653,7 @@
     
     .mo-data-table-2 th, 
     .mo-data-table-2 td {
-      padding: 12px 15px;
+      padding: 32px 15px;
       text-align: left;
       border-bottom: 1px solid #eee;
     }
@@ -4357,7 +4359,7 @@
 
 /* GROWTH HORIZONS SPECIFIC STYLES */
 .growth-container {
-            height: 100%;
+            height: 93%;
             padding: 30px;
             display: flex;
             flex-direction: column;
@@ -4523,6 +4525,34 @@
             .horizon {
                 padding: 20px;
             }
+           
+            .target-text {
+            color: #fff;
+            font-size: 0.85rem;
+         }
+         .target-item {
+            display: flex;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+        }
+        .horizon-title {
+            font-size: 1.0rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .horizon-header{
+            margin-bottom: 7px;
+        }
+        .horizon-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+           margin-right: 10px;
+            color: #000;
+        }
+
         }
 
 
@@ -4652,6 +4682,167 @@
                 height: auto;
             }
         }
+
+
+
+
+
+
+
+        
+        /* Custom styles for this slide */
+        .slide-content-hu {
+            display: flex;
+            height: 100%;
+            padding: 40px;
+            gap: 30px;
+            overflow:auto;
+        }
+
+        .text-column-hu {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .visual-column-hu {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+      
+        .slide-description-hu {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #ccc;
+            max-width: 600px;
+        }
+
+        .cards-container-hu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card-hu {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .card-hu:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-title-hu {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-description-hu {
+            font-size: 0.9rem;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .image-container-hu {
+            height: calc(50% - 10px);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container-hu img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container-hu:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-caption-hu {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .slide-content-hu {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .text-column-hu, .visual-column-hu {
+                flex: none;
+                width: 100%;
+            }
+
+            .visual-column-hu {
+                flex-direction: row;
+                margin-top: 30px;
+            }
+
+            .image-container-hu {
+                height: 300px;
+                width: calc(50% - 10px);
+            }
+
+            .cards-container-hu {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+          
+
+            .slide-description-hu {
+                font-size: 1rem;
+            }
+
+            .cards-container-hu {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .visual-column-hu {
+                flex-direction: column;
+            }
+
+            .image-container-hu {
+                width: 100%;
+                height: 250px;
+            }
+            .card-hu {
+           
+                
+            padding: 3px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .cards-container-hu {
+            margin-top: 5px;
+        }
+        .slide-content-hu{
+            padding: 10px;
+        }
+        }
+
+     
     </style>
 </head>
 <body>
@@ -5092,7 +5283,27 @@
             </div>
         </div>
          <!---------------------------- Slide 7: The Context-4 -->
-        <div class="slide title-slide" style="background-image: url('image_file/regenerative_trans.jpg'); background-size: cover; background-position: center;">
+          <!---------------------------- Slide 33: HU-compound -->
+          <div class="slide">
+            <div class="slide-content-challenge">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>01-The Context</span>
+                </h2>
+            
+                <div class="smallholder-section">
+                    <div class="image-column" style="flex: 0 46%;">
+                        <img src="image_file/regenerative_trans_1.jpg" alt="Farm Hub Model">
+                    </div>
+                
+                    <!-- Image Section -->
+                    <div class="image-column" style="flex: 0 46%;">
+                        <img src="image_file/regenerative_trans_2.jpg" alt="Farm Hub Model">
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+         <div class="slide title-slide" style="background-image: url('image_file/regenerative_trans.jpg'); background-size: cover; background-position: center;">
             <h1></h1>
             <p></p>
         </div>
@@ -6320,7 +6531,7 @@
           </div>
           </div>
 
-        <!-------------------------------------- Slide 27: SSA market Opportunity -->
+        <!-------------------------------------- Slide 28: SSA market Opportunity -->
   
         <div class="slide">
                     <div class="mo-zoom-wrapper">
@@ -6390,40 +6601,34 @@
                         </div>
                         </div>
                     </div>
-
-
-
                 </div>
         </div>
 
-         <!-------------------------------------- Slide 28: Ethiopia, Kenya, Uganda -->
-        <div class="slide">
-            <div class="mo-zoom-wrapper-2">
-            <div class="mo-slide-container-2">
-                <h1 class="mo-title-2">Market Opportunity for Sub-Saharan Africa</h1>
+         <!-------------------------------------- Slide 29: Ethiopia, Kenya, Uganda -->
+      
+         <div class="slide">
+            <div class="mo-zoom-wrapper">
+            <div class="mo-slide-container">
+                <h1 class="mo-title">Market Opportunity for Sub-Saharan Africa</h1>
                 
-                <div class="mo-content-columns-2">
+                <div class="mo-content-columns">
                 <!-- Column 1: Nested Circles -->
-                <div class="mo-column mo-column-circles-2">
-                    <div class="mo-circle-container-2">
-                    <div class="mo-circle mo-circle-1-2">TAM<br> Total Addressable Market</div>
-                    <div class="mo-circle mo-circle-2-2">SAM<br>Serviceable Addressable Market</div>
-                    <div class="mo-circle mo-circle-3-2">SOM<br>Service Obtainable Market</div>
+                <div class="mo-column mo-column-circles">
+                    <div class="mo-circle-container">
+                    <div class="mo-circle mo-circle-1">TAM<br> Total Addressable Market</div>
+                    <div class="mo-circle mo-circle-2">SAM<br>Serviceable Addressable Market</div>
+                    <div class="mo-circle mo-circle-3">SOM<br>Service Obtainable Market</div>
                     
                     </div>
-                    
-                
-                    
                     <!-- ALWAYS VISIBLE ARROWS -->
-                    <div class="mo-arrow mo-arrow-1-2"></div>
-                    <div class="mo-arrow mo-arrow-2-2"></div>
-                    <div class="mo-arrow mo-arrow-3-2"></div>
+                    <div class="mo-arrow mo-arrow-1"></div>
+                    <div class="mo-arrow mo-arrow-2"></div>
+                    <div class="mo-arrow mo-arrow-3"></div>
                 </div>
-                
                 <!-- Column 2: Table -->
-                <div class="mo-column mo-column-table-2">
-                    <div class="mo-data-card-2">
-                    <h2 class="mo-card-title-2">Market Segmentation</h2>
+                <div class="mo-column mo-column-table">
+                    <div class="mo-data-card">
+                    <h2 class="mo-card-title">Market Segmentation</h2>
                     <table class="mo-data-table-2">
                         <thead>
                         <tr>
@@ -6456,13 +6661,10 @@
                 </div>
                 </div>
             </div>
-
-
-
         </div>
         </div>
 
-      <!--------------------------------- Slide 29: subtitle 05 Title Slide -->
+      <!--------------------------------- Slide 30: subtitle 05 Title Slide -->
         <div class="slide" id="title-slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                
@@ -6475,7 +6677,7 @@
         </div>
 
 
-        <!--------------------------------- Slide 30: traction to date -->
+        <!--------------------------------- Slide 31: traction to date -->
 
            <div class="slide">
                 <h6 class="top-us-title-1" style="color: white;">
@@ -6794,7 +6996,7 @@
                         </div>
                     </div>
             </div>
-        <!--------------------------------- Slide 31: sTeam -->
+        <!--------------------------------- Slide 32: sTeam -->
             <div class="slide">
                 <h2 class="top-us-title-1" style="color: white;">
                     <span>05 -- Traction</span>
@@ -6967,6 +7169,85 @@
             </div>
 
 
+
+            <!---------------------------- Slide 33: HU-partner -->
+            <div class="slide">
+                <div class="slide-content-hu">
+                    <div class="text-column-hu">
+                        <h1 class="slide-title">Partnership with Hawassa University</h1>
+                        <p class="slide-description-hu">
+                            We're leveraging the infrastructure and resources of the university in Hawassa 
+                            to deliver pilot progress on the ground.
+                        </p>
+                        
+                        <div class="cards-container-hu">
+                            <div class="card-hu">
+                                <h3 class="card-title-hu"></h3>
+                                <p class="card-description-hu"> Partnership agreement signed with Hawassa University</p>
+                            </div>
+                            
+                            <div class="card-hu">
+                                <h3 class="card-title-hu"></h3>
+                                <p class="card-description-hu">Training on regenerative agriculture, appropriate 
+                                    equipment and digital platforms by teams from India & Italy</p>
+                            </div>
+                            
+                            <div class="card-hu">
+                                <h3 class="card-title-hu"></h3>
+                                <p class="card-description-hu"><span style="font-weight: bold;"><strong>30 </strong></span> hectares of farm land on the 
+                                   Hawassa University campus allocated to Farmhub</p>
+                            </div>
+                            
+                            <div class="card-hu">
+                                <h3 class="card-title-hu"></h3>
+                                <p class="card-description-hu"> Translation of the Last Mile app to Amahric language.
+                                     Setup of the xFarm app for use in Ethiopia</p>
+                            </div>
+                            
+                            <div class="card-hu">
+                                <h3 class="card-title-hu"></h3>
+                                <p class="card-description-hu"><span style="font-weight: bold;"><strong>12 </strong></span> technologies demonstrated on the Hawassa University campus</p>
+                            </div>
+                            
+                            <div class="card-hu">
+                                <h3 class="card-title-hu"></h3>
+                                <p class="card-description-hu"><span style="font-weight: bold;"><strong>2000 </strong></span>participants in local showcases</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-column-hu">
+                        <div class="image-container-hu">
+                            <img src="image_file/partnership_6.jpg" alt="Hawassa University Campus">
+                            <div class="image-caption-hu">Legal agreement with HU</div>
+                        </div>
+                        
+                        <div class="image-container-hu">
+                            <img src="image_file/super_seeder_3.jpg" alt="Agricultural Research">
+                            <div class="image-caption-hu">Pilotin farmhub at HU campus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!---------------------------- Slide 33: HU-compound -->
+        <div class="slide">
+            <div class="slide-content-challenge">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>01-The Context</span>
+                </h2>
+            
+                <div class="smallholder-section">
+                    <div class="text-column" style="flex: 0 0 1%;">
+                            </div>
+                
+                    <!-- Image Section -->
+                    <div class="image-column" style="flex: 0 99%;">
+                        <img src="image_file/HU_rendered.jpg" alt="Farm Hub Model">
+                    </div>
+                    </div>
+            </div>
+        </div>
+
               <!---------------------------- Slide 32: Utilising Appropriate Scale Technology -->
         <div class="slide">
 
@@ -6980,17 +7261,16 @@
                     
                         <div class="text-column" style="flex: 0 1 50%;">
                             <h2 class="section-title-context">Utilising Appropriate Scale Technology</h2>
-                            <h3>The lessons we have learned from Asia?</h3>
+                            <h2 style="padding: 10px 10px;">The lessons we have learned from Asia?</h2>
                             <p class="section-content-context">
-                                Farmhub adapts successful <span style="border-bottom: 5px dashed var(--secondary);">appropriate-scale mechanisation</span>
+                                Farmhub adapts successful <span style="border-bottom: 3px dashed var(--secondary);">appropriate-scale mechanisation</span>
                                 models from Asia to meet the needs of smallholder farmers in Africa, focusing on equipment and service models designed 
-                                for 1–5 hectare farms—typical in both regions
-                              </p> 
+                                for 1–5 hectare farms—typical in both regions.</p> 
                                 
-                              <p>It deploys proven technologies like 50hp tractors, multi-crop threshers, precision seeders, and affordable irrigation 
-                            systems. Delivered through a custom hiring service, these solutions <span style="border-bottom: 5px dashed var(--secondary);">lower barriers-to-entry </span>
+                              <p class="section-content-context">It deploys proven technologies like 50hp tractors, multi-crop threshers, precision seeders, and affordable irrigation 
+                            systems. Delivered through a custom hiring service, these solutions <span style="border-bottom: 3px dashed var(--secondary);">lower barriers-to-entry </span>
                             by providing access without requiring ownership.</p>
-                            <p>Farmhub carefully adapts technologies to African conditions, considering local soils, cropping systems (teff, wheat, maize, 
+                            <p class="section-content-context">Farmhub carefully adapts technologies to African conditions, considering local soils, cropping systems (teff, wheat, maize, 
                             sorghum), labour patterns, and infrastructure constraints</p>
                                 <div class="conclusion">
                                     
