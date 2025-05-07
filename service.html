@@ -4836,12 +4836,12 @@
 
  /* Custom styles with lc- prefix */
  .lc-container {
-      height: 100%;
+      height: 92%;
       padding: 20px;
       display: flex;
       flex-direction: column;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+      background: black;
       color: #333;
     }
   
@@ -4926,7 +4926,7 @@
     }
   
     .lc-model-card {
-      background: white;
+      background: black;
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -4967,6 +4967,7 @@
       justify-content: space-between;
       padding: 12px 0;
       border-bottom: 1px solid #eee;
+      color: white;
     }
   
     .lc-model-row.highlight {
@@ -4983,6 +4984,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      background: black;
     }
   
     .lc-pyramid-level {
@@ -5024,6 +5026,51 @@
       border-radius: 4px;
       margin: 0 5px;
     }
+    .lc-model-table-container {
+    overflow-x: auto;
+  }
+
+  .lc-model-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .lc-model-table th, 
+  .lc-model-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+
+  }
+
+  .lc-model-table th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+  }
+
+  .lc-model-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+    color: black;
+  }
+  .lc-model-table tr:nth-child(odd) {
+    background-color: #080808;
+    color: white;
+  }
+
+
+  .lc-model-table tr.highlight {
+    background-color: #e3f2fd;
+    font-weight: bold;
+  }
+
+  .lc-model-table td:nth-child(2),
+  .lc-model-table td:nth-child(3) {
+    text-align: right;
+    font-family: 'Courier New', monospace;
+  }
+
   
     .lc-conclusion {
       background: #2c3e50;
@@ -5082,10 +5129,23 @@
       .lc-pyramid-price {
         align-self: flex-end;
       }
+
+      .lc-model-card {
+      
+      padding: 7px;
+      
+    }
+  .lc-model-table th, 
+  .lc-model-table td {
+    padding: 8px 5px;
+    text-align: left;
+    font-size: 0.8rem;
+
+  }
     }
 
 
-    
+
 
 
  /* SCOPED STYLES WITH UNIQUE PREFIX */
@@ -5229,7 +5289,7 @@
 
           /* SCOPED STYLES WITH UNIQUE PREFIX */
           .sof-container {
-            height: 100%;
+            height: 93%;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -5243,7 +5303,7 @@
             font-size: 2rem;
             margin-bottom: 10px;
             color: #00C9FF;
-            text-align: center;
+            text-align: left;
         }
 
         .sof-subtitle {
@@ -5263,14 +5323,16 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            justify-content: left;
         }
 
         .sof-chart-box {
             flex: 1;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
-            padding: 15px;
+            padding: 10px 60px;
             margin-bottom: 20px;
+            
         }
 
         .sof-chart-title {
@@ -5286,7 +5348,7 @@
         }
 
         .sof-table-container {
-            flex: 1;
+            flex: 1.5;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 15px;
@@ -5342,6 +5404,8 @@
 
       .sof-chart-box {
         height: 300px;
+        padding: 6px;
+        margin-bottom: 10px;
       }
 
       .sof-financial-table {
@@ -5352,9 +5416,6 @@
       .sof-financial-table td {
         padding: 8px 10px;
       }
-    }
-
-    @media (max-width: 480px) {
       .sof-title {
         font-size: 1.5rem;
       }
@@ -5365,8 +5426,11 @@
 
       .sof-chart-title {
         font-size: 0.9rem;
+        margin-bottom: 5px;
       }
     }
+
+
 
 
 
@@ -8536,118 +8600,115 @@
                 </div>
             </div>
               <!--=========================-- Slide 16: subtitle 03 Title Slide -->
-        <div class="slide" id="title-slide" style="background-color: black;">
-            <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
-               
-                <h1>07 -- Appendix</h1>
-                <h3>Additional Financial Information</h3>
-
-            </div>
-        
-            <div class="footer" style="text-align: center; bottom: 5px; left: 5px;">
+            <div class="slide" id="title-slide" style="background-color: black;">
+                <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 
+                    <h1>07 -- Appendix</h1>
+                    <h3 style="font-size: 1.2rem;">Additional Financial Information</h3>
+
+                </div>
+            
+                <div class="footer" style="text-align: center; bottom: 5px; left: 5px;">
+                    
+                </div>
             </div>
-        </div>
           <!---------------------------- Slide 39: Low cost (Mechanisation as a Service) business model -->
           <div class="slide">
+            <h6 class="top-us-title-1" style="color: white;">
+                <span>07 — Appendix</span>
+            </h6>
             <div class="lc-container">
               <div class="lc-header">
-                <h1 class="lc-title">Low Cost Mechanisation as a Service</h1>
-                <p class="lc-subtitle">Affordable Equipment for Sustainable Farming</p>
+                <h1 class="sof-title">Low cost (Mechanisation as a Service) business model </h1>
+                <p class="sof-subtitle">Low cost equipment to deliver affordable services</p>
               </div>
           
               <div class="lc-content">
                 <div class="lc-text-section">
                   <div class="lc-text-card">
-                    <h3 class="lc-card-title">The Farmhub Advantage</h3>
-                    <p class="lc-card-text">Instead of relying on a few large, high-cost machines that are expensive to maintain, repair, and replace, Farmhub's model promotes a fleet of smaller, standardised tractors and implements.</p>
+                    
+                    <p class="lc-card-text">Instead of relying on a few large, high-cost machines that are expensive to 
+                        maintain, repair, and replace, Farmhub’s model promotes a fleet of smaller, 
+                        standardised tractors and implements.  </p>
                   </div>
-                  
+
+
+             
+                  <h3 class="lc-card-title">The Farmhub Advantage</h3>
                   <div class="lc-features-grid">
                     <div class="lc-feature">
                       <div class="lc-feature-icon">✓</div>
-                      <div class="lc-feature-text">Enhanced flexibility and resilience</div>
+                      <div class="lc-feature-text"><strong>Enhanced flexibility and resilience</strong></div>
                     </div>
                     <div class="lc-feature">
                       <div class="lc-feature-icon">✓</div>
-                      <div class="lc-feature-text">Better suited for fragmented landholdings</div>
+                      <div class="lc-feature-text"><strong>Better suited for fragmented </strong></div>
                     </div>
                     <div class="lc-feature">
                       <div class="lc-feature-icon">✓</div>
-                      <div class="lc-feature-text">Simpler to operate and repair locally</div>
+                      <div class="lc-feature-text"><strong>Simpler to operate and repair locally </strong></div>
                     </div>
                     <div class="lc-feature">
                       <div class="lc-feature-icon">✓</div>
-                      <div class="lc-feature-text">Reduced downtime risks</div>
+                      <div class="lc-feature-text"><strong>Reduced downtime risks </strong></div>
                     </div>
                   </div>
                 </div>
-          
+              
                 <div class="lc-visual-section">
-                  <div class="lc-model-card">
-                    <h3 class="lc-model-title">Illustrative Equipment Pricing Model</h3>
-                    <div class="lc-model-tabs">
-                      <button class="lc-tab active" data-tab="tractor">50hp Tractor</button>
-                      <button class="lc-tab" data-tab="planter">Seed Planter</button>
-                    </div>
-                    
-                    <div class="lc-model-content" id="tractor-content">
-                      <div class="lc-model-row">
-                        <span>Initial Purchase Cost</span>
-                        <span>$12,600</span>
-                      </div>
-                      <div class="lc-model-row">
-                        <span>Annual Depreciation</span>
-                        <span>$1,800</span>
-                      </div>
-                      <div class="lc-model-row">
-                        <span>Annual Usage (hours)</span>
-                        <span>1,000</span>
-                      </div>
-                      <div class="lc-model-row highlight">
-                        <span>Depreciation Cost/Hour</span>
-                        <span>$1.80</span>
-                      </div>
-                    </div>
-                    
-                    <div class="lc-model-content" id="planter-content" style="display:none">
-                      <div class="lc-model-row">
-                        <span>Initial Purchase Cost</span>
-                        <span>$3,500</span>
-                      </div>
-                      <div class="lc-model-row">
-                        <span>Annual Depreciation</span>
-                        <span>$500</span>
-                      </div>
-                      <div class="lc-model-row">
-                        <span>Annual Usage (hours)</span>
-                        <span>350</span>
-                      </div>
-                      <div class="lc-model-row highlight">
-                        <span>Depreciation Cost/Hour</span>
-                        <span>$1.42</span>
-                      </div>
-                    </div>
-                    
-                    <div class="lc-pricing-pyramid">
-                      <div class="lc-pyramid-level">
-                        <span class="lc-pyramid-label">L3 PropCo → L2 OpCo</span>
-                        <span class="lc-pyramid-price tractor-price">$8.00/hr</span>
-                        <span class="lc-pyramid-price planter-price">$7.00/hr</span>
-                      </div>
-                      <div class="lc-pyramid-level">
-                        <span class="lc-pyramid-label">L2 OpCo → L1 Franchise</span>
-                        <span class="lc-pyramid-price tractor-price">$12.00/hr</span>
-                        <span class="lc-pyramid-price planter-price">$11.00/hr</span>
-                      </div>
-                      <div class="lc-pyramid-level">
-                        <span class="lc-pyramid-label">L1 Franchise → Farmer</span>
-                        <span class="lc-pyramid-price tractor-price">$20.00/hr</span>
-                        <span class="lc-pyramid-price planter-price">$18.00/hr</span>
+                    <div class="lc-model-card">
+                      <h3 class="lc-model-title">Illustrative Equipment Pricing Model</h3>
+                      
+                      <div class="lc-model-table-container">
+                        <table class="lc-model-table">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>50hp Tractor</th>
+                              <th>Seed Planter</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Initial Purchase Cost (excl shipping)</td>
+                              <td>$12,600</td>
+                              <td>$3,500</td>
+                            </tr>
+                            <tr>
+                              <td>Annual Depreciation</td>
+                              <td>$1,800</td>
+                              <td>$500</td>
+                            </tr>
+                            <tr>
+                              <td>Annual hours usage</td>
+                              <td>1,000</td>
+                              <td>350</td>
+                            </tr>
+                            <tr class="highlight">
+                              <td>Depreciation cost per hour</td>
+                              <td>$1.80</td>
+                              <td>$1.42</td>
+                            </tr>
+                            <tr>
+                              <td>Hourly charge L3 PropCo to L2 Op Co</td>
+                              <td>$8.00</td>
+                              <td>$7.00</td>
+                            </tr>
+                            <tr>
+                              <td>Hourly charge L2 Op Co to L1 Franchise Op Co</td>
+                              <td>$12.00</td>
+                              <td>$11.00</td>
+                            </tr>
+                            <tr>
+                              <td>Hourly charge L1 Franchise to L0 Farmer</td>
+                              <td>$20.00</td>
+                              <td>$18.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
               
               <div class="lc-conclusion">
@@ -10200,6 +10261,7 @@
               display: true,
               text: '2026 Cost Distribution',
               font: { size: 14 }
+             
             },
             tooltip: {
               callbacks: {
