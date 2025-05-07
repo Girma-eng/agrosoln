@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <style>
           :root {
             --primary-color: #2e7d32;
@@ -53,7 +54,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            overflow-y: hidden;
+            overflow-y: auto;
             transition: opacity 0.5s ease;
         }
         
@@ -4833,7 +4834,258 @@
 
 
 
+ /* Custom styles with lc- prefix */
+ .lc-container {
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+      color: #333;
+    }
+  
+    .lc-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .lc-title {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+  
+    .lc-subtitle {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+    }
+  
+    .lc-content {
+      display: flex;
+      flex: 1;
+      gap: 20px;
+    }
+  
+    .lc-text-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .lc-text-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+  
+    .lc-card-title {
+      color: #3498db;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+  
+    .lc-card-text {
+      line-height: 1.6;
+    }
+  
+    .lc-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .lc-feature {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+  
+    .lc-feature-icon {
+      background: #2ecc71;
+      color: white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  
+    .lc-visual-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .lc-model-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+  
+    .lc-model-title {
+      color: #3498db;
+      margin-top: 0;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  
+    .lc-model-tabs {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .lc-tab {
+      flex: 1;
+      padding: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #7f8c8d;
+      border-bottom: 3px solid transparent;
+    }
+  
+    .lc-tab.active {
+      color: #3498db;
+      border-bottom-color: #3498db;
+    }
+  
+    .lc-model-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .lc-model-row.highlight {
+      background: #f8f9fa;
+      font-weight: bold;
+      color: #2c3e50;
+      border-radius: 4px;
+      padding: 12px;
+      margin: 10px -12px;
+    }
+  
+    .lc-pricing-pyramid {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .lc-pyramid-level {
+      display: flex;
+      align-items: center;
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 15px;
+      position: relative;
+    }
+  
+    .lc-pyramid-level:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 15px;
+      background: #bdc3c7;
+    }
+  
+    .lc-pyramid-level:last-child:after {
+      display: none;
+    }
+  
+    .lc-pyramid-label {
+      flex: 2;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  
+    .lc-pyramid-price {
+      flex: 1;
+      text-align: center;
+      background: #3498db;
+      color: white;
+      padding: 5px;
+      border-radius: 4px;
+      margin: 0 5px;
+    }
+  
+    .lc-conclusion {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      font-style: italic;
+    }
+  
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .lc-content {
+        flex-direction: column;
+      }
+      
+      .lc-features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .lc-title {
+        font-size: 1.5rem;
+      }
+      
+      .lc-subtitle {
+        font-size: 1rem;
+      }
+      
+      .lc-model-row, .lc-pyramid-level {
+        font-size: 0.9rem;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .lc-container {
+        padding: 15px;
+      }
+      
+      .lc-title {
+        font-size: 1.3rem;
+      }
+      
+      .lc-card-title, .lc-model-title {
+        font-size: 1.1rem;
+      }
+      
+      .lc-pyramid-level {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      
+      .lc-pyramid-price {
+        align-self: flex-end;
+      }
+    }
 
+
+    
 
 
  /* SCOPED STYLES WITH UNIQUE PREFIX */
@@ -5122,50 +5374,19 @@
 
 
 
+  /* CUSTOM STYLES */
 
 
-
-
-
-    .bs-container {
-            height: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
-            box-sizing: border-box;
-            overflow: auto;
-        }
-
-
-    .bs-title {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #00C9FF;
-            text-align: center;
-        }
-
-        .bs-subtitle {
-            font-size: 1rem;
-            color: #aaa;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .bs-content-wrapper {
-            display: flex;
-            flex: 1;
-            gap: 30px;
-            flex-direction: row;
-        }
+        
+    
+        
 
         .bs-chart-container {
             flex: 1;
             display: flex;
             flex-direction: column;
             min-width: 0;
+            min-height: 0;
         }
 
         .bs-chart-box {
@@ -5173,41 +5394,34 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 15px;
-            margin-bottom: 20px;
-            min-height: 300px;
+            margin-bottom: 15px;
+            min-height: 250px;
+            max-height: 50vh;
         }
 
         .bs-chart-title {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             margin-bottom: 10px;
             color: #00C9FF;
             text-align: center;
         }
 
         .bs-chart-wrapper {
-            height: calc(100% - 30px);
+            height: calc(100% - 25px);
             width: 100%;
             position: relative;
         }
 
-        .bs-table-container {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 15px;
-            overflow: auto;
-            min-width: 0;
-        }
 
         .bs-financial-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9rem;
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
         }
 
         .bs-financial-table th, 
         .bs-financial-table td {
-            padding: 12px 15px;
+            padding: 10px 12px;
             text-align: right;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -5217,6 +5431,7 @@
             color: #00C9FF;
             position: sticky;
             top: 0;
+            white-space: nowrap;
         }
 
         .bs-financial-table td:first-child {
@@ -5251,44 +5466,510 @@
         @media (max-width: 1024px) {
             .bs-content-wrapper {
                 flex-direction: column;
+                gap: 15px;
             }
             
             .bs-chart-box {
-                height: auto;
-                min-height: 300px;
+                min-height: 250px;
+                max-height: none;
+                margin-bottom: 15px;
             }
             
-            .bs-financial-table {
-                font-size: 0.8rem;
+            .bs-table-container {
+                flex: none;
+                height: auto;
+                max-height: 50vh;
             }
         }
 
         @media (max-width: 768px) {
+
             .bs-container {
-                padding: 10px;
-                height: auto;
-                min-height: 100vh;
+                padding: 15px;
             }
-            
-            .bs-title {
-                font-size: 1.5rem;
+              .bs-content-wrapper {
+                flex-direction: column;
+                gap: 15px;
             }
-            
             .bs-financial-table th, 
             .bs-financial-table td {
                 padding: 8px 10px;
             }
             
-            /* Horizontal scrolling for table on small devices */
             .bs-table-container {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
+                max-height: 40vh;
             }
             
             .bs-financial-table {
-                min-width: 600px; /* Forces horizontal scroll */
+                min-width: 600px;
             }
         }
+
+     
+
+
+
+
+
+
+
+
+
+
+        .oh-container {
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-y: auto;
+    }
+  
+    .oh-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #00C9FF;
+      text-align: center;
+    }
+  
+    .oh-subtitle {
+      font-size: 1rem;
+      color: #aaa;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .oh-content-wrapper {
+      display: flex;
+      flex: 1;
+      gap: 30px;
+    }
+  
+    .oh-chart-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .oh-chart-box {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  
+    .oh-chart-title {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #00C9FF;
+      text-align: center;
+    }
+  
+    .oh-chart-wrapper {
+      height: calc(100% - 30px);
+      width: 100%;
+    }
+  
+    .oh-table-container {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 15px;
+      overflow: auto;
+    }
+  
+    .oh-financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+  
+    .oh-financial-table th, 
+    .oh-financial-table td {
+      padding: 12px 15px;
+      text-align: right;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .oh-financial-table th {
+      background: rgba(0, 201, 255, 0.2);
+      color: #00C9FF;
+      position: sticky;
+      top: 0;
+    }
+  
+    .oh-financial-table td:first-child {
+      text-align: left;
+      font-weight: bold;
+    }
+  
+    .oh-total-row {
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+      color: #00C9FF;
+    }
+  
+    .oh-year-header {
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .oh-content-wrapper {
+        flex-direction: column;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .oh-container {
+        padding: 10px;
+      }
+  
+      .oh-chart-box {
+        height: 300px;
+      }
+  
+      .oh-financial-table {
+        font-size: 0.8rem;
+      }
+  
+      .oh-financial-table th,
+      .oh-financial-table td {
+        padding: 8px 10px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .oh-title {
+        font-size: 1.5rem;
+      }
+  
+      .oh-subtitle {
+        font-size: 0.9rem;
+      }
+  
+      .oh-chart-title {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+    .oc-container {
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Arial', sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-y: auto;
+      }
+    
+      .oc-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #00C9FF;
+        text-align: center;
+      }
+    
+      .oc-subtitle {
+        font-size: 1rem;
+        color: #aaa;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    
+      .oc-content-wrapper {
+        display: flex;
+        flex: 1;
+        gap: 30px;
+      }
+    
+      .oc-chart-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .oc-chart-box {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+    
+      .oc-chart-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #00C9FF;
+        text-align: center;
+      }
+    
+      .oc-chart-wrapper {
+        height: calc(100% - 30px);
+        width: 100%;
+      }
+    
+      .oc-table-container {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 15px;
+        overflow: auto;
+      }
+    
+      .oc-financial-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+    
+      .oc-financial-table th, 
+      .oc-financial-table td {
+        padding: 12px 15px;
+        text-align: right;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    
+      .oc-financial-table th {
+        background: rgba(0, 201, 255, 0.2);
+        color: #00C9FF;
+        position: sticky;
+        top: 0;
+      }
+    
+      .oc-financial-table td:first-child {
+        text-align: left;
+        font-weight: bold;
+      }
+    
+      .oc-total-row {
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
+        color: #00C9FF;
+      }
+    
+      .oc-year-header {
+        text-align: center;
+        font-weight: bold;
+      }
+    
+      /* Responsive styles */
+      @media (max-width: 1024px) {
+        .oc-content-wrapper {
+          flex-direction: column;
+        }
+      }
+    
+      @media (max-width: 768px) {
+        .oc-container {
+          padding: 10px;
+        }
+    
+        .oc-chart-box {
+          height: 300px;
+        }
+    
+        .oc-financial-table {
+          font-size: 0.8rem;
+        }
+    
+        .oc-financial-table th,
+        .oc-financial-table td {
+          padding: 8px 10px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .oc-title {
+          font-size: 1.5rem;
+        }
+    
+        .oc-subtitle {
+          font-size: 0.9rem;
+        }
+    
+        .oc-chart-title {
+          font-size: 0.9rem;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+    .ac-container {
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-y: auto;
+    }
+  
+    .ac-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #00C9FF;
+      text-align: center;
+    }
+  
+    .ac-subtitle {
+      font-size: 1rem;
+      color: #aaa;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .ac-content-wrapper {
+      display: flex;
+      flex: 1;
+      gap: 30px;
+    }
+  
+    .ac-chart-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .ac-chart-box {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  
+    .ac-chart-title {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #00C9FF;
+      text-align: center;
+    }
+  
+    .ac-chart-wrapper {
+      height: calc(100% - 30px);
+      width: 100%;
+    }
+  
+    .ac-table-container {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 15px;
+      overflow: auto;
+    }
+  
+    .ac-financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+  
+    .ac-financial-table th, 
+    .ac-financial-table td {
+      padding: 12px 15px;
+      text-align: right;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .ac-financial-table th {
+      background: rgba(0, 201, 255, 0.2);
+      color: #00C9FF;
+      position: sticky;
+      top: 0;
+    }
+  
+    .ac-financial-table td:first-child {
+      text-align: left;
+      font-weight: bold;
+    }
+  
+    .ac-total-row {
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+      color: #00C9FF;
+    }
+  
+    .ac-year-header {
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    /* Special styling for count cells */
+    .ac-financial-table td:first-child + td,
+    .ac-financial-table td:first-child + td + td,
+    .ac-financial-table td:first-child + td + td + td,
+    .ac-financial-table td:first-child + td + td + td + td,
+    .ac-financial-table td:first-child + td + td + td + td + td {
+      font-style: italic;
+      color: #aaa;
+    }
+  
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .ac-content-wrapper {
+        flex-direction: column;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .ac-container {
+        padding: 10px;
+      }
+  
+      .ac-chart-box {
+        height: 300px;
+      }
+  
+      .ac-financial-table {
+        font-size: 0.8rem;
+      }
+  
+      .ac-financial-table th,
+      .ac-financial-table td {
+        padding: 8px 10px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .ac-title {
+        font-size: 1.5rem;
+      }
+  
+      .ac-subtitle {
+        font-size: 0.9rem;
+      }
+  
+      .ac-chart-title {
+        font-size: 0.9rem;
+      }
+    }
     </style>
 </head>
 <body>
@@ -7678,10 +8359,7 @@
                     <span>05 -- Traction</span>
                 </h2>
                 <div class="slide-content-challenge">
-                    <h2 class="top-us-title-1" style="color: white;">
-                        <span>01-The Context</span>
-                    </h2>
-                
+                 
                     <div class="smallholder-section">
                         <div class="text-column" style="flex: 0 0 1%;">
                                 </div>
@@ -7701,9 +8379,7 @@
                 </h2>
 
             <div class="slide-content-challenge">
-                <h2 class="top-us-title-1" style="color: white;">
-                    <span>01-Traction</span>
-                </h2>
+              
                 <div class="smallholder-section">
                     
                     <!-- Text Section -->
@@ -7859,9 +8535,134 @@
                     </div>
                 </div>
             </div>
+              <!--=========================-- Slide 16: subtitle 03 Title Slide -->
+        <div class="slide" id="title-slide" style="background-color: black;">
+            <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
+               
+                <h1>07 -- Appendix</h1>
+                <h3>Additional Financial Information</h3>
+
+            </div>
+        
+            <div class="footer" style="text-align: center; bottom: 5px; left: 5px;">
+                
+            </div>
+        </div>
+          <!---------------------------- Slide 39: Low cost (Mechanisation as a Service) business model -->
+          <div class="slide">
+            <div class="lc-container">
+              <div class="lc-header">
+                <h1 class="lc-title">Low Cost Mechanisation as a Service</h1>
+                <p class="lc-subtitle">Affordable Equipment for Sustainable Farming</p>
+              </div>
+          
+              <div class="lc-content">
+                <div class="lc-text-section">
+                  <div class="lc-text-card">
+                    <h3 class="lc-card-title">The Farmhub Advantage</h3>
+                    <p class="lc-card-text">Instead of relying on a few large, high-cost machines that are expensive to maintain, repair, and replace, Farmhub's model promotes a fleet of smaller, standardised tractors and implements.</p>
+                  </div>
+                  
+                  <div class="lc-features-grid">
+                    <div class="lc-feature">
+                      <div class="lc-feature-icon">✓</div>
+                      <div class="lc-feature-text">Enhanced flexibility and resilience</div>
+                    </div>
+                    <div class="lc-feature">
+                      <div class="lc-feature-icon">✓</div>
+                      <div class="lc-feature-text">Better suited for fragmented landholdings</div>
+                    </div>
+                    <div class="lc-feature">
+                      <div class="lc-feature-icon">✓</div>
+                      <div class="lc-feature-text">Simpler to operate and repair locally</div>
+                    </div>
+                    <div class="lc-feature">
+                      <div class="lc-feature-icon">✓</div>
+                      <div class="lc-feature-text">Reduced downtime risks</div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="lc-visual-section">
+                  <div class="lc-model-card">
+                    <h3 class="lc-model-title">Illustrative Equipment Pricing Model</h3>
+                    <div class="lc-model-tabs">
+                      <button class="lc-tab active" data-tab="tractor">50hp Tractor</button>
+                      <button class="lc-tab" data-tab="planter">Seed Planter</button>
+                    </div>
+                    
+                    <div class="lc-model-content" id="tractor-content">
+                      <div class="lc-model-row">
+                        <span>Initial Purchase Cost</span>
+                        <span>$12,600</span>
+                      </div>
+                      <div class="lc-model-row">
+                        <span>Annual Depreciation</span>
+                        <span>$1,800</span>
+                      </div>
+                      <div class="lc-model-row">
+                        <span>Annual Usage (hours)</span>
+                        <span>1,000</span>
+                      </div>
+                      <div class="lc-model-row highlight">
+                        <span>Depreciation Cost/Hour</span>
+                        <span>$1.80</span>
+                      </div>
+                    </div>
+                    
+                    <div class="lc-model-content" id="planter-content" style="display:none">
+                      <div class="lc-model-row">
+                        <span>Initial Purchase Cost</span>
+                        <span>$3,500</span>
+                      </div>
+                      <div class="lc-model-row">
+                        <span>Annual Depreciation</span>
+                        <span>$500</span>
+                      </div>
+                      <div class="lc-model-row">
+                        <span>Annual Usage (hours)</span>
+                        <span>350</span>
+                      </div>
+                      <div class="lc-model-row highlight">
+                        <span>Depreciation Cost/Hour</span>
+                        <span>$1.42</span>
+                      </div>
+                    </div>
+                    
+                    <div class="lc-pricing-pyramid">
+                      <div class="lc-pyramid-level">
+                        <span class="lc-pyramid-label">L3 PropCo → L2 OpCo</span>
+                        <span class="lc-pyramid-price tractor-price">$8.00/hr</span>
+                        <span class="lc-pyramid-price planter-price">$7.00/hr</span>
+                      </div>
+                      <div class="lc-pyramid-level">
+                        <span class="lc-pyramid-label">L2 OpCo → L1 Franchise</span>
+                        <span class="lc-pyramid-price tractor-price">$12.00/hr</span>
+                        <span class="lc-pyramid-price planter-price">$11.00/hr</span>
+                      </div>
+                      <div class="lc-pyramid-level">
+                        <span class="lc-pyramid-label">L1 Franchise → Farmer</span>
+                        <span class="lc-pyramid-price tractor-price">$20.00/hr</span>
+                        <span class="lc-pyramid-price planter-price">$18.00/hr</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="lc-conclusion">
+                <p>This strategy enables locally affordable, reliable, and scalable mechanisation services, empowering rural communities to boost productivity without unsustainable costs.</p>
+              </div>
+            </div>
+          </div>
+
          <!---------------------------- Slide 38: source of finance -->
          
             <div class="slide">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>05 -- Appendix</span>
+                </h2>
+
               <div class="sof-container">
                 <h1 class="sof-title">PropCo - Sources of Finance</h1>
                 <p class="sof-subtitle">Funding Breakdown 2026-2030 (€)</p>
@@ -7937,6 +8738,9 @@
         <!---------------------------- Slide 39: Profit forcast -->
             
                 <div class="slide">
+                    <h2 class="top-us-title-1" style="color: white;">
+                        <span>05 -- Appendix</span>
+                    </h2>
                     <h2 class="top-us-title-1" style="color: white;">
                         <span>06 — Business Plan</span>
                     </h2>
@@ -8059,141 +8863,402 @@
                         </div>
                     </div>
                 </div>
+        <!---------------------------- Slide 39: Balance sheet -->
+        <div class="slide">
+            <h2 class="top-us-title-1" style="color: white;">
+                <span>05 -- Appendix</span>
+            </h2>
+            <div class="sof-container">
+                <h1 class="sof-title">PropCo - Balance Sheet</h1>
+                <p class="sof-subtitle">Financial Position 2026-2030 (€)</p>
 
-                <div class="slide">
-                <div class="bs-container">
-                    <h1 class="bs-title">PropCo - Balance Sheet</h1>
-                    <p class="bs-subtitle">Financial Position 2026-2030 (€)</p>
-                    
-                    <div class="bs-content-wrapper">
-                        <div class="bs-chart-container">
-                            <div class="bs-chart-box">
-                                <h3 class="bs-chart-title">Assets Composition</h3>
-                                <div class="bs-chart-wrapper">
-                                    <canvas id="assetsChart"></canvas>
-                                </div>
-                            </div>
-                            <div class="bs-chart-box">
-                                <h3 class="bs-chart-title">Liabilities & Equity</h3>
-                                <div class="bs-chart-wrapper">
-                                    <canvas id="liabilitiesChart"></canvas>
-                                </div>
-                            </div>
+            <div class="sof-content-wrapper">
+                <div class="bs-chart-container">
+                    <div class="bs-chart-box">
+                        <h3 class="bs-chart-title">Assets Composition</h3>
+                        <div class="bs-chart-wrapper">
+                            <canvas id="assetsChart"></canvas>
                         </div>
-                        
-                        <div class="bs-table-container">
-                            <table class="bs-financial-table">
-                                <thead>
-                                    <tr>
-                                        <th>Balance Sheet</th>
-                                        <th class="bs-year-header">2026</th>
-                                        <th class="bs-year-header">2027</th>
-                                        <th class="bs-year-header">2028</th>
-                                        <th class="bs-year-header">2029</th>
-                                        <th class="bs-year-header">2030</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="bs-section-header">
-                                        <td>Current Assets</td>
-                                        <td>€5,469,269</td>
-                                        <td>€3,892,489</td>
-                                        <td>€4,481,654</td>
-                                        <td>€8,695,365</td>
-                                        <td>€18,111,900</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Long Term Assets</td>
-                                        <td>€2,700,000</td>
-                                        <td>€2,700,000</td>
-                                        <td>€8,300,000</td>
-                                        <td>€16,300,000</td>
-                                        <td>€24,300,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Accumulated Depreciation</td>
-                                        <td class="bs-negative">-€360,000</td>
-                                        <td class="bs-negative">-€720,000</td>
-                                        <td class="bs-negative">-€1,480,833</td>
-                                        <td class="bs-negative">-€3,153,452</td>
-                                        <td class="bs-negative">-€5,883,214</td>
-                                    </tr>
-                                    <tr class="bs-total-row">
-                                        <td>Total Assets</td>
-                                        <td>€7,809,269</td>
-                                        <td>€5,872,489</td>
-                                        <td>€11,300,821</td>
-                                        <td>€21,841,913</td>
-                                        <td>€36,528,686</td>
-                                    </tr>
-                                    
-                                    <tr class="bs-section-header">
-                                        <td>Current Liabilities</td>
-                                        <td>€377,020</td>
-                                        <td>€400,273</td>
-                                        <td>€1,329,811</td>
-                                        <td>€2,828,582</td>
-                                        <td>€5,042,225</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Long Term Liabilities</td>
-                                        <td>€1,796,651</td>
-                                        <td>€1,396,378</td>
-                                        <td>€5,283,375</td>
-                                        <td>€9,620,814</td>
-                                        <td>€12,590,290</td>
-                                    </tr>
-                                    <tr class="bs-total-row">
-                                        <td>Total Liabilities</td>
-                                        <td>€2,173,671</td>
-                                        <td>€1,796,651</td>
-                                        <td>€6,613,186</td>
-                                        <td>€12,449,396</td>
-                                        <td>€17,632,515</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>Paid in Capital</td>
-                                        <td>€7,500,000</td>
-                                        <td>€7,500,000</td>
-                                        <td>€7,500,000</td>
-                                        <td>€7,500,000</td>
-                                        <td>€7,500,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Retained Earnings</td>
-                                        <td class="bs-negative">-€1,864,402</td>
-                                        <td class="bs-negative">-€3,424,162</td>
-                                        <td class="bs-negative">-€2,812,365</td>
-                                        <td class="bs-positive">€1,892,518</td>
-                                        <td class="bs-positive">€11,396,171</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Total Earnings</td>
-                                        <td>€5,635,598</td>
-                                        <td>€4,075,838</td>
-                                        <td>€4,687,635</td>
-                                        <td>€9,392,518</td>
-                                        <td>€18,896,171</td>
-                                    </tr>
-                                    
-                                    <tr class="bs-total-row">
-                                        <td>Total Liabilities & Equity</td>
-                                        <td>€7,809,269</td>
-                                        <td>€5,872,489</td>
-                                        <td>€11,300,821</td>
-                                        <td>€21,841,914</td>
-                                        <td>€36,528,686</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    </div>
+                    <div class="bs-chart-box">
+                        <h3 class="bs-chart-title">Liabilities & Equity</h3>
+                        <div class="bs-chart-wrapper">
+                            <canvas id="liabilitiesChart"></canvas>
                         </div>
                     </div>
                 </div>
+
+                <div class="sof-table-container">
+                    <table class="bs-financial-table">
+                        <thead>
+                            <tr>
+                                <th>Balance Sheet</th>
+                                <th class="bs-year-header">2026</th>
+                                <th class="bs-year-header">2027</th>
+                                <th class="bs-year-header">2028</th>
+                                <th class="bs-year-header">2029</th>
+                                <th class="bs-year-header">2030</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bs-section-header">
+                                <td>Current Assets</td>
+                                <td>€5,469,269</td>
+                                <td>€3,892,489</td>
+                                <td>€4,481,654</td>
+                                <td>€8,695,365</td>
+                                <td>€18,111,900</td>
+                            </tr>
+                            <tr>
+                                <td>Long Term Assets</td>
+                                <td>€2,700,000</td>
+                                <td>€2,700,000</td>
+                                <td>€8,300,000</td>
+                                <td>€16,300,000</td>
+                                <td>€24,300,000</td>
+                            </tr>
+                            <tr>
+                                <td>Accumulated Depreciation</td>
+                                <td class="bs-negative">-€360,000</td>
+                                <td class="bs-negative">-€720,000</td>
+                                <td class="bs-negative">-€1,480,833</td>
+                                <td class="bs-negative">-€3,153,452</td>
+                                <td class="bs-negative">-€5,883,214</td>
+                            </tr>
+                            <tr class="bs-total-row">
+                                <td>Total Assets</td>
+                                <td>€7,809,269</td>
+                                <td>€5,872,489</td>
+                                <td>€11,300,821</td>
+                                <td>€21,841,913</td>
+                                <td>€36,528,686</td>
+                            </tr>
+                            
+                            <tr class="bs-section-header">
+                                <td>Current Liabilities</td>
+                                <td>€377,020</td>
+                                <td>€400,273</td>
+                                <td>€1,329,811</td>
+                                <td>€2,828,582</td>
+                                <td>€5,042,225</td>
+                            </tr>
+                            <tr>
+                                <td>Long Term Liabilities</td>
+                                <td>€1,796,651</td>
+                                <td>€1,396,378</td>
+                                <td>€5,283,375</td>
+                                <td>€9,620,814</td>
+                                <td>€12,590,290</td>
+                            </tr>
+                            <tr class="bs-total-row">
+                                <td>Total Liabilities</td>
+                                <td>€2,173,671</td>
+                                <td>€1,796,651</td>
+                                <td>€6,613,186</td>
+                                <td>€12,449,396</td>
+                                <td>€17,632,515</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Paid in Capital</td>
+                                <td>€7,500,000</td>
+                                <td>€7,500,000</td>
+                                <td>€7,500,000</td>
+                                <td>€7,500,000</td>
+                                <td>€7,500,000</td>
+                            </tr>
+                            <tr>
+                                <td>Retained Earnings</td>
+                                <td class="bs-negative">-€1,864,402</td>
+                                <td class="bs-negative">-€3,424,162</td>
+                                <td class="bs-negative">-€2,812,365</td>
+                                <td class="bs-positive">€1,892,518</td>
+                                <td class="bs-positive">€11,396,171</td>
+                            </tr>
+                            <tr>
+                                <td>Total Earnings</td>
+                                <td>€5,635,598</td>
+                                <td>€4,075,838</td>
+                                <td>€4,687,635</td>
+                                <td>€9,392,518</td>
+                                <td>€18,896,171</td>
+                            </tr>
+                            
+                            <tr class="bs-total-row">
+                                <td>Total Liabilities & Equity</td>
+                                <td>€7,809,269</td>
+                                <td>€5,872,489</td>
+                                <td>€11,300,821</td>
+                                <td>€21,841,914</td>
+                                <td>€36,528,686</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
+            </div>
+        </div>
+        
+        <!---------------------------- Slide 39: -->
+        <div class="slide">
+            <h2 class="top-us-title-1" style="color: white;">
+                <span>05 -- Appendix</span>
+            </h2>
+            <div class="oh-container">
+              <h1 class="oh-title">PropCo - Overhead Costs</h1>
+              <p class="oh-subtitle">Expense Breakdown 2026-2030 (€)</p>
+          
+              <div class="oh-content-wrapper">
+                <div class="oh-chart-container">
+                  <div class="oh-chart-box">
+                    <h3 class="oh-chart-title">Cost Composition (2026)</h3>
+                    <div class="oh-chart-wrapper">
+                      <canvas id="costChart-2"></canvas>
+                    </div>
+                  </div>
+                  <div class="oh-chart-box">
+                    <h3 class="oh-chart-title">Annual Overhead Costs</h3>
+                    <div class="oh-chart-wrapper">
+                      <canvas id="annualCostChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="oh-table-container">
+                  <table class="oh-financial-table">
+                    <thead>
+                      <tr>
+                        <th>Expense Category</th>
+                        <th class="oh-year-header">2026</th>
+                        <th class="oh-year-header">2027</th>
+                        <th class="oh-year-header">2028</th>
+                        <th class="oh-year-header">2029</th>
+                        <th class="oh-year-header">2030</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Studio Saol - Fees</td>
+                        <td>€480,000</td>
+                        <td>€480,000</td>
+                        <td>€480,000</td>
+                        <td>€480,000</td>
+                        <td>€480,000</td>
+                      </tr>
+                      <tr>
+                        <td>Global Impact Industries - Fees</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                      </tr>
+                      <tr>
+                        <td>Farmhub OS Development</td>
+                        <td>€240,000</td>
+                        <td>€240,000</td>
+                        <td>€240,000</td>
+                        <td>€240,000</td>
+                        <td>€240,000</td>
+                      </tr>
+                      <tr>
+                        <td>Last Mile Customisation</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€420,000</td>
+                        <td>€600,000</td>
+                        <td>€600,000</td>
+                      </tr>
+                      <tr>
+                        <td>Equipment Shipping</td>
+                        <td>€200,000</td>
+                        <td>€0</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                      </tr>
+                      <tr>
+                        <td>Travel Costs</td>
+                        <td>€47,751</td>
+                        <td>€66,121</td>
+                        <td>€115,677</td>
+                        <td>€187,015</td>
+                        <td>€253,456</td>
+                      </tr>
+                      <tr class="oh-total-row">
+                        <td>Total Overhead</td>
+                        <td>€1,707,751</td>
+                        <td>€1,486,121</td>
+                        <td>€2,015,677</td>
+                        <td>€2,327,015</td>
+                        <td>€2,473,456</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+      
 
+        <!---------------------------- Slide 39: Other Costs-->
+        <div class="slide">
+            <div class="oc-container">
+              <h1 class="oc-title">PropCo - Other Costs</h1>
+              <p class="oc-subtitle">Interest, Tax & Depreciation 2026-2030 (€)</p>
+          
+              <div class="oc-content-wrapper">
+                <div class="oc-chart-container">
+                  <div class="oc-chart-box">
+                    <h3 class="oc-chart-title">Cost Composition (2026)</h3>
+                    <div class="oc-chart-wrapper">
+                      <canvas id="otherCostChart"></canvas>
+                    </div>
+                  </div>
+                  <div class="oc-chart-box">
+                    <h3 class="oc-chart-title">Annual Cost Trends</h3>
+                    <div class="oc-chart-wrapper">
+                      <canvas id="annualOtherCostChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="oc-table-container">
+                  <table class="oc-financial-table">
+                    <thead>
+                      <tr>
+                        <th>Cost Category</th>
+                        <th class="oc-year-header">2026</th>
+                        <th class="oc-year-header">2027</th>
+                        <th class="oc-year-header">2028</th>
+                        <th class="oc-year-header">2029</th>
+                        <th class="oc-year-header">2030</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Interest Costs</td>
+                        <td>€129,423</td>
+                        <td>€120,164</td>
+                        <td>€407,526</td>
+                        <td>€774,770</td>
+                        <td>€1,077,276</td>
+                      </tr>
+                      <tr>
+                        <td>Corporation Taxes</td>
+                        <td>€0</td>
+                        <td>€0</td>
+                        <td>€210,280</td>
+                        <td>€1,055,961</td>
+                        <td>€2,729,762</td>
+                      </tr>
+                      <tr>
+                        <td>Depreciation Costs</td>
+                        <td>€360,000</td>
+                        <td>€360,000</td>
+                        <td>€760,833</td>
+                        <td>€1,672,619</td>
+                        <td>€1,055,961</td>
+                      </tr>
+                      <tr class="oc-total-row">
+                        <td>Total Costs</td>
+                        <td>€489,423</td>
+                        <td>€480,164</td>
+                        <td>€1,168,359</td>
+                        <td>€2,657,669</td>
+                        <td>€4,862,999</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!---------------------------- Slide 39: Asset cost-->
 
-
+        <div class="slide">
+            <div class="ac-container">
+              <h1 class="ac-title">PropCo - Asset Costs</h1>
+              <p class="ac-subtitle">Capital Expenditures 2026-2030 (€)</p>
+          
+              <div class="ac-content-wrapper">
+                <div class="ac-chart-container">
+                  <div class="ac-chart-box">
+                    <h3 class="ac-chart-title">2026 Asset Allocation</h3>
+                    <div class="ac-chart-wrapper">
+                      <canvas id="assetAllocationChart"></canvas>
+                    </div>
+                  </div>
+                  <div class="ac-chart-box">
+                    <h3 class="ac-chart-title">Annual Asset Investments</h3>
+                    <div class="ac-chart-wrapper">
+                      <canvas id="annualAssetChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="ac-table-container">
+                  <table class="ac-financial-table">
+                    <thead>
+                      <tr>
+                        <th>Asset Category</th>
+                        <th class="ac-year-header">2026</th>
+                        <th class="ac-year-header">2027</th>
+                        <th class="ac-year-header">2028</th>
+                        <th class="ac-year-header">2029</th>
+                        <th class="ac-year-header">2030</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>New Hubs (Count)</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Equipment Costs</td>
+                        <td>€1,800,000</td>
+                        <td>€0</td>
+                        <td>€4,200,000</td>
+                        <td>€6,000,000</td>
+                        <td>€6,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>Infrastructure Costs</td>
+                        <td>€0</td>
+                        <td>€600,000</td>
+                        <td>€1,400,000</td>
+                        <td>€2,000,000</td>
+                        <td>€2,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>Hawassa University Ops Centre</td>
+                        <td>€300,000</td>
+                        <td>€0</td>
+                        <td>€0</td>
+                        <td>€0</td>
+                        <td>€0</td>
+                      </tr>
+                      <tr class="ac-total-row">
+                        <td>Total Asset Costs</td>
+                        <td>€2,700,000</td>
+                        <td>€600,000</td>
+                        <td>€5,600,000</td>
+                        <td>€8,000,000</td>
+                        <td>€8,000,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
 
 
            
@@ -8752,7 +9817,7 @@
                 }]
             },
             options: {
-                responsive: true,
+                responsive: false,
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false },
@@ -8800,7 +9865,7 @@
                 ]
             },
             options: {
-                responsive: true,
+                responsive: false,
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { position: 'top' }
@@ -8828,7 +9893,7 @@
                 }]
             },
             options: {
-                responsive: true,
+                responsive: false,
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { position: 'right' },
@@ -8854,7 +9919,7 @@
                 }]
             },
             options: {
-                responsive: true,
+                responsive: false,
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false }
@@ -8902,7 +9967,7 @@
           }]
         },
         options: {
-          responsive: true,
+          responsive: false,
           maintainAspectRatio: false,
           plugins: {
             legend: { position: 'right' },
@@ -8939,7 +10004,7 @@
           ]
         },
         options: {
-          responsive: true,
+          responsive: false,
           maintainAspectRatio: false,
           plugins: {
             legend: { position: 'top' },
@@ -9002,7 +10067,7 @@
                 }]
             },
             options: {
-                responsive: true,
+                responsive: false,
                 maintainAspectRatio: false,
                 animation: {
                     duration: 0 // Disable all animations
@@ -9051,7 +10116,7 @@
                 ]
             },
             options: {
-                responsive: true,
+                responsive:false,
                 maintainAspectRatio: false,
                 animation: {
                     duration: 0 // Disable all animations
@@ -9076,5 +10141,361 @@
         });
     });
 </script>
+
+
+
+
+
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const years = ['2026', '2027', '2028', '2029', '2030'];
+      const studioSaol = [480000, 480000, 480000, 480000, 480000];
+      const globalImpact = [200000, 200000, 200000, 200000, 200000];
+      const farmhub = [240000, 240000, 240000, 240000, 240000];
+      const lastMile = [200000, 200000, 420000, 600000, 600000];
+      const shipping = [200000, 0, 200000, 200000, 200000];
+      const travel = [47751, 66121, 115677, 187015, 253456];
+      
+      const toMillions = arr => arr.map(x => x / 1000000);
+  
+      // Doughnut chart for 2026 cost composition
+      new Chart(document.getElementById('costChart-2'), {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Studio Saol', 
+            'Global Impact', 
+            'Farmhub OS', 
+            'Last Mile', 
+            'Shipping', 
+            'Travel'
+          ],
+          datasets: [{
+            data: [
+              studioSaol[0], 
+              globalImpact[0], 
+              farmhub[0], 
+              lastMile[0], 
+              shipping[0], 
+              travel[0]
+            ],
+            backgroundColor: [
+              'rgba(0, 201, 255, 0.7)',
+              'rgba(146, 254, 157, 0.7)',
+              'rgba(255, 159, 64, 0.7)',
+              'rgba(153, 102, 255, 0.7)',
+              'rgba(255, 99, 132, 0.7)',
+              'rgba(75, 192, 192, 0.7)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right' },
+            title: {
+              display: true,
+              text: '2026 Cost Distribution',
+              font: { size: 14 }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': €' + context.raw.toLocaleString();
+                }
+              }
+            }
+          }
+        }
+      });
+  
+      // Bar chart for annual costs
+      new Chart(document.getElementById('annualCostChart'), {
+        type: 'bar',
+        data: {
+          labels: years,
+          datasets: [
+            {
+              label: 'Total Overhead',
+              data: [1707751, 1486121, 2015677, 2327015, 2473456],
+              backgroundColor: 'rgba(0, 201, 255, 0.7)',
+              borderColor: 'rgba(0, 201, 255, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top' },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return 'Total: €' + context.raw.toLocaleString();
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              title: { 
+                display: true, 
+                text: '€' 
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const years = ['2026', '2027', '2028', '2029', '2030'];
+      const interest = [129423, 120164, 407526, 774770, 1077276];
+      const taxes = [0, 0, 210280, 1055961, 2729762];
+      const depreciation = [360000, 360000, 760833, 1672619, 1055961];
+      
+      const toThousands = arr => arr.map(x => x / 1000);
+  
+      // Doughnut chart for 2026 cost composition
+      new Chart(document.getElementById('otherCostChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Interest Costs', 'Corporation Taxes', 'Depreciation'],
+          datasets: [{
+            data: [interest[0], taxes[0], depreciation[0]],
+            backgroundColor: [
+              'rgba(0, 201, 255, 0.7)',
+              'rgba(146, 254, 157, 0.7)',
+              'rgba(255, 159, 64, 0.7)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right' },
+            title: {
+              display: true,
+              text: '2026 Cost Distribution',
+              font: { size: 14 }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': €' + context.raw.toLocaleString();
+                }
+              }
+            }
+          }
+        }
+      });
+  
+      // Stacked bar chart for annual costs
+      new Chart(document.getElementById('annualOtherCostChart'), {
+        type: 'bar',
+        data: {
+          labels: years,
+          datasets: [
+            {
+              label: 'Interest',
+              data: interest,
+              backgroundColor: 'rgba(0, 201, 255, 0.7)',
+              borderColor: 'rgba(0, 201, 255, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Taxes',
+              data: taxes,
+              backgroundColor: 'rgba(146, 254, 157, 0.7)',
+              borderColor: 'rgba(146, 254, 157, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Depreciation',
+              data: depreciation,
+              backgroundColor: 'rgba(255, 159, 64, 0.7)',
+              borderColor: 'rgba(255, 159, 64, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top' },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return context.dataset.label + ': €' + context.raw.toLocaleString();
+                }
+              }
+            }
+          },
+          scales: {
+            x: { stacked: true },
+            y: {
+              stacked: true,
+              title: { 
+                display: true, 
+                text: '€' 
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const years = ['2026', '2027', '2028', '2029', '2030'];
+      const equipment = [1800000, 0, 4200000, 6000000, 6000000];
+      const infrastructure = [0, 600000, 1400000, 2000000, 2000000];
+      const hawassa = [300000, 0, 0, 0, 0];
+      const hubs = [3, 0, 7, 10, 10];
+      
+      const toMillions = arr => arr.map(x => x / 1000000);
+  
+      // Pie chart for 2026 asset allocation
+      new Chart(document.getElementById('assetAllocationChart'), {
+        type: 'pie',
+        data: {
+          labels: ['Equipment', 'Hawassa Ops Centre'],
+          datasets: [{
+            data: [equipment[0], hawassa[0]],
+            backgroundColor: [
+              'rgba(0, 201, 255, 0.7)',
+              'rgba(146, 254, 157, 0.7)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right' },
+            title: {
+              display: true,
+              text: '2026 Investment Breakdown',
+              font: { size: 14 }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': €' + context.raw.toLocaleString();
+                }
+              }
+            }
+          }
+        }
+      });
+  
+      // Combo chart for annual investments (bar + line)
+      new Chart(document.getElementById('annualAssetChart'), {
+        type: 'bar',
+        data: {
+          labels: years,
+          datasets: [
+            {
+              label: 'Equipment Costs',
+              data: toMillions(equipment),
+              backgroundColor: 'rgba(0, 201, 255, 0.7)',
+              borderColor: 'rgba(0, 201, 255, 1)',
+              borderWidth: 1,
+              yAxisID: 'y'
+            },
+            {
+              label: 'Infrastructure Costs',
+              data: toMillions(infrastructure),
+              backgroundColor: 'rgba(146, 254, 157, 0.7)',
+              borderColor: 'rgba(146, 254, 157, 1)',
+              borderWidth: 1,
+              yAxisID: 'y'
+            },
+            {
+              label: 'New Hubs (Count)',
+              data: hubs,
+              type: 'line',
+              borderColor: 'rgba(255, 159, 64, 1)',
+              backgroundColor: 'rgba(255, 159, 64, 0.1)',
+              borderWidth: 2,
+              pointBackgroundColor: 'rgba(255, 159, 64, 1)',
+              pointRadius: 5,
+              yAxisID: 'y1'
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top' },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  let label = context.dataset.label || '';
+                  if (label.includes('Count')) {
+                    return label + ': ' + context.raw;
+                  }
+                  return label + ': €' + (context.raw * 1000000).toLocaleString();
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              title: {
+                display: true,
+                text: '€ Millions'
+              }
+            },
+            y1: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              title: {
+                display: true,
+                text: 'Hub Count',
+                color: 'rgba(255, 159, 64, 1)'
+              },
+              grid: {
+                drawOnChartArea: false,
+              },
+              ticks: {
+                color: 'rgba(255, 159, 64, 1)'
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
