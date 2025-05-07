@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
           :root {
             --primary-color: #2e7d32;
@@ -421,7 +422,7 @@
 
         @media (max-width: 768px) {
             .slide {
-         padding: 10px 10px 50px 4px;
+         padding: 10px 10px 40px 4px;
             
         }
         
@@ -572,8 +573,8 @@
         }
         
         .card-icon {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 25px;
             background-color: var(--light);
             border-radius: 50%;
             display: flex;
@@ -588,13 +589,13 @@
             height: 40px;
         }
         .card-title {
-            font-size: 1.1rem;
-            color: white;
+            font-size: 1.0rem;
+            color: rgb(12, 145, 46);
             margin: 0;
             flex: 1;
             text-align: left;
         }
-        
+      
         .card-value {
             font-size: 1.5rem;
             font-weight: 700;
@@ -653,7 +654,7 @@
         .triple-bar-graph,
         .double-bar-graph {
             display: flex;
-            height: 100px;
+            height: 120px;
             align-items: flex-end;
             margin: 10px 0;
             gap: 20px;
@@ -711,7 +712,7 @@
     
     .card-icon {
         width: 30px;
-        height: 30px;
+        height: 20px;
         margin-right: 0;
         margin-bottom: 4px;
     }
@@ -985,7 +986,7 @@
             font-size: 1.1rem;
             line-height: 1.5;
             color: var(--dark);
-            padding: 25px;
+            padding: 5px 15px;
             background: linear-gradient(135deg, #f5f7fa 0%, #f8f9fa 100%);
             border-radius: 8px;
             border-left: 5px solid var(--primary);
@@ -1254,7 +1255,7 @@
                
         .visual-frame {
             width: 100%;
-            height: 90%;
+            height: 100%;
             background: white;
             border-radius: 12px;
             display: flex;
@@ -2275,22 +2276,8 @@
             z-index: 2;
         }
 
-        .card-icon {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-
-        .card-icon img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
+     
+    
 
         .layer-text {
             font-size: 1.1rem;
@@ -3884,10 +3871,7 @@
         .uganda { background: var(--card-uganda); }
         .design { background: var(--card-design); }
         
-        .card-title {
-            font-size: 1.0rem;
-            margin-bottom: 0.1rem;
-        }
+      
         
         .card-subtitle {
             font-size: 0.9rem;
@@ -4852,57 +4836,204 @@
 
 
 
-
-
-
-        /* IMPROVED CONTENT STYLES */
-        .slide-content-rev {
+ /* SCOPED STYLES WITH UNIQUE PREFIX */
+ .plf-container {
             height: 100%;
             padding: 20px;
             display: flex;
             flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-y: auto;
         }
 
-   
+        .plf-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00C9FF;
+            text-align: left;
+        }
 
-        .content-wrapper {
+        .plf-subtitle {
+            font-size: 1rem;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .plf-content-wrapper {
             display: flex;
             flex: 1;
             gap: 20px;
+
         }
 
-        .chart-container {
-            flex: 2;
+        .plf-chart-container {
+            flex: 1.6;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .chart-row {
+        .plf-chart-row {
             display: flex;
             height: 50%;
             gap: 20px;
         }
 
-        .chart-box {
+        .plf-chart-box {
             flex: 1;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 15px;
         }
 
-        .chart-title {
+        .plf-chart-title {
             font-size: 0.9rem;
             margin-bottom: 10px;
             color: #00C9FF;
         }
 
-        .chart-wrapper {
+        .plf-chart-wrapper {
             height: calc(100% - 30px);
             width: 100%;
         }
 
-        .data-table-container {
+        .plf-table-container {
+            flex: 1.1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            overflow: auto;
+        }
+
+        .plf-financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.72rem;
+        }
+
+        .plf-financial-table th, 
+        .plf-financial-table td {
+            padding: 15px 8px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .plf-financial-table th {
+            background: rgba(0, 201, 255, 0.2);
+            color: #00C9FF;
+            position: sticky;
+            top: 0;
+        }
+
+        .plf-positive {
+            color: #92FE9D;
+        }
+
+        .plf-negative {
+            color: #FF6B6B;
+        }
+
+        .plf-highlight-row {
+            font-weight: bold;
+        }
+
+        .plf-year-header {
+            text-align: center !important;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .plf-content-wrapper {
+                flex-direction: column;
+            }
+            
+            .plf-chart-row {
+                height: auto;
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .plf-container {
+                padding: 10px;
+            }
+            
+            .plf-chart-row {
+                flex-direction: column;
+            }
+            
+            .plf-financial-table {
+                font-size: 0.7rem;
+            }
+        }
+
+
+
+
+
+
+          /* SCOPED STYLES WITH UNIQUE PREFIX */
+          .sof-container {
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-y: auto;
+        }
+
+        .sof-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00C9FF;
+            text-align: center;
+        }
+
+        .sof-subtitle {
+            font-size: 1rem;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sof-content-wrapper {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+        }
+
+        .sof-chart-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sof-chart-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .sof-chart-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #00C9FF;
+            text-align: center;
+        }
+
+        .sof-chart-wrapper {
+            height: calc(100% - 30px);
+            width: 100%;
+        }
+
+        .sof-table-container {
             flex: 1;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
@@ -4910,64 +5041,252 @@
             overflow: auto;
         }
 
-        .financial-table {
+        .sof-financial-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
 
-        .financial-table th, .financial-table td {
-            padding: 8px 10px;
+        .sof-financial-table th, 
+        .sof-financial-table td {
+            padding: 12px 15px;
             text-align: right;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .financial-table th {
+        .sof-financial-table th {
             background: rgba(0, 201, 255, 0.2);
             color: #00C9FF;
             position: sticky;
             top: 0;
         }
 
-        .positive {
-            color: #92FE9D;
+        .sof-financial-table td:first-child {
+            text-align: left;
+            font-weight: bold;
         }
 
-        .negative {
+        .sof-total-row {
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .sof-year-header {
+            text-align: center;
+            font-weight: bold;
+        }
+
+     /* Responsive styles */
+    @media (max-width: 1024px) {
+      .sof-content-wrapper {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sof-container {
+        padding: 10px;
+      }
+
+      .sof-chart-box {
+        height: 300px;
+      }
+
+      .sof-financial-table {
+        font-size: 0.8rem;
+      }
+
+      .sof-financial-table th,
+      .sof-financial-table td {
+        padding: 8px 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sof-title {
+        font-size: 1.5rem;
+      }
+
+      .sof-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .sof-chart-title {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .bs-container {
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+
+    .bs-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00C9FF;
+            text-align: center;
+        }
+
+        .bs-subtitle {
+            font-size: 1rem;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .bs-content-wrapper {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+            flex-direction: row;
+        }
+
+        .bs-chart-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .bs-chart-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            min-height: 300px;
+        }
+
+        .bs-chart-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #00C9FF;
+            text-align: center;
+        }
+
+        .bs-chart-wrapper {
+            height: calc(100% - 30px);
+            width: 100%;
+            position: relative;
+        }
+
+        .bs-table-container {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            overflow: auto;
+            min-width: 0;
+        }
+
+        .bs-financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .bs-financial-table th, 
+        .bs-financial-table td {
+            padding: 12px 15px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bs-financial-table th {
+            background: rgba(0, 201, 255, 0.2);
+            color: #00C9FF;
+            position: sticky;
+            top: 0;
+        }
+
+        .bs-financial-table td:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .bs-section-header {
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .bs-total-row {
+            font-weight: bold;
+            background: rgba(0, 201, 255, 0.1);
+        }
+
+        .bs-year-header {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .bs-negative {
             color: #FF6B6B;
         }
 
-        .highlight-row {
-            font-weight: bold;
+        .bs-positive {
+            color: #92FE9D;
         }
 
-        .year-header {
-            text-align: center !important;
-            font-weight: bold;
-        }
-
+        /* Mobile Responsiveness */
         @media (max-width: 1024px) {
-            .content-wrapper {
+            .bs-content-wrapper {
                 flex-direction: column;
             }
             
-            .chart-row {
+            .bs-chart-box {
                 height: auto;
-                min-height: 250px;
+                min-height: 300px;
+            }
+            
+            .bs-financial-table {
+                font-size: 0.8rem;
             }
         }
 
         @media (max-width: 768px) {
-            .slide-content {
+            .bs-container {
                 padding: 10px;
+                height: auto;
+                min-height: 100vh;
             }
             
-            .chart-row {
-                flex-direction: column;
+            .bs-title {
+                font-size: 1.5rem;
             }
             
-            .financial-table {
-                font-size: 0.7rem;
+            .bs-financial-table th, 
+            .bs-financial-table td {
+                padding: 8px 10px;
+            }
+            
+            /* Horizontal scrolling for table on small devices */
+            .bs-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .bs-financial-table {
+                min-width: 600px; /* Forces horizontal scroll */
             }
         }
     </style>
@@ -5430,10 +5749,7 @@
             </div>
         </div>
 
-         <div class="slide title-slide" style="background-image: url('image_file/regenerative_trans.jpg'); background-size: cover; background-position: center;">
-            <h1></h1>
-            <p></p>
-        </div>
+        
         <!---------------------------- Slide 8: The Context-01 bar graph-->
         <div class="slide">
                         <h2 class="top-us-title-1" style="color: white;">
@@ -7294,10 +7610,11 @@
             </div>
             </div>
 
-
-
             <!---------------------------- Slide 33: HU-partner -->
             <div class="slide">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>05 -- Traction</span>
+                </h2>
                 <div class="slide-content-hu">
                     <div class="text-column-hu">
                         <h1 class="slide-title">Partnership with Hawassa University</h1>
@@ -7355,27 +7672,33 @@
                     </div>
                 </div>
             </div>
-        <!---------------------------- Slide 33: HU-compound -->
-        <div class="slide">
-            <div class="slide-content-challenge">
+            <!---------------------------- Slide 34: HU-compound -->
+            <div class="slide">
                 <h2 class="top-us-title-1" style="color: white;">
-                    <span>01-The Context</span>
+                    <span>05 -- Traction</span>
                 </h2>
-            
-                <div class="smallholder-section">
-                    <div class="text-column" style="flex: 0 0 1%;">
-                            </div>
+                <div class="slide-content-challenge">
+                    <h2 class="top-us-title-1" style="color: white;">
+                        <span>01-The Context</span>
+                    </h2>
                 
-                    <!-- Image Section -->
-                    <div class="image-column" style="flex: 0 99%;">
-                        <img src="image_file/HU_rendered.jpg" alt="Farm Hub Model">
-                    </div>
-                    </div>
+                    <div class="smallholder-section">
+                        <div class="text-column" style="flex: 0 0 1%;">
+                                </div>
+                    
+                        <!-- Image Section -->
+                        <div class="image-column" style="flex: 0 99%;">
+                            <img src="image_file/HU_rendered.jpg" alt="Farm Hub Model">
+                        </div>
+                        </div>
+                </div>
             </div>
-        </div>
 
-              <!---------------------------- Slide 32: Utilising Appropriate Scale Technology -->
-        <div class="slide">
+              <!---------------------------- Slide 35: Utilising Appropriate Scale Technology -->
+            <div class="slide">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>05 -- Traction</span>
+                </h2>
 
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -7417,8 +7740,19 @@
                 </div>
             </div>
 
+            <!--=========================-- Slide 36: subtitle Slide -->
+            <div class="slide" id="title-slide" style="background-color: black;">
+                <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
+                
+                    <h1>06 — Business Plan</h1>
+                </div>
 
-
+                <div class="footer" style="text-align: center; bottom: 5px; left: 5px;">
+                    
+                </div>
+            </div>
+            
+              <!---------------------------- Slide 37: Growth horizon -->
             <div class="slide">
                 <h6 class="top-us-title-1" style="color: white;">
                     <span>06 — Business Plan</span>
@@ -7525,95 +7859,133 @@
                     </div>
                 </div>
             </div>
-        
-
-
-
-
-
-
-
-
-
-
-
-
+         <!---------------------------- Slide 38: source of finance -->
+         
             <div class="slide">
-                <div class="contact-container landscape-slide">
-                    <h1 class="contact-title">Get in Touch</h1>
-                    
-                    <div class="contact-content">
-                        <div class="contact-image"></div>
-                        
-                        <div class="contact-details">
-                            <div class="contact-card">
-                                <h3> The systemic challenges that we are addressing 
-                                    can only be solved through the creation of a 
-                                    symbiotic network of talented, like-minded, and 
-                                    inspired individuals and organisations. The Farmhub 
-                                    team are seeking partners and investors who share 
-                                    our vision, and who will work tirelessly with us to turn 
-                                    this vision into reality</h3>
-                          
-                            </div>
-                            
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div class="sof-container">
+                <h1 class="sof-title">PropCo - Sources of Finance</h1>
+                <p class="sof-subtitle">Funding Breakdown 2026-2030 (€)</p>
         
-
-
-
+                <div class="sof-content-wrapper">
+                  <div class="sof-chart-container">
+                    <div class="sof-chart-box">
+                      <h3 class="sof-chart-title">Funding Composition</h3>
+                      <div class="sof-chart-wrapper">
+                        <canvas id="financeChart"></canvas>
+                      </div>
+                    </div>
+                    <div class="sof-chart-box">
+                      <h3 class="sof-chart-title">Annual Funding</h3>
+                      <div class="sof-chart-wrapper">
+                        <canvas id="annualChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="sof-table-container">
+                    <table class="sof-financial-table">
+                      <thead>
+                        <tr>
+                          <th>Financing</th>
+                          <th class="sof-year-header">2026</th>
+                          <th class="sof-year-header">2027</th>
+                          <th class="sof-year-header">2028</th>
+                          <th class="sof-year-header">2029</th>
+                          <th class="sof-year-header">2030</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Impact Investment</td>
+                          <td>€5,000,000</td>
+                          <td>€0</td>
+                          <td>€0</td>
+                          <td>€0</td>
+                          <td>€0</td>
+                        </tr>
+                        <tr>
+                          <td>Grant Funding</td>
+                          <td>€2,500,000</td>
+                          <td>€0</td>
+                          <td>€6,000,000</td>
+                          <td>€8,000,000</td>
+                          <td>€8,000,000</td>
+                        </tr>
+                        <tr>
+                          <td>Debt Finance</td>
+                          <td>€2,500,000</td>
+                          <td>€0</td>
+                          <td>€0</td>
+                          <td>€0</td>
+                          <td>€0</td>
+                        </tr>
+                        <tr class="sof-total-row">
+                          <td>Total Financing</td>
+                          <td>€10,000,000</td>
+                          <td>€0</td>
+                          <td>€6,000,000</td>
+                          <td>€8,000,000</td>
+                          <td>€8,000,000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+        <!---------------------------- Slide 39: Profit forcast -->
             
                 <div class="slide">
-                    <div class="slide-content-rev">
-                        <h1 class="slide-title">PropCo - Profit & Loss Forecast</h1>
-                        <p class="slide-subtitle">Financial Projections 2026-2030 (€)</p>
+                    <h2 class="top-us-title-1" style="color: white;">
+                        <span>06 — Business Plan</span>
+                    </h2>
+                    <div class="plf-container">
+                        <h1 class="plf-title">PropCo - Profit & Loss Forecast</h1>
+                        <p class="plf-subtitle">Financial Projections 2026-2030 (€)</p>
                         
-                        <div class="content-wrapper">
-                            <div class="chart-container">
-                                <div class="chart-row">
-                                    <div class="chart-box">
-                                        <h3 class="chart-title">Revenue Growth</h3>
-                                        <div class="chart-wrapper">
+                        <div class="plf-content-wrapper">
+                            <div class="plf-chart-container">
+                                <div class="plf-chart-row">
+                                    <div class="plf-chart-box">
+                                        <h3 class="plf-chart-title">Revenue Growth</h3>
+                                        <div class="plf-chart-wrapper">
                                             <canvas id="revenueChart"></canvas>
                                         </div>
                                     </div>
-                                    <div class="chart-box">
-                                        <h3 class="chart-title">Profit Margins</h3>
-                                        <div class="chart-wrapper">
+                                    <div class="plf-chart-box">
+                                        <h3 class="plf-chart-title">Profit Margins</h3>
+                                        <div class="plf-chart-wrapper">
                                             <canvas id="marginChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="chart-row">
-                                    <div class="chart-box">
-                                        <h3 class="chart-title">Cost Structure (2030)</h3>
-                                        <div class="chart-wrapper">
+                                <div class="plf-chart-row">
+                                    <div class="plf-chart-box">
+                                        <h3 class="plf-chart-title">Cost Structure (2030)</h3>
+                                        <div class="plf-chart-wrapper">
                                             <canvas id="costChart"></canvas>
                                         </div>
                                     </div>
-                                    <div class="chart-box">
-                                        <h3 class="chart-title">Net Profit Trend</h3>
-                                        <div class="chart-wrapper">
+                                    <div class="plf-chart-box">
+                                        <h3 class="plf-chart-title">Net Profit Trend</h3>
+                                        <div class="plf-chart-wrapper">
                                             <canvas id="profitChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="data-table-container">
-                                <table class="financial-table">
+                            <div class="plf-table-container">
+                                <table class="plf-financial-table">
                                     <thead>
                                         <tr>
                                             <th style="text-align: left;">Profit & Loss</th>
-                                            <th class="year-header">2026</th>
-                                            <th class="year-header">2027</th>
-                                            <th class="year-header">2028</th>
-                                            <th class="year-header">2029</th>
-                                            <th class="year-header">2030</th>
+                                            <th class="plf-year-header">2026</th>
+                                            <th class="plf-year-header">2027</th>
+                                            <th class="plf-year-header">2028</th>
+                                            <th class="plf-year-header">2029</th>
+                                            <th class="plf-year-header">2030</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -7633,13 +8005,13 @@
                                             <td>€1,050,000</td>
                                             <td>€1,575,000</td>
                                         </tr>
-                                        <tr class="highlight-row">
+                                        <tr class="plf-highlight-row">
                                             <td style="text-align: left;">Gross Profit</td>
-                                            <td class="positive">€1,058,772</td>
-                                            <td class="positive">€1,495,525</td>
-                                            <td class="positive">€5,258,833</td>
-                                            <td class="positive">€11,417,667</td>
-                                            <td class="positive">€18,701,500</td>
+                                            <td class="plf-positive">€1,058,772</td>
+                                            <td class="plf-positive">€1,495,525</td>
+                                            <td class="plf-positive">€5,258,833</td>
+                                            <td class="plf-positive">€11,417,667</td>
+                                            <td class="plf-positive">€18,701,500</td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">Overhead Costs</td>
@@ -7649,13 +8021,13 @@
                                             <td>€4,055,115</td>
                                             <td>€4,334,849</td>
                                         </tr>
-                                        <tr class="highlight-row">
+                                        <tr class="plf-highlight-row">
                                             <td style="text-align: left;">Operating Profit</td>
-                                            <td class="negative">-€1,374,979</td>
-                                            <td class="negative">-€1,079,596</td>
-                                            <td class="positive">€1,780,156</td>
-                                            <td class="positive">€7,362,552</td>
-                                            <td class="positive">€14,366,652</td>
+                                            <td class="plf-negative">-€1,374,979</td>
+                                            <td class="plf-negative">-€1,079,596</td>
+                                            <td class="plf-positive">€1,780,156</td>
+                                            <td class="plf-positive">€7,362,552</td>
+                                            <td class="plf-positive">€14,366,652</td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">Interest, Tax & Depreciation</td>
@@ -7665,21 +8037,21 @@
                                             <td>€2,657,669</td>
                                             <td>€4,862,999</td>
                                         </tr>
-                                        <tr class="highlight-row">
+                                        <tr class="plf-highlight-row">
                                             <td style="text-align: left;">Net Profit</td>
-                                            <td class="negative">-€1,864,402</td>
-                                            <td class="negative">-€1,559,760</td>
-                                            <td class="positive">€611,797</td>
-                                            <td class="positive">€4,704,883</td>
-                                            <td class="positive">€9,503,653</td>
+                                            <td class="plf-negative">-€1,864,402</td>
+                                            <td class="plf-negative">-€1,559,760</td>
+                                            <td class="plf-positive">€611,797</td>
+                                            <td class="plf-positive">€4,704,883</td>
+                                            <td class="plf-positive">€9,503,653</td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">% Net Profit</td>
-                                            <td class="negative">-156%</td>
-                                            <td class="negative">-94%</td>
-                                            <td class="positive">11%</td>
-                                            <td class="positive">38%</td>
-                                            <td class="positive">47%</td>
+                                            <td class="plf-negative">-156%</td>
+                                            <td class="plf-negative">-94%</td>
+                                            <td class="plf-positive">11%</td>
+                                            <td class="plf-positive">38%</td>
+                                            <td class="plf-positive">47%</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -7687,8 +8059,144 @@
                         </div>
                     </div>
                 </div>
-          
-          
+
+                <div class="slide">
+                <div class="bs-container">
+                    <h1 class="bs-title">PropCo - Balance Sheet</h1>
+                    <p class="bs-subtitle">Financial Position 2026-2030 (€)</p>
+                    
+                    <div class="bs-content-wrapper">
+                        <div class="bs-chart-container">
+                            <div class="bs-chart-box">
+                                <h3 class="bs-chart-title">Assets Composition</h3>
+                                <div class="bs-chart-wrapper">
+                                    <canvas id="assetsChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="bs-chart-box">
+                                <h3 class="bs-chart-title">Liabilities & Equity</h3>
+                                <div class="bs-chart-wrapper">
+                                    <canvas id="liabilitiesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bs-table-container">
+                            <table class="bs-financial-table">
+                                <thead>
+                                    <tr>
+                                        <th>Balance Sheet</th>
+                                        <th class="bs-year-header">2026</th>
+                                        <th class="bs-year-header">2027</th>
+                                        <th class="bs-year-header">2028</th>
+                                        <th class="bs-year-header">2029</th>
+                                        <th class="bs-year-header">2030</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bs-section-header">
+                                        <td>Current Assets</td>
+                                        <td>€5,469,269</td>
+                                        <td>€3,892,489</td>
+                                        <td>€4,481,654</td>
+                                        <td>€8,695,365</td>
+                                        <td>€18,111,900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Long Term Assets</td>
+                                        <td>€2,700,000</td>
+                                        <td>€2,700,000</td>
+                                        <td>€8,300,000</td>
+                                        <td>€16,300,000</td>
+                                        <td>€24,300,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accumulated Depreciation</td>
+                                        <td class="bs-negative">-€360,000</td>
+                                        <td class="bs-negative">-€720,000</td>
+                                        <td class="bs-negative">-€1,480,833</td>
+                                        <td class="bs-negative">-€3,153,452</td>
+                                        <td class="bs-negative">-€5,883,214</td>
+                                    </tr>
+                                    <tr class="bs-total-row">
+                                        <td>Total Assets</td>
+                                        <td>€7,809,269</td>
+                                        <td>€5,872,489</td>
+                                        <td>€11,300,821</td>
+                                        <td>€21,841,913</td>
+                                        <td>€36,528,686</td>
+                                    </tr>
+                                    
+                                    <tr class="bs-section-header">
+                                        <td>Current Liabilities</td>
+                                        <td>€377,020</td>
+                                        <td>€400,273</td>
+                                        <td>€1,329,811</td>
+                                        <td>€2,828,582</td>
+                                        <td>€5,042,225</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Long Term Liabilities</td>
+                                        <td>€1,796,651</td>
+                                        <td>€1,396,378</td>
+                                        <td>€5,283,375</td>
+                                        <td>€9,620,814</td>
+                                        <td>€12,590,290</td>
+                                    </tr>
+                                    <tr class="bs-total-row">
+                                        <td>Total Liabilities</td>
+                                        <td>€2,173,671</td>
+                                        <td>€1,796,651</td>
+                                        <td>€6,613,186</td>
+                                        <td>€12,449,396</td>
+                                        <td>€17,632,515</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Paid in Capital</td>
+                                        <td>€7,500,000</td>
+                                        <td>€7,500,000</td>
+                                        <td>€7,500,000</td>
+                                        <td>€7,500,000</td>
+                                        <td>€7,500,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Retained Earnings</td>
+                                        <td class="bs-negative">-€1,864,402</td>
+                                        <td class="bs-negative">-€3,424,162</td>
+                                        <td class="bs-negative">-€2,812,365</td>
+                                        <td class="bs-positive">€1,892,518</td>
+                                        <td class="bs-positive">€11,396,171</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Earnings</td>
+                                        <td>€5,635,598</td>
+                                        <td>€4,075,838</td>
+                                        <td>€4,687,635</td>
+                                        <td>€9,392,518</td>
+                                        <td>€18,896,171</td>
+                                    </tr>
+                                    
+                                    <tr class="bs-total-row">
+                                        <td>Total Liabilities & Equity</td>
+                                        <td>€7,809,269</td>
+                                        <td>€5,872,489</td>
+                                        <td>€11,300,821</td>
+                                        <td>€21,841,914</td>
+                                        <td>€36,528,686</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+           
             <!-- Additional slides can be added here following any of the 20 templates -->
 
 
@@ -8355,6 +8863,213 @@
                     y: {
                         beginAtZero: false,
                         title: { display: true, text: '€ Millions' }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const years = ['2026', '2027', '2028', '2029', '2030'];
+      const impactInvestment = [5000000, 0, 0, 0, 0];
+      const grantFunding = [2500000, 0, 6000000, 8000000, 8000000];
+      const debtFinance = [2500000, 0, 0, 0, 0];
+
+      const toMillions = arr => arr.map(x => x / 1000000);
+
+      // Doughnut chart for 2026 funding composition
+      new Chart(document.getElementById('financeChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Impact Investment', 'Grant Funding', 'Debt Finance'],
+          datasets: [{
+            data: [impactInvestment[0], grantFunding[0], debtFinance[0]],
+            backgroundColor: [
+              'rgba(0, 201, 255, 0.7)',
+              'rgba(146, 254, 157, 0.7)',
+              'rgba(255, 159, 64, 0.7)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right' },
+            title: {
+              display: true,
+              text: '2026 Funding Mix',
+              font: { size: 14 }
+            }
+          }
+        }
+      });
+
+      // Bar chart for annual funding
+      new Chart(document.getElementById('annualChart'), {
+        type: 'bar',
+        data: {
+          labels: years,
+          datasets: [
+            {
+              label: 'Impact Investment',
+              data: toMillions(impactInvestment),
+              backgroundColor: 'rgba(0, 201, 255, 0.7)'
+            },
+            {
+              label: 'Grant Funding',
+              data: toMillions(grantFunding),
+              backgroundColor: 'rgba(146, 254, 157, 0.7)'
+            },
+            {
+              label: 'Debt Finance',
+              data: toMillions(debtFinance),
+              backgroundColor: 'rgba(255, 159, 64, 0.7)'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top' },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return context.dataset.label + ': €' + (context.raw * 1000000).toLocaleString();
+                }
+              }
+            }
+          },
+          scales: {
+            x: { stacked: true },
+            y: {
+              stacked: true,
+              title: { display: true, text: '€ Millions' }
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Data preparation
+        const years = ['2026', '2027', '2028', '2029', '2030'];
+        const currentAssets = [5469269, 3892489, 4481654, 8695365, 18111900];
+        const longTermAssets = [2700000, 2700000, 8300000, 16300000, 24300000];
+        const accumulatedDepreciation = [-360000, -720000, -1480833, -3153452, -5883214];
+        const totalAssets = [7809269, 5872489, 11300821, 21841913, 36528686];
+        
+        const currentLiabilities = [377020, 400273, 1329811, 2828582, 5042225];
+        const longTermLiabilities = [1796651, 1396378, 5283375, 9620814, 12590290];
+        const totalLiabilities = [2173671, 1796651, 6613186, 12449396, 17632515];
+        
+        const retainedEarnings = [-1864402, -3424162, -2812365, 1892518, 11396171];
+        const totalEarnings = [5635598, 4075838, 4687635, 9392518, 18896171];
+        
+        // Convert to € millions for better chart display
+        const toMillions = arr => arr.map(x => x / 1000000);
+        
+        // Assets Composition Chart (2030)
+        new Chart(document.getElementById('assetsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Current Assets', 'Long Term Assets', 'Accumulated Depreciation'],
+                datasets: [{
+                    data: [
+                        currentAssets[4], 
+                        longTermAssets[4], 
+                        Math.abs(accumulatedDepreciation[4])
+                    ],
+                    backgroundColor: [
+                        'rgba(0, 201, 255, 0.7)',
+                        'rgba(146, 254, 157, 0.7)',
+                        'rgba(255, 107, 107, 0.7)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 0 // Disable all animations
+                },
+                plugins: {
+                    legend: { position: 'right' },
+                    title: {
+                        display: true,
+                        text: '2030 Assets Breakdown',
+                        font: { size: 14 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) label += ': ';
+                                if (context.label === 'Accumulated Depreciation') {
+                                    label += '-€' + (context.raw * 1000000).toLocaleString();
+                                } else {
+                                    label += '€' + (context.raw * 1000000).toLocaleString();
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Liabilities & Equity Chart
+        new Chart(document.getElementById('liabilitiesChart'), {
+            type: 'bar',
+            data: {
+                labels: years,
+                datasets: [
+                    {
+                        label: 'Total Liabilities',
+                        data: toMillions(totalLiabilities),
+                        backgroundColor: 'rgba(255, 107, 107, 0.7)'
+                    },
+                    {
+                        label: 'Total Equity',
+                        data: toMillions(totalEarnings),
+                        backgroundColor: 'rgba(146, 254, 157, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 0 // Disable all animations
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': €' + (context.raw * 1000000).toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: '€ Millions' },
+                        beginAtZero: true
                     }
                 }
             }
