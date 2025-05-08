@@ -54,7 +54,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            overflow-y: auto;
+            overflow-y: hidden;
             transition: opacity 0.5s ease;
         }
         
@@ -1112,7 +1112,7 @@
         
         .logo {
            
-            bottom: 4px;
+            bottom: 1px;
            right: 15px;
             width: 100px;
             z-index: 100;
@@ -1155,7 +1155,7 @@
         .two-column-wrapper {
             display: flex;
             gap: 20px;
-            height: 100%;
+            height: 95%;
             max-width: 1800px;
             width: 96%;
         }
@@ -3029,6 +3029,7 @@
       font-weight: bold;
       text-align: center;
       color: black;
+      font-size: 1.1rem;
     }
     
     .vh-arrow {
@@ -3163,6 +3164,13 @@
     .vh-bar {
       width: 60px;
       
+    }
+    .vh-bar-title {
+      margin-top: 2px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+      font-size: 0.9rem;
     }
     
 }
@@ -3834,7 +3842,7 @@
             max-width: 1600px;
             margin: 0 auto;
             padding: 0.5rem;
-            height: 100%;
+            height: 93%;
             overflow-y: auto;
         }
         
@@ -5075,7 +5083,7 @@
     .lc-conclusion {
       background: #2c3e50;
       color: white;
-      padding: 20px;
+      padding: 5px 20px;
       border-radius: 10px;
       margin-top: 20px;
       text-align: center;
@@ -5150,7 +5158,7 @@
 
  /* SCOPED STYLES WITH UNIQUE PREFIX */
  .plf-container {
-            height: 100%;
+            height: 95%;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -6660,7 +6668,7 @@
         </div>
     
         <!---------------------------- Slide 10: SubTitle Slide -->
-        <div class="slide" id="title-slide" style="background-color: black;">
+        <div class="slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 <h1>02 -- The System Vision</h1>
             </div>
@@ -6894,7 +6902,7 @@
         </div>
         </div>
         <!--=========================-- Slide 16: subtitle 03 Title Slide -->
-        <div class="slide" id="title-slide" style="background-color: black;">
+        <div class="slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                
                 <h1>03 -- The System Strategy</h1>
@@ -7355,7 +7363,7 @@
             </div>
         </div>
         <!--------------------------------- Slide 23 subtitle 04 Title Slide -->
-        <div class="slide" id="title-slide" style="background-color: black;">
+        <div class="slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 <h1>04</h1>
                 <h1>Market Opportunity</h1>
@@ -7853,7 +7861,7 @@
         </div>
 
       <!--------------------------------- Slide 30: subtitle 05 Title Slide -->
-        <div class="slide" id="title-slide" style="background-color: black;">
+        <div class="slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                
                 <h1>05 -- Traction</h1>
@@ -8481,7 +8489,7 @@
             </div>
 
             <!--=========================-- Slide 36: subtitle Slide -->
-            <div class="slide" id="title-slide" style="background-color: black;">
+            <div class="slide" style="background-color: black;">
                 <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 
                     <h1>06 — Business Plan</h1>
@@ -8600,11 +8608,11 @@
                 </div>
             </div>
               <!--=========================-- Slide 16: subtitle 03 Title Slide -->
-            <div class="slide" id="title-slide" style="background-color: black;">
+            <div class="slide" style="background-color: black;">
                 <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 
                     <h1>07 -- Appendix</h1>
-                    <h3 style="font-size: 1.2rem;">Additional Financial Information</h3>
+                    <h3 style="font-size: 1.2rem; text-align: center;">Additional Financial Information</h3>
 
                 </div>
             
@@ -8620,7 +8628,7 @@
             <div class="lc-container">
               <div class="lc-header">
                 <h1 class="sof-title">Low cost (Mechanisation as a Service) business model </h1>
-                <p class="sof-subtitle">Low cost equipment to deliver affordable services</p>
+                <p class="sof-subtitle" style="text-align: left;">Low cost equipment to deliver affordable services</p>
               </div>
           
               <div class="lc-content">
@@ -9404,7 +9412,7 @@
             // Event listeners
             prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
             nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
-            tocBtn.addEventListener('click', () => goToSlide(0));
+            tocBtn.addEventListener('click', () => goToSlide(1));
             
             // Keyboard navigation
             document.addEventListener('keydown', (e) => {
@@ -9866,6 +9874,27 @@
         // Convert to € millions for better chart display
         const toMillions = arr => arr.map(x => x / 1000000);
         
+        // Common chart options for labels and legends
+        const commonLabelStyles = {
+            color: '#FFFFFF', // White color for labels
+            font: {
+                size: 10, // Smaller font size for labels
+                family: "'Arial', sans-serif"
+            }
+        };
+        
+        const commonLegendStyles = {
+            labels: {
+                color: '#FFFFFF', // White color for legend text
+                font: {
+                    size: 11, // Slightly larger than labels
+                    family: "'Arial', sans-serif"
+                },
+                padding: 10, // Space between legend items
+                boxWidth: 12 // Width of the color box
+            }
+        };
+        
         // Revenue Chart
         new Chart(document.getElementById('revenueChart'), {
             type: 'bar',
@@ -9878,10 +9907,12 @@
                 }]
             },
             options: {
-                responsive: false,
+                responsive:false,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: { 
+                        display: false 
+                    },
                     tooltip: {
                         callbacks: {
                             label: function(context) {
@@ -9891,9 +9922,27 @@
                     }
                 },
                 scales: {
+                    x: {
+                        ticks: commonLabelStyles,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: '€ Millions' }
+                        ticks: commonLabelStyles,
+                        title: { 
+                            display: true, 
+                            text: '€ Millions',
+                            color: '#FFFFFF',
+                            font: {
+                                size: 13,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
                     }
                 }
             }
@@ -9917,7 +9966,7 @@
                     {
                         label: 'Net Margin %',
                         data: netProfitPct,
-                        borderColor: 'rgba(0, 201, 255, 1)',
+                        borderColor: 'rgba(255, 251, 255, 1)',
                         backgroundColor: 'rgba(0, 201, 255, 0.1)',
                         borderWidth: 2,
                         tension: 0.3,
@@ -9926,15 +9975,37 @@
                 ]
             },
             options: {
-                responsive: false,
+                responsive:false,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'top' }
+                    legend: { 
+                        position: 'top',
+                        align: 'start',
+                        ...commonLegendStyles
+                    }
                 },
                 scales: {
+                    x: {
+                        ticks: commonLabelStyles,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
                     y: {
                         beginAtZero: false,
-                        title: { display: true, text: 'Percentage %' }
+                        ticks: commonLabelStyles,
+                        title: { 
+                            display: true, 
+                            text: 'Percentage %',
+                            color: '#FFFFFF',
+                            font: {
+                                size: 11,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
                     }
                 }
             }
@@ -9950,17 +10021,46 @@
                     backgroundColor: [
                         'rgba(255, 107, 107, 0.7)',
                         'rgba(255, 159, 64, 0.7)'
-                    ]
+                    ],
+                    borderColor: 'rgba(0, 0, 0, 0.5)',
+                    borderWidth: 1
                 }]
             },
             options: {
                 responsive: false,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'right' },
+                    legend: { 
+                        position: 'right',
+                        align: 'center',
+                        ...commonLegendStyles
+                    },
                     title: {
                         display: true,
-                        text: '2030 Cost Breakdown'
+                        text: '2030 Cost Breakdown',
+                        color: '#00C9FF',
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 10
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '€' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                // Control label styling inside the doughnut chart
+                cutout: '70%',
+                elements: {
+                    arc: {
+                        borderWidth: 0
                     }
                 }
             }
@@ -9976,19 +10076,50 @@
                     data: toMillions(netProfit),
                     backgroundColor: function(context) {
                         return context.raw < 0 ? 'rgba(255, 107, 107, 0.7)' : 'rgba(146, 254, 157, 0.7)';
-                    }
+                    },
+                    borderColor: function(context) {
+                        return context.raw < 0 ? 'rgba(255, 107, 107, 1)' : 'rgba(146, 254, 157, 1)';
+                    },
+                    borderWidth: 1
                 }]
             },
             options: {
                 responsive: false,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false }
+                    legend: { 
+                        display: false 
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '€' + (context.raw * 1000000).toLocaleString();
+                            }
+                        }
+                    }
                 },
                 scales: {
+                    x: {
+                        ticks: commonLabelStyles,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
                     y: {
                         beginAtZero: false,
-                        title: { display: true, text: '€ Millions' }
+                        ticks: commonLabelStyles,
+                        title: { 
+                            display: true, 
+                            text: '€ Millions',
+                            color: '#FFFFFF',
+                            font: {
+                                size: 11,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
                     }
                 }
             }
@@ -10130,14 +10261,25 @@
             options: {
                 responsive: false,
                 maintainAspectRatio: false,
+                width: 400,  // Set width
+                height: 400, // Set height
                 animation: {
-                    duration: 0 // Disable all animations
+                    duration: 0
                 },
                 plugins: {
-                    legend: { position: 'right' },
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#ffffff', // Legend text color
+                            font: {
+                                size: 12 // Legend font size
+                            }
+                        }
+                    },
                     title: {
                         display: true,
-                        text: '2030 Assets Breakdown',
+                        text: '',
+                        color: '#00C9FF',
                         font: { size: 14 }
                     },
                     tooltip: {
@@ -10177,13 +10319,23 @@
                 ]
             },
             options: {
-                responsive:false,
+                responsive: false,
                 maintainAspectRatio: false,
+                width: 600,  // Set width
+                height: 400, // Set height
                 animation: {
-                    duration: 0 // Disable all animations
+                    duration: 0
                 },
                 plugins: {
-                    legend: { position: 'top' },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#ffffff', // Legend text color
+                            font: {
+                                size: 12 // Legend font size
+                            }
+                        }
+                    },
                     tooltip: {
                         callbacks: {
                             label: function(context) {
@@ -10193,8 +10345,25 @@
                     }
                 },
                 scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            color: '#ffffff' // X-axis label color
+                        },
+                        ticks: {
+                            color: '#ffffff' // X-axis ticks color
+                        }
+                    },
                     y: {
-                        title: { display: true, text: '€ Millions' },
+                        title: {
+                            display: true,
+                            text: '€ Millions',
+                            color: '#ffffff' // Y-axis label color
+                        },
+                        ticks: {
+                            color: '#ffffff' // Y-axis ticks color
+                        },
                         beginAtZero: true
                     }
                 }
@@ -10256,12 +10425,17 @@
           responsive: false,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'right' },
+            legend: { 
+              position: 'right',
+              labels: {
+                color: '#ffffff'
+              }
+            },
             title: {
               display: true,
               text: '2026 Cost Distribution',
-              font: { size: 14 }
-             
+              font: { size: 14 },
+              color: '#ffffff'
             },
             tooltip: {
               callbacks: {
@@ -10293,7 +10467,12 @@
           responsive: false,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'top' },
+            legend: { 
+              position: 'top',
+              labels: {
+                color: '#ffffff'
+              }
+            },
             tooltip: {
               callbacks: {
                 label: function (context) {
@@ -10303,31 +10482,28 @@
             }
           },
           scales: {
+            x: {
+              ticks: {
+                color: '#ffffff'
+              }
+            },
             y: {
               title: { 
                 display: true, 
-                text: '€' 
+                text: '€',
+                color: '#ffffff'
+              },
+              ticks: {
+                color: '#ffffff'
               }
             }
           }
         }
       });
     });
-  </script>
+</script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
 <script>
     document.addEventListener('DOMContentLoaded', function () {
       const years = ['2026', '2027', '2028', '2029', '2030'];
@@ -10356,11 +10532,17 @@
           responsive: false,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'right' },
+            legend: { 
+              position: 'right',
+              labels: {
+                color: '#ffffff'
+              }
+            },
             title: {
               display: true,
               text: '2026 Cost Distribution',
-              font: { size: 14 }
+              font: { size: 14 },
+              color: '#ffffff'
             },
             tooltip: {
               callbacks: {
@@ -10406,7 +10588,12 @@
           responsive: false,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'top' },
+            legend: { 
+              position: 'top',
+              labels: {
+                color: '#ffffff'
+              }
+            },
             tooltip: {
               callbacks: {
                 label: function (context) {
@@ -10416,20 +10603,28 @@
             }
           },
           scales: {
-            x: { stacked: true },
+            x: { 
+              stacked: true,
+              ticks: {
+                color: '#ffffff'
+              }
+            },
             y: {
               stacked: true,
               title: { 
                 display: true, 
-                text: '€' 
+                text: '€',
+                color: '#ffffff'
+              },
+              ticks: {
+                color: '#ffffff'
               }
             }
           }
         }
       });
     });
-  </script>
-
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -10459,11 +10654,17 @@
           responsive: false,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'right' },
+            legend: { 
+              position: 'right',
+              labels: {
+                color: '#ffffff'
+              }
+            },
             title: {
               display: true,
               text: '2026 Investment Breakdown',
-              font: { size: 14 }
+              font: { size: 14 },
+              color: '#ffffff'
             },
             tooltip: {
               callbacks: {
@@ -10515,7 +10716,12 @@
           responsive: false,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'top' },
+            legend: { 
+              position: 'top',
+              labels: {
+                color: '#ffffff'
+              }
+            },
             tooltip: {
               callbacks: {
                 label: function(context) {
@@ -10529,13 +10735,22 @@
             }
           },
           scales: {
+            x: {
+              ticks: {
+                color: '#ffffff'
+              }
+            },
             y: {
               type: 'linear',
               display: true,
               position: 'left',
               title: {
                 display: true,
-                text: '€ Millions'
+                text: '€ Millions',
+                color: '#ffffff'
+              },
+              ticks: {
+                color: '#ffffff'
               }
             },
             y1: {
@@ -10545,19 +10760,19 @@
               title: {
                 display: true,
                 text: 'Hub Count',
-                color: 'rgba(255, 159, 64, 1)'
+                color: '#ffffff'
               },
               grid: {
                 drawOnChartArea: false,
               },
               ticks: {
-                color: 'rgba(255, 159, 64, 1)'
+                color: '#ffffff'
               }
             }
           }
         }
       });
     });
-  </script>
+</script>
 </body>
 </html>
