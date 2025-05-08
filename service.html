@@ -79,7 +79,7 @@
         p-2 {
             font-size: 1.0rem;
             padding: 0.5rem;
-            margin: 1rem 0;
+            margin: 0.5rem 0;
         }
       
         
@@ -115,7 +115,19 @@
             width: 50px;
             height: 50px;
         }
-        
+        .slide-main-title {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            text-align: left;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+        .slide-subtitle {
+            font-size: 1.3rem; 
+            font-style: normal; 
+            color: rgb(186, 116, 36);
+             margin-bottom: 0.2rem
+        }
    
                 /*====================================== Navigation Controls ==================================*/
                 .nav-controls {
@@ -887,12 +899,7 @@
             position: relative;
             display: inline-block;
         }
-        .slide-subtitle {
-            font-size: 1.5rem; 
-            font-style: normal; 
-            color: rgb(62, 83, 132);
-             margin-bottom: 0.2rem
-        }
+     
         
         .section-title-context:after {
             content: "";
@@ -1072,7 +1079,7 @@
                 display: inline-block;
             }
             .slide-subtitle {
-            font-size: 1.0rem; 
+            font-size: 0.9rem; 
             font-style: normal; 
             color: rgb(186, 116, 36);
              margin-bottom: 0.2rem
@@ -1200,7 +1207,7 @@
         .bullet-list {
             columns: 1;
             column-gap: 40px;
-            margin: 0.5rem 0;
+            margin: 0.5rem 1rem;
             color: white;
         }
         .bullet-list ul {
@@ -1215,7 +1222,7 @@
         .bullet-list li {
             margin-bottom: 0.2rem;
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 0.5rem;
             break-inside: avoid;
             color: white;
         }
@@ -1248,7 +1255,7 @@
         }
         
         .model-card h3 {
-            color: var(--accent);
+            color: black;
             margin-top: 0;
             
         }
@@ -2087,6 +2094,21 @@
             }
         }
         @media (max-width: 678px) {
+            
+        .market-slide {
+           
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow-y: auto;
+        }
+        .market-tier {
+           
+            padding: 0.4rem;
+           
+        }
+        
         .market-table {
             width: 100%;
             border-collapse: collapse;
@@ -2572,7 +2594,7 @@
 .slide-container-impact {
     padding: 2rem;
     box-sizing: border-box;
-    max-height: 100vh;
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -4167,15 +4189,15 @@
         }
         .partner-card {
             width: 100%;
-            height:100% ;
-            height: 200px;
+            
+            height: 190px;
             background-color: white;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
             text-decoration: none;
@@ -4188,7 +4210,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 1px;
             min-height: 60px; /* Adjust based on your needs */
         }
 
@@ -4362,7 +4384,7 @@
         .growth-title {
             font-size: 2.5rem;
             color: var(--accent-color);
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
             text-transform: uppercase;
             flex-shrink: 0;
@@ -4897,6 +4919,7 @@
   
     .lc-card-text {
       line-height: 1.6;
+      font-size: 1.2rem;
     }
   
     .lc-features-grid {
@@ -5083,7 +5106,7 @@
     .lc-conclusion {
       background: #2c3e50;
       color: white;
-      padding: 5px 20px;
+      padding: 15px 20px;
       border-radius: 10px;
       margin-top: 20px;
       text-align: center;
@@ -6042,6 +6065,131 @@
         font-size: 0.9rem;
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+      /* Horizon 01 Roadmap Specific CSS */
+      .horizon01-container {
+            width: 100%;
+            height: 93%;
+            padding: 20px;
+            box-sizing: border-box;
+            background:black;
+            overflow-y: auto;
+        }
+
+        .horizon01-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .horizon01-roadmap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .horizon01-level {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .horizon01-level-header {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .horizon01-level-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .horizon01-column {
+            flex: 1;
+            min-width: 300px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .horizon01-column-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.0rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+
+        .horizon01-list {
+            list-style-type: none;
+            padding-left: 0;
+            color: black;
+        }
+
+        .horizon01-list li {
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 2px;
+            line-height: 1.4;
+        }
+
+        .horizon01-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .horizon01-checkmark {
+            color: #27ae60;
+            margin-right: 5px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .horizon01-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            
+            .horizon01-level-header {
+                font-size: 1.2rem;
+                padding: 7px 5px;
+            }
+            
+            .horizon01-column {
+                min-width: 100%;
+            }
+            
+            .horizon01-roadmap {
+                gap: 20px;
+            }
+            horizon01-level {
+    font-size: 0.9rem;
+        }
+    }
+
+   
     </style>
 </head>
 <body>
@@ -6779,7 +6927,7 @@
                         <h2 class="section-title-context">Level 2: Farmhub Ops Centre</h2>
                         <h3 class="slide-subtitle">Coordinating Regional Operations</h3>
                         
-                        <p>Farmhub Mission Control is the master franchise entity that oversees, enables, and standardises a network of Farmhub Field Stations across a region or country.</p>
+                        <p-2>Farmhub Mission Control is the master franchise entity that oversees, enables, and standardises a network of Farmhub Field Stations across a region or country.</p-2>
                         
                         <div class="highlight-panel">
                             It leverages our Farmhub Playbook and acts as the coordination layer providing:
@@ -6822,7 +6970,8 @@
                         <h2 class="section-title-context">Level 3: Farmhub Mission Control</h2>
                         <h3 class="slide-subtitle">Enabling System-wide Standardisation</h3>
                         
-                        <p>Farmhub Infrastructure is the platform and backbone of the Farmhub system that manages shared, high-cost assets and protocols required for ecosystem scaling.</p>
+                        <p-2>Farmhub Infrastructure is the platform and backbone of the Farmhub system that manages shared, high-cost assets and protocols 
+                            required for ecosystem scaling.</p-2>
                         
                         <div class="highlight-panel">
                             It does not operate Farmhubs — it enables others to operate through:
@@ -6939,7 +7088,7 @@
                             <div class="highlight-panel" style="margin: 0.2rem 0;">
                                 A Platform + Network + Asset Play
                             </div>
-                            <div class="bullet-list" style="margin: 0.2rem 0;">
+                            <div class="bullet-list">
                                 <ul>
                                     <li>SaaS only (platforms, dashboards)</li>
                                     <li>Capital heavy only (equipment plays)</li>
@@ -7252,7 +7401,7 @@
                             <h2 class="section-title-context">Level 3: Farmhub Mission Control</h2>
                             <h3 class="slide-subtitle">PropCo: Infrastructure-as-a-Service</h3>
                             
-                            <p>The Level 3 Farmhub entity is a platform + infrastructure holding company that earns from leasing, licensing, and data-layer monetisation.</p>
+                            <p-2>The Level 3 Farmhub entity is a platform + infrastructure holding company that earns from leasing, licensing, and data-layer monetisation.</p-2>
                             
                             <div class="highlight-panel">
                                 Core revenue streams:
@@ -7378,12 +7527,13 @@
             <h6 style="color: white;">
               <span>04 — Market Opportunity</span>
             </h6>
-            <div class="slide-header animate">
-                <h1 style="text-align: left;">Impacts by Level</h1>
-                <h2></h2>
-            </div>
+          
            
             <div class="slide-container-impact">
+                <div class="slide-header animate">
+                    <h1 style="text-align: left;">Impacts by Level</h1>
+                    <h2></h2>
+                </div>
               <div class="columns-container">
                 <!-- Theory -->
                 <div class="column-2 theory-column">
@@ -7510,11 +7660,11 @@
                         </tr>
                         <tr>
                             <td>Per field station gross revenue</td>
-                            <td>$1.5M - $2.2M annually</td>
+                            <td>$1.5M - $2.2M/year</td>
                         </tr>
                         <tr>
                             <td>Farmer Revenue per field station</td>
-                            <td>$12M - $16M annually</td>
+                            <td>$12M - $16M/year</td>
                         </tr>
                         <tr class="highlight-cell">
                             <td>Target field stations by year</td>
@@ -7559,7 +7709,7 @@
                         </tr>
                         <tr class="highlight-cell">
                             <td>Revenue per Ops Centre</td>
-                            <td>$32M - $48M annually</td>
+                            <td>$32M - $48M/year</td>
                         </tr>
                         <tr class="highlight-cell-revenue">
                             <td style="font-weight: bold;">Total Ops Centre Revenue</td>
@@ -8506,7 +8656,7 @@
                     <span>06 — Business Plan</span>
                 </h6>
                 <div class="growth-container">
-                    <h1 class="growth-title" style="text-align: left;">Growth Horizons</h1>
+                    <h1 class="slide-main-title" style="text-align: left;">Growth Horizons</h1>
                     <h2>Compounding, system-wide impact</h2>
                     <div class="horizons-wrapper">
                         <!-- Horizon 1 -->
@@ -8607,7 +8757,117 @@
                     </div>
                 </div>
             </div>
-              <!--=========================-- Slide 16: subtitle 03 Title Slide -->
+             <!---------------------------- Slide 38:Horizon 01 Roadmap -->
+             <div class="slide" id="horizon01-slide">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>06 — Business Plan</span>
+                </h2>
+                <div class="horizon01-container">
+                    <h1 class="slide-main-title">Horizon 01 Roadmap</h1>
+                    
+                    <div class="horizon01-roadmap">
+                        <!-- Level 1 -->
+                        <div class="horizon01-level">
+                            <div class="horizon01-level-header">Level 1: Farmhub Field Stations (Franchise OpCo)</div>
+                            <div class="horizon01-level-content">
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Next 24 Months Priorities</div>
+                                    <ul class="horizon01-list">
+                                        <li>Launch 3 pilot Field Stations (ETH, UGA, KEN)</li>
+                                        <li>Field-test core service bundles</li>
+                                        <li>Build operator training & onboarding model</li>
+                                        <li>Integrate XFarm and Last Mile Links into pilots</li>
+                                    </ul>
+                                </div>
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Use of Investment</div>
+                                    <ul class="horizon01-list">
+                                        <li>Equipment leasing & hub setup</li>
+                                        <li>Local staffing & ops model</li>
+                                        <li>Farmer onboarding</li>
+                                        <li>Digital service integration</li>
+                                    </ul>
+                                </div>
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Unlocks Next</div>
+                                    <ul class="horizon01-list">
+                                        <li><span class="horizon01-checkmark"></span> Generates live farmer & service data</li>
+                                        <li><span class="horizon01-checkmark"></span> Provides first operational cashflows</li>
+                                        <li><span class="horizon01-checkmark"></span> Triggers validation for system feedback</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Level 2 -->
+                        <div class="horizon01-level">
+                            <div class="horizon01-level-header">Level 2: Farmhub Ops Centre (OpCo)</div>
+                            <div class="horizon01-level-content">
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Next 24 Months Priorities</div>
+                                    <ul class="horizon01-list">
+                                        <li>Establish 1 national hub at Hawassa University</li>
+                                        <li>Build & deploy Farmhub Playbook v1</li>
+                                        <li>Partner onboarding (inputs, buyers)</li>
+                                        <li>Stakeholder alignment with Ministries, NGOs</li>
+                                    </ul>
+                                </div>
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Use of Investment</div>
+                                    <ul class="horizon01-list">
+                                        <li>Franchise structure & legal framework</li>
+                                        <li>Playbook design & documentation</li>
+                                        <li>Training & compliance setup</li>
+                                        <li>Ecosystem building</li>
+                                    </ul>
+                                </div>
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Unlocks Next</div>
+                                    <ul class="horizon01-list">
+                                        <li><span class="horizon01-checkmark"></span> Enables scaling of Farmhub via replication</li>
+                                        <li><span class="horizon01-checkmark"></span> Structures operator incentives & governance</li>
+                                        <li><span class="horizon01-checkmark"></span> Opens door to gov contracts & data partnerships</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Level 3 -->
+                        <div class="horizon01-level">
+                            <div class="horizon01-level-header">Level 3: Farmhub Mission Control (PropCo)</div>
+                            <div class="horizon01-level-content">
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Next 24 Months Priorities</div>
+                                    <ul class="horizon01-list">
+                                        <li>Develop platform & governance architecture</li>
+                                        <li>Build MVP of Farmhub OS (ops, config, compliance)</li>
+                                        <li>Design standard hub blueprints & leasing model</li>
+                                        <li>Launch SPV for infra capital pooling</li>
+                                    </ul>
+                                </div>
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Use of Investment</div>
+                                    <ul class="horizon01-list">
+                                        <li>Digital infra build (platform)</li>
+                                        <li>Data & MRV stack</li>
+                                        <li>Standardised architectural design</li>
+                                        <li>Fund SPV structuring for Web 3.0</li>
+                                    </ul>
+                                </div>
+                                <div class="horizon01-column">
+                                    <div class="horizon01-column-title">Unlocks Next</div>
+                                    <ul class="horizon01-list">
+                                        <li><span class="horizon01-checkmark"></span> Powers infra scalability + leasing</li>
+                                        <li><span class="horizon01-checkmark"></span> Makes system investable + measurable</li>
+                                        <li><span class="horizon01-checkmark"></span> Begins tokenised trust/value layer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!--=========================-- Slide 39: subtitle 03 Title Slide -->
             <div class="slide" style="background-color: black;">
                 <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
                 
@@ -8620,7 +8880,7 @@
                     
                 </div>
             </div>
-          <!---------------------------- Slide 39: Low cost (Mechanisation as a Service) business model -->
+          <!---------------------------- Slide 40: Low cost (Mechanisation as a Service) business model -->
           <div class="slide">
             <h6 class="top-us-title-1" style="color: white;">
                 <span>07 — Appendix</span>
@@ -8725,7 +8985,7 @@
             </div>
           </div>
 
-         <!---------------------------- Slide 38: source of finance -->
+         <!---------------------------- Slide 41: source of finance -->
          
             <div class="slide">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -8804,16 +9064,13 @@
               </div>
             </div>
          
-        <!---------------------------- Slide 39: Profit forcast -->
+        <!---------------------------- Slide 42: Profit forcast -->
             
                 <div class="slide">
                     <h2 class="top-us-title-1" style="color: white;">
                         <span>05 -- Appendix</span>
                     </h2>
-                    <h2 class="top-us-title-1" style="color: white;">
-                        <span>06 — Business Plan</span>
-                    </h2>
-                    <div class="plf-container">
+                  <div class="plf-container">
                         <h1 class="plf-title">PropCo - Profit & Loss Forecast</h1>
                         <p class="plf-subtitle">Financial Projections 2026-2030 (€)</p>
                         
@@ -8932,7 +9189,7 @@
                         </div>
                     </div>
                 </div>
-        <!---------------------------- Slide 39: Balance sheet -->
+        <!---------------------------- Slide 43: Balance sheet -->
         <div class="slide">
             <h2 class="top-us-title-1" style="color: white;">
                 <span>05 -- Appendix</span>
@@ -9068,7 +9325,7 @@
             </div>
         </div>
         
-        <!---------------------------- Slide 39: -->
+        <!---------------------------- Slide 44: -->
         <div class="slide">
             <h2 class="top-us-title-1" style="color: white;">
                 <span>05 -- Appendix</span>
@@ -10371,10 +10628,6 @@
         });
     });
 </script>
-
-
-
-
 
   
 <script>
