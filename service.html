@@ -640,29 +640,43 @@
         }
         
         .percentage-circle {
-            width: 120px;
-            height: 120px;
-            margin: 5px auto;
-            border-radius: 50%;
-            background: conic-gradient(var(--primary) 0% var(--value), var(--light) var(--value) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .percentage-center {
-            width: 80px;
-            height: 80px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
+  width: 120px;
+  height: 120px;
+  margin: 5px auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary) 0% var(--value), var(--light) var(--value) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.percentage-circle.inner {
+  width: 80px;
+  height: 80px;
+  background: conic-gradient(var(--primary) 0% var(--value), var(--light) var(--value) 100%);
+}
+
+.percentage-center {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 4px;
+}
+
+.combined-labels {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
         .comparison-container,
         .triple-bar-graph,
         .double-bar-graph {
@@ -685,7 +699,7 @@
         
         .bar-label {
             position: absolute;
-            bottom: -25px;
+            bottom: -20px;
             left: 0;
             right: 0;
             text-align: center;
@@ -700,12 +714,15 @@
             right: 0;
             text-align: center;
             font-weight: bold;
+            font-size: 0.7rem;
+            color: black;
         }
         
         .africa-bar { background: var(--primary); }
         .global-bar { background: var(--secondary); }
         .usa-bar { background: var(--accent); }
         .negative-bar { background: var(--danger); }
+        .overhead-bar { background: var(--dark-green); }
         
        /* Mobile responsive additions only */
 @media (max-width: 767px) {
@@ -771,7 +788,7 @@
     
     .bar-label {
         font-size: 0.7rem;
-        bottom: -20px;
+        bottom: -15px;
     }
     
     .bar-value {
@@ -841,7 +858,7 @@
            
             max-width: 1800px;
             width: 100%;
-            height: 92%;
+            height: 95%;
             background-color: rgba(0, 0, 0, 1);
             border-radius: 15px;
             padding: 10px 1px;
@@ -883,7 +900,7 @@
             }
             .image-column img {
                 width: 100%;
-                max-width: 1000px;
+                max-width: 1400px;
                 height: auto;
                 display: block;
                 margin: 0 auto;
@@ -1139,6 +1156,15 @@
             margin-bottom: 10px;
            padding-left: 5px;
             border-left: 3px solid var(--light);
+        }
+        .slide-content-challenge {
+           
+           
+           
+            width: 100%;
+            height: 90%;
+           
+           
         }
 
         }
@@ -1529,7 +1555,7 @@
                 align-items: center;
                 text-align: center;
                 width: 160px;
-                font-size: 11px;
+                font-size: 13px;
                 opacity: 0;
                 
                 transform: translateY(20px);
@@ -2444,6 +2470,113 @@
 
    
 
+
+
+
+
+
+
+
+
+
+
+
+
+         /* Base slide layout remains unchanged */
+    .ea-slide-content {
+        
+                  max-width: 1800px;
+                  width: 100%;
+                  height: 92%;
+                  background-color: rgba(0, 0, 0, 0.7);
+                  color: var(--light-text);
+                  border-radius: 15px;
+                  padding: 10px 30px;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                  overflow-y: auto;
+                  position: relative;
+              }
+
+    
+
+    .ea-slide-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .ea-card-container {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      flex-wrap: nowrap;
+    }
+
+    .ea-card {
+      background-color: #fff;
+      width: 160px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ea-card-message {
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .ea-card-image {
+      width: 100%;
+      height: auto;
+      max-height: 180px;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .ea-card-report-name {
+      font-size: 13px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .ea-slide-title {
+        font-size: 20px;
+      }
+
+      .ea-card-message {
+        font-size: 13px;
+      }
+
+      .ea-card-report-name {
+        font-size: 12px;
+      }
+
+      .ea-card-container {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        align-items: center;
+      }
+
+      .ea-card {
+        width: 90%;
+        max-width: 320px;
+      }
+    }
 
 
 
@@ -5180,70 +5313,63 @@
 
 
  /* SCOPED STYLES WITH UNIQUE PREFIX */
- .plf-container {
-            height: 95%;
+ .pfl-slide-content {
+            height: 100%;
             padding: 20px;
             display: flex;
             flex-direction: column;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
             overflow-y: auto;
         }
 
-        .plf-title {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #00C9FF;
-            text-align: left;
-        }
-
-        .plf-subtitle {
-            font-size: 1rem;
-            color: #aaa;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .plf-content-wrapper {
+       
+        .pfl-content-wrapper {
             display: flex;
             flex: 1;
             gap: 20px;
-
         }
 
-        .plf-chart-container {
-            flex: 1.6;
+        .pfl-chart-container {
+            flex: 1.7;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 4px;
         }
 
-        .plf-chart-row {
+        .pfl-chart-row {
             display: flex;
-            height: 50%;
-            gap: 20px;
+            height: 48%;
+            gap: 10px;
         }
 
-        .plf-chart-box {
+        .pfl-chart-box {
             flex: 1;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
-            padding: 15px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .plf-chart-title {
+        .chart-title {
             font-size: 0.9rem;
             margin-bottom: 10px;
             color: #00C9FF;
         }
 
-        .plf-chart-wrapper {
-            height: calc(100% - 30px);
+        .pfl-chart-wrapper {
+            position: relative;
             width: 100%;
+            height: 100%;
+            min-height: 200px;
         }
 
-        .plf-table-container {
+        .pfl-chart-wrapper canvas {
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .pfl-data-table-container {
             flex: 1.1;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
@@ -5251,69 +5377,66 @@
             overflow: auto;
         }
 
-        .plf-financial-table {
+        .pfl-financial-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.72rem;
+            font-size: 0.65rem;
         }
 
-        .plf-financial-table th, 
-        .plf-financial-table td {
-            padding: 15px 8px;
+        .pfl-financial-table th, .pfl-financial-table td {
+            padding: 8px 10px;
             text-align: right;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .plf-financial-table th {
+        .pfl-financial-table th {
             background: rgba(0, 201, 255, 0.2);
             color: #00C9FF;
             position: sticky;
             top: 0;
         }
 
-        .plf-positive {
+        .positive {
             color: #92FE9D;
         }
 
-        .plf-negative {
+        .negative {
             color: #FF6B6B;
         }
 
-        .plf-highlight-row {
+        .highlight-row {
             font-weight: bold;
         }
 
-        .plf-year-header {
+        .year-header {
             text-align: center !important;
             font-weight: bold;
         }
 
         @media (max-width: 1024px) {
-            .plf-content-wrapper {
+            .pfl-content-wrapper {
                 flex-direction: column;
             }
             
-            .plf-chart-row {
+            .pfl-chart-row {
                 height: auto;
                 min-height: 250px;
             }
         }
 
         @media (max-width: 768px) {
-            .plf-container {
+            .pfl-slide-content {
                 padding: 10px;
             }
             
-            .plf-chart-row {
+            .pfl-chart-row {
                 flex-direction: column;
             }
             
-            .plf-financial-table {
+            .pfl-financial-table {
                 font-size: 0.7rem;
             }
         }
-
-
 
 
 
@@ -5373,11 +5496,16 @@
             text-align: center;
         }
 
+
         .sof-chart-wrapper {
             height: calc(100% - 30px);
             width: 100%;
         }
-
+  .sof-chart-row {
+            display: flex;
+            height: 48%;
+            gap: 10px;
+        }
         .sof-table-container {
             flex: 1.5;
             background: rgba(255, 255, 255, 0.05);
@@ -5712,6 +5840,117 @@
       font-weight: bold;
     }
   
+
+       /* Individual card width classes - add more as needed */
+       .card-width-15 { width: 550px; }
+       .card-width-16 { width: 350px; }
+        .card-width-17 { width: 550px; }
+        .card-width-18 { width: 350px; }
+        .card-width-19 { width: 350px; }
+        
+        
+
+         /* Individual card height classes - add more as needed */
+         .card-width-15 { height: 260px; }
+         .card-width-16 { height: 260px; }
+         .card-width-17 { height: 260px; }
+         .card-width-18 { height: 260px; }
+         .card-width-19 { height: 260px; }
+
+        
+        .oh-triple-bar-graph,
+        .oh-double-bar-graph {
+            display: flex;
+            height: 250px;
+            align-items: flex-end;
+            margin: -70px 0;
+            gap: 20px;
+        }
+        .pie-chart-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      font-family: sans-serif;
+    }
+
+
+
+    .legend {
+      margin-left: 30px;
+      color: black;
+    }
+
+    .legend div {
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 14px;
+      height: 10px;
+      margin-right: 8px;
+      border-radius: 3px;
+    }
+
+    .pie-chart {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        green 0% 30%,     /* Group 1 - */
+        #2196F3 30% 40%, /* Group 2 -  */
+        #0a5e70 40% 53%,    /* Group 3 -  */
+        rgb(119, 13, 117) 53% 62%,    /* Group 4 -  */
+        orange 62% 72%,    /* Group 5 -  */
+        rgb(22, 158, 90) 72% 76%,    /* Group 6 -  */
+        #ff0739 76% 100%    /* Group 7-  */
+      );
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .group1 { background-color: #4CAF50; }
+    .group2 { background-color: #2196F3; }
+    .group3 { background-color: #0a5e70; }
+    .group4 { background-color: rgb(119, 13, 117); }
+    .group5 { background-color: #FFC107; }
+    .group6 { background-color: rgb(22, 158, 90); }
+    .group7 { background-color:   #ff0739; }
+     
+  
+ 
+
+    .oh-bar-label {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--dark);
+        }
+        .oh-dual-bar-graph {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    height: 200px; /* Adjust as needed */
+}
+
+.year-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+}
+
+.year-group .metric-bar {
+    width: 30px; /* Make bars narrower to fit two per year */
+    margin: 0 2px;
+}
+
+
     /* Responsive styles */
     @media (max-width: 1024px) {
       .oh-content-wrapper {
@@ -5736,6 +5975,14 @@
       .oh-financial-table td {
         padding: 8px 10px;
       }
+      .oh-triple-bar-graph,
+        .oh-double-bar-graph {
+            display: flex;
+            height: 200px;
+            align-items: flex-end;
+            margin: 20px 0;
+            gap: 20px;
+        }
     }
   
     @media (max-width: 480px) {
@@ -6477,6 +6724,88 @@
             </div>
         </div>
 
+ <!---------------------------- Slide 4: Everyone Agrees -->
+        <div class="slide" id="slide-everyone-agrees">
+            <h2 class="top-us-title-1" style="color: white;">
+                <span>01 — The Context</span>
+            </h2>
+            <h2 class="section-title-context" style="color: white;">Everyone Agrees</h2>
+            <div class="ea-slide-content">
+           
+              
+              <div class="ea-card-container">
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    Hunger is rising fastest in Sub-Saharan Africa; smallholder productivity is key.
+                  </div>
+                  <img src="image_file/report_1.png" alt="SOFI 2023 Report" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    The State of Food Security and Nutrition in the World 2023 – FAO, IFAD, WFP, WHO
+                  </div>
+                </div>
+          
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    Smallholders lack tools, finance, and scale. Private sector is key to transformation.
+                  </div>
+                  <img src="image_file/report_2.png" alt="Transforming Food Systems" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    2023 Africa Agriculture Status Report – AGRA
+                  </div>
+                </div>
+          
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    Calls for urgent action to address low yields, fragmentation, and mechanisation gaps.
+                  </div>
+                  <img src="image_file/report_3.png" alt="Africa Ag Status Report 2023" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    Transforming Food Systems in Africa – FAO, WEF
+                  </div>
+                </div>
+          
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    &lt;20% mechanisation in SSA. Scaling requires service model innovation, not just machines.
+                  </div>
+                  <img src="image_file/report_4.png" alt="Mechanization Report" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    Agricultural Mechanization: A Missing Link – FAO & AUC
+                  </div>
+                </div>
+          
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    Only 5% of agri-SMEs are investable; standardization and aggregation are missing.
+                  </div>
+                  <img src="image_file/report_5.png" alt="Agri-SME Finance Report" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    The State of the Agri-SME Sector – ISF Advisors & CASA
+                  </div>
+                </div>
+          
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    Potential $1T sector by 2030 — if yield gaps and value chain fragmentation are solved.
+                  </div>
+                  <img src="image_file/report_6.png" alt="Reimagining Growth in Africa" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    Reimagining Economic Growth in Africa – McKinsey Global Institute
+                  </div>
+                </div>
+          
+                <div class="ea-card">
+                  <div class="ea-card-message">
+                    Without structural food system change, Africa will miss zero hunger targets by 2030.
+                  </div>
+                  <img src="image_file/report_7.png" alt="Africa SDG Regional Report" class="ea-card-image">
+                  <div class="ea-card-report-name">
+                    Africa Regional Report on the Sustainable Development Goals – UNECA
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <!---------------------------- Slide 4: The Context-2 -->
         <div class="slide">
         <div class="slide-content-challenge">
@@ -6657,7 +6986,7 @@
                             <span>01-The Context</span>
                         </h2>
                         <h2 class="top-us-title-2" style="color: white;">
-                            <span>A 10X Transformation is Possible</span>
+                            <span>A 8X Transformation is Possible</span>
                         </h2>
             <div class="container-cont">
 
@@ -6787,8 +7116,35 @@
             </div>
         </div>
 
+   <!---------------------------- Slide 9 : Widespread Impact-->
+   <div class="slide">
+    <div class="slide-content-challenge">
+        <h2 class="top-us-title-1" style="color: white;">
+            <span>01-The Context</span>
+        </h2>
+        <h2 class="top-us-title-3" style="color: white;">
+            <span>That Could Generate Widespread Impact</span>
+        </h2>
+        <h3 class="slide-subtitle">An Integrated Stack for Agri-System Transformation</h3>
+        <div class="smallholder-section">
+                <!-- Text Section -->
+            
+                <div class="text-column" style="flex: 0 0 1%;">
+                    <h2 class="section-title-context"></h2>
+                
+                </div>
+        
+            <!-- Image Section -->
+            <div class="image-column" style="flex: 0 0 95%;">
+                <img src="image_file/widespread_impact.png" alt="Farm Hub Model">
+            </div>
+            
+        
+        </div>
+    </div>
+</div>
 
-        <!---------------------------- Slide 9 : The System vision-->
+        <!---------------------------- Slide 10 : The System vision-->
         <div class="slide">
             <div class="slide-content-challenge">
                 <h2 class="top-us-title-1" style="color: white;">
@@ -7309,8 +7665,7 @@
                             <div class="highlight-panel">
                                 Services that are monetised at unit level:
                             </div>
-                            <div class="bullet-list">
-                                <ul>
+                            <div class="bullet-list">-
                                     <li>Mechanisation-as-a-service (per hectare/hour basis)</li>
                                     <li>Input resale margin (bulk-to-retail markup)</li>
                                     <li>Post-harvest handling and aggregation fees</li>
@@ -8993,22 +9348,26 @@
                 </h2>
 
               <div class="sof-container">
-                <h1 class="sof-title">PropCo - Sources of Finance</h1>
+                <h1 class="slide-main-title">PropCo - Sources of Finance</h1>
                 <p class="sof-subtitle">Funding Breakdown 2026-2030 (€)</p>
         
                 <div class="sof-content-wrapper">
                   <div class="sof-chart-container">
+                    <div class="sof-chart-row">
                     <div class="sof-chart-box">
                       <h3 class="sof-chart-title">Funding Composition</h3>
                       <div class="sof-chart-wrapper">
                         <canvas id="financeChart"></canvas>
                       </div>
                     </div>
+                </div>
+                <div class="sof-chart-row">
                     <div class="sof-chart-box">
                       <h3 class="sof-chart-title">Annual Funding</h3>
                       <div class="sof-chart-wrapper">
                         <canvas id="annualChart"></canvas>
                       </div>
+                    </div>
                     </div>
                   </div>
         
@@ -9066,152 +9425,278 @@
          
         <!---------------------------- Slide 42: Profit forcast -->
             
-                <div class="slide">
-                    <h2 class="top-us-title-1" style="color: white;">
-                        <span>05 -- Appendix</span>
-                    </h2>
-                  <div class="plf-container">
-                        <h1 class="plf-title">PropCo - Profit & Loss Forecast</h1>
-                        <p class="plf-subtitle">Financial Projections 2026-2030 (€)</p>
+      
+            <div class="slide">
+                <div class="pfl-slide-content">
+                    <h1 class="slide-main-title">PropCo - Profit & Loss Forecast</h1>
+                    <p class="slide-subtitle">Financial Projections 2026-2030 (€)</p>
+                    
+                    <div class="pfl-content-wrapper">
+                        <div class="pfl-chart-container">
+                            <div class="pfl-chart-row">
+                                <div class="pfl-chart-box">
+                                   
+                                         
+                       
+                        <div class="stat-card card-width-16">
+                            <div class="card-header">
+                                
+                                <h2 class="card-title">Revenue Growth</h2>
+                            </div>
+                            <div class="data-container">
+                                <p>Percentage of mechanized farmland:</p>
+                                <div class="oh-triple-bar-graph">
+                                    <div class="metric-bar africa-bar" style="height: 10%">
+                                        <div class="bar-value">€1,193,772</div>
+                                        <div class="oh-bar-label">2026</div>
+                                    </div>
+                                    <div class="metric-bar global-bar" style="height: 14%">
+                                        <div class="bar-value">€1,653,025</div>
+                                        <div class="oh-bar-label">2027</div>
+                                    </div>
+                                    <div class="metric-bar usa-bar" style="height: 30%">
+                                        <div class="bar-value">€5,783,833</div>
+                                        <div class="oh-bar-label">2028</div>
+                                    </div>
+                                    <div class="metric-bar overhead-bar" style="height: 55%">
+                                        <div class="bar-value">€12,467,667</div>
+                                        <div class="oh-bar-label">2029</div>
+                                    </div>
+                                    <div class="metric-bar negative-bar" style="height: 80%">
+                                        <div class="bar-value">€20,276,500</div>
+                                        <div class="oh-bar-label">2030</div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                                <div class="pfl-chart-box">
+                                   
+                                    <div class="pfl-chart-wrapper">
+                                        <canvas id="marginChart" width="400" height="250"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pfl-chart-row">
+                                <div class="pfl-chart-box">
+                                    
+                                    <div class="stat-card card-width-19">
+                                        <div class="card-header">
+                                            <div class="card-icon"></div>
+                                            <h2 class="card-title">2030 Cost Breakdown</h2>
+                                        </div>
+                                        <div class="pie-chart-container">
+                                            <div class="pie-chart"></div>
+                                            <div class="legend">
+                                              <div><span class="group1"></span> Studio Saol</div>
+                                              <div><span class="group2"></span> Global Impact</div>
+                                              <div><span class="group3"></span> Farmhub OS</div>
+                                              <div><span class="group4"></span> Last Mile</div>
+                                              <div><span class="group5"></span> Shipping</div>
+                                              <div><span class="group6"></span> Overhead Costs</div>
+                                              <div><span class="group7"></span> Travel</div>
+                                              
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="pfl-chart-box">
+                                   
+                                          
+                       
+                        <div class="stat-card card-width-18">
+                            <div class="card-header">
+                                
+                                <h2 class="card-title">Net profit Trend</h2>
+                            </div>
+                            <div class="data-container">
+                                <p>Percentage of mechanized farmland:</p>
+                                <div class="oh-triple-bar-graph">
+                                    <div class="metric-bar africa-bar" style="height: -50%">
+                                        <div class="bar-value">-156%</div>
+                                        <div class="bar-label">2026</div>
+                                    </div>
+                                    <div class="metric-bar global-bar" style="height: 4-94%">
+                                        <div class="bar-value">-94%</div>
+                                        <div class="bar-label">2027</div>
+                                    </div>
+                                    <div class="metric-bar usa-bar" style="height: 11%">
+                                        <div class="bar-value">11%</div>
+                                        <div class="bar-label">2028</div>
+                                    </div>
+                                    <div class="metric-bar overhead-bar" style="height: 37%">
+                                        <div class="bar-value">38%</div>
+                                        <div class="bar-label">2029</div>
+                                    </div>
+                                    <div class="metric-bar negative-bar" style="height: 47%">
+                                        <div class="bar-value">47%</div>
+                                        <div class="bar-label">2030</div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <div class="plf-content-wrapper">
-                            <div class="plf-chart-container">
-                                <div class="plf-chart-row">
-                                    <div class="plf-chart-box">
-                                        <h3 class="plf-chart-title">Revenue Growth</h3>
-                                        <div class="plf-chart-wrapper">
-                                            <canvas id="revenueChart"></canvas>
-                                        </div>
-                                    </div>
-                                    <div class="plf-chart-box">
-                                        <h3 class="plf-chart-title">Profit Margins</h3>
-                                        <div class="plf-chart-wrapper">
-                                            <canvas id="marginChart"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="plf-chart-row">
-                                    <div class="plf-chart-box">
-                                        <h3 class="plf-chart-title">Cost Structure (2030)</h3>
-                                        <div class="plf-chart-wrapper">
-                                            <canvas id="costChart"></canvas>
-                                        </div>
-                                    </div>
-                                    <div class="plf-chart-box">
-                                        <h3 class="plf-chart-title">Net Profit Trend</h3>
-                                        <div class="plf-chart-wrapper">
-                                            <canvas id="profitChart"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="plf-table-container">
-                                <table class="plf-financial-table">
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align: left;">Profit & Loss</th>
-                                            <th class="plf-year-header">2026</th>
-                                            <th class="plf-year-header">2027</th>
-                                            <th class="plf-year-header">2028</th>
-                                            <th class="plf-year-header">2029</th>
-                                            <th class="plf-year-header">2030</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="text-align: left;">Revenue</td>
-                                            <td>€1,193,772</td>
-                                            <td>€1,653,025</td>
-                                            <td>€5,783,833</td>
-                                            <td>€12,467,667</td>
-                                            <td>€20,276,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">Direct Costs</td>
-                                            <td>€135,000</td>
-                                            <td>€157,500</td>
-                                            <td>€525,000</td>
-                                            <td>€1,050,000</td>
-                                            <td>€1,575,000</td>
-                                        </tr>
-                                        <tr class="plf-highlight-row">
-                                            <td style="text-align: left;">Gross Profit</td>
-                                            <td class="plf-positive">€1,058,772</td>
-                                            <td class="plf-positive">€1,495,525</td>
-                                            <td class="plf-positive">€5,258,833</td>
-                                            <td class="plf-positive">€11,417,667</td>
-                                            <td class="plf-positive">€18,701,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">Overhead Costs</td>
-                                            <td>€2,433,751</td>
-                                            <td>€2,575,121</td>
-                                            <td>€3,478,677</td>
-                                            <td>€4,055,115</td>
-                                            <td>€4,334,849</td>
-                                        </tr>
-                                        <tr class="plf-highlight-row">
-                                            <td style="text-align: left;">Operating Profit</td>
-                                            <td class="plf-negative">-€1,374,979</td>
-                                            <td class="plf-negative">-€1,079,596</td>
-                                            <td class="plf-positive">€1,780,156</td>
-                                            <td class="plf-positive">€7,362,552</td>
-                                            <td class="plf-positive">€14,366,652</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">Interest, Tax & Depreciation</td>
-                                            <td>€489,423</td>
-                                            <td>€480,164</td>
-                                            <td>€1,168,359</td>
-                                            <td>€2,657,669</td>
-                                            <td>€4,862,999</td>
-                                        </tr>
-                                        <tr class="plf-highlight-row">
-                                            <td style="text-align: left;">Net Profit</td>
-                                            <td class="plf-negative">-€1,864,402</td>
-                                            <td class="plf-negative">-€1,559,760</td>
-                                            <td class="plf-positive">€611,797</td>
-                                            <td class="plf-positive">€4,704,883</td>
-                                            <td class="plf-positive">€9,503,653</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">% Net Profit</td>
-                                            <td class="plf-negative">-156%</td>
-                                            <td class="plf-negative">-94%</td>
-                                            <td class="plf-positive">11%</td>
-                                            <td class="plf-positive">38%</td>
-                                            <td class="plf-positive">47%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="pfl-data-table-container">
+                            <table class="pfl-financial-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left;">Profit & Loss</th>
+                                        <th class="year-header">2026</th>
+                                        <th class="year-header">2027</th>
+                                        <th class="year-header">2028</th>
+                                        <th class="year-header">2029</th>
+                                        <th class="year-header">2030</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: left;">Revenue</td>
+                                        <td>€1,193,772</td>
+                                        <td>€1,653,025</td>
+                                        <td>€5,783,833</td>
+                                        <td>€12,467,667</td>
+                                        <td>€20,276,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">Direct Costs</td>
+                                        <td>€135,000</td>
+                                        <td>€157,500</td>
+                                        <td>€525,000</td>
+                                        <td>€1,050,000</td>
+                                        <td>€1,575,000</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td style="text-align: left;">Gross Profit</td>
+                                        <td class="positive">€1,058,772</td>
+                                        <td class="positive">€1,495,525</td>
+                                        <td class="positive">€5,258,833</td>
+                                        <td class="positive">€11,417,667</td>
+                                        <td class="positive">€18,701,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">Overhead Costs</td>
+                                        <td>€2,433,751</td>
+                                        <td>€2,575,121</td>
+                                        <td>€3,478,677</td>
+                                        <td>€4,055,115</td>
+                                        <td>€4,334,849</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td style="text-align: left;">Operating Profit</td>
+                                        <td class="negative">-€1,374,979</td>
+                                        <td class="negative">-€1,079,596</td>
+                                        <td class="positive">€1,780,156</td>
+                                        <td class="positive">€7,362,552</td>
+                                        <td class="positive">€14,366,652</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">Interest, Tax & Depreciation</td>
+                                        <td>€489,423</td>
+                                        <td>€480,164</td>
+                                        <td>€1,168,359</td>
+                                        <td>€2,657,669</td>
+                                        <td>€4,862,999</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td style="text-align: left;">Net Profit</td>
+                                        <td class="negative">-€1,864,402</td>
+                                        <td class="negative">-€1,559,760</td>
+                                        <td class="positive">€611,797</td>
+                                        <td class="positive">€4,704,883</td>
+                                        <td class="positive">€9,503,653</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">% Net Profit</td>
+                                        <td class="negative">-156%</td>
+                                        <td class="negative">-94%</td>
+                                        <td class="positive">11%</td>
+                                        <td class="positive">38%</td>
+                                        <td class="positive">47%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+            </div>
+       
         <!---------------------------- Slide 43: Balance sheet -->
-        <div class="slide">
+         <div class="slide">
             <h2 class="top-us-title-1" style="color: white;">
                 <span>05 -- Appendix</span>
             </h2>
             <div class="sof-container">
-                <h1 class="sof-title">PropCo - Balance Sheet</h1>
-                <p class="sof-subtitle">Financial Position 2026-2030 (€)</p>
+                <h1 class="slide-main-title">PropCo - Balance Sheet</h1>
+                
 
             <div class="sof-content-wrapper">
-                <div class="bs-chart-container">
-                    <div class="bs-chart-box">
-                        <h3 class="bs-chart-title">Assets Composition</h3>
-                        <div class="bs-chart-wrapper">
-                            <canvas id="assetsChart"></canvas>
+                <div class="oh-chart-container">
+                    <section class="food-system-section">
+                
+                                           
+                        <!-- Card 1: -->
+                        <div class="stat-card card-width-17">
+                            <div class="card-header">
+                                <div class="card-icon"></div>
+                                <h2 class="card-title">Cost Composition (2026)</h2>
+                            </div>
+                            <div class="pie-chart-container">
+                                <div class="pie-chart"></div>
+                                <div class="legend">
+                                  <div><span class="group1"></span> Studio Saol</div>
+                                  <div><span class="group2"></span> Global Impact</div>
+                                  <div><span class="group3"></span> Farmhub OS</div>
+                                  <div><span class="group4"></span> Last Mile</div>
+                                  <div><span class="group5"></span> Shipping</div>
+                                  <div><span class="group6"></span> Overhead Costs</div>
+                                  <div><span class="group7"></span> Travel</div>
+                                  
+                                </div>
+                              </div>
                         </div>
-                    </div>
-                    <div class="bs-chart-box">
-                        <h3 class="bs-chart-title">Liabilities & Equity</h3>
-                        <div class="bs-chart-wrapper">
-                            <canvas id="liabilitiesChart"></canvas>
+                        
+                       
+                        <div class="stat-card card-width-15">
+                            <div class="card-header">
+                                
+                                <h2 class="card-title">Annual Over head Cost</h2>
+                            </div>
+                            <div class="data-container">
+                                <p>Percentage of mechanized farmland:</p>
+                                <div class="oh-triple-bar-graph">
+                                    <div class="metric-bar africa-bar" style="height: 50%">
+                                        <div class="bar-value">€1,707,751</div>
+                                        <div class="oh-bar-label">2026</div>
+                                    </div>
+                                    <div class="metric-bar global-bar" style="height: 40%">
+                                        <div class="bar-value">€1,486,121</div>
+                                        <div class="oh-bar-label">2027</div>
+                                    </div>
+                                    <div class="metric-bar usa-bar" style="height: 60%">
+                                        <div class="bar-value">€2,015,677</div>
+                                        <div class="oh-bar-label">2028</div>
+                                    </div>
+                                    <div class="metric-bar overhead-bar" style="height: 65%">
+                                        <div class="bar-value">€2,327,015</div>
+                                        <div class="oh-bar-label">2029</div>
+                                    </div>
+                                    <div class="metric-bar negative-bar" style="height: 68%">
+                                        <div class="bar-value">€2,473,456</div>
+                                        <div class="oh-bar-label">2030</div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        
+                
+                    </section>
                 </div>
 
                 <div class="sof-table-container">
@@ -9325,29 +9810,108 @@
             </div>
         </div>
         
-        <!---------------------------- Slide 44: -->
+        <!---------------------------- Slide 44: Overhead cost-->
         <div class="slide">
             <h2 class="top-us-title-1" style="color: white;">
                 <span>05 -- Appendix</span>
             </h2>
             <div class="oh-container">
-              <h1 class="oh-title">PropCo - Overhead Costs</h1>
+              <h1 class="slide-main-title">PropCo - Overhead Costs</h1>
               <p class="oh-subtitle">Expense Breakdown 2026-2030 (€)</p>
           
               <div class="oh-content-wrapper">
                 <div class="oh-chart-container">
-                  <div class="oh-chart-box">
-                    <h3 class="oh-chart-title">Cost Composition (2026)</h3>
-                    <div class="oh-chart-wrapper">
-                      <canvas id="costChart-2"></canvas>
-                    </div>
-                  </div>
-                  <div class="oh-chart-box">
-                    <h3 class="oh-chart-title">Annual Overhead Costs</h3>
-                    <div class="oh-chart-wrapper">
-                      <canvas id="annualCostChart"></canvas>
-                    </div>
-                  </div>
+                    <section class="food-system-section">
+                
+                                           
+                        <!-- Card 1: -->
+                        <div class="stat-card card-width-17">
+                            <div class="card-header">
+                                <div class="card-icon"></div>
+                                <h2 class="card-title">Cost Composition (2026)</h2>
+                            </div>
+                            <div class="pie-chart-container">
+                                <div class="pie-chart"></div>
+                                <div class="legend">
+                                  <div><span class="group1"></span> Studio Saol</div>
+                                  <div><span class="group2"></span> Global Impact</div>
+                                  <div><span class="group3"></span> Farmhub OS</div>
+                                  <div><span class="group4"></span> Last Mile</div>
+                                  <div><span class="group5"></span> Shipping</div>
+                                  <div><span class="group6"></span> Overhead Costs</div>
+                                  <div><span class="group7"></span> Travel</div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+                        
+                       
+                        <div class="stat-card card-width-15">
+                            <div class="card-header">
+                                <h2 class="card-title">Annual Overhead Cost</h2>
+                            </div>
+                            <div class="data-container">
+                                <p>Percentage of mechanized farmland:</p>
+                                <div class="oh-dual-bar-graph">
+                                    <!-- 2026 -->
+                                    <div class="year-group">
+                                        <div class="metric-bar africa-bar" style="height: 50%">
+                                            <div class="bar-value">€1,707,751</div>
+                                        </div>
+                                        <div class="metric-bar global-bar" style="height: 45%">
+                                            <div class="bar-value">€1,607,751</div>
+                                        </div>
+                                        <div class="oh-bar-label">2026</div>
+                                    </div>
+                                    
+                                    <!-- 2027 -->
+                                    <div class="year-group">
+                                        <div class="metric-bar global-bar" style="height: 40%">
+                                            <div class="bar-value">€1,486,121</div>
+                                        </div>
+                                        <div class="metric-bar usa-bar" style="height: 35%">
+                                            <div class="bar-value">€1,386,121</div>
+                                        </div>
+                                        <div class="oh-bar-label">2027</div>
+                                    </div>
+                                    
+                                    <!-- 2028 -->
+                                    <div class="year-group">
+                                        <div class="metric-bar usa-bar" style="height: 60%">
+                                            <div class="bar-value">€2,015,677</div>
+                                        </div>
+                                        <div class="metric-bar overhead-bar" style="height: 55%">
+                                            <div class="bar-value">€1,915,677</div>
+                                        </div>
+                                        <div class="oh-bar-label">2028</div>
+                                    </div>
+                                    
+                                    <!-- 2029 -->
+                                    <div class="year-group">
+                                        <div class="metric-bar overhead-bar" style="height: 65%">
+                                            <div class="bar-value">€2,327,015</div>
+                                        </div>
+                                        <div class="metric-bar negative-bar" style="height: 60%">
+                                            <div class="bar-value">€2,227,015</div>
+                                        </div>
+                                        <div class="oh-bar-label">2029</div>
+                                    </div>
+                                    
+                                    <!-- 2030 -->
+                                    <div class="year-group">
+                                        <div class="metric-bar negative-bar" style="height: 68%">
+                                            <div class="bar-value">€2,473,456</div>
+                                        </div>
+                                        <div class="metric-bar africa-bar" style="height: 63%">
+                                            <div class="bar-value">€2,373,456</div>
+                                        </div>
+                                        <div class="oh-bar-label">2030</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </section>
                 </div>
           
                 <div class="oh-table-container">
@@ -9380,7 +9944,7 @@
                         <td>€200,000</td>
                       </tr>
                       <tr>
-                        <td>Farmhub OS Development</td>
+                        <td>Farmhub OS Development Costs</td>
                         <td>€240,000</td>
                         <td>€240,000</td>
                         <td>€240,000</td>
@@ -9388,28 +9952,36 @@
                         <td>€240,000</td>
                       </tr>
                       <tr>
-                        <td>Last Mile Customisation</td>
+                        <td>Last Mile and xFarm - Customisation Costs</td>
                         <td>€200,000</td>
                         <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                        <td>€200,000</td>
+                      </tr>
+                      <tr>
+                        <td>Equipment Shipping</td>
+                        <td>€240,000</td>
+                        <td>€0</td>
                         <td>€420,000</td>
                         <td>€600,000</td>
                         <td>€600,000</td>
                       </tr>
                       <tr>
-                        <td>Equipment Shipping</td>
-                        <td>€200,000</td>
-                        <td>€0</td>
-                        <td>€200,000</td>
-                        <td>€200,000</td>
-                        <td>€200,000</td>
-                      </tr>
-                      <tr>
-                        <td>Travel Costs</td>
+                        <td>Overhead Costs</td>
                         <td>€47,751</td>
                         <td>€66,121</td>
                         <td>€115,677</td>
                         <td>€187,015</td>
                         <td>€253,456</td>
+                      </tr>
+                      <tr>
+                        <td>Travel Costs</td>
+                        <td>€300,000</td>
+                        <td>€300,000</td>
+                        <td>€360,000</td>
+                        <td>€420,000</td>
+                        <td>€500,000</td>
                       </tr>
                       <tr class="oh-total-row">
                         <td>Total Overhead</td>
@@ -9431,7 +10003,7 @@
         <!---------------------------- Slide 39: Other Costs-->
         <div class="slide">
             <div class="oc-container">
-              <h1 class="oc-title">PropCo - Other Costs</h1>
+              <h1 class="slide-main-title">PropCo - Other Costs</h1>
               <p class="oc-subtitle">Interest, Tax & Depreciation 2026-2030 (€)</p>
           
               <div class="oc-content-wrapper">
@@ -9506,7 +10078,7 @@
 
         <div class="slide">
             <div class="ac-container">
-              <h1 class="ac-title">PropCo - Asset Costs</h1>
+              <h1 class="slide-main-title">PropCo - Asset Costs</h1>
               <p class="ac-subtitle">Capital Expenditures 2026-2030 (€)</p>
           
               <div class="ac-content-wrapper">
@@ -9595,7 +10167,8 @@
 
 
     </div>
-    
+ <!---------------------- main script: navigation, toc ---------------------->
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const slidesContainer = document.getElementById('slidesContainer');
@@ -10102,21 +10675,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Data preparation
@@ -10131,82 +10689,194 @@
         // Convert to € millions for better chart display
         const toMillions = arr => arr.map(x => x / 1000000);
         
-        // Common chart options for labels and legends
-        const commonLabelStyles = {
-            color: '#FFFFFF', // White color for labels
-            font: {
-                size: 10, // Smaller font size for labels
-                family: "'Arial', sans-serif"
+        // Common color scheme
+        const colors = {
+            blue: 'rgba(0, 201, 255, 0.7)',
+            blueBorder: 'rgba(0, 201, 255, 1)',
+            green: 'rgba(146, 254, 157, 0.7)',
+            greenBorder: 'rgba(146, 254, 157, 1)',
+            red: 'rgba(255, 107, 107, 0.7)',
+            redBorder: 'rgba(255, 107, 107, 1)',
+            orange: 'rgba(255, 159, 64, 0.7)',
+            orangeBorder: 'rgba(255, 159, 64, 1)',
+            text: '#FFFFFF',
+            grid: 'rgba(255, 255, 255, 0.1)',
+            background: 'rgba(255, 255, 255, 0.05)'
+        };
+        
+        // Common font settings
+        const fonts = {
+            title: {
+                size: 14,
+                weight: 'bold',
+                family: "'Arial', sans-serif",
+                color: colors.blueBorder
+            },
+            axisTitle: {
+                size: 12,
+                weight: 'bold',
+                family: "'Arial', sans-serif",
+                color: colors.text
+            },
+            axisLabels: {
+                size: 11,
+                weight: 'normal',
+                family: "'Arial', sans-serif",
+                color: colors.text
+            },
+            legend: {
+                size: 11,
+                weight: 'normal',
+                family: "'Arial', sans-serif",
+                color: colors.text
             }
         };
         
-        const commonLegendStyles = {
-            labels: {
-                color: '#FFFFFF', // White color for legend text
-                font: {
-                    size: 11, // Slightly larger than labels
-                    family: "'Arial', sans-serif"
-                },
-                padding: 10, // Space between legend items
-                boxWidth: 12 // Width of the color box
-            }
+        // Common grid settings
+        const gridSettings = {
+            display: true,
+            color: colors.grid,
+            lineWidth: 1,
+            drawBorder: true,
+            borderColor: 'rgba(255,255,255,0.3)',
+            drawOnChartArea: true,
+            drawTicks: true,
+            tickLength: 5
+        };
+        
+        // Common tooltip settings
+        const tooltipSettings = {
+            enabled: true,
+            mode: 'index',
+            intersect: false,
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            titleColor: colors.blueBorder,
+            bodyColor: colors.text,
+            titleFont: {
+                size: 12,
+                weight: 'bold'
+            },
+            bodyFont: {
+                size: 11
+            },
+            padding: 10,
+            cornerRadius: 4,
+            displayColors: true,
+            boxWidth: 10,
+            boxHeight: 10,
+            usePointStyle: true
         };
         
         // Revenue Chart
-        new Chart(document.getElementById('revenueChart'), {
+        const revenueChart = new Chart(document.getElementById('revenueChart'), {
             type: 'bar',
             data: {
                 labels: years,
                 datasets: [{
                     label: 'Revenue (€M)',
                     data: toMillions(revenue),
-                    backgroundColor: 'rgba(0, 201, 255, 0.7)'
+                    backgroundColor: colors.blue,
+                    borderColor: colors.blueBorder,
+                    borderWidth: 0,
+                    borderRadius: 4
                 }]
             },
             options: {
-                responsive:false,
+                responsive: false,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 10,
+                        right: 15,
+                        bottom: 10,
+                        left: 15
+                    }
+                },
                 plugins: {
                     legend: { 
                         display: false 
                     },
+                    title: {
+                        display: true,
+                        text: 'Revenue Growth',
+                        color: fonts.title.color,
+                        font: {
+                            size: fonts.title.size,
+                            weight: fonts.title.weight,
+                            family: fonts.title.family
+                        },
+                        padding: {
+                            top: 0,
+                            bottom: 10
+                        }
+                    },
                     tooltip: {
+                        ...tooltipSettings,
                         callbacks: {
                             label: function(context) {
-                                return '€' + (context.raw * 1000000).toLocaleString();
+                                return ' €' + (context.raw * 1000000).toLocaleString();
                             }
                         }
                     }
                 },
                 scales: {
                     x: {
-                        ticks: commonLabelStyles,
+                        ticks: {
+                            color: fonts.axisLabels.color,
+                            font: {
+                                size: fonts.axisLabels.size,
+                                weight: fonts.axisLabels.weight,
+                                family: fonts.axisLabels.family
+                            },
+                            padding: 5
+                        },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
+                            ...gridSettings,
+                            display: false
                         }
                     },
                     y: {
                         beginAtZero: true,
-                        ticks: commonLabelStyles,
                         title: { 
                             display: true, 
                             text: '€ Millions',
-                            color: '#FFFFFF',
+                            color: fonts.axisTitle.color,
                             font: {
-                                size: 13,
-                                weight: 'bold'
+                                size: fonts.axisTitle.size,
+                                weight: fonts.axisTitle.weight,
+                                family: fonts.axisTitle.family
+                            },
+                            padding: {
+                                top: 0,
+                                bottom: 10
                             }
                         },
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        }
+                        ticks: {
+                            color: fonts.axisLabels.color,
+                            font: {
+                                size: fonts.axisLabels.size,
+                                family: fonts.axisLabels.family
+                            },
+                            padding: 5,
+                            callback: function(value) {
+                                return '€' + value;
+                            }
+                        },
+                        grid: gridSettings
+                    }
+                },
+                elements: {
+                    bar: {
+                        borderRadius: 4,
+                        borderWidth: 0,
+                        backgroundColor: colors.blue
                     }
                 }
             }
         });
         
         // Margin Chart
-        new Chart(document.getElementById('marginChart'), {
+        const marginChart = new Chart(document.getElementById('marginChart'), {
             type: 'line',
             data: {
                 labels: years,
@@ -10214,107 +10884,210 @@
                     {
                         label: 'Gross Margin %',
                         data: grossProfit.map((gp, i) => Math.round((gp / revenue[i]) * 100)),
-                        borderColor: 'rgba(146, 254, 157, 1)',
+                        borderColor: colors.greenBorder,
                         backgroundColor: 'rgba(146, 254, 157, 0.1)',
                         borderWidth: 2,
                         tension: 0.3,
-                        fill: true
+                        fill: true,
+                        pointBackgroundColor: colors.greenBorder,
+                        pointBorderColor: '#FFFFFF',
+                        pointRadius: 4,
+                        pointHoverRadius: 6
                     },
                     {
                         label: 'Net Margin %',
                         data: netProfitPct,
-                        borderColor: 'rgba(255, 251, 255, 1)',
+                        borderColor: colors.blueBorder,
                         backgroundColor: 'rgba(0, 201, 255, 0.1)',
                         borderWidth: 2,
                         tension: 0.3,
-                        fill: true
+                        fill: true,
+                        pointBackgroundColor: colors.blueBorder,
+                        pointBorderColor: '#FFFFFF',
+                        pointRadius: 4,
+                        pointHoverRadius: 6
                     }
                 ]
             },
             options: {
-                responsive:false,
+                responsive: false,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 10,
+                        right: 15,
+                        bottom: 10,
+                        left: 15
+                    }
+                },
                 plugins: {
                     legend: { 
                         position: 'top',
-                        align: 'start',
-                        ...commonLegendStyles
+                        align: 'center',
+                        labels: {
+                            color: fonts.legend.color,
+                            font: {
+                                size: fonts.legend.size,
+                                weight: fonts.legend.weight,
+                                family: fonts.legend.family
+                            },
+                            padding: 5,
+                            boxWidth: 12,
+                            usePointStyle: true
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Profit Margin',
+                        color: fonts.title.color,
+                        font: {
+                            size: fonts.title.size,
+                            weight: fonts.title.weight,
+                            family: fonts.title.family
+                        },
+                        padding: {
+                            top: 0,
+                            bottom: 10
+                        }
+                    },
+                    tooltip: {
+                        ...tooltipSettings,
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw + '%';
+                            }
+                        }
                     }
                 },
                 scales: {
                     x: {
-                        ticks: commonLabelStyles,
+                        ticks: {
+                            color: fonts.axisLabels.color,
+                            font: {
+                                size: fonts.axisLabels.size,
+                                weight: fonts.axisLabels.weight,
+                                family: fonts.axisLabels.family
+                            },
+                            padding: 5
+                        },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
+                            ...gridSettings,
+                            display: false
                         }
                     },
                     y: {
                         beginAtZero: false,
-                        ticks: commonLabelStyles,
                         title: { 
                             display: true, 
                             text: 'Percentage %',
-                            color: '#FFFFFF',
+                            color: fonts.axisTitle.color,
                             font: {
-                                size: 11,
-                                weight: 'bold'
+                                size: fonts.axisTitle.size,
+                                weight: fonts.axisTitle.weight,
+                                family: fonts.axisTitle.family
+                            },
+                            padding: {
+                                top: 0,
+                                bottom: 10
                             }
                         },
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        }
+                        ticks: {
+                            color: fonts.axisLabels.color,
+                            font: {
+                                size: fonts.axisLabels.size,
+                                family: fonts.axisLabels.family
+                            },
+                            padding: 5,
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: gridSettings
+                    }
+                },
+                elements: {
+                    line: {
+                        tension: 0.3,
+                        borderWidth: 2,
+                        fill: true
+                    },
+                    point: {
+                        radius: 4,
+                        hoverRadius: 6,
+                        backgroundColor: colors.blueBorder,
+                        borderColor: '#FFFFFF',
+                        borderWidth: 2
                     }
                 }
             }
         });
         
         // Cost Chart
-        new Chart(document.getElementById('costChart'), {
+        const costChart = new Chart(document.getElementById('costChart'), {
             type: 'doughnut',
             data: {
                 labels: ['Direct Costs', 'Overhead Costs'],
                 datasets: [{
                     data: [directCosts[4], overheadCosts[4]],
                     backgroundColor: [
-                        'rgba(255, 107, 107, 0.7)',
-                        'rgba(255, 159, 64, 0.7)'
+                        colors.red,
+                        colors.orange
                     ],
-                    borderColor: 'rgba(0, 0, 0, 0.5)',
-                    borderWidth: 1
+                    borderColor: 'rgba(0, 0, 0, 0)',
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: false,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 10,
+                        right: 15,
+                        bottom: 10,
+                        left: 15
+                    }
+                },
                 plugins: {
                     legend: { 
                         position: 'right',
                         align: 'center',
-                        ...commonLegendStyles
+                        labels: {
+                            color: fonts.legend.color,
+                            font: {
+                                size: fonts.legend.size,
+                                weight: fonts.legend.weight,
+                                family: fonts.legend.family
+                            },
+                            padding: 12,
+                            boxWidth: 12,
+                            usePointStyle: true
+                        }
                     },
                     title: {
                         display: true,
                         text: '2030 Cost Breakdown',
-                        color: '#00C9FF',
+                        color: fonts.title.color,
                         font: {
-                            size: 12,
-                            weight: 'bold'
+                            size: fonts.title.size,
+                            weight: fonts.title.weight,
+                            family: fonts.title.family
                         },
                         padding: {
-                            top: 10,
+                            top: 0,
                             bottom: 10
                         }
                     },
                     tooltip: {
+                        ...tooltipSettings,
                         callbacks: {
                             label: function(context) {
-                                return '€' + context.raw.toLocaleString();
+                                return ' €' + context.raw.toLocaleString();
                             }
                         }
                     }
                 },
-                // Control label styling inside the doughnut chart
-                cutout: '70%',
+                cutout: '45%',
                 elements: {
                     arc: {
                         borderWidth: 0
@@ -10324,7 +11097,7 @@
         });
         
         // Profit Chart
-        new Chart(document.getElementById('profitChart'), {
+        const profitChart = new Chart(document.getElementById('profitChart'), {
             type: 'bar',
             data: {
                 labels: years,
@@ -10332,54 +11105,114 @@
                     label: 'Net Profit (€M)',
                     data: toMillions(netProfit),
                     backgroundColor: function(context) {
-                        return context.raw < 0 ? 'rgba(255, 107, 107, 0.7)' : 'rgba(146, 254, 157, 0.7)';
+                        return context.raw < 0 ? colors.red : colors.green;
                     },
                     borderColor: function(context) {
-                        return context.raw < 0 ? 'rgba(255, 107, 107, 1)' : 'rgba(146, 254, 157, 1)';
+                        return context.raw < 0 ? colors.redBorder : colors.greenBorder;
                     },
-                    borderWidth: 1
+                    borderWidth: 0,
+                    borderRadius: 4
                 }]
             },
             options: {
                 responsive: false,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 10,
+                        right: 15,
+                        bottom: 10,
+                        left: 15
+                    }
+                },
                 plugins: {
                     legend: { 
                         display: false 
                     },
+                    title: {
+                        display: true,
+                        text: 'Net Profit Trend',
+                        color: fonts.title.color,
+                        font: {
+                            size: fonts.title.size,
+                            weight: fonts.title.weight,
+                            family: fonts.title.family
+                        },
+                        padding: {
+                            top: 0,
+                            bottom: 10
+                        }
+                    },
                     tooltip: {
+                        ...tooltipSettings,
                         callbacks: {
                             label: function(context) {
-                                return '€' + (context.raw * 1000000).toLocaleString();
+                                return ' €' + (context.raw * 1000000).toLocaleString();
                             }
                         }
                     }
                 },
                 scales: {
                     x: {
-                        ticks: commonLabelStyles,
+                        ticks: {
+                            color: fonts.axisLabels.color,
+                            font: {
+                                size: fonts.axisLabels.size,
+                                weight: fonts.axisLabels.weight,
+                                family: fonts.axisLabels.family
+                            },
+                            padding: 5
+                        },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
+                            ...gridSettings,
+                            display: false
                         }
                     },
                     y: {
                         beginAtZero: false,
-                        ticks: commonLabelStyles,
                         title: { 
                             display: true, 
                             text: '€ Millions',
-                            color: '#FFFFFF',
+                            color: fonts.axisTitle.color,
                             font: {
-                                size: 11,
-                                weight: 'bold'
+                                size: fonts.axisTitle.size,
+                                weight: fonts.axisTitle.weight,
+                                family: fonts.axisTitle.family
+                            },
+                            padding: {
+                                top: 0,
+                                bottom: 10
                             }
                         },
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        }
+                        ticks: {
+                            color: fonts.axisLabels.color,
+                            font: {
+                                size: fonts.axisLabels.size,
+                                family: fonts.axisLabels.family
+                            },
+                            padding: 5,
+                            callback: function(value) {
+                                return '€' + value;
+                            }
+                        },
+                        grid: gridSettings
+                    }
+                },
+                elements: {
+                    bar: {
+                        borderRadius: 4,
+                        borderWidth: 0
                     }
                 }
             }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            revenueChart.resize();
+            marginChart.resize();
+            costChart.resize();
+            profitChart.resize();
         });
     });
 </script>
@@ -10390,15 +11223,108 @@
 
 
 
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // Data preparation
       const years = ['2026', '2027', '2028', '2029', '2030'];
       const impactInvestment = [5000000, 0, 0, 0, 0];
       const grantFunding = [2500000, 0, 6000000, 8000000, 8000000];
       const debtFinance = [2500000, 0, 0, 0, 0];
 
+      // Convert to millions for better display
       const toMillions = arr => arr.map(x => x / 1000000);
+
+      // Color scheme
+      const colors = {
+        impact: 'rgba(0, 201, 255, 0.7)',
+        impactBorder: 'rgba(0, 201, 255, 1)',
+        grant: 'rgba(146, 254, 157, 0.7)',
+        grantBorder: 'rgba(146, 254, 157, 1)',
+        debt: 'rgba(255, 159, 64, 0.7)',
+        debtBorder: 'rgba(255, 159, 64, 1)',
+        text: '#FFFFFF',
+        grid: 'rgba(255, 255, 255, 0.1)',
+        background: 'rgba(255, 255, 255, 0.05)'
+      };
+
+      // Font settings
+      const fonts = {
+        title: {
+          size: 16,
+          weight: 'bold',
+          family: "'Arial', sans-serif",
+          color: '#00C9FF'
+        },
+        axisTitle: {
+          size: 12,
+          weight: 'bold',
+          family: "'Arial', sans-serif",
+          color: '#FFFFFF'
+        },
+        axisLabels: {
+          size: 11,
+          weight: 'normal',
+          family: "'Arial', sans-serif",
+          color: '#FFFFFF'
+        },
+        legend: {
+          size: 12,
+          weight: 'normal',
+          family: "'Arial', sans-serif",
+          color: '#FFFFFF'
+        },
+        tooltip: {
+          titleSize: 12,
+          bodySize: 11,
+          weight: 'normal',
+          family: "'Arial', sans-serif"
+        }
+      };
+
+      // Grid settings
+      const gridSettings = {
+        display: true,
+        color: colors.grid,
+        lineWidth: 1,
+        drawBorder: true,
+        borderColor: 'rgba(255,255,255,0.3)',
+        drawOnChartArea: true,
+        drawTicks: true,
+        tickLength: 5,
+        zeroLineColor: 'rgba(255,255,255,0.5)',
+        zeroLineWidth: 1
+      };
+
+      // Tooltip settings
+      const tooltipSettings = {
+        enabled: true,
+        mode: 'index',
+        intersect: false,
+        backgroundColor: 'rgba(0,0,0,0.85)',
+        titleColor: colors.impactBorder,
+        bodyColor: colors.text,
+        titleFont: {
+          size: fonts.tooltip.titleSize,
+          weight: 'bold',
+          family: fonts.tooltip.family
+        },
+        bodyFont: {
+          size: fonts.tooltip.bodySize,
+          family: fonts.tooltip.family
+        },
+        padding: 12,
+        cornerRadius: 6,
+        displayColors: true,
+        boxWidth: 12,
+        boxHeight: 12,
+        usePointStyle: true,
+        borderColor: 'rgba(255,255,255,0.2)',
+        borderWidth: 1,
+        caretSize: 8,
+        caretPadding: 8,
+        xPadding: 12,
+        yPadding: 12
+      };
 
       // Doughnut chart for 2026 funding composition
       new Chart(document.getElementById('financeChart'), {
@@ -10408,23 +11334,157 @@
           datasets: [{
             data: [impactInvestment[0], grantFunding[0], debtFinance[0]],
             backgroundColor: [
-              'rgba(0, 201, 255, 0.7)',
-              'rgba(146, 254, 157, 0.7)',
-              'rgba(255, 159, 64, 0.7)'
+              colors.impact,
+              colors.grant,
+              colors.debt
             ],
-            borderWidth: 1
+            borderColor: [
+              colors.impactBorder,
+              colors.grantBorder,
+              colors.debtBorder
+            ],
+            borderWidth: 1,
+            hoverBackgroundColor: [
+              'rgba(0, 201, 255, 0.9)',
+              'rgba(146, 254, 157, 0.9)',
+              'rgba(255, 159, 64, 0.9)'
+            ],
+            hoverBorderColor: [
+              'rgba(0, 201, 255, 1)',
+              'rgba(146, 254, 157, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            hoverBorderWidth: 2,
+            weight: 1
           }]
         },
         options: {
           responsive: false,
           maintainAspectRatio: false,
+          layout: {
+            padding: {
+              top: 20,
+              right: 20,
+              bottom: 20,
+              left: 20
+            }
+          },
           plugins: {
-            legend: { position: 'right' },
+            legend: {
+              position: 'right',
+              align: 'center',
+              labels: {
+                color: fonts.legend.color,
+                font: {
+                  size: fonts.legend.size,
+                  weight: fonts.legend.weight,
+                  family: fonts.legend.family
+                },
+                padding: 15,
+                boxWidth: 14,
+                boxHeight: 14,
+                usePointStyle: true,
+                pointStyle: 'circle',
+                generateLabels: function(chart) {
+                  const data = chart.data;
+                  if (data.labels.length && data.datasets.length) {
+                    return data.labels.map(function(label, i) {
+                      const meta = chart.getDatasetMeta(0);
+                      const style = meta.controller.getStyle(i);
+                      
+                      return {
+                        text: label + ': €' + data.datasets[0].data[i].toLocaleString(),
+                        fillStyle: style.backgroundColor,
+                        strokeStyle: style.borderColor,
+                        lineWidth: style.borderWidth,
+                        hidden: isNaN(data.datasets[0].data[i]) || meta.data[i].hidden,
+                        index: i
+                      };
+                    });
+                  }
+                  return [];
+                }
+              },
+              title: {
+                display: true,
+                text: 'Legend',
+                color: fonts.title.color,
+                font: {
+                  size: fonts.title.size - 2,
+                  weight: 'bold',
+                  family: fonts.title.family
+                },
+                padding: {
+                  top: 0,
+                  bottom: 10
+                }
+              },
+              onClick: function(e, legendItem, legend) {
+                const index = legendItem.datasetIndex;
+                const ci = legend.chart;
+                const meta = ci.getDatasetMeta(index);
+
+                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
+                ci.update();
+              }
+            },
             title: {
               display: true,
               text: '2026 Funding Mix',
-              font: { size: 14 }
+              color: fonts.title.color,
+              font: {
+                size: fonts.title.size,
+                weight: fonts.title.weight,
+                family: fonts.title.family
+              },
+              padding: {
+                top: 0,
+                bottom: 20
+              },
+              align: 'center'
+            },
+            tooltip: {
+              ...tooltipSettings,
+              callbacks: {
+                label: function(context) {
+                  const label = context.label || '';
+                  const value = context.raw || 0;
+                  const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                  const percentage = Math.round((value / total) * 100);
+                  return `${label}: €${value.toLocaleString()} (${percentage}%)`;
+                }
+              }
+            },
+            datalabels: {
+              display: false
             }
+          },
+          cutout: '55%',
+          radius: '80%',
+          rotation: -90,
+          circumference: 360,
+          animation: {
+            animateScale: true,
+            animateRotate: true,
+            duration: 1000,
+            easing: 'easeOutQuart'
+          },
+          elements: {
+            arc: {
+              borderWidth: 1,
+              borderColor: 'rgba(0,0,0,0.3)',
+              hoverBorderWidth: 2,
+              hoverBorderColor: 'rgba(255,255,255,0.5)'
+            }
+          },
+          onClick: function(e, elements) {
+            if (elements.length > 0) {
+              const index = elements[0].index;
+              console.log('Clicked on:', this.data.labels[index]);
+            }
+          },
+          onHover: function(e, elements) {
+            e.native.target.style.cursor = elements.length ? 'pointer' : 'default';
           }
         }
       });
@@ -10438,42 +11498,283 @@
             {
               label: 'Impact Investment',
               data: toMillions(impactInvestment),
-              backgroundColor: 'rgba(0, 201, 255, 0.7)'
+              backgroundColor: colors.impact,
+              borderColor: colors.impactBorder,
+              borderWidth: 1,
+              hoverBackgroundColor: 'rgba(0, 201, 255, 0.9)',
+              hoverBorderColor: 'rgba(0, 201, 255, 1)',
+              hoverBorderWidth: 2,
+              borderRadius: {
+                topLeft: 4,
+                topRight: 4,
+                bottomLeft: 0,
+                bottomRight: 0
+              },
+              barPercentage: 0.8,
+              categoryPercentage: 0.9,
+              order: 1
             },
             {
               label: 'Grant Funding',
               data: toMillions(grantFunding),
-              backgroundColor: 'rgba(146, 254, 157, 0.7)'
+              backgroundColor: colors.grant,
+              borderColor: colors.grantBorder,
+              borderWidth: 1,
+              hoverBackgroundColor: 'rgba(146, 254, 157, 0.9)',
+              hoverBorderColor: 'rgba(146, 254, 157, 1)',
+              hoverBorderWidth: 2,
+              borderRadius: {
+                topLeft: 4,
+                topRight: 4,
+                bottomLeft: 0,
+                bottomRight: 0
+              },
+              barPercentage: 0.8,
+              categoryPercentage: 0.9,
+              order: 2
             },
             {
               label: 'Debt Finance',
               data: toMillions(debtFinance),
-              backgroundColor: 'rgba(255, 159, 64, 0.7)'
+              backgroundColor: colors.debt,
+              borderColor: colors.debtBorder,
+              borderWidth: 1,
+              hoverBackgroundColor: 'rgba(255, 159, 64, 0.9)',
+              hoverBorderColor: 'rgba(255, 159, 64, 1)',
+              hoverBorderWidth: 2,
+              borderRadius: {
+                topLeft: 4,
+                topRight: 4,
+                bottomLeft: 0,
+                bottomRight: 0
+              },
+              barPercentage: 0.8,
+              categoryPercentage: 0.9,
+              order: 3
             }
           ]
         },
         options: {
           responsive: false,
           maintainAspectRatio: false,
+          layout: {
+            padding: {
+              top: 20,
+              right: 10,
+              bottom: 20,
+              left: 20
+            }
+          },
           plugins: {
-            legend: { position: 'top' },
+            legend: {
+              position: 'top',
+              align: 'center',
+              labels: {
+                color: fonts.legend.color,
+                font: {
+                  size: fonts.legend.size,
+                  weight: fonts.legend.weight,
+                  family: fonts.legend.family
+                },
+                padding: 20,
+                boxWidth: 14,
+                boxHeight: 14,
+                usePointStyle: true,
+                pointStyle: 'rectRounded',
+                generateLabels: function(chart) {
+                  const data = chart.data;
+                  if (data.datasets.length) {
+                    return data.datasets.map(function(dataset, i) {
+                      return {
+                        text: dataset.label,
+                        fillStyle: dataset.backgroundColor,
+                        strokeStyle: dataset.borderColor,
+                        lineWidth: dataset.borderWidth,
+                        hidden: !chart.isDatasetVisible(i),
+                        index: i
+                      };
+                    });
+                  }
+                  return [];
+                }
+              },
+              title: {
+                display: true,
+                text: 'Funding Sources',
+                color: fonts.title.color,
+                font: {
+                  size: fonts.title.size - 2,
+                  weight: 'bold',
+                  family: fonts.title.family
+                },
+                padding: {
+                  top: 0,
+                  bottom: 10
+                }
+              },
+              onClick: function(e, legendItem, legend) {
+                const index = legendItem.datasetIndex;
+                const ci = legend.chart;
+                ci.setDatasetVisibility(index, !ci.isDatasetVisible(index));
+                ci.update();
+              }
+            },
+            title: {
+              display: true,
+              text: 'Annual Funding Breakdown (€ Millions)',
+              color: fonts.title.color,
+              font: {
+                size: fonts.title.size,
+                weight: fonts.title.weight,
+                family: fonts.title.family
+              },
+              padding: {
+                top: 0,
+                bottom: 20
+              },
+              align: 'center'
+            },
             tooltip: {
+              ...tooltipSettings,
               callbacks: {
-                label: function (context) {
+                label: function(context) {
                   return context.dataset.label + ': €' + (context.raw * 1000000).toLocaleString();
+                },
+                footer: function(tooltipItems) {
+                  let total = 0;
+                  tooltipItems.forEach(function(tooltipItem) {
+                    total += tooltipItem.parsed.y;
+                  });
+                  return 'Total: €' + (total * 1000000).toLocaleString();
+                }
+              }
+            },
+            datalabels: {
+              display: false
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              ticks: {
+                color: fonts.axisLabels.color,
+                font: {
+                  size: fonts.axisLabels.size,
+                  weight: fonts.axisLabels.weight,
+                  family: fonts.axisLabels.family
+                },
+                padding: 10
+              },
+              grid: {
+                ...gridSettings,
+                display: false,
+                drawBorder: true
+              },
+              title: {
+                display: true,
+                text: 'Year',
+                color: fonts.axisTitle.color,
+                font: {
+                  size: fonts.axisTitle.size,
+                  weight: fonts.axisTitle.weight,
+                  family: fonts.axisTitle.family
+                },
+                padding: {
+                  top: 10,
+                  bottom: 5
+                }
+              }
+            },
+            y: {
+              stacked: true,
+              beginAtZero: true,
+              ticks: {
+                color: fonts.axisLabels.color,
+                font: {
+                  size: fonts.axisLabels.size,
+                  family: fonts.axisLabels.family
+                },
+                padding: 5,
+                callback: function(value) {
+                  return '€' + value;
+                }
+              },
+              grid: gridSettings,
+              title: {
+                display: true,
+                text: 'Amount (Millions)',
+                color: fonts.axisTitle.color,
+                font: {
+                  size: fonts.axisTitle.size,
+                  weight: fonts.axisTitle.weight,
+                  family: fonts.axisTitle.family
+                },
+                padding: {
+                  top: 5,
+                  bottom: 10
                 }
               }
             }
           },
-          scales: {
-            x: { stacked: true },
-            y: {
-              stacked: true,
-              title: { display: true, text: '€ Millions' }
+          animation: {
+            duration: 1000,
+            easing: 'easeOutQuart',
+            delay: function(context) {
+              return context.dataIndex * 100;
+            },
+            onProgress: function(animation) {
+              // Animation progress callback
+            },
+            onComplete: function(animation) {
+              // Animation complete callback
+            }
+          },
+          interaction: {
+            mode: 'index',
+            intersect: false,
+            axis: 'x'
+          },
+          onClick: function(e, elements) {
+            if (elements.length > 0) {
+              const datasetIndex = elements[0].datasetIndex;
+              const dataIndex = elements[0].index;
+              console.log('Clicked on:', this.data.datasets[datasetIndex].label, 'for', this.data.labels[dataIndex]);
+            }
+          },
+          onHover: function(e, elements) {
+            e.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+          },
+          elements: {
+            bar: {
+              borderWidth: 1,
+              borderColor: 'rgba(0,0,0,0.3)',
+              hoverBorderWidth: 2,
+              hoverBorderColor: 'rgba(255,255,255,0.5)',
+              backgroundColor: function(context) {
+                const chart = context.chart;
+                const {ctx, chartArea} = chart;
+                
+                if (!chartArea) return null;
+                
+                const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                gradient.addColorStop(0, context.dataset.backgroundColor);
+                gradient.addColorStop(1, context.dataset.borderColor);
+                
+                return gradient;
+              }
             }
           }
         }
       });
+
+      // Handle window resize
+      function resizeCharts() {
+        Chart.helpers.each(Chart.instances, function(instance) {
+          instance.resize();
+        });
+      }
+
+      window.addEventListener('resize', resizeCharts);
     });
   </script>
 
@@ -10579,7 +11880,7 @@
                 responsive: false,
                 maintainAspectRatio: false,
                 width: 600,  // Set width
-                height: 400, // Set height
+                height: 600, // Set height
                 animation: {
                     duration: 0
                 },
@@ -10628,7 +11929,8 @@
         });
     });
 </script>
-
+   
+        <!----------------------------Overhead cost -->
   
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -10708,7 +12010,7 @@
           labels: years,
           datasets: [
             {
-              label: 'Total Overhead',
+              label: '',
               data: [1707751, 1486121, 2015677, 2327015, 2473456],
               backgroundColor: 'rgba(0, 201, 255, 0.7)',
               borderColor: 'rgba(0, 201, 255, 1)',
