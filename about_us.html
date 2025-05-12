@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,16 +51,16 @@
         
         .slide {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
-            padding: 20px;
+            padding: 3px 5px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
         }
@@ -69,13 +71,13 @@
         }
         
         .slide-content {
-            max-width: 1200px;
+            max-width: 1400px;
             width: 90%;
             height: 90%;
             background-color: rgba(0, 0, 0, 0.7);
             color: var(--light-text);
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             overflow-y: auto;
             position: relative;
@@ -316,7 +318,7 @@
                 }
         h1 {
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             font-size: 2.5rem;
         }
         
@@ -350,8 +352,8 @@
             flex: 1;
         }
         .column p{
-            font-size: 1.5rem;
-            line-height: 2.5rem;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
         }
         .nav-bar {
                 position: fixed;
@@ -486,8 +488,8 @@
 
         .back-to-toc {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            bottom: 5px;
+           left: 5px;
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -498,6 +500,7 @@
             transition: all 0.3s ease;
             z-index: 10;
         }
+     
         
         .back-to-toc:hover {
             background-color: var(--dark-green);
@@ -724,16 +727,11 @@
                 width: 90%;
             }
             
-            .back-to-toc {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-                top: 10px;
-                right: 10px;
-            }
+      
             .logo {
             position: absolute;
-            top: 5px;
-            left: 5px;
+            bottom: 5px;
+            right: 5px;
             max-width: 50px;
             z-index: 100;
         }
@@ -767,7 +765,7 @@
         
         .gap-card {
             width: calc(33.333% - 20px);
-            min-width: 600px;
+            min-width: 700px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
@@ -1178,11 +1176,12 @@
     font-weight: bold;
     padding: 4px 12px;
     border-radius: 20px;
+    margin-top: 1px;
    }
    .top-us-title-1 {
            background: #123022;
            border-radius: 20px;
-           padding: 10px 20px;
+           padding: 5px 20px;
            font-size: 1.8rem;
         }
 
@@ -1356,7 +1355,7 @@
     
     .challenges-card-content p {
         margin: 0;
-        line-height: 1.6;
+        line-height: 1.2;
         font-size: 1.3rem;
     }
     
@@ -1604,7 +1603,7 @@
 
 .vision-section {
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     background: rgba(0, 128, 0, 0.2);
     border-radius: 10px;
 }
@@ -1622,14 +1621,14 @@
 }
 
 .vision-section p, .mission-section p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.6;
 }
 
 /*------------------- How We Do It */
 .how-title-container {
     text-align: center;
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .how-title-container h1 {
@@ -2406,24 +2405,7 @@ p.intro {
 
 
 
-        .back-to-toc {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            z-index: 1000;
-            font-size: 14px;
-            height:50px;
-        }
-        .back-to-toc:hover {
-                    background-color: white;
-                    transform: scale(1.1);
-                }
+
 
                 .back-to-toc i {
                     font-size: 1.3rem;
@@ -2644,11 +2626,11 @@ p.intro {
 
     .slide-header {
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     .slide-header h1 {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         color: white;
         margin-bottom: 0.5rem;
     }
@@ -2670,7 +2652,7 @@ p.intro {
     .category-tabs {
     display: flex;
     justify-content: center;
-    margin: 1rem 0 1rem;
+    margin: 0.2rem 0 0.2rem;
     flex-wrap: wrap;
     gap: 0.8rem;
     position: relative;
@@ -2768,6 +2750,7 @@ p.intro {
         display: none;
     }
     
+    
     .category-intro.active {
         display: block;
     }
@@ -2797,7 +2780,7 @@ p.intro {
         box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         transition: all 0.3s ease;
         position: relative;
-        height: 380px;
+        height: 320px;
         display: none;
     }
     
@@ -2822,17 +2805,17 @@ p.intro {
     }
     
     .card-content {
-        padding: 1.5rem;
+        padding: 0.5rem;
         position: relative;
-        height: calc(380px - 180px);
+        height: 100px;
         display: flex;
         flex-direction: column;
     }
     
     .card-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: var(--dark);
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.4rem;
         font-weight: 600;
     }
     
@@ -2840,7 +2823,7 @@ p.intro {
         color: #555;
         font-size: 0.95rem;
         line-height: 1.5;
-        margin-bottom: 1rem;
+        margin-bottom: 0.1rem;
         flex-grow: 1;
     }
     
@@ -3827,6 +3810,216 @@ p.intro {
             border-bottom: 1px solid rgba(233, 166, 33, 0.3);
         }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           /* New innovative styles */
+           .digital-solutions-slide {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content-wrapper {
+            width: 95%;
+            max-width: 1400px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-text {
+            margin-bottom: 3rem;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #5a6a7e;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .apps-showcase {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .app-card {
+            width: 48%;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-image {
+            height: 60%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lastmile-image {
+            background-image: url('image_file/lastmile.jpg');
+        }
+
+        .xfarm-image {
+            background-image: url('image_file/xfarm_4.png');
+        }
+
+        .app-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            padding: 2rem 1.5rem 1rem;
+            text-align: left;
+        }
+
+        .app-name {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-tagline {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-details {
+            padding: 1.5rem;
+            text-align: left;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-description {
+            color: #5a6a7e;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: auto;
+        }
+
+        .feature-tag {
+            background: #f0f4f8;
+            color: #3a7bd5;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            filter: blur(30px);
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: #3a7bd5;
+            top: -100px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            background: #00d2ff;
+            bottom: -150px;
+            left: -150px;
+        }
+
+        @media (max-width: 1024px) {
+            .apps-showcase {
+                flex-direction: column;
+            }
+            .app-card {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                min-height: 400px;
+            }
+            .app-image {
+                height: 250px;
+            }
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
     </style>
        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -3835,6 +4028,7 @@ p.intro {
    
     <img src="image_file/logo_1.jpg" alt="Farm Hub Ethiopia Logo" class="logo">    
 <div class="slide-container" id="slidesContainer">
+   
         <!-- Slide 1: Title Slide -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
@@ -3874,7 +4068,7 @@ p.intro {
       
                <!---------------------------- Slide 3: The Problem -->
         <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+           
             <h2 class="top-us-title" style="color: white;">
                 <span class="top-us-title-1">The Context</span>
             </h2>
@@ -3935,7 +4129,7 @@ p.intro {
          <!-------------------------- Slide 4: What we are for -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_2.jpg');">
              
-             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+             
              <h2 class="top-us-title" style="color: white;">
                 What We Strive For?
             </h2>
@@ -3949,7 +4143,7 @@ p.intro {
 
         <!--------------------------- Slide 5: Vision Components -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
-                        <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+                       
                         <h2 class="top-us-title" style="color: white;">
                             <span class="top-us-title-1">Vision Components</span>
                         </h2>
@@ -4074,7 +4268,7 @@ p.intro {
         
         <!--------------------------- Slide 6: Farm Hub -->
         <div class="slide" id="farmhub-title-slide" style="background-image: url('image_file/regen_2.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>   
+           
             <div class="title-container">
                 <div class="content-farmhub-title">
                     <h1 style="color:white;">Farm Hub <span style="color: #ccd51d; font-weight: 600;">Ethiopia </span></h1>
@@ -4090,7 +4284,7 @@ p.intro {
         
         <!----------------------------------- Slide 7:About Us -->
         <div class="slide">
-            <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
+            
             <h2 class="top-us-title" style="color: white;">
                 <span class="top-us-title-1">ABOUT US</span>
             </h2>
@@ -4209,7 +4403,7 @@ p.intro {
         <!---------------------------------- Slide 10: How We Do It -->
         <div class="slide bg-image" style="background-image: url('image_file/regen_12.jpg');">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-            <div class="slide-content" style="height: 30%;">
+            <div class="slide-content" style="height: 60%;">
                 <div class="how-title-container">
                     <h2>How We Do It?</h2>
                 </div>
@@ -4717,7 +4911,7 @@ p.intro {
                         <img src="image_file/potato_planter.jpg" alt="Potato Planter" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Specialized Equipment- potato planter</h3>
-                            <p class="card-description">Imported potato planter and other specialized implements to address key crops in Ethiopian agriculture.</p>
+                            <p class="card-description">Potato planter</p>
                             <div class="card-footer">
                                 <span class="card-price">Crop-Specific Solutions</span>
                                 <i class="fas fa-tools card-icon"></i>
@@ -4729,7 +4923,7 @@ p.intro {
                         <img src="image_file/super_seeder_1.jpg" alt="Super Seeder" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Super Seeder</h3>
-                            <p class="card-description">Key imported technology enabling direct seeding without prior tillage, combining multiple operations in one pass.</p>
+                            <p class="card-description">Direct seeding without prior tillage, combining multiple operations in one pass.</p>
                             <div class="card-footer">
                                 <span class="card-price">Multifunctional</span>
                                 <i class="fas fa-seedling card-icon"></i>
@@ -4740,7 +4934,7 @@ p.intro {
                         <img src="image_file/laser_leveler_1.jpg" alt="Super Seeder" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Laser Land Leveller</h3>
-                            <p class="card-description">Key imported technology enabling direct seeding without prior tillage, combining multiple operations in one pass.</p>
+                            <p class="card-description">Key technology</p>
                             <div class="card-footer">
                                 <span class="card-price">Multifunctional</span>
                                 <i class="fas fa-seedling card-icon"></i>
@@ -4752,8 +4946,8 @@ p.intro {
                     <div class="machinery-card" data-category="partnership">
                         <img src="image_file/partnership_4.jpg" alt="Team Meeting" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Stakeholder Collaboration</h3>
-                            <p class="card-description">Established partnerships with Hawassa University, service providers, and agricultural experts to implement the Farm Hub model.</p>
+                            <h3 class="card-title">Intial Collaboration</h3>
+                            <p class="card-description">Established partnerships with Hawassa University, MoA etc to implement the Farm Hub model.</p>
                             <div class="card-footer">
                                 <span class="card-price">Strategic Alliances</span>
                                 <i class="fas fa-handshake card-icon"></i>
@@ -4764,7 +4958,7 @@ p.intro {
                     <div class="machinery-card" data-category="partnership">
                         <img src="image_file/partnership_6.jpg" alt="Team Photo" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Stakeholder Collaboration</h3>
+                            <h3 class="card-title">Partnership</h3>
                             <p class="card-description">We signed an MoA with Hawassa University</p>
                             <div class="card-footer">
                                 <span class="card-price">Strategic Alliances</span>
@@ -4799,7 +4993,7 @@ p.intro {
                     </div>
                     
                     <div class="machinery-card" data-category="field_trials">
-                        <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Field Trial" class="card-image">
+                        <img src="image_file/potato_planter.jpg" alt="Field Trial" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Potato Planter</h3>
                             <p class="card-description">The potato planter was evaluated at farmers' field</p>
@@ -4812,9 +5006,9 @@ p.intro {
                     
                     <!-- Demonstration Cards -->
                     <div class="machinery-card" data-category="others">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Demonstration" class="card-image">
+                        <img src="image_file/demo_2.jpg" alt="Demonstration" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Farmer Training</h3>
+                            <h3 class="card-title">Demo days</h3>
                             <p class="card-description">Hands-on training sessions for farmers and service providers on proper use and maintenance of mechanized equipment.</p>
                             <div class="card-footer">
                                 <span class="card-price">Capacity Building</span>
@@ -4824,7 +5018,7 @@ p.intro {
                     </div>
                     
                     <div class="machinery-card" data-category="others">
-                        <img src="https://images.unsplash.com/photo-1585011650347-c59dbef5a823?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Field Day" class="card-image">
+                        <img src="image_file/demo_3.jpg" alt="Field Day" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Field Days</h3>
                             <p class="card-description">Organized field demonstration days to showcase the benefits of mechanized farming to stakeholders and potential adopters.</p>
@@ -4866,8 +5060,70 @@ p.intro {
             </div>
         </div>
        </div>
-    
-   
+      <!----------------------------------- Slide 18:Digitsl  Solution -->
+ 
+      <div class="slide">
+        <div class="digital-solutions-slide">
+            <div class="floating-elements">
+                <div class="floating-circle circle-1"></div>
+                <div class="floating-circle circle-2"></div>
+            </div>
+            
+            <div class="content-wrapper">
+                <div class="header-text">
+                    <h1 class="main-title">Digital Solutions</h1>
+                   
+                </div>
+                
+                <div class="apps-showcase">
+                    <!-- Lastmile Card -->
+                    <div class="app-card">
+                        <div class="app-image lastmile-image">
+                            <div class="app-overlay">
+                                <h2 class="app-name">Lastmile</h2>
+                                <p class="app-tagline">Redefining final-mile delivery logistics</p>
+                            </div>
+                        </div>
+                        <div class="app-details">
+                            <p class="app-description">
+                                Our cutting-edge logistics platform optimizes delivery routes in real-time, reducing costs and improving customer satisfaction with AI-powered tracking and automated dispatch.
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">Equipment Booking</span>
+                               
+                                <span class="feature-tag">Market Access</span>
+                                <span class="feature-tag">Extension Services</span>
+                                <span class="feature-tag">Digital Finance</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- xFARM Card -->
+                    <div class="app-card">
+                        <div class="app-image xfarm-image">
+                            <div class="app-overlay">
+                                <h2 class="app-name">xFARM</h2>
+                                <p class="app-tagline">Precision agriculture for modern farmers</p>
+                            </div>
+                        </div>
+                        <div class="app-details">
+                            <p class="app-description">
+                                A comprehensive farm management system that integrates IoT sensors, weather data, and crop analytics to maximize yield and optimize resource usage.
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">Fleet Management</span>
+                                <span class="feature-tag">Crop Monitoring</span>
+                                <span class="feature-tag">Irrigation Control</span>
+                                <span class="feature-tag">Weather Analytics</span>
+                               
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
        <!----------------------------- Slide 19: Photo gallery-->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
@@ -4983,7 +5239,7 @@ p.intro {
     
     
    
-    
+<button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
 <div class="nav-bar">
     <button class="nav-btn prev-btn">
         <svg width="60" height="60" viewBox="0 0 24 24"><path fill="white" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
@@ -5375,6 +5631,11 @@ p.intro {
         document.querySelector('.category-tab[data-category="tech_sourcing"]').click();
     });
 </script>
+
+
+
+
+
 
 
 
