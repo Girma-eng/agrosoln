@@ -190,7 +190,7 @@
             align-items: center;
         }
         .slide-content-3{
-            max-width: 1400px;
+            max-width: 1600px;
             width: 100%;
             height: 75%;
             background-color: rgba(0, 0, 0, 0.7);
@@ -4019,6 +4019,153 @@ p.intro {
                 font-size: 1.2rem;
             }
         }
+
+ 
+        /* Custom styles for this slide */
+        .slide-content-hu {
+            display: flex;
+            height: 100%;
+            padding: 40px;
+            gap: 30px;
+            overflow:auto;
+        }
+
+        .text-column-hu {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .visual-column-hu {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+      
+        .slide-description-hu {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #ccc;
+            max-width: 600px;
+        }
+
+        .cards-container-hu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card-hu {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .card-hu:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-title-hu {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-description-hu {
+            font-size: 0.9rem;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .image-container-hu {
+            height: calc(50% - 10px);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container-hu img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container-hu:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-caption-hu {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+
+
+       /* New unique CSS for the image grid */
+       .img-grid-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .img-grid-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .img-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            width: 90%;
+            height: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .img-grid-item {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-grid-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .img-grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .img-grid-item:hover .img-grid-image {
+            transform: scale(1.05);
+        }
+
     </style>
        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -4063,7 +4210,7 @@ p.intro {
                 </div>
                
                 <li class="mission-systems-text">
-                    <span>The Implementation Hand</span>
+                    <span>The Operation & Implementation Hand</span>
                 </li>
             </div>
         </div> 
@@ -4086,16 +4233,18 @@ p.intro {
                     <div class="about-highlight">
                         <span class="about-highlight-title">Farm Hub Ethiopia</span>
                         is an agricultural company established in 2023 with a core focus on improving crop production and empowering smallholder farmers</span>.
-                        <span class="about-highlight-blue">With a commitment to innovation and sustainability,</span>
-                        we have been actively engaged in providing agricultural solutions and services tailored to the needs of
-                        <span class="about-highlight-orange">smallholder farmers</span>.
-                        As the hands-on implementation partner in the agricultural ecosystem, we translate innovations from research labs (like Mission Labs) into practical, farmer-ready solutions.
+                        
+                    </div>
+                    <div class="about-highlight">
+                        <span class="about-highlight-title"></span></span>
+                       
+                        As the hands-on operation and implementation partner in the agricultural ecosystem, we translate innovations from research labs (like Mission Labs) into practical, farmer-ready solutions.
                     </div>
                     
                     <h3 style="color: white;">Our Role in the System:</h3>
                     <div class="about-role">
                        <div class="about-role-text">
-                             <span style="color: green;"> We are the implementation engine—<span class="about-role-emphasis">delivering technologies, inputs and training</span> directly to farmers' fields.
+                             <span style="color: green; font-size: 2rem;"> We are the operational and implementation engine—<span class="about-role-emphasis" font-size: 2rem;>delivering technologies, inputs and training</span> directly to farmers' fields.
                         </div>
                     </div>
                 </div>
@@ -4159,9 +4308,7 @@ p.intro {
                           <div class="challenges-emphasis">
                               <div class="challenges-emphasis-icon">📊</div>
                               <div class="challenges-emphasis-content">
-                                  <h3>The Mechanization Imperative</h3>
-                                  <p style="color: white;">Farm power availability is just 0.05 kW/ha (vs. 0.5+ kW/ha in emerging economies). Farm Hub's short-term focus on scalable mechanization solutions can immediately boost productivity by 30%-50%x while solving affordability barriers.</p>
-                              </div>
+                                   </div>
                           </div>
                       </div>
                     </div>
@@ -4169,129 +4316,7 @@ p.intro {
             </div>
         </div>
         <!--------------------------- Slide 5: Vision Components -->
-        <div class="slide bg-image" style="background-image: url('image_file/regen_4.jpg');">
-                       
-                        <h2 class="top-us-title" style="color: white;">
-                            <span class="top-us-title-1">Vision Components</span>
-                        </h2>
-           <div class="slide-content-vision">
-                        <p class="solution-subtitle">The Transformation Ecosystem</p>
-                <div class="vision-container">
-                    <!-- Mission Labs Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🧠</div>
-                                    <div class="vision-card-title-container">
-                                        <h3>Mission Labs</h3>
-                                        <p>The Innovation Brain</p>
-                                    </div>
-                                    <div class="vision-toggle-icon">▼</div>
-                        </div>
-                                <div class="vision-card-content">
-                                    <div class="vision-card-details">
-                                        <div class="vision-responsibilities">
-                                            <h4>Core Functions:</h4>
-                                            <ul>
-                                                <li><span class="vision-highlight">Research</span> advanced techniques</li>
-                                                <li><span class="vision-highlight">Develop</span> localized solutions</li>
-                                                <li><span class="vision-highlight">Create</span> training frameworks</li>
-                                            </ul>
-                                        </div>
-                                        <div class="vision-impact">
-                                            <h4>Impact Areas:</h4>
-                                            <div class="vision-impact-tags">
-                                                <span class="vision-tag productivity">Productivity</span>
-                                                <span class="vision-tag capacity">Capacity</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    </div>
-                    
-                    <!-- Farm Hubs Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🏭</div>
-                            <div class="vision-card-title-container">
-                                <h3>Farm Hubs</h3>
-                                <p>The Implementation Hands</p>
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <h4>Core Functions:</h4>
-                                    <ul>
-                                        <li><span class="vision-highlight">Deliver</span> technologies & inputs</li>
-                                        <li><span class="vision-highlight">Train</span> farmers in-field</li>
-                                        <li><span class="vision-highlight">Optimize</span> supply chains</li>
-                                    </ul>
-                                </div>
-                                <div class="vision-impact">
-                                    <h4>Impact Areas:</h4>
-                                    <div class="vision-impact-tags">
-                                        <span class="vision-tag supply">Supply</span>
-                                        <span class="vision-tag productivity">Productivity</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Regen Farms Card -->
-                    <div class="vision-card">
-                        <div class="vision-card-header" onclick="toggleVisionCard(this.parentElement)">
-                            <div class="vision-card-icon">🌱</div>
-                            <div class="vision-card-title-container">
-                                <h3>Regen Farms</h3>
-                                <p>The Sustainable Heart</p>
-                            </div>
-                            <div class="vision-toggle-icon">▼</div>
-                        </div>
-                        <div class="vision-card-content">
-                            <div class="vision-card-details">
-                                <div class="vision-responsibilities">
-                                    <h4>Core Functions:</h4>
-                                    <ul>
-                                        <li><span class="vision-highlight">Implement</span> proven methods</li>
-                                        <li><span class="vision-highlight">Regenerate</span> soil health</li>
-                                        <li><span class="vision-highlight">Provide</span> real-world feedback</li>
-                                    </ul>
-                                </div>
-                                <div class="vision-impact">
-                                    <h4>Impact Areas:</h4>
-                                    <div class="vision-impact-tags">
-                                        <span class="vision-tag productivity">Productivity</span>
-                                        <span class="vision-tag supply">Supply</span>
-                                        <span class="vision-tag capacity">Capacity</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Gap Visualization -->
-                <div class="vision-gap-section">
-                    <div class="vision-gap-arrow">↓</div>
-                    <div class="vision-gap-cards">
-                        <div class="vision-gap-card productivity">
-                            <h3>Productivity Gap</h3>
-                            <p style="color: #0f9b57;">Bridging yield and efficiency challenges</p>
-                        </div>
-                        <div class="vision-gap-card supply">
-                            <h3>Supply Gap</h3>
-                            <p style="color: #0f9b57;">Solving distribution and access issues</p>
-                        </div>
-                        <div class="vision-gap-card capacity">
-                            <h3>Capacity Gap</h3>
-                            <p style="color: #0f9b57;">Building skills and infrastructure</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
         
         
         
@@ -4337,22 +4362,22 @@ p.intro {
                     <div class="approach-card">
                         <div class="card-number">1</div>
                         <h2>Holistic Systems Solution</h2>
-                        <p>A one-stop-shop model connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs - the visible nodes of our transformative system - ensuring local scalability by embedding solutions within existing farmer networks and landscapes.</p>
+                        <p style="font-size: 1.3rem;"> <span style="font-weight: 600;">A one-stop-shop model </span>connecting farmers to technologies, inputs and knowledge through an integrated network of Farm Hubs - the visible nodes of our transformative system - ensuring local scalability by embedding solutions within existing farmer networks and landscapes.</p>
                     </div>
                     <div class="approach-card">
                         <div class="card-number">2</div>
                         <h2>Closed-Loop Innovation</h2>
-                        <p>Our ecosystem links Mission Labs (R&D), Farm Hubs (Delivery) and Regen Farms (Adoption) in continuous feedback cycles that refine solutions to local contexts.</p>
+                        <p style="font-size: 1.3rem;">Our ecosystem links Mission Control, Mission Labs (R&D), Farm Hubs (Delivery) and Regen Farms (Adoption) in <span style="font-weight: 600;">continuous feedback cycles</span> that refine solutions to local contexts.</p>
                     </div>
                     <div class="approach-card">
                         <div class="card-number">3</div>
                         <h2>Sustainable/Market led Diffusion</h2>
-                        <p>Hubs operate as next-gen extension centers, spreading regenerative practices through farmer-to-farmer learning and pay-per-use services that ensure long-term operation.</p>
+                        <p style="font-size: 1.3rem;">Hubs operate as <span style="font-weight: 600;">next-gen extension centers </span>, spreading regenerative practices through farmer-to-farmer learning and pay-per-use services that ensure long-term operation.</p>
                     </div>
                     <div class="approach-card">
                         <div class="card-number">4</div>
                         <h2>Systemic Impact</h2>
-                        <p>By combining technology transfer, collective bargaining and market access, we create a virtuous cycle that boosts yields, livelihoods and food sovereignty across Africa.</p>
+                        <p style="font-size: 1.3rem;">By combining technology transfer, collective bargaining and market access, we create a virtuous cycle that boosts yields, livelihoods and food sovereignty across Africa.</p>
                     </div>
                 </div>
             </div>
@@ -4472,8 +4497,7 @@ p.intro {
                 </div>
                 
                 <div class="service-cta">
-                    <p>All services available through our <strong>Farm Hub Centers</strong> <strong></strong></p>
-                    <button class="cta-button">Contact Our Team Today</button>
+                   
                 </div>
             </div>
         </div>
@@ -5038,6 +5062,89 @@ p.intro {
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="slide img-grid-slide">
+        <div class="img-grid-container">
+            <h1 class="img-grid-title">Electric Tractor Development</h1>
+            
+            <div class="img-grid">
+                <!-- Top Left -->
+                <div class="img-grid-item">
+                    <img src="image_file/e_tractor_5.png" 
+                         alt="Precision Agriculture" 
+                         class="img-grid-image">
+                </div>
+                
+                <!-- Top Right -->
+                <div class="img-grid-item">
+                    <img src="image_file/e_tractor_4.png" 
+                         alt="Mechanization" 
+                         class="img-grid-image">
+                </div>
+                
+                <!-- Bottom Left -->
+                <div class="img-grid-item">
+                    <img src="image_file/e_tractor_3.png" 
+                         alt="Market Access" 
+                         class="img-grid-image">
+                </div>
+                
+                <!-- Bottom Right -->
+                <div class="img-grid-item">
+                    <img src="image_file/e-tractor_1.png" 
+                         alt="Financial Inclusion" 
+                         class="img-grid-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide img-grid-slide">
+        <div class="img-grid-container">
+            <h1 class="img-grid-title">Electric Tractor Development</h1>
+            
+            <div class="img-grid">
+                <!-- Top Left -->
+                <div class="img-grid-item">
+                    <img src="image_file/e-tractor_1.png" 
+                         alt="Precision Agriculture" 
+                         class="img-grid-image">
+                </div>
+                
+                <!-- Top Right -->
+                <div class="img-grid-item">
+                    <img src="image_file/e_tractor_6.png" 
+                         alt="Mechanization" 
+                         class="img-grid-image">
+                </div>
+                
+                <!-- Bottom Left -->
+                <div class="img-grid-item">
+                    <img src="image_file/e_tractor_7.png" 
+                         alt="Market Access" 
+                         class="img-grid-image">
+                </div>
+                
+                <!-- Bottom Right -->
+                <div class="img-grid-item">
+                    <img src="image_file/e_tractor_8.png" 
+                         alt="Financial Inclusion" 
+                         class="img-grid-image">
+                </div>
+            </div>
+        </div>
+    </div>
        <!----------------------------- Slide 19: Photo gallery-->
         <div class="slide">
             <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
@@ -5105,45 +5212,7 @@ p.intro {
             </div>
 
             <!-- Slide 21: Call to Action -->
-            <div class="slide bg-image" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-                <button class="back-to-toc" id="tocBtn"><i class="fas fa-list"></i></button>
-                <div class="slide-content">
-                    <h1>Join Our Movement</h1>
-                    <div class="two-columns">
-                        <div class="column">
-                            <h2>For Farmers</h2>
-                            <p>Visit our service centers</p>
-                            
-                        </div>
-                        <div class="column">
-                            <h2>For Partners</h2>
-                            <p>Invest in our work</p>
-                           
-                            <p>Share knowledge</p>
-                            <p>Collaborate on projects</p>
-                        </div>
-                    </div>
-                    <div class="highlight-box" style="margin-top: 30px; background-color: var(--primary-color); color: white;">
-                        <h2>Contact Us</h2>
-                        <p>Email: girma.moges@farmlab-ethiopia.com</p>
-                        <p>Phone: +251 911112602</p>
-                        <p>Website: https://www.regenerators-collective.com/</p>
-                        <img src="image_file/logo_with_text.png" alt="Farm Hub Ethiopia Logo" class="logo-1">    
-                                <div class="slide-header-overlay"  style="top:105px;">
-                                    <div class="decorative-divider-container">
-                                        <div class="divider-pair">
-                                            <svg width="40" height="26"><path d="M0,8 C10,-5 30,21 40,8" stroke="green" stroke-width="3.2" fill="none"/></svg>
-                                            <span class="divider-icon">❖</span>
-                                            <svg width="40" height="26"><path d="M0,8 C10,21 30,-5 40,8" stroke="green" stroke-width="3.2" fill="none"/></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                       
-                    </div>
-                </div>
-                
-            </div>
-       
+   
 
 
 
