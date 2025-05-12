@@ -930,10 +930,10 @@
                 flex: 1;
                 display: flex;
                 min-width: 300px;
-                max-height: 600px;   
+                max-height: 800px;   
                 border-radius: 10px;
                 overflow: hidden;
-                min-height: 300px; /* Prevent image from collapsing */
+                min-height: 600px; /* Prevent image from collapsing */
                 box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             }
             .image-column img {
@@ -947,7 +947,7 @@
                         .image-wrapper {
                         position: relative;
                         width: 100%;
-                        height: 600px;
+                        height: 800px;
                     }
 
         .image-text-overlay {
@@ -4137,7 +4137,7 @@
         .team-name {
             font-size: 0.9rem;
             font-weight: 500;
-            color: white;
+            color: #a0c624;
         }
         
         /* PropCo Section */
@@ -6737,6 +6737,7 @@
     <div class="slides-container" id="slidesContainer">
      
         
+        
         <!-- title Slides -->
         <div class="slide bg-image active" id="title-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
             <div class="slide-content-1">
@@ -7079,25 +7080,27 @@
             </h2>
             <div class="smallholder-section">
                 <!-- Image Section -->
-                <div class="image-column" style="flex: 0 0 45%;">
+                <div class="image-column" style="flex: 0 0 35%;">
                     <img src="image_file/farmer_frontline.jpg" alt="Farm Hub Model">
                 </div>
                 
                 <!-- Text Section -->
                 
-                    <div class="text-column" style="flex: 0 0 50%;">
+                    <div class="text-column" style="flex: 0 0 60%;">
                         <h2 class="section-title-context">Smallholder Farmers are the Front Line…</h2>
                         <p class="section-content-context">
                             Smallholder farmers are the <strong>foundation of Africa's food system</strong> —yet they're the 
-                            <span style="background-color: #c09515; padding: 2px 5px;">least supported</span>. They're expected to 
-                            grow food for the continent with <span style="border-bottom: 3px dashed red;">no infrastructure</span>, 
+                            <span style="background-color: #c09515; padding: 2px 5px;">least supported</span>. 
+                        </p> 
+                        <p class="section-content-context">
+                            They're expected to grow food for the continent with <span style="border-bottom: 3px dashed red;">no infrastructure</span>, 
                             <span style="border-bottom: 3px dashed red;">no finance</span>, 
                             <span style="border-bottom: 3px dashed red;">no market visibility</span>, 
                             and <span style="border-bottom: 3px dashed red;">no reliable services</span>.
                         </p> 
                         
                         <div class="highlight-box-context">
-                            This as a result of <strong>various structural problems and their effects </strong> 
+                            This as a result of <strong>various structural problems </strong> 
                         </div>
                         
                         <ul class="problem-list-context">
@@ -7128,12 +7131,11 @@
                 
                 <!-- Text Section -->
                 
-                    <div class="text-column" style="flex: 0 1 50%;">
+                    <div class="text-column" style="flex: 0 1 60%;">
                         <h2 class="section-title-context">The Ecosystem struggles to support the Farmers…</h2>
                                                 
                         <p class="section-content-context" style="color: white;">
-                                The supply chain of actors meant to support these farmers — mechanisation service providers, 
-                                input distributors, aggregators, buyers — are <strong><span style="border-bottom: 3px dashed red;">fragmented, undercapitalised</span></strong>, 
+                                The supply chain of actors meant to support farmers (service providers, input distributors, aggregators, buyers) are <strong><span style="border-bottom: 3px dashed red;">fragmented, undercapitalised</span></strong>, 
                                 and operating <span style="border-bottom: 3px dashed red;">without standardisation or scale </span>. They also face structural problems that limit their 
                                 ability to create impact and support the system:
                             </p>
@@ -7161,7 +7163,7 @@
                             </div>
                         </div>
                             <!-- Image Section -->
-                <div class="image-column" style="flex: 0 0 45%;">
+                <div class="image-column" style="flex: 0 0 35%;">
                     <img src="image_file/farmer_frontline_eco.jpg" alt="Farm Hub Model">
                 </div>
                     </div>
@@ -7182,13 +7184,17 @@
                 
                 <!-- Text Section -->
                 
-                    <div class="text-column" style="flex: 0 1 50%;">
+                    <div class="text-column" style="flex: 0 1 60%;">
                         <h2 class="section-title-context">Government struggles to support the Ecosystem</h2>
                                                 
                         <p class="section-content-context" style="color: white;">
                             Governments are expected to deliver food security, rural job creation, and climate resilience. 
-                            But they're trapped managing an <strong>informal sector</strong> that's hard to track, fund, or govern.
+                            
                             </p>
+                            <p class="section-content-context" style="color: white;">
+                               
+                                But they're trapped managing an <span style="color: red;"><strong>informal sector</strong> that's hard to track, fund, or govern</span>.
+                                </p>
                             
                             <ul class="problem-list-context">
                                 <li><strong>Inefficient investment</strong><span class="arrow">→</span>
@@ -7214,7 +7220,7 @@
                             </div>
                         </div>
                             <!-- Image Section -->
-                <div class="image-column" style="flex: 0 0 45%;">
+                <div class="image-column" style="flex: 0 0 35%;">
                     <img src="image_file/farmer_frontline_eco_gov.jpg" alt="Farm Hub Model">
                 </div>
                     </div>
@@ -7388,35 +7394,6 @@
             </div>
         </div>
 
-   <!---------------------------- Slide 10 : Widespread Impact-->
-   <div class="slide">
-    <div class="slide-content-challenge">
-        <h2 class="top-us-title-1" style="color: white;">
-            <span>01 - The Context</span>
-        </h2>
-
-        <div class="smallholder-section">
-          
-
-            <div class="image-column">
-                <div class="image-wrapper">
-                    <img src="image_file/widespread_impact.png" alt="Farm Hub Model">
-                    <div class="image-text-overlay">     <h2 class="top-us-title-3" style="color: white;">
-                        <span>That Could Generate Widespread Impact </span>
-                    </h2>
-                    <h2 class="top-us-subtitle-3">
-                        <span>Leveraging the 8X Transformation for Social & Ecological Change </span>
-                    </h2>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
         <!---------------------------- Slide 11 : The System vision-->
         <div class="slide">
             <div class="slide-content-challenge">
@@ -7428,8 +7405,8 @@
                   
         
                     <div class="image-column">
-                        <div class="image-wrapper">
-                            <img src="image_file/new_system_vision.jpg" alt="Farm Hub Model">
+                        <div class="image-wrapper" >
+                            <img src="image_file/new_system_vision.jpg" alt="Farm Hub Model" style="max-height: 1200px;">
                             <div class="image-text-overlay">     <h2 class="top-us-title-3" style="color: white;">
                                 <span>But we need a new System Vision & Strategy</span>
                             </h2>
@@ -7629,53 +7606,7 @@
         </div>
         </div>
         <!---------------------------- Slide 15: The Context-01 -Bridging waht is broken-->
-        <div class="slide">
-            <div class="slide-content-challenge">
-                <h2 class="top-us-title-1" style="color: white;">
-                    <span>02 — The System Vision</span>
-                </h2>
-            <div class="two-column-wrapper">
-                <div class="text-column-new" style="flex: 0 0 65%;">
-                    <div class="slide-content-new" >
-                        <h2 class="section-title-context">Bridging What’s Broken</h2>
-                        <h3 class="slide-subtitle">Creating a pathway for resources to do their job</h3>
-                        
-                        <p-2>Africa is not short on agricultural potential. The resources exist — funding, 
-                            tools, knowldge, infrastructure, and data — but the delivery architecture does not</p-2>
-                        
-                        <div class="highlight-panel">
-                            Today, the system is incredibly disjointed:
-                        </div>
-                        <div class="bullet-list">
-                        <ul>
-                            <li> Inputs are fragmented across multiple players.</li>
-                                <li>Farmers are unsupported, operating alone.</li>
-                                    <li>Institutions and capital struggle to coordinate at ground level.</li>
-                                        <li>This isn’t a problem of scarcity — it’s a problem of system design. </li>
-                            
-                        </ul>
-                        </div>
-                        <div class="highlight-panel">
-                            The Farmhub model introduces the missing architecture
-                        </div>
-                        <p-2>By connecting upstream resources with farming communities 
-                        through an integrated three-layer system — infrastructure, coordination, 
-                        and service delivery — Farmhub transforms fragmentation into flow. It 
-                        stitches together what’s siloed, creating a clear, scalable pathway for 
-                        value to move efficiently from funders and enablers to the field — and 
-                        back. This is not just a delivery system. It’s a new connective tissue for 
-                        agricultural transformation at scale</p-2>
-                    </div>
-                </div>
-                
-                <div class="visual-column" style="flex: 0 0 30%;">
-                    <div class="visual-frame">
-                        <img src="image_file/bridging_broken.jpg" alt="Mission control">
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
+   
         <!--=========================-- Slide 16: subtitle 03 Title Slide -->
         <div class="slide" style="background-color: black;">
             <div class="slide-content-subtitle" style="top: 10px; background-color: black; text-align: right; color: white;">
@@ -7702,14 +7633,14 @@
                             <h3 class="slide-subtitle">Bundling a fragmented system so it's investable</h3>
                             <p-2 class="section-content-context">
                                 Our core strategy is to take <strong>what is a highly fragmented system and to bundle its various components into</strong>
-                                <strong><span style="color: green; padding: 2px 5px;">a cohesive 3 layer architecture</span></strong>.
-                                <span style="border-bottom: 2px dashed var(--secondary);">that separates ownership, operations and delivery.</span>.
+                                <strong><span style="color: green; padding: 2px 5px;">a cohesive 3 layer architecture</span></strong>
+                                <span style="border-bottom: 2px dashed var(--secondary);">that separates ownership, operations and delivery.</span>
                             </p-2> 
                             
                             <div class="highlight-panel" style="margin: 0.2rem 0;">
                                 Multi-layer system orchestration
                             </div>
-                            <p-2 style="margin-bottom: 0.5rem;">We're not building a tool — we're coordinating a stack (infra + ops + field) that competitors only do in pieces.</p-2>
+                            <p-2 style="margin-bottom: 0.5rem; font-weight: bold; font-size: 1.8rem;">We're not building a tool — we're coordinating a stack (infra + ops + field) that competitors only do in pieces.</p-2>
                             
                           
                         </div>
@@ -7833,11 +7764,11 @@
                             </div>
                             
                             <div class="highlight-panel">
-                                This separation of roles lets us:
+                                This separation of roles:
                             </div>
-                            <div class="bullet-list">
+                            <div class="bullet-list" style="font-size: 1.2rem;">
                                 <ul>
-                                    <li>Protect infrastructure assets while deploying them where needed</li>
+                                    <li>Protect infrastructure assets </li>
                                     <li>Maintain operational excellence through local partners</li>
                                     <li>Scale trust and accountability through standardization</li>
                                 </ul>
@@ -7915,7 +7846,7 @@
                             <div class="highlight-panel">
                                 Services that are monetised at unit level:
                             </div>
-                            <div class="bullet-list">-
+                            <div class="bullet-list">
                                     <li>Mechanisation-as-a-service (per hectare/hour basis)</li>
                                     <li>Input resale margin (bulk-to-retail markup)</li>
                                     <li>Post-harvest handling and aggregation fees</li>
@@ -7926,7 +7857,7 @@
                             <div class="highlight-panel">
                                 Key factors:
                             </div>
-                            <div class="bullet-list">
+                            <div class="bullet-list" style="font-size: 1.3rem;">
                                 <ul>
                                     <li>Low upfront financing costs for the franchisee</li>
                                     <li>Franchisee pays fixed % royalty fee to National Hub</li>
@@ -7975,7 +7906,7 @@
                             <div class="highlight-panel">
                                 Key factors:
                             </div>
-                            <div class="bullet-list">
+                            <div class="bullet-list" style="font-size: 1.3rem;">
                                 <ul>
                                     <li>Low fixed-cost, high-leverage business model</li>
                                     <li>Built around enabling scale, not direct service delivery</li>
@@ -8022,7 +7953,7 @@
                             <div class="highlight-panel">
                                 Key factors:
                             </div>
-                            <div class="bullet-list">
+                            <div class="bullet-list" style="font-size: 1.3rem;">
                                 <ul>
                                     <li>Structured for blended capital (equity + concessional finance)</li>
                                     <li>Long-term value through asset ownership</li>
@@ -8054,28 +7985,24 @@
                             <h2 class="section-title-context"> The Farmhub Playbook</h2>
                             <h3 class="slide-subtitle"> IP retained at Mission Control level to drive the system</h3>
                             
-                            <p-2> At the heart of the Farmhub model is a living, evolving playbook — <span style="color: green; font-weight: bold;">a 
+                            <p-2 style="font-size: 2rem;"> At the heart of the Farmhub model is a living, evolving playbook — <span style="color: green; font-weight: bold;">a 
                                 practical blueprint that defines how each part of the system works, and 
-                                how it scales</span>. This isn’t just a manual — it’s the IP backbone that powers a 
-                                distributed, high-integrity franchise network</p-2>
+                                how it scales</span>. </p-2>
+
+                                <p-2> Not manual — it’s the IP backbone that powers a distributed, high-integrity franchise network</p-2>
                             
                               
                                 
                               
                                
-                            <div class="bullet-list">
+                            <div class="bullet-list" style="font-size: 1.6rem;">
                                 <ul>
-                                    <li>It standardises how services are delivered to smallholder farmers</li>
-                                    <li>  It encodes best practices, workflows, compliance protocols, and partner models</li>
-                                    <li> And it ensures every Farmhub can deliver consistent, high-quality outcomes</li>
+                                    <li>It standardises how services are delivered</li>
+                                    <li>It encodes best practices, workflows, compliance protocols, and partner models</li>
+                                    <li> It ensures every Farmhub can deliver consistent, high-quality outcomes</li>
                                 </ul>
                             </div>
-                            <p-2>  But the Playbook is more than documentation. It is coupled to the 
-                                Farmhub OS — our digital platform. This means every update, insight, or 
-                                adaptation flows straight from field to system… and back again. As the 
-                                network grows, the Playbook grows with it — enabling continuous 
-                                improvement, training, and replication at scale.
-                                </p-2>
+                            
                                 <p-2> It is how we maintain trust, integrity, and impact — across thousands of hubs and millions of farmers.
                                     </p-2>
                            
@@ -8107,7 +8034,7 @@
                                 <span> The Farmhub Ecosystem</span>
                             </h2>
                             <h2 class="top-us-title-3" style="color: white;">
-                                <span>  IP retained at Mission Control level to drive the system</span>
+                                <span> IP retained at Mission Control level to drive the system</span>
                             </h2>
                           
                         </div>
@@ -8128,6 +8055,33 @@
                 
             </div>
         </div>
+
+        <div class="slide">
+            <div class="slide-content-challenge">
+                <h2 class="top-us-title-1" style="color: white;">
+                    <span>01 - The Context</span>
+                </h2>
+        
+                <div class="smallholder-section">
+                  
+        
+                    <div class="image-column">
+                        <div class="image-wrapper">
+                            <img src="image_file/theory_change_1.png" alt="Farm Hub Model">
+                            <div class="image-text-overlay">     <h2 class="top-us-title-3" style="color: white;">
+                                <span> </span>
+                            </h2>
+                            <h2 class="top-us-title-3" style="color: white;">
+                                <span> </span>
+                            </h2>
+                          
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
         <!---------------------------- Slide 24: Impacts by Level-->
         <div class="slide">
             <h6 style="color: white;">
@@ -8152,7 +8106,7 @@
                 <!-- Levels -->
                 <div class="column-2 levels-column">
                   <div class="level-card">
-                    <div class="level-icon">🛰️</div>
+                    
                     <h2 class="level-title">Level-3</h2>
                     
                     <h2 class="level-title">Farmhub Mission Control</h2>
@@ -8160,7 +8114,7 @@
                    
                   </div>
                   <div class="level-card">
-                    <div class="level-icon">🏢</div>
+                    
                     <h2 class="level-title">Level 2</h2>
                     <h2 class="level-title">Farmhub Ops Centre</h2>
                         <h2 class="level-title">Coordination, standard, training</h2>
@@ -8169,7 +8123,7 @@
 
              
                   <div class="level-card">
-                    <div class="level-icon">🌍</div>
+                   
                     <h2 class="level-title">Level 1</h2>
                                 <h2 class="level-title">Farmhub Field Station</h2>
                                     <h2 class="level-title">Services, Access, Inputs</h2>
@@ -8222,7 +8176,7 @@
                     </ul>
                   </div>
                   <div class="impact-group">
-                    <h3 class="impact-group-title">Field Station Impacts</h3>
+                    <h3 class="impact-group-title"> Smallholder Farmer</h3>
                     <ul class="impact-list">
                        
                         <li class="impact-item-2">Gains income stability and land-use autonomy</li>
@@ -8561,7 +8515,7 @@
          <div class="slide">
             <div class="mo-zoom-wrapper">
             <div class="mo-slide-container">
-                <h1 class="mo-title">Market Opportunity for Sub-Saharan Africa</h1>
+                <h1 class="mo-title">Ethiopia, Kenya, Uganda</h1>
                 
                 <div class="mo-content-columns">
                 <!-- Column 1: Nested Circles -->
